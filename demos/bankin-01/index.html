@@ -1,44 +1,302 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>板金塗装 CRAFT | 愛車を美しく</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">CRAFT</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPEED GARAGE | キズ・ヘコミの板金塗装・車検専門店</title>
+  <meta name="description" content="愛車のキズ・ヘコミ、最短即日で綺麗に直します。ディーラー見積もりの半額以下になることも！熟練の職人による完璧な修復技術と、安心のLINE無料見積もりならSPEED GARAGE（スピードガレージ）へ。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>傷もへこみも、<br>新車同様に。</h1><p></p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc"><br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>コンピュータ調色</h3><p>メーカー色を完璧に再現。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>保険対応</h3><p>保険修理の手続きもサポート。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>代車無料</h3><p>修理中の代車は全て無料。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
   
-  <footer class="footer">CRAFT</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body class="bg-carbon text-white">
+
+  <!-- Header -->
+  <header class="header bg-carbon-dark border-b-red" id="header">
+    <div class="h-container flex-between align-center">
+      <div class="logo">
+        <a href="#" class="flex gap-xs align-center">
+          <i data-lucide="wrench" class="text-red icon-lg"></i>
+          <span class="font-teko text-white font-bold text-2xl tracking-wide line-height-tight mt-xs">SPEED GARAGE</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-zen font-bold text-sm tracking-widest text-silver">
+          <li><a href="#about" class="hover-red">当店の強み</a></li>
+          <li><a href="#menu" class="hover-red">料金表</a></li>
+          <li><a href="#works" class="hover-red">修復事例</a></li>
+          <li><a href="#flow" class="hover-red">ご依頼の流れ</a></li>
+        </ul>
+        <div class="h-btn sp-none ml-large flex gap-xs">
+          <div class="bg-dark border-line-dark px-small py-xs rounded-sm font-teko text-lg text-silver flex align-center gap-xs">
+            <i data-lucide="phone" class="icon-sm text-red"></i> 0120-000-000
+          </div>
+          <a href="#contact" class="btn btn-line font-zen font-bold text-sm slant-btn">
+             <span class="slant-text"><i data-lucide="message-circle" class="icon-sm"></i> LINEで無料見積</span>
+          </a>
+        </div>
+      </nav>
+      <button class="menu-toggle text-white" id="menuToggle" aria-label="メニューを開く">
+        <span class="bg-white"></span><span class="bg-white"></span><span class="bg-white"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero relative h-screen min-h-80vh flex-center bg-pattern-carbon overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0 opacity-40">
+      <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="スポーツカー" class="w-full h-full object-cover">
+    </div>
+    
+    <!-- Red Slant Overlay -->
+    <div class="slant-overlay bg-red-grad absolute z-1 top-0 bottom-0 left-0"></div>
+
+    <div class="l-container relative z-10 w-full flex-between align-center flex-col-sp">
+      
+      <div class="hero-left text-left w-50 fade-target relative z-10">
+        <div class="font-teko text-white text-3xl font-bold tracking-widest mb-xs text-shadow animate-slide-right">AUTO BODY REPAIR</div>
+        <h1 class="font-zen font-black text-white text-4xl line-height-tight mb-medium tracking-tight animate-slide-right delay-1">
+          愛車のキズ・ヘコミ、<br>
+          <span class="text-red">最短即日</span>で魔法のように。
+        </h1>
+        <p class="font-zen text-silver text-md line-height-long font-bold mb-large animate-slide-right delay-2 text-shadow-dark border-l-red pl-small">
+          他店で「交換」と言われたパーツも、<br class="sp-none">
+          職人の板金技術で「修復」します。<br>
+          ディーラー見積もりの半額以下になることも。
+        </p>
+        <div class="flex gap-small flex-wrap animate-slide-right delay-3">
+          <a href="#contact" class="btn btn-red btn-xl font-bold font-zen slant-btn box-shadow-red hover-glitch">
+            <span class="slant-text text-xl">写真を送るだけ！LINE無料見積 <i data-lucide="chevron-right"></i></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Trust Badge -->
+      <div class="hero-right relative w-40 flex-end animate-pop-in delay-4 sp-mt-large center-sp z-10">
+        <div class="trust-badge bg-carbon-dark border-red p-medium text-center box-shadow-xl relative overflow-hidden">
+          <div class="stripe-bg absolute inset-0 opacity-10"></div>
+          <div class="relative z-10">
+            <h3 class="font-teko text-red text-2xl font-bold mb-xs">No.1 QUALITY</h3>
+            <p class="font-zen text-white font-black text-lg mb-xs">年間施工実績 <span class="text-red text-2xl">2,000</span>台以上</p>
+            <div class="divider-dash mx-auto mb-xs"></div>
+            <ul class="text-left font-zen text-sm font-bold text-silver flex-column gap-xs mt-small">
+              <li class="flex align-center gap-xs"><i data-lucide="check-square" class="text-red icon-sm"></i> リサイクルパーツで格安修理</li>
+              <li class="flex align-center gap-xs"><i data-lucide="check-square" class="text-red icon-sm"></i> 代車無料貸出（全車ナビ付）</li>
+              <li class="flex align-center gap-xs"><i data-lucide="check-square" class="text-red icon-sm"></i> 保険修理も完全サポート</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Problem / Solution (Black to Gray) -->
+  <section class="section about bg-gray pt-large pb-large border-t-red-thick relative" id="about">
+    <div class="l-container center">
+      <div class="sect-header center fade-target mb-medium">
+        <h2 class="font-zen font-black text-white text-3xl line-height-tight mb-xs">こんなお悩み、<span class="text-red border-b-red pb-xs">即解決</span>します。</h2>
+        <span class="font-teko text-silver font-bold text-xl tracking-widest uppercase display-block mt-xs">Professional Solutions</span>
+      </div>
+
+      <div class="grid-3 gap-medium mt-large">
+        <div class="card-black bg-carbon-dark p-medium text-left border-line-dark fade-target hover-red-glow transition">
+          <div class="flex-between align-center mb-small">
+            <span class="font-teko text-red text-4xl font-bold">01</span>
+            <i data-lucide="frown" class="text-silver icon-lg"></i>
+          </div>
+          <h3 class="font-zen font-black text-white text-lg mb-small">ディーラーの見積もりが<br>高すぎて払えない</h3>
+          <p class="font-zen text-silver text-sm line-height-long font-bold">
+            ディーラーは原則「新品パーツに丸ごと交換」するため高額になります。当店は「直せるものは直す」板金技術と、良質な中古パーツの活用で大幅にコストをカットします。
+          </p>
+        </div>
+
+        <div class="card-black bg-carbon-dark p-medium text-left border-line-dark fade-target delay-1 hover-red-glow transition">
+          <div class="flex-between align-center mb-small">
+            <span class="font-teko text-red text-4xl font-bold">02</span>
+            <i data-lucide="clock" class="text-silver icon-lg"></i>
+          </div>
+          <h3 class="font-zen font-black text-white text-lg mb-small">車をつかう用事がある。<br>１日でも早く直したい</h3>
+          <p class="font-zen text-silver text-sm line-height-long font-bold">
+            ご予約状況やキズの深さにもよりますが、小さな擦り傷なら朝お預かりして夕方お返しの「最短即日修理」が可能です。修理期間中は無料の代車をご用意しております。
+          </p>
+        </div>
+
+        <div class="card-black bg-carbon-dark p-medium text-left border-line-dark fade-target delay-2 hover-red-glow transition">
+          <div class="flex-between align-center mb-small">
+            <span class="font-teko text-red text-4xl font-bold">03</span>
+            <i data-lucide="shield-check" class="text-silver icon-lg"></i>
+          </div>
+          <h3 class="font-zen font-black text-white text-lg mb-small">保険をつかうべきか<br>自費か悩んでいる</h3>
+          <p class="font-zen text-silver text-sm line-height-long font-bold">
+            「保険を使うと等級が下がって今後の保険料が上がる」というデメリットも計算し、自費で直した方がトータルでお得になるか、プロの目線で正直にシミュレーションします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works (Before/After UI) -->
+  <section class="section works bg-pattern-carbon pt-large pb-large" id="works">
+    <div class="l-container">
+      <div class="flex-between align-end mb-large fade-target flex-col-sp gap-small border-b-line-dark pb-small">
+        <div class="text-left center-sp">
+          <h2 class="font-zen font-black text-white text-3xl line-height-tight mb-xs">修復事例</h2>
+          <span class="font-teko text-red font-bold text-xl tracking-widest uppercase">Before & After</span>
+        </div>
+        <div class="font-zen text-silver text-sm font-bold text-right center-sp">
+          どんなに激しいヘコミも、<br class="sp-none">熟練の職人技で元通りに。
+        </div>
+      </div>
+
+      <div class="grid-2 gap-large">
+        
+        <!-- Case 1 -->
+        <div class="work-card fade-target">
+          <div class="split-image relative overflow-hidden bg-gray h-250 border-red-thick">
+            <div class="absolute inset-0 flex">
+              <div class="w-50 relative border-r-white">
+                <img src="https://images.unsplash.com/photo-1626668893632-613d508205f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="修理前" class="w-full h-full object-cover filter-grayscale opacity-70">
+                <span class="absolute top-0 left-0 bg-dark text-white font-teko text-lg px-small py-xs">BEFORE</span>
+              </div>
+              <div class="w-50 relative">
+                <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="修理後" class="w-full h-full object-cover">
+                <span class="absolute top-0 right-0 bg-red text-white font-teko text-lg px-small py-xs">AFTER</span>
+              </div>
+            </div>
+            <!-- Slant divider inside image -->
+            <div class="absolute top-0 bottom-0 left-50 w-2 bg-red transform -translate-x-1/2 rotate-15 z-10 box-shadow-glow display-none"></div>
+          </div>
+          <div class="bg-carbon-dark p-small text-left border-line-dark border-t-none">
+            <h3 class="font-zen font-black text-white text-lg mb-xs flex-between">フロントバンパー 擦り傷 <span class="text-red">¥18,000〜</span></h3>
+            <p class="font-zen text-silver text-xs line-height-long font-bold">ブロック塀に擦ってしまったえぐれキズ。専用パテで成形し、塗装範囲を最小限に抑えることで低価格を実現しました。（工期：1泊2日）</p>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="work-card fade-target delay-1">
+          <div class="split-image relative overflow-hidden bg-gray h-250 border-red-thick">
+            <div class="absolute inset-0 flex">
+              <div class="w-50 relative border-r-white">
+                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="修理前" class="w-full h-full object-cover filter-grayscale opacity-70">
+                <span class="absolute top-0 left-0 bg-dark text-white font-teko text-lg px-small py-xs">BEFORE</span>
+              </div>
+              <div class="w-50 relative">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="修理後" class="w-full h-full object-cover">
+                <span class="absolute top-0 right-0 bg-red text-white font-teko text-lg px-small py-xs">AFTER</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-carbon-dark p-small text-left border-line-dark border-t-none">
+            <h3 class="font-zen font-black text-white text-lg mb-xs flex-between">ドアパネル 大きなヘコミ <span class="text-red">¥45,000〜</span></h3>
+            <p class="font-zen text-silver text-xs line-height-long font-bold">駐車場で当て逃げされた深いヘコミ。ディーラーではドア交換で15万円と言われましたが、裏打ち出し板金で修復しました。（工期：3日）</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section class="cta pt-medium pb-medium bg-red-grad relative border-y-line-dark" id="contact">
+    <div class="l-container relative z-10 flex-between align-center flex-col-sp gap-large text-white">
+      
+      <div class="cta-text w-60 fade-target text-left center-sp">
+        <h2 class="font-zen font-black text-3xl mb-xs line-height-tight text-shadow-dark">スマホでパシャッ！<br>写真を送るだけで<span class="underline-white">すぐに見積り。</span></h2>
+        <p class="font-zen text-white text-sm mb-large line-height-long font-bold text-shadow-dark max-w-600">
+          「これっていくらで直るかな？」と思ったら、車のキズの写真をLINEで送ってください。24時間以内に概算のお見積りをご返信いたします。ご来店前の不安をなくします！
+        </p>
+      </div>
+
+      <div class="cta-action w-40 fade-target delay-1 center">
+        <div class="bg-carbon-dark p-medium rounded-sm box-shadow-xl border-line-dark text-center relative overflow-hidden">
+          <div class="stripe-bg absolute inset-0 opacity-10"></div>
+          <div class="relative z-10">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="LINE" class="w-40px h-40px mx-auto mb-xs rounded-lg">
+            <h3 class="font-zen font-black text-white text-lg mb-xs">LINE無料見積もり</h3>
+            <span class="font-zen text-silver text-xs font-bold display-block mb-small">24時間受付 / キャンセル無料</span>
+            <a href="#" class="btn btn-green-solid btn-xl w-full font-zen font-black text-lg slant-btn hover-glitch">
+              <span class="slant-text w-full"><i data-lucide="message-circle" class="icon-sm"></i> 友だち追加して写真を送る</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-carbon pt-large pb-medium relative border-t-line-dark">
+    <div class="l-container flex-between align-start flex-col-sp gap-large font-zen font-bold text-sm border-b-line-dark pb-medium mb-medium">
+      
+      <div class="f-left text-left w-30 center-sp w-full-sp">
+        <div class="flex gap-xs align-center mb-small justify-center-sp">
+          <i data-lucide="wrench" class="text-red icon-lg"></i>
+          <span class="font-teko text-white font-bold text-2xl tracking-wide line-height-tight">SPEED GARAGE</span>
+        </div>
+        <p class="text-silver text-xs line-height-long max-w-400 mx-auto-sp">
+          〒100-0000 東京都オート区モータース 1-2-3<br>
+          営業時間: 9:00 - 19:00 (日曜定休)<br>
+          電話番号: 0120-000-000<br>
+          ※出張見積もり対応可能（エリア限定）
+        </p>
+      </div>
+      
+      <div class="f-right flex gap-large justify-end flex-wrap w-60 justify-center-sp w-full-sp">
+        <ul class="flex-column gap-small text-silver text-xs text-left">
+          <li><a href="#" class="hover-red transition">ホーム</a></li>
+          <li><a href="#" class="hover-red transition">当店の強み</a></li>
+          <li><a href="#" class="hover-red transition">修復事例・実績</a></li>
+          <li><a href="#" class="hover-red transition">料金目安表</a></li>
+        </ul>
+        <ul class="flex-column gap-small text-silver text-xs text-left">
+          <li><a href="#" class="hover-red transition">車検・整備案内</a></li>
+          <li><a href="#" class="hover-red transition">よくあるご質問</a></li>
+          <li><a href="#" class="hover-red transition">会社概要</a></li>
+          <li><a href="#" class="hover-red transition">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="l-container text-center text-xs font-teko text-silver tracking-widest">
+       &copy; 2025 SPEED GARAGE. ALL RIGHTS RESERVED.
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
