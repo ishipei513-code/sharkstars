@@ -1,48 +1,299 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>L'etoile | モダンフレンチ</title><meta name="description" content="旬の食材を活かしたフレンチ">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">L'etoile</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Étoile | 表参道の本格フレンチレストラン</title>
+  <meta name="description" content="旬の恵みと彩りを、一皿の芸術に。表参道の閑静な裏路地に佇むフレンチレストラン「L'Étoile（レトワール）」。大切な人との記念日や会食に、極上のコース料理とワインペアリングをご堪能ください。">
   
-  <!-- 1. HERO -->
-  <section class="hero"><div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="hero-box reveal"><h1>星降る夜の、<br>特別なひとときを。</h1><p>旬の食材を活かしたフレンチ</p></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
   
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><span class="sub">Philosophy</span><h2>美しさを引き出す、<br>上質な時間。</h2><p>旬の食材を活かしたフレンチ</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-  
-  <!-- 3. FEATURES -->
-  <section class="section bg-light"><div class="container"><h2 class="center reveal">Our Strengths</h2><div class="feat-list">
-    <div class="feat reveal" style="transition-delay:0s"><h3><i data-lucide="check"></i> 信頼と実績</h3><p>地域で長年の信頼をいただいております。</p></div><div class="feat reveal" style="transition-delay:0.1s"><h3><i data-lucide="check"></i> プロフェッショナル</h3><p>熟練のスタッフが丁寧に対応します。</p></div><div class="feat reveal" style="transition-delay:0.2s"><h3><i data-lucide="check"></i> サポート体制</h3><p>アフターフォローも万全です。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="center reveal">Gallery</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1512496015851-a1fbcf69b6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-    </div>
-  </div></section>
-
-  <!-- 5. MENU & PRICE -->
-  <section class="section bg-light"><div class="container reveal"><h2 class="center">Menu & Price</h2>
-    <div class="price-box"><div class="row"><div class="name">基本コース</div><div class="dots"></div><div class="cost">要見積</div></div><div class="row"><div class="name">プレミアム</div><div class="dots"></div><div class="cost">要相談</div></div></div>
-  </div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="center">FAQ</h2>
-    <div class="faq-box">
-      <details><summary>予約は必要ですか？</summary><p>はい、お客様一人ひとりに合わせたサービスを提供するため、完全予約制となっております。</p></details>
-      <details><summary>キャンセル料はかかりますか？</summary><p>前日までのキャンセルは無料です。当日のキャンセルは料金の50%を頂戴しております。</p></details>
-      <details><summary>駐車場はありますか？</summary><p>店舗の近くに2台分の専用駐車場をご用意しております。</p></details>
-    </div>
-  </div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>ご予約・お問い合わせ</h2><p>特別な体験を、あなたに。</p><a href="#" class="btn">今すぐ予約する</a></div></section>
-  
-  <footer class="footer">L'etoile</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo fade-target">
+        <a href="#">L'Étoile</a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#concept">Concept</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#wine">Wine</a></li>
+          <li><a href="#space">Space</a></li>
+          <li><a href="#info">Access</a></li>
+        </ul>
+      </nav>
+      <div class="h-reserve sp-none fade-target delay-1">
+        <a href="#reserve" class="btn-outline">Reservation</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="美しいフレンチの皿">
+    </div>
+    <div class="hero-mask"></div>
+    <div class="l-container hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title fade-target delay-1">
+          L'art de la Table
+        </h1>
+        <p class="hero-catch fade-target delay-2">
+          旬の恵みと彩りを、一皿の芸術に。
+        </p>
+      </div>
+    </div>
+    <div class="scroll-down fade-target delay-2">
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Concept -->
+  <section class="section concept" id="concept">
+    <div class="l-container">
+      <div class="c-wrap">
+        <div class="c-img-box fade-target">
+          <img src="https://images.unsplash.com/photo-1589227365533-cee630bd59bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="シェフが調理する様子">
+          <div class="c-overlay-img">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="食材のアップ">
+          </div>
+        </div>
+        <div class="c-text-box fade-target delay-1">
+          <span class="en-label">C o n c e p t</span>
+          <h2 class="sect-heading">古典と革新が交差する、<br>心震えるガストロノミー。</h2>
+          <div class="c-desc">
+            <p>フランス料理の伝統的な技法を重んじながらも、<br>日本の四季が育む豊かな食材の持ち味を最大限に引き出す。</p>
+            <p>生産者の想いが詰まった有機野菜や、<br>独自のルートで仕入れた極上の和牛、<br>市場から直送される新鮮な魚介類。</p>
+            <p>それらがシェフのインスピレーションによって緻密に構築され、<br>まるでキャンバスに描かれた一枚の絵画のような、<br>美しく繊細な一皿へと昇華されます。</p>
+            <p>L'Étoile（星）の名にふさわしい、<br>きらめくような非日常のひとときをお過ごしください。</p>
+          </div>
+          <div class="chef-sign">
+            Executive Chef<span>T. Matsuda</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Menu -->
+  <section class="section menu bg-gray" id="menu">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">M e n u</span>
+        <h2 class="sect-heading">コースメニュー</h2>
+        <p class="sect-sub">季節の食材を最も美味しく味わっていただくため、<br class="sp-none">メニューはおまかせのコースのみとなっております。</p>
+      </div>
+
+      <div class="m-wrap">
+        <!-- Dinner -->
+        <div class="m-card fade-target">
+          <div class="m-img">
+            <img src="https://images.unsplash.com/photo-1590846406792-0adc7f138fbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ディナーコース">
+          </div>
+          <div class="m-info">
+            <div class="m-type">D i n n e r</div>
+            <h3 class="m-title">Menu Printemps<br><span>〜 春の息吹 〜</span></h3>
+            <p class="m-desc">全国各地から厳選した旬の食材を贅沢に使用した、当店を代表するフルコースです。大切なご接待や特別な記念日におすすめいたします。</p>
+            <div class="m-price">¥ 18,000 <span>(税込 ¥19,800) / 1名様</span></div>
+            <ul class="m-details">
+              <li>Amuse-bouche（アミューズ）</li>
+              <li>Entrées froides（冷前菜）</li>
+              <li>Entrées chaudes（温前菜）</li>
+              <li>Poisson（お魚料理）</li>
+              <li>Viande（お肉料理 - 黒毛和牛フィレ肉）</li>
+              <li>Dessert（デセール）</li>
+              <li>Mignardises et Café（小菓子と食後のお飲み物）</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Lunch -->
+        <div class="m-card fade-target delay-1">
+          <div class="m-img">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ランチコース">
+          </div>
+          <div class="m-info">
+            <div class="m-type">L u n c h</div>
+            <h3 class="m-title">Menu Étoile<br><span>〜 星の瞬き 〜</span></h3>
+            <p class="m-desc">ディナーのエッセンスを凝縮し、カジュアルに本格フレンチをお楽しみいただけるランチ全5品のコースです。ご友人との会食に。</p>
+            <div class="m-price">¥ 8,000 <span>(税込 ¥8,800) / 1名様</span></div>
+            <ul class="m-details">
+              <li>Amuse-bouche（アミューズ）</li>
+              <li>Entrée（前菜）</li>
+              <li>Poisson（お魚料理）</li>
+              <li>Viande（お肉料理）</li>
+              <li>Dessert et Café（デセールとカフェ）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-note fade-target">
+        ※別途サービス料10%を頂戴いたします。 ※食材の入荷状況によりメニューが変更となる場合がございます。<br>
+        ※アレルギーや苦手な食材がございましたら、ご予約時にお申し付けください。
+      </div>
+    </div>
+  </section>
+
+  <!-- Wine & Pairing -->
+  <section class="section wine parallax" id="wine">
+    <div class="l-container">
+      <div class="w-content fade-target border-gold">
+        <span class="en-label gold">W i n e &nbsp; P a i r i n g</span>
+        <h2 class="sect-heading text-white">料理とワインの幸福な結婚。</h2>
+        <p class="text-white">
+          フランスの銘醸地を中心に、ソムリエが厳選した約300種類のワインを取り揃えております。<br>
+          一皿ごとに完璧なマリアージュを提案する「ワインペアリングコース」が、お客様から最も高い評価をいただいております。グラスの形や温度管理にもこだわり抜き、ワインのポテンシャルを最大限に引き出します。
+        </p>
+        <div class="w-prices border-top-gold">
+          <div class="w-row">
+            <span>Wine Pairing (5 Glass)</span>
+            <span>¥ 11,000</span>
+          </div>
+          <div class="w-row">
+            <span>Wine Pairing (7 Glass)</span>
+            <span>¥ 16,000</span>
+          </div>
+          <div class="w-row">
+            <span>Non-Alcoholic Pairing</span>
+            <span>¥ 8,800</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Space -->
+  <section class="section space" id="space">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">S p a c e</span>
+        <h2 class="sect-heading">上質な時を刻む空間</h2>
+      </div>
+
+      <div class="sp-grid">
+        <div class="sp-item fade-target">
+          <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="メインダイニング">
+          <div class="sp-text">
+            <h3>Main Dining</h3>
+            <p>ゆったりと間隔を空けて配置されたテーブル席。温かみのある間接照明が、お二人だけの親密な時間を演出します。（全24席）</p>
+          </div>
+        </div>
+        <div class="sp-item fade-target delay-1">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="プライベートルーム">
+          <div class="sp-text">
+            <h3>Private Room</h3>
+            <p>ご接待やご結納、記念日に最適な完全個室を2部屋ご用意しております。（最大6名様 / 室料 ¥5,500）</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info & Reserve (CTA) -->
+  <section class="section info" id="info">
+    <div class="l-container flex-info">
+      <!-- Access -->
+      <div class="i-left fade-target">
+        <div class="logo-text">L'Étoile</div>
+        <div class="i-details">
+          <dl>
+            <dt>Address</dt>
+            <dd>〒150-0000 東京都渋谷区神宮前 1-2-3 レトワールビル 1F</dd>
+            
+            <dt>Access</dt>
+            <dd>東京メトロ「表参道駅」A4出口より徒歩5分</dd>
+            
+            <dt>Tel</dt>
+            <dd class="tel">03-0000-0000</dd>
+            
+            <dt>Hours</dt>
+            <dd>Lunch : 11:30 - 15:00 (L.O. 13:00)<br>Dinner : 18:00 - 23:00 (L.O. 20:00)</dd>
+            
+            <dt>Closed</dt>
+            <dd>月曜日・第1、第3火曜日</dd>
+            
+            <dt>Dress Code</dt>
+            <dd>スマートカジュアルをお願いしております。<br>（男性の半ズボンやサンダルでのご来店はご遠慮ください）</dd>
+          </dl>
+        </div>
+      </div>
+      
+      <!-- Reserve Box -->
+      <div class="i-right fade-target delay-1" id="reserve">
+        <div class="reserve-box border-gold-box">
+          <h3 class="r-heading">R E S E R V A T I O N</h3>
+          <p class="r-text">
+            当店は完全予約制となっております。<br>
+            2ヶ月先までのご予約をWEBより承っております。<br>
+            ※5名様以上、または個室をご希望の場合はお電話にてお問い合わせください。
+          </p>
+          <a href="#" class="btn-solid btn-full">WEB予約システムへ進む</a>
+          
+          <div class="cancel-policy">
+            <h4>【キャンセルポリシー】</h4>
+            <p>ご予約の当日キャンセル：100%<br>前日キャンセル：50%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="l-container center">
+      <div class="ft-logo">L'Étoile</div>
+      <div class="social-links flex-center">
+        <a href="#"><i data-lucide="instagram"></i></a>
+        <a href="#"><i data-lucide="facebook"></i></a>
+      </div>
+      <div class="ft-copy">
+        &copy; 2025 Restaurant L'Étoile. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
