@@ -1,48 +1,311 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>Brillia ホワイトニング | 輝く白い歯へ</title><meta name="description" content="最新LEDホワイトニングで痛みなく白い歯を。">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">Brillia</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLANC TEETH | 痛くない、食事制限なしのセルフホワイトニング専門店</title>
+  <meta name="description" content="1回たったの30分。食事制限なし、痛みゼロの最先端セルフホワイトニングサロン「BLANC TEETH（ブランティース）」。初回お試しキャンペーン実施中！自然で美しい本来の白さへ。">
   
-  <!-- 1. HERO -->
-  <section class="hero"><div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="hero-box reveal"><h1>自信あふれる、<br>輝く白い歯へ。</h1><p>最新LEDホワイトニングで痛みなく白い歯を。</p></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
   
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><span class="sub">Philosophy</span><h2>美しさを引き出す、<br>上質な時間。</h2><p>最新LEDホワイトニングで痛みなく白い歯を。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-  
-  <!-- 3. FEATURES -->
-  <section class="section bg-light"><div class="container"><h2 class="center reveal">Our Strengths</h2><div class="feat-list">
-    <div class="feat reveal" style="transition-delay:0s"><h3><i data-lucide="check"></i>  最新LED照射</h3><p>従来比2倍の効果。1回30分で実感。</p></div><div class="feat reveal" style="transition-delay:0.1s"><h3><i data-lucide="check"></i>  痛みゼロ</h3><p>低刺激ジェルで安心。</p></div><div class="feat reveal" style="transition-delay:0.2s"><h3><i data-lucide="check"></i>  持続力</h3><p>コーティング効果で白さ長持ち。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="center reveal">Gallery</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1512496015851-a1fbcf69b6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-    </div>
-  </div></section>
-
-  <!-- 5. MENU & PRICE -->
-  <section class="section bg-light"><div class="container reveal"><h2 class="center">Menu & Price</h2>
-    <div class="price-box"><div class="row"><div class="name">基本コース</div><div class="dots"></div><div class="cost">要見積</div></div><div class="row"><div class="name">プレミアム</div><div class="dots"></div><div class="cost">要相談</div></div></div>
-  </div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="center">FAQ</h2>
-    <div class="faq-box">
-      <details><summary>予約は必要ですか？</summary><p>はい、お客様一人ひとりに合わせたサービスを提供するため、完全予約制となっております。</p></details>
-      <details><summary>キャンセル料はかかりますか？</summary><p>前日までのキャンセルは無料です。当日のキャンセルは料金の50%を頂戴しております。</p></details>
-      <details><summary>駐車場はありますか？</summary><p>店舗の近くに2台分の専用駐車場をご用意しております。</p></details>
-    </div>
-  </div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>ご予約・お問い合わせ</h2><p>特別な体験を、あなたに。</p><a href="#" class="btn">今すぐ予約する</a></div></section>
-  
-  <footer class="footer">Brillia</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body class="bg-ice text-navy">
+
+  <!-- Header -->
+  <header class="header glass-bg" id="header">
+    <div class="h-container flex-between align-center">
+      <div class="logo">
+        <a href="#" class="flex gap-xs align-center">
+          <i data-lucide="sparkles" class="text-cyan icon-lg"></i>
+          <span class="font-montserrat font-black text-navy text-xl tracking-tight">BLANC <span class="text-cyan font-light">TEETH</span></span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-zen font-bold text-sm tracking-widest text-navy">
+          <li><a href="#about" class="hover-cyan transition">選ばれる理由</a></li>
+          <li><a href="#price" class="hover-cyan transition">料金プラン</a></li>
+          <li><a href="#flow" class="hover-cyan transition">施術の流れ</a></li>
+          <li><a href="#faq" class="hover-cyan transition">よくある質問</a></li>
+        </ul>
+        <div class="h-btn sp-none ml-large">
+          <a href="#reserve" class="btn btn-cyan btn-pill font-zen font-bold text-sm box-shadow-cyan hover-float">
+            初回お試し予約はこちら
+          </a>
+        </div>
+      </nav>
+      <button class="menu-toggle text-navy" id="menuToggle" aria-label="メニューを開く">
+        <span class="bg-navy"></span><span class="bg-navy"></span><span class="bg-navy"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero relative overflow-hidden flex-center min-h-80vh pt-header bg-white">
+    <!-- Abstract Glow Blurs -->
+    <div class="glow-orb orb-1 bg-cyan opacity-20 absolute"></div>
+    <div class="glow-orb orb-2 bg-blue opacity-10 absolute"></div>
+    
+    <div class="l-container relative z-10 w-full flex-between align-center flex-col-sp">
+      
+      <div class="hero-left text-left w-50 fade-target relative z-10 max-w-600">
+        <div class="flex gap-xs mb-small animate-fade-in align-center">
+          <span class="h-badge bg-cyan-light text-cyan font-zen font-bold text-xs px-small py-xs rounded-full inline-flex align-center gap-xs">
+            <i data-lucide="sparkles" class="icon-sm"></i> 食事制限なし
+          </span>
+          <span class="h-badge bg-cyan-light text-cyan font-zen font-bold text-xs px-small py-xs rounded-full inline-flex align-center gap-xs">
+            <i data-lucide="shield-check" class="icon-sm"></i> 痛くない・しみない
+          </span>
+        </div>
+
+        <h1 class="font-zen font-black text-navy text-4xl line-height-tight mb-small tracking-tight animate-slide-up">
+          たった30分で実感、<br>
+          <span class="text-gradient font-black">自然な白い歯</span>へ。
+        </h1>
+        
+        <p class="font-zen text-gray text-md line-height-long font-bold mb-medium animate-slide-up delay-1 max-w-500">
+          歯科提携の最先端オーガニックジェルと<br class="sp-none">
+          強力LED照射。生まれ持った白さを引き出す<br class="sp-none">
+          新しいセルフホワイトニング。
+        </p>
+        
+        <div class="hero-price bg-white border-line p-small rounded-xl box-shadow-soft inline-block animate-slide-up delay-2 mb-medium">
+          <div class="font-zen font-bold text-xs text-gray mb-xs flex align-center gap-xs"><i data-lucide="gift" class="text-cyan icon-sm"></i> 初回お試しキャンペーン（1回 15分×2照射）</div>
+          <div class="flex align-end gap-small">
+            <span class="font-zen font-bold text-gray text-strike text-md mb-xs">通常 ¥6,980</span>
+            <span class="font-montserrat font-black text-cyan text-3xl line-height-tight">¥ 2,980 <span class="font-zen text-xs">税込</span></span>
+          </div>
+        </div>
+
+        <div class="flex gap-small flex-wrap animate-slide-up delay-3">
+          <a href="#reserve" class="btn btn-cyan btn-xl btn-pill font-bold font-zen box-shadow-cyan hover-float text-lg w-full max-w-400 justify-center">
+            今すぐWEB予約する <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="hero-right relative w-50 flex-end animate-fade-in delay-2 z-10 sp-mt-large">
+        <div class="image-mask float-animation relative">
+          <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="笑顔の女性" class="w-full h-full object-cover rounded-arch box-shadow-xl relative z-10">
+          <!-- Sparkle decorations -->
+          <i data-lucide="sparkle" class="absolute top-0 right-10 text-cyan icon-lg animate-pulse-sparkle z-20"></i>
+          <i data-lucide="sparkle" class="absolute bottom-10 left-0 text-cyan icon-md animate-pulse-sparkle delay-1 z-20"></i>
+          
+          <!-- Decorative circle background -->
+          <div class="absolute -right-6 -bottom-6 w-full h-full bg-cyan-light rounded-arch z-0"></div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </section>
+
+  <!-- Problems -->
+  <section class="section about bg-ice pt-large pb-large relative" id="about">
+    <div class="l-container center">
+      <div class="sect-header center fade-target mb-medium">
+        <span class="font-montserrat text-cyan font-bold text-sm tracking-widest uppercase mb-xs display-block">Reasons</span>
+        <h2 class="font-zen font-black text-navy text-3xl line-height-tight">ホワイトニングの常識を<br class="sp-only">覆す<span class="text-cyan">3つの理由</span>。</h2>
+      </div>
+
+      <div class="grid-3 gap-large mt-large text-left">
+        <!-- Feature 1 -->
+        <div class="f-card bg-white p-medium rounded-xl border-line box-shadow-soft fade-target hover-float transition text-center relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-cyan"></div>
+          <div class="icon-circle bg-cyan-light text-cyan mx-auto center mb-small"><i data-lucide="shield" class="icon-lg"></i></div>
+          <h3 class="font-zen font-black text-navy text-lg mb-small">痛くない・しみない</h3>
+          <p class="font-zen text-gray text-sm line-height-long font-bold text-left">
+            歯科医院で使用される過酸化水素を含まない、独自開発のオーガニックジェルを使用。歯の表面を溶かさないため、施術中の痛みや知覚過敏が全くありません。
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="f-card bg-white p-medium rounded-xl border-line box-shadow-soft fade-target delay-1 hover-float transition text-center relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-cyan"></div>
+          <div class="icon-circle bg-cyan-light text-cyan mx-auto center mb-small"><i data-lucide="coffee" class="icon-lg"></i></div>
+          <h3 class="font-zen font-black text-navy text-lg mb-small">直後の食事制限なし</h3>
+          <p class="font-zen text-gray text-sm line-height-long font-bold text-left">
+            施術直後からコーティング効果が働き、汚れがつきにくくなります。そのため、コーヒー・赤ワイン・カレーなど、色の濃い食事の制限も一切不要です。
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="f-card bg-white p-medium rounded-xl border-line box-shadow-soft fade-target delay-2 hover-float transition text-center relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-cyan"></div>
+          <div class="icon-circle bg-cyan-light text-cyan mx-auto center mb-small"><i data-lucide="timer" class="icon-lg"></i></div>
+          <h3 class="font-zen font-black text-navy text-lg mb-small">短時間・低価格</h3>
+          <p class="font-zen text-gray text-sm line-height-long font-bold text-left">
+            ご自身でジェルを塗っていただくセルフ形式と、最新式の強力LEDマシンの導入により、スタッフのコストを削減。1回30分で確かな白さを低価格で提供します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price -->
+  <section class="section price bg-white pt-large pb-large relative" id="price">
+    <div class="l-container center">
+      <div class="sect-header center fade-target mb-medium">
+        <span class="font-montserrat text-cyan font-bold text-sm tracking-widest uppercase mb-xs display-block">Price Plan</span>
+        <h2 class="font-zen font-black text-navy text-3xl line-height-tight">わかりやすい明朗会計</h2>
+        <p class="font-zen text-gray text-sm line-height-long font-bold mt-small">入会金や年会費は一切かかりません。都度払いも可能です。</p>
+      </div>
+
+      <div class="max-w-800 mx-auto">
+        <!-- Price Card M -->
+        <div class="price-bg bg-gradient-cyan text-white rounded-xl p-medium box-shadow-cyan fade-target mb-small flex-between align-center flex-col-sp">
+          <div class="text-left w-60 w-full-sp center-sp">
+            <span class="h-badge bg-white text-cyan font-zen font-bold text-xs px-small py-xs rounded-full inline-flex align-center gap-xs mb-small">
+              人気No.1
+            </span>
+            <h3 class="font-zen font-black text-2xl mb-xs">３回集中コース</h3>
+            <p class="font-zen text-sm font-bold opacity-90 line-height-long">しっかり白さを定着させたい方におすすめ。<br>（1回あたり ¥4,000とお得です）</p>
+          </div>
+          <div class="w-40 w-full-sp text-right center-sp sp-mt-small">
+            <div class="font-montserrat font-black text-4xl">¥ 12,000</div>
+          </div>
+        </div>
+
+        <!-- Try Card -->
+        <div class="bg-ice border-cyan-light rounded-xl p-medium box-shadow-soft fade-target border-thick flex-between align-center flex-col-sp">
+          <div class="text-left w-60 w-full-sp center-sp">
+            <h3 class="font-zen font-black text-navy text-xl mb-xs">初回お試し体験</h3>
+            <p class="font-zen text-gray text-sm font-bold line-height-long">まずは効果を実感したい方へ。（15分照射×2回）</p>
+          </div>
+          <div class="w-40 w-full-sp text-right center-sp sp-mt-small">
+            <div class="font-montserrat font-black text-cyan text-3xl">¥ 2,980</div>
+          </div>
+        </div>
+
+        <!-- Regular Card -->
+        <div class="bg-white border-line rounded-xl p-medium box-shadow-soft mt-small fade-target flex-between align-center flex-col-sp">
+          <div class="text-left w-60 w-full-sp center-sp">
+            <h3 class="font-zen font-black text-navy text-xl mb-xs">都度払い（1回）</h3>
+            <p class="font-zen text-gray text-sm font-bold line-height-long">自分のペースで通いたい方、メンテナンス用。</p>
+          </div>
+          <div class="w-40 w-full-sp text-right center-sp sp-mt-small">
+            <div class="font-montserrat font-black text-navy text-3xl">¥ 4,980</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section class="cta pt-xl pb-xl bg-ice relative border-y-line" id="reserve">
+    <!-- Blurs -->
+    <div class="glow-orb orb-3 bg-cyan opacity-10 absolute"></div>
+
+    <div class="l-container relative z-10 flex-between align-center flex-col-sp gap-large">
+      
+      <div class="cta-text w-50 fade-target text-left center-sp">
+        <h2 class="font-zen font-black text-navy text-3xl mb-xs line-height-tight">笑顔の自信は、<br><span class="text-cyan">「白い歯」</span>から。</h2>
+        <p class="font-zen text-gray text-sm mb-large line-height-long font-bold max-w-600">
+          当サロンは完全予約制のプライベート空間です。<br>
+          空き状況はWEBから24時間いつでもご確認いただけます。
+        </p>
+        
+        <div class="bg-white border-line p-small rounded-lg inline-block text-left relative overflow-hidden text-center-sp w-full-sp">
+          <div class="absolute top-0 left-0 w-1 h-full bg-cyan sp-none"></div>
+          <div class="font-zen font-bold text-navy text-sm mb-xs">お電話でのご予約・お問い合わせ</div>
+          <div class="font-montserrat font-black text-cyan text-3xl flex align-center gap-xs justify-center-sp">
+             <i data-lucide="phone-call" class="icon-md"></i> 03-0000-0000
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-action w-50 fade-target delay-1 center">
+        <div class="bg-white p-large text-navy text-center box-shadow-xl rounded-xl border-t-cyan border-thick relative">
+          <i data-lucide="calendar" class="text-cyan icon-lg mb-xs mx-auto"></i>
+          <h3 class="font-zen font-black text-xl mb-xs">WEBご予約</h3>
+          <p class="font-zen text-xs text-gray font-bold mb-medium">24時間受付。初回トライアルもこちらから。</p>
+          
+          <form class="booking-form font-zen flex-column gap-small">
+            <a href="#" class="btn btn-cyan btn-xl btn-pill w-full font-black text-lg tracking-widest justify-center box-shadow-cyan hover-float">
+              空き状況を確認する <i data-lucide="chevron-right" class="icon-sm"></i>
+            </a>
+            <p class="text-xs text-gray font-bold mt-xs">※外部予約システムへ移動します。</p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-navy pt-large pb-medium relative text-white border-t-cyan border-thick">
+    <div class="l-container flex-between align-start flex-col-sp gap-large font-zen font-bold text-sm border-b-cyan-dark pb-medium mb-medium">
+      
+      <div class="f-left text-left w-40 center-sp w-full-sp">
+        <div class="flex gap-xs align-center mb-small justify-center-sp">
+          <i data-lucide="sparkles" class="text-cyan icon-lg"></i>
+          <span class="font-montserrat font-black text-white text-xl tracking-tight">BLANC <span class="text-cyan font-light">TEETH</span></span>
+        </div>
+        <p class="text-silver text-xs line-height-long max-w-400 mx-auto-sp font-normal opacity-80">
+          〒150-0001 東京都渋谷区スマイル 1-2-3<br>
+          ホワイトビル 4F<br><br>
+          営業時間: 平日 10:00 - 21:00 / 休日 10:00 - 19:00<br>
+          最終受付は営業終了の1時間前まで
+        </p>
+      </div>
+      
+      <div class="f-right flex gap-large justify-end flex-wrap w-60 justify-center-sp w-full-sp">
+        <ul class="flex-column gap-small text-silver text-xs text-left">
+          <li><a href="#" class="hover-cyan transition">トップページ</a></li>
+          <li><a href="#" class="hover-cyan transition">選ばれる理由</a></li>
+          <li><a href="#" class="hover-cyan transition">料金プラン</a></li>
+        </ul>
+        <ul class="flex-column gap-small text-silver text-xs text-left">
+          <li><a href="#" class="hover-cyan transition">痛くない仕組み</a></li>
+          <li><a href="#" class="hover-cyan transition">よくあるご質問</a></li>
+          <li><a href="#" class="hover-cyan transition">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="l-container flex-between align-center flex-col-sp text-xs font-montserrat text-silver opacity-60">
+       <div class="tracking-widest">&copy; 2025 BLANC TEETH. ALL RIGHTS RESERVED.</div>
+       <div class="sns-icons flex gap-small mt-small-sp">
+          <a href="#" class="hover-cyan transition"><i data-lucide="instagram"></i></a>
+          <a href="#" class="hover-cyan transition"><i data-lucide="twitter"></i></a>
+       </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
