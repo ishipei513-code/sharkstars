@@ -186,7 +186,7 @@ ul { list-style: none; }
 /* ==========================================================================
    7. Wine Parallax
    ========================================================================== */
-.wine { background: url('https://images.unsplash.com/photo-1510167123985-1d4e08bfcd2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed; position: relative; padding: 180px 0; }
+.wine { background: url('https://images.unsplash.com/photo-1602833334025-5019f046b8f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed; position: relative; padding: 180px 0; }
 .wine::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.6); z-index: 1; }
 .w-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; background: rgba(17,17,17,0.85); padding: 70px 60px; text-align: center; }
 .border-gold { border: 1px solid var(--c-gold); }

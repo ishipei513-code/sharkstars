@@ -202,7 +202,7 @@ ul { list-style: none; }
 /* ==========================================================================
    9. CTA reserve
    ========================================================================== */
-.cta { background: url('https://images.unsplash.com/photo-1542452255-1f90ac86c673?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed; position: relative;}
+.cta { background: url('https://images.unsplash.com/photo-1567629307995-b9f33097bd30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed; position: relative;}
 .cta::before { content: ''; position: absolute; inset: 0; background: rgba(245,243,247,0.92); }
 .cta-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; background: #fff; padding: 70px 40px; border: 1px solid var(--c-border); box-shadow: 0 20px 50px rgba(74,59,76,0.08); }
 .cta-flex { display: flex; justify-content: center; gap: 30px; }

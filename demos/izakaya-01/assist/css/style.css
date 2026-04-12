@@ -170,7 +170,7 @@ ul { list-style: none; }
 /* ==========================================================================
    8. Course
    ========================================================================== */
-.course-box { background-image: linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url('https://images.unsplash.com/photo-1555507015-10eb0a359480?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; background-attachment: fixed; padding: 80px; border: 1px solid var(--c-border); text-align: center; }
+.course-box { background-image: linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url('https://images.unsplash.com/photo-1611518040286-9af8ba97ab46?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; background-attachment: fixed; padding: 80px; border: 1px solid var(--c-border); text-align: center; }
 .cb-text p { color: var(--c-text-muted); margin-bottom: 40px; }
 .course-list { max-width: 700px; margin: 0 auto; text-align: left; }
 .course-list li { background: rgba(0,0,0,0.5); border: 1px solid var(--c-border); margin-bottom: 15px; padding: 25px 30px; display: flex; justify-content: space-between; align-items: center; transition: var(--transition); }

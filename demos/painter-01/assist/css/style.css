@@ -258,7 +258,7 @@ ul { list-style: none; }
 /* ==========================================================================
    11. CTA
    ========================================================================== */
-.cta { background-color: var(--c-primary); color: #fff; padding: 100px 0; background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-blend-mode: overlay; background-size: cover; background-attachment: fixed; }
+.cta { background-color: var(--c-primary); color: #fff; padding: 100px 0; background-image: url('https://images.unsplash.com/photo-1717281234297-3def5ae3eee1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-blend-mode: overlay; background-size: cover; background-attachment: fixed; }
 .cta-box { max-width: 900px; margin: 0 auto; text-align: center; background: rgba(30,41,59,0.9); padding: 80px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.1); }
 .cta-box h2 { font-size: var(--fs-h2); font-weight: 900; margin-bottom: 20px; color: var(--c-accent); }
 .cta-box p { font-weight: 500; font-size: 1.1rem; margin-bottom: 40px; color: #E2E8F0; }
