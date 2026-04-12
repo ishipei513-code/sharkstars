@@ -1,48 +1,245 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>鮨 青海 | 江戸前鮨の粋</title><meta name="description" content="築地直送の新鮮なネタと熟練の技。">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">鮨 青海</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鮨 銀波 (Ginpa) | 銀座・江戸前寿司</title>
+  <meta name="description" content="伝統を握る。四季を食す。銀座で暖簾を掲げて五十余年。毎朝豊洲で仕入れる極上の旬魚と、赤酢を用いたこだわりのシャリで、一貫一貫に魂を込めた本格江戸前寿司をご提供いたします。">
   
-  <!-- 1. HERO -->
-  <section class="hero"><div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="hero-box reveal"><h1>一貫一貫に、<br>職人の技と心を。</h1><p>築地直送の新鮮なネタと熟練の技。</p></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
   
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><span class="sub">Philosophy</span><h2>美しさを引き出す、<br>上質な時間。</h2><p>築地直送の新鮮なネタと熟練の技。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-  
-  <!-- 3. FEATURES -->
-  <section class="section bg-light"><div class="container"><h2 class="center reveal">Our Strengths</h2><div class="feat-list">
-    <div class="feat reveal" style="transition-delay:0s"><h3><i data-lucide="check"></i> 信頼と実績</h3><p>地域で長年の信頼をいただいております。</p></div><div class="feat reveal" style="transition-delay:0.1s"><h3><i data-lucide="check"></i> プロフェッショナル</h3><p>熟練のスタッフが丁寧に対応します。</p></div><div class="feat reveal" style="transition-delay:0.2s"><h3><i data-lucide="check"></i> サポート体制</h3><p>アフターフォローも万全です。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="center reveal">Gallery</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1512496015851-a1fbcf69b6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-    </div>
-  </div></section>
-
-  <!-- 5. MENU & PRICE -->
-  <section class="section bg-light"><div class="container reveal"><h2 class="center">Menu & Price</h2>
-    <div class="price-box"><div class="row"><div class="name">基本コース</div><div class="dots"></div><div class="cost">要見積</div></div><div class="row"><div class="name">プレミアム</div><div class="dots"></div><div class="cost">要相談</div></div></div>
-  </div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="center">FAQ</h2>
-    <div class="faq-box">
-      <details><summary>予約は必要ですか？</summary><p>はい、お客様一人ひとりに合わせたサービスを提供するため、完全予約制となっております。</p></details>
-      <details><summary>キャンセル料はかかりますか？</summary><p>前日までのキャンセルは無料です。当日のキャンセルは料金の50%を頂戴しております。</p></details>
-      <details><summary>駐車場はありますか？</summary><p>店舗の近くに2台分の専用駐車場をご用意しております。</p></details>
-    </div>
-  </div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>ご予約・お問い合わせ</h2><p>特別な体験を、あなたに。</p><a href="#" class="btn">今すぐ予約する</a></div></section>
-  
-  <footer class="footer">鮨 青海</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+
+  <!-- Loading Animation (Zen style fade) -->
+  <div class="loader" id="loader">
+    <div class="stamp-logo text-red font-shippori font-bold">銀波</div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <span class="font-shippori font-bold text-dark l-text">鮨 銀波</span>
+          <span class="l-sub font-noto">GINZA GINPA</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-noto">
+          <li><a href="#concept">お品書き</a></li>
+          <li><a href="#omakase">おまかせ</a></li>
+          <li><a href="#space">空間</a></li>
+          <li><a href="#access">ご予約</a></li>
+        </ul>
+      </nav>
+      <!-- Hamburger -->
+      <button class="menu-toggle text-dark" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="nav-space"></div>
+  <section class="hero bg-washi">
+    <div class="l-container flex-hero">
+      <!-- Image on right (for modern Japanese asymmetry) -->
+      <div class="hero-img fade-target delay-1">
+        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="職人が握る寿司">
+      </div>
+      
+      <!-- Text on left using Vertical Writing Mode (Tate-gaki) -->
+      <div class="hero-text fade-target delay-2">
+        <h1 class="hero-title font-shippori font-bold text-dark text-vert">
+          <span>伝統を握る。</span>
+          <span>四季を食す。</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concept / Craftsmanship -->
+  <section class="section concept bg-washi border-top-line" id="concept">
+    <div class="l-container flex-concept">
+      <div class="c-text fade-target">
+        <h2 class="font-shippori text-dark font-bold c-heading mb-medium">一貫に、<br>情熱を込めて。</h2>
+        <p class="font-noto text-gray line-height-ku mb-medium">
+          毎朝、大将自らが豊洲へ足を運び、<br>
+          その日一番の魚だけを厳選。<br>
+          赤酢を独自の配合でブレンドしたシャリと、<br>
+          江戸前の技法「仕込み（締める、漬ける、煮る）」が<br>
+          魚本来の旨味を極限まで引き出します。
+        </p>
+        <p class="font-noto text-gray line-height-ku">
+          口の中でほどけるシャリと、<br>
+          旬の魚が調和する至福の瞬間を<br>
+          どうぞご堪能ください。
+        </p>
+        <div class="stamp mt-large font-shippori text-red">銀波</div>
+      </div>
+      <div class="c-img flex-column gap-medium fade-target delay-1">
+        <img src="https://images.unsplash.com/photo-1512132411229-c30391241dd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="新鮮なウニ" class="img-tall">
+        <img src="https://images.unsplash.com/photo-1625937286074-9ca519d5d9df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="包丁と職人" class="img-wide">
+      </div>
+    </div>
+  </section>
+
+  <!-- Omakase Menu -->
+  <section class="section menu bg-dark text-white border-top-line" id="omakase">
+    <div class="l-container">
+      <div class="sect-header center fade-target mb-large">
+        <span class="en-label font-noto text-gray-light">COURSE MENU</span>
+        <h2 class="sect-heading font-shippori font-bold mt-small">お品書き</h2>
+        <div class="red-dot mx-auto mt-small"></div>
+      </div>
+
+      <div class="m-flex">
+        <!-- Course 1 -->
+        <div class="m-box fade-target border-box">
+          <div class="m-season font-noto text-red text-sm mb-xs">昼の部（12:00〜14:00）</div>
+          <h3 class="font-shippori font-bold text-lg mb-small border-b-gray pb-small">おまかせ 握り十貫</h3>
+          <p class="font-noto text-gray-light text-sm line-height-ku mb-medium">
+            小鉢、旬の握り十貫、巻物、お椀、甘味<br>
+            ※仕入れ状況により内容が変更となります。
+          </p>
+          <div class="m-price font-shippori font-bold text-xl">16,500 <span class="font-noto text-sm font-normal">円（税込）</span></div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="m-box fade-target delay-1 border-box accent-box">
+          <div class="m-season font-noto text-red text-sm mb-xs">夜の部（18:00〜22:00）</div>
+          <h3 class="font-shippori font-bold text-lg mb-small border-b-gray pb-small">特上 おまかせコース</h3>
+          <p class="font-noto text-gray-light text-sm line-height-ku mb-medium">
+            先付、造り、焼き物、蒸し物、旬の特上握り十二貫、巻物、お椀、甘味<br>
+            ※板長が厳選した最高峰の食材を使用いたします。
+          </p>
+          <div class="m-price font-shippori font-bold text-xl">33,000 <span class="font-noto text-sm font-normal">円（税込）</span></div>
+        </div>
+      </div>
+      
+      <p class="center font-noto text-sm text-gray mt-medium fade-target delay-2">
+        ※当店は完全予約制となっております。<br>
+        ※アレルギー等ございましたら、ご予約時にお申し付けください。
+      </p>
+    </div>
+  </section>
+
+  <!-- Space / Architecture -->
+  <section class="section space bg-washi border-top-line" id="space">
+    <div class="l-container">
+      <div class="s-flex">
+        <div class="s-text fade-target">
+          <h2 class="font-shippori font-bold text-dark c-heading mb-medium">非日常を<br>味わう空間。</h2>
+          <p class="font-noto text-gray line-height-ku">
+            樹齢二百年の檜（ひのき）を使用した白木のカウンター席。<br>
+            職人の無駄のない所作と、心地よい包丁の音色を、<br>
+            五感でお楽しみいただけます。
+          </p>
+          <p class="font-noto text-gray line-height-ku mt-small">
+            また、大切な接待やご会食に合わせてご利用いただける、<br>
+            ゆとりある完全個室も二部屋ご用意しております。
+          </p>
+        </div>
+        <div class="s-img fade-target delay-1">
+          <img src="https://images.unsplash.com/photo-1579027989536-b7b1f875659b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="高級な寿司カウンター">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access & Reservation -->
+  <section class="section access bg-dark text-white border-top-line" id="access">
+    <div class="l-container flex-between gap-large flex-col-sp">
+      <!-- Info -->
+      <div class="a-info fade-target">
+        <div class="stamp-logo text-red font-shippori font-bold mb-medium">銀波</div>
+        <h3 class="font-shippori text-lg font-bold mb-small border-b-gray pb-small">店舗案内</h3>
+        <table class="a-table font-noto text-gray-light text-sm">
+          <tr>
+            <th>住所</th>
+            <td>〒104-0061<br>東京都中央区銀座 1-2-3 銀波ビル 1F</td>
+          </tr>
+          <tr>
+            <th>営業時間</th>
+            <td>昼：12:00〜14:00<br>夜：18:00〜22:00（L.O. 21:00）</td>
+          </tr>
+          <tr>
+            <th>定休日</th>
+            <td>日曜日・祝日</td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td>
+              <a href="tel:03-0000-0000" class="tel-link font-shippori">03-0000-0000</a><br>
+              <span class="text-xs">※お電話でのご予約は15:00〜17:00にお願い致します。</span>
+            </td>
+          </tr>
+        </table>
+        
+        <div class="mt-large">
+          <a href="#" class="btn btn-outline-white font-noto">WEB予約はこちら（TableCheck）</a>
+        </div>
+      </div>
+      
+      <!-- Minimalist Map placeholder -->
+      <div class="a-map border-box fade-target delay-1 center flex-column">
+        <i data-lucide="map" class="icon-lg text-gray mb-small"></i>
+        <span class="font-noto text-sm text-gray">Google Mapを表示</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark border-top-line pt-large pb-medium">
+    <div class="l-container center text-gray-light font-noto font-sm text-xs">
+      &copy; 2025 Ginza GINPA Sushi. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Loader logic
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loader').style.opacity = '0';
+        setTimeout(() => {
+          document.getElementById('loader').style.display = 'none';
+        }, 1000);
+      }, 800);
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
