@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLAZE GYM | パーソナルトレーニング</title>
-  <meta name="description" content="完全個室マンツーマンでダイエット＆ボディメイク。">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"><title>BLAZE GYM | パーソナルトレーニング</title>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assist/css/style.css">
 </head>
 <body>
-  <header class="header"><div class="container"><a href="#" class="logo">🔥 BLAZE GYM</a><ul class="nav-list"><li><a href="#price" class="nav-link">メニュー</a></li><li><a href="#features" class="nav-link">強み</a></li><li><a href="#contact" class="nav-link">無料体験</a></li></ul><a href="#contact" class="nav-cta">💪 無料体験</a><button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button></div></header>
-  <section class="hero"><div class="hero-bg"><img src="assist/images/hero.png" alt=""></div><div class="hero-overlay"></div><div class="hero-content"><span class="hero-badge">Personal Training</span><h1 class="hero-title">限界を超えろ。<br>理想の自分へ。</h1><p class="hero-desc">完全個室・マンツーマン指導で<br>ダイエット＆ボディメイクを実現。</p><a href="#contact" class="hero-btn">💪 無料体験</a></div></section>
-  <section class="section features" id="features"><div class="container"><p class="s-label fade-in">Features</p><h2 class="s-title fade-in">選ばれる理由</h2><p class="s-sub fade-in"></p><div class="features-grid"><div class="feature-card fade-in"><div class="feature-icon">💪</div><h3 class="feature-title">マンツーマン指導</h3><p class="feature-desc">専属トレーナーが最後までサポート。</p></div><div class="feature-card fade-in"><div class="feature-icon">🍲</div><h3 class="feature-title">食事指導つき</h3><p class="feature-desc">LINEで毎日食事アドバイス。</p></div><div class="feature-card fade-in"><div class="feature-icon">🏋️</div><h3 class="feature-title">完全個室</h3><p class="feature-desc">他の目を気にせずトレーニング。</p></div></div></div></section>
-  <section class="section price" id="price"><div class="container"><p class="s-label fade-in">Menu & Price</p><h2 class="s-title fade-in">メニュー・料金</h2><p class="s-sub fade-in"></p><div class="price-grid"><div class="price-cat fade-in"><h3>月額プラン</h3><div class="price-item"><span>月4回コース</span><span class="price-cost">¥29,800</span></div><div class="price-item"><span>月8回コース</span><span class="price-cost">¥52,800</span></div><div class="price-item"><span>通い放題</span><span class="price-cost">¥79,800</span></div></div><div class="price-cat fade-in"><h3>体験・入会</h3><div class="price-item"><span>無料カウンセリング</span><span class="price-cost">¥0</span></div><div class="price-item"><span>体験トレーニング</span><span class="price-cost">¥3,300</span></div><div class="price-item"><span>入会金</span><span class="price-cost">¥33,000</span></div></div></div></div></section>
-  <section class="cta" id="contact"><div class="container fade-in"><h2>まずは無料カウンセリング</h2><p>理想の体への第一歩を。</p><a href="#" class="cta-btn">💪 無料体験を予約</a></div></section>
-  <footer class="footer"><div class="container"><p class="footer-logo">BLAZE GYM</p><p class="footer-copy">&copy; 2025 BLAZE GYM All rights reserved.</p></div></footer>
-  <script src="assist/js/main.js"></script>
-</body></html>
+  <header class="header" id="header"><div class="container"><div class="logo">BLAZE GYM</div></div></header>
+  <div class="hero">
+    <div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div>
+    <div class="clip-mask"></div>
+    <div class="hero-content reveal">
+      <h1>限界を超えろ。<br>理想の自分へ。</h1>
+      <p>完全個室・マンツーマン指導で<br>ダイエット＆ボディメイクを実現。</p>
+    </div>
+  </div>
+  <section class="section bg-dark">
+    <div class="container">
+      <h2 class="title reveal">FEATURES</h2>
+      <div class="card-wrap">
+        <div class="card reveal" style="transition-delay:0s">
+          <i data-lucide="zap"></i><h3>マンツーマン指導</h3><p>専属トレーナーが最後までサポート。</p>
+        </div><div class="card reveal" style="transition-delay:0.1s">
+          <i data-lucide="zap"></i><h3>食事指導つき</h3><p>LINEで毎日食事アドバイス。</p>
+        </div><div class="card reveal" style="transition-delay:0.2s">
+          <i data-lucide="zap"></i><h3>完全個室</h3><p>他の目を気にせずトレーニング。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section menu">
+    <div class="container reveal">
+      <h2 class="title title-dark">SYSTEM & PLANS</h2>
+      <div class="plans">
+        
+          <div class="p-card"><h4>月4回コース</h4><div class="price">¥29,800</div></div>
+        
+          <div class="p-card"><h4>月8回コース</h4><div class="price">¥52,800</div></div>
+        
+          <div class="p-card"><h4>通い放題</h4><div class="price">¥79,800</div></div>
+        
+          <div class="p-card"><h4>無料カウンセリング</h4><div class="price">¥0</div></div>
+        
+          <div class="p-card"><h4>体験トレーニング</h4><div class="price">¥3,300</div></div>
+        
+          <div class="p-card"><h4>入会金</h4><div class="price">¥33,000</div></div>
+        
+      </div>
+    </div>
+  </section>
+  <footer class="footer">BLAZE GYM</footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
+  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

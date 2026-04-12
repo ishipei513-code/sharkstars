@@ -1,190 +1,51 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hair Salon Belle | あなたに寄り添う、美しいひととき</title>
-  <meta name="description" content="ヘアサロンBelle。お客様一人ひとりの個性を引き出すスタイルをご提案。カット・カラー・パーマ・トリートメント。">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"><title>Hair Salon Belle | あなたに寄り添う、美しいひととき</title><meta name="description" content="ヘアサロンBelle。お客様一人ひとりの個性を引き出すスタイルをご提案。カット・カラー・パーマ・トリートメント。">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assist/css/style.css">
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <a href="#" class="logo">Belle</a>
-      <ul class="nav-list">
-        <li><a href="#concept" class="nav-link">コンセプト</a></li>
-        <li><a href="#price" class="nav-link">メニュー・料金</a></li>
-        <li><a href="#staff" class="nav-link">スタイリスト</a></li>
-        <li><a href="#access" class="nav-link">アクセス</a></li>
-      </ul>
-      <a href="#reserve" class="nav-cta">ご予約</a>
-      <button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
-    </div>
-  </header>
-
-  <!-- HERO -->
+  <header class="header" id="header"><div class="container"><div class="logo">Belle</div></div></header>
   <section class="hero">
-    <div class="hero-bg"><img src="assist/images/hero.png" alt=""></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <span class="hero-tag">Hair Salon</span>
-      <h1 class="hero-title"><span>Belle</span><br>あなたに寄り添う、<br>美しいひととき。</h1>
-      <p class="hero-subtitle">
-        お一人おひとりの髪質やライフスタイルに合わせて、<br>
-        最適なスタイルをご提案いたします。
-      </p>
-      <a href="#reserve" class="hero-btn">ご予約はこちら →</a>
+    <div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div>
+    <div class="hero-box reveal">
+      <h1><span>Belle</span><br>あなたに寄り添う、<br>美しいひととき。</h1>
+      <p>ヘアサロンBelle。お客様一人ひとりの個性を引き出すスタイルをご提案。カット・カラー・パーマ・トリートメント。</p>
     </div>
   </section>
-
-  <!-- CONCEPT -->
-  <section class="section concept" id="concept">
-    <div class="container">
-      <p class="section-label fade-in">Concept</p>
-      <h2 class="section-title fade-in">Concept</h2>
-      <div class="divider fade-in"></div>
-      <p class="section-subtitle fade-in">あなたらしい美しさを、<br>心地よい空間とともに。</p>
-      <div class="concept-grid">
-        <div class="concept-image fade-in">
-          <img src="assist/images/hero.png" alt="Belleの店内">
+  <section class="about section">
+    <div class="container grid">
+      <div class="text reveal">
+        <span class="sub">Philosophy</span>
+        <h2>美しさを引き出す、<br>上質な時間。</h2>
+        <p>ヘアサロンBelle。お客様一人ひとりの個性を引き出すスタイルをご提案。カット・カラー・パーマ・トリートメント。</p>
+        <div class="feat-list">
+          <div class="feat"><h3><i data-lucide="check"></i> 信頼と実績</h3><p>地域で長年の信頼をいただいております。</p></div><div class="feat"><h3><i data-lucide="check"></i> プロフェッショナル</h3><p>熟練のスタッフが丁寧に対応します。</p></div><div class="feat"><h3><i data-lucide="check"></i> サポート体制</h3><p>アフターフォローも万全です。</p></div>
         </div>
-        <div class="concept-text fade-in">
-          <h3>一人ひとりに寄り添う<br>パーソナルサロン</h3>
-          <p>
-            Belleは「美しい」を意味するフランス語。
-            お客様の内面から輝く美しさを引き出したい——
-            そんな想いを込めて名付けました。
-          </p>
-          <br>
-          <p>
-            マンツーマンの丁寧な施術にこだわり、
-            カウンセリングからスタイリングまで一人のスタイリストが
-            責任を持って担当いたします。
-            髪のお悩みもお気軽にご相談ください。
-          </p>
-        </div>
+      </div>
+      <div class="img reveal"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div>
+    </div>
+  </section>
+  <section class="menu section">
+    <div class="container reveal">
+      <h2 class="center">Menu & Price</h2>
+      <div class="price-box">
+        
+          <div class="row"><div class="name">基本コース</div><div class="dots"></div><div class="cost">要見積</div></div>
+        
+          <div class="row"><div class="name">プレミアムコース</div><div class="dots"></div><div class="cost">要お問合せ</div></div>
+        
       </div>
     </div>
   </section>
-
-  <!-- PRICE MENU -->
-  <section class="section price" id="price">
-    <div class="container">
-      <p class="section-label fade-in">Menu & Price</p>
-      <h2 class="section-title fade-in">Menu</h2>
-      <div class="divider fade-in"></div>
-      <p class="section-subtitle fade-in">すべてのメニューにカウンセリング・ブロー込み</p>
-      <div class="price-grid">
-        <div class="price-category fade-in">
-          <h3>Cut</h3>
-          <div class="price-item"><span class="price-item-name">カット</span><span class="price-item-cost">¥5,500</span></div>
-          <div class="price-item"><span class="price-item-name">カット + シャンプー</span><span class="price-item-cost">¥6,600</span></div>
-          <div class="price-item"><span class="price-item-name">前髪カット</span><span class="price-item-cost">¥1,100</span></div>
-          <div class="price-item"><span class="price-item-name">キッズカット（小学生以下）</span><span class="price-item-cost">¥3,300</span></div>
-        </div>
-        <div class="price-category fade-in">
-          <h3>Color</h3>
-          <div class="price-item"><span class="price-item-name">ワンカラー</span><span class="price-item-cost">¥7,700〜</span></div>
-          <div class="price-item"><span class="price-item-name">リタッチカラー</span><span class="price-item-cost">¥6,050〜</span></div>
-          <div class="price-item"><span class="price-item-name">ハイライト</span><span class="price-item-cost">¥8,800〜</span></div>
-          <div class="price-item"><span class="price-item-name">バレイヤージュ</span><span class="price-item-cost">¥13,200〜</span></div>
-        </div>
-        <div class="price-category fade-in">
-          <h3>Perm</h3>
-          <div class="price-item"><span class="price-item-name">パーマ</span><span class="price-item-cost">¥8,800〜</span></div>
-          <div class="price-item"><span class="price-item-name">デジタルパーマ</span><span class="price-item-cost">¥11,000〜</span></div>
-          <div class="price-item"><span class="price-item-name">縮毛矯正</span><span class="price-item-cost">¥16,500〜</span></div>
-        </div>
-        <div class="price-category fade-in">
-          <h3>Treatment</h3>
-          <div class="price-item"><span class="price-item-name">クイックトリートメント</span><span class="price-item-cost">¥2,200</span></div>
-          <div class="price-item"><span class="price-item-name">プレミアムトリートメント</span><span class="price-item-cost">¥5,500</span></div>
-          <div class="price-item"><span class="price-item-name">ヘッドスパ</span><span class="price-item-cost">¥4,400</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STAFF -->
-  <section class="section staff" id="staff">
-    <div class="container">
-      <p class="section-label fade-in">Stylist</p>
-      <h2 class="section-title fade-in">Stylist</h2>
-      <div class="divider fade-in"></div>
-      <div class="staff-grid">
-        <div class="staff-card fade-in">
-          <div class="staff-photo">👩‍🦰</div>
-          <h3 class="staff-name">田中 美咲</h3>
-          <p class="staff-role">Owner / Stylist</p>
-          <p class="staff-desc">自然な抜け感のあるスタイルが得意。丁寧なカウンセリングでお客様のなりたいを叶えます。</p>
-        </div>
-        <div class="staff-card fade-in">
-          <div class="staff-photo">👩</div>
-          <h3 class="staff-name">鈴木 さくら</h3>
-          <p class="staff-role">Stylist</p>
-          <p class="staff-desc">トレンドを取り入れたカラーリングが得意。透明感のある色味をご提案します。</p>
-        </div>
-        <div class="staff-card fade-in">
-          <div class="staff-photo">🧑</div>
-          <h3 class="staff-name">佐藤 玲</h3>
-          <p class="staff-role">Junior Stylist</p>
-          <p class="staff-desc">ヘッドスパとトリートメントのスペシャリスト。リラックスできる施術をお届けします。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ACCESS -->
-  <section class="section access" id="access">
-    <div class="container">
-      <p class="section-label fade-in">Access</p>
-      <h2 class="section-title fade-in">Access</h2>
-      <div class="divider fade-in"></div>
-      <div class="access-grid">
-        <div class="fade-in">
-          <div class="access-info">
-            <h3>Salon Information</h3>
-            <table class="access-table">
-              <tr><th>住所</th><td>〒153-0064<br>東京都目黒区下目黒2-3-4 ○○ビル1F</td></tr>
-              <tr><th>電話</th><td>03-9876-5432</td></tr>
-              <tr><th>営業</th><td>10:00〜20:00（最終受付 19:00）</td></tr>
-              <tr><th>定休日</th><td>毎週火曜日・第3水曜日</td></tr>
-              <tr><th>席数</th><td>セット面3席 / シャンプー台2台</td></tr>
-              <tr><th>アクセス</th><td>JR目黒駅 西口 徒歩5分</td></tr>
-            </table>
-          </div>
-        </div>
-        <div class="access-map fade-in">
-          ※ Google Mapが入ります
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta" id="reserve">
-    <div class="container fade-in">
-      <h2>Reservation</h2>
-      <p>お電話またはホットペッパービューティーからご予約いただけます。</p>
-      <div class="cta-phone">03-9876-5432</div>
-      <p class="cta-hours">受付時間: 10:00〜20:00（火曜定休）</p>
-      <a href="#" class="cta-btn">ネット予約はこちら</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p class="footer-logo">Belle</p>
-      <p class="footer-copy">&copy; 2025 Hair Salon Belle All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="assist/js/main.js"></script>
+  <footer class="footer">Belle</footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
+  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>

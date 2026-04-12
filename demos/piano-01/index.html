@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piano Studio Legato | 音楽のある暮らし</title>
-  <meta name="description" content="お子様から大人まで。初心者歓迎。">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"><title>Piano Studio Legato | 音楽のある暮らし</title><meta name="description" content="お子様から大人まで。初心者歓迎。">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assist/css/style.css">
 </head>
 <body>
-  <header class="header"><div class="container"><a href="#" class="logo">🎹 Legato</a><ul class="nav-list"><li><a href="#price" class="nav-link">コース</a></li><li><a href="#features" class="nav-link">特徴</a></li><li><a href="#contact" class="nav-link">お問い合わせ</a></li></ul><a href="#contact" class="nav-cta">🎹 体験レッスン</a><button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button></div></header>
-  <section class="hero"><div class="hero-bg"><img src="assist/images/hero.png" alt=""></div><div class="hero-overlay"></div><div class="hero-content"><span class="hero-badge">無料体験受付中</span><h1 class="hero-title">音楽のある、<br>豊かな暮らしを。</h1><p class="hero-desc">初心者〜上級者まで。<br>あなたのペースで楽しくレッスン。</p><a href="#contact" class="hero-btn">🎹 体験レッスン</a></div></section>
-  <section class="section features" id="features"><div class="container"><p class="s-label fade-in">Features</p><h2 class="s-title fade-in">選ばれる理由</h2><p class="s-sub fade-in"></p><div class="features-grid"><div class="feature-card fade-in"><div class="feature-icon">🎵</div><h3 class="feature-title">個人レッスン</h3><p class="feature-desc">完全マンツーマンで丁寧に指導。</p></div><div class="feature-card fade-in"><div class="feature-icon">👶</div><h3 class="feature-title">3歳から対応</h3><p class="feature-desc">リトミックから本格レッスンまで。</p></div><div class="feature-card fade-in"><div class="feature-icon">🏆</div><h3 class="feature-title">コンクール指導</h3><p class="feature-desc">音大受験・コンクール実績あり。</p></div></div></div></section>
-  <section class="section price" id="price"><div class="container"><p class="s-label fade-in">Menu & Price</p><h2 class="s-title fade-in">メニュー・料金</h2><p class="s-sub fade-in"></p><div class="price-grid"><div class="price-cat fade-in"><h3>お子様</h3><div class="price-item"><span>幼児（30分/月3回）</span><span class="price-cost">¥7,000</span></div><div class="price-item"><span>小学生（40分/月3回）</span><span class="price-cost">¥8,500</span></div></div><div class="price-cat fade-in"><h3>大人</h3><div class="price-item"><span>大人（45分/月2回）</span><span class="price-cost">¥8,000</span></div><div class="price-item"><span>ワンレッスン（45分）</span><span class="price-cost">¥5,000</span></div></div></div></div></section>
-  <section class="cta" id="contact"><div class="container fade-in"><h2>まずは無料体験から</h2><p>お気軽にお問い合わせください。</p><a href="#" class="cta-btn">🎹 体験を申し込む</a></div></section>
-  <footer class="footer"><div class="container"><p class="footer-logo">Piano Studio Legato</p><p class="footer-copy">&copy; 2025 Piano Studio Legato All rights reserved.</p></div></footer>
-  <script src="assist/js/main.js"></script>
-</body></html>
+  <header class="header" id="header"><div class="container"><div class="logo"><i data-lucide="shield-check"></i> Legato</div></div></header>
+  <div class="hero">
+    <div class="bg"><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div>
+    <div class="overlay"></div>
+    <div class="container hero-content reveal">
+      <h1>音楽のある、<br>豊かな暮らしを。</h1>
+      <p>初心者〜上級者まで。<br>あなたのペースで楽しくレッスン。</p>
+      <div class="stats"><div class="stat"><span>実績</span><strong>15年</strong></div><div class="stat"><span>満足度</span><strong>98%</strong></div></div>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <h2 class="sect-title reveal">OUR STRENGTH</h2>
+      <div class="bento-grid">
+        <div class="bento-item reveal" style="transition-delay:0s">
+          <div class="icon"><i data-lucide="check-circle"></i></div>
+          <h3>個人レッスン</h3><p>完全マンツーマンで丁寧に指導。</p>
+        </div><div class="bento-item reveal" style="transition-delay:0.1s">
+          <div class="icon"><i data-lucide="check-circle"></i></div>
+          <h3>3歳から対応</h3><p>リトミックから本格レッスンまで。</p>
+        </div><div class="bento-item reveal" style="transition-delay:0.2s">
+          <div class="icon"><i data-lucide="check-circle"></i></div>
+          <h3>コンクール指導</h3><p>音大受験・コンクール実績あり。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section gray">
+    <div class="container reveal">
+      <h2 class="sect-title">SERVICES</h2>
+      <div class="service-table">
+        <div class="s-row"><div class="s-name">幼児（30分/月3回）</div><div class="s-cost">¥7,000</div></div><div class="s-row"><div class="s-name">小学生（40分/月3回）</div><div class="s-cost">¥8,500</div></div><div class="s-row"><div class="s-name">大人（45分/月2回）</div><div class="s-cost">¥8,000</div></div><div class="s-row"><div class="s-name">ワンレッスン（45分）</div><div class="s-cost">¥5,000</div></div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">Legato</footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
+  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
