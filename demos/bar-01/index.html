@@ -1,44 +1,245 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>Bar Amber | 琥珀色の時間</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">AMBER</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bar NOCTURNE | オーセンティックバー ノクターン</title>
+  <meta name="description" content="都会の喧騒を離れ、極上のグラスを傾ける。地下にひっそりと佇む隠れ家オーセンティックバー「NOCTURNE（ノクターン）」。500種類以上のウイスキーと、季節のフルーツカクテルで至福の夜をお約束します。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>Night whisper.</h1><p>厳選ウイスキーとカクテル</p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc">厳選ウイスキーとカクテル<br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>Whisky</h3><p>200銘柄を超えるスコッチとバーボンのコレクション。幻の一杯をご提案します。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>Cocktail</h3><p>旬のフルーツとハーブを使用した、バーテンダーのシグネチャーカクテル。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
   
-  <footer class="footer">AMBER</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <span class="font-playfair font-bold text-gold l-title">NOCTURNE</span>
+          <small class="font-playfair text-gray-light">AUTHENTIC BAR</small>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-playfair text-white text-sm">
+          <li><a href="#concept">CONCEPT</a></li>
+          <li><a href="#menu">MENU</a></li>
+          <li><a href="#bottles">BOTTLES</a></li>
+          <li><a href="#system">SYSTEM & ACCESS</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle text-gold" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero bg-black">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="バーテンダーがカクテルを作る様子">
+    </div>
+    <div class="hero-mask"></div>
+    
+    <div class="l-container center hero-content">
+      <h1 class="hero-title font-playfair text-gold fade-target">
+        A Sip in the Dark.
+      </h1>
+      <p class="hero-desc font-shippori text-white mt-large letter-spacing-wide line-height-long fade-target delay-1">
+        都会の喧騒を離れ、<br>
+        極上のグラスを傾ける。
+      </p>
+    </div>
+    
+    <div class="scroll-down font-playfair text-gold fade-target delay-2">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Concept -->
+  <section class="section concept bg-black border-gold-top" id="concept">
+    <div class="l-container c-flex">
+      <div class="c-img fade-target">
+        <img src="https://images.unsplash.com/photo-1470337458703-4f53f446c3bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ウイスキーグラスと氷">
+      </div>
+      <div class="c-text fade-target delay-1">
+        <span class="en-label font-playfair text-gold">The Concept</span>
+        <h2 class="sect-heading font-shippori text-white mt-small mb-medium">夜を深める、<br>琥珀色の特等席。</h2>
+        <p class="font-shippori text-gray-light line-height-long mb-small text-sm">
+          重厚な扉を開けると、そこは時間が止まったかのような静寂の空間。<br>
+          一枚板のウォールナット材を使用したバックバーには、<br>
+          世界中から集められた500種類以上のオールドパラボトルが並びます。
+        </p>
+        <p class="font-shippori text-gray-light line-height-long text-sm">
+          スタンダードカクテルの揺るぎない味わいはもちろん、<br>
+          その日の気分や気候に合わせた、<br>
+          旬のフレッシュフルーツカクテルもお任せください。<br>
+          マスターによる洗練された所作とともに、<br>
+          あなただけの特別な一杯をお作りいたします。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drinks / Menu -->
+  <section class="section menu bg-charcoal" id="menu">
+    <div class="l-container">
+      <div class="sect-header center fade-target mb-large">
+        <span class="en-label font-playfair text-gold">Craftsmanship</span>
+        <h2 class="sect-heading font-shippori text-white">メニュー</h2>
+        <div class="gold-line center mx-auto mt-small"></div>
+      </div>
+
+      <div class="m-grid">
+        <!-- Cocktail -->
+        <div class="m-card fade-target">
+          <div class="m-img">
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="カクテル">
+          </div>
+          <div class="m-info">
+            <h3 class="font-playfair text-gold text-lg mb-xs">Seasonal Cocktail <span class="font-shippori text-sm text-gray-light display-block mt-xs">季節のフルーツカクテル</span></h3>
+            <p class="font-shippori text-gray-light text-sm line-height-long mb-small">
+              厳選された旬の果実を贅沢に使用。果実味を最大限に活かし、ベーススピリッツとの絶妙なハーモニーを奏でます。メニューにないものもお気軽にお申し付けください。
+            </p>
+            <div class="m-price font-playfair text-white">¥ 1,800 ~</div>
+          </div>
+        </div>
+
+        <!-- Whisky -->
+        <div class="m-card fade-target delay-1">
+          <div class="m-img">
+            <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ウイスキー">
+          </div>
+          <div class="m-info">
+            <h3 class="font-playfair text-gold text-lg mb-xs">Single Malt Whisky <span class="font-shippori text-sm text-gray-light display-block mt-xs">シングルモルト・ウイスキー</span></h3>
+            <p class="font-shippori text-gray-light text-sm line-height-long mb-small">
+              スコッチを中心に、アイラモルトのピート香からスペイサイドの華やかさまで。オフィシャルボトルはもちろん、希少なボトラーズも多数取り揃えております。
+            </p>
+            <div class="m-price font-playfair text-white">¥ 1,500 ~</div>
+          </div>
+        </div>
+
+        <!-- Food / Cigar -->
+        <div class="m-card fade-target">
+          <div class="m-img">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c8e9e533?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="葉巻とフード">
+          </div>
+          <div class="m-info">
+            <h3 class="font-playfair text-gold text-lg mb-xs">Food & Cigar <span class="font-shippori text-sm text-gray-light display-block mt-xs">フード＆シガー</span></h3>
+            <p class="font-shippori text-gray-light text-sm line-height-long mb-small">
+              自家製生チョコレートやドライフルーツ、厳選チーズの盛り合わせなど、お酒を引き立てるフードをご用意。シガー（葉巻）もキューバ産を中心に管理・提供しております。
+            </p>
+            <div class="m-price font-playfair text-white">¥ 800 ~</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aesthetic Banner -->
+  <section class="banner" id="bottles">
+    <div class="b-bg fade-target">
+      <img src="https://images.unsplash.com/photo-1514361892635-6b07e31e75f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="バックバーのボトル">
+    </div>
+    <div class="b-mask"></div>
+    <div class="l-container center b-content fade-target delay-1">
+      <p class="font-playfair text-gold text-xl italic mb-small">"A good bartender has to be part philosopher,<br>part psychiatrist, and part psychic."</p>
+      <div class="gold-line center mx-auto mt-medium mb-medium"></div>
+    </div>
+  </section>
+
+  <!-- System & Access -->
+  <section class="section system bg-black" id="system">
+    <div class="l-container flex-between gap-large flex-col-sp">
+      <!-- Info table -->
+      <div class="s-info fade-target">
+        <span class="en-label font-playfair text-gold">Information</span>
+        <h2 class="sect-heading font-shippori text-white mb-medium">店舗情報</h2>
+        
+        <table class="s-table font-shippori text-gray-light text-sm">
+          <tr>
+            <th>Charge</th>
+            <td>シートチャージ ¥1,500<br><span class="text-xs text-gray">※サービス料は10%頂戴しております。</span></td>
+          </tr>
+          <tr>
+            <th>Seats</th>
+            <td>カウンター 10席 / テーブル席 2卓（4名掛）<br><span class="text-xs text-gray">※葉巻のご利用はカウンター奥の指定席のみとなります。</span></td>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <td>〒104-0061<br>東京都中央区銀座 8-0-0 B1F<br>（階段を下りて右側の重厚な木の扉です）</td>
+          </tr>
+          <tr>
+            <th>Hours</th>
+            <td>18:00 - 翌3:00 (L.O. 2:30)<br>定休日：日曜日</td>
+          </tr>
+          <tr>
+            <th>Contact</th>
+            <td>
+              <a href="tel:03-0000-0000" class="text-gold font-playfair" style="font-size: 1.5rem;">03-0000-0000</a><br>
+              <span class="text-xs text-gray">※ご予約は3名様までのテーブル席のみ承ります。</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      <!-- Map Graphic -->
+      <div class="s-map border-gold fade-target delay-1 opacity-80">
+        <!-- Placeholder for map (Using image representing moody map) -->
+        <img src="https://images.unsplash.com/photo-1548345680-f5475ea90f14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="夜の街角" style="width:100%; height:100%; object-fit:cover; filter: grayscale(100%) opacity(0.5);">
+        <div class="m-overlay font-playfair text-gold center">MAP</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-black border-gold-top pt-large pb-medium center text-center">
+    <div class="l-container flex-column align-center gap-small">
+      <div class="f-logo font-playfair text-gold mb-small" style="font-size: 1.8rem; letter-spacing: 0.2em;">
+        NOCTURNE
+      </div>
+      <div class="sns-icons center gap-medium mb-medium">
+        <a href="#" class="text-gray hover-gold"><i data-lucide="instagram"></i></a>
+        <a href="#" class="text-gray hover-gold"><i data-lucide="facebook"></i></a>
+      </div>
+      <p class="font-playfair text-gray text-xs letter-spacing-wide">&copy; 2025 BAR NOCTURNE. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
