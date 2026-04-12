@@ -1891,6 +1891,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: #fff !important;
 }
 
+/* Domain note in pricing */
+.note-domain {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--gray-200);
+}
+
 /* SP / PC text switching utilities */
 .pc-hide { display: none !important; }
 
