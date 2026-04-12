@@ -1,46 +1,316 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>CodeCamp | 未経験からエンジニアへ</title><meta name="description" content="Web開発・Python・AI。転職保証付き。">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo"><i data-lucide="shield-check"></i>  CodeCamp</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODE HORIZON | 未経験からプロを育てる実践型プログラミングスクール</title>
+  <meta name="description" content="本気でエンジニア転職を目指すならCODE HORIZON。現役エンジニアによる徹底的なコードレビューと、実務レベルのポートフォリオ開発で、未経験から最前線のITエンジニアへ導きます。無料キャリアカウンセリング受付中。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="overlay"></div><div class="container hero-content reveal"><h1>未経験から、<br>エンジニアへ。</h1><p>Web開発・Python・AI。転職保証付き。</p>
-    <div class="stats"><div class="stat"><span>設立</span><strong>20年</strong></div><div class="stat"><span>解決実績</span><strong>5,000件</strong></div></div></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="img reveal"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div><div class="text reveal">
-    <h2 class="sect-title">ABOUT US</h2><p class="desc">Web開発・Python・AI。転職保証付き。<br><br>私たちが大切にしているのは、信頼と実績に基づく確かなソリューションです。お客様の課題に対して真摯に向き合い、最適な結果を導き出します。</p></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section gray"><div class="container"><h2 class="sect-title center reveal">OUR STRENGTHS</h2><div class="bento-grid">
-    <div class="bento-item reveal" style="transition-delay:0s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>現役エンジニア講師</h3><p>第一線で活躍するプロが直接指導。</p></div><div class="bento-item reveal" style="transition-delay:0.1s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>転職保証</h3><p>転職できなければ全額返金。</p></div><div class="bento-item reveal" style="transition-delay:0.2s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>自分のペース</h3><p>オンライン完結。</p></div>
-  </div></div></section>
-
-  <!-- 4. SERVICES -->
-  <section class="section"><div class="container reveal"><h2 class="sect-title center">SERVICES & PLANS</h2><div class="service-table">
-    <div class="s-row"><div class="s-name">基本コース</div><div class="s-cost">要見積</div></div><div class="s-row"><div class="s-name">プレミアム</div><div class="s-cost">要相談</div></div>
-  </div></div></section>
-
-  <!-- 5. CASE STUDY (Gallery equivalent) -->
-  <section class="section gray"><div class="container"><h2 class="sect-title center reveal">CASE STUDY</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1563986768494-4d8dbcb2b005?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="sect-title center">FAQ</h2><div class="faq-box">
-    <details open><summary>初回のご相談は無料ですか？</summary><p>はい、初回のヒアリングおよび概算お見積りのご提示までは完全無料で承っております。</p></details>
-    <details><summary>遠方の企業でも対応可能ですか？</summary><p>はい、オンライン会議ツールを活用し、全国どこでも対応可能です。</p></details>
-    <details><summary>顧問契約は可能ですか？</summary><p>はい、継続的なサポートを行う顧問サービスもご用意しております。詳細はお問い合わせください。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>無料で資料ダウンロード・ご相談</h2><p>お電話、または下記フォームよりお気軽にお問い合わせください。</p><a href="#" class="btn">お問い合わせ</a></div></section>
-
-  <footer class="footer"> CodeCamp</footer>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar bg-blue text-white font-bold center text-sm py-xs">
+    <a href="#counseling" class="hover-opacity text-white flex-center gap-xs">
+      <i data-lucide="zap" class="icon-sm"></i> 【2025年秋期生 募集中】転職成功で受講料最大50%キャッシュバック！
+    </a>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#" class="flex-center gap-xs">
+          <i data-lucide="terminal-square" class="text-blue icon-lg"></i>
+          <span class="font-inter font-bold text-dark l-text tracking-tighter">CODE_HORIZON</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-noto font-bold text-dark text-sm">
+          <li><a href="#about">特徴</a></li>
+          <li><a href="#courses">コース</a></li>
+          <li><a href="#career">転職サポート</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+        </ul>
+        <div class="h-btn sp-none">
+          <a href="#counseling" class="btn btn-blue font-bold btn-round box-shadow-blue"><i data-lucide="calendar"></i> 無料カウンセリング</a>
+        </div>
+      </nav>
+      <button class="menu-toggle text-dark" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero bg-slate relative overflow-hidden">
+    <!-- Grid Background -->
+    <div class="hero-grid"></div>
+
+    <div class="l-container flex-hero relative z-10">
+      
+      <div class="hero-text fade-target">
+        <div class="h-badge bg-dark-soft text-green font-fira text-xs border-green rounded-full mb-small inline-block px-small">
+          > npm start career-change
+        </div>
+        <h1 class="hero-title text-white font-black font-noto line-height-tight mb-small">
+          未経験から、<br>
+          <span class="text-blue">最前線</span>のエンジニアへ。
+        </h1>
+        <p class="hero-desc text-gray-light font-noto mt-small line-height-long mb-medium">
+          現場で使われない知識を暗記する時間は終わりです。<br class="sp-none">
+          現役エンジニアのチーム開発をシミュレートした圧倒的実践カリキュラムと、<br class="sp-none">
+          プロによる無制限のコードレビューで、実務で即戦力となる技術を叩き込みます。
+        </p>
+        
+        <div class="h-cta flex gap-small flex-wrap">
+          <a href="#counseling" class="btn btn-blue btn-xl font-bold btn-round box-shadow-blue">
+            無料カウンセリングを予約する
+          </a>
+        </div>
+        
+        <div class="mt-small flex-center gap-small text-gray font-noto text-xs justify-start">
+          <span><i data-lucide="check-circle-2" class="text-green icon-xs"></i> 転職成功率 98.2%</span>
+          <span><i data-lucide="check-circle-2" class="text-green icon-xs"></i> 途中離脱率 1.4%</span>
+        </div>
+      </div>
+
+      <div class="hero-img fade-target delay-1 relative">
+        <!-- Main Image -->
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="コードを書くPCモニター" class="rounded-xl box-shadow-xl img-hero border-slate">
+        
+        <!-- Code Window Overlay -->
+        <div class="code-window bg-dark rounded-lg box-shadow-xl absolute p-small border-slate">
+          <div class="window-header flex gap-xs mb-small">
+            <div class="dot bg-red"></div>
+            <div class="dot bg-yellow"></div>
+            <div class="dot bg-green"></div>
+          </div>
+          <pre class="font-fira text-xs line-height-long">
+<span class="text-purple">const</span> <span class="text-blue">student</span> = {
+  status: <span class="text-green">'beginner'</span>,
+  passion: <span class="text-orange">true</span>,
+};
+
+<span class="text-purple">function</span> <span class="text-blue">becomeEngineer</span>(user) {
+  <span class="text-purple">if</span> (user.passion) {
+    <span class="text-purple">return</span> <span class="text-green">'Hired!'</span>;
+  }
+}
+          </pre>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Partners / Tech Stack -->
+  <div class="tech-stack bg-dark-soft border-b-slate py-small center">
+    <p class="font-inter text-gray-light text-xs font-bold tracking-widest mb-xs uppercase">Technologies You Will Master</p>
+    <div class="l-container flex-center gap-large flex-wrap opacity-50">
+      <!-- Icons representing tech (using text for broad compability) -->
+      <span class="font-inter font-bold text-lg text-white">React.js</span>
+      <span class="font-inter font-bold text-lg text-white">TypeScript</span>
+      <span class="font-inter font-bold text-lg text-white">Next.js</span>
+      <span class="font-inter font-bold text-lg text-white">Node.js</span>
+      <span class="font-inter font-bold text-lg text-white">Python</span>
+      <span class="font-inter font-bold text-lg text-white">AWS</span>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <section class="section features bg-light" id="about">
+    <div class="l-container">
+      <div class="sect-header center fade-target mb-large">
+        <span class="en-label font-inter text-blue font-bold text-sm tracking-widest uppercase">Features</span>
+        <h2 class="sect-heading font-noto font-black text-slate mt-xs">CODE HORIZONが選ばれる理由</h2>
+      </div>
+
+      <div class="f-grid">
+        <!-- Feature 1 -->
+        <div class="f-card bg-white box-shadow-soft rounded-xl p-medium fade-target border-t-blue">
+          <div class="f-icon bg-blue-light text-blue rounded-lg center mb-small w-icon"><i data-lucide="git-pull-request"></i></div>
+          <h3 class="font-noto font-bold text-lg text-slate mb-xs">現場レベルのチーム開発</h3>
+          <p class="font-noto text-gray text-sm line-height-long">
+            ただ一人でアプリを作るだけでなく、Git/GitHubを用いたチーム開発演習を実施。実務で必須となるバージョン管理やコンフリクト解消の経験を積みます。
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="f-card bg-white box-shadow-soft rounded-xl p-medium fade-target delay-1 border-t-green">
+          <div class="f-icon bg-green-light text-green rounded-lg center mb-small w-icon"><i data-lucide="message-square-code"></i></div>
+          <h3 class="font-noto font-bold text-lg text-slate mb-xs">回数無制限のコードレビュー</h3>
+          <p class="font-noto text-gray text-sm line-height-long">
+            書いたコードは全て現役エンジニアがレビュー。動けばOKではなく「保守性が高いか」「無駄がないか」など、プロの視点で徹底的にフィードバックします。
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="f-card bg-white box-shadow-soft rounded-xl p-medium fade-target delay-2 border-t-orange">
+          <div class="f-icon bg-orange-light text-orange rounded-lg center mb-small w-icon"><i data-lucide="briefcase"></i></div>
+          <h3 class="font-noto font-bold text-lg text-slate mb-xs">オリジナルポートフォリオ制作</h3>
+          <p class="font-noto text-gray text-sm line-height-long">
+            テンプレートの模写ではなく、自分で企画から設計・開発まで行う完全オリジナルのアプリを作成。採用担当者の目を引く質の高いポートフォリオが完成します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="section courses bg-slate text-white" id="courses">
+    <div class="l-container">
+      <div class="sect-header center fade-target mb-large">
+        <span class="en-label font-inter text-blue font-bold text-sm tracking-widest uppercase">Courses</span>
+        <h2 class="sect-heading font-noto font-black text-white mt-xs">目指すキャリアに合わせた2つのコース</h2>
+      </div>
+
+      <div class="c-flex flex-center gap-large">
+        <!-- Course Web -->
+        <div class="c-card bg-dark border-slate rounded-xl p-large fade-target flex-1">
+          <div class="flex-between align-center border-b-slate pb-small mb-small">
+            <h3 class="font-noto font-bold text-xl">Webエンジニア 転職コース</h3>
+            <span class="font-fira text-sm bg-blue text-white px-2 py-1 rounded-sm">Frontend/Backend</span>
+          </div>
+          <p class="font-noto text-gray-light text-sm line-height-long mb-medium h-desc">
+            需要が最も高いWeb開発のスキルを網羅。モダンなフロントエンドと、堅牢なバックエンドAPI開発を学び、フルスタックに活躍できるWebエンジニアを目指します。
+          </p>
+          <div class="tech-tags flex gap-xs flex-wrap mb-medium">
+            <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">AWS</span>
+          </div>
+          <div class="price font-inter font-black text-3xl mb-0">¥ 498,000 <span class="font-noto font-normal text-xs text-gray-light">（税込・分割可）</span></div>
+          <div class="period font-noto text-sm text-green mb-small">学習期間：24週間（6ヶ月）</div>
+          <a href="#counseling" class="btn btn-outline-white w-full center font-bold">コース詳細を聞く</a>
+        </div>
+
+        <!-- Course AI/Data -->
+        <div class="c-card bg-dark border-slate rounded-xl p-large fade-target delay-1 flex-1">
+          <div class="flex-between align-center border-b-slate pb-small mb-small">
+            <h3 class="font-noto font-bold text-xl">AI・データサイエンスコース</h3>
+            <span class="font-fira text-sm bg-green text-dark font-bold px-2 py-1 rounded-sm">Python/Machine Learning</span>
+          </div>
+          <p class="font-noto text-gray-light text-sm line-height-long mb-medium h-desc">
+            将来性の高いAI開発とデータ分析の基礎から応用まで。機械学習モデルの実装やデータの前処理、WebAPIとしてのデプロイまでを一気通貫で学びます。
+          </p>
+          <div class="tech-tags flex gap-xs flex-wrap mb-medium">
+            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span><span class="tag">TensorFlow</span><span class="tag">Docker</span><span class="tag">GCP</span><span class="tag">Flask</span>
+          </div>
+          <div class="price font-inter font-black text-3xl mb-0">¥ 550,000 <span class="font-noto font-normal text-xs text-gray-light">（税込・分割可）</span></div>
+          <div class="period font-noto text-sm text-green mb-small">学習期間：24週間（6ヶ月）</div>
+          <a href="#counseling" class="btn btn-outline-white w-full center font-bold">コース詳細を聞く</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box (Most Important) -->
+  <section class="cta bg-blue text-white center py-large relative overflow-hidden" id="counseling">
+    <!-- Code Background Graphic -->
+    <div class="code-bg font-fira opacity-10 absolute pointer-events-none text-left" aria-hidden="true" style="top: -20px; left: -20px; font-size: 1.5rem; line-height: 1.5;">
+      const future = new Career();<br>
+      await future.build();<br>
+      if(skills.isReady()){<br>
+      &nbsp;&nbsp;return success;<br>
+      }
+    </div>
+
+    <div class="l-container fade-target relative z-10 max-w-800">
+      <h2 class="font-noto font-black text-2xl mb-small line-height-tight">悩み続けるより、<br>プロに相談しませんか？</h2>
+      <p class="font-noto font-bold mb-large text-sm">
+        「本当に未経験からエンジニアになれるのか」「自分に合ったコースはどれか」<br>
+        専任のキャリアアドバイザーが、あなたの疑問や不安にオンライン（Zoom）で率直にお答えします。<br>
+        <span class="text-yellow">※無理な勧誘は一切行いません。情報収集のみでも歓迎です。</span>
+      </p>
+      
+      <div class="bg-white p-large rounded-xl box-shadow-xl text-left text-dark border-top-blue margin-auto">
+        <h3 class="font-noto font-bold text-center mb-medium border-b-gray-light pb-small">無料カウンセリング予約フォーム</h3>
+        <form class="c-form flex-column gap-medium">
+          <div class="flex gap-medium flex-col-sp">
+            <div class="f-group flex-1">
+              <label class="font-noto font-bold text-xs mb-xs display-block">お名前 <span class="text-red text-xs">*</span></label>
+              <input type="text" class="f-input" placeholder="例：山田 太郎" required>
+            </div>
+            <div class="f-group flex-1">
+              <label class="font-noto font-bold text-xs mb-xs display-block">メールアドレス <span class="text-red text-xs">*</span></label>
+              <input type="email" class="f-input" placeholder="例：mail@example.com" required>
+            </div>
+          </div>
+          <div class="f-group">
+            <label class="font-noto font-bold text-xs mb-xs display-block">現在の職業</label>
+            <select class="f-input">
+              <option>会社員（IT以外）</option>
+              <option>会社員（IT関連）</option>
+              <option>学生</option>
+              <option>フリーター・無職</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-blue btn-xl w-full font-noto font-bold text-lg mt-small btn-round box-shadow-blue justify-center">
+            空き日程を確認して予約する <i data-lucide="arrow-right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-slate pt-medium pb-small center text-white border-t-dark" id="access">
+    <div class="l-container flex-between align-center flex-col-sp gap-medium w-full">
+      <div class="f-left text-left">
+        <div class="f-logo font-inter font-bold text-lg mb-small flex gap-xs align-center">
+           <i data-lucide="terminal-square" class="text-blue icon-sm"></i> CODE_HORIZON
+        </div>
+        <p class="font-noto text-gray-light text-xs line-height-long">
+          本気でエンジニア転職を目指す人のためのプログラミングスクール<br>
+          〒150-0000 東京都渋谷区テックビル 8F
+        </p>
+      </div>
+      
+      <div class="f-right text-right">
+        <div class="sns-icons flex gap-medium flex-end justify-end mb-small">
+          <a href="#" class="text-gray-light hover-blue"><i data-lucide="twitter"></i></a>
+          <a href="#" class="text-gray-light hover-blue"><i data-lucide="github"></i></a>
+        </div>
+        <p class="font-inter text-gray text-xs">&copy; 2025 CODE HORIZON Inc. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
