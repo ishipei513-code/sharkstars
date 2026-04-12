@@ -1,44 +1,336 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>MEN'S CLEAR | メンズ脱毛サロン</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">MEN'S CLEAR</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLACKOUT MEN'S SALON | 痛くない・完全個室のメンズ脱毛</title>
+  <meta name="description" content="毎朝のヒゲ剃りから解放される。最新の冷却連射マシンで「痛くない」メンズ脱毛を実現。完全個室・男性スタッフのみ。初回ヒゲ脱毛お試し¥1,000キャンペーン中。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>清潔感は、<br>ビジネスの武器。</h1><p></p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc"><br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>最新SHR方式</h3><p>従来の10分の1の痛み。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>男性専門</h3><p>男性スタッフ対応。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>明朗会計</h3><p>追加料金なし。都度払いOK。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
   
-  <footer class="footer">MEN'S CLEAR</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body class="bg-obsidian text-white">
+
+  <!-- Header -->
+  <header class="header bg-glass border-b-blue border-glow" id="header">
+    <div class="h-container flex-between align-center">
+      <div class="logo">
+        <a href="#" class="flex gap-xs align-center">
+          <i data-lucide="zap" class="text-blue icon-lg glow-icon"></i>
+          <span class="font-teko font-bold text-white text-3xl tracking-wide line-height-tight mt-xs text-shadow-blue">BLACKOUT</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-zen font-bold text-sm tracking-widest text-silver">
+          <li><a href="#about" class="hover-blue transition">選ばれる理由</a></li>
+          <li><a href="#price" class="hover-blue transition">料金表</a></li>
+          <li><a href="#faq" class="hover-blue transition">よくある質問</a></li>
+          <li><a href="#access" class="hover-blue transition">アクセス</a></li>
+        </ul>
+        <div class="h-btn sp-none ml-large flex gap-xs">
+          <a href="#reserve" class="btn btn-blue font-zen font-bold text-sm cyber-btn cyber-hover">
+            <span class="cyber-btn-inner">初回限定トライアル</span>
+          </a>
+        </div>
+      </nav>
+      <button class="menu-toggle text-white" id="menuToggle" aria-label="メニューを開く">
+        <span class="bg-white"></span><span class="bg-white"></span><span class="bg-white"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero relative h-screen min-h-80vh flex-center bg-hex-pattern overflow-hidden pt-header">
+    
+    <!-- Cyberpunk Lighting / Overlays -->
+    <div class="absolute inset-0 z-0 bg-gradient-radial-blue opacity-30"></div>
+    <div class="spotlight spotlight-left bg-blue"></div>
+    <div class="spotlight spotlight-right bg-gold"></div>
+
+    <div class="l-container relative z-10 w-full flex-between align-center flex-col-sp gap-large">
+      
+      <div class="hero-left text-left w-55 fade-target relative z-10 w-full-sp center-sp">
+        <div class="font-teko text-blue text-2xl font-bold tracking-widest mb-xs text-shadow-blue animate-slide-right">PREMIUM MEN'S EPILATION</div>
+        <h1 class="font-zen font-black text-white text-4xl line-height-tight mb-medium tracking-tight animate-slide-right delay-1">
+          毎朝の<span class="text-gold">ヒゲ剃り</span>を、<br>
+          過去の遺物にしろ。
+        </h1>
+        <p class="font-zen text-silver text-md line-height-long font-bold mb-large animate-slide-right delay-2 text-shadow-dark border-l-blue pl-small ml-auto-sp mr-auto-sp text-left-sp border-none-sp px-0-sp">
+          最新鋭「冷却アイス連射マシン」導入。<br class="sp-none">
+          痛みの限界、価格の限界、そして毛の限界を突破する。<br class="sp-none">
+          男の自信を取り戻す、完全個室プライベートサロン。
+        </p>
+        
+        <div class="price-flash bg-obsidian-light border-blue p-small mb-medium inline-block box-shadow-blue animate-slide-right delay-3 mx-auto-sp display-block-sp">
+          <div class="font-zen font-bold text-xs text-silver mb-xs">初回限定トライアル（先着10名様/月）</div>
+          <div class="flex align-end gap-small justify-center-sp">
+            <span class="font-zen font-black text-white text-lg">顔・ヒゲ全体脱毛</span>
+            <span class="font-teko font-black text-gold text-4xl line-height-tight text-shadow-gold">¥ 1,000</span>
+          </div>
+        </div>
+
+        <div class="flex gap-small flex-wrap animate-slide-right delay-4 justify-center-sp w-full">
+          <a href="#reserve" class="btn btn-gold btn-xl font-bold font-zen cyber-btn cyber-hover w-full max-w-400">
+            <span class="cyber-btn-inner flex-center gap-xs w-full text-lg"><i data-lucide="smartphone" class="icon-sm"></i> スマホで2分！WEB予約完了</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Image / Masculine aesthetic -->
+      <div class="hero-right relative w-45 sp-mt-large center-sp z-10 w-80-sp animate-fade-in delay-2">
+        <div class="cyber-frame relative overflow-hidden box-shadow-xl p-xs">
+          <!-- Cyberpunk decorations -->
+          <div class="cyber-corner top-left"></div>
+          <div class="cyber-corner top-right"></div>
+          <div class="cyber-corner bottom-left"></div>
+          <div class="cyber-corner bottom-right"></div>
+          
+          <img src="https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="自信に満ちた男性" class="w-full h-full object-cover filter-contrast relative z-10">
+          
+          <div class="absolute bottom-10 -left-10 z-20 bg-blue text-white font-teko font-bold text-2xl px-medium py-xs skew-x box-shadow-blue sp-none">
+            <div class="skew-x-reverse">NO PAIN. MAX RESULT.</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- About / Problems Solved -->
+  <section class="section about bg-obsidian-dark pt-large pb-large relative border-t-line-dark" id="about">
+    <div class="l-container center">
+      <div class="sect-header center fade-target mb-medium">
+        <span class="font-teko text-blue font-bold text-xl tracking-widest display-block mb-xs glow-text">WHY CHOOSE US</span>
+        <h2 class="font-zen font-black text-white text-3xl line-height-tight">男の脱毛における<span class="text-gold">「３つの壁」</span>を破壊</h2>
+      </div>
+
+      <div class="grid-3 gap-large mt-large">
+        
+        <!-- Reason 1 -->
+        <div class="reason-card bg-obsidian p-medium text-left border-line-dark fade-target relative overflow-hidden transition-hover">
+          <div class="absolute top-0 left-0 w-full h-1 bg-blue transition-width"></div>
+          <div class="font-teko text-line-dark text-6xl font-bold absolute -right-5 -top-5 opacity-40 z-0">01</div>
+          
+          <div class="relative z-10">
+            <div class="flex align-center gap-xs mb-small">
+              <i data-lucide="flame" class="text-blue icon-lg"></i>
+              <h3 class="font-zen font-black text-white text-xl">「痛い」の壁</h3>
+            </div>
+            <h4 class="font-zen font-black text-gold text-sm mb-xs">マイナス4度のアイス冷却で無痛化</h4>
+            <p class="font-zen text-silver text-sm line-height-long font-bold">
+              メンズ脱毛で一番のネックは「輪ゴムで弾かれたような激痛」。当サロンの最新マシンは、照射面を-4℃に急速冷却しながら光を当てるため、ヒゲの濃い方でも「温かさを感じる程度」で施術が可能です。
+            </p>
+          </div>
+        </div>
+
+        <!-- Reason 2 -->
+        <div class="reason-card bg-obsidian p-medium text-left border-line-dark fade-target delay-1 relative overflow-hidden transition-hover">
+          <div class="absolute top-0 left-0 w-full h-1 bg-blue transition-width"></div>
+          <div class="font-teko text-line-dark text-6xl font-bold absolute -right-5 -top-5 opacity-40 z-0">02</div>
+          
+          <div class="relative z-10">
+            <div class="flex align-center gap-xs mb-small">
+              <i data-lucide="eye-off" class="text-blue icon-lg"></i>
+              <h3 class="font-zen font-black text-white text-xl">「恥ずかしい」の壁</h3>
+            </div>
+            <h4 class="font-zen font-black text-gold text-sm mb-xs">完全個室・男性スタッフのみ</h4>
+            <p class="font-zen text-silver text-sm line-height-long font-bold">
+              「女性スタッフに見られるのが恥ずかしい」「他のお客さんと遭遇したくない」。そんな声にお応えし、当店は【完全予約制】【完全個室】【全スタッフ男性】を徹底しています。VIO脱毛も安心してお任せください。
+            </p>
+          </div>
+        </div>
+
+        <!-- Reason 3 -->
+        <div class="reason-card bg-obsidian p-medium text-left border-line-dark fade-target delay-2 relative overflow-hidden transition-hover">
+          <div class="absolute top-0 left-0 w-full h-1 bg-blue transition-width"></div>
+          <div class="font-teko text-line-dark text-6xl font-bold absolute -right-5 -top-5 opacity-40 z-0">03</div>
+          
+          <div class="relative z-10">
+            <div class="flex align-center gap-xs mb-small">
+              <i data-lucide="banknote" class="text-blue icon-lg"></i>
+              <h3 class="font-zen font-black text-white text-xl">「高額ローン」の壁</h3>
+            </div>
+            <h4 class="font-zen font-black text-gold text-sm mb-xs">完全都度払い・コース契約なし</h4>
+            <p class="font-zen text-silver text-sm line-height-long font-bold">
+              「数十万円のローンを組まされた」という脱毛業界の悪習を撤廃。美容院感覚で通える「完全都度払い制」を採用しています。辞めたい時にいつでも辞められる。結果に自信があるからこそできる料金体系です。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section price bg-hex-pattern pt-large pb-large relative border-y-line-dark" id="price">
+    <div class="l-container center">
+      <div class="sect-header center fade-target mb-medium">
+         <span class="font-teko text-blue font-bold text-xl tracking-widest display-block mb-xs glow-text">PRICING</span>
+        <h2 class="font-zen font-black text-white text-3xl line-height-tight">明朗会計・完全都度払い</h2>
+        <p class="font-zen text-silver text-sm line-height-long font-bold mt-small">表示価格以外の追加請求（入会金・シェービング代など）は1円もありません。</p>
+      </div>
+
+      <div class="max-w-800 mx-auto">
+        
+        <!-- Price Item 1 -->
+        <div class="bg-obsidian-light border-line-dark p-small rounded-sm mb-xs flex-between align-center flex-col-sp fade-target hover-glow-border transition relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-radial-blue opacity-10"></div>
+          <div class="relative z-10 flex align-center gap-small w-60 w-full-sp mb-xs-sp">
+            <div class="bg-blue text-white font-teko font-bold text-xl px-small py-xs min-w-80px">FACE</div>
+            <h3 class="font-zen font-black text-lg">顔・ヒゲ全体パーツ</h3>
+          </div>
+          <div class="relative z-10 w-40 w-full-sp text-right text-left-sp pl-100px-sp">
+            <span class="font-teko font-bold text-silver text-lg line-through mr-xs">¥ 8,800</span>
+            <span class="font-teko font-black text-gold text-3xl text-shadow-gold">¥ 4,400 <span class="font-zen text-xs text-white">/回</span></span>
+          </div>
+        </div>
+
+        <!-- Price Item 2 -->
+        <div class="bg-obsidian-light border-line-dark p-small rounded-sm mb-xs flex-between align-center flex-col-sp fade-target delay-1 hover-glow-border transition relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-radial-blue opacity-10"></div>
+          <div class="relative z-10 flex align-center gap-small w-60 w-full-sp mb-xs-sp">
+            <div class="bg-blue text-white font-teko font-bold text-xl px-small py-xs min-w-80px">LEG</div>
+            <div class="text-left">
+              <h3 class="font-zen font-black text-lg flex align-center gap-xs">足全体セット <span class="bg-gold text-obsidian text-xs px-xs py-xxs font-bold">人気</span></h3>
+              <span class="font-zen text-xs text-silver font-bold">（太もも・すね・ふくらはぎ・足の甲・指）</span>
+            </div>
+          </div>
+          <div class="relative z-10 w-40 w-full-sp text-right text-left-sp pl-100px-sp">
+             <span class="font-teko font-black text-gold text-3xl text-shadow-gold">¥ 8,800 <span class="font-zen text-xs text-white">/回</span></span>
+          </div>
+        </div>
+
+        <!-- Price Item 3 -->
+        <div class="bg-obsidian-light border-line-dark p-small rounded-sm mb-xs flex-between align-center flex-col-sp fade-target delay-2 hover-glow-border transition relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-radial-blue opacity-10"></div>
+          <div class="relative z-10 flex align-center gap-small w-60 w-full-sp mb-xs-sp">
+            <div class="bg-blue text-white font-teko font-bold text-xl px-small py-xs min-w-80px">VIO</div>
+            <h3 class="font-zen font-black text-lg">VIO完全網羅セット</h3>
+          </div>
+          <div class="relative z-10 w-40 w-full-sp text-right text-left-sp pl-100px-sp">
+             <span class="font-teko font-black text-gold text-3xl text-shadow-gold">¥ 11,000 <span class="font-zen text-xs text-white">/回</span></span>
+          </div>
+        </div>
+
+        <div class="mt-medium fade-target delay-3">
+          <a href="#" class="text-blue font-zen font-bold hover-white transition flex-center gap-xs">
+            すべての料金表を見る <i data-lucide="arrow-right" class="icon-sm"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section class="cta pt-xl pb-xl bg-obsidian-dark relative overflow-hidden" id="reserve">
+    <!-- Grid floor perspective -->
+    <div class="cyber-grid absolute inset-0 z-0 opacity-20"></div>
+
+    <div class="l-container relative z-10 flex-between align-center flex-col-sp gap-large">
+      
+      <div class="cta-text w-50 fade-target text-left center-sp w-full-sp">
+        <h2 class="font-zen font-black text-4xl mb-xs line-height-tight text-white text-shadow-dark">俺はもう、<br><span class="text-blue glow-text">ムダ毛</span>に悩まない。</h2>
+        <p class="font-zen text-silver text-sm mb-large line-height-long font-bold max-w-600 mx-auto-sp">
+          まずは【初回トライアル】で、痛みのなさ・抜け落ちる感動を実感してください。<br>強引な勧誘は一切行いません。「とりあえず話だけ聞きたい」という無料カウンセリングも大歓迎です。
+        </p>
+        
+        <div class="font-zen font-bold text-silver text-xs mb-xs">ご予約専用ダイヤル</div>
+        <div class="font-teko font-bold text-gold text-4xl flex align-center gap-xs justify-center-sp text-shadow-gold">
+           <i data-lucide="phone" class="icon-md"></i> 03-0000-0000
+        </div>
+      </div>
+
+      <div class="cta-action w-50 fade-target delay-1 center w-full-sp">
+        <div class="bg-obsidian p-medium text-white text-center box-shadow-blue border-blue relative cyber-border sp-px-small">
+          <i data-lucide="smartphone" class="text-blue icon-lg mb-xs mx-auto glow-icon"></i>
+          <h3 class="font-teko font-bold text-3xl mb-xs tracking-wide">WEB BOOKING</h3>
+          <p class="font-zen text-xs text-silver font-bold mb-medium">24時間即時予約。LINEログインで簡単1分。</p>
+          
+          <form class="booking-form font-zen flex-column gap-small">
+            <a href="#" class="btn btn-blue btn-xl w-full font-black text-lg tracking-widest justify-center cyber-btn cyber-hover">
+              <span class="cyber-btn-inner w-full flex-center">WEB予約はこちら</span>
+            </a>
+            <a href="#" class="btn btn-line btn-xl w-full font-black text-lg tracking-widest justify-center cyber-btn cyber-hover text-white">
+               <span class="cyber-btn-inner w-full flex-center">LINEから予約する</span>
+            </a>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-obsidian border-t-blue pt-large pb-medium relative text-white" id="access">
+    <div class="l-container flex-between align-start flex-col-sp gap-large font-zen font-bold text-sm border-b-line-dark pb-medium mb-medium">
+      
+      <div class="f-left text-left w-40 center-sp w-full-sp">
+        <div class="flex gap-xs align-center mb-small justify-center-sp">
+          <i data-lucide="zap" class="text-blue icon-lg glow-icon"></i>
+          <span class="font-teko font-bold text-white text-3xl tracking-wide line-height-tight text-shadow-blue">BLACKOUT</span>
+        </div>
+        <p class="text-silver text-xs line-height-long max-w-400 mx-auto-sp">
+          〒150-0000 東京都渋谷区サイバー 1-2-3<br>
+          エピレーションビル 3F<br><br>
+          営業時間: 平日 12:00 - 22:00 / 休日 10:00 - 20:00<br>
+          仕事帰りにも通いやすい22時まで営業。<br>
+          ※当店は完全予約制の男性専用サロンです。
+        </p>
+      </div>
+      
+      <div class="f-right flex gap-large justify-end flex-wrap w-60 justify-center-sp w-full-sp">
+        <ul class="flex-column gap-small text-silver text-xs text-left">
+          <li><a href="#" class="hover-blue transition">トップページ</a></li>
+          <li><a href="#" class="hover-blue transition">当サロンの強み</a></li>
+          <li><a href="#" class="hover-blue transition">料金表一覧</a></li>
+        </ul>
+        <ul class="flex-column gap-small text-silver text-xs text-left">
+          <li><a href="#" class="hover-blue transition">脱毛部位・流れ</a></li>
+          <li><a href="#" class="hover-blue transition">よくあるご質問</a></li>
+          <li><a href="#" class="hover-blue transition">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="l-container flex-between align-center flex-col-sp text-xs font-teko text-line-dark">
+       <div class="tracking-widest">&copy; 2025 BLACKOUT MEN'S SALON. ALL RIGHTS RESERVED.</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('bg-obsidian', 'scrolled');
+      else header.classList.remove('bg-obsidian', 'scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
