@@ -1,19 +1,57 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bar Amber | 琥珀色の時間</title>
-  <meta name="description" content="こだわりのウイスキーとカクテルで特別な夜を。">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <meta name="description" content="厳選ウイスキーとカクテル">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assist/css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <header class="header"><div class="container"><a href="#" class="logo">🥃 Bar Amber</a><ul class="nav-list"><li><a href="#price" class="nav-link">ドリンク</a></li><li><a href="#features" class="nav-link">こだわり</a></li><li><a href="#contact" class="nav-link">店舗情報</a></li></ul><a href="#contact" class="nav-cta">📞 ご予約</a><button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button></div></header>
-  <section class="hero"><div class="hero-bg"><img src="assist/images/hero.png" alt=""></div><div class="hero-overlay"></div><div class="hero-content"><span class="hero-badge">Est. 2015</span><h1 class="hero-title">琥珀色の、<br>静かな時間。</h1><p class="hero-desc">厳選ウイスキー200銘柄と<br>オリジナルカクテル。</p><a href="#contact" class="hero-btn">📞 ご予約</a></div></section>
-  <section class="section features" id="features"><div class="container"><p class="s-label fade-in">Features</p><h2 class="s-title fade-in">選ばれる理由</h2><p class="s-sub fade-in"></p><div class="features-grid"><div class="feature-card fade-in"><div class="feature-icon">🥃</div><h3 class="feature-title">ウイスキー200銘柄</h3><p class="feature-desc">スコッチ・バーボン・ジャパニーズを厳選。</p></div><div class="feature-card fade-in"><div class="feature-icon">🍸</div><h3 class="feature-title">オリジナルカクテル</h3><p class="feature-desc">バーテンダー創作のシグネチャー。</p></div><div class="feature-card fade-in"><div class="feature-icon">🎵</div><h3 class="feature-title">上質な空間</h3><p class="feature-desc">ジャズが流れる大人の隠れ家。</p></div></div></div></section>
-  <section class="section price" id="price"><div class="container"><p class="s-label fade-in">Menu & Price</p><h2 class="s-title fade-in">メニュー・料金</h2><p class="s-sub fade-in"></p><div class="price-grid"><div class="price-cat fade-in"><h3>Whisky</h3><div class="price-item"><span>ハウスウイスキー</span><span class="price-cost">¥900〜</span></div><div class="price-item"><span>プレミアムシングルモルト</span><span class="price-cost">¥1,500〜</span></div><div class="price-item"><span>レアボトル</span><span class="price-cost">¥3,000〜</span></div></div><div class="price-cat fade-in"><h3>Cocktail</h3><div class="price-item"><span>クラシックカクテル</span><span class="price-cost">¥1,200</span></div><div class="price-item"><span>シグネチャー</span><span class="price-cost">¥1,500</span></div><div class="price-item"><span>ノンアルカクテル</span><span class="price-cost">¥800</span></div></div></div></div></section>
-  <section class="cta" id="contact"><div class="container fade-in"><h2>ご予約・お問い合わせ</h2><p>営業: 18:00〜翌2:00（日曜定休）</p><a href="#" class="cta-btn">📞 03-9999-0000</a></div></section>
-  <footer class="footer"><div class="container"><p class="footer-logo">Bar Amber</p><p class="footer-copy">&copy; 2025 Bar Amber All rights reserved.</p></div></footer>
-  <script src="assist/js/main.js"></script>
-</body></html>
+
+    <header class="header" id="header"><div class="container"><div class="logo">AMBER</div></div></header>
+    <section class="hero b-hero">
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
+      <div class="content fade">
+        <h1>Night whisper.</h1>
+        <p>静寂と、琥珀色のひとときをあなたに。</p>
+      </div>
+    </section>
+    <section class="section menu dark">
+      <div class="container fade">
+        <h2 class="sect-title">Menu</h2>
+        <div class="d-grid">
+          <div class="box">
+            <i data-lucide="glass-water"></i>
+            <h3>Whisky</h3>
+            <p>200銘柄を超えるスコッチとバーボンのコレクション。幻の一杯をご提案します。</p>
+          </div>
+          <div class="box">
+            <i data-lucide="martini"></i>
+            <h3>Cocktail</h3>
+            <p>旬のフルーツとハーブを使用した、バーテンダーのシグネチャーカクテル。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  <script>
+    lucide.createIcons();
+    // Header scroll
+    window.addEventListener('scroll', () => {
+      const h = document.getElementById('header');
+      if(h) h.classList.toggle('scrolled', window.scrollY > 50);
+    });
+    // Fade in
+    const obs = new IntersectionObserver(e => {
+      e.forEach(i => { if(i.isIntersecting) { i.target.style.opacity=1; i.target.style.transform='translateY(0) scale(1)'; }});
+    }, {threshold: 0.1});
+    document.querySelectorAll('.fade').forEach(el => {
+      el.style.opacity = 0; el.style.transform = 'translateY(20px)'; el.style.transition = 'all 0.8s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

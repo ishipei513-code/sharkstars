@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant L'etoile | モダンフレンチ</title>
-  <meta name="description" content="旬の食材を活かしたモダンフレンチ。記念日・接待に。">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'etoile | モダンフレンチ</title>
+  <meta name="description" content="旬の食材を活かしたフレンチ">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assist/css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <header class="header"><div class="container"><a href="#" class="logo">⭐ L'etoile</a><ul class="nav-list"><li><a href="#price" class="nav-link">メニュー</a></li><li><a href="#features" class="nav-link">シェフ</a></li><li><a href="#contact" class="nav-link">ご予約</a></li></ul><a href="#contact" class="nav-cta">📞 ご予約</a><button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button></div></header>
-  <section class="hero"><div class="hero-bg"><img src="assist/images/hero.png" alt=""></div><div class="hero-overlay"></div><div class="hero-content"><span class="hero-badge">French Cuisine</span><h1 class="hero-title">星降る夜の、<br>特別なひとときを。</h1><p class="hero-desc">厳選された旬の食材を活かした<br>モダンフレンチをお楽しみください。</p><a href="#contact" class="hero-btn">📞 ご予約</a></div></section>
-  <section class="section features" id="features"><div class="container"><p class="s-label fade-in">Features</p><h2 class="s-title fade-in">選ばれる理由</h2><p class="s-sub fade-in"></p><div class="features-grid"><div class="feature-card fade-in"><div class="feature-icon">👨‍🍳</div><h3 class="feature-title">星付きシェフ</h3><p class="feature-desc">パリの三ツ星で修業したシェフ。</p></div><div class="feature-card fade-in"><div class="feature-icon">🌱</div><h3 class="feature-title">旬の食材</h3><p class="feature-desc">全国の生産者から届く最高の食材。</p></div><div class="feature-card fade-in"><div class="feature-icon">🍷</div><h3 class="feature-title">ソムリエ厳選ワイン</h3><p class="feature-desc">フランス直輸入200種類以上。</p></div></div></div></section>
-  <section class="section price" id="price"><div class="container"><p class="s-label fade-in">Menu & Price</p><h2 class="s-title fade-in">メニュー・料金</h2><p class="s-sub fade-in"></p><div class="price-grid"><div class="price-cat fade-in"><h3>ランチ</h3><div class="price-item"><span>プリフィクス（3品）</span><span class="price-cost">¥3,800</span></div><div class="price-item"><span>おまかせ（5品）</span><span class="price-cost">¥6,600</span></div></div><div class="price-cat fade-in"><h3>ディナー</h3><div class="price-item"><span>ムニュ・セゾン（7品）</span><span class="price-cost">¥12,000</span></div><div class="price-item"><span>スペシャル（10品）</span><span class="price-cost">¥18,000</span></div></div></div></div></section>
-  <section class="cta" id="contact"><div class="container fade-in"><h2>ご予約・お問い合わせ</h2><p>記念日・接待のご相談もお気軽に。</p><a href="#" class="cta-btn">📞 03-5555-6666</a></div></section>
-  <footer class="footer"><div class="container"><p class="footer-logo">Restaurant L'etoile</p><p class="footer-copy">&copy; 2025 Restaurant L'etoile All rights reserved.</p></div></footer>
-  <script src="assist/js/main.js"></script>
-</body></html>
+
+    <header class="header" id="header"><div class="container"><div class="logo">L'etoile</div></header>
+    <section class="hero f-hero">
+      <div class="f-img fade"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div>
+      <div class="f-box fade">
+        <p class="subtitle">Modern French Cuisine</p>
+        <h1>星降る夜の、<br>特別なひとときを。</h1>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container flex">
+        <div class="text fade">
+          <h2>Philosophy</h2>
+          <p>全国の生産者から届く最高の食材を、パリ三ツ星で培った技術で昇華。<br>洗練された空間で、記憶に残る美食体験をご提供します。</p>
+        </div>
+        <div class="img fade"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div>
+      </div>
+    </section>
+    <footer class="footer">Restaurant L'etoile</footer>
+    
+  <script>
+    lucide.createIcons();
+    // Header scroll
+    window.addEventListener('scroll', () => {
+      const h = document.getElementById('header');
+      if(h) h.classList.toggle('scrolled', window.scrollY > 50);
+    });
+    // Fade in
+    const obs = new IntersectionObserver(e => {
+      e.forEach(i => { if(i.isIntersecting) { i.target.style.opacity=1; i.target.style.transform='translateY(0) scale(1)'; }});
+    }, {threshold: 0.1});
+    document.querySelectorAll('.fade').forEach(el => {
+      el.style.opacity = 0; el.style.transform = 'translateY(20px)'; el.style.transition = 'all 0.8s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
