@@ -1,44 +1,306 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>FC VERDE サッカースクール</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo"> FC VERDE</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC SHARK サッカースクール | 楽しむことが、一番の才能だ。</title>
+  <meta name="description" content="東京都内を中心とした幼児〜小学生向けサッカースクール。JFA公認コーチ指導のもと、「サッカーの楽しさ」と「自ら考える力」を育みます。まずは1ヶ月無料体験へ！">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>楽しく、強く。<br>サッカーで成長。</h1><p>幼児〜中学生。元Jリーガーコーチ在籍。</p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc">幼児〜中学生。元Jリーガーコーチ在籍。<br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>元Jリーガー指導</h3><p>プロの経験を活かした指導。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>年齢別クラス</h3><p>幼児・小学・中学。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>挨拶と礼儀</h3><p>サッカーで人間力も育む。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
   
-  <footer class="footer"> FC VERDE</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar bg-navy text-white font-noto font-bold center text-sm py-xs relative z-100">
+    <a href="#trial" class="hover-orange text-white flex-center gap-xs">
+      <i data-lucide="bell" class="icon-sm text-yellow"></i> 【新年度生募集】今ならユニフォーム上下＆1ヶ月体験が【完全無料】！
+    </a>
+  </div>
+
+  <!-- Header -->
+  <header class="header bg-white" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#" class="flex-center gap-xs">
+          <!-- Using standard icon as a proxy for team badge -->
+          <i data-lucide="aperture" class="text-orange icon-lg"></i>
+          <div class="flex-column line-height-tight">
+            <span class="font-oswald font-bold text-navy l-text tracking-normal">FC SHARK</span>
+            <span class="font-noto font-bold text-gray l-sub text-xs">サッカースクール</span>
+          </div>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-noto font-bold text-navy text-sm">
+          <li><a href="#about">スクールの特徴</a></li>
+          <li><a href="#classes">クラス・料金</a></li>
+          <li><a href="#coaches">コーチ紹介</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+        </ul>
+        <div class="h-btn sp-none">
+          <a href="#trial" class="btn btn-orange font-bold btn-slash btn-shadow"><i data-lucide="play-circle"></i> 無料体験に申し込む</a>
+        </div>
+      </nav>
+      <button class="menu-toggle text-navy" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero relative bg-navy pt-header">
+    
+    <!-- Slanted background using clip-path on wrapper -->
+    <div class="hero-bg-wrapper">
+      <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="サッカーを楽しむ子供たち" class="hero-img-bg filter-dark">
+      <!-- Overlay texture -->
+      <div class="bg-pattern-dot"></div>
+      <div class="hero-overlay bg-gradient-navy"></div>
+    </div>
+
+    <div class="l-container flex-hero relative z-10 pt-large pb-large">
+      <div class="hero-text fade-target delay-1 text-left max-w-800">
+        <div class="h-catch bg-yellow text-navy font-noto font-black text-sm px-small py-xs display-inline-block clip-slash mb-small">幼児〜小学6年生対象</div>
+        
+        <h1 class="hero-title text-white font-black font-noto line-height-tight text-shadow-drop mb-small">
+          楽しむことが、<br>
+          一番の<span class="text-orange">才能</span>だ。
+        </h1>
+        <p class="hero-desc font-noto font-bold text-white mt-small line-height-long mb-medium text-lg text-shadow-dark">
+          「もっと上手くなりたい！」「明日もサッカーしたい！」<br>
+          FC SHARKは、子供たちが心から夢中になれる環境を提供し、<br class="sp-none">
+          サッカーを通じて「自ら考え、行動する力」を育むサッカースクールです。
+        </p>
+        
+        <div class="h-cta flex gap-small flex-wrap">
+          <a href="#trial" class="btn btn-orange btn-xl font-bold font-noto clip-slash box-shadow-orange animate-pulse-glow">
+            まずは「1ヶ月」無料体験！ <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- About / Philosophy -->
+  <section class="section about bg-white" id="about">
+    <div class="l-container">
+      <div class="sect-header center fade-target mb-large">
+        <span class="font-oswald text-orange font-bold text-xl tracking-widest uppercase mb-0 display-block">Philosophy</span>
+        <h2 class="sect-heading font-noto font-black text-navy mt-xs">FC SHARK 3つの約束</h2>
+        <div class="divider bg-green mx-auto mt-small"></div>
+      </div>
+
+      <div class="a-grid flex-center gap-large flex-col-sp">
+        <!-- Feature 1 -->
+        <div class="a-card bg-light p-medium text-center relative clip-slash-bottom fade-target border-t-green w-full">
+          <div class="a-num font-oswald font-bold text-green text-3xl opacity-20 absolute top-0 right-0 p-small">01</div>
+          <div class="a-icon bg-green text-white rounded-full center mx-auto mb-small box-shadow-green icon-circle"><i data-lucide="smile" class="icon-lg"></i></div>
+          <h3 class="font-noto font-bold text-lg text-navy mb-xs">「楽しい」が原動力</h3>
+          <p class="font-noto text-gray text-sm line-height-long text-left mt-small">
+            厳しいだけの指導はしません。ゲーム形式の練習を多く取り入れ、まずはサッカーを「好き」になってもらうことを最優先します。
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="a-card bg-light p-medium text-center relative clip-slash-bottom fade-target delay-1 border-t-orange w-full">
+          <div class="a-num font-oswald font-bold text-orange text-3xl opacity-20 absolute top-0 right-0 p-small">02</div>
+          <div class="a-icon bg-orange text-white rounded-full center mx-auto mb-small box-shadow-orange icon-circle"><i data-lucide="brain" class="icon-lg"></i></div>
+          <h3 class="font-noto font-bold text-lg text-navy mb-xs">「考える力」を育む</h3>
+          <p class="font-noto text-gray text-sm line-height-long text-left mt-small">
+            コーチが答えを全て教えるのではなく、「どうすれば点が取れるか」を子どもたち自身に質問し、自発的な問題解決能力を育てます。
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="a-card bg-light p-medium text-center relative clip-slash-bottom fade-target delay-2 border-t-navy w-full">
+          <div class="a-num font-oswald font-bold text-navy text-3xl opacity-20 absolute top-0 right-0 p-small">03</div>
+          <div class="a-icon bg-navy text-white rounded-full center mx-auto mb-small box-shadow-navy icon-circle"><i data-lucide="users" class="icon-lg"></i></div>
+          <h3 class="font-noto font-bold text-lg text-navy mb-xs">全員が主役のチーム</h3>
+          <p class="font-noto text-gray text-sm line-height-long text-left mt-small">
+            「上手い子だけが試合に出る」ことはありません。スクール生全員が平等に試合を経験し、仲間と協力する大切さを学びます。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes -->
+  <section class="section classes relative bg-navy text-white pb-large" id="classes">
+    <div class="bg-pattern-dot opacity-10"></div>
+    <!-- Top diagonal cut -->
+    <div class="diagonal-bg-top bg-white"></div>
+    
+    <div class="l-container relative z-10 pt-medium">
+      <div class="sect-header center fade-target mb-large">
+        <span class="font-oswald text-yellow font-bold text-xl tracking-widest uppercase mb-0 display-block">Classes</span>
+        <h2 class="sect-heading font-noto font-black text-white mt-xs">クラス・対象年齢</h2>
+      </div>
+
+      <div class="c-flex flex-center gap-medium flex-wrap">
+        
+        <!-- Class U-6 -->
+        <div class="c-card bg-white text-navy flex flex-col-sp rounded-xl overflow-hidden fade-target box-shadow-xl w-full max-w-800 mx-auto">
+          <div class="c-img w-50">
+            <img src="https://images.unsplash.com/photo-1544669894-6b95d00346fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="幼児クラス" class="h-full object-cover">
+          </div>
+          <div class="c-info w-50 p-large text-left">
+            <div class="flex-between align-center border-b-gray-light pb-small mb-small">
+              <h3 class="font-noto font-black text-xl text-navy">キッズクラス<br><span class="text-sm font-bold text-orange">U-6 (年中・年長)</span></h3>
+              <i data-lucide="baby" class="text-green icon-lg"></i>
+            </div>
+            <p class="font-noto text-gray text-sm line-height-long mb-medium">
+              ボール遊びを通じて、身体を動かす楽しさと全身のコーディネーション能力を養います。まずは「サッカーって楽しい！」と感じることが目標です。
+            </p>
+            <div class="flex gap-small mb-small font-noto font-bold text-sm">
+              <span class="bg-light text-navy px-2 py-1 rounded-sm"><i data-lucide="clock" class="icon-sm text-orange"></i> 50分</span>
+              <span class="bg-light text-navy px-2 py-1 rounded-sm"><i data-lucide="calendar" class="icon-sm text-orange"></i> 週1回 / 週2回</span>
+            </div>
+            <div class="font-oswald font-bold text-2xl text-navy">¥6,600<span class="font-noto font-bold text-sm text-gray"> / 月〜</span></div>
+          </div>
+        </div>
+
+        <!-- Class U-9 -->
+        <div class="c-card bg-white text-navy flex row-reverse-sp rounded-xl overflow-hidden fade-target delay-1 box-shadow-xl w-full max-w-800 mx-auto mt-medium">
+          <div class="c-img w-50 relative">
+            <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="小学生クラス" class="h-full object-cover relative z-10 clip-slash-reverse">
+            <div class="bg-green absolute inset-0 z-0"></div> <!-- Background for the clipped area -->
+          </div>
+          <div class="c-info w-50 p-large text-left relative z-20 bg-white">
+            <div class="flex-between align-center border-b-gray-light pb-small mb-small">
+              <h3 class="font-noto font-black text-xl text-navy">ジュニアクラス<br><span class="text-sm font-bold text-green">U-9 / U-12 (小学1〜6年生)</span></h3>
+              <i data-lucide="medal" class="text-orange icon-lg"></i>
+            </div>
+            <p class="font-noto text-gray text-sm line-height-long mb-medium">
+              「止める・蹴る・運ぶ」の基本技術（テクニック）を徹底的に磨きながら、試合で使える個人戦術を習得します。年代別に細かくグループ分けを行い指導します。
+            </p>
+            <div class="flex gap-small mb-small font-noto font-bold text-sm flex-wrap">
+              <span class="bg-light text-navy px-2 py-1 rounded-sm"><i data-lucide="clock" class="icon-sm text-orange"></i> 70分</span>
+              <span class="bg-light text-navy px-2 py-1 rounded-sm"><i data-lucide="calendar" class="icon-sm text-orange"></i> 週1回〜週3回</span>
+            </div>
+            <div class="font-oswald font-bold text-2xl text-navy">¥8,800<span class="font-noto font-bold text-sm text-gray"> / 月〜</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Break -->
+  <section class="img-break relative h-400 cover-center" style="background-image: url('https://images.unsplash.com/photo-1518605368461-1ee068211db4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+    <div class="hero-overlay bg-gradient-navy opacity-80"></div>
+    <div class="l-container center relative z-10 h-full flex-center fade-target">
+      <h2 class="font-noto font-black text-white text-3xl line-height-tight text-shadow-drop">
+        「ミスしてもいい。」<br>
+        <span class="text-yellow">挑戦する勇気</span>を褒めるスクール。
+      </h2>
+    </div>
+  </section>
+
+  <!-- CTA Box (Trial) -->
+  <section class="cta bg-green text-white center pt-large pb-large relative overflow-hidden pattern-grass" id="trial">
+    
+    <div class="l-container fade-target relative z-10 max-w-800">
+      <div class="bg-yellow text-navy font-noto font-black text-lg px-medium py-xs display-inline-block clip-slash mb-small box-shadow-soft">
+        保護者の当番・お茶出し一切不要！
+      </div>
+      <h2 class="font-noto font-black text-3xl mb-small line-height-tight text-shadow-drop">まずは1ヶ月間の<br class="sp-none">【無料体験】へ！</h2>
+      <p class="font-noto font-bold mb-large text-sm text-shadow-dark">
+        「うちの子に合うかしら…」「まだ早いかも…」<br>
+        そんな不安を解消するため、たっぷり【1ヶ月（最大4回）】無料で体験いただけます。<br>
+        無理な入会勧誘は一切ございません。
+      </p>
+      
+      <div class="bg-white p-large rounded-lg box-shadow-xl text-left text-navy">
+        <h3 class="font-noto font-black text-center mb-medium border-b-gray-light pb-small flex-center gap-xs">
+          <i data-lucide="mail" class="text-orange"></i> 無料体験 申し込みフォーム
+        </h3>
+        <form class="c-form flex-column gap-medium font-noto">
+          <div class="flex gap-medium flex-col-sp">
+            <div class="f-group flex-1">
+              <label class="font-bold text-xs mb-xs display-block text-gray">お子様のお名前</label>
+              <input type="text" class="f-input" placeholder="例：蹴球 太郎" required>
+            </div>
+            <div class="f-group flex-1">
+              <label class="font-bold text-xs mb-xs display-block text-gray">現在の学年</label>
+              <select class="f-input">
+                <option>年中</option>
+                <option>年長</option>
+                <option>小学1年生</option>
+                <option>小学2年生</option>
+                <option>小学3年生</option>
+                <option>小学4年生以上</option>
+              </select>
+            </div>
+          </div>
+          <div class="f-group">
+            <label class="font-bold text-xs mb-xs display-block text-gray">保護者様のメールアドレス</label>
+            <input type="email" class="f-input" placeholder="例：mail@example.com" required>
+          </div>
+          <button type="submit" class="btn btn-orange btn-xl w-full font-black text-lg mt-small clip-slash box-shadow-orange justify-center hover-scale">
+            無料体験に申し込む <i data-lucide="chevron-right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-navy pt-medium pb-small center text-white border-t-green" id="access">
+    <div class="l-container flex-between align-center flex-col-sp gap-medium w-full">
+      <div class="f-left text-left">
+        <div class="f-logo font-oswald font-bold text-xl mb-xs flex gap-xs align-center tracking-normal">
+           <i data-lucide="aperture" class="text-green icon-sm"></i> FC SHARK SOCCER SCHOOL
+        </div>
+        <p class="font-noto text-gray-light text-xs line-height-long font-normal">
+          東京都渋谷区・世田谷区を中心に活動するサッカースクール<br>
+          お問い合わせ: info@fc-shark-demo.com (平日 10:00 - 18:00)
+        </p>
+      </div>
+      
+      <div class="f-right text-right">
+        <div class="sns-icons flex gap-medium flex-end justify-end mb-small">
+          <a href="#" class="text-gray-light hover-orange"><i data-lucide="instagram"></i></a>
+          <a href="#" class="text-gray-light hover-orange"><i data-lucide="youtube"></i></a>
+        </div>
+        <p class="font-oswald text-gray-light text-xs">&copy; 2025 FC SHARK. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
