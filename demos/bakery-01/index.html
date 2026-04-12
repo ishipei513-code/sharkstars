@@ -1,48 +1,301 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>小麦の丘 | ベーカリー</title><meta name="description" content="焼きたてパンの香り">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo"> 小麦の丘</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boulangerie Komugi | 毎朝焼き上げる自家製酵母パン</title>
+  <meta name="description" content="毎朝の食卓に、焼きたての幸せを。国産小麦と自家製酵母にこだわった、街の小さなパン屋「Boulangerie Komugi（ブーランジェリー・コムギ）」です。イートインスペースも完備しています。">
   
-  <!-- 1. HERO -->
-  <section class="hero"><div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="hero-box reveal"><h1>焼きたての香りが、<br>幸せを運ぶ。</h1><p>焼きたてパンの香り</p></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
   
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><span class="sub">Philosophy</span><h2>美しさを引き出す、<br>上質な時間。</h2><p>焼きたてパンの香り</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-  
-  <!-- 3. FEATURES -->
-  <section class="section bg-light"><div class="container"><h2 class="center reveal">Our Strengths</h2><div class="feat-list">
-    <div class="feat reveal" style="transition-delay:0s"><h3><i data-lucide="check"></i> 信頼と実績</h3><p>地域で長年の信頼をいただいております。</p></div><div class="feat reveal" style="transition-delay:0.1s"><h3><i data-lucide="check"></i> プロフェッショナル</h3><p>熟練のスタッフが丁寧に対応します。</p></div><div class="feat reveal" style="transition-delay:0.2s"><h3><i data-lucide="check"></i> サポート体制</h3><p>アフターフォローも万全です。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="center reveal">Gallery</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1512496015851-a1fbcf69b6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-    </div>
-  </div></section>
-
-  <!-- 5. MENU & PRICE -->
-  <section class="section bg-light"><div class="container reveal"><h2 class="center">Menu & Price</h2>
-    <div class="price-box"><div class="row"><div class="name">基本コース</div><div class="dots"></div><div class="cost">要見積</div></div><div class="row"><div class="name">プレミアム</div><div class="dots"></div><div class="cost">要相談</div></div></div>
-  </div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="center">FAQ</h2>
-    <div class="faq-box">
-      <details><summary>予約は必要ですか？</summary><p>はい、お客様一人ひとりに合わせたサービスを提供するため、完全予約制となっております。</p></details>
-      <details><summary>キャンセル料はかかりますか？</summary><p>前日までのキャンセルは無料です。当日のキャンセルは料金の50%を頂戴しております。</p></details>
-      <details><summary>駐車場はありますか？</summary><p>店舗の近くに2台分の専用駐車場をご用意しております。</p></details>
-    </div>
-  </div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>ご予約・お問い合わせ</h2><p>特別な体験を、あなたに。</p><a href="#" class="btn">今すぐ予約する</a></div></section>
-  
-  <footer class="footer"> 小麦の丘</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <i data-lucide="wheat" class="text-terracotta l-icon"></i>
+          <span>
+            <small class="en">Boulangerie</small>
+            Komugi
+          </span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#about">こだわり</a></li>
+          <li><a href="#breads">パンについて</a></li>
+          <li><a href="#schedule">焼き上がり時間</a></li>
+          <li><a href="#info">店舗情報</a></li>
+        </ul>
+        <div class="h-social sp-none">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="焼きたてのパンと小麦">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="l-container">
+      <div class="hero-inner fade-target">
+        <div class="h-stamp">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="" class="hidden-img">
+          <span>Freshly Baked<br>Everyday</span>
+        </div>
+        <h1 class="hero-title">
+          毎朝の食卓に、<br>
+          焼きたての<span class="text-terracotta">幸せ</span>を。
+        </h1>
+        <p class="hero-desc">
+          北海道産小麦と自家製酵母。<br>
+          噛むほどに広がる小麦の高い香りと、<br>
+          パリッとしたクラスト（皮）の食感。<br>
+          街の小さなパン屋から、最高の朝をお届けします。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notice -->
+  <div class="notice-bar">
+    <div class="l-container">
+      <div class="notice-inner">
+        <span class="n-badge">News</span>
+        <p>秋の新作「栗と胡桃のリュスティック」が焼き上がりました！</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="l-container">
+      <div class="a-wrap">
+        <div class="a-text fade-target">
+          <span class="en-label">O u r &nbsp; P a s s i o n</span>
+          <h2 class="sect-heading">パン作りの<br>3つのこだわり</h2>
+          <div class="a-list">
+            <div class="a-item">
+              <h3>01. こだわりの国産小麦</h3>
+              <p>パンの骨格となる小麦は、北海道産「春よ恋」や「キタノカオリ」を独自にブレンドしています。水分をたっぷりと含み、もっちりとした食感と豊かな甘みが特徴です。</p>
+            </div>
+            <div class="a-item">
+              <h3>02. ゆっくり熟成する自家製酵母</h3>
+              <p>レーズンや季節のフルーツから起こした自家製酵母を使用し、一晩かけてゆっくりと低温発酵させています。これにより、複雑で奥深い旨味が引き立てられます。</p>
+            </div>
+            <div class="a-item">
+              <h3>03. 毎日、お店で焼き立てを</h3>
+              <p>冷凍生地は一切使用せず、毎日深夜から粉を量り、生地をこね、発酵させて焼き上げています。だからこそ味わえる、本当の「焼き立て」をお楽しみください。</p>
+            </div>
+          </div>
+        </div>
+        <div class="a-img fade-target delay-1">
+          <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="パン生地をこねる職人">
+          <div class="img-deco"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breads (Menu) -->
+  <section class="section breads bg-dough" id="breads">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">O u r &nbsp; B r e a d s</span>
+        <h2 class="sect-heading">人気のパンたち</h2>
+        <p>定番の食事パンから、おやつにぴったりの甘いパンまで、約40種類をご用意しています。</p>
+      </div>
+
+      <div class="b-grid">
+        <!-- Bread 1 -->
+        <div class="b-card fade-target">
+          <div class="b-img">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f40ce88cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="クロワッサン">
+          </div>
+          <div class="b-info">
+            <h3 class="b-name">発酵バターのクロワッサン</h3>
+            <p class="b-desc">フランス産の発酵バターをたっぷりと折り込みました。外はサクッと、中はジュワッとした至福の味わいです。</p>
+            <div class="b-price">¥ 280 (税込)</div>
+          </div>
+        </div>
+        
+        <!-- Bread 2 -->
+        <div class="b-card fade-target delay-1">
+          <div class="b-img">
+            <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="バゲット">
+          </div>
+          <div class="b-info">
+            <h3 class="b-name">トラディショナル・バゲット</h3>
+            <p class="b-desc">水・粉・塩・酵母のみのシンプルな材料で作る、当店自慢のフランスパン。バリッとした皮の香ばしさがたまりません。</p>
+            <div class="b-price">¥ 320 (税込)</div>
+          </div>
+        </div>
+
+        <!-- Bread 3 -->
+        <div class="b-card fade-target delay-2">
+          <div class="b-img">
+            <img src="https://images.unsplash.com/photo-1601314118320-b38466e344e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="カンパーニュ">
+          </div>
+          <div class="b-info">
+            <h3 class="b-name">カンパーニュ（田舎パン）</h3>
+            <p class="b-desc">自家製サワー種を使用した、ほんのりとした酸味が特徴のお食事パン。スープやチーズとの相性が抜群です。</p>
+            <div class="b-price">¥ 450 (税込) / ハーフ ¥230</div>
+          </div>
+        </div>
+
+        <!-- Bread 4 -->
+        <div class="b-card fade-target">
+          <div class="b-img">
+            <img src="https://images.unsplash.com/photo-1579697096985-41fe1430e5d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="シナモンロール">
+          </div>
+          <div class="b-info">
+            <h3 class="b-name">自家製シナモンロール</h3>
+            <p class="b-desc">セイロンシナモンとブラウンシュガーをたっぷり巻き込み、焼き立てに濃厚なクリームチーズフロスティングを乗せました。</p>
+            <div class="b-price">¥ 300 (税込)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Baking Schedule -->
+  <section class="section schedule" id="schedule">
+    <div class="l-container">
+      <div class="s-wrap fade-target border-brown">
+        <div class="s-left bg-terracotta">
+          <i data-lucide="clock" class="clock-icon"></i>
+          <h2 class="sect-heading text-white" style="margin-bottom: 0;">焼き上がり<br>スケジュール</h2>
+          <p class="text-white" style="margin-top: 15px; font-size: 0.9rem; opacity: 0.9;">
+            その一番おいしい瞬間を狙って、ぜひご来店ください。
+          </p>
+        </div>
+        <div class="s-right bg-white">
+          <ul class="timetable">
+            <li>
+              <div class="t-time text-terracotta font-en">08:00</div>
+              <div class="t-list">クロワッサン / パン・オ・ショコラ / 食パン / 総菜パン 各種</div>
+            </li>
+            <li>
+              <div class="t-time text-terracotta font-en">10:00</div>
+              <div class="t-list">バゲット / カンパーニュ / エピ などのハード系</div>
+            </li>
+            <li>
+              <div class="t-time text-terracotta font-en">12:00</div>
+              <div class="t-list">サンドイッチ 各種 / カレーパン（揚げたて）/ 食パン(2回目)</div>
+            </li>
+            <li>
+              <div class="t-time text-terracotta font-en">14:00</div>
+              <div class="t-list">メロンパン / シナモンロール / スコーン などの甘いパン</div>
+            </li>
+          </ul>
+          <p class="t-note">※発酵の具合によって、時間が前後する場合がございます。売り切れ次第終了となりますのでご了承ください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cafe Space & IG -->
+  <section class="section cafe">
+    <div class="l-container">
+      <div class="c-flex">
+        <div class="cf-left fade-target">
+          <span class="en-label">E a t - i n &nbsp; S p a c e</span>
+          <h2 class="sect-heading">淹れ立ての珈琲と一緒に。</h2>
+          <p>店内には8席のイートインスペースをご用意しています。挽き立ての豆で淹れるスペシャルティコーヒーと、焼き立てのパン。最高のマリアージュを店内でそのままお楽しみいただけます。</p>
+        </div>
+        <div class="cf-right fade-target delay-1">
+          <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="コーヒーとパン">
+        </div>
+      </div>
+      
+      <div class="ig-banner fade-target bg-dough border-brown">
+        <div class="ig-text">
+          <i data-lucide="instagram" class="text-terracotta"></i>
+          <div>
+            <h3>Instagramで最新情報をチェック！</h3>
+            <p>日替わりパンの紹介や、臨時休業のお知らせなどを発信しています。</p>
+          </div>
+        </div>
+        <a href="#" class="btn btn-brown">Follow @boulangerie_komugi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Info -->
+  <footer class="footer bg-brown" id="info">
+    <div class="l-container">
+      <div class="f-top border-bottom">
+        <div class="f-brand">
+          <div class="f-logo text-dough">
+            <i data-lucide="wheat"></i>
+            <span><small>Boulangerie</small>Komugi</span>
+          </div>
+          <p class="f-desc text-white" style="opacity: 0.8;">街の小さなパン屋さん。<br>毎日食べるものだから、安心で美味しいものを。</p>
+        </div>
+        <div class="f-info text-white">
+          <dl class="info-dl">
+            <dt>Address.</dt>
+            <dd>〒150-0000 東京都渋谷区パン町 1-2-3</dd>
+            
+            <dt>Open.</dt>
+            <dd>8:00 - 18:00 (パンが売り切れ次第閉店となります)</dd>
+            
+            <dt>Closed.</dt>
+            <dd>月曜日・火曜日</dd>
+            
+            <dt>Tel.</dt>
+            <dd>03-0000-0000 (ご予約はこちらからどうぞ)</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p class="text-white" style="opacity: 0.5;">&copy; 2025 Boulangerie Komugi. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
