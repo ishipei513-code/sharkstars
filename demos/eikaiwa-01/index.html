@@ -1,46 +1,393 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>Global English Lab | 英語で世界とつながる</title><meta name="description" content="ネイティブ講師による実践英会話。">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo"><i data-lucide="shield-check"></i>  Global English</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLOBAL SPEAK 英会話スクール | 「伝わる」から、世界が広がる。</title>
+  <meta name="description" content="初心者からビジネス英会話まで。GLOBAL SPEAK（グローバルスピーク）は、全員ネイティブ講師による指導と、あなたに合わせた完全オーダーメイドカリキュラムで「本当に使える英語」を身につけます。まずは無料体験レッスンへ！">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="overlay"></div><div class="container hero-content reveal"><h1>英語で世界と<br>つながる。</h1><p>ネイティブ講師による実践英会話。</p>
-    <div class="stats"><div class="stat"><span>設立</span><strong>20年</strong></div><div class="stat"><span>解決実績</span><strong>5,000件</strong></div></div></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="img reveal"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div><div class="text reveal">
-    <h2 class="sect-title">ABOUT US</h2><p class="desc">ネイティブ講師による実践英会話。<br><br>私たちが大切にしているのは、信頼と実績に基づく確かなソリューションです。お客様の課題に対して真摯に向き合い、最適な結果を導き出します。</p></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section gray"><div class="container"><h2 class="sect-title center reveal">OUR STRENGTHS</h2><div class="bento-grid">
-    <div class="bento-item reveal" style="transition-delay:0s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>ネイティブ講師</h3><p>アメリカ・イギリス出身の講師陣。</p></div><div class="bento-item reveal" style="transition-delay:0.1s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>少人数制</h3><p>最大4名でたっぷり話せる。</p></div><div class="bento-item reveal" style="transition-delay:0.2s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>ビジネス英語</h3><p>商談・プレゼン・メール対応。</p></div>
-  </div></div></section>
-
-  <!-- 4. SERVICES -->
-  <section class="section"><div class="container reveal"><h2 class="sect-title center">SERVICES & PLANS</h2><div class="service-table">
-    <div class="s-row"><div class="s-name">基本コース</div><div class="s-cost">要見積</div></div><div class="s-row"><div class="s-name">プレミアム</div><div class="s-cost">要相談</div></div>
-  </div></div></section>
-
-  <!-- 5. CASE STUDY (Gallery equivalent) -->
-  <section class="section gray"><div class="container"><h2 class="sect-title center reveal">CASE STUDY</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1563986768494-4d8dbcb2b005?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="sect-title center">FAQ</h2><div class="faq-box">
-    <details open><summary>初回のご相談は無料ですか？</summary><p>はい、初回のヒアリングおよび概算お見積りのご提示までは完全無料で承っております。</p></details>
-    <details><summary>遠方の企業でも対応可能ですか？</summary><p>はい、オンライン会議ツールを活用し、全国どこでも対応可能です。</p></details>
-    <details><summary>顧問契約は可能ですか？</summary><p>はい、継続的なサポートを行う顧問サービスもご用意しております。詳細はお問い合わせください。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>無料で資料ダウンロード・ご相談</h2><p>お電話、または下記フォームよりお気軽にお問い合わせください。</p><a href="#" class="btn">お問い合わせ</a></div></section>
-
-  <footer class="footer"> Global English</footer>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar bg-blue text-white font-bold center text-sm py-xs">
+    <a href="#trial" class="hover-opacity text-white flex-center gap-xs">
+      <i data-lucide="gift" class="icon-sm"></i> 【春のスタートダッシュ応援】今なら入会金無料＆初月半額キャンペーン実施中！
+    </a>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <span class="font-poppins font-bold text-blue l-text flex-center gap-xs">
+            <i data-lucide="globe-2" class="text-yellow"></i> GLOBAL SPEAK
+          </span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-noto font-bold text-dark text-sm">
+          <li><a href="#reasons">選ばれる理由</a></li>
+          <li><a href="#courses">コース・料金</a></li>
+          <li><a href="#voices">受講生の声</a></li>
+          <li><a href="#access">アクセス</a></li>
+        </ul>
+        <div class="h-btn sp-none">
+          <a href="#trial" class="btn btn-yellow font-bold btn-round box-shadow-glow"><i data-lucide="calendar"></i> 無料体験レッスン</a>
+        </div>
+      </nav>
+      <button class="menu-toggle text-blue" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero bg-light overflow-hidden">
+    <!-- Decorative Shapes -->
+    <div class="shape-blob shape-1 bg-blue-light opacity-50 blur-lg"></div>
+    <div class="shape-blob shape-2 bg-yellow-light opacity-50 blur-lg"></div>
+
+    <div class="l-container flex-hero relative z-10">
+      
+      <div class="hero-text fade-target">
+        <div class="h-badge bg-white text-blue border-blue font-bold font-noto rounded-full mb-small inline-block px-small box-shadow-soft">
+          顧客満足度 No.1 獲得！※
+        </div>
+        <h1 class="hero-title text-dark font-black font-noto line-height-tight">
+          「言葉」が通じると、<br>
+          <span class="text-blue relative">
+            世界<span class="highlight-yellow"></span>
+          </span>がもっと楽しくなる。
+        </h1>
+        <p class="hero-desc text-gray font-noto mt-small line-height-long mb-medium">
+          採用率わずか3%のプロフェッショナルなネイティブ講師陣。<br class="sp-none">
+          あなただけの完全オーダーメイドカリキュラムで、<br class="sp-none">
+          挫折させずに「本当に使える英語力」を育てます。
+        </p>
+        
+        <div class="h-cta flex gap-small flex-wrap">
+          <a href="#trial" class="btn btn-yellow btn-xl font-bold btn-round box-shadow-glow animate-bounce-slow">
+            まずは無料体験レッスン
+          </a>
+          <a href="#courses" class="btn btn-outline-blue btn-xl font-bold btn-round bg-white">
+            コースを見る
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-img fade-target delay-1 relative">
+        <img src="https://images.unsplash.com/photo-1577880216142-8549e9488dad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="笑顔で会話する多様な人々" class="rounded-xl box-shadow-lg img-hero">
+        
+        <!-- Floating Info Cards -->
+        <div class="float-card card-1 bg-white p-small rounded-lg box-shadow-soft flex-center gap-small border-gray-light">
+          <div class="circle-icon bg-yellow text-white center"><i data-lucide="check" class="icon-sm"></i></div>
+          <div>
+            <div class="font-noto font-bold text-xs">初心者も安心</div>
+            <div class="font-noto text-gray text-xs mt-0">日本人スタッフ常駐</div>
+          </div>
+        </div>
+        
+        <div class="float-card card-2 bg-white p-small rounded-lg box-shadow-soft flex-center gap-small border-gray-light">
+          <div class="circle-icon bg-blue text-white center"><i data-lucide="users" class="icon-sm"></i></div>
+          <div>
+            <div class="font-noto font-bold text-xs">全員ネイティブ</div>
+            <div class="font-noto text-gray text-xs mt-0">実践的な発音が身につく</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Problems / Empathy -->
+  <section class="section empathy bg-blue text-white center" id="empathy">
+    <div class="l-container fade-target">
+      <h2 class="font-noto font-bold text-lg mb-small">こんなお悩み、ありませんか？</h2>
+      <div class="e-grid flex-center gap-medium flex-wrap mt-medium">
+        <div class="e-bubble text-dark bg-white font-noto font-bold p-medium rounded-xl box-shadow-soft relative">
+          単語や文法は知っているのに<br>いざとなると言葉が出ない…
+        </div>
+        <div class="e-bubble text-dark bg-white font-noto font-bold p-medium rounded-xl box-shadow-soft relative delay-1">
+          仕事で急に英語が必要に！<br>でも何から始めればいいか…
+        </div>
+        <div class="e-bubble text-dark bg-white font-noto font-bold p-medium rounded-xl box-shadow-soft relative delay-2">
+          グループレッスンだと<br>発言できずに終わってしまう…
+        </div>
+      </div>
+      
+      <div class="mt-large center">
+        <i data-lucide="arrow-down" class="text-yellow icon-lg animate-bounce-slow"></i>
+        <h3 class="font-noto font-black text-xl text-yellow mt-small border-b-yellow display-inline-block">GLOBAL SPEAK なら、すべて解決できます！</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reasons to Choose (Features) -->
+  <section class="section reasons bg-white" id="reasons">
+    <div class="l-container">
+      <div class="sect-header center fade-target mb-large">
+        <span class="en-label font-poppins text-blue font-bold text-sm tracking-widest">REASONS</span>
+        <h2 class="sect-heading font-noto font-black text-dark mt-xs">GLOBAL SPEAK が選ばれる <span class="text-blue text-xl">3</span> つの理由</h2>
+      </div>
+
+      <div class="r-flex flex-column gap-large">
+        <!-- Reason 1 -->
+        <div class="r-item flex-between gap-large fade-target">
+          <div class="r-img rounded-xl overflow-hidden box-shadow-soft">
+            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ネイティブ講師とのマンツーマン授業">
+          </div>
+          <div class="r-text text-left">
+            <div class="r-num font-poppins font-black text-yellow text-2xl opacity-80 mb-xs">01</div>
+            <h3 class="font-noto font-bold text-dark text-lg mb-small">
+              採用率3%の<br>厳選されたネイティブ講師陣
+            </h3>
+            <p class="font-noto text-gray line-height-long text-sm">
+              英語を話せるだけでなく、「英語を教えるプロフェッショナル」のみを採用。自然な言い回しや美しい発音はもちろん、挫折させない明るくポジティブなティーチングで学習意欲を引き出します。
+            </p>
+          </div>
+        </div>
+
+        <!-- Reason 2 -->
+        <div class="r-item flex-between gap-large row-reverse fade-target delay-1">
+          <div class="r-img rounded-xl overflow-hidden box-shadow-soft">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="楽しそうに会話する生徒と講師">
+          </div>
+          <div class="r-text text-left">
+            <div class="r-num font-poppins font-black text-yellow text-2xl opacity-80 mb-xs">02</div>
+            <h3 class="font-noto font-bold text-dark text-lg mb-small">
+              「たくさん話す」に特化した<br>マンツーマン・レッスン
+            </h3>
+            <p class="font-noto text-gray line-height-long text-sm">
+              英会話の上達に一番必要なのは「圧倒的な発話量」です。1対1だからこそ、他人の目を気にせず何度でも間違えることができます。日常会話、旅行、ビジネスなど、目的に合わせた内容で話す力を鍛えます。
+            </p>
+          </div>
+        </div>
+
+        <!-- Reason 3 -->
+        <div class="r-item flex-between gap-large fade-target delay-2">
+          <div class="r-img rounded-xl overflow-hidden box-shadow-soft">
+            <img src="https://images.unsplash.com/photo-1531545514251-b159e387f6af?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="アプリで学習予約">
+          </div>
+          <div class="r-text text-left">
+            <div class="r-num font-poppins font-black text-yellow text-2xl opacity-80 mb-xs">03</div>
+            <h3 class="font-noto font-bold text-dark text-lg mb-small">
+              予約も柔軟。日本人スタッフによる<br>安心の学習サポート
+            </h3>
+            <p class="font-noto text-gray line-height-long text-sm">
+              多忙な社会人でも続けやすい自由予約制（スマホから24時間受付）。さらに、専用の日本人カウンセラーが常駐し、「学習計画の立て方」や「講師には直接聞きづらい質問」なども丁寧にサポートします。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="section courses bg-light" id="courses">
+    <div class="l-container center">
+      <div class="sect-header center fade-target mb-large">
+        <span class="en-label font-poppins text-blue font-bold text-sm tracking-widest">COURSES & PRICING</span>
+        <h2 class="sect-heading font-noto font-black text-dark mt-xs">目的で選べるコースと料金</h2>
+        <p class="font-noto text-gray text-sm mt-small">入会金：¥33,000 / カウンセリング料：無料<br><span class="text-red font-bold">※現在、体験レッスン後すぐのご入会で入会金【無料】</span></p>
+      </div>
+
+      <div class="c-grid mt-medium">
+        <!-- Course 1 -->
+        <div class="c-card bg-white box-shadow-soft rounded-xl fade-target overflow-hidden">
+          <div class="c-head bg-blue text-white p-medium relative">
+            <h3 class="font-noto font-bold text-lg mb-xs">日常英会話コース</h3>
+            <p class="font-noto text-xs opacity-90">Daily Conversation</p>
+            <div class="c-icon absolute bg-white text-blue rounded-full center box-shadow-soft"><i data-lucide="coffee"></i></div>
+          </div>
+          <div class="c-body p-medium text-left">
+            <div class="price font-poppins font-black text-blue text-xl border-b-gray-light pb-small mb-small center">
+              ¥24,200 <span class="font-noto font-normal text-xs text-gray"> / 月（税込）</span>
+            </div>
+            <ul class="c-list font-noto text-sm text-gray flex-column gap-xs line-height-long">
+              <li><i data-lucide="check-circle-2" class="text-yellow icon-sm"></i> 月4回 マンツーマンレッスン（40分）</li>
+              <li><i data-lucide="check-circle-2" class="text-yellow icon-sm"></i> 旅行・趣味・日常の話題が中心</li>
+              <li><i data-lucide="check-circle-2" class="text-yellow icon-sm"></i> 初心者向け基礎文法復習も対応</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Course 2 (Popular) -->
+        <div class="c-card bg-white box-shadow-soft rounded-xl fade-target delay-1 overflow-hidden relative border-yellow border-width-2 scale-105 z-10">
+          <div class="c-badge bg-yellow text-dark font-noto font-bold text-xs center py-xs">一番人気</div>
+          <div class="c-head bg-dark text-white p-medium relative">
+            <h3 class="font-noto font-bold text-lg mb-xs">ビジネス英会話コース</h3>
+            <p class="font-noto text-xs opacity-90">Business English</p>
+            <div class="c-icon absolute bg-white text-dark rounded-full center box-shadow-soft"><i data-lucide="briefcase"></i></div>
+          </div>
+          <div class="c-body p-medium text-left">
+            <div class="price font-poppins font-black text-dark text-xl border-b-gray-light pb-small mb-small center">
+              ¥33,000 <span class="font-noto font-normal text-xs text-gray"> / 月（税込）</span>
+            </div>
+            <ul class="c-list font-noto text-sm text-gray flex-column gap-xs line-height-long">
+              <li><i data-lucide="check-circle-2" class="text-blue icon-sm"></i> 月4回 実践シミュレーション（50分）</li>
+              <li><i data-lucide="check-circle-2" class="text-blue icon-sm"></i> 会議・プレゼン・メール・電話対応</li>
+              <li><i data-lucide="check-circle-2" class="text-blue icon-sm"></i> ネイティブ特有の丁寧なニュアンス</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="c-card bg-white box-shadow-soft rounded-xl fade-target delay-2 overflow-hidden">
+          <div class="c-head bg-green text-white p-medium relative">
+            <h3 class="font-noto font-bold text-lg mb-xs">短期集中・試験対策</h3>
+            <p class="font-noto text-xs opacity-90">TOEIC® / IELTS Test Prep</p>
+            <div class="c-icon absolute bg-white text-green rounded-full center box-shadow-soft"><i data-lucide="graduation-cap"></i></div>
+          </div>
+          <div class="c-body p-medium text-left">
+            <div class="price font-poppins font-black text-green text-xl border-b-gray-light pb-small mb-small center">
+              ¥165,000 <span class="font-noto font-normal text-xs text-gray"> / 3ヶ月（税込）</span>
+            </div>
+            <ul class="c-list font-noto text-sm text-gray flex-column gap-xs line-height-long">
+              <li><i data-lucide="check-circle-2" class="text-yellow icon-sm"></i> 全24回 徹底集中レッスン（50分）</li>
+              <li><i data-lucide="check-circle-2" class="text-yellow icon-sm"></i> 目標スコア逆算のカリキュラム</li>
+              <li><i data-lucide="check-circle-2" class="text-yellow icon-sm"></i> 毎日のシャドーイング課題と添削</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voices -->
+  <section class="section voices bg-white" id="voices">
+    <div class="l-container center">
+      <div class="sect-header center fade-target mb-large">
+        <span class="en-label font-poppins text-blue font-bold text-sm tracking-widest">STUDENT VOICES</span>
+        <h2 class="sect-heading font-noto font-black text-dark mt-xs">受講生の声</h2>
+      </div>
+
+      <div class="v-grid flex-center gap-medium flex-wrap">
+        <div class="v-card bg-light p-medium rounded-xl text-left border-gray-light fade-target">
+          <div class="flex-between align-center border-b-gray-light pb-xs mb-small">
+            <div class="v-info">
+              <span class="font-noto font-bold text-dark text-sm display-block">A.K様（28歳・メーカー勤務）</span>
+              <span class="font-noto text-xs text-blue font-bold">ビジネス英会話コース / 受講1年</span>
+            </div>
+            <div class="v-star text-yellow font-poppins font-bold">★★★★★</div>
+          </div>
+          <p class="font-noto text-gray text-sm line-height-long">
+            「仕事で急に海外チームとの会議が増え、慌てて入会しました。『ただ話す』だけでなく、ビジネスで頻出する失礼のない表現を的確に直してくれるのが本当に助かりました。今では堂々と発言できています。」
+          </p>
+        </div>
+
+        <div class="v-card bg-light p-medium rounded-xl text-left border-gray-light fade-target delay-1">
+          <div class="flex-between align-center border-b-gray-light pb-xs mb-small">
+            <div class="v-info">
+              <span class="font-noto font-bold text-dark text-sm display-block">M.S様（35歳・主婦）</span>
+              <span class="font-noto text-xs text-blue font-bold">日常英会話コース / 受講半年</span>
+            </div>
+            <div class="v-star text-yellow font-poppins font-bold">★★★★★</div>
+          </div>
+          <p class="font-noto text-gray text-sm line-height-long">
+            「文法すら怪しい完全な初心者でしたが、講師の方がとにかく褒めて伸ばしてくれるので、毎回のレッスンがとても楽しいです！日本人カウンセラーに悩みや勉強法を相談できるのも安心要素でした。」
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box (Most Important) -->
+  <section class="cta bg-blue text-white center py-large relative overflow-hidden" id="trial">
+    <div class="shape-circle absolute bg-white opacity-10"></div>
+    <div class="l-container fade-target relative z-10 max-w-800">
+      <h2 class="font-noto font-black text-xl mb-small line-height-tight">まずは、実際のレッスンを<br>体感してください。</h2>
+      <p class="font-noto font-bold mb-large text-sm">
+        英語力診断 ＋ マンツーマン体験レッスン（全60分）<br>
+        【完全無料】でご案内いたします。無理な勧誘は一切ありません。
+      </p>
+      
+      <div class="bg-white p-large rounded-xl box-shadow-lg text-left text-dark">
+        <form class="c-form flex-column gap-medium">
+          <div class="flex gap-medium flex-col-sp">
+            <div class="f-group flex-1">
+              <label class="font-noto font-bold text-xs mb-xs display-block">お名前</label>
+              <input type="text" class="f-input" placeholder="例：英会 花子" required>
+            </div>
+            <div class="f-group flex-1">
+              <label class="font-noto font-bold text-xs mb-xs display-block">メールアドレス</label>
+              <input type="email" class="f-input" placeholder="例：mail@example.com" required>
+            </div>
+          </div>
+          <div class="f-group">
+            <label class="font-noto font-bold text-xs mb-xs display-block">希望コース・目的（任意）</label>
+            <select class="f-input">
+              <option>選択してください</option>
+              <option>日常英会話</option>
+              <option>ビジネス英会話</option>
+              <option>試験対策（TOEIC等）</option>
+              <option>未定・相談したい</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-yellow btn-xl w-full font-noto font-bold text-lg mt-small btn-round box-shadow-glow">
+            無料体験レッスンに申し込む
+          </button>
+        </form>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark pt-large pb-large center text-white" id="access">
+    <div class="l-container flex-column align-center gap-small">
+      <div class="f-logo font-poppins font-bold text-lg mb-small flex-center gap-xs">
+         <i data-lucide="globe-2" class="text-blue icon-lg"></i> GLOBAL SPEAK
+      </div>
+      <div class="f-info font-noto text-gray-light text-sm text-center line-height-long mb-small">
+        〒150-0000 東京都渋谷区イングリッシュタワー 5F<br>
+        TEL: 03-0000-0000 （受付 10:00 - 21:00）<br>
+        渋谷駅 アチコチ口より徒歩3分
+      </div>
+      <div class="sns-icons center gap-medium mb-small">
+        <a href="#" class="text-gray-light hover-blue"><i data-lucide="instagram"></i></a>
+        <a href="#" class="text-gray-light hover-blue"><i data-lucide="youtube"></i></a>
+      </div>
+      <p class="font-poppins text-gray text-xs mt-small">&copy; 2025 GLOBAL SPEAK Eikaiwa. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
