@@ -1,44 +1,253 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>Dance Studio VIVID | 踊る楽しさを</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo"> VIVID</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIBE DANCE STUDIO | 初心者からプロまで。渋谷最前線のダンススクール</title>
+  <meta name="description" content="K-POP、HIPHOP、JAZZ。渋谷のダンススクール「VIBE DANCE STUDIO」は、超初心者からプロ志望まで対応。現役の有名ダンサーが直接指導します。まずはワンコイン体験レッスンへ！">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>踊る楽しさを、<br>すべての人に。</h1><p>HIPHOP・K-POP・ジャズ・バレエ。初心者大歓迎。</p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc">HIPHOP・K-POP・ジャズ・バレエ。初心者大歓迎。<br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>多彩なジャンル</h3><p>HIPHOP/K-POP/ジャズ/バレエ/ブレイク。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>キッズクラスあり</h3><p>3歳からリズム感を育てます。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>発表会あり</h3><p>年1回の発表会で成果を披露！</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&family=M+PLUS+1p:wght@400;500;700;900&display=swap" rel="stylesheet">
   
-  <footer class="footer"> VIVID</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+
+  <!-- Floating Glitch Elements (bg) -->
+  <div class="glitch-bg-1 bg-purple"></div>
+  <div class="glitch-bg-2 bg-cyan"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <span class="font-mont font-black text-white l-text italic tracking-tighter">VIBE.</span>
+          <span class="font-mont text-gray l-sub tracking-widest text-xs">DANCE STUDIO</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-mont font-bold text-white text-sm">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#classes">CLASSES</a></li>
+          <li><a href="#instructors">INSTRUCTORS</a></li>
+          <li><a href="#access">ACCESS</a></li>
+        </ul>
+        <div class="h-btn sp-none">
+          <a href="#trial" class="btn btn-gradient font-bold box-shadow-neon font-mplus">体験レッスン ¥500</a>
+        </div>
+      </nav>
+      <button class="menu-toggle text-white" id="menuToggle" aria-label="メニューを開く">
+        <!-- Using custom CSS lines for hamburger -->
+        <span class="bg-cyan"></span><span class="bg-purple"></span><span class="bg-cyan"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero bg-black relative overflow-hidden">
+    <!-- Simulated Video/Dynamic Image BG -->
+    <div class="hero-bg fade-target">
+      <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="ダンスフロア">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="l-container flex-hero relative z-10">
+      <div class="hero-text fade-target delay-1 text-left">
+        <div class="h-catch font-mont font-bold text-cyan text-sm tracking-widest mb-small">SHIBUYA STREET & K-POP</div>
+        <h1 class="hero-title text-white font-mont font-black italic line-height-tight tracking-tighter text-glow-purple">
+          MOVE<br>
+          <span class="text-stroke">YOUR</span><br>
+          BODY.
+        </h1>
+        <p class="hero-desc font-mplus font-bold text-lg text-white mt-medium mb-large">
+          <span class="bg-black py-xs px-2">リズムに乗れば、自分が変わる。</span><br>
+          <span class="bg-black py-xs px-2 mt-xs display-inline-block">超初心者歓迎・渋谷駅徒歩3分</span>
+        </p>
+        
+        <div class="h-cta">
+          <a href="#trial" class="btn btn-gradient btn-xl font-bold font-mplus box-shadow-neon">
+            ワンコイン体験を予約する <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Big Decorative "V" Graphic -->
+      <div class="hero-graphic font-mont font-black italic text-stroke-large sp-none fade-target delay-2">V</div>
+    </div>
+    
+    <!-- Tilted edge -->
+    <div class="tilt-divider-bottom bg-dark"></div>
+  </section>
+
+  <!-- Marquee (Scrolling Text) -->
+  <div class="marquee-wrap bg-purple text-white font-mont font-black italic text-xl tracking-widest">
+    <div class="marquee">
+      <span>HIPHOP / K-POP / JAZZ FUNK / GIRLS / BREAKIN' / POPPIN' / LOCKIN' / </span>
+      <span>HIPHOP / K-POP / JAZZ FUNK / GIRLS / BREAKIN' / POPPIN' / LOCKIN' / </span>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="section about bg-dark text-white" id="about">
+    <div class="l-container flex-between gap-large">
+      <div class="a-img fade-target">
+        <div class="glitch-img-box">
+          <img src="https://images.unsplash.com/photo-1550027738-f9b6c0ae7f0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="初心者レッスンの様子" class="main-img border-cyan">
+          <div class="img-behind bg-purple"></div>
+        </div>
+      </div>
+      <div class="a-text fade-target delay-1">
+        <h2 class="sect-heading font-mont font-black italic text-white mb-medium">
+          <span class="text-cyan">01.</span> WHY VIBE?
+        </h2>
+        <h3 class="font-mplus font-bold text-xl mb-small line-height-long">「踊ったことがない」人こそ、<br>最高に楽しめる場所。</h3>
+        <p class="font-mplus text-gray-light line-height-long mb-medium">
+          生徒の70%が完全未経験からのスタートです。<br>
+          リズムの取り方やステップの基礎から、丁寧すぎるほどゆっくり教える「超入門クラス」を毎日開講。<br>
+          もちろん、キッズからプロ志望の大人まで、レベルに合わせた100以上のクラスをご用意しています。
+        </p>
+        <div class="flex gap-medium flex-wrap font-mont font-bold text-sm tracking-widest">
+          <div class="bg-black border-cyan px-2 py-1"><i data-lucide="check" class="text-cyan icon-sm"></i> BEGINNER OK</div>
+          <div class="bg-black border-purple px-2 py-1 text-white"><i data-lucide="check" class="text-purple icon-sm"></i> KIDS CLASS</div>
+          <div class="bg-black border-cyan px-2 py-1"><i data-lucide="check" class="text-cyan icon-sm"></i> PRO DANCERS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes (Cards) -->
+  <section class="section classes bg-black text-white relative" id="classes">
+    <div class="l-container">
+      <div class="sect-header center fade-target mb-large">
+        <h2 class="sect-heading font-mont font-black italic text-white text-glow-purple"><span class="text-purple">02.</span> CLASSES</h2>
+        <p class="font-mplus text-gray-light mt-small font-bold">やりたいジャンルが必ず見つかる。</p>
+      </div>
+
+      <div class="c-grid mt-medium">
+        <!-- Class 1 -->
+        <div class="c-card bg-dark border-cyan fade-target">
+          <div class="c-img overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="HIPHOP" class="img-zoom">
+            <div class="c-tag bg-cyan text-black font-mont font-bold italic">HIPHOP</div>
+          </div>
+          <div class="c-info p-medium text-left">
+            <h3 class="font-mplus font-bold text-lg mb-xs">ヒップホップクラス</h3>
+            <p class="font-mplus text-gray-light text-sm line-height-long">
+              ストリートダンスの王道。ベーシックなステップから最新のトレンドまで、最新の洋楽や邦楽ラップに合わせて踊ります。
+            </p>
+          </div>
+        </div>
+
+        <!-- Class 2 -->
+        <div class="c-card bg-dark border-purple fade-target delay-1">
+          <div class="c-img overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="K-POP" class="img-zoom">
+            <div class="c-tag bg-purple text-white font-mont font-bold italic">K-POP</div>
+          </div>
+          <div class="c-info p-medium text-left">
+            <h3 class="font-mplus font-bold text-lg mb-xs">K-POP カバーダンス</h3>
+            <p class="font-mplus text-white text-sm line-height-long">
+              大人気のK-POPアーティストの振付を完全コピー！男女グループ問わず、憧れのアイドルのように踊れるようになります。
+            </p>
+          </div>
+        </div>
+
+        <!-- Class 3 -->
+        <div class="c-card bg-dark border-cyan fade-target delay-2">
+          <div class="c-img overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="JAZZ FUNK" class="img-zoom">
+            <div class="c-tag bg-cyan text-black font-mont font-bold italic">JAZZ FUNK</div>
+          </div>
+          <div class="c-info p-medium text-left">
+            <h3 class="font-mplus font-bold text-lg mb-xs">ジャズファンク</h3>
+            <p class="font-mplus text-gray-light text-sm line-height-long">
+              キレとしなやかさを併せ持つ女性に大人気のジャンル。体幹を鍛えながら、セクシーで力強いパフォーマンスを目指します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box / Pricing -->
+  <section class="cta bg-dark text-white pt-large pb-large relative border-t-cyan border-b-cyan" id="trial">
+    <!-- Skewed background -->
+    <div class="skew-bg bg-purple opacity-10"></div>
+    
+    <div class="l-container center fade-target relative z-10">
+      <h2 class="font-mont font-black italic text-4xl mb-small text-glow-cyan">START NOW.</h2>
+      <p class="font-mplus font-bold text-xl mb-large">
+        まずはワンコインで、<br class="sp-none">スタジオの熱気を感じてください。
+      </p>
+      
+      <div class="price-box bg-black border-cyan p-large max-w-800 mx-auto text-left flex-between align-center flex-col-sp gap-large box-shadow-neon">
+        <div class="p-text flex-1">
+          <h3 class="font-mplus font-bold text-lg mb-xs">体験レッスン申込</h3>
+          <p class="font-mplus text-gray-light text-sm mb-small">手ぶらでOK！（室内シューズ無料レンタルあり）<br>お好きなクラスを1回受講できます。</p>
+          <div class="font-mont font-black text-3xl text-cyan">¥500 <span class="font-mplus text-sm font-normal text-white">税込</span></div>
+        </div>
+        <div class="p-btn flex-1 center w-full">
+          <a href="#" class="btn btn-gradient btn-xl w-full font-bold font-mplus box-shadow-neon" style="justify-content: center;">
+            <i data-lucide="calendar"></i> 空き日程を見る
+          </a>
+          <span class="font-mplus text-xs text-gray-light mt-xs display-block">※予約システム(LINE)へ移動します</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-black pt-large pb-large center text-white" id="access">
+    <div class="l-container flex-column align-center gap-small">
+      <div class="f-logo font-mont font-black italic text-2xl mb-small tracking-tighter">
+        VIBE<span class="text-cyan">.</span>
+      </div>
+      <div class="f-info font-mplus text-gray-light text-sm text-center line-height-long mb-medium">
+        〒150-0000 東京都渋谷区神南 1-2-3 地下1階<br>
+        渋谷駅 ハチ公口より徒歩3分<br>
+        TEL: 03-0000-0000 (12:00 - 22:00)
+      </div>
+      <div class="sns-icons center gap-medium mb-small">
+        <a href="#" class="text-gray-light hover-cyan"><i data-lucide="instagram" class="icon-lg"></i></a>
+        <a href="#" class="text-gray-light hover-purple"><i data-lucide="youtube" class="icon-lg"></i></a>
+        <a href="#" class="text-gray-light hover-cyan"><i data-lucide="twitter" class="icon-lg"></i></a>
+      </div>
+      <p class="font-mont text-gray text-xs tracking-widest mt-small uppercase">&copy; 2025 Vibe Dance Studio.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
