@@ -1,46 +1,358 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>料理教室DELICA | 作る楽しさ、食べる幸せ</title><meta name="description" content="初心者からレベルアップしたい方まで。">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo"><i data-lucide="shield-check"></i>  ‍ DELICA</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Atelier Culinaire | 極上のひと皿を創る、大人のための料理教室</title>
+  <meta name="description" content="東京・銀座にある会員制料理スタジオ「L'Atelier Culinaire」。プロフェッショナルなシェフから直接学ぶ、非日常の美食体験。あなたの日常を特別なものに変える、極上のフレンチ・イタリアンレッスン。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="overlay"></div><div class="container hero-content reveal"><h1>作る楽しさ、<br>食べる幸せ。</h1><p>初心者からレベルアップしたい方まで。</p>
-    <div class="stats"><div class="stat"><span>設立</span><strong>20年</strong></div><div class="stat"><span>解決実績</span><strong>5,000件</strong></div></div></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="img reveal"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div><div class="text reveal">
-    <h2 class="sect-title">ABOUT US</h2><p class="desc">初心者からレベルアップしたい方まで。<br><br>私たちが大切にしているのは、信頼と実績に基づく確かなソリューションです。お客様の課題に対して真摯に向き合い、最適な結果を導き出します。</p></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section gray"><div class="container"><h2 class="sect-title center reveal">OUR STRENGTHS</h2><div class="bento-grid">
-    <div class="bento-item reveal" style="transition-delay:0s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>プロシェフ指導</h3><p>一流レストラン出身のシェフ。</p></div><div class="bento-item reveal" style="transition-delay:0.1s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>少人数制</h3><p>最大4名で全工程しっかり実習。</p></div><div class="bento-item reveal" style="transition-delay:0.2s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>食材費込み</h3><p>レッスン料に食材費含む。手ぶらOK。</p></div>
-  </div></div></section>
-
-  <!-- 4. SERVICES -->
-  <section class="section"><div class="container reveal"><h2 class="sect-title center">SERVICES & PLANS</h2><div class="service-table">
-    <div class="s-row"><div class="s-name">基本コース</div><div class="s-cost">要見積</div></div><div class="s-row"><div class="s-name">プレミアム</div><div class="s-cost">要相談</div></div>
-  </div></div></section>
-
-  <!-- 5. CASE STUDY (Gallery equivalent) -->
-  <section class="section gray"><div class="container"><h2 class="sect-title center reveal">CASE STUDY</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1563986768494-4d8dbcb2b005?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="sect-title center">FAQ</h2><div class="faq-box">
-    <details open><summary>初回のご相談は無料ですか？</summary><p>はい、初回のヒアリングおよび概算お見積りのご提示までは完全無料で承っております。</p></details>
-    <details><summary>遠方の企業でも対応可能ですか？</summary><p>はい、オンライン会議ツールを活用し、全国どこでも対応可能です。</p></details>
-    <details><summary>顧問契約は可能ですか？</summary><p>はい、継続的なサポートを行う顧問サービスもご用意しております。詳細はお問い合わせください。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>無料で資料ダウンロード・ご相談</h2><p>お電話、または下記フォームよりお気軽にお問い合わせください。</p><a href="#" class="btn">お問い合わせ</a></div></section>
-
-  <footer class="footer"> ‍ DELICA</footer>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body class="bg-silk text-dark">
+
+  <!-- Elegant Loading Curtain (CSS only) -->
+  <div class="loader-curtain">
+    <div class="loader-text font-cinzel text-gold text-2xl tracking-widest">L'Atelier</div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container flex-between align-center">
+      <div class="logo">
+        <a href="#" class="flex-column line-height-tight text-center">
+          <span class="font-cinzel text-dark l-text tracking-widest text-lg">L'Atelier</span>
+          <span class="font-playfair text-gold l-sub tracking-widest italic text-xs mt-xs">CULINAIRE</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-shippori text-sm">
+          <li><a href="#concept">哲学 <span class="nav-en font-cinzel text-xs text-gold display-block mt-xs">Philosophie</span></a></li>
+          <li><a href="#lessons">レッスン <span class="nav-en font-cinzel text-xs text-gold display-block mt-xs">Leçons</span></a></li>
+          <li><a href="#chefs">シェフ <span class="nav-en font-cinzel text-xs text-gold display-block mt-xs">Chefs</span></a></li>
+        </ul>
+        <div class="h-btn sp-none ml-large">
+          <a href="#reserve" class="btn btn-gold font-shippori text-sm letter-spacing-wide">ご予約・体験</a>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span class="bg-dark"></span><span class="bg-dark"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero relative h-screen overflow-hidden flex-center">
+    <!-- Parallax Image -->
+    <div class="hero-bg parallax" style="background-image: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="overlay-grad"></div>
+
+    <div class="hero-content relative z-10 text-center w-full max-w-1000 px-medium top-offset">
+      <div class="reveal-text overflow-hidden">
+        <h2 class="font-cinzel text-gold tracking-widest text-md mb-small italic font-playfair animate-up">The Art of Cooking</h2>
+      </div>
+      <div class="reveal-text overflow-hidden mt-small">
+        <h1 class="font-shippori text-white text-4xl line-height-tight animate-up delay-1 text-shadow-elegant">
+          ひと皿に、<br class="sp-only">美意識を宿す。
+        </h1>
+      </div>
+      <div class="divider-gold mx-auto mt-medium mb-medium w-0 animate-width delay-2"></div>
+      <div class="reveal-text overflow-hidden">
+        <p class="font-shippori text-white text-sm tracking-wide line-height-long animate-up delay-3 opacity-90 sp-none">
+          一流レストランの厨房で培われた技術と美学。<br>
+          大人の好奇心を満たす、少人数制のプレミアム・クッキングスタジオ。
+        </p>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator absolute bottom-10 left-50 transform-center flex-column align-center animate-fade-in delay-4">
+      <span class="font-cinzel text-xs text-white tracking-widest mb-xs uppercase">Scroll</span>
+      <div class="scroll-line bg-gold"></div>
+    </div>
+  </section>
+
+  <!-- Concept (Editorial Asymmetric Layout) -->
+  <section class="section concept pt-large pb-large" id="concept">
+    <div class="l-container">
+      <div class="editorial-grid flex-between align-center">
+        <!-- Left Text -->
+        <div class="e-text w-40 pr-large fade-target">
+          <div class="font-cinzel text-gold tracking-widest text-lg mb-small">PHILOSOPHIE</div>
+          <h2 class="font-shippori text-dark text-2xl line-height-tight mb-medium">
+            料理は、<br>日常を彩る最高のアート。
+          </h2>
+          <p class="font-shippori text-gray text-sm line-height-long font-light mb-medium">
+            ただレシピをなぞるだけではない。食材への深い敬意、火入れの科学、そして皿の上に描く芸術性。<br><br>
+            L'Atelier Culinaire（ラトリエ・キュリネール）は、料理を「作業」から「表現」へと昇華させるためのスタジオです。洗練された空間で、ワインを片手に、本物の美食を創り出す歓びをご体感ください。
+          </p>
+          <img src="https://images.unsplash.com/photo-1596683720379-bdfbc9eead3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ワインと料理" class="w-full object-cover h-250 mt-large image-reveal">
+        </div>
+        
+        <!-- Right Image Group (Overlapping) -->
+        <div class="e-images w-60 relative h-600 fade-target delay-1 sp-h-auto">
+          <div class="img-wrap img-large absolute right-0 top-0 z-1 border-white image-reveal">
+            <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="プロの調理風景" class="w-full h-full object-cover">
+          </div>
+          <div class="img-wrap img-small absolute left-0 bottom-10 z-2 border-white box-shadow-xl image-reveal delay-2">
+            <img src="https://images.unsplash.com/photo-1544025162-811114212308?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="盛り付け" class="w-full h-full object-cover">
+          </div>
+          <!-- Decorative Background Square -->
+          <div class="deco-square bg-gold-light absolute z-0 left-10 top-20"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lessons (Horizontal Scroll / Parallax Look) -->
+  <section class="section lessons bg-dark text-white pt-xl pb-xl" id="lessons">
+    <div class="l-container">
+      <div class="text-center mb-large fade-target">
+        <h2 class="font-cinzel text-gold tracking-widest text-xl mb-xs">LEÇONS</h2>
+        <h3 class="font-shippori text-white text-lg tracking-wide">マスタークラス</h3>
+        <div class="divider-gold mx-auto mt-small mb-small"></div>
+        <p class="font-shippori text-gray-light text-sm font-light">最大4名までの超少人数制。目的に合わせた3つの特化型プログラム。</p>
+      </div>
+
+      <div class="lesson-cards flex gap-large flex-wrap justify-center mt-large">
+        
+        <!-- Card 1 -->
+        <div class="l-card group relative overflow-hidden w-30 fade-target">
+          <div class="l-img h-400 overflow-hidden relative">
+             <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="フレンチ" class="w-full h-full object-cover transition-slow group-hover-scale filter-darken">
+             <div class="absolute inset-0 bg-dark opacity-40 transition-slow group-hover-opacity-60"></div>
+             
+             <!-- Content on Image -->
+             <div class="absolute inset-0 p-medium flex-column flex-between z-10 border-inner-thin opacity-0 group-hover-opacity-100 transition-slow">
+               <div class="top text-right">
+                 <span class="font-cinzel text-gold text-sm tracking-widest border-b-gold pb-xs">01</span>
+               </div>
+               <div class="bottom text-left transform-up group-hover-reset transition-slow delay-1">
+                 <h4 class="font-shippori text-white text-lg mb-xs font-bold">本格フレンチ技法</h4>
+                 <p class="font-shippori text-gray-light text-xs line-height-long mb-small font-light">フォン（出汁）の引き方から、クラシックなソース作りまで、フランス料理の神髄を学ぶコース。</p>
+                 <span class="font-cinzel text-gold text-xs tracking-widest">Detail →</span>
+               </div>
+             </div>
+          </div>
+          <div class="l-title text-center mt-small">
+            <h3 class="font-playfair italic text-gold text-lg">Haute Gastronomie</h3>
+            <span class="font-shippori text-white text-sm display-block mt-xs tracking-wide">フレンチ・マスタークラス</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="l-card group relative overflow-hidden w-30 fade-target delay-1">
+          <div class="l-img h-400 overflow-hidden relative">
+             <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="イタリアン" class="w-full h-full object-cover transition-slow group-hover-scale filter-darken">
+             <div class="absolute inset-0 bg-dark opacity-40 transition-slow group-hover-opacity-60"></div>
+             
+             <div class="absolute inset-0 p-medium flex-column flex-between z-10 border-inner-thin opacity-0 group-hover-opacity-100 transition-slow">
+               <div class="top text-right">
+                 <span class="font-cinzel text-gold text-sm tracking-widest border-b-gold pb-xs">02</span>
+               </div>
+               <div class="bottom text-left transform-up group-hover-reset transition-slow delay-1">
+                 <h4 class="font-shippori text-white text-lg mb-xs font-bold">モダン・イタリアン</h4>
+                 <p class="font-shippori text-gray-light text-xs line-height-long mb-small font-light">手打ちパスタから、素材の味を極限まで引き出す郷土料理の現代的アプローチを学ぶ。</p>
+                 <span class="font-cinzel text-gold text-xs tracking-widest">Detail →</span>
+               </div>
+             </div>
+          </div>
+          <div class="l-title text-center mt-small">
+            <h3 class="font-playfair italic text-gold text-lg">Moderna Italiana</h3>
+            <span class="font-shippori text-white text-sm display-block mt-xs tracking-wide">イタリアン・マスター</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="l-card group relative overflow-hidden w-30 fade-target delay-2">
+          <div class="l-img h-400 overflow-hidden relative">
+             <img src="https://images.unsplash.com/photo-1576867757603-05b1afaf73f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ペアリング" class="w-full h-full object-cover transition-slow group-hover-scale filter-darken">
+             <div class="absolute inset-0 bg-dark opacity-40 transition-slow group-hover-opacity-60"></div>
+             
+             <div class="absolute inset-0 p-medium flex-column flex-between z-10 border-inner-thin opacity-0 group-hover-opacity-100 transition-slow">
+               <div class="top text-right">
+                 <span class="font-cinzel text-gold text-sm tracking-widest border-b-gold pb-xs">03</span>
+               </div>
+               <div class="bottom text-left transform-up group-hover-reset transition-slow delay-1">
+                 <h4 class="font-shippori text-white text-lg mb-xs font-bold">マリアージュの探求</h4>
+                 <p class="font-shippori text-gray-light text-xs line-height-long mb-small font-light">専属ソムリエとの共同レッスン。ワインの構造を理解し、完璧なつまみと料理を組み立てる。</p>
+                 <span class="font-cinzel text-gold text-xs tracking-widest">Detail →</span>
+               </div>
+             </div>
+          </div>
+          <div class="l-title text-center mt-small">
+            <h3 class="font-playfair italic text-gold text-lg">Vin et Mariage</h3>
+            <span class="font-shippori text-white text-sm display-block mt-xs tracking-wide">ワインペアリング特化</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Break (True Parallax) -->
+  <section class="img-break parallax h-500 relative flex-center" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+    <div class="overlay-grad"></div>
+    <div class="l-container center relative z-10 fade-target">
+      <p class="font-playfair italic text-gold text-xl mb-xs">Taste the Perfection</p>
+      <h2 class="font-shippori text-white text-3xl tracking-widest">至極の味わいは、理論と情熱から生まれる。</h2>
+    </div>
+  </section>
+
+  <!-- Glassmorphism Booking CTA -->
+  <section class="booking pt-xl pb-xl relative bg-silk" id="reserve">
+    <!-- Subtle abstract shapes in background -->
+    <div class="bg-shape circle-1 bg-gold opacity-10 blur-xl absolute z-0"></div>
+    <div class="bg-shape circle-2 bg-dark opacity-5 blur-xl absolute z-0"></div>
+
+    <div class="l-container relative z-10">
+      
+      <div class="glass-card max-w-800 mx-auto fade-target box-shadow-glass">
+        <div class="text-center mb-large">
+          <h2 class="font-cinzel text-dark tracking-widest text-2xl mb-xs">RESERVATION</h2>
+          <span class="font-shippori font-bold text-dark text-lg tracking-widest mb-small display-block">体験レッスンのご案内</span>
+          <div class="divider-gold mx-auto"></div>
+          <p class="font-shippori text-gray text-sm line-height-long font-light mt-medium">
+            ご入会を検討されている方へ向けた、1回完結のトライアルレッスン。<br>
+            厳選された旬の食材と、スタジオのラグジュアリーな雰囲気を、<br class="sp-none">
+            極上のワインと共にお楽しみください。
+          </p>
+          <div class="price-callout font-cinzel text-gold text-2xl mt-small mb-medium">
+            ¥15,000 <span class="text-xs font-shippori text-gray ml-xs">/ 1名様（税・ワインペアリング込）</span>
+          </div>
+        </div>
+
+        <form class="booking-form border-t-line pt-medium">
+          <div class="flex-between gap-medium flex-col-sp">
+            <div class="f-group w-50">
+              <label class="font-cinzel text-dark text-xs tracking-widest mb-xs display-block">NAME</label>
+              <input type="text" class="f-input-elegant font-shippori" placeholder="お名前" required>
+            </div>
+            <div class="f-group w-50">
+              <label class="font-cinzel text-dark text-xs tracking-widest mb-xs display-block">EMAIL</label>
+              <input type="email" class="f-input-elegant font-shippori" placeholder="メールアドレス" required>
+            </div>
+          </div>
+          
+          <div class="flex-between gap-medium flex-col-sp mt-small">
+            <div class="f-group w-50">
+              <label class="font-cinzel text-dark text-xs tracking-widest mb-xs display-block">DATE</label>
+              <select class="f-input-elegant font-shippori">
+                <option>直近の空き日程を選択</option>
+                <option>4月15日(土) 11:00-</option>
+                <option>4月22日(土) 18:00-</option>
+                <option>4月29日(土) 11:00-</option>
+              </select>
+            </div>
+            <div class="f-group w-50">
+              <label class="font-cinzel text-dark text-xs tracking-widest mb-xs display-block">COURSE</label>
+              <select class="f-input-elegant font-shippori">
+                <option>フレンチ（魚料理）</option>
+                <option>フレンチ（肉料理）</option>
+                <option>モダン・イタリアン</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="mt-large text-center">
+            <button type="submit" class="btn btn-gold-solid btn-xl font-shippori tracking-widest hover-glow transition-slow">
+              体験の予約を確定する
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark pt-large pb-large border-t-gold relative">
+    <div class="l-container flex-between align-center flex-col-sp gap-large font-shippori font-light text-gray-light">
+      
+      <div class="f-left text-left w-40 text-center-sp">
+        <div class="font-cinzel text-gold text-2xl tracking-widest mb-xs">L'Atelier</div>
+        <div class="font-playfair text-white text-xs tracking-widest mb-medium italic">CULINAIRE</div>
+        <p class="text-xs line-height-long">
+          東京都港区麻布十番 1-2-3<br>
+          グラン・メゾン麻布 B1F<br>
+          Tel: 03-XXXX-XXXX (10:00 - 19:00)<br>
+          Mail: contact@latelier-demo.com
+        </p>
+      </div>
+
+      <div class="f-right text-right w-60 text-center-sp">
+        <ul class="footer-nav flex gap-medium justify-end mb-medium flex-wrap justify-center-sp tracking-widest text-xs">
+          <li><a href="#" class="hover-gold transition">Philosophie</a></li>
+          <li><a href="#" class="hover-gold transition">Leçons</a></li>
+          <li><a href="#" class="hover-gold transition">Chefs</a></li>
+          <li><a href="#" class="hover-gold transition">Access</a></li>
+        </ul>
+        <div class="sns-icons flex justify-end gap-medium justify-center-sp mb-small">
+          <a href="#" class="hover-white transition"><i data-lucide="instagram" class="icon-sm"></i></a>
+          <a href="#" class="hover-white transition"><i data-lucide="facebook" class="icon-sm"></i></a>
+        </div>
+        <div class="copyright font-cinzel text-xs opacity-50 tracking-widest mt-small">
+          &copy; 2025 L'ATELIER CULINAIRE. ALL RIGHTS RESERVED.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll & Reveal Animations
+    const header = document.getElementById('header');
+    
+    window.addEventListener('load', () => {
+      // Trigger Hero Animations
+      setTimeout(() => {
+        document.body.classList.add('loaded');
+      }, 100);
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer for scroll reveals
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          
+          // Child image reveals
+          const children = e.target.querySelectorAll('.image-reveal');
+          children.forEach((child, index) => {
+            setTimeout(() => {
+              child.classList.add('is-visible');
+            }, index * 200);
+          });
+          
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-target, .editorial-grid').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
