@@ -1104,65 +1104,94 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    FLOW
    ============================================ */
 .flow {
-  background-color: var(--white);
+  background-color: var(--gray-50);
 }
 
 .flow-steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
   position: relative;
-}
-
-.flow-steps::before {
-  content: '';
-  position: absolute;
-  top: 28px;
-  left: 12.5%;
-  right: 12.5%;
-  height: 1px;
-  background-color: var(--gray-200);
-  z-index: 0;
 }
 
 .flow-step {
+  flex: 1;
   text-align: center;
   position: relative;
   z-index: 1;
+  padding: 40px 24px 32px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  transition: all 0.4s var(--ease);
+}
+.flow-step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  border-color: var(--gray-300);
+}
+
+.flow-step-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .flow-step-number {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 24px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--gray-900);
   color: var(--white);
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 800;
   border-radius: 50%;
   letter-spacing: -0.02em;
+  margin-bottom: 16px;
 }
 
 .flow-step-icon {
-  font-size: 1.5rem;
-  margin-bottom: 8px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flow-step-icon svg {
+  width: 100%;
+  height: 100%;
+  color: var(--gray-700);
 }
 
 .flow-step-title {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   color: var(--gray-900);
   letter-spacing: -0.01em;
 }
 
 .flow-step-desc {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--gray-500);
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+.flow-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 32px;
+  padding-top: 80px;
+}
+.flow-connector svg {
+  width: 20px;
+  height: 20px;
+  color: var(--gray-300);
 }
 
 .flow-arrow { display: none; }
@@ -1564,11 +1593,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 
   .flow-steps {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
   }
-
-  .flow-steps::before { display: none; }
+  .flow-step {
+    flex: 0 0 calc(50% - 24px);
+  }
+  .flow-connector { display: none; }
 }
 
 /* ============================================
@@ -1700,9 +1731,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .pricing-number { font-size: 3rem; }
 
   .flow-steps {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    flex-direction: column;
+    gap: 16px;
   }
+  .flow-step {
+    flex: auto;
+    width: 100%;
+  }
+  .flow-connector { display: none; }
 
   .contact-wrapper {
     grid-template-columns: 1fr;
