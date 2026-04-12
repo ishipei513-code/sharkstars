@@ -1,44 +1,325 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>誠和解体工業 | 安全・丁寧な解体工事</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">️ 誠和解体</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社ビルド・ブレイカー | 木造・鉄骨・RC解体のプロフェッショナル</title>
+  <meta name="description" content="空き家解体からビル解体、店舗の内装解体まで。近隣への徹底した配慮と、法令を遵守した適正処理で、安心・安全な解体工事をお約束します。自社施工だからできる適正価格。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>建物解体は<br>安全・丁寧の誠和へ。</h1><p></p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc"><br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>全構造対応</h3><p>木造からRC造まで解体実績多数。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>近隣対策万全</h3><p>防音シート・散水で粉塵最小限。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>産廃処理込み</h3><p>廃棄物は自社で適正処理。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
   
-  <footer class="footer">️ 誠和解体</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <div class="l-icon">
+            <i data-lucide="building-2"></i>
+            <i data-lucide="hammer" class="h-tool"></i>
+          </div>
+          <div class="l-text">
+            <span class="en">BUILD BREAKER INC.</span>
+            株式会社 ビルド・ブレイカー
+          </div>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#about">安心の理由</a></li>
+          <li><a href="#service">解体メニュー</a></li>
+          <li><a href="#flow">工事の流れ</a></li>
+          <li><a href="#company">会社概要</a></li>
+        </ul>
+        <div class="h-action">
+          <div class="h-tel">
+            <span class="h-tel-label">お見積り無料</span>
+            <a href="tel:0120-000-000">0120-000-000</a>
+          </div>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="建設機械と解体現場">
+    </div>
+    <div class="hero-mask"></div>
+    <div class="l-container hero-container">
+      <div class="hero-content fade-target">
+        <div class="h-badge">自社一貫施工で無駄なコストをカット</div>
+        <h1 class="hero-title">
+          新たな未来を切り拓く、<br>
+          <span class="text-yellow">確かな解体技術。</span>
+        </h1>
+        <p class="hero-desc">
+          木造住宅から、鉄骨造ビル、店舗の内装解体まで。<br>
+          振動・騒音への徹底した近隣配慮と、100%法令遵守の適正処理。<br>
+          「ただ壊す」のではなく、次の創造へ繋ぐための安全な工事をお約束します。
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-yellow clip-btn">
+            無料現地調査を依頼する <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-tape sp-none">
+      <div class="tape-inner">
+        <span>SAFETY FIRST</span>
+        <span>NO ACCIDENTS</span>
+        <span>CLEAN ENVIRONMENT</span>
+        <span>SAFETY FIRST</span>
+        <span>NO ACCIDENTS</span>
+        <span>CLEAN ENVIRONMENT</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / 3 Promises -->
+  <section class="section about" id="about">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">O u r &nbsp; P r o m i s e</span>
+        <h2 class="sect-heading">ビルド・ブレイカーが選ばれる<br class="sp-block">3つの約束</h2>
+        <div class="h-line"></div>
+      </div>
+
+      <div class="promise-grid">
+        <!-- 01 -->
+        <div class="p-card fade-target">
+          <div class="p-num">01</div>
+          <div class="p-icon"><i data-lucide="handshake"></i></div>
+          <h3>トラブルゼロを目指す<br>徹底した「近隣配慮」</h3>
+          <p>解体工事で最も多いのが近隣住民様とのクレームトラブルです。当社では着工前の丁寧なご挨拶回りはもちろん、防音・防塵シートの厳重な設置、散水による粉塵対策を徹底し、ご近所様への負担を最小限に抑えます。</p>
+        </div>
+        
+        <!-- 02 -->
+        <div class="p-card fade-target delay-1">
+          <div class="p-num">02</div>
+          <div class="p-icon"><i data-lucide="file-check-2"></i></div>
+          <h3>不法投棄は絶対しない<br>法令遵守の「適正処理」</h3>
+          <p>安いだけの悪徳業者による不法投棄が社会問題化しています。当社は産業廃棄物収集運搬における各種許認可を取得済み。工事後は不法投棄をしていない証明となる「マニフェスト（産業廃棄物管理票）」を確実にお渡しします。</p>
+        </div>
+
+        <!-- 03 -->
+        <div class="p-card fade-target delay-2">
+          <div class="p-num">03</div>
+          <div class="p-icon"><i data-lucide="piggy-bank"></i></div>
+          <h3>間に業者が入らない<br>自社施工による「適正価格」</h3>
+          <p>ハウスメーカーや不動産屋に解体を依頼すると、多額の「中間マージン（紹介料）」が上乗せされます。当社は下請けを使わない自社一貫施工の専門業者のため、高品質ながらも無駄を省いた適正な直接価格をご提示可能です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services (Types of Demolition) -->
+  <section class="section service bg-gray" id="service">
+    <div class="l-container">
+      <div class="sect-header flex-between fade-target">
+        <div>
+          <span class="en-label">S e r v i c e s</span>
+          <h2 class="sect-heading">対応可能な解体メニュー</h2>
+          <div class="h-line left"></div>
+        </div>
+        <p class="s-head-desc sp-none">
+          空き家の処分から、店舗の一部解体まで。<br>
+          重機が入らない狭小地での「手壊し解体」にも対応可能です。
+        </p>
+      </div>
+
+      <div class="s-wrap">
+        <!-- Wooden -->
+        <div class="s-row fade-target">
+          <div class="s-img">
+            <img src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="木造解体">
+            <div class="s-tag">Wooden House</div>
+          </div>
+          <div class="s-body">
+            <h3>木造家屋・空き家の解体</h3>
+            <p>老朽化した空き家や、建て替えに伴う木造住宅の解体工事です。柱やはりなどに使われている木材と、屋根瓦やコンクリート基礎などを分別しながら、効率よくかつ安全に取り壊します。</p>
+            <ul class="check-list">
+              <li><i data-lucide="check"></i> 狭小地での手作業（手壊し）解体</li>
+              <li><i data-lucide="check"></i> 残置物（家財道具）の処分にも対応</li>
+              <li><i data-lucide="check"></i> 解体後の滅失登記手続きサポート</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- RC / Steel -->
+        <div class="s-row reverse fade-target delay-1">
+          <div class="s-img">
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="鉄骨解体">
+            <div class="s-tag">RC &amp; Steel</div>
+          </div>
+          <div class="s-body">
+            <h3>RC（鉄筋コンクリート）・鉄骨造の解体</h3>
+            <p>ビルやマンション、工場、倉庫など、強固な構造物の解体工事です。大型重機や特殊防音設備を使用し、振動と騒音を最小限に抑えながら安全に解体を進めます。</p>
+            <ul class="check-list">
+              <li><i data-lucide="check"></i> 階上解体やロングアーム機材対応</li>
+              <li><i data-lucide="check"></i> アスベスト（石綿）の事前調査・除去対応</li>
+              <li><i data-lucide="check"></i> 厳重な養生と防音・防塵対策</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Interior -->
+        <div class="s-row fade-target">
+          <div class="s-img">
+            <img src="https://images.unsplash.com/photo-1621360841013-c76831f49e0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="内装解体">
+            <div class="s-tag">Interior</div>
+          </div>
+          <div class="s-body">
+            <h3>店舗・オフィスの内装解体（原状回復）</h3>
+            <p>テナントの退去時に必要な「スケルトン解体（骨組みだけの状態にする）」や、一部の内装のみを解体する工事です。商業施設内での夜間工事など、共有部への配慮も万全に行います。</p>
+            <ul class="check-list">
+              <li><i data-lucide="check"></i> テナント返却時の完全スケルトン工事</li>
+              <li><i data-lucide="check"></i> 商業施設等での夜間作業対応</li>
+              <li><i data-lucide="check"></i> 管理会社との打ち合わせ代行</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flow -->
+  <section class="section flow" id="flow">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">W O R K &nbsp; F L O W</span>
+        <h2 class="sect-heading">お問い合わせから完工までの流れ</h2>
+        <div class="h-line"></div>
+      </div>
+
+      <div class="flow-track fade-target">
+        <div class="f-item">
+          <div class="f-num">01</div>
+          <div class="f-info">
+            <h4>お問い合わせ・現地調査</h4>
+            <p>図面や面積だけで正確な見積もりは出せません。必ず現地へ伺い、建物の構造、隣家との距離、重機の搬入ルートなどを調査し、明確な「お見積書」をご提示します。</p>
+          </div>
+        </div>
+        <div class="f-item">
+          <div class="f-num">02</div>
+          <div class="f-info">
+            <h4>ご契約・行政への届出</h4>
+            <p>金額・工期にご納得いただけましたらご契約となります。延床面積が80平米を超える工事に必要な「建設リサイクル法の届出（役所への申請）」などは当社が代行いたします。</p>
+          </div>
+        </div>
+        <div class="f-item">
+          <div class="f-num">03</div>
+          <div class="f-info">
+            <h4>近隣へのご挨拶・着工</h4>
+            <p>工事開始の1週間前までに、当社スタッフが粗品とタオル・工程表を持参し、ご近隣様へ丁寧にご挨拶に伺います。その後、足場・養生を組み立て、安全第一で解体工事に着手します。</p>
+          </div>
+        </div>
+        <div class="f-item">
+          <div class="f-num">04</div>
+          <div class="f-info">
+            <h4>完工・整地・お引渡し</h4>
+            <p>基礎コンクリートまで全て撤去し、ガラ（コンクリート片）などが残っていないか確認後、綺麗に平らに「整地」します。お客様に最終確認をいただき、お引渡しとなります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="contact-cta" id="contact">
+    <div class="cta-bg fade-target">
+      <div class="cta-overlay"></div>
+      <div class="cta-content">
+        <h2>お見積り・ご相談は無料です。</h2>
+        <p>「とりあえずいくらかかるか知りたい」「他社の見積もりが適正か見てほしい」<br>といった相見積もりも大歓迎です。強引な営業は一切いたしません。</p>
+        
+        <div class="cta-boxes">
+          <div class="c-box">
+            <i data-lucide="phone" class="c-icon"></i>
+            <div class="c-sub">お電話でのご相談 [ 9:00 - 18:00 ]</div>
+            <div class="c-main">0120-000-000</div>
+          </div>
+          <div class="c-box white-box">
+            <i data-lucide="mail" class="c-icon text-dark"></i>
+            <div class="c-sub text-dark">24時間受付中</div>
+            <div class="c-main text-dark"><a href="#">WEBからお問い合わせ</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="company">
+    <div class="l-container">
+      <div class="ft-top">
+        <div class="ft-left">
+          <div class="ft-logo">
+            <i data-lucide="building-2"></i> 株式会社ビルド・ブレイカー
+          </div>
+          <ul class="ft-info-list">
+            <li>〒100-0000 東京都解体区建機町 1-2-3</li>
+            <li>TEL：03-0000-0000 / FAX：03-0000-0001</li>
+            <li>営業時間：9:00 〜 18:00（日曜・祝日定休）</li>
+          </ul>
+        </div>
+        <div class="ft-right">
+          <div class="permit-box">
+            <h4>取得許認可一覧</h4>
+            <ul>
+              <li>建設業許可（解体工事業）：東京都知事(般-0)第〇〇〇〇号</li>
+              <li>産業廃棄物収集運搬業許可：第〇〇〇〇号</li>
+              <li>古物商許可：東京都公安委員会 第〇〇〇〇号</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        &copy; 2025 BUILD BREAKER INC. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
