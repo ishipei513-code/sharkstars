@@ -1,171 +1,48 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cafe Komorebi | 木漏れ日のカフェ</title>
-  <meta name="description" content="自家焙煎スペシャルティコーヒーと手作りスイーツのカフェ。">
-  
-  <link rel="stylesheet" href="assist/css/style.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>Cafe Komorebi | 木漏れ日のカフェ</title><meta name="description" content="自家焙煎スペシャルティコーヒーと手作りスイーツのカフェ。">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
 <body>
+  <header class="header" id="header"><div class="container"><div class="logo">Cafe Komorebi</div></div></header>
+  
+  <!-- 1. HERO -->
+  <section class="hero"><div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="hero-box reveal"><h1>木漏れ日の中で、<br>至福の一杯を。</h1><p>自家焙煎スペシャルティコーヒーと手作りスイーツのカフェ。</p></div></section>
+  
+  <!-- 2. ABOUT -->
+  <section class="section"><div class="container grid"><div class="text reveal"><span class="sub">Philosophy</span><h2>美しさを引き出す、<br>上質な時間。</h2><p>自家焙煎スペシャルティコーヒーと手作りスイーツのカフェ。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
+  
+  <!-- 3. FEATURES -->
+  <section class="section bg-light"><div class="container"><h2 class="center reveal">Our Strengths</h2><div class="feat-list">
+    <div class="feat reveal" style="transition-delay:0s"><h3><i data-lucide="check"></i> 自家焙煎コーヒー</h3><p>その日の気温や湿度に合わせて微調整を行い、豆本来の甘みと香りを引き出します。</p></div><div class="feat reveal" style="transition-delay:0.1s"><h3><i data-lucide="check"></i> 手作りスイーツ</h3><p>旬のフルーツを使用し、コーヒーとのペアリングを計算し尽くした自家製ケーキ。</p></div><div class="feat reveal" style="transition-delay:0.2s"><h3><i data-lucide="check"></i> くつろぎの空間</h3><p>無垢材のテーブルと優しい陽射しが、都会の喧騒を忘れさせてくれます。</p></div><div class="feat reveal" style="transition-delay:0.30000000000000004s"><h3><i data-lucide="check"></i>  Coffee</h3><p>テイクアウトも承っております。お気軽にお立ち寄りください。</p></div>
+  </div></div></section>
 
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="#" class="logo">
-        <i data-lucide="coffee"></i>
-        Komorebi
-      </a>
-      <ul class="nav-list">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#menu" class="nav-link">Menu</a></li>
-        <li><a href="#contact" class="nav-link">Access</a></li>
-      </ul>
+  <!-- 4. GALLERY -->
+  <section class="section"><div class="container"><h2 class="center reveal">Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1512496015851-a1fbcf69b6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
     </div>
-  </header>
+  </div></section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-wrapper">
-      <div class="hero-content">
-        <span class="heading-sm">Specialty Coffee</span>
-        <h1 class="hero-title">木漏れ日の中で、<br>至福の一杯を。</h1>
-        <p class="desc">自家焙煎のスペシャルティコーヒーと<br>季節のスイーツをお楽しみください。</p>
-        <div>
-          <a href="#menu" class="btn">Explore Menu</a>
-        </div>
-      </div>
-      <div class="hero-image-wrap">
-        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Cafe interior" class="hero-image">
-      </div>
+  <!-- 5. MENU & PRICE -->
+  <section class="section bg-light"><div class="container reveal"><h2 class="center">Menu & Price</h2>
+    <div class="price-box"><div class="row"><div class="name">基本コース</div><div class="dots"></div><div class="cost">要見積</div></div><div class="row"><div class="name">プレミアム</div><div class="dots"></div><div class="cost">要相談</div></div></div>
+  </div></section>
+
+  <!-- 6. FAQ -->
+  <section class="section"><div class="container reveal"><h2 class="center">FAQ</h2>
+    <div class="faq-box">
+      <details><summary>予約は必要ですか？</summary><p>はい、お客様一人ひとりに合わせたサービスを提供するため、完全予約制となっております。</p></details>
+      <details><summary>キャンセル料はかかりますか？</summary><p>前日までのキャンセルは無料です。当日のキャンセルは料金の50%を頂戴しております。</p></details>
+      <details><summary>駐車場はありますか？</summary><p>店舗の近くに2台分の専用駐車場をご用意しております。</p></details>
     </div>
-    <div class="hero-scroll">Scroll down</div>
-  </section>
+  </div></section>
 
-  <!-- About / Features Section -->
-  <section class="section about" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coffee beans">
-        </div>
-        <div class="about-content">
-          <span class="heading-sm">Our Craft</span>
-          <h2 class="heading-lg">素材と空間への<br>あくなき探求</h2>
-          <p class="desc">
-            最高の一杯のために、世界中の農園から厳選した生豆を店内で丁寧に焙煎しています。
-            珈琲の香りに包まれる上質な時間をお過ごしください。
-          </p>
-          
-          <div class="features-list">
-            <div class="feature-item">
-              <div class="feature-icon-wrap"><i data-lucide="flame"></i></div>
-              <div class="feature-text">
-                <h3>自家焙煎コーヒー</h3>
-                <p>その日の気温や湿度に合わせて微調整を行い、豆本来の甘みと香りを引き出します。</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <div class="feature-icon-wrap"><i data-lucide="cake-slice"></i></div>
-              <div class="feature-text">
-                <h3>手作りスイーツ</h3>
-                <p>旬のフルーツを使用し、コーヒーとのペアリングを計算し尽くした自家製ケーキ。</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <div class="feature-icon-wrap"><i data-lucide="leaf"></i></div>
-              <div class="feature-text">
-                <h3>くつろぎの空間</h3>
-                <p>無垢材のテーブルと優しい陽射しが、都会の喧騒を忘れさせてくれます。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Menu Section -->
-  <section class="section menu" id="menu">
-    <div class="container">
-      <div class="menu-grid">
-        <div class="menu-items">
-          <span class="heading-sm">Menu & Price</span>
-          <h2 class="heading-lg">厳選された<br>味わい。</h2>
-          
-          <div class="menu-cat">
-            <h3><i data-lucide="coffee"></i> Coffee</h3>
-            <div class="price-row"><span class="price-name">ハンドドリップブレンド</span><div class="price-dots"></div><span class="price-cost">¥580</span></div>
-            <div class="price-row"><span class="price-name">エチオピア・イルガチェフェ</span><div class="price-dots"></div><span class="price-cost">¥680</span></div>
-            <div class="price-row"><span class="price-name">カフェラテ</span><div class="price-dots"></div><span class="price-cost">¥650</span></div>
-            <div class="price-row"><span class="price-name">エスプレッソ</span><div class="price-dots"></div><span class="price-cost">¥450</span></div>
-          </div>
-          
-          <div class="menu-cat" style="margin-top: 3rem;">
-            <h3><i data-lucide="cookie"></i> Sweets</h3>
-            <div class="price-row"><span class="price-name">本日の自家製ケーキ</span><div class="price-dots"></div><span class="price-cost">¥600</span></div>
-            <div class="price-row"><span class="price-name">クラシック・ショコラ</span><div class="price-dots"></div><span class="price-cost">¥550</span></div>
-            <div class="price-row"><span class="price-name">全粒粉のプレーンスコーン</span><div class="price-dots"></div><span class="price-cost">¥400</span></div>
-          </div>
-        </div>
-        <div class="menu-image">
-          <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Latte art">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="section cta" id="contact">
-    <div class="container">
-      <h2 class="heading-lg">特別な一杯を、あなたに。</h2>
-      <p class="desc">テイクアウトも承っております。お気軽にお立ち寄りください。</p>
-      <a href="#" class="btn btn-outline">View Access Map</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-logo">
-        <i data-lucide="coffee"></i> Komorebi
-      </div>
-      <p>&copy; 2025 Cafe Komorebi All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    // Initialize Lucide Icons
-    lucide.createIcons();
-
-    // Header scroll effect
-    window.addEventListener('scroll', () => {
-      const header = document.getElementById('header');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    // Simple scroll animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.about-grid > div, .menu-grid > div').forEach(el => {
-      el.style.opacity = 0;
-      el.style.transform = 'translateY(30px)';
-      el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-      observer.observe(el);
-    });
-  </script>
-</body>
-</html>
+  <!-- 7. CTA -->
+  <section class="section cta"><div class="container reveal"><h2>ご予約・お問い合わせ</h2><p>特別な体験を、あなたに。</p><a href="#" class="btn">今すぐ予約する</a></div></section>
+  
+  <footer class="footer">Cafe Komorebi</footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
+  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script></body></html>

@@ -1,51 +1,44 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SUNNY TACO | キッチンカー</title>
-  <meta name="description" content="本格メキシカンタコス">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=M+PLUS+Rounded+1c:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assist/css/style.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>SUNNY TACO | キッチンカー</title>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
 <body>
+  <header class="header" id="header"><div class="container"><div class="logo">SUNNY TACO</div></div></header>
+  
+  <!-- 1. HERO -->
+  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>HAPPY<br>TACOS!</h1><p>本格メキシカンタコス</p></div></div>
 
-    <header class="header"><div class="container"><div class="logo">🌮 SUNNY TACO</div></div></header>
-    <section class="hero k-hero">
-      <div class="split left fade">
-        <h1>HAPPY<br>TACOS!</h1>
-        <p>最高にハッピーなメキシカンタコスを、あなたの街にお届けします！</p>
-        <a class="btn" href="#">Find Us! <i data-lucide="map-pin"></i></a>
-      </div>
-      <div class="split right" style="background-image:url('https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
-    </section>
-    <section class="section k-menu">
-      <div class="container fade">
-        <h2 class="title">HOT MENU!</h2>
-        <div class="k-grid">
-          <div class="k-card"><div class="icon"><i data-lucide="pizza"></i></div><h3>カルネアサダ</h3><p>特製スパイスのビーフ盛りだくさん！</p></div>
-          <div class="k-card"><div class="icon"><i data-lucide="flame"></i></div><h3>チキンティンガ</h3><p>スモーキーでピリ辛なやみつきチキン！</p></div>
-          <div class="k-card"><div class="icon"><i data-lucide="party-popper"></i></div><h3>ナチョス</h3><p>とろーりチーズとアボカドの最強コンビ！</p></div>
-        </div>
-      </div>
-    </section>
-    
-  <script>
-    lucide.createIcons();
-    // Header scroll
-    window.addEventListener('scroll', () => {
-      const h = document.getElementById('header');
-      if(h) h.classList.toggle('scrolled', window.scrollY > 50);
-    });
-    // Fade in
-    const obs = new IntersectionObserver(e => {
-      e.forEach(i => { if(i.isIntersecting) { i.target.style.opacity=1; i.target.style.transform='translateY(0) scale(1)'; }});
-    }, {threshold: 0.1});
-    document.querySelectorAll('.fade').forEach(el => {
-      el.style.opacity = 0; el.style.transform = 'translateY(20px)'; el.style.transition = 'all 0.8s ease';
-      obs.observe(el);
-    });
-  </script>
-</body>
-</html>
+  <!-- 2. ABOUT -->
+  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc">本格メキシカンタコス<br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
+
+  <!-- 3. FEATURES -->
+  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
+    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>カルネアサダ</h3><p>特製スパイスのビーフ盛りだくさん！</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>チキンティンガ</h3><p>スモーキーでピリ辛なやみつきチキン！</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>ナチョス</h3><p>とろーりチーズとアボカドの最強コンビ！</p></div>
+  </div></div></section>
+
+  <!-- 4. GALLERY -->
+  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
+    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
+  </div></div></section>
+
+  <!-- 5. PLANS -->
+  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
+    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
+  </div></div></section>
+
+  <!-- 6. FAQ -->
+  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
+    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
+    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
+    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
+  </div></div></section>
+
+  <!-- 7. CTA -->
+  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  
+  <footer class="footer">SUNNY TACO</footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
+  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script></body></html>

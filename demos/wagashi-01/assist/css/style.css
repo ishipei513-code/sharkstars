@@ -1,13 +1,21 @@
-
-    :root { --bg: #FAFAFA; --primary:#4A3F35; --accent:#E0A8B6; --font: 'Yuji Syuku', serif;}
-    * { margin:0; padding:0; box-sizing:border-box; } html{scroll-behavior:smooth;}
-    body { background: var(--bg); color: var(--primary); font-family: var(--font); background-image:radial-gradient(circle, #E0A8B6 1px, transparent 1px); background-size:20px 20px;}
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
-    .header { padding:40px 0; writing-mode:vertical-rl; position:fixed; right:0; height:100vh;}
-    .header .container { font-size:2rem; letter-spacing:1rem; }
-    .w-hero { height:100vh; display:flex; align-items:center;}
-    .flex { display:flex; gap:60px; align-items:center; }
-    .txt h1 { font-size:3rem; line-height:2; width:100%; text-align:center;}
-    .img img { width:100%; border-radius:50% 50% 0 0; }
-    @media(max-width:768px){ .flex{flex-direction:column-reverse; text-align:center;} .header{writing-mode:horizontal-tb; height:auto; position:relative;} }
-  
+:root{--bg:#FDFBF7; --pri:#4A4A4A; --acc:#A89F91; --sec:#F4F1EA; --font-ja:'Shippori Mincho',serif; --font-en:'Cormorant Garamond',serif;}
+*{margin:0;padding:0;box-sizing:border-box;} body{font-family:var(--font-ja); background:var(--bg); color:var(--pri); line-height:1.8;}
+.container{max-width:1100px; margin:0 auto; padding:0 20px;} .section{padding:120px 0;} .bg-light{background:var(--sec);}
+.header{position:fixed; width:100%; top:0; z-index:100; padding:30px 0; transition:.4s; mix-blend-mode:difference; color:#fff;}
+.header.scrolled{background:rgba(253,251,247,0.9); padding:15px 0; mix-blend-mode:normal; color:var(--pri);}
+.logo{font-family:var(--font-en); font-size:1.8rem; letter-spacing:4px; text-align:center;}
+.hero{height:100vh; position:relative; display:flex; align-items:center;} .hero-img{position:absolute; right:0; top:0; width:70%; height:100%;} .hero-img img{width:100%; height:100%; object-fit:cover;}
+.hero-box{background:#FDFBF7; padding:80px; max-width:600px; position:relative; z-index:2; margin-left:10%; box-shadow:0 30px 60px rgba(0,0,0,0.05);}
+h1{font-weight:400; font-size:clamp(2rem, 4vw, 2.8rem); line-height:1.4; margin-bottom:20px; letter-spacing:2px;}
+.grid{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;} .grid .img img{width:100%; height:auto;}
+.sub{font-family:var(--font-en); font-size:1.2rem; color:var(--acc); letter-spacing:4px; margin-bottom:20px; display:block;}
+h2{font-weight:400; font-size:2.2rem; margin-bottom:30px;} .center{text-align:center; font-family:var(--font-en); font-size:3rem; margin-bottom:60px;}
+.feat-list{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:40px;}
+.feat h3{font-size:1.2rem; font-weight:500; display:flex; align-items:center; gap:10px; margin-bottom:15px;} .feat h3 i{width:20px; color:var(--acc);} .feat p{color:#777; font-size:0.95rem;}
+.gallery{display:grid; grid-template-columns:repeat(2, 1fr); gap:20px;} .gallery img{width:100%; aspect-ratio:4/3; object-fit:cover;}
+.price-box{max-width:800px; margin:0 auto;} .row{display:flex; justify-content:space-between; margin-bottom:20px; align-items:baseline;} .dots{flex:1; border-bottom:1px dotted #ccc; margin:0 20px;} .cost{font-family:var(--font-en); font-size:1.2rem;}
+.faq-box{max-width:800px; margin:0 auto;} details{border-bottom:1px solid #ddd; padding:20px 0;} summary{font-size:1.2rem; cursor:pointer; list-style:none; font-weight:500;} summary::-webkit-details-marker{display:none;} details p{margin-top:15px; color:#777;}
+.cta{background:var(--pri); color:#fff; text-align:center;} .cta h2{color:#fff;} .btn{display:inline-block; padding:15px 40px; background:transparent; border:1px solid #fff; color:#fff; text-decoration:none; margin-top:20px; transition:.3s;} .btn:hover{background:#fff; color:var(--pri);}
+.footer{text-align:center; padding:60px 0; border-top:1px solid #eee; font-family:var(--font-en); letter-spacing:3px;}
+.reveal{opacity:0; transform:translateY(30px); transition:1s ease;} .reveal.visible{opacity:1; transform:translateY(0);}
+@media(max-width:768px){.grid, .gallery{grid-template-columns:1fr;} .hero-img{width:100%;} .hero-box{margin:0 20px; padding:40px;}}

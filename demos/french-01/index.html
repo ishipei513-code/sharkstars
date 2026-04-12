@@ -1,50 +1,48 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>L'etoile | モダンフレンチ</title>
-  <meta name="description" content="旬の食材を活かしたフレンチ">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assist/css/style.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>L'etoile | モダンフレンチ</title><meta name="description" content="旬の食材を活かしたフレンチ">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
 <body>
+  <header class="header" id="header"><div class="container"><div class="logo">L'etoile</div></div></header>
+  
+  <!-- 1. HERO -->
+  <section class="hero"><div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="hero-box reveal"><h1>星降る夜の、<br>特別なひとときを。</h1><p>旬の食材を活かしたフレンチ</p></div></section>
+  
+  <!-- 2. ABOUT -->
+  <section class="section"><div class="container grid"><div class="text reveal"><span class="sub">Philosophy</span><h2>美しさを引き出す、<br>上質な時間。</h2><p>旬の食材を活かしたフレンチ</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
+  
+  <!-- 3. FEATURES -->
+  <section class="section bg-light"><div class="container"><h2 class="center reveal">Our Strengths</h2><div class="feat-list">
+    <div class="feat reveal" style="transition-delay:0s"><h3><i data-lucide="check"></i> 信頼と実績</h3><p>地域で長年の信頼をいただいております。</p></div><div class="feat reveal" style="transition-delay:0.1s"><h3><i data-lucide="check"></i> プロフェッショナル</h3><p>熟練のスタッフが丁寧に対応します。</p></div><div class="feat reveal" style="transition-delay:0.2s"><h3><i data-lucide="check"></i> サポート体制</h3><p>アフターフォローも万全です。</p></div>
+  </div></div></section>
 
-    <header class="header" id="header"><div class="container"><div class="logo">L'etoile</div></header>
-    <section class="hero f-hero">
-      <div class="f-img fade"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div>
-      <div class="f-box fade">
-        <p class="subtitle">Modern French Cuisine</p>
-        <h1>星降る夜の、<br>特別なひとときを。</h1>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container flex">
-        <div class="text fade">
-          <h2>Philosophy</h2>
-          <p>全国の生産者から届く最高の食材を、パリ三ツ星で培った技術で昇華。<br>洗練された空間で、記憶に残る美食体験をご提供します。</p>
-        </div>
-        <div class="img fade"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div>
-      </div>
-    </section>
-    <footer class="footer">Restaurant L'etoile</footer>
-    
-  <script>
-    lucide.createIcons();
-    // Header scroll
-    window.addEventListener('scroll', () => {
-      const h = document.getElementById('header');
-      if(h) h.classList.toggle('scrolled', window.scrollY > 50);
-    });
-    // Fade in
-    const obs = new IntersectionObserver(e => {
-      e.forEach(i => { if(i.isIntersecting) { i.target.style.opacity=1; i.target.style.transform='translateY(0) scale(1)'; }});
-    }, {threshold: 0.1});
-    document.querySelectorAll('.fade').forEach(el => {
-      el.style.opacity = 0; el.style.transform = 'translateY(20px)'; el.style.transition = 'all 0.8s ease';
-      obs.observe(el);
-    });
-  </script>
-</body>
-</html>
+  <!-- 4. GALLERY -->
+  <section class="section"><div class="container"><h2 class="center reveal">Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1512496015851-a1fbcf69b6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
+    </div>
+  </div></section>
+
+  <!-- 5. MENU & PRICE -->
+  <section class="section bg-light"><div class="container reveal"><h2 class="center">Menu & Price</h2>
+    <div class="price-box"><div class="row"><div class="name">基本コース</div><div class="dots"></div><div class="cost">要見積</div></div><div class="row"><div class="name">プレミアム</div><div class="dots"></div><div class="cost">要相談</div></div></div>
+  </div></section>
+
+  <!-- 6. FAQ -->
+  <section class="section"><div class="container reveal"><h2 class="center">FAQ</h2>
+    <div class="faq-box">
+      <details><summary>予約は必要ですか？</summary><p>はい、お客様一人ひとりに合わせたサービスを提供するため、完全予約制となっております。</p></details>
+      <details><summary>キャンセル料はかかりますか？</summary><p>前日までのキャンセルは無料です。当日のキャンセルは料金の50%を頂戴しております。</p></details>
+      <details><summary>駐車場はありますか？</summary><p>店舗の近くに2台分の専用駐車場をご用意しております。</p></details>
+    </div>
+  </div></section>
+
+  <!-- 7. CTA -->
+  <section class="section cta"><div class="container reveal"><h2>ご予約・お問い合わせ</h2><p>特別な体験を、あなたに。</p><a href="#" class="btn">今すぐ予約する</a></div></section>
+  
+  <footer class="footer">L'etoile</footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
+  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script></body></html>
