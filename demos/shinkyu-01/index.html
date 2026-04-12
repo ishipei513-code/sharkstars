@@ -1,48 +1,294 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>鍼灸院 和 | 東洋医学で体を整える</title><meta name="description" content="はり・きゅうで自律神経を整え自然治癒力を高めます。">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">鍼灸院 和</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>堂島東洋鍼灸院 | 痛みと不調の根本改善</title>
+  <meta name="description" content="長引く痛み、自律神経の乱れ、原因不明の不調。東洋医学の知恵と熟練の鍼灸技術で、あなたの身体が本来持つ「自然治癒力」を呼び覚まします。完全個予約制・個室対応。">
   
-  <!-- 1. HERO -->
-  <section class="hero"><div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="hero-box reveal"><h1>東洋医学の知恵で、<br>心身を整える。</h1><p>はり・きゅうで自律神経を整え自然治癒力を高めます。</p></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
   
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><span class="sub">Philosophy</span><h2>美しさを引き出す、<br>上質な時間。</h2><p>はり・きゅうで自律神経を整え自然治癒力を高めます。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-  
-  <!-- 3. FEATURES -->
-  <section class="section bg-light"><div class="container"><h2 class="center reveal">Our Strengths</h2><div class="feat-list">
-    <div class="feat reveal" style="transition-delay:0s"><h3><i data-lucide="check"></i>  伝統の鍼灸</h3><p>2000年の歴史を持つ東洋医学。</p></div><div class="feat reveal" style="transition-delay:0.1s"><h3><i data-lucide="check"></i>  痛くない鍼</h3><p>髪の毛ほどの極細鍼。</p></div><div class="feat reveal" style="transition-delay:0.2s"><h3><i data-lucide="check"></i>  体質改善</h3><p>冷え性・不眠に効果的。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="center reveal">Gallery</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1512496015851-a1fbcf69b6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-    </div>
-  </div></section>
-
-  <!-- 5. MENU & PRICE -->
-  <section class="section bg-light"><div class="container reveal"><h2 class="center">Menu & Price</h2>
-    <div class="price-box"><div class="row"><div class="name">基本コース</div><div class="dots"></div><div class="cost">要見積</div></div><div class="row"><div class="name">プレミアム</div><div class="dots"></div><div class="cost">要相談</div></div></div>
-  </div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="center">FAQ</h2>
-    <div class="faq-box">
-      <details><summary>予約は必要ですか？</summary><p>はい、お客様一人ひとりに合わせたサービスを提供するため、完全予約制となっております。</p></details>
-      <details><summary>キャンセル料はかかりますか？</summary><p>前日までのキャンセルは無料です。当日のキャンセルは料金の50%を頂戴しております。</p></details>
-      <details><summary>駐車場はありますか？</summary><p>店舗の近くに2台分の専用駐車場をご用意しております。</p></details>
-    </div>
-  </div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>ご予約・お問い合わせ</h2><p>特別な体験を、あなたに。</p><a href="#" class="btn">今すぐ予約する</a></div></section>
-  
-  <footer class="footer">鍼灸院 和</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body class="bg-washi text-stone">
+
+  <!-- Header -->
+  <header class="header relative z-100 transition-all font-mincho" id="header">
+    <div class="h-container flex-between align-center">
+      <div class="logo">
+        <a href="#" class="flex gap-small align-center">
+          <div class="logo-mark bg-amber text-washi center rounded-circle box-shadow-soft"><span class="font-bold text-lg">堂</span></div>
+          <div class="flex-column line-height-tight">
+            <span class="text-sm tracking-widest text-amber font-bold">東洋医学・鍼灸専門</span>
+            <span class="text-xl tracking-wide font-bold">堂島東洋鍼灸院</span>
+          </div>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links text-sm tracking-widest">
+          <li><a href="#about" class="hover-amber transition">当院の理念</a></li>
+          <li><a href="#indication" class="hover-amber transition">適応症状</a></li>
+          <li><a href="#flow" class="hover-amber transition">施術の流れ</a></li>
+          <li><a href="#access" class="hover-amber transition">アクセス</a></li>
+        </ul>
+        <div class="h-btn sp-none ml-large flex gap-small align-center">
+          <div class="text-right line-height-tight mr-small font-gothic">
+            <span class="text-xs text-gray display-block">ご予約・ご相談</span>
+            <span class="text-lg font-bold tracking-widest">06-0000-0000</span>
+          </div>
+          <a href="#reserve" class="btn btn-amber font-bold text-sm tracking-widest box-shadow-amber hover-lift">
+            WEB予約
+          </a>
+        </div>
+      </nav>
+      <button class="menu-toggle text-stone" id="menuToggle" aria-label="メニューを開く">
+        <span class="bg-stone"></span><span class="bg-stone"></span><span class="bg-stone"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section (Zen Concept) -->
+  <section class="hero relative h-screen min-h-80vh flex-center overflow-hidden pt-header">
+    
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1606318313647-13a64fcdfcad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="鍼灸 イメージ" class="w-full h-full object-cover opacity-60 image-scale-slow">
+      <!-- Gradient overlay to blend into washi -->
+      <div class="bg-gradient-to-r absolute inset-0"></div>
+    </div>
+
+    <!-- Vertical Japanese Copy -->
+    <div class="l-container relative z-10 w-full h-full flex-between align-center">
+      
+      <div class="hero-left w-60 fade-target h-full flex align-center">
+        <!-- Floating decorative circle -->
+        <div class="moon-circle bg-amber absolute mix-blend-multiply opacity-20"></div>
+        
+        <div class="j-vertical flex gap-large align-start">
+          <h1 class="font-mincho text-3xl font-bold tracking-wide text-stone animate-cascade delay-1">
+            痛みの奥にある、<br>本当の「原因」へ。
+          </h1>
+          <p class="font-mincho text-md font-normal tracking-wide text-stone mb-0 animate-cascade delay-2 lead-text mt-medium">
+            その場しのぎの対症療法ではなく、<br>
+            東洋医学の脈診・腹診によって<br>
+            あなたの身体が発する微細なSOSを読み解く。<br>
+            <br>
+            気の流れを整え、自然治癒力を極限まで高める。<br>
+            それが、堂島の「根本改善」です。
+          </p>
+        </div>
+      </div>
+
+      <!-- Right image/badge -->
+      <div class="hero-right w-40 flex-end sp-none fade-target delay-3">
+        <div class="bg-washi p-medium border-amber relative">
+          <span class="absolute top-0 right-0 bg-amber text-washi text-xs font-gothic px-small py-xs">ご新規様限定</span>
+          <div class="font-mincho j-vertical mb-small">
+            <span class="text-xl font-bold text-amber">初回 鍼灸+全身調整</span>
+            <span class="text-lg">約90分 徹底カウンセリング込</span>
+          </div>
+          <div class="text-center font-gothic text-3xl font-bold text-stone mb-small border-b-line pb-xs">
+            ¥5,500 <span class="text-sm font-normal">（税込）</span>
+          </div>
+          <a href="#reserve" class="btn btn-amber-solid btn-xl w-full font-mincho font-bold tracking-widest justify-center hover-glow">
+            空き枠を確認する <i data-lucide="arrow-right" class="icon-sm"></i>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Symptoms / Indications -->
+  <section class="section indication bg-stone text-washi pt-large pb-large relative" id="indication">
+    <!-- Traditional Pattern Background -->
+    <div class="pattern-seigaiha absolute inset-0 opacity-5"></div>
+    
+    <div class="l-container relative z-10">
+      <div class="sect-header center fade-target mb-large">
+        <span class="font-gothic text-amber font-bold text-xs tracking-widest uppercase mb-xs display-block">Indications</span>
+        <h2 class="font-mincho text-3xl font-bold line-height-tight">このようなお悩みは<br class="sp-only">ありませんか？</h2>
+        <div class="w-40px h-2px bg-amber mx-auto mt-small"></div>
+      </div>
+
+      <div class="grid-3 gap-large flex-col-sp">
+        
+        <!-- Symptom 1 -->
+        <div class="s-card text-center fade-target delay-1 group relative">
+          <div class="img-wrap rounded-circle overflow-hidden w-150px h-150px mx-auto mb-small border-amber box-shadow-glow-amber">
+            <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="肩こり・腰痛" class="w-full h-full object-cover filter-grayscale transition-slow group-hover-color">
+          </div>
+          <h3 class="font-mincho text-xl font-bold mb-xs text-amber">慢性的な自律神経症状</h3>
+          <p class="font-gothic text-sm text-gray line-height-long font-light">
+            不眠、めまい、動悸、慢性疲労感、胃腸の不調など。検査では「異常なし」と言われるが、確実につらい症状を東洋医学的に紐解きます。
+          </p>
+        </div>
+
+        <!-- Symptom 2 -->
+        <div class="s-card text-center fade-target delay-2 group relative">
+          <div class="img-wrap rounded-circle overflow-hidden w-150px h-150px mx-auto mb-small border-amber box-shadow-glow-amber">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="女性の悩み" class="w-full h-full object-cover filter-grayscale transition-slow group-hover-color">
+          </div>
+          <h3 class="font-mincho text-xl font-bold mb-xs text-amber">慢性の首・肩・腰の痛み</h3>
+          <p class="font-gothic text-sm text-gray line-height-long font-light">
+            マッサージに何度通ってもすぐに戻ってしまう重い肩こりや、繰り返すギックリ腰、坐骨神経痛。深部の筋肉や経絡に直接アプローチします。
+          </p>
+        </div>
+
+        <!-- Symptom 3 -->
+        <div class="s-card text-center fade-target delay-3 group relative">
+          <div class="img-wrap rounded-circle overflow-hidden w-150px h-150px mx-auto mb-small border-amber box-shadow-glow-amber">
+            <img src="https://images.unsplash.com/photo-1505575967455-40e256f73376?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="美容" class="w-full h-full object-cover filter-grayscale transition-slow group-hover-color">
+          </div>
+          <h3 class="font-mincho text-xl font-bold mb-xs text-amber">女性特有のお悩み・美容鍼</h3>
+          <p class="font-gothic text-sm text-gray line-height-long font-light">
+            冷え、むくみ、生理痛、更年期症状。または、肌のターンオーバーを促し、リフトアップや眼精疲労に特化した「美容鍼」も対応可能です。
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Commitment (Split Layout) -->
+  <section class="section about pt-large pb-large relative bg-washi" id="about">
+    <div class="l-container">
+      <div class="flex-between align-center gap-large flex-col-sp">
+        
+        <div class="w-50 relative fade-target">
+          <img src="https://images.unsplash.com/photo-1583086968600-60b694dfdfab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="鍼のアップ" class="w-full border-stone box-shadow-xl z-10 relative">
+          <!-- Text behind image -->
+          <div class="font-mincho text-4xl text-gray opacity-20 j-vertical absolute -right-10 -bottom-10 z-0 sp-none">
+            氣滞血瘀を散らす
+          </div>
+        </div>
+
+        <div class="w-50 fade-target delay-1 text-left">
+          <span class="font-gothic text-amber font-bold text-xs tracking-widest uppercase mb-xs display-block">Philosophy</span>
+          <h2 class="font-mincho text-3xl font-bold line-height-tight mb-medium">
+            使い捨ての純国産極細鍼。<br>
+            全く痛くない、優しい施術。
+          </h2>
+          <p class="font-gothic text-sm text-gray line-height-long font-light mb-small">
+            「鍼（はり）」と聞くと、注射針のような痛みを想像される方が多いですが、当院で使用する鍼は髪の毛ほどの細さ（約0.14mm）です。蚊に刺される程度の感覚か、ほとんど何も感じない方が大半です。
+          </p>
+          <p class="font-gothic text-sm text-gray line-height-long font-light mb-medium">
+            お灸も、直接肌に跡が残らない「温灸」を使用。心地よい「ポカポカ」とした温かさが深部まで浸透し、血流を一気に改善します。完全な滅菌・使い捨て（ディスポーザブル）器具のみを使用し、衛生面でも最高基準を保っています。
+          </p>
+          <ul class="font-mincho text-md font-bold text-stone flex-column gap-small">
+            <li class="flex align-center gap-small"><i data-lucide="check" class="text-amber"></i> 完全個室・プライベート空間</li>
+            <li class="flex align-center gap-small"><i data-lucide="check" class="text-amber"></i> 國家資格（鍼灸師）保有の院長がすべて担当</li>
+            <li class="flex align-center gap-small"><i data-lucide="check" class="text-amber"></i> 無理な通院指導や回数券の押し売りは一切なし</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section class="cta pt-medium pb-medium bg-gradient-amber relative border-y-line-dark" id="reserve">
+    <div class="l-container relative z-10 flex-between align-center flex-col-sp gap-large text-washi">
+      
+      <div class="cta-text w-50 fade-target text-left center-sp">
+        <h2 class="font-mincho font-bold text-3xl mb-xs line-height-tight">一歩踏み出すことで、<br>未来の身体は変わります。</h2>
+        <p class="font-gothic text-sm mb-large line-height-long font-light text-washi-dim max-w-600">
+          「もっと早く来ればよかった」——当院にいらした患者様の多くがそう仰います。我慢を続ける前に、まずは一度、あなたの身体の声を聞かせてください。
+        </p>
+        <div class="font-gothic text-2xl font-bold flex align-center gap-xs justify-center-sp">
+           <i data-lucide="phone-call" class="icon-lg"></i> 06-0000-0000
+        </div>
+        <span class="text-xs font-light tracking-wide text-washi-dim display-block mt-xs justify-center-sp">（受付時間：9:00 - 13:00 / 15:00 - 20:00 木・日祝休み）</span>
+      </div>
+
+      <div class="cta-action w-50 fade-target delay-1 center">
+        <div class="bg-washi p-medium text-stone text-center box-shadow-xl relative overflow-hidden text-left-sp">
+          <h3 class="font-mincho font-bold text-stone text-xl mb-xs">WEBご予約</h3>
+          <p class="font-gothic text-xs text-gray font-light mb-medium">24時間いつでもご予約可能です。（外部システムへ移動します）</p>
+          
+          <form class="booking-form font-gothic flex-column gap-small">
+            <a href="#" class="btn btn-amber-solid btn-xl w-full font-mincho font-bold text-lg tracking-widest justify-center hover-glow box-shadow-amber">
+              空き状況・予約フォームへ <i data-lucide="external-link" class="icon-sm"></i>
+            </a>
+            <a href="#" class="btn btn-line btn-xl w-full font-gothic font-bold justify-center mt-xs text-stone hover-bg-stone">
+               LINEでお問い合わせ
+            </a>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-stone pt-large pb-medium relative text-gray" id="access">
+    <div class="l-container flex-between align-start flex-col-sp gap-large font-gothic font-light text-sm border-b-line-dark pb-medium mb-medium">
+      
+      <div class="f-left text-left w-40 center-sp w-full-sp">
+        <div class="font-mincho text-washi font-bold text-2xl tracking-widest mb-small">堂島東洋鍼灸院</div>
+        <p class="text-xs line-height-long max-w-400 mx-auto-sp">
+          〒530-0000 大阪府大阪市北区堂島 1-2-3<br>
+          オリエンタルビル 2F （JR大阪駅 徒歩8分 / 堂島駅 徒歩3分）<br><br>
+          各種クレジットカード・電子マネー決済対応<br>
+          駐車場：近隣のコインパーキングをご利用ください
+        </p>
+      </div>
+      
+      <div class="f-right flex gap-large justify-end flex-wrap w-60 justify-center-sp w-full-sp">
+        <ul class="flex-column gap-small text-xs text-left">
+          <li><a href="#" class="hover-amber transition">トップページ</a></li>
+          <li><a href="#" class="hover-amber transition">院長挨拶・プロフィール</a></li>
+          <li><a href="#" class="hover-amber transition">施術メニューと料金</a></li>
+        </ul>
+        <ul class="flex-column gap-small text-xs text-left">
+          <li><a href="#" class="hover-amber transition">患者様の声</a></li>
+          <li><a href="#" class="hover-amber transition">よくあるご質問</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="l-container text-center text-xs font-gothic tracking-widest opacity-40 text-washi">
+       &copy; 2025 DOJIMA TOYO SHINKYU. ALL RIGHTS RESERVED.
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header.classList.add('bg-washi');
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('bg-washi');
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target, .animate-cascade').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
