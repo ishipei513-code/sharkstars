@@ -1,44 +1,399 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>外壁塗装の彩（いろどり）| 地域密着の塗装専門店</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo"> 外壁塗装の彩</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社 高橋塗装 | 外壁塗装・屋根塗装の職人直営店</title>
+  <meta name="description" content="地域密着20年。中間マージンを完全カットした【職人直営】だからできる、高品質・適正価格の外壁・屋根塗装。ドローンでの無料点検実施中！">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>外壁塗装は<br><br>塗装専門店<br>の彩へ。</h1><p></p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc"><br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>信頼と実績</h3><p>地域で長年の信頼をいただいております。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>プロフェッショナル</h3><p>熟練のスタッフが丁寧に対応します。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>サポート体制</h3><p>アフターフォローも万全です。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Teko:wght@500;700&display=swap" rel="stylesheet">
   
-  <footer class="footer"> 外壁塗装の彩</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <i data-lucide="paint-roller" class="logo-icon"></i>
+        <span>株式会社 高橋塗装</span>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#trouble">よくあるお悩み</a></li>
+          <li><a href="#strength">当社の強み</a></li>
+          <li><a href="#works">施工実績</a></li>
+          <li><a href="#price">塗装メニュー・料金</a></li>
+          <li><a href="#flow">ご依頼の流れ</a></li>
+        </ul>
+        <div class="header-action">
+          <div class="h-tel">
+            <span class="op">ご相談・お見積り無料</span>
+            <a href="tel:0120-000-000"><i data-lucide="phone"></i> 0120-000-000</a>
+          </div>
+          <a href="#contact" class="btn btn-nav">無料WEB見積り</a>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="外壁塗装の職人">
+    </div>
+    <div class="hero-mask"></div>
+    <div class="hero-content fade-target">
+      <div class="hero-badge">地域密着20年の実績と信頼</div>
+      <h1 class="hero-title">「職人直営」だからできる、<br><span class="text-hl">高品質</span>と<span class="text-hl">適正価格</span>。</h1>
+      <p class="hero-text">下請けを使わない「完全自社施工」で、無駄な中間マージンを100%カット。<br>大切なお家を、国家資格を持つ一流の職人が直接守り抜きます。</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary"><i data-lucide="calculator"></i> 無料で相見積もりをする</a>
+        <a href="#works" class="btn btn-outline">施工事例を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain Points -->
+  <section class="section identification bg-gray" id="trouble">
+    <div class="l-container">
+      <h2 class="sect-heading center fade-target">外壁塗装で、こんなお悩みはありませんか？</h2>
+      <div class="ident-grid">
+        <div class="ident-card fade-target">
+          <i data-lucide="alert-triangle"></i>
+          <p>訪問営業の業者が来て<br>「今すぐ塗らないとヤバい」と<br>言われて不安になっている…</p>
+        </div>
+        <div class="ident-card fade-target delay-1">
+          <i data-lucide="coins"></i>
+          <p>大手メーカーで見積もりを<br>取ったら、想像以上に<br>高額で驚いてしまった…</p>
+        </div>
+        <div class="ident-card fade-target delay-2">
+          <i data-lucide="hard-hat"></i>
+          <p>「安くしますよ！」と<br>言われたが、手抜き工事や<br>塗料の薄塗りが心配だ…</p>
+        </div>
+      </div>
+      <div class="ident-solution fade-target delay-1">
+        <div class="sol-icon"><i data-lucide="check-circle-2"></i></div>
+        <h3>そのお悩み、すべて「高橋塗装」が解決します！</h3>
+        <p>私たちは営業マンのいない、職人だけの会社です。しつこい営業は一切いたしません。<br>本当に必要な工事だけを、誤魔化しのない適正価格でご提案します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strengths -->
+  <section class="section strengths" id="strength">
+    <div class="l-container">
+      <div class="sect-header fade-target">
+        <span class="en-label center">S T R E N G T H</span>
+        <h2 class="sect-heading center">高橋塗装が選ばれる３つの理由</h2>
+      </div>
+      
+      <div class="str-box fade-target">
+        <div class="str-img">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="職人直営">
+        </div>
+        <div class="str-text">
+          <div class="str-num">01</div>
+          <h3>中間マージンゼロの「完全自社施工」</h3>
+          <p>大手ハウスメーカーや工務店に依頼すると、実際に工事をする下請け業者との間に30%〜50%の「中間マージン」が発生します。<br>当社は自社の専属職人が直接施工するため、費用を大幅に抑えつつ、ワンランク上の高級塗料を使用することが可能です。</p>
+        </div>
+      </div>
+
+      <div class="str-box reverse fade-target">
+        <div class="str-img">
+          <img src="https://images.unsplash.com/photo-1473621038933-bf4176882f0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ドローン点検">
+        </div>
+        <div class="str-text">
+          <div class="str-num">02</div>
+          <h3>最新ドローンによる「無料・精密屋根点検」</h3>
+          <p>「見えない屋根の上で、わざと瓦を割られるのでは…」という心配は不要です。当社では最新のHDドローンを使用し、お客様と一緒にタブレット端末でリアルタイムに屋根の状況を確認します。屋根に上らないため、屋根材を損傷させるリスクもゼロです。</p>
+        </div>
+      </div>
+
+      <div class="str-box fade-target">
+        <div class="str-img">
+          <img src="https://images.unsplash.com/photo-1541888081696-6e4cd9185a6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="保証書">
+        </div>
+        <div class="str-text">
+          <div class="str-num">03</div>
+          <h3>技術の自信の証。「最長15年」の自社保証</h3>
+          <p>一級塗装技能士が「下塗り・中塗り・上塗り」の3回塗りを徹底。ミリ単位の妥協も許さない職人魂で仕上げるからこそ、最長15年の手厚い工事保証をお約束できます。施工後も、定期的なアフターメンテナンスで大切なお家を守ります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works / Before & After -->
+  <section class="section works bg-gray" id="works">
+    <div class="l-container">
+      <div class="sect-header fade-target">
+        <span class="en-label center">W O R K S</span>
+        <h2 class="sect-heading center">施工実績（Before & After）</h2>
+      </div>
+      
+      <div class="works-grid">
+        <div class="work-card fade-target">
+          <div class="ba-wrap">
+            <div class="ba-img before">
+              <span class="ba-label">施工前</span>
+              <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="施工前">
+            </div>
+            <div class="ba-img after">
+              <span class="ba-label">施工後</span>
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="施工後">
+            </div>
+          </div>
+          <div class="work-info">
+            <div class="work-tags"><span class="tag">外壁塗装</span><span class="tag">屋根塗装</span></div>
+            <h3>S様邸（築15年 / シリコン塗料使用）</h3>
+            <p>チョーキング現象（粉ふき）とひび割れが進行していましたが、下地補修を徹底し、新築のような輝きを取り戻しました。</p>
+          </div>
+        </div>
+
+        <div class="work-card fade-target delay-1">
+          <div class="ba-wrap">
+            <div class="ba-img before">
+              <span class="ba-label">施工前</span>
+              <img src="https://images.unsplash.com/photo-1588627885068-d0faeec14dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="施工前">
+            </div>
+            <div class="ba-img after">
+              <span class="ba-label">施工後</span>
+              <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="施工後">
+            </div>
+          </div>
+          <div class="work-info">
+            <div class="work-tags"><span class="tag">外壁塗装</span><span class="tag">フッ素塗料</span></div>
+            <h3>Y様邸（築20年 / フッ素塗料使用）</h3>
+            <p>色褪せが目立っていたツートンカラーを、シックでモダンなダークグレー一色へ塗り替え。耐久性の高い高級フッ素塗料を採用しました。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prices (Menu) -->
+  <section class="section prices" id="price">
+    <div class="l-container">
+      <div class="sect-header fade-target">
+        <span class="en-label center">P L A N &amp; P R I C E</span>
+        <h2 class="sect-heading center">安心のコミコミパック料金設定</h2>
+        <p class="center" style="margin-bottom:40px;">足場代・高圧洗浄代・飛散防止ネット・養生費・塗料代・職人の人件費…<br><strong>すべてコミコミの明朗会計です！（※建坪30坪の場合の目安）</strong></p>
+      </div>
+
+      <div class="price-grid">
+        <div class="price-card fade-target">
+          <div class="pc-head">
+            <h4>【コスパ重視】シリコン塗料プラン</h4>
+            <p class="durability">耐久年数：約10〜12年</p>
+          </div>
+          <div class="pc-body">
+            <div class="pc-price"><span>¥</span>598,000<span>〜</span></div>
+            <p>最もスタンダードで選ばれているプラン。価格と耐久性のバランスが良く、初めての塗り替えに最適です。</p>
+            <ul class="pc-list">
+              <li><i data-lucide="check"></i> 汚れがつきにくい</li>
+              <li><i data-lucide="check"></i> 豊富なカラーバリエーション</li>
+              <li><i data-lucide="check"></i> 高いコストパフォーマンス</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="price-card recommend fade-target delay-1">
+          <div class="pc-badge">当店一番人気！</div>
+          <div class="pc-head">
+            <h4>【耐久性重視】ラジカル制御塗料プラン</h4>
+            <p class="durability">耐久年数：約12〜15年</p>
+          </div>
+          <div class="pc-body">
+            <div class="pc-price"><span>¥</span>698,000<span>〜</span></div>
+            <p>紫外線による塗膜の劣化（チョーキング）を防ぐ最新技術の塗料。長期的にお家を綺麗に保ちたい方にオススメです。</p>
+            <ul class="pc-list">
+              <li><i data-lucide="star"></i> シリコンを超える高い耐久性</li>
+              <li><i data-lucide="star"></i> チョーキング（白亜化）を抑制</li>
+              <li><i data-lucide="star"></i> 防カビ・防藻性能</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="price-card fade-target delay-2">
+          <div class="pc-head">
+            <h4>【最高級品質】無機・フッ素塗料プラン</h4>
+            <p class="durability">耐久年数：約15〜20年</p>
+          </div>
+          <div class="pc-body">
+            <div class="pc-price"><span>¥</span>898,000<span>〜</span></div>
+            <p>東京スカイツリーなどの大型建造物にも使われる最高ランクの塗料。塗り替えの回数を減らし、トータルコストを抑えます。</p>
+            <ul class="pc-list">
+              <li><i data-lucide="check"></i> 圧倒的な超耐候性</li>
+              <li><i data-lucide="check"></i> 汚れを雨で洗い流すセルフクリーニング</li>
+              <li><i data-lucide="check"></i> 色褪せが極めて少ない</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flow -->
+  <section class="section flow bg-gray" id="flow">
+    <div class="l-container">
+      <div class="sect-header fade-target">
+        <span class="en-label center">F L O W</span>
+        <h2 class="sect-heading center">お問い合わせから完工までの流れ</h2>
+      </div>
+      
+      <div class="flow-step fade-target">
+        <div class="step-num">STEP 1</div>
+        <div class="step-content">
+          <h3>お問い合わせ・ご相談</h3>
+          <p>お電話またはWEBフォームからお気軽にご連絡ください。営業マンではなく、専門知識を持ったスタッフが丁寧に対応いたします。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-target">
+        <div class="step-num">STEP 2</div>
+        <div class="step-content">
+          <h3>無料・現地ドローン点検</h3>
+          <p>担当職人がお客様のご自宅へ伺い、ドローンを使用してお家の状態を隅々まで診断。採寸を行い、必要な塗布量を正確に計算します。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-target">
+        <div class="step-num">STEP 3</div>
+        <div class="step-content">
+          <h3>お見積りの提出（3パターン）</h3>
+          <p>お客様の予算とご要望に合わせ、塗料のグレード別で3種類のお見積書をご提出。「なぜこの金額になるのか」を細かく説明します。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-target">
+        <div class="step-num">STEP 4</div>
+        <div class="step-content">
+          <h3>ご契約・近隣へのご挨拶</h3>
+          <p>お見積りにご納得いただけた場合のみご契約となります。着工前には、当社スタッフが粗品を持って近隣住民の方々へご挨拶に伺います。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-target">
+        <div class="step-num">STEP 5</div>
+        <div class="step-content">
+          <h3>足場設置・施工開始〜完工</h3>
+          <p>安全第一で足場を組み、高圧洗浄、下地処理、3回塗りを実施。完工後、お客様とご一緒に厳しい最終チェックを行い、保証書をお渡しします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq">
+    <div class="l-container">
+      <div class="sect-header fade-target">
+        <span class="en-label center">Q &amp; A</span>
+        <h2 class="sect-heading center">よくある質問</h2>
+      </div>
+      <div class="faq-accordion">
+        <details class="faq-item fade-target" open>
+          <summary>相見積もり（他社との比較）でも無料で見積もりしてくれますか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>はい、もちろんです！外壁塗装は高額な工事ですので、ぜひ数社から相見積もりを取ってください。当社の金額と施工内容に絶対の自信があります。</p></div>
+        </details>
+        <details class="faq-item fade-target">
+          <summary>工事期間はどのくらいかかりますか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>一般的な30坪程度のお家の場合、天候にもよりますが【約10日〜14日間】です。雨天の場合は作業ができないため、工期が延びる場合がございます。</p></div>
+        </details>
+        <details class="faq-item fade-target">
+          <summary>工事中、洗濯物を外に干すことはできますか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>申し訳ございません。塗料の飛散や匂いが付くのを防ぐため、工事期間中は室内干しをお願いしております。ご不便をおかけしますがご協力をお願いいたします。</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta" id="contact">
+    <div class="l-container">
+      <div class="cta-box fade-target">
+        <h2>お見積り・ご相談は完全無料！</h2>
+        <p>「とりあえずいくらかかるか知りたい」「他社で見積もりを取ったが高すぎる気がする」<br>どんなことでも、職人直営の高橋塗装にお任せください。</p>
+        <div class="cta-actions">
+          <div class="cta-tel">
+            <span class="tel-text">お電話でのご相談（8:00〜19:00 日曜定休）</span>
+            <a href="tel:0120-000-000" class="tel-number"><i data-lucide="phone"></i> 0120-000-000</a>
+          </div>
+          <div class="cta-btn-wrap">
+            <span class="btn-text">24時間受付 / 写真添付OK</span>
+            <a href="#" class="btn btn-primary"><i data-lucide="mail"></i> メール・LINEでお見積り</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="l-container">
+      <div class="ft-content">
+        <div class="ft-left">
+          <div class="logo">
+            <i data-lucide="paint-roller" class="logo-icon"></i>
+            <span>株式会社 高橋塗装</span>
+          </div>
+          <p class="desc">〒100-0000<br>東京都千代田区〇〇 1-2-3<br>東京都知事許可 建築業(般-00)第000000号</p>
+        </div>
+        <div class="ft-right">
+          <ul class="ft-links">
+            <li><a href="#trouble">外壁塗装の基礎知識</a></li>
+            <li><a href="#strength">当社の強み</a></li>
+            <li><a href="#works">施工実績一覧</a></li>
+            <li><a href="#price">料金表</a></li>
+            <li><a href="#">会社概要</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <p>&copy; 2025 Takahashi Painting Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+
+    // Accordion Icon
+    document.querySelectorAll('details').forEach(detail => {
+      detail.addEventListener('toggle', () => {
+        const icon = detail.querySelector('.faq-icon');
+        icon.style.transform = detail.open ? 'rotate(180deg)' : 'rotate(0deg)';
+      });
+    });
+  </script>
+</body>
+</html>
