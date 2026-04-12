@@ -1,48 +1,246 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>書道教室 風雅 | 筆で心を磨く</title><meta name="description" content="毛筆・硬筆・ペン字。美しい文字は一生の財産。">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo"> ️ 書道教室 風雅</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>青柳書道教室 | 東京・青山の大人の美文字教室と子供の習字</title>
+  <meta name="description" content="墨の香りと、静寂の時間。青青山・表参道にひっそりと佇む「青柳書道教室」。日常の喧騒から離れ、自分と向き合う静かな時間と「一生モノの美文字」を手に入れませんか？">
   
-  <!-- 1. HERO -->
-  <section class="hero"><div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="hero-box reveal"><h1>筆で、<br>心を磨く。</h1><p>毛筆・硬筆・ペン字。美しい文字は一生の財産。</p></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
   
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><span class="sub">Philosophy</span><h2>美しさを引き出す、<br>上質な時間。</h2><p>毛筆・硬筆・ペン字。美しい文字は一生の財産。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-  
-  <!-- 3. FEATURES -->
-  <section class="section bg-light"><div class="container"><h2 class="center reveal">Our Strengths</h2><div class="feat-list">
-    <div class="feat reveal" style="transition-delay:0s"><h3><i data-lucide="check"></i> 段級位取得可能</h3><p>日本書道連盟認定。</p></div><div class="feat reveal" style="transition-delay:0.1s"><h3><i data-lucide="check"></i> 少人数指導</h3><p>4名までの少人数で丁寧に。</p></div><div class="feat reveal" style="transition-delay:0.2s"><h3><i data-lucide="check"></i> 実用書道</h3><p>のし袋・年賀状の書き方も。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="center reveal">Gallery</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1512496015851-a1fbcf69b6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-    </div>
-  </div></section>
-
-  <!-- 5. MENU & PRICE -->
-  <section class="section bg-light"><div class="container reveal"><h2 class="center">Menu & Price</h2>
-    <div class="price-box"><div class="row"><div class="name">基本コース</div><div class="dots"></div><div class="cost">要見積</div></div><div class="row"><div class="name">プレミアム</div><div class="dots"></div><div class="cost">要相談</div></div></div>
-  </div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="center">FAQ</h2>
-    <div class="faq-box">
-      <details><summary>予約は必要ですか？</summary><p>はい、お客様一人ひとりに合わせたサービスを提供するため、完全予約制となっております。</p></details>
-      <details><summary>キャンセル料はかかりますか？</summary><p>前日までのキャンセルは無料です。当日のキャンセルは料金の50%を頂戴しております。</p></details>
-      <details><summary>駐車場はありますか？</summary><p>店舗の近くに2台分の専用駐車場をご用意しております。</p></details>
-    </div>
-  </div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>ご予約・お問い合わせ</h2><p>特別な体験を、あなたに。</p><a href="#" class="btn">今すぐ予約する</a></div></section>
-  
-  <footer class="footer"> ️ 書道教室 風雅</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+
+  <!-- Floating Navigation (Zen minimalism) -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <span class="font-shippori text-dark l-text">青柳書道教室</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-shippori">
+          <li><a href="#concept">想い</a></li>
+          <li><a href="#classes">お稽古</a></li>
+          <li><a href="#master">師範紹介</a></li>
+          <li><a href="#access">ご案内</a></li>
+        </ul>
+        <div class="h-btn sp-none fade-target">
+          <a href="#trial" class="btn btn-seal font-shippori">無料体験のご予約</a>
+        </div>
+      </nav>
+      <button class="menu-toggle text-dark" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section (Japanese Vertical Layout) -->
+  <div class="nav-space"></div>
+  <section class="hero bg-washi">
+    <div class="l-container flex-hero">
+      
+      <!-- Right/Left inverted for vertical text effect -->
+      <div class="hero-text fade-target delay-1">
+        <div class="h-stamp font-shippori text-red">青柳</div>
+        <h1 class="hero-title font-shippori text-dark vertical-text ml-large">
+          <span>自分と向き合う、</span><br>
+          <span class="ml-small">静寂の時間。</span>
+        </h1>
+        <p class="hero-desc font-shippori text-gray vertical-text text-sm ml-medium line-height-ku sp-none">
+          デジタルな言葉が溢れる今だからこそ、<br>
+          手書きの一文字が人の心を動かします。<br>
+          姿勢を正し、筆に想いをのせる。<br>
+          そんな余白の時間をつくりませんか。
+        </p>
+      </div>
+
+      <div class="hero-img fade-target delay-2">
+        <div class="img-wrapper relative">
+          <!-- Ink wash effect image behind -->
+          <img src="https://images.unsplash.com/photo-1585860710609-b788c74127c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="筆と硯" class="main-img border-dark">
+          <div class="ink-blob"></div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Concept -->
+  <section class="section concept bg-white border-top-line" id="concept">
+    <div class="l-container c-flex">
+      <div class="c-img fade-target">
+        <img src="https://images.unsplash.com/photo-1629851610427-d421712a2336?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="和紙と書" class="grayscale hover-color transition-img">
+      </div>
+      <div class="c-text fade-target delay-1">
+        <h2 class="sect-heading font-shippori text-dark mb-medium"><span class="text-red">心</span>を整える。<br>文字が<span class="text-gray">美</span>しくなる。</h2>
+        <p class="font-noto text-gray line-height-long mb-medium font-thin">
+          文字には、その人の「現在」の心が表れます。<br>
+          青柳書道教室では、ただ綺麗に字を書くテクニックを教えるだけでなく、慌ただしい日常から離れて「呼吸を整える」プロセスを大切にしています。
+        </p>
+        <p class="font-noto text-gray line-height-long font-thin">
+          墨をすり、半紙に向き合う。<br>
+          そのマインドフルネスな体験を通し、ご自身の内面から溢れ出る「一生モノの美文字」を身につけるお手伝いをいたします。初心者から丁寧に指導いたしますので、どうぞ安心してお越しください。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes (お稽古) -->
+  <section class="section classes bg-washi border-top-line" id="classes">
+    <div class="l-container">
+      <div class="sect-header center fade-target mb-large">
+        <span class="font-shippori text-red text-sm display-block mb-xs tracking-widest">講座</span>
+        <h2 class="sect-heading font-shippori text-dark">お稽古の案内</h2>
+        <div class="divider mx-auto mt-small"></div>
+      </div>
+
+      <div class="class-grid mt-medium">
+        <!-- Class 1: Adults -->
+        <div class="class-card bg-white border-dark p-large fade-target relative z-10 box-shadow-sumi">
+          <div class="c-badge bg-dark text-white font-shippori text-xs center py-xs">大人向け</div>
+          <h3 class="font-shippori font-bold text-xl mb-xs border-b-line pb-xs mt-small text-dark">実用美文字・書道コース</h3>
+          <p class="font-noto text-gray text-sm line-height-long mb-small font-thin mt-small">
+            熨斗紙や芳名帳、手紙など、日常で役立つ実用的な「筆ペン・硬筆」から、本格的な「大筆」まで、目的に応じて自由に選べるコースです。お仕事帰りのストレス解消や、大人の趣味として多くの方にご受講いただいております。
+          </p>
+          <ul class="c-list font-noto text-xs text-dark line-height-long mb-medium">
+            <li><span class="text-red">◆</span> 月3回（1回90分）</li>
+            <li><span class="text-red">◆</span> 振替制度あり（完全予約制）</li>
+            <li><span class="text-red">◆</span> 道具のお預かり可能</li>
+          </ul>
+          <div class="price font-shippori font-bold text-lg text-dark text-right">月謝 8,800円 <span class="font-noto text-xs text-gray font-normal">（税込）</span></div>
+        </div>
+
+        <!-- Class 2: Kids -->
+        <div class="class-card bg-white border-dark p-large fade-target delay-1 relative z-10 box-shadow-sumi">
+          <div class="c-badge border-dark text-dark font-shippori text-xs center py-xs">子供向け</div>
+          <h3 class="font-shippori font-bold text-xl mb-xs border-b-line pb-xs mt-small text-dark">児童かきかた・習字コース</h3>
+          <p class="font-noto text-gray text-sm line-height-long mb-small font-thin mt-small">
+            幼稚園年長〜中学生までを対象としたコース。正しい鉛筆の持ち方からスタートし、硬筆と毛筆をバランス良く学びます。段級位の取得はもちろん、「集中力」と「正しい姿勢・礼儀作法」を身につけることを目指します。
+          </p>
+          <ul class="c-list font-noto text-xs text-dark line-height-long mb-medium">
+            <li><span class="text-red">◆</span> 月3回 または 4回（1回60分）</li>
+            <li><span class="text-red">◆</span> 競書誌を通じた段級位取得</li>
+            <li><span class="text-red">◆</span> 墨液、半紙など消耗品費含む</li>
+          </ul>
+          <div class="price font-shippori font-bold text-lg text-dark text-right">月謝 6,600円〜 <span class="font-noto text-xs text-gray font-normal">（税込）</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Profile -->
+  <section class="section master bg-dark text-washi" id="master">
+    <div class="l-container m-flex flex-center gap-large">
+      <div class="m-text fade-target text-left">
+        <span class="font-shippori text-gold text-sm display-block mb-xs tracking-widest">師範紹介</span>
+        <h2 class="sect-heading font-shippori text-washi mb-small">青柳 澄泉<br><span class="font-shippori text-sm text-gray font-normal">Aoyagi Chousen</span></h2>
+        <p class="font-noto line-height-long mb-small text-gray-light font-thin text-sm">
+          5歳より筆を持ち、数々の書道展で文部科学大臣賞を受賞。大学卒業後、一般企業での勤務を経て自身の教室を開室。<br><br>
+          「字に自信がない」という方が、お稽古を通じて少しずつ自分を好きになっていく瞬間を見るのが何よりの喜びです。誰もが最初は初心者です。あなたのペースで、楽しみながら文字を磨いていきましょう。
+        </p>
+        <div class="signature font-shippori text-gold text-xl text-right mt-medium">澄泉</div>
+      </div>
+      <div class="m-img fade-target delay-1 relative">
+        <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="書道師範" class="grayscale">
+      </div>
+    </div>
+  </section>
+
+  <!-- Access & Contact (CTA) -->
+  <section class="section access bg-white border-top-line" id="access">
+    <div class="l-container">
+      <div class="sect-header center fade-target mb-large">
+        <h2 class="sect-heading font-shippori text-dark">ご案内とご予約</h2>
+        <div class="divider mx-auto mt-small"></div>
+      </div>
+      
+      <div class="a-flex flex-between gap-large flex-col-sp">
+        <!-- Info -->
+        <div class="a-info fade-target w-full">
+          <table class="a-table font-noto text-gray text-sm w-full font-thin">
+            <tr>
+              <th class="font-shippori text-dark">教室名</th>
+              <td>青柳書道教室</td>
+            </tr>
+            <tr>
+              <th class="font-shippori text-dark">所在地</th>
+              <td>〒150-0000<br>東京都港区南青山 1-2-3 静寂ビル 2F</td>
+            </tr>
+            <tr>
+              <th class="font-shippori text-dark">最寄り駅</th>
+              <td>表参道駅 B2出口より徒歩4分<br>渋谷駅より徒歩10分</td>
+            </tr>
+            <tr>
+              <th class="font-shippori text-dark">開講日時</th>
+              <td>
+                水曜日：14:00〜21:00<br>
+                金曜日：16:00〜21:00<br>
+                土曜日：10:00〜18:00
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <!-- Trial CTA -->
+        <div class="a-cta bg-washi p-large border-dark fade-target delay-1 text-center w-full relative z-10 box-shadow-sumi">
+          <div class="h-stamp font-shippori text-red mb-small" style="top: auto; left: 50%; transform: translateX(-50%) rotate(5deg);">体験無料</div>
+          <h3 class="font-shippori font-bold text-xl mb-xs mt-medium text-dark">手ぶらで無料体験</h3>
+          <p class="font-noto text-gray text-xs line-height-long mb-medium font-thin">
+            道具はすべて無料でお貸し出しいたします。<br>実際の教室の雰囲気や、ペンの持ち方などの基礎を約60分間で体験いただけます。
+          </p>
+          <a href="#contact" class="btn btn-dark btn-xl font-shippori w-full text-white center hover-reverse mt-xs">無料体験を予約する</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark pt-large pb-small center text-gray border-t-line pb-medium">
+    <div class="l-container center w-full flex-column gap-small">
+      <div class="f-logo font-shippori text-lg mb-small text-washi">青柳書道教室</div>
+      <div class="sns-icons center gap-medium mb-small">
+        <a href="#" class="text-gray hover-white"><i data-lucide="instagram"></i></a>
+      </div>
+      <p class="font-noto font-thin text-xs mt-medium">&copy; 2025 Aoyagi Shodo Class. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
