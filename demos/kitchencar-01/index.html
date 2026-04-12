@@ -1,44 +1,318 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>SUNNY TACO | キッチンカー</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">SUNNY TACO</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE BULL BURGER | 街角に現れる、極上の肉体験。キッチンカー出店中</title>
+  <meta name="description" content="黒毛和牛100%パティと自家製バンズ。東京・神奈川を中心に巡回するグルメバーガーのキッチンカー「THE BULL BURGER」です。出店スケジュールやケータリングのご依頼はこちらから。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>HAPPY<br>TACOS!</h1><p>本格メキシカンタコス</p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc">本格メキシカンタコス<br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>カルネアサダ</h3><p>特製スパイスのビーフ盛りだくさん！</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>チキンティンガ</h3><p>スモーキーでピリ辛なやみつきチキン！</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>ナチョス</h3><p>とろーりチーズとアボカドの最強コンビ！</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Rubik:ital,wght@0,600;0,800;0,900;1,900&display=swap" rel="stylesheet">
   
-  <footer class="footer">SUNNY TACO</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Fixed Instagram Follow Banner -->
+  <div class="top-banner bg-dark text-white center">
+    <span><i data-lucide="instagram" class="icon-sm text-orange"></i> 最新の出店情報はInstagramをチェック！ <b>@the_bull_burger</b></span>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <i data-lucide="flame" class="text-orange l-icon"></i>
+          <span class="font-rubik font-black text-dark l-text">THE BULL BURGER</span>
+        </a>
+      </div>
+      <nav class="nav font-rubik font-bold">
+        <ul class="nav-links">
+          <li><a href="#about">CONCEPT</a></li>
+          <li><a href="#menu">MENU</a></li>
+          <li><a href="#schedule" class="text-orange">SCHEDULE</a></li>
+          <li><a href="#catering">CATERING</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle text-dark" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero bg-cream">
+    <!-- Grunge overlay -->
+    <div class="hero-grunge"></div>
+    
+    <div class="l-container flex-hero">
+      <div class="hero-text fade-target">
+        <div class="h-badge bg-orange text-white font-rubik box-shadow-street transform-tilt">FOOD TRUCK IN TOKYO</div>
+        <h1 class="hero-title text-dark font-kiwi">
+          街角に現れる、<br>
+          <span class="text-orange">極上</span>の肉体験。
+        </h1>
+        <p class="hero-desc text-dark font-kiwi mt-small">
+          本当に美味いハンバーガーを、もっと身近に。<br>
+          黒毛和牛100%の粗挽きパティが奏でる、<br class="sp-none">
+          圧倒的な肉汁と香ばしさをその手に。
+        </p>
+        <div class="h-cta mt-medium">
+          <a href="#schedule" class="btn btn-orange btn-xl font-kiwi">
+            <i data-lucide="calendar-map"></i> 今週の出店場所を見る
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-img fade-target delay-1">
+        <!-- Main huge burger image -->
+        <div class="img-wrapper relative">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ジューシーなハンバーガー" class="burger-img block drop-shadow-lg">
+          <!-- Stamp graphic -->
+          <div class="stamp-graphic font-rubik bg-dark text-orange center inline-block rounded-full">
+            100%<br>BEEF
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Torn paper edge effect -->
+    <div class="torn-paper-bottom"></div>
+  </section>
+
+  <!-- About / Concept -->
+  <section class="section about" id="about">
+    <div class="l-container flex-between gap-large">
+      <div class="a-img fade-target border-dark box-shadow-street transform-tilt-reverse">
+        <img src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="キッチンカーの外観">
+      </div>
+      <div class="a-text fade-target delay-1">
+        <span class="en-label font-rubik text-orange">STREET TO YOUR MOUTH</span>
+        <h2 class="sect-heading text-dark font-kiwi mb-medium">店舗を持たない、<br>最強のバーガー屋。</h2>
+        <p class="text-gray flex-column gap-small line-height-long font-kiwi">
+          <span>「THE BULL BURGER」は、店舗を持たないキッチンカースタイルだからこそ、食材のコストに全振りしています。</span>
+          <span>和牛ミンチの配合は、ステーキ職人と共同開発したオリジナル。噛んだ瞬間に溢れる肉汁を受け止めるのは、毎朝特注で焼き上げる専用のブリオッシュバンズ。</span>
+          <span>ジャンクフードの概念を覆す、本気のグルメバーガーを焼き立てでお渡しします。</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule (CRITICAL FOR FOOD TRUCK) -->
+  <section class="section schedule bg-dark text-cream" id="schedule">
+    <div class="l-container max-w-800">
+      <div class="sect-header center fade-target mb-medium">
+        <span class="en-label font-rubik text-orange">WHERE TO FIND US</span>
+        <h2 class="sect-heading text-cream font-kiwi"><i data-lucide="map-pin" class="text-orange"></i> 今週の出店スケジュール</h2>
+      </div>
+
+      <div class="s-list fade-target delay-1">
+        <!-- Schedule Item 1 -->
+        <div class="s-card bg-zinc border-orange mb-small flex-between p-medium">
+          <div class="s-date">
+            <span class="font-rubik text-orange text-xl font-black">OCT 14</span>
+            <span class="text-gray-light font-kiwi display-block mt-xs">MON / 11:30 - 14:00</span>
+          </div>
+          <div class="s-loc">
+            <h4 class="text-cream font-kiwi font-bold text-lg mb-xs">大手町フィナンシャルシティ 中庭</h4>
+            <span class="text-gray text-sm"><i data-lucide="building-2" class="icon-xs text-orange"></i> 東京都千代田区大手町</span>
+          </div>
+        </div>
+
+        <!-- Schedule Item 2 -->
+        <div class="s-card bg-zinc border-orange mb-small flex-between p-medium">
+          <div class="s-date">
+            <span class="font-rubik text-orange text-xl font-black">OCT 15</span>
+            <span class="text-gray-light font-kiwi display-block mt-xs">TUE / 11:30 - 18:00</span>
+          </div>
+          <div class="s-loc">
+            <h4 class="text-cream font-kiwi font-bold text-lg mb-xs">豊洲ベイサイドクロス前広場 <span class="bg-red text-white text-xs px-2 py-1 rounded ml-sm">夜まで営業</span></h4>
+            <span class="text-gray text-sm"><i data-lucide="building-2" class="icon-xs text-orange"></i> 東京都江東区豊洲</span>
+          </div>
+        </div>
+
+        <!-- Schedule Item 3 (Weekend Event) -->
+        <div class="s-card bg-orange text-dark border-dark mb-small flex-between p-medium box-shadow-street transform-tilt-slight mt-medium z-1 relative">
+          <div class="s-date">
+            <span class="font-rubik text-dark text-xl font-black">OCT 19-20</span>
+            <span class="text-dark font-kiwi font-bold display-block mt-xs">SAT-SUN / 10:00 - 20:00</span>
+          </div>
+          <div class="s-loc">
+            <h4 class="text-dark font-kiwi font-bold text-lg mb-xs">【フェス出店】TOKYO MUSIC CAMPO</h4>
+            <span class="text-dark text-sm font-bold"><i data-lucide="tent" class="icon-xs"></i> 幕張海浜公園 特設エリア</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="center mt-medium fade-target delay-2">
+        <a href="#" class="btn btn-outline-orange font-kiwi"><i data-lucide="instagram"></i> 最新の完売情報はインスタでお知らせ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="section menu" id="menu">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label font-rubik text-orange">STREET MENU</span>
+        <h2 class="sect-heading text-dark font-kiwi">絶対的自信の4メニュー。</h2>
+      </div>
+
+      <div class="m-grid">
+        <!-- Menu 1 -->
+        <div class="m-card fade-target">
+          <div class="m-img border-dark border-b-none p-medium bg-cream box-shadow-street">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ブルバーガー">
+          </div>
+          <div class="m-body border-dark bg-white p-medium box-shadow-street mt-n-lg relative z-2">
+            <div class="m-top flex-between mb-small border-b-dashed pb-small">
+              <h3 class="font-rubik font-black text-xl text-dark">THE BULL<br><span class="font-kiwi text-sm font-bold text-orange">ザ・ブルバーガー（看板メニュー）</span></h3>
+              <span class="font-rubik text-xl text-dark font-black">¥1,300</span>
+            </div>
+            <p class="font-kiwi text-sm text-gray line-height-long">
+              迷ったらこれ。和牛100%パティ、チェダーチーズ、自家製BBQソースにクリスピーオニオンを挟んだ圧倒的一番人気。
+            </p>
+          </div>
+        </div>
+
+        <!-- Menu 2 -->
+        <div class="m-card fade-target delay-1">
+          <div class="m-img border-dark border-b-none p-medium bg-cream box-shadow-street">
+            <img src="https://images.unsplash.com/photo-1594212696434-62e541469e06?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ダブルチーズ">
+          </div>
+          <div class="m-body border-dark bg-white p-medium box-shadow-street mt-n-lg relative z-2">
+            <div class="m-top flex-between mb-small border-b-dashed pb-small">
+              <h3 class="font-rubik font-black text-xl text-dark">DOUBLE CHEESE<br><span class="font-kiwi text-sm font-bold text-orange">ダブルチーズバーガー</span></h3>
+              <span class="font-rubik text-xl text-dark font-black">¥1,800</span>
+            </div>
+            <p class="font-kiwi text-sm text-gray line-height-long">
+              パティ2枚（計300g）ととろける濃厚チーズが2倍。肉好きの欲望をすべて満たす、暴力的なボリューム感。
+            </p>
+          </div>
+        </div>
+
+        <!-- Menu 3 -->
+        <div class="m-card fade-target">
+          <div class="m-img border-dark border-b-none p-medium bg-cream box-shadow-street">
+            <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="アボカド">
+          </div>
+          <div class="m-body border-dark bg-white p-medium box-shadow-street mt-n-lg relative z-2">
+            <div class="m-top flex-between mb-small border-b-dashed pb-small">
+              <h3 class="font-rubik font-black text-xl text-dark">AVO-MOZZARELLA<br><span class="font-kiwi text-sm font-bold text-orange">アボカドモッツァレラ</span></h3>
+              <span class="font-rubik text-xl text-dark font-black">¥1,500</span>
+            </div>
+            <p class="font-kiwi text-sm text-gray line-height-long">
+              女性人気No.1。完熟アボカド半分とフレッシュなモッツァレラチーズを使用。自家製わさびマヨがアクセント。
+            </p>
+          </div>
+        </div>
+
+        <!-- Menu 4 (Sides) -->
+        <div class="m-card fade-target delay-1">
+          <div class="m-img border-dark border-b-none p-medium bg-cream box-shadow-street">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ポテト＆ドリンク">
+          </div>
+          <div class="m-body border-dark bg-white p-medium box-shadow-street mt-n-lg relative z-2">
+            <div class="m-top flex-between mb-small border-b-dashed pb-small">
+              <h3 class="font-rubik font-black text-xl text-dark">COMBO SET<br><span class="font-kiwi text-sm font-bold text-orange">ポテト＆ドリンクセット</span></h3>
+              <span class="font-rubik text-xl text-dark font-black">+ ¥500</span>
+            </div>
+            <p class="font-kiwi text-sm text-gray line-height-long">
+              全バーガーにセット可能。揚げたてのクリスピーポテトと、自家製クラフトコーラなどのドリンクのセット。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering -->
+  <section class="section catering bg-orange text-dark" id="catering">
+    <!-- Torn top -->
+    <div class="torn-paper-top"></div>
+    
+    <div class="l-container flex-between gap-large pt-medium">
+      <div class="c-text fade-target">
+        <span class="en-label font-rubik text-white border-b-dark display-inline-block">EVENT CATERING</span>
+        <h2 class="sect-heading text-dark font-kiwi font-bold mt-small">イベント出店・<br>企業ランチケータリング承ります。</h2>
+        <p class="font-kiwi text-dark line-height-long font-bold mt-medium opacity-90">
+          音楽フェス、スポーツイベント、企業の福利厚生ランチなど、ご指定の場所へTHE BULL BURGERが伺います。<br>
+          「できたて熱々」のバーガーでイベントを盛り上げませんか？<br>
+          ミニサイズのご用意や、買取り形式など柔軟にご対応します。
+        </p>
+        <div class="mt-medium">
+          <a href="#" class="btn btn-dark btn-xl font-kiwi transform-tilt-slight box-shadow-street text-orange hover-white"><i data-lucide="mail"></i> 買取・出店のご相談はこちら</a>
+        </div>
+      </div>
+      <div class="c-img fade-target delay-1 transform-tilt border-dark box-shadow-street sp-none">
+        <img src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="ケータリング風景">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-gray-light font-kiwi pt-large pb-medium">
+    <div class="l-container">
+      <div class="f-flex flex-between mb-large border-b-zinc pb-medium">
+        <div class="f-brand">
+          <div class="f-logo font-rubik font-black text-white" style="font-size: 2.5rem;">
+            THE BULL BURGER
+          </div>
+          <p class="text-sm mt-xs">東京・神奈川巡回 グルメバーガー・キッチンカー</p>
+        </div>
+        <div class="f-sns center flex-column">
+          <p class="font-rubik text-orange mb-xs text-sm">FOLLOW US</p>
+          <div class="sns-icons flex gap-small">
+            <a href="#" class="bg-zinc text-white p-2 rounded hover-orange border-gray"><i data-lucide="instagram"></i></a>
+            <a href="#" class="bg-zinc text-white p-2 rounded hover-orange border-gray"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="f-bottom flex-between text-sm">
+        <div class="f-links flex gap-medium">
+          <a href="#" class="hover-orange">運営会社情報</a>
+          <a href="#" class="hover-orange">プライバシーポリシー</a>
+        </div>
+        <div>
+          &copy; 2025 THE BULL BURGER.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
