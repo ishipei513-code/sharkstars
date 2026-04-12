@@ -1,44 +1,330 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>エコスマイル | 不用品回収・遺品整理</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">️ エコスマイル</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>クリーン・レンジャー | 不用品回収・粗大ゴミの即日処分</title>
+  <meta name="description" content="不用品回収、粗大ゴミの処分、ゴミ屋敷の清掃なら「クリーン・レンジャー」にお任せください！最短30分で駆けつけ可能。業界最安水準の「定額乗せ放題プラン」で明朗会計。お見積り完全無料。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>不用品、<br>まるごとスッキリ。</h1><p></p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc"><br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>即日対応OK</h3><p>当日に回収可能。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>業界最安値</h3><p>他社見積もりより安くします。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>買取対応</h3><p>使えるものは買取で値引き。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
   
-  <footer class="footer">️ エコスマイル</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <i data-lucide="truck" class="text-blue"></i>
+          クリーン・レンジャー
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#about">選ばれる理由</a></li>
+          <li><a href="#plans">お得な料金プラン</a></li>
+          <li><a href="#target">回収品目表</a></li>
+          <li><a href="#flow">回収の流れ</a></li>
+        </ul>
+        <div class="h-contact">
+          <div class="tel-text">最短30分でお伺い・お見積り無料</div>
+          <a href="tel:0120-000-000" class="tel-link"><i data-lucide="phone"></i> 0120-000-000</a>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="綺麗な部屋">
+    </div>
+    <div class="hero-mask"></div>
+    <div class="l-container">
+      <div class="hero-inner fade-target">
+        
+        <div class="badge-crown">
+          🏆 地域密着口コミ No.1 / 業界最安値水準への挑戦
+        </div>
+
+        <h1 class="hero-title">
+          <span>不要なモノ、ぜんぶ丸投げ！</span><br>
+          <strong class="text-red">不用品回収・ゴミ屋敷のお片付け</strong>
+        </h1>
+
+        <div class="h-points">
+          <div class="point-badge"><i data-lucide="zap"></i> 最短30分で到着</div>
+          <div class="point-badge"><i data-lucide="banknote"></i> お見積り完全無料</div>
+          <div class="point-badge"><i data-lucide="package-check"></i> 分別・梱包は一切不要</div>
+        </div>
+
+        <div class="campaign-lp">
+          <div class="c-head">WEBサイト限定割引</div>
+          <div class="c-body">
+            お見積り金額より、無条件で<br>
+            <span class="discount">最大 <span class="num">20%</span> OFF</span>
+          </div>
+          <div class="btn-wrap">
+            <a href="#contact" class="btn btn-red btn-huge shadow-pop">
+              今すぐ無料お見積りを依頼する<i data-lucide="chevron-right"></i>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems (LP structure) -->
+  <section class="section problems bg-gray">
+    <div class="l-container">
+      <div class="p-box fade-target">
+        <h2 class="p-title">こんなお悩み、クリーン・レンジャーが<strong>即解決</strong>します！</h2>
+        <div class="p-list">
+          <div class="p-item"><i data-lucide="frown"></i> 引っ越しで出た大量のゴミを今日中に捨てたい…</div>
+          <div class="p-item"><i data-lucide="frown"></i> 重たいタンスや冷蔵庫、自分たちでは運び出せない…</div>
+          <div class="p-item"><i data-lucide="frown"></i> 部屋がゴミ屋敷状態になってしまい、恥ずかしくて誰にも頼めない…</div>
+          <div class="p-item"><i data-lucide="frown"></i> 「無料回収」と謳う怪しい業者には頼みたくない…</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / 3 Reasons -->
+  <section class="section about" id="about">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">W h y &nbsp; C h o o s e &nbsp; U s</span>
+        <h2 class="sect-heading">クリーン・レンジャーが「安心」な3つの理由</h2>
+      </div>
+
+      <div class="reason-grid">
+        <!-- 01 -->
+        <div class="r-card fade-target">
+          <div class="r-img">
+            <div class="badge-num">1</div>
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="清掃スタッフ">
+          </div>
+          <div class="r-body">
+            <h3>追加料金一切なし！<br><span class="text-blue">「明朗会計」のお約束</span></h3>
+            <p>一部の悪徳業者のような「積み込み後の追加請求」は絶対にいたしません。作業前に必ずお見積書を作成し、お客様にご納得いただいた上でのみ作業を開始します。</p>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="r-card fade-target delay-1">
+          <div class="r-img">
+            <div class="badge-num">2</div>
+            <img src="https://images.unsplash.com/photo-1574701235339-166293963473?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="トラック">
+          </div>
+          <div class="r-body">
+            <h3>急な依頼も大歓迎！<br><span class="text-blue">「最短30分」のスピード駆けつけ</span></h3>
+            <p>「退去日が迫っている」「今日中に片付けたい」などのお急ぎのトラブルにも対応可能。各エリアを巡回しているトラックが、一番近くの現場から直行いたします。</p>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="r-card fade-target delay-2">
+          <div class="r-img">
+            <div class="badge-num">3</div>
+            <img src="https://images.unsplash.com/photo-1628186411508-3064dd0be5fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="女性スタッフ">
+          </div>
+          <div class="r-body">
+            <h3>コンプライアンス順守！<br><span class="text-blue">法令に基づく「適正処理」</span></h3>
+            <p>当社は各自治体の許認可（一般廃棄物収集運搬業許可・古物商許可等）を取得済みの正規業者です。不法投棄の心配は一切ありません。女性スタッフの同行も可能です。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans (Pricing) -->
+  <section class="section plans bg-blue" id="plans">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label text-yellow">P r i c i n g</span>
+        <h2 class="sect-heading text-white">大人気！お得な「定額乗せ放題プラン」</h2>
+        <p class="text-white">パック料金には「出張費・作業代・車両代・処分代」がすべて含まれています。</p>
+      </div>
+
+      <div class="plan-wrap">
+        <!-- Keitora -->
+        <div class="p-card fade-target">
+          <div class="p-head">
+            <div class="p-tgt">1K〜1DKのお引っ越し・お片付けに</div>
+            <h3>軽トラ 乗せ放題パック</h3>
+          </div>
+          <div class="p-body">
+            <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="軽トラパック">
+            <div class="p-price">14,800<span>円〜</span></div>
+            <p>【積載目安】<br>単身用の冷蔵庫・洗濯機・薄型テレビ、電子レンジ、カラーボックス2個、布団一式、ダンボール5箱など</p>
+            <a href="#contact" class="btn btn-red fw">こちらで見積もり依頼</a>
+          </div>
+        </div>
+
+        <!-- 2t Truck (Popular) -->
+        <div class="p-card popular fade-target delay-1">
+          <div class="pop-ribbon">人気No.1</div>
+          <div class="p-head">
+            <div class="p-tgt">1LDK〜2LDK・ゴミ屋敷の清掃に</div>
+            <h3>2tトラック 乗せ放題パック</h3>
+          </div>
+          <div class="p-body">
+            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="2tトラック">
+            <div class="p-price">39,800<span>円〜</span></div>
+            <p>【積載目安】<br>大型冷蔵庫・洗濯機・ベッド・ソファ・ダイニングテーブル・タンス・自転車・大量の生活雑貨・ゴミ袋20個など</p>
+            <a href="#contact" class="btn btn-yellow fw text-black">こちらで見積もり依頼</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="plan-note fade-target delay-2">
+        ※不用品の中に「買取可能な家電（製造5年以内等）」があれば、上記金額からさらに買取額をお値引きいたします！
+      </div>
+    </div>
+  </section>
+
+  <!-- Items list -->
+  <section class="section target" id="target">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <h2 class="sect-heading">基本、なんでも回収します！</h2>
+        <p>分別不要。「とりあえずそのまま」で私たちをお呼びください。</p>
+      </div>
+
+      <div class="item-tags fade-target">
+        <span class="i-tag">冷蔵庫・洗濯機</span>
+        <span class="i-tag">テレビ・エアコン</span>
+        <span class="i-tag">ベッド・マットレス</span>
+        <span class="i-tag">ソファー・テーブル</span>
+        <span class="i-tag">タンス・衣装ケース</span>
+        <span class="i-tag">パソコン・プリンター</span>
+        <span class="i-tag">自転車・バイク</span>
+        <span class="i-tag">雑誌・本・ダンボール</span>
+        <span class="i-tag">食器・衣類・生活ゴミ</span>
+        <span class="i-tag">金庫・タイヤ</span>
+      </div>
+      <p class="center" style="margin-top:20px; font-size:0.9rem; color:#6B7280;">※生ごみ、危険物、医療性廃棄物など一部回収できないものもございます。</p>
+    </div>
+  </section>
+
+  <!-- Flow -->
+  <section class="section flow bg-gray" id="flow">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">S t e p s</span>
+        <h2 class="sect-heading">ご利用の流れ</h2>
+      </div>
+
+      <div class="step-grid">
+        <div class="s-box fade-target">
+          <div class="s-num">STEP 1</div>
+          <h3>お問い合わせ</h3>
+          <p>お電話、またはLINE・WEBフォームよりご連絡ください。オペレーターが荷物の量やご希望の日時をヒアリングします。</p>
+        </div>
+        <div class="s-box fade-target delay-1">
+          <div class="s-num">STEP 2</div>
+          <h3>無料お見積り</h3>
+          <p>現地にて荷物の量を正確に確認し、確定のお見積り金額をご提示します。この時点でキャンセルされても料金は0円です。</p>
+        </div>
+        <div class="s-box fade-target delay-2">
+          <div class="s-num">STEP 3</div>
+          <h3>搬出・積み込み</h3>
+          <p>金額にご納得いただけましたら、そのまま作業に入ります。壁や床を傷つけないよう慎重かつ迅速に搬出します。</p>
+        </div>
+        <div class="s-box fade-target">
+          <div class="s-num">STEP 4</div>
+          <h3>お支払い</h3>
+          <p>積み残しがないかご確認いただき、ご精算となります。現金または各種クレジットカード・PayPayでお支払いいただけます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box Down -->
+  <section class="section cta-bottom" id="contact">
+    <div class="l-container">
+      <div class="cta-banner fade-target">
+        <h2 class="text-white">他社より1円でも高ければご相談ください！</h2>
+        <p class="text-white">【相見積もり大歓迎】キャンセル料・出張費・お見積りはすべて無料です。</p>
+        
+        <div class="cta-action-grid">
+          <a href="#" class="btn-green-line">
+            <div class="icon"><i data-lucide="message-square"></i></div>
+            <div class="text">
+              <span class="sub">写真を送るだけで簡単見積り</span>
+              <span class="main">LINEでお問い合わせ</span>
+            </div>
+          </a>
+          <a href="tel:0120-000-000" class="btn-phone-call">
+            <div class="icon"><i data-lucide="phone-call"></i></div>
+            <div class="text">
+              <span class="sub">通話料無料 [受付 8:00〜22:00]</span>
+              <span class="main">0120-000-000</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="l-container">
+      <div class="ft-top">
+        <div class="logo">
+          <i data-lucide="truck"></i> クリーン・レンジャー
+        </div>
+        <div class="company-info">
+          〒100-0000 東京都ごみゼロ町 1-2-3<br>
+          株式会社クリーン・レンジャー<br>
+          【古物商許可】東京都公安委員会 第〇〇号<br>
+          【一般廃棄物収集運搬業許可】第〇〇号
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <p>&copy; 2025 Clean Ranger Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
