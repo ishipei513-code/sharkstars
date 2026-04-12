@@ -1,44 +1,312 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>麺屋 龍星 | 本格豚骨ラーメン</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">麺屋 龍星</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>麺屋 烈火（れっか） | 豚骨鶏ガラWスープ・自家製麺</title>
+  <meta name="description" content="国産豚骨と鶏ガラを丸三日炊き上げた濃厚Wスープ、小麦の香り豊かな自家製太麺。最後の一滴まで飲み干したくなる究極の一杯を「麺屋 烈火」でご堪能ください。お一人様大歓迎。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>限界突破。<br>十八時間煮込みスープ。</h1><p>18時間煮込んだ濃厚スープ</p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc">18時間煮込んだ濃厚スープ<br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>信頼と実績</h3><p>地域で長年の信頼をいただいております。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>プロフェッショナル</h3><p>熟練のスタッフが丁寧に対応します。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>サポート体制</h3><p>アフターフォローも万全です。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Shippori+Mincho:wght@700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
   
-  <footer class="footer">麺屋 龍星</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">麺屋 <span>烈火</span></a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#kodawari">こだわり</a></li>
+          <li><a href="#menu">おしながき</a></li>
+          <li><a href="#space">店内空間</a></li>
+          <li><a href="#access">店舗情報</a></li>
+        </ul>
+        <div class="h-social">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i data-lucide="twitter"></i></a>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="ラーメン スープ 湯気">
+    </div>
+    <div class="hero-mask"></div>
+    <div class="l-container">
+      <div class="hero-content">
+        <div class="hero-text-vertical fade-target">
+          <h1>魂の一杯、<br><span class="text-red">ここに極まる。</span></h1>
+        </div>
+        <div class="hero-catch fade-target delay-1">
+          <p>丸三日炊き上げた豚骨鶏ガラWスープ。<br>圧倒的コシの自家製麺。<br>本能を揺さぶる至高のラーメンをご賞味あれ。</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-down">
+      <span class="en">SCROLL DOWN</span>
+      <div class="line"></div>
+    </div>
+  </section>
+
+  <!-- Notice -->
+  <div class="notice-ticker">
+    <div class="ticker-wrap">
+      <div class="ticker-move">
+        <span>【夏季限定】冷やし辛味噌つけ麺、はじまりました！</span>
+        <span class="dot"></span>
+        <span>スタッフ募集中（まかない無料・髪色自由！）</span>
+        <span class="dot"></span>
+        <span>公式Instagramにて「今週の裏メニュー」配信中🔥</span>
+        <span class="dot"></span>
+        <span>【夏季限定】冷やし辛味噌つけ麺、はじまりました！</span>
+        <span class="dot"></span>
+        <span>スタッフ募集中（まかない無料・髪色自由！）</span>
+        <span class="dot"></span>
+        <span>公式Instagramにて「今週の裏メニュー」配信中🔥</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kodawari (Commitment) -->
+  <section class="section kodawari bg-black" id="kodawari">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">PASSION &amp; PRIDE</span>
+        <h2 class="sect-heading">烈火の「三つの掟」</h2>
+      </div>
+
+      <div class="k-list">
+        <!-- 01 -->
+        <div class="k-item fade-target">
+          <div class="k-img">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="濃厚スープ">
+          </div>
+          <div class="k-text">
+            <div class="k-num">01</div>
+            <h3>最後の一滴まで飲み干す<br><span class="text-red">黄金比Wスープ</span></h3>
+            <p>厳選した国産の豚骨と鶏ガラを、火加減を徹底管理しながら丸三日（72時間）煮込み続けます。骨の髄から旨味だけを抽出し、臭みを削ぎ落とした超濃厚かつクリーミーなスープ。器の底を見るまでレンゲが止まりません。</p>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="k-item reverse fade-target delay-1">
+          <div class="k-img">
+            <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="自家製麺">
+          </div>
+          <div class="k-text">
+            <div class="k-num">02</div>
+            <h3>スープを迎え撃つ<br><span class="text-red">国産小麦100%自家製麺</span></h3>
+            <p>強いスープに負けないよう、店内の製麺機で毎朝打ち上げる自家製太麺。北海道産「ゆめちから」を中心に数種類の小麦を独自ブレンドし、圧倒的なコシと小麦の豊かな香りを実現しました。噛むほどに旨味が弾けます。</p>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="k-item fade-target delay-2">
+          <div class="k-img">
+            <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="チャーシュー 肉">
+          </div>
+          <div class="k-text">
+            <div class="k-num">03</div>
+            <h3>秘伝の醤油ダレに漬け込んだ<br><span class="text-red">とろける極厚焼豚</span></h3>
+            <p>豚バラ肉を表面がカリッとするまで炙り、創業から継ぎ足している秘伝の熟成醤油ダレにじっくり二日間漬け込みます。箸でホロホロと崩れるほど柔らかく、白ごはんとの相性も抜群の「主役級」チャーシューです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="section menu" id="menu">
+    <div class="menu-bg"></div>
+    <div class="l-container">
+      <div class="sect-header center fade-target" style="position:relative; z-index:2;">
+        <span class="en-label text-black">OUR MENU</span>
+        <h2 class="sect-heading text-black">おしながき</h2>
+      </div>
+
+      <div class="m-grid" style="position:relative; z-index:2;">
+        <!-- Card 1 -->
+        <div class="m-card fade-target">
+          <div class="m-img">
+            <img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="特製 烈火ラーメン">
+            <div class="m-badge">人気 No.1</div>
+          </div>
+          <div class="m-body">
+            <h3>特製 烈火ラーメン</h3>
+            <p>極厚チャーシュー3枚、味玉、海苔増量のフル装備。当店のすべてを味わえる看板メニュー。</p>
+            <div class="price">1,150<span class="yen">円</span></div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="m-card fade-target delay-1">
+          <div class="m-img">
+            <img src="https://images.unsplash.com/photo-1623341214825-9f4f963727da?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="旨辛 濃厚つけ麺">
+          </div>
+          <div class="m-body">
+            <h3>旨辛 濃厚つけ麺</h3>
+            <p>自家製ブレンドの辛味スパイスを効かせたドロドロのつけ汁に、冷水で締めた極太麺をダイブ。</p>
+            <div class="price">980<span class="yen">円</span></div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="m-card fade-target delay-2">
+          <div class="m-img">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="あっさり 醤油ラーメン">
+          </div>
+          <div class="m-body">
+            <h3>極み 醤油そば（清湯）</h3>
+            <p>鶏の旨味を極限まで引き出した透き通る清湯スープ。飲んだ後のシメや女性にも大人気の一杯。</p>
+            <div class="price">850<span class="yen">円</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-menu fade-target" style="position:relative; z-index:2;">
+        <h3>サイドメニュー ＆ トッピング</h3>
+        <ul class="sm-list">
+          <li><span>自家製 焼き餃子（5個）</span><span>350円</span></li>
+          <li><span>炙りチャーシューマヨ丼</span><span>380円</span></li>
+          <li><span>こだわりの卵かけご飯（TKG）</span><span>250円</span></li>
+          <li><span>白ごはん（おかわり無料）</span><span>150円</span></li>
+        </ul>
+        <div class="sm-tags">
+          <span class="tag">#替え玉 150円</span><span class="tag">#味玉 120円</span><span class="tag">#ネギ盛り 100円</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Space & Instagram -->
+  <section class="section space bg-black" id="space">
+    <div class="l-container">
+      <div class="flex-wrap">
+        
+        <div class="s-left fade-target">
+          <span class="en-label">INTERIOR</span>
+          <h2 class="sect-heading">女性お一人様でも、<br>入りやすい空間を。</h2>
+          <p class="s-desc">ラーメン店特有の「油っぽい・入りづらい」イメージを払拭。黒を基調としたスタイリッシュで清潔な店内は、女性のお一人様やカップルでのご来店も非常に多いのが特徴です。</p>
+          <ul class="s-features">
+            <li><i data-lucide="check"></i> 紙エプロン・ヘアゴム無料完備</li>
+            <li><i data-lucide="check"></i> 荷物置きバスケット全席配置</li>
+            <li><i data-lucide="check"></i> カウンター10席 / 4名掛けテーブル3卓</li>
+          </ul>
+        </div>
+
+        <div class="s-right fade-target delay-1">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="清潔な店内カウンター">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Access & Info -->
+  <section class="section access" id="access">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">ACCESS &amp; INFO</span>
+        <h2 class="sect-heading">店舗情報</h2>
+      </div>
+
+      <div class="a-wrap fade-target">
+        <div class="a-info">
+          <div class="info-block">
+            <h3>麺屋 烈火（REKKA）本店</h3>
+            <p>〒160-0000<br>東京都新宿区ラーメン町 1-2-3</p>
+            <p><strong>[電話]</strong> <a href="tel:03-0000-0000" style="color:var(--c-accent)">03-0000-0000</a></p>
+          </div>
+          
+          <div class="info-block">
+            <h3>営業時間</h3>
+            <p><strong>[昼の部]</strong> 11:00 - 15:00<br><strong>[夜の部]</strong> 17:30 - 23:00 (L.O 22:45)</p>
+            <p>※スープが売り切れ次第、終了となります。</p>
+            <p><strong>[定休日]</strong> 毎週水曜日</p>
+          </div>
+
+          <div class="info-block">
+            <h3>その他</h3>
+            <p>・当店は「完全食券制（現金のみ）」です。<br>・専用駐車場3台あり（近隣にコインパーキング有）<br>・全席禁煙</p>
+          </div>
+          
+          <div class="sns-box">
+            <p>最新の限定メニューや営業状況はInstagramにて！</p>
+            <a href="#" class="btn btn-insta"><i data-lucide="instagram"></i> 公式Instagramを見る</a>
+          </div>
+        </div>
+
+        <div class="a-map">
+          <!-- Google Map Placeholder -->
+          <div class="map-placeholder">
+            <span><i data-lucide="map-pin"></i> Google Map が表示されます</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="l-container">
+      <div class="ft-logo">
+        麺屋 <span>烈火</span>
+      </div>
+      <div class="ft-links">
+        <a href="#kodawari">こだわり</a>
+        <a href="#menu">おしながき</a>
+        <a href="#space">店内空間</a>
+        <a href="#access">アクセス</a>
+      </div>
+      <div class="ft-bottom">
+        <p>&copy; 2025 Menya REKKA. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
