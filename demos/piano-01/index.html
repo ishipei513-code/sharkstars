@@ -1,48 +1,304 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>Piano Studio Legato | 音楽のある暮らし</title><meta name="description" content="お子様から大人まで。初心者歓迎。">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo"> Legato</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アリアピアノ教室 | 幼児から大人までの個人レッスン</title>
+  <meta name="description" content="音を奏でる喜びを、すべての人へ。初心者のお子様から、シニアの趣味、保育士を目指す方まで。一人ひとりのペースに寄り添う完全マンツーマンのピアノ教室です。無料体験レッスン受付中。">
   
-  <!-- 1. HERO -->
-  <section class="hero"><div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="hero-box reveal"><h1>音楽のある、<br>豊かな暮らしを。</h1><p>お子様から大人まで。初心者歓迎。</p></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><span class="sub">Philosophy</span><h2>美しさを引き出す、<br>上質な時間。</h2><p>お子様から大人まで。初心者歓迎。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-  
-  <!-- 3. FEATURES -->
-  <section class="section bg-light"><div class="container"><h2 class="center reveal">Our Strengths</h2><div class="feat-list">
-    <div class="feat reveal" style="transition-delay:0s"><h3><i data-lucide="check"></i> 個人レッスン</h3><p>完全マンツーマンで丁寧に指導。</p></div><div class="feat reveal" style="transition-delay:0.1s"><h3><i data-lucide="check"></i> 3歳から対応</h3><p>リトミックから本格レッスンまで。</p></div><div class="feat reveal" style="transition-delay:0.2s"><h3><i data-lucide="check"></i> コンクール指導</h3><p>音大受験・コンクール実績あり。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="center reveal">Gallery</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1512496015851-a1fbcf69b6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-    </div>
-  </div></section>
-
-  <!-- 5. MENU & PRICE -->
-  <section class="section bg-light"><div class="container reveal"><h2 class="center">Menu & Price</h2>
-    <div class="price-box"><div class="row"><div class="name">基本コース</div><div class="dots"></div><div class="cost">要見積</div></div><div class="row"><div class="name">プレミアム</div><div class="dots"></div><div class="cost">要相談</div></div></div>
-  </div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="center">FAQ</h2>
-    <div class="faq-box">
-      <details><summary>予約は必要ですか？</summary><p>はい、お客様一人ひとりに合わせたサービスを提供するため、完全予約制となっております。</p></details>
-      <details><summary>キャンセル料はかかりますか？</summary><p>前日までのキャンセルは無料です。当日のキャンセルは料金の50%を頂戴しております。</p></details>
-      <details><summary>駐車場はありますか？</summary><p>店舗の近くに2台分の専用駐車場をご用意しております。</p></details>
-    </div>
-  </div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>ご予約・お問い合わせ</h2><p>特別な体験を、あなたに。</p><a href="#" class="btn">今すぐ予約する</a></div></section>
-  
-  <footer class="footer"> Legato</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <i data-lucide="music-4" class="logo-icon"></i>
+          Aria Piano School
+          <span>アリアピアノ教室</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#concept">教室について</a></li>
+          <li><a href="#courses">コースと料金</a></li>
+          <li><a href="#instructor">講師紹介</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+          <li><a href="#access">アクセス</a></li>
+        </ul>
+        <div class="h-action">
+          <a href="#trial" class="btn btn-nav">無料体験レッスン</a>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1552422535-c45813c61732?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="ピアノを弾く手">
+    </div>
+    <div class="hero-mask"></div>
+    <div class="l-container">
+      <div class="hero-content fade-target">
+        <span class="en-title">Play your own melody.</span>
+        <h1 class="hero-title">音楽が、日常を<br>少しだけ<span class="text-gold">特別</span>にする。</h1>
+        <p class="hero-desc">はじめて鍵盤に触れるお子様も、<br>昔弾いていたピアノを再開したい大人の方も。<br>アリアピアノ教室は、あなたの「弾きたい」気持ちを全力でサポートします。</p>
+        <div class="hero-actions">
+          <a href="#trial" class="btn btn-primary">無料体験レッスンに申し込む</a>
+        </div>
+      </div>
+    </div>
+    <div class="floating-notes">
+      <i data-lucide="music" class="note n1"></i>
+      <i data-lucide="music-2" class="note n2"></i>
+    </div>
+  </section>
+
+  <!-- Notice -->
+  <div class="notice">
+    <div class="l-container flex-center">
+      <span class="badge">News</span>
+      <p>【2025年 春の生徒募集について】平日夕方（16:00〜18:00）の枠に若干の空きが出ました。先着順となりますのでご希望の方はお早めにお問い合わせください。</p>
+    </div>
+  </div>
+
+  <!-- Concept / About -->
+  <section class="section concept" id="concept">
+    <div class="l-container">
+      <div class="c-wrap">
+        <div class="c-text fade-target">
+          <span class="en-label">P h i l o s o p h y</span>
+          <h2 class="sect-heading">一人ひとりの歩幅に合わせた<br>マンツーマン・レッスン</h2>
+          <div class="desc">
+            <p>楽譜が全く読めなくても大丈夫です。</p>
+            <p>アリアピアノ教室では、マニュアル通りの画一的な指導はいたしません。<br>「クラシックを本格的に学びたい」「好きなJ-POPのあの曲だけ弾けるようになりたい」「保育士試験のために基礎を固めりたい」など、生徒さんの数だけ目標や楽しみ方があります。</p>
+            <p>長年の豊かな指導経験を活かし、対話を通じてあなただけのカリキュラムを作成。<br>完全防音の落ち着いた空間で、スタインウェイ（グランドピアノ）の美しい響きに包まれながら、焦らず楽しく音楽と向き合う時間を提供します。</p>
+          </div>
+        </div>
+        <div class="c-img fade-target delay-1">
+          <div class="img-frame">
+            <img src="https://images.unsplash.com/photo-1550438139-4458d9e68c8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="グランドピアノと楽譜">
+          </div>
+          <div class="deco-box"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses & Fees -->
+  <section class="section courses bg-cream" id="courses">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">C o u r s e s &amp; F e e s</span>
+        <h2 class="sect-heading">コースと料金（お月謝）</h2>
+        <p>※全コース共通：入会金 5,000円 / 施設維持費 1,000円(半年毎)<br>※教材費はレベルに合わせて別途実費となります。</p>
+      </div>
+
+      <div class="course-grid">
+        <!-- Kids -->
+        <div class="course-card fade-target">
+          <div class="c-img">
+            <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ピアノを弾く子供">
+          </div>
+          <div class="c-body">
+            <h3>こどもピアノコース<br><span>(幼児〜中学生)</span></h3>
+            <p>リトミック要素を取り入れた楽しいレッスンから、基礎的な読譜力、表現力を養います。年1回の発表会を目標にステップアップを目指します。</p>
+            <div class="c-price-box">
+              <div class="freq">年間40回 / 1回30分</div>
+              <div class="price">7,000<span>円〜 / 月</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adults -->
+        <div class="course-card fade-target delay-1">
+          <div class="c-img">
+            <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="大人のピアノ">
+          </div>
+          <div class="c-body">
+            <h3>大人のためのピアノコース<br><span>(高校生〜シニア)</span></h3>
+            <p>憧れの曲を弾いてみたい、脳トレとして始めたい等、大人の趣味を応援します。忙しい方のために回数制（チケット制）もご用意しています。</p>
+            <div class="c-price-box">
+              <div class="freq">月2回 / 1回45分</div>
+              <div class="price">8,000<span>円〜 / 月</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional -->
+        <div class="course-card fade-target delay-2">
+          <div class="c-img">
+            <img src="https://images.unsplash.com/photo-1465809710329-37e408ec21ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="楽譜">
+          </div>
+          <div class="c-body">
+            <h3>資格対策・専門コース<br><span>(保育士・教諭・音大受験)</span></h3>
+            <p>保育士試験の実技対策（弾き歌い等）から、音楽大学受験に向けたソルフェージュ、高度な演奏技術の指導まで専門的に特訓します。</p>
+            <div class="c-price-box">
+              <div class="freq">1レッスン制 / 60分</div>
+              <div class="price">5,000<span>円 / 回</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instructor -->
+  <section class="section instructor" id="instructor">
+    <div class="l-container">
+      <div class="i-wrap">
+        <div class="i-img fade-target">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ピアノ講師">
+        </div>
+        <div class="i-info fade-target delay-1">
+          <span class="en-label">I n s t r u c t o r</span>
+          <h2 class="sect-heading">講師紹介</h2>
+          <div class="i-name">
+            <span class="job">主宰・ピアノ講師</span>
+            音羽 香澄 <span class="en">Kasumi Otowa</span>
+          </div>
+          <div class="i-profile">
+            <p>東京音楽大学 器楽専攻（ピアノ）卒業。中学校・高等学校教諭一種免許状（音楽）取得。<br>卒業後、大手音楽教室の専任講師として10年間稼働し、幼児からシニアまで延べ300名以上の指導にあたる。コンクール入賞者や音楽大学合格者も多数輩出。</p>
+            <p>「ピアノが弾けるって本当に楽しい！」と心の底から感じていただけるレッスンを心がけています。時には厳しく、でもいつも笑顔が絶えないような、生徒さんにとって居心地の良い第二の家のような教室になれば幸いです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq bg-cream" id="faq">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">Q &amp; A</span>
+        <h2 class="sect-heading">よくあるご質問</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <details class="faq-item fade-target" open>
+          <summary>自宅にピアノがなくても始められますか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>はい、始められます。最初は電子ピアノやキーボードでも構いません。ただし、上達していくにつれて「鍵盤のタッチ」や「音の響き」の違いが出てくるため、半年〜1年後くらいを目安に、アップライトピアノや88鍵のしっかりとした電子ピアノのご準備をおすすめしております（購入のご相談にも乗ります）。</p></div>
+        </details>
+        <details class="faq-item fade-target">
+          <summary>子どもが落ち着きがないのですが、レッスンを受けられますか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>もちろんです！幼児期は集中力が続かないのが当たり前です。はじめのうちはずっとピアノの前に座っているのではなく、リズム遊びや歌を取り入れながら、楽しく音楽に触れるところからスタートします。</p></div>
+        </details>
+        <details class="faq-item fade-target">
+          <summary>急に熱を出したり、学校行事で行けない場合の「振替レッスン」はありますか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>はい、ございます。レッスン前日までにご連絡をいただければ、可能な限り別の日程で振替レッスンを調整させていただきます。（※当日キャンセルの場合は原則として振替不可となりますのでご了承ください。）</p></div>
+        </details>
+        <details class="faq-item fade-target">
+          <summary>大人の男性ですが、通うことは可能ですか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>はい、大歓迎です。過去にピアノ経験がなく、定年後の新しい趣味として60代からスタートされた男性の生徒さんも多数いらっしゃいます。「エリーゼのためにを弾きたい」など、目標とする曲に向けてマイペースに進めていきましょう。</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Trial -->
+  <section class="section cta" id="trial">
+    <div class="l-container">
+      <div class="cta-inner fade-target">
+        <div class="cta-border">
+          <i data-lucide="music-3" class="cta-icon"></i>
+          <h2 class="cta-title">まずは、ピアノに<br>触れてみませんか？</h2>
+          <p class="cta-desc">教室の雰囲気や講師との相性を確められる「無料体験レッスン（30分）」を随時受付中です。<br>無理な勧誘等は一切ございませんので、お気軽にお申し込みください。</p>
+          <div class="cta-actions">
+            <a href="#" class="btn btn-primary btn-large">無料体験レッスンのお申し込み</a>
+            <a href="#" class="btn btn-outline btn-large">お問い合わせフォームへ</a>
+          </div>
+          <div class="cta-tel">
+            <span>お電話でのご予約・お問い合わせ（平日 10:00 - 19:00）</span>
+            <a href="tel:03-0000-0000" class="tel-number"><i data-lucide="phone"></i> 03-0000-0000</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access & Footer -->
+  <footer class="footer" id="access">
+    <div class="l-container">
+      <div class="ft-grid">
+        <div class="ft-info">
+          <div class="logo">
+            <i data-lucide="music-4"></i>
+            Aria Piano School
+            <span>アリアピアノ教室</span>
+          </div>
+          <p class="address">
+            〒100-0000<br>
+            東京都目黒区ピアノ町 1-2-3<br>
+            （東急東横線「〇〇駅」より徒歩5分）<br><br>
+            ※専用駐車場1台あり。自転車でお越しの方は教室前に駐輪可能です。
+          </p>
+          <div class="social-links">
+            <a href="#"><i data-lucide="instagram"></i></a>
+            <a href="#"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="ft-map">
+          <div class="map-ph">
+            <i data-lucide="map-pin"></i> Google Map が表示されます
+          </div>
+        </div>
+      </div>
+      
+      <div class="ft-bottom">
+        <p>&copy; 2025 Aria Piano School. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+    
+    // Accordion
+    document.querySelectorAll('details').forEach(detail => {
+      detail.addEventListener('toggle', () => {
+        const icon = detail.querySelector('.faq-icon');
+        icon.style.transform = detail.open ? 'rotate(180deg)' : 'rotate(0deg)';
+      });
+    });
+  </script>
+</body>
+</html>
