@@ -1,48 +1,366 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>PawPaw ペットサロン | 大切な家族をキレイに</title><meta name="description" content="トリミング・シャンプー・歯磨き。送迎あり。">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">PawPaw</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Salon Fluffy | 完全個室のプライベートトリミングサロン</title>
+  <meta name="description" content="うちの子が、もっと可愛く、もっと笑顔に。ケージフリーでストレスゼロの環境と、皮膚に優しいマイクロバブルシャワーを標準完備した、完全予約制の犬専門トリミングサロン「Fluffy（フラッフィ）」です。">
   
-  <!-- 1. HERO -->
-  <section class="hero"><div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="hero-box reveal"><h1>大切な家族を、<br>もっとキレイに。</h1><p>トリミング・シャンプー・歯磨き。送迎あり。</p></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
   
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><span class="sub">Philosophy</span><h2>美しさを引き出す、<br>上質な時間。</h2><p>トリミング・シャンプー・歯磨き。送迎あり。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-  
-  <!-- 3. FEATURES -->
-  <section class="section bg-light"><div class="container"><h2 class="center reveal">Our Strengths</h2><div class="feat-list">
-    <div class="feat reveal" style="transition-delay:0s"><h3><i data-lucide="check"></i>  低刺激シャンプー</h3><p>オーガニックシャンプー使用。</p></div><div class="feat reveal" style="transition-delay:0.1s"><h3><i data-lucide="check"></i>  送迎あり</h3><p>ご自宅までお迎え・お届け。</p></div><div class="feat reveal" style="transition-delay:0.2s"><h3><i data-lucide="check"></i>  仕上がり写真</h3><p>かわいい写真をプレゼント。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="center reveal">Gallery</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1512496015851-a1fbcf69b6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-    </div>
-  </div></section>
-
-  <!-- 5. MENU & PRICE -->
-  <section class="section bg-light"><div class="container reveal"><h2 class="center">Menu & Price</h2>
-    <div class="price-box"><div class="row"><div class="name">基本コース</div><div class="dots"></div><div class="cost">要見積</div></div><div class="row"><div class="name">プレミアム</div><div class="dots"></div><div class="cost">要相談</div></div></div>
-  </div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="center">FAQ</h2>
-    <div class="faq-box">
-      <details><summary>予約は必要ですか？</summary><p>はい、お客様一人ひとりに合わせたサービスを提供するため、完全予約制となっております。</p></details>
-      <details><summary>キャンセル料はかかりますか？</summary><p>前日までのキャンセルは無料です。当日のキャンセルは料金の50%を頂戴しております。</p></details>
-      <details><summary>駐車場はありますか？</summary><p>店舗の近くに2台分の専用駐車場をご用意しております。</p></details>
-    </div>
-  </div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>ご予約・お問い合わせ</h2><p>特別な体験を、あなたに。</p><a href="#" class="btn">今すぐ予約する</a></div></section>
-  
-  <footer class="footer">PawPaw</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <i data-lucide="bone" class="text-pink"></i>
+          <span>
+            <small class="text-pink">Dog Salon</small>
+            Fluffy
+          </span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#concept"><i data-lucide="heart" class="nav-icon"></i>コンセプト</a></li>
+          <li><a href="#menu"><i data-lucide="scissors" class="nav-icon"></i>メニュー・料金</a></li>
+          <li><a href="#gallery"><i data-lucide="camera" class="nav-icon"></i>スタイル</a></li>
+          <li><a href="#faq"><i data-lucide="help-circle" class="nav-icon"></i>よくある質問</a></li>
+        </ul>
+        <div class="h-btn sp-none">
+          <a href="#" class="btn btn-line btn-round"><i data-lucide="message-circle"></i> LINE予約</a>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero bg-pink-light">
+    <!-- Decorative background elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+    
+    <div class="l-container flex-hero">
+      <div class="h-text fade-target">
+        <div class="h-catch text-pink font-nunito bg-white box-shadow catch-badge">
+          <i data-lucide="sparkles"></i> Stress-Free Trimming
+        </div>
+        <h1 class="hero-title text-brown">
+          うちの子が、<br>
+          もっと<span class="text-pink">可愛く</span>、<br>
+          もっと<span class="text-pink">笑顔</span>に。
+        </h1>
+        <p class="hero-desc text-brown-light font-bold">
+          ケージに入れず、のびのび遊べる。<br>
+          皮膚に優しい極上シャワーと、負担の少ないカット術。<br>
+          ワンちゃんにとって「楽しい場所」になる、<br class="sp-none">完全個室のプライベートサロンです。
+        </p>
+        <div class="h-cta">
+          <a href="#" class="btn btn-line btn-large btn-round pulse-anim">
+            <i data-lucide="message-circle"></i> LINEで空き状況を見る
+          </a>
+        </div>
+      </div>
+      <div class="h-image fade-target delay-1">
+        <div class="hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="トリミングされて笑顔の犬" class="main-img">
+          <!-- Floating badge -->
+          <div class="float-badge bg-white text-brown box-shadow">
+            <span class="text-pink font-nunito text-lg">NEW!</span>
+            <span class="text-sm">初回ご利用のお客様<br><b>全メニュー20%OFF</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Wave Bottom -->
+    <div class="wave-bottom">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.41,115.65,189.6,98.63,234.39,85.86,278.43,71.21,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Notice -->
+  <section class="notice">
+    <div class="l-container center">
+      <div class="n-inner bg-white border-pink box-shadow">
+        <span class="n-label bg-pink text-white font-bold"><i data-lucide="bell" class="icon-sm"></i> お知らせ</span>
+        <p class="text-brown">12月のご予約枠はすべて満了いたしました。現在はキャンセル待ちのみ受け付けております。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concept -->
+  <section class="section concept" id="concept">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label font-nunito text-pink">Our Concept</span>
+        <h2 class="sect-heading text-brown"><i data-lucide="paw-print" class="icon-lg text-pink-light"></i><br>ワンちゃんファーストの<br>3つのお約束</h2>
+      </div>
+
+      <div class="c-wrap">
+        <div class="c-card fade-target">
+          <div class="c-img">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="遊ぶ犬">
+          </div>
+          <div class="c-body bg-pink-light">
+            <span class="c-num font-nunito text-pink">01</span>
+            <h3 class="text-brown">ケージフリーの自由な空間</h3>
+            <p class="text-brown-light text-sm">施術前後はケージに閉じ込めず、プレイルームでのびのび過ごせます。他のワンちゃんが苦手な子には完全に仕切られた個室をご案内するため、ストレスがかかりません。</p>
+          </div>
+        </div>
+        
+        <div class="c-card fade-target delay-1 mt-card">
+          <div class="c-img">
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="お風呂に入る犬">
+          </div>
+          <div class="c-body bg-pink-light">
+            <span class="c-num font-nunito text-pink">02</span>
+            <h3 class="text-brown">全コース「マイクロバブル」無料</h3>
+            <p class="text-brown-light text-sm">毛穴の奥の汚れまでスッキリ落とし、皮膚トラブルを防ぐ「高濃度マイクロバブルシャワー」を全コースに標準で完備。アトピーや肌の弱い子も安心です。</p>
+          </div>
+        </div>
+
+        <div class="c-card fade-target delay-2 mt-card-2">
+          <div class="c-img">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="トリマーさん">
+          </div>
+          <div class="c-body bg-pink-light">
+            <span class="c-num font-nunito text-pink">03</span>
+            <h3 class="text-brown">スピードより「負担のなさ」</h3>
+            <p class="text-brown-light text-sm">嫌がることを無理やり行わず、おやつを食べたり休憩を挟んだりしながら、その子のペースに合わせて施術します。トリミング嫌いな子もご相談ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu / Price -->
+  <section class="section menu bg-pink-light relative" id="menu">
+    <!-- Top wave -->
+    <div class="wave-top">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.41,115.65,189.6,98.63,234.39,85.86,278.43,71.21,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+
+    <div class="l-container max-w-800">
+      <div class="sect-header center fade-target">
+        <span class="en-label font-nunito text-pink">Menu & Price</span>
+        <h2 class="sect-heading text-brown"><i data-lucide="cut" class="icon-lg text-pink-light"></i><br>メニュー・料金表</h2>
+        <p class="text-brown-light text-sm">
+          <span>【シャンプーコース】 爪切り/耳掃除/足裏バリカン/肛門腺絞り込み</span><br>
+          <span>【カットコース】 シャンプーコース ＋ 全身カット</span><br>
+          ※料金は全て税込表示です。
+        </p>
+      </div>
+
+      <div class="price-list fade-target delay-1 border-pink bg-white box-shadow">
+        <!-- Small Dogs -->
+        <div class="p-category border-bottom-pink">
+          <h3 class="text-white bg-pink p-category-title"><i data-lucide="dog"></i> 小型犬</h3>
+          <div class="p-row">
+            <div class="p-name text-brown font-bold">チワワ（スムース）</div>
+            <div class="p-price"><span class="label">S</span> ¥ 4,400 <span class="label">C</span> ¥ 5,500 </div>
+          </div>
+          <div class="p-row">
+            <div class="p-name text-brown font-bold">ダックス / チワワ（ロング）</div>
+            <div class="p-price"><span class="label">S</span> ¥ 5,500 <span class="label">C</span> ¥ 7,150 </div>
+          </div>
+          <div class="p-row">
+            <div class="p-name text-brown font-bold">トイプードル / ポメラニアン / マルチーズ</div>
+            <div class="p-price"><span class="label">S</span> ¥ 6,600 <span class="label">C</span> ¥ 8,800 </div>
+          </div>
+        </div>
+        
+        <!-- Medium Dogs -->
+        <div class="p-category border-bottom-pink">
+          <h3 class="text-white bg-pink p-category-title"><i data-lucide="dog"></i> 中型犬</h3>
+          <div class="p-row">
+            <div class="p-name text-brown font-bold">柴犬 / フレンチブルドッグ</div>
+            <div class="p-price"><span class="label">S</span> ¥ 7,700 <span class="label">C</span> ¥ 9,900 </div>
+          </div>
+          <div class="p-row">
+            <div class="p-name text-brown font-bold">コーギー / ビーグル</div>
+            <div class="p-price"><span class="label">S</span> ¥ 8,800 <span class="label">C</span> ¥ 10,450 </div>
+          </div>
+        </div>
+
+        <!-- Spa Options -->
+        <div class="p-category">
+          <h3 class="text-white bg-brown p-category-title"><i data-lucide="sparkles"></i> エステ・オプション</h3>
+          <div class="p-row">
+            <div class="p-name text-brown-light">オーガニック・ハーブパック</div>
+            <div class="p-price">¥ 2,200〜</div>
+          </div>
+          <div class="p-row">
+            <div class="p-name text-brown-light">ましゅまろ泡はちみつパック</div>
+            <div class="p-price">¥ 1,650〜</div>
+          </div>
+          <div class="p-row">
+            <div class="p-name text-brown-light">トリートメント / デンタルケア</div>
+            <div class="p-price">各 ¥ 550</div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="text-center text-brown-light text-sm mt-medium">※ もつれや毛玉が多い場合、サイズが規定より大きい場合は追加料金(+¥550〜)を頂戴いたします。</p>
+    </div>
+
+    <!-- Bottom wave -->
+    <div class="wave-bottom">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.41,115.65,189.6,98.63,234.39,85.86,278.43,71.21,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section gallery" id="gallery">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label font-nunito text-pink">Trimming Style</span>
+        <h2 class="sect-heading text-brown"><i data-lucide="camera" class="icon-lg text-pink-light"></i><br>可愛いお客様たち</h2>
+      </div>
+
+      <div class="g-grid">
+        <div class="g-item fade-target">
+          <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="トイプードル">
+          <div class="g-tag font-nunito bg-pink text-white">#ToyPoodle</div>
+        </div>
+        <div class="g-item fade-target delay-1">
+          <img src="https://images.unsplash.com/photo-1588022274154-209255850e05?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ポメラニアン">
+          <div class="g-tag font-nunito bg-pink text-white">#Pomeranian</div>
+        </div>
+        <div class="g-item fade-target delay-2">
+          <img src="https://images.unsplash.com/photo-1537151608804-ea6f0a3ecad0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="チワワ">
+          <div class="g-tag font-nunito bg-pink text-white">#Chihuahua</div>
+        </div>
+        <div class="g-item fade-target">
+          <img src="https://images.unsplash.com/photo-1625316708582-7c38734be31d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="柴犬">
+          <div class="g-tag font-nunito bg-pink text-white">#ShibaInu</div>
+        </div>
+      </div>
+      <div class="center mt-medium">
+        <p class="text-brown-light text-sm"><i data-lucide="instagram" class="icon-sm text-pink"></i> Instagramで毎日可愛い姿をアップしています！</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / Preparation -->
+  <section class="section faq bg-pink-light" id="faq" style="border-radius: 40px 40px 0 0;">
+    <div class="l-container max-w-800">
+      <div class="sect-header center fade-target">
+        <span class="en-label font-nunito text-pink">F.A.Q</span>
+        <h2 class="sect-heading text-brown"><i data-lucide="help-circle" class="icon-lg text-pink-light"></i><br>よくある質問・初めての方へ</h2>
+      </div>
+
+      <div class="faq-list fade-target delay-1">
+        <details class="f-desc bg-white border-pink box-shadow" open>
+          <summary class="text-brown font-bold q-text">初回ご来店時に必要なものはありますか？ <i data-lucide="chevron-down" class="text-pink"></i></summary>
+          <div class="f-ans text-brown-light border-top-pink text-sm">
+            ご新規のお客様は、必ず<strong>「1年以内の狂犬病予防接種証明書」</strong>および<strong>「混合ワクチン接種証明書（5種以上）」</strong>の2点をお持ちください。院内感染予防のため、ご提示いただけない場合は施術をお断りさせていただいております。
+          </div>
+        </details>
+        
+        <details class="f-desc bg-white border-pink box-shadow">
+          <summary class="text-brown font-bold q-text">シニア犬（老犬）でもトリミングしてもらえますか？ <i data-lucide="chevron-down" class="text-pink"></i></summary>
+          <div class="f-ans text-brown-light border-top-pink text-sm">
+            原則として10歳までの受付とさせていただいておりますが、健康状態によっては対応可能な場合がございます。持病がある子や高齢のワンちゃんは、ご予約の前に一度お電話にてご相談ください。（状態によってはお断りさせていただく場合もございます）
+          </div>
+        </details>
+        
+        <details class="f-desc bg-white border-pink box-shadow">
+          <summary class="text-brown font-bold q-text">車で行きたいのですが、駐車場はありますか？ <i data-lucide="chevron-down" class="text-pink"></i></summary>
+          <div class="f-ans text-brown-light border-top-pink text-sm">
+            はい、店舗前に専用駐車場を2台分ご用意しております。もし満車の場合は、近隣の提携コインパーキングをご利用ください（駐車券をお渡ししております）。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section class="cta bg-pink text-white center" style="padding: 60px 20px;">
+    <h2 class="font-bold mb-small">ご予約・お問い合わせはこちらから</h2>
+    <p class="text-sm mb-large">LINEのトーク画面から「希望日時」「犬種」を送るだけで簡単にご予約可能です。</p>
+    <a href="#" class="btn btn-line btn-large btn-round box-shadow hover-scale">
+      <i data-lucide="message-circle"></i> LINEで予約・質問する
+    </a>
+    <p class="text-sm mt-medium">📞 お電話でのご予約：<b class="font-nunito" style="font-size:1.2rem;">03-0000-0000</b> (営業時間 10:00 - 19:00)</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-white border-top-pink">
+    <div class="l-container">
+      <div class="f-content flex-between">
+        <div class="f-info">
+          <div class="f-logo font-nunito font-bold text-pink mb-small" style="font-size: 1.5rem;">
+            <i data-lucide="bone"></i> Fluffy
+          </div>
+          <p class="text-brown-light text-sm" style="line-height:2;">
+            完全個室のプライベートサロン<br>
+            〒100-0000 東京都渋谷区ドッグ 1-2-3<br>
+            営業時間：10:00 - 19:00（水曜定休日）<br>
+            動物取扱業登録番号：第000000号
+          </p>
+        </div>
+        
+        <div class="f-sns center">
+          <p class="text-brown font-bold text-sm mb-small">Follow Us!</p>
+          <div class="sns-icons">
+            <a href="#" class="bg-pink-light text-pink"><i data-lucide="instagram"></i></a>
+            <a href="#" class="bg-pink-light text-pink"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="f-bottom center text-brown-light text-sm pt-medium mt-medium border-top-pink">
+        &copy; 2025 Dog Salon Fluffy. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
