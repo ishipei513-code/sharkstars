@@ -160,6 +160,7 @@ ul { list-style: none; }
 .h-full { height: 100%; }
 .h-screen { height: 100vh; }
 .min-h-80vh { min-height: 80vh; }
+.h-150 { height: 150px; }
 
 .text-xs { font-size: 0.85rem; }
 .text-sm { font-size: 1rem; }
