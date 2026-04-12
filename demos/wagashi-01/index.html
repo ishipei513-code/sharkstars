@@ -1,48 +1,267 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>和菓子 花月 | 四季の彩り</title><meta name="description" content="美しい上生菓子">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">和菓子 花月</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>御菓子司 結心堂 | 創業百余年・手造り和菓子</title>
+  <meta name="description" content="四季を映す、手仕事の甘味。結心堂（ゆうしんどう）は、厳選した北海道産小豆と清らかな湧き水を使用し、一つ一つ手練りで作る季節の生菓子や名物の大福をお届けいたします。ご贈答・手土産にもぜひ。">
   
-  <!-- 1. HERO -->
-  <section class="hero"><div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="hero-box reveal"><h1>四季を彩る<br>和の心。</h1><p>美しい上生菓子</p></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
   
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><span class="sub">Philosophy</span><h2>美しさを引き出す、<br>上質な時間。</h2><p>美しい上生菓子</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-  
-  <!-- 3. FEATURES -->
-  <section class="section bg-light"><div class="container"><h2 class="center reveal">Our Strengths</h2><div class="feat-list">
-    <div class="feat reveal" style="transition-delay:0s"><h3><i data-lucide="check"></i> 信頼と実績</h3><p>地域で長年の信頼をいただいております。</p></div><div class="feat reveal" style="transition-delay:0.1s"><h3><i data-lucide="check"></i> プロフェッショナル</h3><p>熟練のスタッフが丁寧に対応します。</p></div><div class="feat reveal" style="transition-delay:0.2s"><h3><i data-lucide="check"></i> サポート体制</h3><p>アフターフォローも万全です。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="center reveal">Gallery</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1512496015851-a1fbcf69b6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-    </div>
-  </div></section>
-
-  <!-- 5. MENU & PRICE -->
-  <section class="section bg-light"><div class="container reveal"><h2 class="center">Menu & Price</h2>
-    <div class="price-box"><div class="row"><div class="name">基本コース</div><div class="dots"></div><div class="cost">要見積</div></div><div class="row"><div class="name">プレミアム</div><div class="dots"></div><div class="cost">要相談</div></div></div>
-  </div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="center">FAQ</h2>
-    <div class="faq-box">
-      <details><summary>予約は必要ですか？</summary><p>はい、お客様一人ひとりに合わせたサービスを提供するため、完全予約制となっております。</p></details>
-      <details><summary>キャンセル料はかかりますか？</summary><p>前日までのキャンセルは無料です。当日のキャンセルは料金の50%を頂戴しております。</p></details>
-      <details><summary>駐車場はありますか？</summary><p>店舗の近くに2台分の専用駐車場をご用意しております。</p></details>
-    </div>
-  </div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>ご予約・お問い合わせ</h2><p>特別な体験を、あなたに。</p><a href="#" class="btn">今すぐ予約する</a></div></section>
-  
-  <footer class="footer">和菓子 花月</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+
+  <!-- Decorative border at the very top (Azuki color) -->
+  <div class="top-deco"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <span class="font-shippori text-dark l-text">結心堂</span>
+          <span class="font-zen text-gray-light l-sub">YUSHIN-DO / SINCE 1912</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-shippori">
+          <li><a href="#kodawari">こだわり</a></li>
+          <li><a href="#kashi">お菓子</a></li>
+          <li><a href="#gift">ご贈答</a></li>
+          <li><a href="#shop">店舗案内</a></li>
+        </ul>
+        <div class="h-btn sp-none fade-target">
+          <a href="#" class="btn btn-line font-shippori"><i data-lucide="shopping-bag" class="icon-sm"></i> オンライン店舗</a>
+        </div>
+      </nav>
+      <button class="menu-toggle text-dark" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero bg-washi">
+    <div class="l-container flex-hero">
+      
+      <!-- Text (Vertical) -->
+      <div class="hero-text fade-target delay-1">
+        <div class="h-catch font-shippori text-red vertical-text">創業百十二年</div>
+        <h1 class="hero-title font-shippori text-dark vertical-text ml-medium">
+          <span>四季を映す、</span><br>
+          <span>手づくりの<span class="text-red">甘味</span>。</span>
+        </h1>
+        <p class="hero-desc font-shippori text-gray vertical-text text-sm ml-medium line-height-ku sp-none">
+          一つひとつ、丁寧に手もみで仕上げる<br>
+          昔ながらの素朴な味わい。<br>
+          心と心を結ぶ、日本の和菓子。
+        </p>
+      </div>
+
+      <!-- Image -->
+      <div class="hero-img fade-target delay-2">
+        <div class="img-frame border-orange">
+          <img src="https://images.unsplash.com/photo-1596485548074-12ebbfb49e49?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="抹茶と和菓子">
+        </div>
+        <!-- Decorative subtle pattern overlay -->
+        <div class="p-pattern p-asanoha sp-none"></div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Philosophy (Kodawari) -->
+  <section class="section philosophy bg-white" id="kodawari">
+    <div class="l-container p-flex">
+      <div class="p-img fade-target delay-1">
+        <img src="https://images.unsplash.com/photo-1549216091-62a2bbff1d3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="小豆を煮る様子" class="img-round box-shadow-soft">
+      </div>
+      <div class="p-text fade-target">
+        <span class="en-label font-shippori text-gray-light">結心堂の色</span>
+        <h2 class="sect-heading font-shippori text-dark mb-medium"><span class="text-red">小豆</span>と<span class="text-blue">水</span>への<br>妥協なき眼差し。</h2>
+        <p class="font-shippori text-gray line-height-ku mb-medium">
+          和菓子の命とも言える「餡（あん）」。<br>
+          結心堂では、北海道十勝産の大粒小豆のみを使用し、<br>
+          早朝から地下深くから汲み上げた清らかな湧き水で<br>
+          じっくりと四時間かけて炊き上げます。<br><br>
+          気温や湿度に合わせて火加減を微調整する、<br>
+          職人の「手の感覚」だけが頼りの手練り製法。<br>
+          口どけの良い、上品な甘さを守り続けています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wagashi Products -->
+  <section class="section kashi bg-washi" id="kashi">
+    <!-- Top decorative wave or straight border -->
+    <div class="l-container center">
+      <div class="sect-header center fade-target mb-large">
+        <span class="font-shippori text-red display-block mb-xs text-sm">御菓子</span>
+        <h2 class="sect-heading font-shippori text-dark mb-small">季節と定番</h2>
+        <div class="line-center bg-gray-light mx-auto"></div>
+      </div>
+
+      <div class="k-grid">
+        <!-- Item 1 -->
+        <div class="k-item fade-target bg-white box-shadow-soft">
+          <div class="k-img-t">
+            <img src="https://images.unsplash.com/photo-1563514603953-fb7133f9e9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="上生菓子">
+            <div class="k-tag bg-red text-white font-shippori">季節限定</div>
+          </div>
+          <div class="k-info text-left">
+            <h3 class="font-shippori text-dark text-lg mb-xs border-b-line pb-xs">季節の「上生菓子」</h3>
+            <p class="font-zen text-sm text-gray mt-xs line-height-long">
+              春は桜、秋は紅葉。練り切りやきんとんを用いて、日本の美しい四季を手のひらサイズに表現しました。お茶席にも最適です。
+            </p>
+            <div class="font-shippori text-red font-bold mt-xs">1個 450円〜</div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="k-item fade-target delay-1 bg-white box-shadow-soft">
+          <div class="k-img-t">
+            <img src="https://images.unsplash.com/photo-1601633519890-3b092f3972c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="豆大福">
+            <div class="k-tag bg-green text-white font-shippori">名物定番</div>
+          </div>
+          <div class="k-info text-left">
+            <h3 class="font-shippori text-dark text-lg mb-xs border-b-line pb-xs">名物「塩豆大福」</h3>
+            <p class="font-zen text-sm text-gray mt-xs line-height-long">
+              毎朝つき立てのやわらかな餅で、たっぷりの粒あんと赤えんどう豆を包みました。ほんのり効いた塩味が甘さを引き立てます。
+            </p>
+            <div class="font-shippori text-red font-bold mt-xs">1個 280円</div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="k-item fade-target delay-2 bg-white box-shadow-soft">
+          <div class="k-img-t">
+            <img src="https://images.unsplash.com/photo-1453267568579-a1b73e35a16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="どら焼き">
+          </div>
+          <div class="k-info text-left">
+            <h3 class="font-shippori text-dark text-lg mb-xs border-b-line pb-xs">ふんわり「どらやき」</h3>
+            <p class="font-zen text-sm text-gray mt-xs line-height-long">
+              国産はちみつを練り込んだ手焼きの皮は、しっとりふんわり。自家製こしあんを隙間なくはさんだ、老若男女に愛される一品。
+            </p>
+            <div class="font-shippori text-red font-bold mt-xs">1個 250円</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-large fade-target delay-2">
+        <a href="#" class="btn btn-outline font-shippori text-dark border-dark">お品書き一覧を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gift / Online Shop -->
+  <section class="section gift bg-red text-white" id="gift">
+    <div class="l-container g-flex flex-between">
+      <div class="g-text fade-target">
+        <h2 class="sect-heading font-shippori mb-medium">大切な方への、<br>ご贈答・お手土産に。</h2>
+        <p class="font-shippori text-washi line-height-ku mb-medium">
+          お祝い事や季節のご挨拶、法要のお供え菓子まで。<br>
+          結心堂では、ご用途に合わせた多種多様な<br class="sp-none">
+          「詰め合わせギフト」をご用意しております。<br><br>
+          遠方の方へは、公式オンラインショップより<br class="sp-none">
+          全国配送も承っております。
+        </p>
+        <div class="btns flex gap-medium">
+          <a href="#" class="btn btn-white font-shippori text-red"><i data-lucide="shopping-bag" class="icon-sm"></i> オンラインショップへ</a>
+        </div>
+      </div>
+      <div class="g-img fade-target delay-1 relative">
+        <img src="https://images.unsplash.com/photo-1599818854497-29abfe2fbcd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="贈答用の和菓子箱" class="img-round box-shadow-image">
+        <!-- Mizuhiki decoration graphic -->
+        <div class="mizuhiki-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Info -->
+  <section class="section shop bg-white" id="shop">
+    <div class="l-container center">
+      <h2 class="sect-heading font-shippori text-dark mb-small fade-target">店舗案内</h2>
+      <div class="line-center bg-gray-light mx-auto mb-large fade-target"></div>
+      
+      <div class="s-box fade-target delay-1 bg-washi p-large max-w-800 text-left flex-between gap-large flex-col-sp">
+        <table class="s-table font-zen text-sm text-gray">
+          <tr>
+            <th class="font-shippori text-dark border-b-line"><i data-lucide="map-pin" class="icon-sm text-red"></i> 所在地</th>
+            <td class="border-b-line">〒100-0000<br>東京都千代田区和菓子 1-2-3</td>
+          </tr>
+          <tr>
+            <th class="font-shippori text-dark border-b-line"><i data-lucide="clock" class="icon-sm text-red"></i> 営業時間</th>
+            <td class="border-b-line">9:00 - 18:00<br><span class="text-xs text-red">（※生菓子が売り切れ次第終了となります）</span></td>
+          </tr>
+          <tr>
+            <th class="font-shippori text-dark border-b-line"><i data-lucide="calendar-x-2" class="icon-sm text-red"></i> 定休日</th>
+            <td class="border-b-line">水曜日・第2木曜日</td>
+          </tr>
+          <tr>
+            <th class="font-shippori text-dark"><i data-lucide="phone" class="icon-sm text-red"></i> ご予約</th>
+            <td><a href="tel:03-0000-0000" class="text-dark font-shippori font-bold text-lg hover-red">03-0000-0000</a></td>
+          </tr>
+        </table>
+        
+        <div class="s-map">
+          <!-- Placeholder map -->
+          <div class="map-ph bg-gray border-gray center flex-column p-large text-white">
+            <span class="font-shippori">Google Map</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark pt-large pb-large center text-washi">
+    <div class="l-container flex-column align-center gap-small">
+      <div class="f-logo font-shippori text-lg mb-small">
+        <span class="display-block text-gray-light text-xs mb-xs">御菓子司</span>
+        結心堂
+      </div>
+      <div class="sns-icons center gap-medium mb-small">
+        <a href="#" class="text-washi hover-red"><i data-lucide="instagram"></i></a>
+        <a href="#" class="text-washi hover-red"><i data-lucide="twitter"></i></a>
+      </div>
+      <p class="font-zen text-gray-light text-xs mt-medium">&copy; 2025 御菓子司 結心堂. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
