@@ -1891,9 +1891,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: #fff !important;
 }
 
+/* SP / PC text switching utilities */
+.pc-hide { display: none !important; }
+
 @media (max-width: 768px) {
   .hero {
     min-height: 80vh !important;
     padding-top: calc(var(--header-height) + 40px) !important;
   }
+  .sp-hide { display: none !important; }
+  .pc-hide { display: block !important; }
 }
