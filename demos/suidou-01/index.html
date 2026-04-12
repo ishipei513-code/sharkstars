@@ -1,44 +1,298 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>アクア水道サービス | 最短30分で到着</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">アクア水道</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アクア・エマージェンシー | 水道修理・トイレつまり 最短15分到着</title>
+  <meta name="description" content="トイレのつまり、蛇口の水漏れなど、急な水回りのトラブルに最短15分で駆けつけます。出張費・お見積り0円！安心の水道局指定工事店にお任せください。24時間365日対応。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>水のトラブル、<br>即解決します。</h1><p></p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc"><br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>最短30分到着</h3><p>エリア内なら30分で駆けつけ。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>見積もり無料</h3><p>出張費・見積もり0円。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>実績5,000件</h3><p>年間5,000件以上の施工実績。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
   
-  <footer class="footer">アクア水道</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <i data-lucide="droplets" class="text-blue"></i>
+          アクア・エマージェンシー
+        </a>
+      </div>
+      <div class="h-badges sp-none">
+        <span class="h-badge bg-blue text-white"><i data-lucide="award"></i> 水道局指定工事店</span>
+        <span class="h-badge bg-red text-white"><i data-lucide="clock"></i> 24時間365日受付</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (High Urgency LP) -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="水漏れ修理">
+    </div>
+    <div class="hero-mask"></div>
+    
+    <div class="hero-inner fade-target">
+      <div class="urgent-ribbon">
+        急な水トラブル！今すぐお電話ください！
+      </div>
+      
+      <h1 class="hero-title">
+        トイレつまり・水漏れ<br>
+        <strong class="text-red">最短<span>15</span>分で駆けつけます！</strong>
+      </h1>
+      
+      <div class="hero-prices">
+        対象エリアの基本料金<br>
+        <span class="price-big">3,300<small>円(税込)〜</small></span>
+      </div>
+      
+      <div class="zero-blocks">
+        <div class="z-item">出張費<br><strong>0円</strong></div>
+        <div class="z-item">見積費<br><strong>0円</strong></div>
+        <div class="z-item">深夜割増<br><strong>0円</strong></div>
+      </div>
+      
+      <div class="hero-cta shadow-pop">
+        <p class="cta-top">スマホから1タップで発信！お見積り完全無料</p>
+        <a href="tel:0120-000-000" class="tel-link">
+          <i data-lucide="phone-call" class="pulse-icon"></i> 0120-000-000
+        </a>
+        <p class="cta-bottom">【通話料無料】 24時間 365日 土日祝も休まず対応中！</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Troubles -->
+  <section class="section troubles bg-pattern">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <h2 class="sect-heading">こんな「水のトラブル」<br>すぐに直します！</h2>
+      </div>
+
+      <div class="t-grid">
+        <!-- Toilet -->
+        <div class="t-card fade-target">
+          <div class="t-img"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="トイレトラブル"></div>
+          <div class="t-body">
+            <h3>トイレのトラブル</h3>
+            <ul>
+              <li><i data-lucide="check-circle-2"></i> トイレが詰まって水が溢れる</li>
+              <li><i data-lucide="check-circle-2"></i> 水が止まらない（チョロチョロ音）</li>
+              <li><i data-lucide="check-circle-2"></i> 便器の床から水漏れしている</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Kitchen -->
+        <div class="t-card fade-target delay-1">
+          <div class="t-img"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="キッチントラブル"></div>
+          <div class="t-body">
+            <h3>キッチンのトラブル</h3>
+            <ul>
+              <li><i data-lucide="check-circle-2"></i> 蛇口からポタポタ水が漏れる</li>
+              <li><i data-lucide="check-circle-2"></i> 排水口が詰まって水が流れない</li>
+              <li><i data-lucide="check-circle-2"></i> シンク下のパイプから水漏れ</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bath / Wash -->
+        <div class="t-card fade-target">
+          <div class="t-img"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="お風呂トラブル"></div>
+          <div class="t-body">
+            <h3>お風呂・洗面所のトラブル</h3>
+            <ul>
+              <li><i data-lucide="check-circle-2"></i> お風呂の水が全く抜けない</li>
+              <li><i data-lucide="check-circle-2"></i> シャワーヘッドからの水漏れ</li>
+              <li><i data-lucide="check-circle-2"></i> 洗面台の排水管に物を落とした</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Outdoor -->
+        <div class="t-card fade-target delay-1">
+          <div class="t-img"><img src="https://images.unsplash.com/photo-1582046468750-f8bbfa31a403?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="屋外トラブル"></div>
+          <div class="t-body">
+            <h3>屋外・その他のトラブル</h3>
+            <ul>
+              <li><i data-lucide="check-circle-2"></i> 屋外の立水栓が破損した</li>
+              <li><i data-lucide="check-circle-2"></i> ボイラー・給湯器からの漏水</li>
+              <li><i data-lucide="check-circle-2"></i> 水道代が急に高くなった(漏水調査)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Point / Trust -->
+  <section class="section reason bg-blue" id="reason">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <h2 class="sect-heading text-white">他社とは違う！当社だけの<br class="sp-block">3つの安心宣言</h2>
+        <p class="text-white">悪質なボッタクリ業者にはくれぐれもご注意ください。</p>
+      </div>
+
+      <div class="r-flex">
+        <div class="r-box fade-target">
+          <div class="r-icon text-blue">1</div>
+          <h3 class="text-blue">見積り後の追加請求なし！<br>完全な「明朗会計」</h3>
+          <p>必ず作業前に現地で状況を確認し、「確定のお見積り」をお渡しします。その金額にご納得いただかない限り、作業は絶対に開始しません。勝手に修理して数十万をご請求するようなことは一切ございません。</p>
+        </div>
+
+        <div class="r-box fade-target delay-1">
+          <div class="r-icon text-blue">2</div>
+          <h3 class="text-blue">自治体から認定を受けた<br>「水道局指定工事店」</h3>
+          <p>当社は各自治体の水道局から「適正な施工ができる」と正式に認定された指定休水装置工事事業者です。国家資格（給水装置工事主任技術者）を持ったプロのスタッフが確実な修理を行います。</p>
+        </div>
+
+        <div class="r-box fade-target delay-2">
+          <div class="r-icon text-blue">3</div>
+          <h3 class="text-blue">作業後もずっと安心！<br>「最大5年の無料保証」</h3>
+          <p>部品の交換や取り付けを行った箇所には、無料の保証をお付けしております（※つまり作業等一部を除く）。万が一、修理後に同じ箇所から再水漏れなどが起きた場合は、無償で再対応いたします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section price" id="price">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <h2 class="sect-heading">わかりやすい料金設定</h2>
+        <p>「基本料金＋作業費＋（部品代）」でのご請求となります。<br>※下記はほんの一例です。状態により作業費は変動いたします。</p>
+      </div>
+
+      <div class="p-table-wrap fade-target">
+        <table class="p-table">
+          <thead>
+            <tr>
+              <th>トラブル内容</th>
+              <th>作業料金(税込)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>トイレのつまり除去（ローポンプ使用）</td>
+              <td class="price-td">5,500円〜</td>
+            </tr>
+            <tr>
+              <td>トイレのつまり除去（便器脱着を伴う場合）</td>
+              <td class="price-td">16,500円〜</td>
+            </tr>
+            <tr>
+              <td>蛇口の水漏れ修理（パッキン交換）</td>
+              <td class="price-td">3,300円〜</td>
+            </tr>
+            <tr>
+              <td>単水栓・混合水栓の本体交換（作業費）</td>
+              <td class="price-td">8,800円〜 ＋ 部品代</td>
+            </tr>
+            <tr>
+              <td>台所・浴室の排水口つまり除去</td>
+              <td class="price-td">5,500円〜</td>
+            </tr>
+            <tr>
+              <td>高圧洗浄機による配管清掃（戸建て1層）</td>
+              <td class="price-td">19,800円〜</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="p-note center fade-target delay-1">
+        ※ 出張費・見積費は無料です。万が一お見積りにご納得いただけずキャンセルされても、料金は掛かりません。
+      </div>
+    </div>
+  </section>
+
+  <!-- Flow -->
+  <section class="section flow bg-gray" id="flow">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <h2 class="sect-heading">解決までの3ステップ</h2>
+      </div>
+
+      <div class="f-track fade-target">
+        <div class="f-step">
+          <div class="num">1</div>
+          <h3>お電話でご相談</h3>
+          <p>コールセンターへお電話ください。（0120-000-000）<br>トラブルの症状とご住所をお伺いし、最短の到着時間をお伝えします。</p>
+        </div>
+        <div class="f-step">
+          <div class="num">2</div>
+          <h3>現地見積り (無料)</h3>
+          <p>スタッフが到着し、原因を調査した上で詳細なお見積りをご提示します。<br>ご納得いただけない場合は無料でお帰りいただきます。</p>
+        </div>
+        <div class="f-step">
+          <div class="num">3</div>
+          <h3>復旧作業・お支払い</h3>
+          <p>見積りにご同意いただいてから作業を開始。迅速に修理を完了させます。<br>各種クレジットカード・PayPay等のキャッシュレス決済にも対応しています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Info Area -->
+  <section class="footer-info bg-dark">
+    <div class="l-container">
+      <div class="fi-inner">
+        <div class="fi-left">
+          <div class="logo font-white">
+            <i data-lucide="droplets"></i> アクア・エマージェンシー
+          </div>
+          <p class="company-desc">
+            水回りの緊急トラブル解決プロフェッショナル<br>
+            【各自治体 水道局指定工事店 第〇〇号】<br>
+            〒100-0000 東京都千代田区水漏れ防止町 1-2-3
+          </p>
+        </div>
+        <div class="fi-right">
+          <div class="cards">
+            <i data-lucide="credit-card"></i> 各種クレジットカード対応
+          </div>
+          <p>&copy; 2025 Aqua Emergency. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Mobile Footer (Extreme Conversion) -->
+  <div class="fixed-cta">
+    <div class="fc-inner">
+      <div class="fc-text">
+        <span class="pulse-dot"></span> 最短15分で緊急駆けつけ！
+      </div>
+      <a href="tel:0120-000-000" class="fc-btn shadow-pop">
+        <div class="f-icon"><i data-lucide="phone-call"></i></div>
+        <div class="f-info">
+          <span class="sub">今すぐ無料相談・お見積り</span>
+          <span class="main">0120-000-000</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
