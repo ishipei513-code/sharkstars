@@ -417,6 +417,94 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================
+   VALUE STRIP
+   ============================================ */
+.value-strip {
+  background-color: var(--gray-900);
+  padding: 48px 0;
+  border-top: 1px solid var(--gray-800);
+}
+.vs-lead {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 32px;
+}
+.vs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.vs-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0 24px;
+  border-right: 1px solid var(--gray-700);
+}
+.vs-item:last-child {
+  border-right: none;
+}
+.vs-icon {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  margin-top: 2px;
+}
+.vs-icon svg {
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+}
+.vs-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.vs-text strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+.vs-text span {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .vs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .vs-item {
+    border-right: none;
+    padding: 0 16px;
+  }
+  .vs-item:nth-child(odd) {
+    border-right: 1px solid var(--gray-700);
+  }
+}
+@media (max-width: 768px) {
+  .vs-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .vs-item {
+    border-right: none !important;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray-800);
+  }
+  .vs-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ============================================
    PROBLEMS (よくあるお悩み)
    ============================================ */
 .problems {
