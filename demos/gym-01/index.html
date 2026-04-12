@@ -1,44 +1,311 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>BLAZE GYM | パーソナルトレーニング</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">BLAZE GYM</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRON CORE | 完全個室のパーソナルトレーニングジム</title>
+  <meta name="description" content="限界の先へ。IRON CORE（アイアンコア）は、科学的根拠に基づいたトレーニングと徹底した食事管理で、最短で理想の身体へと導く完全個室のパーソナルジムです。まずは無料カウンセリングへ。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>限界を超えろ。<br>理想の自分へ。</h1><p></p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc"><br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>マンツーマン指導</h3><p>専属トレーナーが最後までサポート。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>食事指導つき</h3><p>LINEで毎日食事アドバイス。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>完全個室</h3><p>他の目を気にせずトレーニング。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
   
-  <footer class="footer">BLAZE GYM</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <span class="font-oswald text-white l-title">IRON CORE</span>
+          <small class="text-gray">PERSONAL TRAINING GYM</small>
+        </a>
+      </div>
+      <nav class="nav text-white font-oswald">
+        <ul class="nav-links">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#program">PROGRAM</a></li>
+          <li><a href="#trainer">TRAINER</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <div class="h-btn sp-none">
+          <a href="#trial" class="btn btn-red font-bold">無料体験を予約する</a>
+        </div>
+      </nav>
+      <button class="menu-toggle text-white" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero bg-black">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="ハードにトレーニングする男性">
+    </div>
+    <div class="hero-mask"></div>
+    
+    <div class="l-container hero-content">
+      <div class="h-catch font-oswald text-red fade-target">BEYOND YOUR LIMITS</div>
+      <h1 class="hero-title text-white font-black fade-target delay-1">
+        限界の、<span class="text-red">先</span>へ。
+      </h1>
+      <p class="hero-desc text-gray-light font-bold fade-target delay-2">
+        最新のスポーツ科学 × 徹底した食事管理<br>
+        2ヶ月で、あなたは確実に生まれ変わる。
+      </p>
+      
+      <div class="h-cta fade-target delay-2">
+        <a href="#trial" class="btn btn-red btn-large btn-glitch">
+          無料カウンセリング＆体験トレーニング
+        </a>
+      </div>
+    </div>
+    
+    <!-- Angled Bottom separator -->
+    <div class="h-angle bg-dark"></div>
+  </section>
+
+  <!-- About / Problems -->
+  <section class="section about bg-dark" id="about">
+    <div class="l-container">
+      <div class="center mb-large fade-target">
+        <h2 class="text-white font-bold" style="font-size: 1.5rem; line-height: 1.8;">
+          何度もダイエットに失敗している。<br>
+          一人では限界まで追い込めない。<br>
+          <span class="text-red">その悩み、IRON CORE が終わらせます。</span>
+        </h2>
+      </div>
+
+      <div class="a-grid">
+        <!-- Feature 1 -->
+        <div class="a-card bg-zinc border-red-left fade-target">
+          <div class="a-num font-oswald text-zinc-dark">01</div>
+          <h3 class="text-white font-bold"><span class="text-red">科学的</span>なアプローチ</h3>
+          <p class="text-gray-light mt-small text-sm">解剖学・生体力学に基づき、あなただけの骨格と筋肉量に合わせた完全オーダーメイドのメニューを作成。ケガを防ぎ、最短で結果を出します。</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="a-card bg-zinc border-red-left fade-target delay-1">
+          <div class="a-num font-oswald text-zinc-dark">02</div>
+          <h3 class="text-white font-bold"><span class="text-red">極限</span>まで追い込む補助</h3>
+          <p class="text-gray-light mt-small text-sm">筋肉が成長するための「ラスト1回」。一人では諦めてしまうその限界を、プロのトレーナーが絶妙なフォーストレップ（補助）で引き出します。</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="a-card bg-zinc border-red-left fade-target delay-2">
+          <div class="a-num font-oswald text-zinc-dark">03</div>
+          <h3 class="text-white font-bold"><span class="text-red">完全個室</span>の非日常空間</h3>
+          <p class="text-gray-light mt-small text-sm">他の会員と顔を合わせることのないプライベート空間。周りの目を気にせず、大音量のBGMと己の筋肉だけに集中できる環境を提供します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diet Management Strip -->
+  <section class="diet-strip bg-red text-white center">
+    <div class="l-container fade-target">
+      <h2 class="font-black" style="font-size: 1.8rem;">食べて絞る。24時間LINE食事サポート。</h2>
+      <p class="font-bold mt-small text-sm" style="opacity: 0.9;">極端な糖質制限は行いません。PFCバランスを計算し、「一生続けられる」食事知識を身につけます。</p>
+    </div>
+  </section>
+
+  <!-- Programs & Pricing -->
+  <section class="section program bg-black" id="program">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label font-oswald text-red">PROGRAM & PRICE</span>
+        <h2 class="sect-heading text-white font-black">プログラム・料金</h2>
+      </div>
+
+      <div class="p-flex">
+        <!-- 2 Months Body Make -->
+        <div class="p-card bg-zinc box-shadow fade-target">
+          <div class="p-badge bg-red text-white font-bold">1番人気 / RESULT</div>
+          <div class="p-head">
+            <h3 class="text-white font-black">2ヶ月 集中ボディメイク</h3>
+            <p class="text-gray text-sm mt-xs">人生を変える、圧倒的な60日間。</p>
+          </div>
+          <div class="p-price-box">
+            <div class="text-gray text-sm line-through">通常 ¥250,000</div>
+            <div class="font-oswald text-white p-price">¥ 198,000<span class="text-sm font-sans" style="color:var(--c-gray);"> (税込 ¥217,800)</span></div>
+          </div>
+          <ul class="p-list text-gray-light font-bold text-sm">
+            <li><i data-lucide="check" class="text-red"></i> 全16回 パーソナルトレーニング (60分)</li>
+            <li><i data-lucide="check" class="text-red"></i> 毎日のLINE食事指導 (60日間)</li>
+            <li><i data-lucide="check" class="text-red"></i> オリジナルプロテイン毎回無料提供</li>
+            <li><i data-lucide="check" class="text-red"></i> ウェア・タオル・シューズ無料レンタル</li>
+          </ul>
+          <div class="p-btn-wrap">
+            <a href="#trial" class="btn btn-outline-red" style="width: 100%;">まずは無料体験へ</a>
+          </div>
+        </div>
+
+        <!-- Maintenance -->
+        <div class="p-card bg-zinc opacity-dim box-shadow fade-target delay-1">
+          <div class="p-head">
+            <h3 class="text-white font-black">月額 メンテナンスプラン</h3>
+            <p class="text-gray text-sm mt-xs">コース卒業後限定。習慣化した運動を継続。</p>
+          </div>
+          <div class="p-price-box">
+            <div class="font-oswald text-white p-price">¥ 32,000<span class="text-sm font-sans" style="color:var(--c-gray);"> / 月 (税込 ¥35,200)</span></div>
+          </div>
+          <ul class="p-list text-gray-light font-bold text-sm">
+            <li><i data-lucide="check" class="text-gray"></i> 月4回 パーソナルトレーニング (60分)</li>
+            <li><i data-lucide="check" class="text-gray"></i> 食事に関する定期的なアドバイス</li>
+            <li><i data-lucide="check" class="text-gray"></i> ウェア・タオル無料レンタル</li>
+          </ul>
+        </div>
+      </div>
+      
+      <p class="text-center text-gray text-sm mt-medium">※入会金は別途 ¥33,000(税込) となります。<br>※現在、無料カウンセリング当日のご入会で【入会金無料キャンペーン】実施中。</p>
+    </div>
+  </section>
+
+  <!-- Trainer -->
+  <section class="section trainer bg-dark" id="trainer">
+    <div class="l-container t-flex">
+      <div class="t-img fade-target border-red-right">
+        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="チーフトレーナー">
+      </div>
+      <div class="t-text fade-target delay-1">
+        <span class="en-label font-oswald text-red">CHIEF TRAINER</span>
+        <h2 class="sect-heading text-white font-black">TAKERU YAMADA</h2>
+        <p class="text-gray-light font-bold">
+          コンテスト優勝経験を持ち、年間1000セッション以上を担当するプロフェッショナル。<br>
+          「キツいけど、楽しい」。モチベーションを極限まで引き上げ、お客様自身も気づいていないポテンシャルを解放します。
+        </p>
+        <ul class="mt-medium text-sm text-gray flex-column gap-small">
+          <li>- 2022 NPCJ Men's Physique 優勝</li>
+          <li>- NSCA-CPT（認定パーソナルトレーナー）</li>
+          <li>- 指導実績：モデル、アスリートから運動未経験者まで多数</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq bg-black" id="faq">
+    <div class="l-container max-w-800">
+      <div class="sect-header center fade-target">
+        <span class="en-label font-oswald text-red">F.A.Q</span>
+        <h2 class="sect-heading text-white font-black">よくある質問</h2>
+      </div>
+
+      <div class="faq-list fade-target delay-1">
+        <details class="f-item border-bottom-zinc" open>
+          <summary class="text-white font-bold"><span>Q. 全く運動経験がなく、体力に自信がありません。</span> <i data-lucide="plus" class="text-red"></i></summary>
+          <div class="f-ans text-gray-light text-sm bg-zinc">
+            A. むしろ、運動未経験の方にこそプロの指導が必要です。一人ひとりの体力・筋力レベルに合わせた完全オーダーメイドのメニューを組むため、無理なく着実にステップアップできます。ご安心ください。
+          </div>
+        </details>
+        
+        <details class="f-item border-bottom-zinc">
+          <summary class="text-white font-bold"><span>Q. 食事制限（糖質制限）は厳しいですか？お酒は飲めない？</span> <i data-lucide="plus" class="text-red"></i></summary>
+          <div class="f-ans text-gray-light text-sm bg-zinc">
+            A. 当ジムでは極端な「糖質完全カット」は推奨していません。健康を維持しながら脂肪を落とすPFCバランスを重視します。お酒についても、種類（蒸留酒など）や量をコントロールすることで上手く付き合う方法を指導します。
+          </div>
+        </details>
+        
+        <details class="f-item border-bottom-zinc">
+          <summary class="text-white font-bold"><span>Q. シャワールームはありますか？手ぶらで通えますか？</span> <i data-lucide="plus" class="text-red"></i></summary>
+          <div class="f-ans text-gray-light text-sm bg-zinc">
+            A. 完全個室のシャワールーム、高級アメニティ、ドライヤーを完備しております。また、ウェア・タオル・シューズを無料でレンタルしているため、お仕事帰りに完全手ぶらでお越しいただけます。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Trial -->
+  <section class="section trial bg-red text-white center" id="trial">
+    <div class="l-container fade-target">
+      <h2 class="font-black" style="font-size: 2.2rem; margin-bottom: 20px;">
+        変わるなら、<span style="text-decoration: underline;">今</span>だ。
+      </h2>
+      <p class="font-bold mb-large">毎月 先着10名様限定<br>【無料】カウンセリング ＆ 60分体験トレーニング受付中</p>
+      
+      <div class="trial-box bg-white text-black p-large box-shadow">
+        <form action="#" class="t-form text-left flex-column gap-medium">
+          <div class="f-group">
+            <label class="font-bold mb-xs display-block font-sans text-sm">お名前</label>
+            <input type="text" class="f-input bg-light border-gray" placeholder="山田 太郎">
+          </div>
+          <div class="f-group">
+            <label class="font-bold mb-xs display-block font-sans text-sm">電話番号</label>
+            <input type="tel" class="f-input bg-light border-gray" placeholder="090-0000-0000">
+          </div>
+          <div class="f-group">
+            <label class="font-bold mb-xs display-block font-sans text-sm">目標・ご要望（任意）</label>
+            <textarea class="f-input bg-light border-gray" rows="3" placeholder="夏までに5kg痩せたい、筋肉をつけて体を大きくしたい等"></textarea>
+          </div>
+          <button type="button" class="btn btn-black btn-large w-full mt-small">体験トレーニングを申し込む</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-black border-top-zinc text-gray font-sm">
+    <div class="l-container">
+      <div class="f-flex flex-between pb-medium pt-large">
+        <div class="f-logo font-oswald text-white" style="font-size: 2rem;">
+          IRON CORE<span class="text-red">.</span>
+        </div>
+        <div class="f-info text-right">
+          <p>〒150-0000 東京都渋谷区マッスル 1-2-3</p>
+          <p>営業時間: 8:00 - 23:00（不定休）</p>
+        </div>
+      </div>
+      <div class="f-bottom center pt-medium border-top-zinc text-sm">
+        &copy; 2025 IRON CORE GYM. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+    
+    // FAQ Toggle Icons
+    document.querySelectorAll('.f-item').forEach(details => {
+      details.addEventListener('toggle', (e) => {
+        const icon = details.querySelector('i');
+        if (details.open) {
+          icon.setAttribute('data-lucide', 'minus');
+        } else {
+          icon.setAttribute('data-lucide', 'plus');
+        }
+        lucide.createIcons(); // Re-render the specific icon
+      });
+    });
+  </script>
+</body>
+</html>
