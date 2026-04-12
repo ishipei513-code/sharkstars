@@ -1,44 +1,131 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>サンライズ電気工事 | 24時間緊急対応</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">サンライズ電気</div></div></header>
-  
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>電気のこと、<br>お任せください。</h1><p></p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc"><br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlibhttps://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>有資格者施工</h3><p>第一種電気工事士が対応。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>24時間対応</h3><p>停電・漏電の緊急トラブルも即対応。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>明朗会計</h3><p>事前見積もりで追加料金なし。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlibhttps://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlibhttps://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlibhttps://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlibhttps://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
-  
-  <footer class="footer">サンライズ電気</footer>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>サンライズ電気工事 | 24時間緊急対応</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <div class="logo">
+        <i data-lucide="zap" class="logo-icon"></i>
+        <span>SUNRISE ELECTRIC</span>
+      </div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#works">Works</a>
+        <a href="#contact" class="btn-outline">緊急連絡</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="電気工事" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="badge fade-up">24/7 EMERGENCY SERVICE</div>
+      <h1 class="hero-title fade-up delay-1">光を灯し、<br>未来を繋ぐ。</h1>
+      <p class="hero-subtitle fade-up delay-2">確かな技術で、皆様の安全で快適な暮らしを支える電気工事のプロフェッショナル集団。</p>
+      <div class="hero-actions fade-up delay-3">
+        <a href="#contact" class="btn-primary">お見積り・ご相談</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / Features -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">OUR EXPERTISE</h2>
+        <p class="section-desc">妥協のないプロの仕事をお約束します。</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+          <h3>有資格者による施工</h3>
+          <p>経験豊富な第一種電気工事士が責任を持って対応します。安全第一の確実な施工をお約束します。</p>
+        </div>
+        <div class="feature-card fade-up delay-1">
+          <div class="feature-icon"><i data-lucide="clock"></i></div>
+          <h3>24時間365日対応</h3>
+          <p>突然の停電や漏電など、緊急のトラブルにも迅速に駆けつけます。深夜のトラブルもお任せください。</p>
+        </div>
+        <div class="feature-card fade-up delay-2">
+          <div class="feature-icon"><i data-lucide="check-circle-2"></i></div>
+          <h3>明朗な会計システム</h3>
+          <p>作業前に必ずお見積りを提示し、ご納得いただいてから作業を開始いたします。不透明な追加費用はありません。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section class="section split-bg" id="works">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">LATEST WORKS</h2>
+        <p class="section-desc">多数の施工実績が信頼の証です。</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-up">
+          <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="実績1">
+        </div>
+        <div class="gallery-item fade-up delay-1">
+          <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="実績2">
+        </div>
+        <div class="gallery-item fade-up delay-2">
+          <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="実績3">
+        </div>
+        <div class="gallery-item fade-up delay-3">
+          <img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="実績4">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <section class="section cta-section" id="contact">
+    <div class="cta-box fade-up">
+      <h2>電気のトラブル、今すぐ解決します。</h2>
+      <p>ご相談・お見積りは無料です。</p>
+      <a href="#" class="btn-primary large"><i data-lucide="phone"></i> 0120-XXX-XXX</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 SUNRISE ELECTRIC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Navbar scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    // Reveal animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

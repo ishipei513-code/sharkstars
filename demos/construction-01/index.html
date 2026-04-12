@@ -1,44 +1,116 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>匠工房リフォーム | 地域密着のリフォーム・住宅建設</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo"> 匠工房リフォーム</div></div></header>
-  
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>住まいの「困った」を<br><br>確かな技術<br>で解決。</h1><p></p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc"><br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlibhttps://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>信頼と実績</h3><p>地域で長年の信頼をいただいております。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>プロフェッショナル</h3><p>熟練のスタッフが丁寧に対応します。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>サポート体制</h3><p>アフターフォローも万全です。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlibhttps://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlibhttps://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlibhttps://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlibhttps://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
-  
-  <footer class="footer"> 匠工房リフォーム</footer>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>匠工房 | デザインリフォーム・建築</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <div class="logo">匠工房</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#works">Works</a>
+        <a href="#contact" class="btn-primary-sm">ご相談</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-title fade-up">空間に、<br><span class="italic-serif">Craft</span> の息吹を。</h1>
+        <p class="hero-desc fade-up delay-1">長年培った確かな技術と、現代のライフスタイルに寄り添うデザインで、あなたの理想の空間を形にします。</p>
+        <div class="fade-up delay-2">
+          <a href="#works" class="cta-link">施工事例を見る <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="hero-img-wrapper fade-up delay-1">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="建築" class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white" id="services">
+    <div class="container">
+      <div class="section-badge fade-up">OUR EXPERTISE</div>
+      <h2 class="section-title fade-up delay-1">技術とデザインの融合</h2>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-icon"><i data-lucide="home"></i></div>
+          <h3>フルリノベーション</h3>
+          <p>スケルトン状態からの全面改装。間取り変更からインテリアデザインまでトータルでプロデュースします。</p>
+        </div>
+        <div class="service-card fade-up delay-1">
+          <div class="service-icon"><i data-lucide="paint-roller"></i></div>
+          <h3>部分リフォーム</h3>
+          <p>キッチン、バスルームなどの水回りや、リビングの部分的な改修。少しの変化で暮らしの質を上げます。</p>
+        </div>
+        <div class="service-card fade-up delay-2">
+          <div class="service-icon"><i data-lucide="pen-tool"></i></div>
+          <h3>オーダー家具</h3>
+          <p>空間にぴったりと収まる造作家具。職人の手仕事による温もりある仕上がりをお約束します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="works">
+    <div class="container">
+      <div class="section-badge fade-up">PORTFOLIO</div>
+      <h2 class="section-title fade-up delay-1">施工事例</h2>
+      <div class="works-grid">
+        <div class="work-item fade-up">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Work 1">
+          <div class="work-info">
+            <h4>Modern House</h4><p>戸建て全面改装</p>
+          </div>
+        </div>
+        <div class="work-item fade-up delay-1">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Work 2">
+          <div class="work-info">
+            <h4>Nordic Kitchen</h4><p>キッチンリフォーム</p>
+          </div>
+        </div>
+        <div class="work-item fade-up delay-2">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Work 3">
+          <div class="work-info">
+            <h4>Cozy Living</h4><p>リビング・ダイニング改修</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-flex">
+      <div class="footer-logo">匠工房</div>
+      <p class="footer-copy">&copy; TAKUMI KOUBOU. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

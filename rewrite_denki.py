@@ -1,3 +1,139 @@
+﻿import os
+
+denki_html = """<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>サンライズ電気工事 | 24時間緊急対応</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assist/css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <div class="logo">
+        <i data-lucide="zap" class="logo-icon"></i>
+        <span>SUNRISE ELECTRIC</span>
+      </div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#works">Works</a>
+        <a href="#contact" class="btn-outline">緊急連絡</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="電気工事" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="badge fade-up">24/7 EMERGENCY SERVICE</div>
+      <h1 class="hero-title fade-up delay-1">光を灯し、<br>未来を繋ぐ。</h1>
+      <p class="hero-subtitle fade-up delay-2">確かな技術で、皆様の安全で快適な暮らしを支える電気工事のプロフェッショナル集団。</p>
+      <div class="hero-actions fade-up delay-3">
+        <a href="#contact" class="btn-primary">お見積り・ご相談</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / Features -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">OUR EXPERTISE</h2>
+        <p class="section-desc">妥協のないプロの仕事をお約束します。</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-up">
+          <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+          <h3>有資格者による施工</h3>
+          <p>経験豊富な第一種電気工事士が責任を持って対応します。安全第一の確実な施工をお約束します。</p>
+        </div>
+        <div class="feature-card fade-up delay-1">
+          <div class="feature-icon"><i data-lucide="clock"></i></div>
+          <h3>24時間365日対応</h3>
+          <p>突然の停電や漏電など、緊急のトラブルにも迅速に駆けつけます。深夜のトラブルもお任せください。</p>
+        </div>
+        <div class="feature-card fade-up delay-2">
+          <div class="feature-icon"><i data-lucide="check-circle-2"></i></div>
+          <h3>明朗な会計システム</h3>
+          <p>作業前に必ずお見積りを提示し、ご納得いただいてから作業を開始いたします。不透明な追加費用はありません。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section class="section split-bg" id="works">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">LATEST WORKS</h2>
+        <p class="section-desc">多数の施工実績が信頼の証です。</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-up">
+          <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="実績1">
+        </div>
+        <div class="gallery-item fade-up delay-1">
+          <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="実績2">
+        </div>
+        <div class="gallery-item fade-up delay-2">
+          <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="実績3">
+        </div>
+        <div class="gallery-item fade-up delay-3">
+          <img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="実績4">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <section class="section cta-section" id="contact">
+    <div class="cta-box fade-up">
+      <h2>電気のトラブル、今すぐ解決します。</h2>
+      <p>ご相談・お見積りは無料です。</p>
+      <a href="#" class="btn-primary large"><i data-lucide="phone"></i> 0120-XXX-XXX</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 SUNRISE ELECTRIC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Navbar scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    // Reveal animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
+"""
+
+denki_css = """
 :root {
   --bg-color: #030712;
   --surface: #111827;
@@ -145,3 +281,12 @@ body {
   .gallery-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; } /* Simplified for demo */
 }
+"""
+
+with open(r'd:\sharkstars\demos\denki-01\index.html', 'w', encoding='utf-8') as f:
+    f.write(denki_html.strip())
+
+with open(r'd:\sharkstars\demos\denki-01\assist\css\style.css', 'w', encoding='utf-8') as f:
+    f.write(denki_css.strip())
+
+print("Denki-01 rewritten to 500% premium quality.")
