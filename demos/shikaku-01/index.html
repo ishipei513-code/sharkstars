@@ -1,46 +1,365 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>資格の学校アカデミア | 合格への最短ルート</title><meta name="description" content="宅建・FP・簿記・社労士。合格保証あり。">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo"><i data-lucide="shield-check"></i>  アカデミア</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUALIA ACADEMY | 最短ルートで難関資格を突破する</title>
+  <meta name="description" content="合格率が証明する、圧倒的な学習システム。公認会計士・税理士・宅建などの難関資格突破を目指す社会人のためのオンライン＆通学スクール「QUALIA ACADEMY」。無料体験講義を配信中。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="overlay"></div><div class="container hero-content reveal"><h1>資格取得で、<br>キャリアを変える。</h1><p>宅建・FP・簿記・社労士。合格保証あり。</p>
-    <div class="stats"><div class="stat"><span>設立</span><strong>20年</strong></div><div class="stat"><span>解決実績</span><strong>5,000件</strong></div></div></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="img reveal"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div><div class="text reveal">
-    <h2 class="sect-title">ABOUT US</h2><p class="desc">宅建・FP・簿記・社労士。合格保証あり。<br><br>私たちが大切にしているのは、信頼と実績に基づく確かなソリューションです。お客様の課題に対して真摯に向き合い、最適な結果を導き出します。</p></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section gray"><div class="container"><h2 class="sect-title center reveal">OUR STRENGTHS</h2><div class="bento-grid">
-    <div class="bento-item reveal" style="transition-delay:0s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>合格保証</h3><p>不合格なら翌年無料再受講。</p></div><div class="bento-item reveal" style="transition-delay:0.1s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>オンライン対応</h3><p>通学とオンラインを自由に選択。</p></div><div class="bento-item reveal" style="transition-delay:0.2s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>実務家講師</h3><p>資格保有の実務経験者が講義。</p></div>
-  </div></div></section>
-
-  <!-- 4. SERVICES -->
-  <section class="section"><div class="container reveal"><h2 class="sect-title center">SERVICES & PLANS</h2><div class="service-table">
-    <div class="s-row"><div class="s-name">基本コース</div><div class="s-cost">要見積</div></div><div class="s-row"><div class="s-name">プレミアム</div><div class="s-cost">要相談</div></div>
-  </div></div></section>
-
-  <!-- 5. CASE STUDY (Gallery equivalent) -->
-  <section class="section gray"><div class="container"><h2 class="sect-title center reveal">CASE STUDY</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1563986768494-4d8dbcb2b005?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="sect-title center">FAQ</h2><div class="faq-box">
-    <details open><summary>初回のご相談は無料ですか？</summary><p>はい、初回のヒアリングおよび概算お見積りのご提示までは完全無料で承っております。</p></details>
-    <details><summary>遠方の企業でも対応可能ですか？</summary><p>はい、オンライン会議ツールを活用し、全国どこでも対応可能です。</p></details>
-    <details><summary>顧問契約は可能ですか？</summary><p>はい、継続的なサポートを行う顧問サービスもご用意しております。詳細はお問い合わせください。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>無料で資料ダウンロード・ご相談</h2><p>お電話、または下記フォームよりお気軽にお問い合わせください。</p><a href="#" class="btn">お問い合わせ</a></div></section>
-
-  <footer class="footer"> アカデミア</footer>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body class="bg-gray-light">
+
+  <!-- Top Banner -->
+  <div class="top-banner bg-blue text-white center py-xs font-noto font-bold text-xs tracking-wider z-100 relative">
+    <a href="#trial" class="hover-opacity text-white flex-center gap-xs">
+      <i data-lucide="gift" class="icon-sm"></i> 【期間限定】春のスタートダッシュキャンペーン！全講座20%OFF
+    </a>
+  </div>
+
+  <!-- Header -->
+  <header class="header bg-white box-shadow-sm" id="header">
+    <div class="h-container flex-between align-center">
+      <div class="logo">
+        <a href="#" class="flex-center gap-xs">
+          <div class="logo-mark bg-blue text-white rounded-sm center"><i data-lucide="graduation-cap" class="icon-lg"></i></div>
+          <span class="font-inter font-black text-navy l-text tracking-tighter">QUALIA<span class="text-blue">.</span></span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-noto font-bold text-navy text-sm">
+          <li><a href="#stats">実績データ</a></li>
+          <li><a href="#method">学習メソッド</a></li>
+          <li><a href="#courses">開講コース</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+        </ul>
+        <div class="h-btn sp-none flex gap-xs ml-small">
+          <a href="#trial" class="btn btn-outline-blue font-bold btn-sm">資料請求</a>
+          <a href="#trial" class="btn btn-blue font-bold btn-sm box-shadow-blue"><i data-lucide="play-circle"></i> 無料体験講義</a>
+        </div>
+      </nav>
+      <button class="menu-toggle text-navy" id="menuToggle" aria-label="メニューを開く">
+        <span class="bg-navy"></span><span class="bg-navy"></span><span class="bg-navy"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero relative bg-navy pt-header overflow-hidden min-h-80vh flex-center">
+    <!-- Geometric Background -->
+    <div class="geo-bg absolute inset-0 z-0">
+      <div class="grid-lines"></div>
+      <div class="glow-orb top-right bg-blue opacity-20"></div>
+      <div class="glow-orb bottom-left bg-green opacity-10"></div>
+    </div>
+
+    <div class="l-container relative z-10 w-full pt-large pb-large flex-between align-center flex-hero">
+      
+      <div class="hero-left text-left w-50 fade-target max-w-600">
+        <div class="h-badge font-inter font-bold text-blue text-xs bg-blue-dim border-blue px-small py-xs rounded-full display-inline-flex align-center gap-xs mb-small box-shadow-glow">
+          <div class="pulse-dot bg-blue rounded-full"></div> AI Optimized Learning
+        </div>
+        <h1 class="font-noto font-black text-white text-3xl line-height-tight mb-small tracking-tight">
+          最短ルートで、<br>
+          <span class="text-gradient-primary">難関資格を突破</span>する。
+        </h1>
+        <p class="font-noto text-gray-text text-sm line-height-long mb-medium">
+          徹底的なデータ分析から導き出された「出題カバー率98%」のカリキュラム。<br>
+          無駄な時間は一切削ぎ落とし、社会人が働きながら合格を掴むための<br class="sp-none">
+          次世代の学習プラットフォーム。
+        </p>
+        <div class="flex gap-small flex-wrap mt-small">
+          <a href="#trial" class="btn btn-blue btn-xl font-bold font-noto box-shadow-blue hover-scale-up">
+            無料体験アカウント作成 <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right w-50 relative fade-target delay-1 z-10 hero-img-sp">
+        <!-- Floating Dashboard Mockup -->
+        <div class="dashboard-mockup bg-white rounded-xl box-shadow-xl p-medium relative border-line">
+          <!-- Mockup Header -->
+          <div class="flex-between align-center mb-small border-b-gray-light pb-xs">
+            <div class="flex gap-xs font-inter font-bold text-navy text-xs"><i data-lucide="bar-chart-2" class="text-blue"></i> Learning Progress</div>
+            <div class="font-noto text-gray-text text-xs">宅建士 2026年受験</div>
+          </div>
+          <!-- Chart Mock -->
+          <div class="mock-chart mb-small flex align-end gap-xs h-100 mt-small">
+            <div class="bar bar-20 bg-gray-light rounded-t-sm w-full transition-bar delay-2"></div>
+            <div class="bar bar-40 bg-gray-light rounded-t-sm w-full transition-bar delay-2"></div>
+            <div class="bar bar-60 bg-blue-light rounded-t-sm w-full transition-bar delay-3"></div>
+            <div class="bar bar-80 bg-blue rounded-t-sm w-full transition-bar delay-4 relative">
+              <div class="chart-tooltip bg-navy text-white text-xs font-inter p-xs rounded-sm absolute top-offset center-text box-shadow-sm">82%</div>
+            </div>
+            <div class="bar bar-90 bg-green rounded-t-sm w-full transition-bar delay-5"></div>
+          </div>
+          <div class="font-noto font-bold text-navy text-lg mt-xs">合格圏内まで <span class="text-blue font-inter font-black text-xl">18</span>%</div>
+        </div>
+
+        <!-- Floating stat cards -->
+        <div class="float-stat float-1 bg-white rounded-lg p-small box-shadow-lg absolute border-line font-noto text-left animate-float">
+          <div class="text-xs text-gray-text font-bold mb-xs">模擬テスト正答率</div>
+          <div class="font-inter font-black text-green text-2xl">94.5<span class="text-sm">%</span></div>
+        </div>
+        <div class="float-stat float-2 bg-navy rounded-lg p-small box-shadow-lg absolute border-line-dark font-noto text-left animate-float delay-1">
+          <div class="text-xs text-gray-text font-bold mb-xs text-white">累計学習時間</div>
+          <div class="font-inter font-black text-white text-xl">128<span class="text-sm">h</span> 45<span class="text-sm">m</span></div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Stats (Bento Box UI) -->
+  <section class="section stats bg-gray-light pt-large pb-large" id="stats">
+    <div class="l-container center">
+      <div class="sect-header center fade-target mb-medium">
+        <span class="font-inter text-blue font-bold text-sm tracking-widest uppercase mb-xs display-block">Proven Results</span>
+        <h2 class="sect-heading font-noto font-black text-navy line-height-tight">数字が証明する、圧倒的な合格実績。</h2>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="bento-grid gap-small text-left">
+        <!-- Big Number -->
+        <div class="bento-item bento-large bg-white rounded-xl p-large box-shadow-sm border-line flex-column justify-center fade-target hover-lift">
+          <div class="flex-between align-center mb-small">
+            <h3 class="font-noto font-bold text-navy text-lg">2025年度 累計合格者数</h3>
+            <div class="icon-round bg-green-light text-green"><i data-lucide="award"></i></div>
+          </div>
+          <div class="font-inter font-black text-navy text-4xl mt-small mb-xs transition-counter">4,821<span class="text-lg font-noto font-bold text-gray-text"> 名</span></div>
+          <p class="font-noto text-gray-text text-sm">主要5資格における当校受講生の合格者数。<br>全国トップクラスの実績を更新し続けています。</p>
+        </div>
+
+        <!-- Metric 1 -->
+        <div class="bento-item bg-navy rounded-xl p-medium box-shadow-sm flex-column justify-center fade-target delay-1 hover-lift relative overflow-hidden">
+          <div class="glow-orb bottom-right bg-blue opacity-30"></div>
+          <h3 class="font-noto font-bold text-white text-sm mb-small opacity-80">一発合格率 (宅建)</h3>
+          <div class="font-inter font-black text-white text-3xl mb-xs">78.4<span class="text-md">%</span></div>
+          <div class="progress-bg w-full h-xs bg-line-dark rounded-full mt-auto">
+            <div class="progress-bar bg-blue h-full rounded-full w-78"></div>
+          </div>
+        </div>
+
+        <!-- Metric 2 -->
+        <div class="bento-item bg-white rounded-xl p-medium box-shadow-sm border-line flex-column justify-center fade-target delay-2 hover-lift">
+          <h3 class="font-noto font-bold text-navy text-sm mb-small">スマホ学習カバー率</h3>
+          <div class="font-inter font-black text-blue text-3xl">100<span class="text-md">%</span></div>
+          <p class="font-noto text-gray-text text-xs mt-auto">講義・テキスト・テストのすべてがスマホ一台で完結します。</p>
+        </div>
+
+        <!-- Metric 3 -->
+        <div class="bento-item bento-wide bg-blue rounded-xl p-medium box-shadow-blue flex-between align-center text-white fade-target hover-lift">
+          <div>
+            <h3 class="font-noto font-bold text-xl mb-xs">受講生満足度</h3>
+            <p class="font-noto text-sm opacity-90">質問対応やシステム使いやすさのアンケート結果</p>
+          </div>
+          <div class="font-inter font-black text-4xl">
+            96<span class="text-xl">.2%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method (Timeline / Roadmap) -->
+  <section class="section method bg-white pt-large pb-large" id="method">
+    <div class="l-container">
+      <div class="sect-header center fade-target mb-large">
+        <span class="font-inter text-blue font-bold text-sm tracking-widest uppercase mb-xs display-block">Smart Method</span>
+        <h2 class="sect-heading font-noto font-black text-navy line-height-tight">無駄を省いた「逆算型」学習メソッド</h2>
+        <p class="font-noto text-gray-text text-sm mt-xs max-w-600 mx-auto">過去10年分の出題データをAIが分析。「合格点ギリギリ」を意図的に狙うことで、学習時間を従来の約1/3に圧縮します。</p>
+      </div>
+
+      <div class="roadmap-grid gap-medium relative">
+        <!-- Connecting Line for Desktop -->
+        <div class="roadmap-line bg-gray-light absolute sp-none"></div>
+
+        <!-- Step 1 -->
+        <div class="r-step bg-white rounded-xl p-medium border-line box-shadow-sm fade-target relative z-10 hover-border-blue transition">
+          <div class="step-num font-inter font-black text-blue text-3xl opacity-20 absolute top-0 right-0 p-small">01</div>
+          <div class="icon-round bg-blue-light text-blue mb-small"><i data-lucide="target"></i></div>
+          <h3 class="font-noto font-black text-navy text-lg mb-xs">Aランク論点のみを抽出</h3>
+          <p class="font-noto text-gray-text text-sm line-height-long mt-small">
+            出題確率が低い「Cランク」の論点は勇気を持って切り捨てます。合格に必要な「A・Bランク」のみを凝縮したテキストを使用。
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="r-step bg-white rounded-xl p-medium border-line box-shadow-sm fade-target delay-1 relative z-10 hover-border-blue transition">
+          <div class="step-num font-inter font-black text-blue text-3xl opacity-20 absolute top-0 right-0 p-small">02</div>
+          <div class="icon-round bg-blue-light text-blue mb-small"><i data-lucide="smartphone"></i></div>
+          <h3 class="font-noto font-black text-navy text-lg mb-xs">1回15分のマイクロ講義</h3>
+          <p class="font-noto text-gray-text text-sm line-height-long mt-small">
+            通勤電車や昼休みをフル活用できるよう、講義は1単元15分に分割。細切れ時間でも確実にインプットが完了します。
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="r-step bg-white rounded-xl p-medium border-line box-shadow-sm fade-target delay-2 relative z-10 hover-border-blue transition">
+          <div class="step-num font-inter font-black text-blue text-3xl opacity-20 absolute top-0 right-0 p-small">03</div>
+          <div class="icon-round bg-blue-light text-blue mb-small"><i data-lucide="repeat"></i></div>
+          <h3 class="font-noto font-black text-navy text-lg mb-xs">AIによる忘却曲線演習</h3>
+          <p class="font-noto text-gray-text text-sm line-height-long mt-small">
+            あなたが間違えた問題と「忘れやすいタイミング」をAIが自動計算し、最適なタイミングで復習クイズを出題します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box / Dashboard UI Form -->
+  <section class="cta pt-xl pb-xl bg-navy relative border-t-line-dark" id="trial">
+    <!-- Geometric Background -->
+    <div class="geo-bg absolute inset-0 z-0 opacity-40">
+      <div class="grid-lines"></div>
+      <div class="bg-pattern-dot absolute inset-0"></div>
+    </div>
+
+    <div class="l-container relative z-10 flex-between gap-large align-center flex-col-sp">
+      
+      <div class="cta-text w-50 fade-target text-left">
+        <h2 class="font-noto font-black text-white text-3xl mb-small line-height-tight">さあ、<br>あなたの時間を<br><span class="text-gradient-primary">効率化</span>しよう。</h2>
+        <p class="font-noto text-gray-text text-sm mb-large line-height-long max-w-600">
+          アカウント登録はわずか30秒。登録後すぐに、各資格の「第1章」の動画講義とWebテキスト、AI問題演習システムを【完全無料】でお試しいただけます。
+        </p>
+        <div class="font-inter font-bold text-white flex gap-medium flex-wrap">
+          <div class="flex gap-xs align-center"><i data-lucide="check-circle-2" class="text-green"></i> クレジットカード不要</div>
+          <div class="flex gap-xs align-center"><i data-lucide="check-circle-2" class="text-green"></i> 自動課金なし</div>
+        </div>
+      </div>
+
+      <div class="cta-form-bg w-50 bg-white p-large rounded-xl box-shadow-lg fade-target delay-1 border-t-blue border-thick">
+        <h3 class="font-noto font-black text-navy text-xl text-center mb-small">無料体験アカウント作成</h3>
+        
+        <form class="c-form flex-column gap-small font-noto">
+          <div class="f-group">
+            <label class="font-bold text-xs mb-xs display-block text-navy">氏名</label>
+            <input type="text" class="f-input" placeholder="例：山田 太郎" required>
+          </div>
+          <div class="f-group">
+            <label class="font-bold text-xs mb-xs display-block text-navy">メールアドレス</label>
+            <input type="email" class="f-input" placeholder="name@example.com" required>
+          </div>
+          <div class="f-group">
+            <label class="font-bold text-xs mb-xs display-block text-navy">学習を希望する資格（複数可）</label>
+            <select class="f-input text-gray-text opacity-90">
+              <option>宅地建物取引士</option>
+              <option>行政書士</option>
+              <option>社会保険労務士</option>
+              <option>簿記2級・3級</option>
+              <option>公認会計士</option>
+              <option>その他・迷っている</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-blue btn-xl w-full font-black text-lg mt-small box-shadow-blue flex-center transition hover-scale-up">
+            無料で学習を始める <i data-lucide="arrow-right" class="ml-xs"></i>
+          </button>
+          <p class="text-xs text-gray-text text-center mt-xs">利用規約およびプライバシーポリシーに同意の上ご登録ください。</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-navy pb-medium pt-large border-t-line-dark relative z-10">
+    <div class="l-container flex-between align-start flex-col-sp gap-large w-full font-noto text-sm border-b-line-dark pb-large mb-medium">
+      
+      <div class="f-left text-left w-30">
+        <div class="logo-mark bg-blue text-white rounded-sm center display-inline-flex mb-xs"><i data-lucide="graduation-cap" class="icon-sm"></i></div>
+        <div class="font-inter font-black text-white text-xl mb-small tracking-tighter">QUALIA<span class="text-blue">.</span></div>
+        <p class="text-gray-text text-xs line-height-long font-normal">
+          データとテクノロジーの力で、<br>
+          すべての「学び」をアップデートする。
+        </p>
+      </div>
+      
+      <div class="f-links flex gap-large w-60 justify-end flex-wrap justify-start-sp">
+        <div class="link-col">
+          <div class="font-bold text-white mb-small">資格コース</div>
+          <ul class="flex-column gap-xs text-gray-text text-xs">
+            <li><a href="#" class="hover-white transition">宅建士講座</a></li>
+            <li><a href="#" class="hover-white transition">行政書士講座</a></li>
+            <li><a href="#" class="hover-white transition">社労士講座</a></li>
+            <li><a href="#" class="hover-white transition">簿記講座</a></li>
+          </ul>
+        </div>
+        <div class="link-col">
+          <div class="font-bold text-white mb-small">サービス</div>
+          <ul class="flex-column gap-xs text-gray-text text-xs">
+            <li><a href="#" class="hover-white transition">アプリ・機能</a></li>
+            <li><a href="#" class="hover-white transition">料金プラン</a></li>
+            <li><a href="#" class="hover-white transition">合格者の声</a></li>
+            <li><a href="#" class="hover-white transition">よくある質問</a></li>
+          </ul>
+        </div>
+        <div class="link-col">
+          <div class="font-bold text-white mb-small">会社情報</div>
+          <ul class="flex-column gap-xs text-gray-text text-xs">
+            <li><a href="#" class="hover-white transition">運営会社</a></li>
+            <li><a href="#" class="hover-white transition">利用規約</a></li>
+            <li><a href="#" class="hover-white transition">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="l-container flex-between align-center flex-col-sp text-xs font-inter text-gray-text">
+       <div>&copy; 2025 QUALIA ACADEMY Inc. All rights reserved.</div>
+       <div class="sns-icons flex gap-medium mt-small-sp">
+          <a href="#" class="hover-white transition"><i data-lucide="twitter"></i></a>
+          <a href="#" class="hover-white transition"><i data-lucide="youtube"></i></a>
+       </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer for scroll animations
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          
+          // Trigger CSS Chart animations in hero
+          if (e.target.classList.contains('hero-right')) {
+            const bars = e.target.querySelectorAll('.bar');
+            bars.forEach(bar => {
+              if (bar.classList.contains('bar-20')) bar.style.height = '20%';
+              if (bar.classList.contains('bar-40')) bar.style.height = '40%';
+              if (bar.classList.contains('bar-60')) bar.style.height = '60%';
+              if (bar.classList.contains('bar-80')) bar.style.height = '82%';
+              if (bar.classList.contains('bar-90')) bar.style.height = '94%';
+            });
+          }
+
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
