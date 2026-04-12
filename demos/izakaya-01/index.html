@@ -1,44 +1,348 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>居酒屋 月夜 | 創作和食</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">居酒屋 月夜</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炭火と鮮魚 魚心（うおごころ） | 旬の魚と厳選日本酒を個室で</title>
+  <meta name="description" content="毎朝市場から仕入れる鮮魚と、備長炭で焼き上げる本格炭火焼き。全国の銘酒と共に、心ほどける至福の時間を。少人数からの完全個室完備。ご宴会コースご予約受付中。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>今宵も、月が綺麗ですね。</h1><p>くつろぎの和空間</p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc">くつろぎの和空間<br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>信頼と実績</h3><p>地域で長年の信頼をいただいております。</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>プロフェッショナル</h3><p>熟練のスタッフが丁寧に対応します。</p></div><div class="card reveal" style="transition-delay:0.2s"><i data-lucide="zap"></i><h3>サポート体制</h3><p>アフターフォローも万全です。</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
   
-  <footer class="footer">居酒屋 月夜</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">魚心<span>-UOGOKORO-</span></a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#concept">こだわり</a></li>
+          <li><a href="#menu">おしながき</a></li>
+          <li><a href="#drink">お酒</a></li>
+          <li><a href="#course">ご宴会</a></li>
+          <li><a href="#space">お席のご案内</a></li>
+        </ul>
+        <div class="h-action">
+          <a href="#" class="btn btn-nav btn-reserve">WEBご予約</a>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1542301777-62f7902047ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="居酒屋 炭火焼き">
+    </div>
+    <div class="hero-mask"></div>
+    <div class="hero-content fade-target">
+      <div class="vertical-text">
+        <h1 class="hero-title">旨い酒、<br>旨い肴、<br>今日という日に<br><span class="hl-gold">乾杯を。</span></h1>
+        <p class="hero-sub">こだわりの炭火焼きと、朝獲れ鮮魚。<br>気取らない極上のひとときをお過ごしください。</p>
+      </div>
+    </div>
+    <div class="scroll-down">
+      <span>おしながきへ</span>
+      <div class="line"></div>
+    </div>
+  </section>
+
+  <!-- Concept -->
+  <section class="section concept" id="concept">
+    <div class="l-container">
+      <div class="c-wrap">
+        <div class="c-text fade-target">
+          <span class="en-label">O U R &nbsp; C O N C E P T</span>
+          <h2 class="sect-heading">旬を味わい、<br>心ほどける居酒屋。</h2>
+          <div class="desc">
+            <p>私たち「魚心」が目指すのは、毎日でも通いたくなるような、活気と温もりに溢れた場所です。</p>
+            <p>毎朝、店主自らが市場へ足を運び、その日一番の鮮魚を厳選。そして、備長炭の熱で旨みを内側に閉じ込める本格炭火焼き。素材の良さを生かすため、余計な味付けはいたしません。</p>
+            <p>お酒は全国各地の小さな蔵元から、季節ごとに一番美味しい銘柄を取り寄せております。<br>気の置けない仲間との語らい、仕事帰りの一杯。皆様の「今日」を最高に締めくくるお手伝いをさせてください。</p>
+          </div>
+        </div>
+        <div class="c-img-group fade-target delay-1">
+          <img src="https://images.unsplash.com/photo-1553655183-b9cc6edced13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="刺身" class="img-1">
+          <img src="https://images.unsplash.com/photo-1512484776495-a09fc441b171?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="日本酒" class="img-2">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature/Commitment -->
+  <section class="section feature bg-pattern">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <h2 class="sect-heading">魚心の三つのこだわり</h2>
+      </div>
+
+      <div class="f-grid">
+        <div class="f-card fade-target">
+          <div class="f-img">
+            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="お刺身盛り合わせ">
+          </div>
+          <div class="f-body">
+            <h3><span class="num">壱</span> 漁港直送の特上鮮魚</h3>
+            <p>豊洲市場を経由せず、独自のルートで漁港から直接買い付けるため、鮮度が違います。分厚く切ったお造り盛り合わせは、当店原価度外視の看板メニューです。</p>
+          </div>
+        </div>
+        <div class="f-card fade-target delay-1">
+          <div class="f-img">
+            <img src="https://images.unsplash.com/photo-1502444330042-d1a1ddf9bb5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="炭火焼き鳥">
+          </div>
+          <div class="f-body">
+            <h3><span class="num">弐</span> 備長炭で焼き上げる串</h3>
+            <p>店内で一本一本丁寧に串打ちし、最高級の紀州備長炭で一気に焼き上げます。外はパリッと香ばしく、中はふっくらジューシーな肉汁が溢れ出します。</p>
+          </div>
+        </div>
+        <div class="f-card fade-target delay-2">
+          <div class="f-img">
+            <img src="https://images.unsplash.com/photo-1545620958-37d402129532?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="日本酒 おちょこ">
+          </div>
+          <div class="f-body">
+            <h3><span class="num">参</span> 全国から取り寄せた厳選銘酒</h3>
+            <p>「十四代」「新政」「飛露喜」などの希少銘柄から、季節限定の絞りたて生酒まで。お料理の味を引き立てる最強のラインナップを常時30種類以上ご用意。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="section menu" id="menu">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">M E N U</span>
+        <h2 class="sect-heading">おしながき（抜粋）</h2>
+      </div>
+
+      <div class="m-wrap fade-target">
+        
+        <div class="m-col">
+          <h3 class="m-cat">名物・鮮魚</h3>
+          <ul class="m-list">
+            <li>
+              <div class="m-name">名物！大漁お造り五点盛り</div>
+              <div class="m-dots"></div>
+              <div class="m-price">1,980円</div>
+            </li>
+            <li>
+              <div class="m-name">金目鯛の姿煮付け</div>
+              <div class="m-dots"></div>
+              <div class="m-price">2,480円</div>
+            </li>
+            <li>
+              <div class="m-name">生本鮪のレアカツ</div>
+              <div class="m-dots"></div>
+              <div class="m-price">1,280円</div>
+            </li>
+            <li>
+              <div class="m-name">アジのなめろう 叩き立て</div>
+              <div class="m-dots"></div>
+              <div class="m-price">880円</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="m-col">
+          <h3 class="m-cat">炭火焼き串</h3>
+          <ul class="m-list">
+            <li>
+              <div class="m-name">特上もも トリュフ塩添え</div>
+              <div class="m-dots"></div>
+              <div class="m-price">350円</div>
+            </li>
+            <li>
+              <div class="m-name">自家製 月見つくね（卵黄付き）</div>
+              <div class="m-dots"></div>
+              <div class="m-price">380円</div>
+            </li>
+            <li>
+              <div class="m-name">極上レバー ごま油ねぎまみれ</div>
+              <div class="m-dots"></div>
+              <div class="m-price">320円</div>
+            </li>
+            <li>
+              <div class="m-name">串焼きおまかせ 五本盛り</div>
+              <div class="m-dots"></div>
+              <div class="m-price">1,480円</div>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <div class="center" style="margin-top: 50px;">
+        <p style="color:#A3A3A3; font-size:0.9rem;">※上記はメニューの一部です。仕入れ状況により内容・価格が変更になる場合がございます。<br>※価格はすべて税込み表記です。</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Courses / Banquet -->
+  <section class="section course" id="course">
+    <div class="l-container">
+      <div class="course-box fade-target">
+        <div class="cb-text">
+          <h2 class="sect-heading">ご宴会・飲み放題コース</h2>
+          <p>忘新年会、歓送迎会、接待に最適なコースをご用意。2時間のゆったり飲み放題付きです。</p>
+          <ul class="course-list">
+            <li>
+              <span class="c-name">【魚心お手軽コース】全7品＋2H飲み放題</span>
+              <span class="c-price">5,000<span>円</span></span>
+            </li>
+            <li class="c-recommend">
+              <span class="c-name">【極上お造りと炭火焼きコース】全9品＋2H飲み放題</span>
+              <span class="c-price">6,500<span>円</span></span>
+            </li>
+            <li>
+              <span class="c-name">【豪華！のどぐろと和牛コース】全10品＋2.5H飲み放題</span>
+              <span class="c-price">8,000<span>円</span></span>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-primary" style="margin-top:20px;">コースの詳細・ご予約はこちら</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Space / Seats -->
+  <section class="section space bg-pattern" id="space">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="en-label">S P A C E</span>
+        <h2 class="sect-heading">お席のご案内</h2>
+      </div>
+
+      <div class="s-grid">
+        <div class="s-card fade-target">
+          <img src="https://images.unsplash.com/photo-1549488344-c6da7998bc19?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="完全個室">
+          <div class="s-info">
+            <h3>完全個室（2名様〜最大12名様）</h3>
+            <p>周りを気にせずゆったりお寛ぎいただける掘りごたつ個室。接待や大切な方とのお食事に最適です。</p>
+          </div>
+        </div>
+        <div class="s-card fade-target delay-1">
+          <img src="https://images.unsplash.com/photo-1525615459345-2070f806e236?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="カウンター席">
+          <div class="s-info">
+            <h3>特等석 カウンター席（6席）</h3>
+            <p>目の前で炭火が燃える音と香りを楽しめるライブ感抜群のお席。お一人様やデートでのご利用におすすめです。</p>
+          </div>
+        </div>
+        <div class="s-card fade-target delay-2">
+          <img src="https://images.unsplash.com/photo-1510520695126-7ad73e34b9d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="テーブル席">
+          <div class="s-info">
+            <h3>広々テーブル席（〜30名様貸切可）</h3>
+            <p>少人数からの飲み会に対応可能なレイアウト自由のテーブル席。すだれを下ろして半個室風にもご利用いただけます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access & CTA -->
+  <section class="section access">
+    <div class="l-container">
+      <div class="a-wrap fade-target">
+        <div class="a-map">
+          <div class="map-ph">
+            <span><i data-lucide="map-pin"></i> Google Mapが開きます</span>
+          </div>
+        </div>
+        <div class="a-info">
+          <h2 class="sect-heading">店舗情報</h2>
+          <div class="info-list">
+            <dl>
+              <dt>店名</dt>
+              <dd>炭火と鮮魚 魚心（うおごころ）</dd>
+            </dl>
+            <dl>
+              <dt>住所</dt>
+              <dd>〒160-0000<br>東京都新宿区〇〇 1-2-3 地下1階<br>（新宿駅 東口より徒歩3分）</dd>
+            </dl>
+            <dl>
+              <dt>営業時間</dt>
+              <dd>月〜木・日：17:00 - 24:00 (L.O. 23:00)<br>金・土・祝前日：17:00 - 翌1:00 (L.O. 24:00)</dd>
+            </dl>
+            <dl>
+              <dt>定休日</dt>
+              <dd>不定休（年末年始はお休みです）</dd>
+            </dl>
+            <dl>
+              <dt>お支払い</dt>
+              <dd>現金 / クレジットカード（VISA, Master, JCB, AMEX） / PayPay等のQR決済</dd>
+            </dl>
+          </div>
+
+          <div class="a-actions">
+            <div class="tel-wrap">
+              <span class="tel-text">ご予約・お問い合わせ</span>
+              <a href="tel:03-0000-0000" class="tel-num"><i data-lucide="phone"></i> 03-0000-0000</a>
+            </div>
+            <a href="#" class="btn btn-primary" style="width:100%;">24時間受付 WEB予約はこちら</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="l-container">
+      <div class="ft-logo">
+        <a href="#">魚心<span>-UOGOKORO-</span></a>
+      </div>
+      <div class="ft-links">
+        <a href="#concept">こだわり</a>
+        <a href="#menu">おしながき</a>
+        <a href="#course">ご宴会コース</a>
+        <a href="#space">お席のご案内</a>
+        <a href="https://instagram.com" target="_blank"><i data-lucide="instagram" style="width:18px; display:inline; vertical-align:middle;"></i> 公式Instagram</a>
+      </div>
+      <div class="ft-bottom">
+        <p>&copy; 2025 UOGOKORO. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
