@@ -84,7 +84,7 @@ ul { list-style: none; }
 .header.scrolled { padding: 1rem 0; background: rgba(248, 246, 244, 0.95); backdrop-filter: blur(5px); box-shadow: var(--shadow-subtle); }
 
 .header .container { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 1.4rem; font-weight: 600; color: var(--color-primary); letter-spacing: 0.15em; display: flex; align-items: center; gap: 0.5rem; }
+.logo { font-size: 1.4rem; font-weight: 600; color: var(--color-primary); letter-spacing: 0.15em; display: flex; align-items: center; gap: 0.5rem; text-shadow: 0 0 15px rgba(255,255,255,0.9); }
 
 .nav-list { display: flex; gap: 3rem; align-items: center; }
 .nav-link { font-size: 0.9rem; letter-spacing: 0.15em; position: relative; color: var(--color-text); }
@@ -240,13 +240,27 @@ ul { list-style: none; }
    Responsive
    ------------------------------- */
 @media (max-width: 900px) {
-  .hero-wrapper { flex-direction: column; height: auto; }
-  .hero-image-wrap { flex: 0 0 50vh; width: 100%; }
-  .hero-content { padding: 4rem 2rem; }
-  .hero-title-box { height: 40vh; }
-  .philosophy .container { flex-direction: column-reverse; gap: 4rem; padding: 0 2rem; }
-  .philosophy-text { height: 350px; }
-  .menu-lists { flex-direction: column-reverse; gap: 4rem; align-items: center; }
-  .menu-cat { height: 300px; }
+  .container { padding: 0 1.5rem; }
+  .section { padding: 5rem 0; }
+  
+  .hero-wrapper { flex-direction: column; height: auto; align-items: center; }
+  .hero-image-wrap { flex: 0 0 40vh; width: 100%; }
+  .hero-content { padding: 3rem 1.5rem; align-items: flex-end; }
+  
+  .heading-vert { font-size: 1.8rem; letter-spacing: 0.15em; line-height: 1.6; }
+  .desc-vert { font-size: 0.85rem; line-height: 2; margin-right: 2rem; }
+  
+  .hero-title-box { height: auto; min-height: 50vh; justify-content: flex-start; padding-left: 2rem; }
+  
+  .stamp { top: 0rem; left: -1.5rem; width: 3.5rem; height: 3.5rem; font-size: 0.7rem; background: rgba(248,246,244,0.9); }
+  
+  .philosophy .container { flex-direction: column-reverse; gap: 2rem; }
+  .philosophy-text { height: auto; min-height: 350px; justify-content: center; }
+  
+  .menu-header { height: 100px; margin-bottom: 2rem; }
+  .menu-lists { flex-direction: column; gap: 2rem; align-items: center; }
+  .menu-cat { height: auto; min-height: 250px; gap: 1rem; width: 100%; justify-content: space-between; }
+  .price-name { font-size: 0.95rem; }
+  
   .nav-list { display: none; }
 }
