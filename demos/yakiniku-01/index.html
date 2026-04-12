@@ -1,44 +1,294 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>焼肉 炎 | 極上和牛空間</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo">HOMURA</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>焼肉 煌 (きらめき) | 黒毛和牛一頭買い・完全個室</title>
+  <meta name="description" content="厳選された黒毛和牛を一頭買いすることで実現した、極上の焼肉体験。無煙ロースター完備の完全個室空間で、大切な人との特別な時間をお過ごしください。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="clip-mask"></div><div class="hero-content reveal"><h1>炎が引き出す、肉の芸術。</h1><p>厳選されたA5ランク和牛</p></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="text reveal"><h2 class="title title-dark">REAL POWER.</h2><p class="desc">厳選されたA5ランク和牛<br><br>圧倒的な実績とスピードで、お客様の期待を超える結果を出します。妥協のないプロの仕事をお約束します。</p></div><div class="img reveal"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section bg-dark"><div class="container"><h2 class="title reveal">FEATURES</h2><div class="card-wrap">
-    <div class="card reveal" style="transition-delay:0s"><i data-lucide="zap"></i><h3>極コース</h3><p>和牛シャトーブリアンを含む最高級フルコース。12,000円</p></div><div class="card reveal" style="transition-delay:0.1s"><i data-lucide="zap"></i><h3>匠コース</h3><p>希少部位を堪能できる当店一番人気のコース。8,800円</p></div>
-  </div></div></section>
-
-  <!-- 4. GALLERY -->
-  <section class="section"><div class="container"><h2 class="title title-dark reveal">WORKS</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 5. PLANS -->
-  <section class="section bg-gray"><div class="container reveal"><h2 class="title title-dark center">SYSTEM & PLANS</h2><div class="plans">
-    <div class="p-card"><h4>基本コース</h4><div class="price">要見積</div></div><div class="p-card"><h4>プレミアム</h4><div class="price">要相談</div></div>
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="title title-dark center">FAQ</h2><div class="faq-box">
-    <details><summary>見積もりは無料ですか？</summary><p>はい、現地調査およびお見積もりは完全無料です。気軽にご相談ください。</p></details>
-    <details><summary>定休日はありますか？</summary><p>トラブルにいつでも対応できるよう、24時間365日受付しております。</p></details>
-    <details><summary>支払い方法は？</summary><p>現金、クレジットカード、電子マネー、各種ローンに対応しております。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>LET'S START!</h2><p>スピード対応で問題を解決。</p><a href="#" class="btn">今すぐ連絡する</a></div></section>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <footer class="footer">HOMURA</footer>
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <span class="en">YAKINIKU KIRAMEKI</span>
+          焼肉 煌
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#concept">こだわり</a></li>
+          <li><a href="#menu">お品書き</a></li>
+          <li><a href="#space">空間・個室</a></li>
+          <li><a href="#info">店舗情報・アクセス</a></li>
+        </ul>
+        <div class="h-action">
+          <a href="#reserve" class="btn btn-gold">WEB予約</a>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="炭火で焼かれる極上の牛肉">
+    </div>
+    <div class="hero-mask"></div>
+    
+    <div class="hero-inner fade-target">
+      <div class="vertical-text-wrap">
+        <h1 class="hero-title-v">
+          至福のひとときを、<br>網の上で。
+        </h1>
+        <p class="hero-desc-v">
+          最高級の黒毛和牛。<br>
+          職人が選び抜いた、命の結晶。<br>
+          五感で味わう、極上の焼肉体験。
+        </p>
+      </div>
+    </div>
+    
+    <div class="scroll-down">
+      <span>SCROLL</span>
+      <div class="line"></div>
+    </div>
+  </section>
+
+  <!-- Concept -->
+  <section class="section concept" id="concept">
+    <div class="l-container">
+      <div class="sect-header flex-center-col fade-target">
+        <span class="en-label">O U R &nbsp; C O N C E P T</span>
+        <h2 class="sect-heading">煌の三カ条</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="c-wrap">
+        <!-- 01 -->
+        <div class="c-block fade-target">
+          <div class="c-img">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="和牛の塊肉">
+          </div>
+          <div class="c-text">
+            <h3 class="vertical-h3">黒毛和牛、一頭買いの矜持。</h3>
+            <p class="vertical-p">全国の銘柄牛の中から、その日最も状態の良い黒毛和牛を厳選し、丸ごと一頭買い。だからこそ、希少部位も余すことなく、最高の鮮度と適正な価格でお客様へご提供することができます。とろけるような美しいサシと、赤身の深い旨味をご堪能ください。</p>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="c-block reverse fade-target">
+          <div class="c-img">
+            <img src="https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="特製のタレ">
+          </div>
+          <div class="c-text">
+            <h3 class="vertical-h3">肉の命を活かす、秘伝のタレ。</h3>
+            <p class="vertical-p">創業以来、継ぎ足し守り続けてきた秘伝のモミダレ。厳選した醤油をベースに、数十種類の野菜や果物、スパイスを独自の配合でブレンドし、長期間寝かせることで奥深いコクを引き出します。肉の旨味を一切邪魔せず、むしろ幾重にも引き立てる魔法の雫です。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommended Menu (Parallax style BG) -->
+  <section class="section menu" id="menu">
+    <div class="l-container">
+      <div class="sect-header flex-center-col fade-target">
+        <span class="en-label">M E N U</span>
+        <h2 class="sect-heading">極上のお品書き</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Item 1 -->
+        <div class="m-item fade-target">
+          <div class="m-img-box">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="厚切り極上タン">
+          </div>
+          <div class="m-info">
+            <h3>厚切り極上タン塩</h3>
+            <p class="m-desc">一本のタンからわずか数枚しか取れない「タン元」のみを贅沢に厚切りで。サクッとした歯切れの良さと、溢れ出す肉汁が絶品です。</p>
+            <div class="price">3,200 <span class="yen">円</span></div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="m-item fade-target delay-1">
+          <div class="m-img-box">
+            <img src="https://images.unsplash.com/photo-1628294895950-9805252327bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="和牛カルビ">
+          </div>
+          <div class="m-info">
+            <h3>特選・黒毛和牛カルビ</h3>
+            <p class="m-desc">美しい霜降りが特徴のA5ランクカルビ。口に入れた瞬間に体温で融け出す上質な脂の甘みと、秘伝のタレの絡み合いをお楽しみください。</p>
+            <div class="price">2,400 <span class="yen">円</span></div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="m-item fade-target delay-2">
+          <div class="m-img-box">
+            <img src="https://images.unsplash.com/photo-1596622527583-ce66b010164e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ユッケ">
+          </div>
+          <div class="m-info">
+            <h3>煌 特製・和牛生ユッケ</h3>
+            <p class="m-desc">厳しい保健所の基準をクリアした、安心安全な本物の生肉提供店だからできる究極の逸品。濃厚な蘭王卵と絡めてお召し上がりください。</p>
+            <div class="price">1,980 <span class="yen">円</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center" style="margin-top: 50px;">
+        <a href="#" class="btn btn-outline-gold"><i data-lucide="book-open"></i> メニュー一覧を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Banner -->
+  <section class="course-banner fade-target">
+    <div class="cb-inner">
+      <h2>大切な記念日や接待に</h2>
+      <h3>煌の「極 -KIWAMI-」コース</h3>
+      <p>一頭買いならではの希少部位から、<br>海鮮、デザートまでが含まれた当店最高峰のコースです。</p>
+      <div class="cb-price">お一人様 <span>12,000</span> 円</div>
+      <a href="#reserve" class="btn btn-gold">コースをご予約する</a>
+    </div>
+  </section>
+
+  <!-- Space -->
+  <section class="section space" id="space">
+    <div class="l-container">
+      <div class="sect-header flex-center-col fade-target">
+        <span class="en-label">S P A C E</span>
+        <h2 class="sect-heading">無煙ロースター完備の個室空間</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="s-wrap fade-target">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="高級感のある店内">
+        <div class="s-box">
+          <h3>匂いを気にせず、<br>服も美しいままで。</h3>
+          <p>全席に最新の「下引き無煙ロースター」を導入。煙が上に上がらないため、髪や衣服への匂い移りを最小限に抑えます。<br>
+          また、接待やデート、ご家族の顔合わせなどに最適な「完全個室（2名〜12名様用）」を多数ご用意しております。プライベート空間で、ゆったりと焼肉をご堪能ください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info & Reserve -->
+  <section class="section info" id="info">
+    <div class="l-container">
+      <div class="info-grid">
+        <div class="info-details fade-target">
+          <div class="logo">
+            <span class="en">YAKINIKU KIRAMEKI</span>
+            焼肉 煌
+          </div>
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <th>所在地</th>
+                <td>〒100-0000 東京都港区六本木焼肉ビル 1F</td>
+              </tr>
+              <tr>
+                <th>TEL</th>
+                <td><a href="tel:03-0000-0000" class="tel-link">03-0000-0000</a><br><span class="note">※受付時間：14:00〜23:00</span></td>
+              </tr>
+              <tr>
+                <th>営業時間</th>
+                <td>ディナー：17:00 〜 23:30 ( L.O. 22:30 )<br>定休日：不定休（年末年始を除く）</td>
+              </tr>
+              <tr>
+                <th>お支払い</th>
+                <td>現金 / クレジットカード / 交通系IC / PayPay対応</td>
+              </tr>
+              <tr>
+                <th>席数</th>
+                <td>全60席（完全個室8室完備）/ 全席禁煙</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-map fade-target delay-1">
+          <div class="map-ph">
+            <i data-lucide="map-pin"></i> Google Map が表示されます
+          </div>
+          <a href="#" class="btn btn-outline-white fw" style="margin-top:20px;">Google Mapで開く</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Reservation -->
+  <section class="section cta" id="reserve">
+    <div class="cta-inner fade-target">
+      <i data-lucide="concierge-bell" class="cta-icon"></i>
+      <h2>ご予約はこちら</h2>
+      <p>当店はご予約のお客様を優先してご案内しております。<br>週末は混み合いますので、お早めのWEB予約をおすすめいたします。</p>
+      <div class="cta-btns">
+        <a href="#" class="btn btn-gold btn-large">24時間受付・席のみ予約</a>
+        <a href="#" class="btn btn-outline-gold btn-large">コース一覧を見て予約</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="l-container">
+      <div class="ft-logo">
+        YAKINIKU KIRAMEKI
+      </div>
+      <div class="social-links">
+        <a href="#"><i data-lucide="instagram"></i></a>
+        <a href="#"><i data-lucide="facebook"></i></a>
+      </div>
+      <div class="ft-copy">
+        &copy; 2025 Yakiniku Kirameki. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
