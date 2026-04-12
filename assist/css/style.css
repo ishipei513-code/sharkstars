@@ -1565,29 +1565,49 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   text-underline-offset: 3px;
 }
 
-/* Tokushoho (特商法) Table */
+/* Tokushoho Table */
 .tokushoho-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--gray-200);
 }
 .tokushoho-table th,
 .tokushoho-table td {
-  padding: 20px 24px;
-  border-bottom: 1px solid var(--gray-200);
+  padding: 20px 28px;
   font-size: 0.95rem;
   line-height: 1.7;
   vertical-align: top;
 }
+.tokushoho-table tr {
+  transition: background 0.2s;
+}
+.tokushoho-table tr:nth-child(even) {
+  background: var(--gray-50);
+}
+.tokushoho-table tr:hover {
+  background: var(--gray-100);
+}
 .tokushoho-table th {
-  background-color: var(--gray-50);
+  background-color: var(--gray-900);
   font-weight: 600;
   width: 220px;
   text-align: left;
-  color: var(--gray-900);
+  color: var(--white);
   white-space: nowrap;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--gray-700);
+}
+.tokushoho-table tr:last-child th {
+  border-bottom: none;
 }
 .tokushoho-table td {
   color: var(--gray-700);
+  border-bottom: 1px solid var(--gray-100);
+}
+.tokushoho-table tr:last-child td {
+  border-bottom: none;
 }
 .tokushoho-table td a {
   color: var(--gray-900);
@@ -1598,21 +1618,39 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--gray-500);
 }
 @media (max-width: 768px) {
+  .tokushoho-table {
+    border: none;
+  }
+  .tokushoho-table tr {
+    display: block;
+    padding: 16px;
+    margin-bottom: 8px;
+    border: 1px solid var(--gray-200);
+    background: var(--white) !important;
+  }
+  .tokushoho-table tr:hover {
+    background: var(--gray-50) !important;
+  }
   .tokushoho-table th,
   .tokushoho-table td {
     display: block;
     width: 100%;
-    padding: 12px 16px;
+    padding: 0;
+    border: none;
+    background: transparent !important;
   }
   .tokushoho-table th {
-    padding-bottom: 4px;
-    border-bottom: none;
-    font-size: 0.85rem;
     color: var(--gray-500);
-    background: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
   }
   .tokushoho-table td {
-    padding-top: 0;
+    font-size: 0.95rem;
+    color: var(--gray-900);
+    font-weight: 500;
   }
 }
 
@@ -2054,56 +2092,112 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* Pricing Table */
 .pricing-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   margin-top: 16px;
   font-size: 0.95rem;
+  border: 1px solid var(--gray-200);
 }
 .pricing-table th,
 .pricing-table td {
-  padding: 14px 20px;
+  padding: 18px 24px;
   text-align: left;
-  border-bottom: 1px solid var(--gray-200);
 }
 .pricing-table thead th {
   background: var(--gray-900);
   color: var(--white);
   font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 24px;
+}
+.pricing-table thead th:last-child {
+  text-align: right;
+}
+.pricing-table tbody tr {
+  border-bottom: 1px solid var(--gray-200);
+  transition: background 0.2s;
+}
+.pricing-table tbody tr:nth-child(even) {
+  background: var(--gray-50);
 }
 .pricing-table tbody tr:hover {
-  background: var(--gray-50);
+  background: var(--gray-100);
+}
+.pricing-table tbody td {
+  border-bottom: 1px solid var(--gray-100);
+}
+.pricing-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.pricing-table td:first-child {
+  font-weight: 500;
+  color: var(--gray-900);
 }
 .pricing-table td:last-child {
   text-align: right;
   white-space: nowrap;
   font-weight: 600;
+  color: var(--gray-700);
 }
 .price-free {
-  color: #16a34a;
+  display: inline-block;
+  background: var(--gray-900);
+  color: var(--white);
+  padding: 3px 12px;
+  font-size: 0.85rem;
   font-weight: 700;
+  letter-spacing: 0.02em;
 }
 .price-paid {
-  color: #dc2626;
+  color: var(--gray-900);
   font-weight: 700;
+  border-bottom: 2px solid var(--gray-900);
+  padding-bottom: 1px;
 }
 .detail-subtitle {
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--gray-900);
   padding-bottom: 12px;
-  border-bottom: 2px solid var(--gray-200);
+  border-bottom: 2px solid var(--gray-900);
   margin-bottom: 8px;
 }
 
 @media (max-width: 768px) {
-  .pricing-table th,
-  .pricing-table td {
-    padding: 10px 12px;
+  .pricing-table {
+    border: none;
+  }
+  .pricing-table thead {
+    display: none;
+  }
+  .pricing-table tbody tr {
+    display: block;
+    padding: 16px;
+    margin-bottom: 8px;
+    border: 1px solid var(--gray-200);
+    background: var(--white) !important;
+  }
+  .pricing-table tbody tr:hover {
+    background: var(--gray-50) !important;
+  }
+  .pricing-table tbody td {
+    display: block;
+    text-align: left !important;
+    padding: 4px 0;
+    border: none;
+    white-space: normal !important;
+  }
+  .pricing-table td:first-child {
     font-size: 0.85rem;
+    color: var(--gray-500);
+    font-weight: 500;
+    margin-bottom: 4px;
   }
   .pricing-table td:last-child {
-    white-space: normal;
+    font-size: 1rem;
+    text-align: left !important;
   }
 }
 
