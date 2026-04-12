@@ -1,46 +1,340 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>株式会社サンプル 採用情報 | 仲間募集中</title><meta name="description" content="私たちと一緒に成長しませんか。新卒・中途募集中。">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assist/css/style.css"></head>
-<body>
-  <header class="header" id="header"><div class="container"><div class="logo"><i data-lucide="shield-check"></i>  株式会社サンプル</div></div></header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STARTUP INC. 採用情報 | 次世代の常識を創る</title>
+  <meta name="description" content="STARTUP INC.（架空）の採用特化ページです。私たちと一緒に、業界の課題を解決し、テクノロジーで次世代の常識を創るメンバーを募集しています。新卒・中途採用のエントリーはこちらから。">
   
-  <!-- 1. HERO -->
-  <div class="hero"><div class="bg"><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"></div><div class="overlay"></div><div class="container hero-content reveal"><h1>あなたの挑戦が、<br>未来をつくる。</h1><p>私たちと一緒に成長しませんか。新卒・中途募集中。</p>
-    <div class="stats"><div class="stat"><span>設立</span><strong>20年</strong></div><div class="stat"><span>解決実績</span><strong>5,000件</strong></div></div></div></div>
-
-  <!-- 2. ABOUT -->
-  <section class="section"><div class="container grid"><div class="img reveal"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div><div class="text reveal">
-    <h2 class="sect-title">ABOUT US</h2><p class="desc">私たちと一緒に成長しませんか。新卒・中途募集中。<br><br>私たちが大切にしているのは、信頼と実績に基づく確かなソリューションです。お客様の課題に対して真摯に向き合い、最適な結果を導き出します。</p></div></div></section>
-
-  <!-- 3. FEATURES -->
-  <section class="section gray"><div class="container"><h2 class="sect-title center reveal">OUR STRENGTHS</h2><div class="bento-grid">
-    <div class="bento-item reveal" style="transition-delay:0s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>充実の待遇</h3><p>年収400万〜。賞与年2回。</p></div><div class="bento-item reveal" style="transition-delay:0.1s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>リモートOK</h3><p>週3日リモート勤務可能。</p></div><div class="bento-item reveal" style="transition-delay:0.2s"><div class="icon"><i data-lucide="check-circle"></i></div><h3>成長環境</h3><p>研修制度充実。資格取得補助。</p></div>
-  </div></div></section>
-
-  <!-- 4. SERVICES -->
-  <section class="section"><div class="container reveal"><h2 class="sect-title center">SERVICES & PLANS</h2><div class="service-table">
-    <div class="s-row"><div class="s-name">基本コース</div><div class="s-cost">要見積</div></div><div class="s-row"><div class="s-name">プレミアム</div><div class="s-cost">要相談</div></div>
-  </div></div></section>
-
-  <!-- 5. CASE STUDY (Gallery equivalent) -->
-  <section class="section gray"><div class="container"><h2 class="sect-title center reveal">CASE STUDY</h2><div class="gallery">
-    <img src="https://images.unsplash.com/photo-1563986768494-4d8dbcb2b005?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.1s"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.2s"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.3s"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="reveal" style="transition-delay:0.4s">
-  </div></div></section>
-
-  <!-- 6. FAQ -->
-  <section class="section"><div class="container reveal"><h2 class="sect-title center">FAQ</h2><div class="faq-box">
-    <details open><summary>初回のご相談は無料ですか？</summary><p>はい、初回のヒアリングおよび概算お見積りのご提示までは完全無料で承っております。</p></details>
-    <details><summary>遠方の企業でも対応可能ですか？</summary><p>はい、オンライン会議ツールを活用し、全国どこでも対応可能です。</p></details>
-    <details><summary>顧問契約は可能ですか？</summary><p>はい、継続的なサポートを行う顧問サービスもご用意しております。詳細はお問い合わせください。</p></details>
-  </div></div></section>
-
-  <!-- 7. CTA -->
-  <section class="section cta"><div class="container reveal"><h2>無料で資料ダウンロード・ご相談</h2><p>お電話、または下記フォームよりお気軽にお問い合わせください。</p><a href="#" class="btn">お問い合わせ</a></div></section>
-
-  <footer class="footer"> 株式会社サンプル</footer>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  window.addEventListener('scroll', () => { document.getElementById('header')?.classList.toggle('scrolled', window.scrollY > 50); });
-  const obs = new IntersectionObserver(e => e.forEach(i => { if(i.isIntersecting) { i.target.classList.add('visible'); } }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script></body></html>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container">
+      <div class="logo">
+        <a href="#">
+          <span class="l-jp font-inter text-navy font-black">STARTUP INC.</span>
+          <span class="l-sub bg-blue text-white font-inter font-bold">RECRUIT</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-inter font-bold">
+          <li><a href="#message">Message</a></li>
+          <li><a href="#culture">Culture</a></li>
+          <li><a href="#members">Members</a></li>
+          <li><a href="#jobs">Jobs</a></li>
+        </ul>
+      </nav>
+      <!-- Desktop Entry Button -->
+      <a href="#entry" class="h-entry bg-blue text-white font-inter font-bold sp-none hover-expand">
+        ENTRY <i data-lucide="arrow-right"></i>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero bg-light">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="チームメンバーが笑い合う様子">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="l-container">
+      <div class="hero-inner fade-target">
+        <div class="h-catch font-inter font-black text-yellow">BEYOND THE ORDINARY</div>
+        <h1 class="hero-title text-white">
+          <span class="t-line">私たちと一緒に、</span><br>
+          <span class="t-line">次世代の<span class="text-yellow">「常識」</span>を創ろう。</span>
+        </h1>
+        <p class="hero-desc text-white font-bold">
+          古い慣習を打ち破り、テクノロジーで世界を1ミリでも良くする。<br class="sp-none">
+          圧倒的な成長環境で、あなたの熱狂を形にしませんか。
+        </p>
+        <a href="#jobs" class="btn btn-yellow btn-large hero-btn mt-medium font-bold box-shadow">募集要項を見る <i data-lucide="chevron-down"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Message Section -->
+  <section class="section message bg-white" id="message">
+    <div class="l-container">
+      <div class="m-flex">
+        <div class="m-left fade-target">
+          <span class="sect-label font-inter font-bold text-blue">01 / MESSAGE</span>
+          <h2 class="sect-heading text-navy">失敗を恐れず、<br>バットを振り続けろ。</h2>
+          <p class="text-gray m-text">
+            私たちは、まだ誰も歩んだことのない道を切り拓こうとしています。<br>
+            だからこそ、最初から正解なんて誰も知りません。<br><br>
+            重要なのは「失敗しないこと」ではなく、「仮説を立てて、最速で実行し、失敗から学ぶこと」です。<br>
+            STARTUP INC.には、挑戦者を笑う人間は一人もいません。<br><br>
+            自分の限界を決めず、本気で世の中にインパクトを与えたい。<br>
+            そんな熱い想いを持ったあなたと、一緒に戦える日を楽しみにしています。
+          </p>
+          <div class="m-ceo mt-large">
+            <span class="font-inter font-bold text-navy block">CEO / 代表取締役</span>
+            <span class="font-bold text-navy" style="font-size: 1.2rem;">山田 太郎</span>
+          </div>
+        </div>
+        <div class="m-right fade-target delay-1">
+          <div class="m-img-wrap">
+            <div class="m-accent bg-yellow"></div>
+            <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="代表メッセージ" class="box-shadow">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Culture Section -->
+  <section class="section culture bg-light" id="culture">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="sect-label font-inter font-bold text-blue">02 / CULTURE</span>
+        <h2 class="sect-heading text-navy">私たちが大切にする価値観</h2>
+        <p class="text-gray">バリュー（行動指針）は、壁に飾るものではなく、毎日の意思決定の基準です。</p>
+      </div>
+
+      <div class="c-grid">
+        <!-- Value 1 -->
+        <div class="c-card bg-white box-shadow fade-target">
+          <div class="c-num font-inter font-black text-light-gray">01</div>
+          <h3 class="text-blue font-bold">Speed is Power</h3>
+          <h4 class="text-navy font-bold mb-small">スピードは最大の武器</h4>
+          <p class="text-gray text-sm">完璧な60点より、最速の40点を出して顧客のフィードバックを得る。圧倒的なスピードこそがスタートアップの最大の競争優位性です。</p>
+        </div>
+        <!-- Value 2 -->
+        <div class="c-card bg-white box-shadow fade-target delay-1">
+          <div class="c-num font-inter font-black text-light-gray">02</div>
+          <h3 class="text-blue font-bold">Radical Candor</h3>
+          <h4 class="text-navy font-bold mb-small">徹底的な率直さ</h4>
+          <p class="text-gray text-sm">事向性（コトに向かう）の精神。年齢や役職に関係なく、会社や事業にとって何が最適かを、相手へのリスペクトを持ちながら率直に議論します。</p>
+        </div>
+        <!-- Value 3 -->
+        <div class="c-card bg-white box-shadow fade-target delay-2">
+          <div class="c-num font-inter font-black text-light-gray">03</div>
+          <h3 class="text-blue font-bold">Give First</h3>
+          <h4 class="text-navy font-bold mb-small">まずは、与えよ</h4>
+          <p class="text-gray text-sm">自分の手柄よりもチームの勝利。顧客に対しても、仲間に対しても、見返りを求める前に自分から価値を提供できる人間であり続けること。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Environment & Benefits Section -->
+  <section class="section benefits bg-navy text-white">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="sect-label font-inter font-bold text-yellow">ENVIRONMENT</span>
+        <h2 class="sect-heading text-white">最高のパフォーマンスを発揮するために</h2>
+      </div>
+
+      <div class="b-grid fade-target delay-1">
+        <div class="b-item border-navy">
+          <i data-lucide="laptop" class="text-yellow b-icon"></i>
+          <h4>フルフレックス・リモート</h4>
+          <p class="text-gray-light text-sm">コアタイムなしのフルフレックス制（月間所定労働時間）。週の半分はリモート、半分はオフィスなどライフスタイルに合わせた働き方が可能です。</p>
+        </div>
+        <div class="b-item border-navy">
+          <i data-lucide="monitor" class="text-yellow b-icon"></i>
+          <h4>最新デバイスの支給</h4>
+          <p class="text-gray-light text-sm">エンジニア・デザイナーには最新のMacBook Proと4Kモニターを支給。開発効率や生産性を最大化するためのツールへの投資は惜しみません。</p>
+        </div>
+        <div class="b-item border-navy">
+          <i data-lucide="book-open" class="text-yellow b-icon"></i>
+          <h4>書籍購入・カンファレンス補助</h4>
+          <p class="text-gray-light text-sm">業務に関連する書籍の購入は全額会社負担。AWSリインベントなど、海外のカンファレンスへの参加費や渡航費も支援しています。</p>
+        </div>
+        <div class="b-item border-navy">
+          <i data-lucide="baby" class="text-yellow b-icon"></i>
+          <h4>ファミリーサポート</h4>
+          <p class="text-gray-light text-sm">男女問わず育休取得実績多数。「子どもが熱を出した」際の突発的な中抜けや、時短勤務にも柔軟に対応できるチーム体制を敷いています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Members Section (Interviews mockup) -->
+  <section class="section members bg-light" id="members">
+    <div class="l-container">
+      <div class="sect-header center fade-target">
+        <span class="sect-label font-inter font-bold text-blue">03 / MEMBERS</span>
+        <h2 class="sect-heading text-navy">働く仲間たち</h2>
+      </div>
+
+      <div class="mem-scroller fade-target delay-1">
+        <div class="mem-card box-shadow">
+          <div class="mem-img">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Engineer">
+            <div class="mem-tag bg-blue text-white font-inter font-bold">Engineering</div>
+          </div>
+          <div class="mem-info bg-white">
+            <p class="mem-quote font-bold text-navy">「ユーザーの課題を技術で直接解決できる面白さが、ここにはある。」</p>
+            <div class="mem-name mt-small">
+              <span class="font-bold">A.佐藤</span> <span class="text-gray text-sm">/ 2021年 中途入社</span>
+            </div>
+          </div>
+        </div>
+        <div class="mem-card box-shadow">
+          <div class="mem-img">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sales">
+            <div class="mem-tag bg-yellow text-navy font-inter font-bold">Sales & BizDev</div>
+          </div>
+          <div class="mem-info bg-white">
+            <p class="mem-quote font-bold text-navy">「単なるモノ売りではない。事業戦略から入り込み、顧客の事業を成長させる営業。」</p>
+            <div class="mem-name mt-small">
+              <span class="font-bold">K.田中</span> <span class="text-gray text-sm">/ 2023年 新卒入社</span>
+            </div>
+          </div>
+        </div>
+        <div class="mem-card box-shadow">
+          <div class="mem-img">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Design">
+            <div class="mem-tag bg-teal text-white font-inter font-bold">Product Design</div>
+          </div>
+          <div class="mem-info bg-white">
+            <p class="mem-quote font-bold text-navy">「要件定義の段階からデザイナーが介在し、本当に使いやすいUI/UXを追求できる。」</p>
+            <div class="mem-name mt-small">
+              <span class="font-bold">Y.鈴木</span> <span class="text-gray text-sm">/ 2022年 中途入社</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Requirements -->
+  <section class="section jobs bg-white" id="jobs">
+    <div class="l-container max-w-800">
+      <div class="sect-header center fade-target">
+        <span class="sect-label font-inter font-bold text-blue">04 / JOBS</span>
+        <h2 class="sect-heading text-navy">募集要項</h2>
+        <p class="text-gray">現在以下のポジションで採用を強化しています。</p>
+      </div>
+
+      <div class="accordion-list fade-target delay-1">
+        <!-- Job 1 -->
+        <details class="job-accordion border-gray box-shadow" open>
+          <summary class="bg-white text-navy font-bold">
+            <div class="j-title">
+              <span class="badge bg-blue-light text-blue font-inter font-bold">エンジニア</span>
+              フルスタックエンジニア（Web/アプリ）
+            </div>
+            <i data-lucide="chevron-down" class="text-gray"></i>
+          </summary>
+          <div class="job-content border-top-gray">
+            <p class="text-gray text-sm mb-medium">新規自社プロダクトの要件定義〜設計〜開発〜運用まで、幅広いフェーズに裁量を持って携わっていただきます。特定の言語に縛られず、課題解決に最適な技術スタックを選定できます。</p>
+            <h5 class="text-navy font-bold mb-small">必須要件（MUST）</h5>
+            <ul class="req-list text-gray text-sm mb-medium">
+              <li>Webアプリケーションの開発・運用経験（3年以上 / 言語問わず）</li>
+              <li>Git / GitHubを利用したチーム開発経験</li>
+            </ul>
+            <h5 class="text-navy font-bold mb-small">歓迎要件（WANT）</h5>
+            <ul class="req-list text-gray text-sm mb-medium">
+              <li>React / Vue.js 等を用いたSPAの開発経験</li>
+              <li>AWS / GCP 上でのインフラ構築・運用経験</li>
+            </ul>
+            <div class="center mt-medium">
+              <a href="#entry" class="btn btn-outline border-blue text-blue" style="width: 100%;">この職種にエントリーする</a>
+            </div>
+          </div>
+        </details>
+
+        <!-- Job 2 -->
+        <details class="job-accordion border-gray box-shadow">
+          <summary class="bg-white text-navy font-bold">
+            <div class="j-title">
+              <span class="badge bg-yellow-light text-yellow font-inter font-bold">ビジネス</span>
+              法人営業（フィールドセールス）
+            </div>
+            <i data-lucide="chevron-down" class="text-gray"></i>
+          </summary>
+          <div class="job-content border-top-gray">
+            <p class="text-gray text-sm mb-medium">インサイドセールスが獲得したエンタープライズ（大手企業）のリードに対し、課題のヒアリングから提案、クロージングまでを担当します。単なる売り切りではなく、カスタマーサクセスと連携してLTVを最大化するアプローチが求められます。</p>
+            <div class="center mt-medium">
+              <a href="#entry" class="btn btn-outline border-blue text-blue" style="width: 100%;">この職種にエントリーする</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Entry CTA (Sticky Bottom for Mobile) -->
+  <div class="sp-entry sp-only bg-white box-shadow border-top-gray">
+    <a href="#entry" class="btn btn-blue" style="width: 100%; border-radius: 50px;">
+      ENTRY（エントリーはこちら）
+    </a>
+  </div>
+
+  <section class="section entry-sect bg-blue text-white" id="entry">
+    <div class="l-container center">
+      <div class="entry-box fade-target">
+        <h2 class="font-inter font-black text-white" style="font-size: 4rem; line-height: 1; letter-spacing: -2px;">ENTRY</h2>
+        <p class="mt-small mb-large" style="font-size: 1.1rem;">あなたの挑戦を、お待ちしています。</p>
+        <div class="max-w-800 mx-auto bg-white text-navy box-shadow" style="padding: 40px; border-radius: 8px;">
+          <!-- Mock Form Layout -->
+          <p class="font-bold mb-medium" style="font-size: 1.2rem;">エントリー・カジュアル面談フォーム</p>
+          <div style="display:flex; justify-content:center;">
+             <a href="#" class="btn btn-yellow btn-large font-bold box-shadow hover-expand" style="padding: 20px 80px; font-size: 1.2rem; border-radius: 50px;">
+              フォーム画面へ進む <i data-lucide="external-link"></i>
+             </a>
+          </div>
+          <p class="text-gray text-sm mt-medium">※書類選考ではなく、まずはカジュアルにお話しすることも可能です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-navy text-gray-light font-sm">
+    <div class="l-container center pt-large pb-large">
+      <div class="logo font-inter font-black text-white mb-medium" style="font-size: 1.8rem; letter-spacing: -1px;">STARTUP INC.</div>
+      <div class="f-links flex-center mb-large">
+        <a href="#" class="hover-white" style="margin: 0 15px;">コーポレートサイト</a>
+        <a href="#" class="hover-white" style="margin: 0 15px;">プライバシーポリシー</a>
+      </div>
+      <p>&copy; 2025 STARTUP INC. Recruiting. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
