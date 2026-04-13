@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>飲食店がホームページを持つべき5つの理由 | SHARKSTARS ブログ</title>
+  <meta name="description"
+    content="飲食店にホームページは必要？SNSだけでは足りない理由を5つのポイントで解説。福岡の飲食店オーナー必見。初期費用0円・月額3,980円で始められるホームページ制作。">
+  <meta name="keywords"
+    content="飲食店,ホームページ,必要,理由,福岡,集客,Googleマップ,MEO,個人経営,カフェ,居酒屋,SHARKSTARS">
+  <link rel="icon" href="../assist/images/favicon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      background: #fafafa;
+      color: #171717;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      padding: 0 2rem;
+      height: 72px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #171717;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .nav-back {
+      font-size: 0.9rem;
+      color: #525252;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover {
+      color: #171717;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-hero {
+      margin-top: 72px;
+      padding: 5rem 2rem 3rem;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #fff;
+      text-align: center;
+    }
+
+    .article-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 1rem;
+      border-radius: 100px;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-hero h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.5;
+      max-width: 800px;
+      margin: 0 auto 1rem;
+    }
+
+    .article-date {
+      color: #a3a3a3;
+      font-size: 0.9rem;
+    }
+
+    .article-content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .article-content h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 3rem 0 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid #171717;
+    }
+
+    .article-content h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 2rem 0 0.75rem;
+      padding-left: 1rem;
+      border-left: 4px solid #171717;
+    }
+
+    .article-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.8;
+    }
+
+    .article-content strong {
+      color: #171717;
+    }
+
+    /* CALLOUT BOX */
+    .callout {
+      background: #f5f5f5;
+      border-left: 4px solid #171717;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .callout p {
+      margin-bottom: 0;
+    }
+
+    /* CTA BOX */
+    .cta-box {
+      background: linear-gradient(135deg, #171717, #262626);
+      color: #fff;
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .cta-box h3 {
+      border: none;
+      padding: 0;
+      color: #fff;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-box p {
+      color: #a3a3a3;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #fff;
+      color: #171717;
+      font-weight: 700;
+      padding: 0.9rem 2.5rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+    }
+
+    /* NAV BOTTOM */
+    .article-nav {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+      text-align: center;
+    }
+
+    .article-nav a {
+      display: inline-block;
+      color: #525252;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 0.7rem 2rem;
+      border: 1px solid #d4d4d4;
+      border-radius: 100px;
+      transition: all 0.2s;
+    }
+
+    .article-nav a:hover {
+      background: #171717;
+      color: #fff;
+      border-color: #171717;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #171717;
+      color: #a3a3a3;
+      text-align: center;
+      padding: 3rem 2rem;
+      font-size: 0.85rem;
+    }
+
+    .footer a {
+      color: #d4d4d4;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.2s;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    .footer-links {
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .article-content {
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      .article-hero {
+        padding: 4rem 1.5rem 2.5rem;
+      }
+
+      .cta-box {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="../" class="logo">
+        <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 4L8 28h20L18 4z" fill="#171717" />
+          <path d="M18 10l1.5 4.5H24l-3.5 2.5 1.3 4.5L18 19l-3.8 2.5 1.3-4.5L12 14.5h4.5L18 10z" fill="#a3a3a3" />
+          <path d="M4 30q7-4 14 0t14-4" stroke="#171717" stroke-width="2" fill="none" stroke-linecap="round" />
+        </svg>
+        SHARKSTARS
+      </a>
+      <a href="./" class="nav-back">&larr; ブログ一覧に戻る</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="article-hero">
+    <span class="article-tag">集客</span>
+    <h1>飲食店がホームページを持つべき5つの理由</h1>
+    <p class="article-date">2026.04.13</p>
+  </section>
+
+  <!-- ARTICLE CONTENT -->
+  <article class="article-content">
+
+    <p>
+      「うちはInstagramで十分」「食べログに載ってるから大丈夫」<br>
+      そう思っている飲食店オーナーさん、多いのではないでしょうか。
+    </p>
+    <p>
+      確かにSNSやグルメサイトは強力な集客ツールです。でも、<strong>ホームページがないことで、知らないうちにお客様を逃している</strong>可能性があります。
+    </p>
+    <p>
+      この記事では、飲食店がホームページを持つべき5つの理由を、具体例を交えてわかりやすく解説します。
+    </p>
+
+    <h2>理由1：Google検索で見つけてもらえる</h2>
+    <p>
+      お客様が「福岡 ランチ おすすめ」「博多 居酒屋 個室」と検索したとき、あなたのお店は表示されていますか？
+    </p>
+    <p>
+      Instagramの投稿はGoogle検索にはほとんど表示されません。一方、<strong>ホームページはGoogleに直接インデックスされる</strong>ため、「地域名＋業種」で検索したお客様にダイレクトにアプローチできます。
+    </p>
+    <div class="callout">
+      <p>💡 <strong>ポイント</strong>：GoogleビジネスプロフィールにホームページのURLを登録すると、Googleマップの検索結果にも表示されやすくなります。</p>
+    </div>
+
+    <h2>理由2：お店の「公式情報」を正確に伝えられる</h2>
+    <p>
+      食べログやRettyに掲載されている情報、実は古いままになっていませんか？営業時間が変わった、メニューが変わった、定休日が変わった…。
+    </p>
+    <p>
+      グルメサイトの情報は自分ですぐに更新できないことも多いですが、<strong>自分のホームページなら、正確な情報をリアルタイムで発信</strong>できます。
+    </p>
+    <ul>
+      <li>最新の営業時間・定休日</li>
+      <li>季節限定メニュー・コース内容</li>
+      <li>お席の写真・店内の雰囲気</li>
+      <li>アクセス方法・駐車場情報</li>
+    </ul>
+
+    <h2>理由3：SNSだけでは「信頼感」が足りない</h2>
+    <p>
+      初めてのお店に行くとき、あなたはどうしますか？多くの人が<strong>「お店の名前で検索して、ホームページを確認する」</strong>という行動をとります。
+    </p>
+    <p>
+      そのとき、ホームページが出てこなかったら？「このお店、大丈夫かな…」と少し不安になりませんか？
+    </p>
+    <p>
+      特に以下のようなシーンでは、ホームページの有無が大きな差を生みます。
+    </p>
+    <ul>
+      <li><strong>接待・デート</strong>：事前にお店の雰囲気を確認したい</li>
+      <li><strong>宴会・貸切</strong>：コース内容や収容人数を確認したい</li>
+      <li><strong>遠方からの来店</strong>：アクセス情報をしっかり確認したい</li>
+    </ul>
+
+    <h2>理由4：グルメサイトの手数料から自由になれる</h2>
+    <p>
+      食べログやホットペッパーの掲載料、毎月いくら払っていますか？月額数万円～数十万円という声も少なくありません。
+    </p>
+    <p>
+      ホームページ経由で直接予約を受けることができれば、<strong>グルメサイトへの依存度を下げ、毎月の固定費を大幅に削減</strong>できます。
+    </p>
+    <div class="callout">
+      <p>💡 <strong>比較例</strong><br>
+        ・グルメサイト：月額50,000円＋送客手数料<br>
+        ・自社ホームページ（SHARKSTARS）：<strong>月額3,980円（税込）のみ</strong></p>
+    </div>
+
+    <h2>理由5：求人にも効果がある</h2>
+    <p>
+      意外と見落とされがちですが、<strong>ホームページは「求人」にも効果的</strong>です。
+    </p>
+    <p>
+      「このお店で働きたい」と思った求職者は、必ずお店の名前を検索します。そのとき、きれいなホームページがあれば「ちゃんとしたお店なんだな」という安心感を与えることができます。
+    </p>
+    <p>
+      スタッフ紹介や職場の雰囲気を載せておけば、お店の魅力が伝わり、応募率もアップします。
+    </p>
+
+    <h2>まとめ</h2>
+    <p>
+      飲食店がホームページを持つべき理由をまとめると、以下の5つです。
+    </p>
+    <ol>
+      <li>Google検索で新規のお客様に見つけてもらえる</li>
+      <li>正確な「公式情報」をリアルタイムで発信できる</li>
+      <li>お店の信頼感・ブランド力が格段にアップする</li>
+      <li>グルメサイトの手数料を削減できる</li>
+      <li>求人にも好影響を与える</li>
+    </ol>
+    <p>
+      「でも、ホームページって高いんでしょ？」と思われた方、ご安心ください。<br>
+      SHARKSTARSなら、<strong>初期費用0円・月額3,980円（税込）</strong>で、プロ品質のホームページをお持ちいただけます。サーバー代・保守管理費もすべて込みです。
+    </p>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <h3>ホームページ、始めてみませんか？</h3>
+      <p>初期費用0円、月額3,980円（税込）。最短3日で完成。</p>
+      <a href="../#contact" class="cta-btn">無料相談はこちら</a>
+    </div>
+
+  </article>
+
+  <!-- NAV -->
+  <div class="article-nav">
+    <a href="./">&larr; ブログ一覧に戻る</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="../">トップページ</a>
+      <a href="../company.html">会社概要</a>
+      <a href="../terms.html">利用規約</a>
+      <a href="../privacy.html">プライバシーポリシー</a>
+    </div>
+    <p>&copy; 2025 SHARKSTARS All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>

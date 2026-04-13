@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブログ | SHARKSTARS（シャークスターズ）福岡のホームページ制作</title>
+  <meta name="description"
+    content="SHARKSTARSのブログ。ホームページ制作のコツ、SEO対策、集客ノウハウなど、中小企業・個人事業主に役立つ情報を福岡から発信しています。">
+  <meta name="keywords"
+    content="福岡,ホームページ制作,ブログ,SEO対策,集客,Web制作,個人事業主,中小企業,SHARKSTARS">
+  <link rel="icon" href="../assist/images/favicon.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      background: #fafafa;
+      color: #171717;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      padding: 0 2rem;
+      height: 72px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #171717;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .nav-back {
+      font-size: 0.9rem;
+      color: #525252;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover {
+      color: #171717;
+    }
+
+    /* ===== HERO ===== */
+    .blog-hero {
+      margin-top: 72px;
+      padding: 5rem 2rem 4rem;
+      background: linear-gradient(135deg, #171717, #262626);
+      color: #fff;
+      text-align: center;
+    }
+
+    .blog-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .blog-hero p {
+      font-size: 1.1rem;
+      color: #a3a3a3;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ===== BLOG GRID ===== */
+    .blog-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .blog-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-card-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: linear-gradient(135deg, #262626, #404040);
+    }
+
+    .blog-card-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card-tag {
+      display: inline-block;
+      background: #171717;
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      width: fit-content;
+    }
+
+    .blog-card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-card-excerpt {
+      font-size: 0.9rem;
+      color: #525252;
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .blog-card-date {
+      font-size: 0.8rem;
+      color: #a3a3a3;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #171717;
+      color: #a3a3a3;
+      text-align: center;
+      padding: 3rem 2rem;
+      font-size: 0.85rem;
+    }
+
+    .footer a {
+      color: #d4d4d4;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.2s;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    .footer-links {
+      margin-bottom: 1.5rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .blog-hero {
+        padding: 4rem 1.5rem 3rem;
+      }
+
+      .blog-section {
+        padding: 3rem 1.5rem 4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="../" class="logo">
+        <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 4L8 28h20L18 4z" fill="#171717" />
+          <path d="M18 10l1.5 4.5H24l-3.5 2.5 1.3 4.5L18 19l-3.8 2.5 1.3-4.5L12 14.5h4.5L18 10z" fill="#a3a3a3" />
+          <path d="M4 30q7-4 14 0t14-4" stroke="#171717" stroke-width="2" fill="none" stroke-linecap="round" />
+        </svg>
+        SHARKSTARS
+      </a>
+      <a href="../" class="nav-back">&larr; トップページに戻る</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="blog-hero">
+    <h1>BLOG</h1>
+    <p>ホームページ制作のコツ、SEO対策、集客ノウハウなど、ビジネスに役立つ情報を発信しています。</p>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="blog-section">
+    <div class="blog-grid">
+
+      <!-- Article 1 -->
+      <a href="why-homepage.html" class="blog-card" id="blog-card-1">
+        <div class="blog-card-thumb"
+          style="background: linear-gradient(135deg, #1a1a2e, #16213e); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 3rem;">
+          🏠
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">集客</span>
+          <h2 class="blog-card-title">飲食店がホームページを持つべき5つの理由</h2>
+          <p class="blog-card-excerpt">
+            「SNSがあるからホームページはいらない」そう思っていませんか？実は、ホームページがないことで知らないうちにお客様を逃しているかもしれません。
+          </p>
+          <p class="blog-card-date">2026.04.13</p>
+        </div>
+      </a>
+
+      <!-- Article 2 -->
+      <a href="seo-basics.html" class="blog-card" id="blog-card-2">
+        <div class="blog-card-thumb"
+          style="background: linear-gradient(135deg, #0f3460, #533483); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 3rem;">
+          🔍
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">SEO</span>
+          <h2 class="blog-card-title">【初心者向け】SEOとは？検索で上位表示される仕組みをわかりやすく解説</h2>
+          <p class="blog-card-excerpt">
+            「SEOって聞いたことはあるけど、何をすればいいの？」という方に向けて、Googleで検索上位に表示されるための基本的な考え方を解説します。
+          </p>
+          <p class="blog-card-date">2026.04.13</p>
+        </div>
+      </a>
+
+      <!-- Article 3 -->
+      <a href="cost-comparison.html" class="blog-card" id="blog-card-3">
+        <div class="blog-card-thumb"
+          style="background: linear-gradient(135deg, #2d3436, #636e72); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 3rem;">
+          💰
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">費用</span>
+          <h2 class="blog-card-title">ホームページ制作の費用相場は？月額制と買い切りを徹底比較</h2>
+          <p class="blog-card-excerpt">
+            ホームページを作りたいけど、費用がわからない。30万円？100万円？実は月額3,980円で本格的なホームページが持てる時代になっています。
+          </p>
+          <p class="blog-card-date">2026.04.13</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="../">トップページ</a>
+      <a href="../company.html">会社概要</a>
+      <a href="../terms.html">利用規約</a>
+      <a href="../privacy.html">プライバシーポリシー</a>
+    </div>
+    <p>&copy; 2025 SHARKSTARS All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>
