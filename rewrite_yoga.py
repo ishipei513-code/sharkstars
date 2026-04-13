@@ -1,0 +1,495 @@
+import os
+
+html_content = '''<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Prana | 心と身体が深呼吸するヨガスタジオ</title>
+  <meta name="description" content="都会の喧騒から離れた、あなただけのサンクチュアリ。Studio Prana（スタジオ プラーナ）では、初心者から上級者まで、少人数制できめ細やかなヨガレッスンを提供しています。体験レッスン受付中。">
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assist/css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-sand text-slate">
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="h-container flex-between align-center border-b-sage">
+      <div class="logo">
+        <a href="#" class="flex-column line-height-tight text-center">
+          <span class="font-cormorant text-sage l-text letter-spacing-widest text-lg">Studio Prana</span>
+          <span class="font-zen text-slate l-sub tracking-wider text-xs mt-xs opacity-70">ヨガ＆マインドフルネス</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links font-zen text-sm tracking-widest">
+          <li><a href="#about">Philosophy</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#voices">Voices</a></li>
+        </ul>
+        <div class="h-btn sp-none ml-large">
+          <a href="#trial" class="btn btn-sage font-zen text-xs tracking-widest">体験を予約する</a>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+        <span class="bg-sage"></span><span class="bg-sage"></span><span class="bg-sage"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero relative overflow-hidden flex-center h-min-screen">
+    <!-- Abstract Organic SVG Shapes -->
+    <div class="organic-shape shape-1 bg-sage opacity-10 absolute z-0 blur-lg mix-blend-multiply"></div>
+    <div class="organic-shape shape-2 bg-clay opacity-10 absolute z-0 blur-lg mix-blend-multiply"></div>
+
+    <div class="l-container relative z-10 w-full pt-header">
+      <div class="flex-hero flex-between align-center">
+        
+        <!-- Text -->
+        <div class="hero-left w-40 fade-target max-w-600 z-10">
+          <div class="font-cormorant text-clay italic letter-spacing-widest text-md mb-small animate-slide-up">Prana Flow Method</div>
+          <h1 class="font-shippori text-slate text-4xl line-height-tight mb-medium letter-spacing-wide animate-slide-up delay-1">
+            満ちていく、<br>
+            私だけの<span class="text-sage">静寂</span>。
+          </h1>
+          <p class="font-zen text-gray text-sm line-height-long mb-medium animate-slide-up delay-2 max-w-400 font-light">
+            目まぐるしく過ぎる日常の中で、<br>
+            ふと立ち止まり、自分自身と向き合う時間。<br>
+            Studio Pranaは、あなたの心身を深く調律する<br class="sp-none">
+            大人のためのサンクチュアリです。
+          </p>
+          <div class="animate-slide-up delay-3 mt-medium">
+            <a href="#trial" class="text-link font-zen text-sage tracking-widest font-bold flex gap-xs align-center hover-clay transition">
+              体験レッスンのご案内 <i data-lucide="arrow-right" class="icon-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Images (Arch design) -->
+        <div class="hero-right w-60 relative h-600 fade-target delay-2 z-5 sp-mt-large">
+          <div class="arch-frame absolute right-0 top-0 w-80 h-full overflow-hidden image-reveal">
+            <!-- Using AI Generated High Quality Image -->
+            <img src="assist/images/yoga_hero.png" alt="美しいヨガスタジオ" class="w-full h-full object-cover ken-burns">
+            <div class="overlay-grad-light absolute inset-0"></div>
+          </div>
+          <!-- Floating Leaf Element -->
+          <div class="floating-element absolute left-10 bottom-20 bg-white p-medium arch-frame-small box-shadow-soft animate-float">
+            <img src="assist/images/yoga_concept.png" alt="マインドフルネス" class="w-full h-full object-cover arch-frame-small">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- Vertical Scroll Text -->
+    <div class="scroll-text absolute bottom-0 left-50 transform-center-x flex-column align-center animate-fade-in delay-4 sp-none">
+      <div class="scroll-line bg-sage mb-small h-50"></div>
+      <span class="font-cormorant text-xs text-sage tracking-widest vertical-text">Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- About / Marquee Text -->
+  <section class="section about pt-xl pb-large overflow-hidden border-top-sage-thin bg-sand-light" id="about">
+    
+    <!-- Infinite Scrolling Text (Marquee) -->
+    <div class="marquee-track mb-large">
+      <div class="marquee-content font-cormorant italic text-sage opacity-10 text-4xl tracking-widest">
+        Find your center &middot; Listen to your body &middot; Breathe deeply &middot; Inner peace &middot; Find your center &middot; Listen to your body &middot;
+      </div>
+    </div>
+
+    <div class="l-container center">
+      <div class="fade-target max-w-800 mx-auto">
+        <h2 class="font-shippori text-slate text-2xl line-height-tight mb-medium">
+          “何もしない” という<span class="text-clay">贅沢</span>。<br>
+        </h2>
+        <p class="font-zen text-gray text-sm line-height-long font-light">
+          私たちは日々、膨大な情報とタスクに追われ、常に気を張って生きています。<br>
+          肩の力は無意識に抜けなくなり、呼吸は浅くなっていませんか？<br><br>
+          Studio Pranaが提唱する「Prana Flow Method」が大切にしているのは、<br>
+          ポーズの美しさや難易度ではなく、ただマットの上に座る時間。<br>
+          深い呼吸を通して自律神経を整え、内なる生命力（プラーナ）を呼び覚まします。<br><br>
+          今の自分を否定せず、あるがままに受け入れること。<br>
+          ここは、あなたがあなたに戻るための場所です。
+        </p>
+        <div class="signature font-cormorant text-sage text-2xl italic mt-medium">Namaste.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features (Why Choose Us) -->
+  <section class="section features bg-cream pt-xl pb-xl" id="features">
+    <div class="l-container">
+      <div class="center mb-large fade-target">
+        <h2 class="font-cormorant text-clay text-3xl italic tracking-widest mb-xs">Why Prana?</h2>
+        <span class="font-shippori text-slate text-lg tracking-widest display-block">選ばれる3つの理由</span>
+      </div>
+
+      <div class="features-grid fade-target delay-1">
+        
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="leaf" class="icon-lg"></i>
+          </div>
+          <h3 class="font-shippori text-slate text-lg mb-small">常温の自然な癒し空間</h3>
+          <p class="font-zen text-gray text-xs line-height-long font-light">
+            人工的なホット環境ではなく、無垢の床暖房と漆喰の壁による自然な温もり。最適な室温とアロマの香りで深いリラックスへと導きます。
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="users" class="icon-lg"></i>
+          </div>
+          <h3 class="font-shippori text-slate text-lg mb-small">最大5名の超少人数制</h3>
+          <p class="font-zen text-gray text-xs line-height-long font-light">
+            大人数でのレッスンによる周囲の目を気にする必要はありません。一人ひとりの骨格やその日の体調に合わせたセミパーソナルな指導を行います。
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="sparkle" class="icon-lg"></i>
+          </div>
+          <h3 class="font-shippori text-slate text-lg mb-small">手ぶらで通える高品質</h3>
+          <p class="font-zen text-gray text-xs line-height-long font-light">
+            Mandukaの最高級ヨガマットを無料完備。オーガニックタオルや豊富なアメニティを備え、お仕事帰りにも手ぶらで上質な時間を過ごせます。
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="section program bg-sage-dark text-sand pt-xl pb-xl relative" id="program">
+    <!-- Decor element -->
+    <i data-lucide="moon" class="absolute top-10 right-10 text-sand opacity-5 icon-huge rotate-15"></i>
+
+    <div class="l-container">
+      <div class="sect-header flex-between align-end mb-large fade-target flex-col-sp gap-medium">
+        <div>
+          <h2 class="font-cormorant text-clay text-3xl italic tracking-widest mb-xs">Programs</h2>
+          <span class="font-shippori text-sand text-lg tracking-widest line-height-tight display-block">プログラム案内</span>
+        </div>
+        <p class="font-zen text-sand opacity-70 text-sm line-height-long max-w-400 font-light text-right text-left-sp">
+          目的やその日の体調に合わせて選べる、少人数制のクラス。<br>経験豊富なインストラクターが丁寧にサポートします。
+        </p>
+      </div>
+
+      <div class="p-grid flex gap-medium flex-wrap mt-large text-slate">
+        
+        <!-- Program 1 -->
+        <div class="p-card bg-sand rounded-lg p-medium w-31 box-shadow-soft fade-target hover-lift transition">
+          <div class="flex-between align-center mb-small border-b-sage pb-xs">
+            <h3 class="font-shippori font-bold text-lg">リラックスヨガ</h3>
+            <span class="font-cormorant text-sage text-sm italic">Relaxation</span>
+          </div>
+          <div class="flex gap-xs mb-small">
+            <span class="intensity-dot bg-sage"></span>
+            <span class="intensity-dot bg-gray-light"></span>
+            <span class="intensity-dot bg-gray-light"></span>
+          </div>
+          <p class="font-zen text-gray text-xs line-height-long font-light mb-small h-80">
+            深い呼吸とともに、ゆっくりと全身をほぐしていくクラス。自律神経を整え、心身の緊張を解きほぐします。ヨガが初めての方に最適です。
+          </p>
+          <img src="https://images.unsplash.com/photo-1579454566790-f9e5697ddf36?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="リラックスヨガ" class="w-full h-150 object-cover rounded-sm filter-sepia transition hover-normal">
+        </div>
+
+        <!-- Program 2 -->
+        <div class="p-card bg-sand rounded-lg p-medium w-31 box-shadow-soft fade-target delay-1 hover-lift transition">
+          <div class="flex-between align-center mb-small border-b-sage pb-xs">
+            <h3 class="font-shippori font-bold text-lg">ヴィンヤサフロー</h3>
+            <span class="font-cormorant text-sage text-sm italic">Vinyasa Flow</span>
+          </div>
+          <div class="flex gap-xs mb-small">
+            <span class="intensity-dot bg-sage"></span>
+            <span class="intensity-dot bg-sage"></span>
+            <span class="intensity-dot bg-gray-light"></span>
+          </div>
+          <p class="font-zen text-gray text-xs line-height-long font-light mb-small h-80">
+            呼吸と動きを連動させ、流れるようにポーズを展開していくクラス。集中力を高めながら、インナーマッスルをしなやかに鍛えます。
+          </p>
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="フローヨガ" class="w-full h-150 object-cover rounded-sm filter-sepia transition hover-normal">
+        </div>
+
+        <!-- Program 3 -->
+        <div class="p-card bg-sand rounded-lg p-medium w-31 box-shadow-soft fade-target delay-2 hover-lift transition relative overflow-hidden">
+          <div class="flex-between align-center mb-small border-b-sage pb-xs">
+            <h3 class="font-shippori font-bold text-lg text-clay">キャンドルナイト</h3>
+            <span class="font-cormorant text-sage text-sm italic">Candle Night</span>
+          </div>
+          <div class="flex gap-xs mb-small">
+            <span class="intensity-dot bg-sage"></span>
+            <span class="intensity-dot bg-gray-light"></span>
+            <span class="intensity-dot bg-gray-light"></span>
+          </div>
+          <p class="font-zen text-gray text-xs line-height-long font-light mb-small h-80">
+            【金曜夜限定】照明を落とし、キャンドルの揺らぐ灯りの中で極上のリラックスタイムを。1週間の疲れをリセットし、深い眠りへ導きます。
+          </p>
+          <img src="https://images.unsplash.com/photo-1602192509154-0b900ee1f851?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="キャンドルヨガ" class="w-full h-150 object-cover rounded-sm filter-sepia transition hover-normal">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Voices -->
+  <section class="section voices bg-sand pt-xl pb-xl" id="voices">
+    <div class="l-container">
+      <div class="center mb-large fade-target">
+        <h2 class="font-cormorant text-clay text-3xl italic tracking-widest mb-xs">Voices</h2>
+        <span class="font-shippori text-slate text-lg tracking-widest display-block">お客様の声</span>
+      </div>
+
+      <div class="voices-grid fade-target delay-1">
+        
+        <div class="voice-card">
+          <i data-lucide="quote" class="voice-quote-icon icon-lg"></i>
+          <div class="voice-meta">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="お客様" class="voice-avatar">
+            <div>
+              <div class="font-bold text-sm">M.S様 (30代・会社員)</div>
+              <div class="voice-rating text-xs"><i data-lucide="star" class="icon-sm fill-current"></i><i data-lucide="star" class="icon-sm fill-current"></i><i data-lucide="star" class="icon-sm fill-current"></i><i data-lucide="star" class="icon-sm fill-current"></i><i data-lucide="star" class="icon-sm fill-current"></i></div>
+            </div>
+          </div>
+          <h4 class="font-shippori text-md mb-small">「ようやく見つけた私の居場所」</h4>
+          <p class="font-zen text-gray text-xs line-height-long font-light">
+            大人数のホットヨガスタジオに通っていましたが、周りの目が気になりこちらへ。少人数で本当に丁寧に見ていただけるので、呼吸が深まり、肩こりも劇的に改善しました。アロマの香りに毎回癒やされています。
+          </p>
+        </div>
+
+        <div class="voice-card">
+          <i data-lucide="quote" class="voice-quote-icon icon-lg"></i>
+          <div class="voice-meta">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="お客様" class="voice-avatar">
+            <div>
+              <div class="font-bold text-sm">A.Y様 (40代・主婦)</div>
+              <div class="voice-rating text-xs"><i data-lucide="star" class="icon-sm fill-current"></i><i data-lucide="star" class="icon-sm fill-current"></i><i data-lucide="star" class="icon-sm fill-current"></i><i data-lucide="star" class="icon-sm fill-current"></i><i data-lucide="star" class="icon-sm fill-current"></i></div>
+            </div>
+          </div>
+          <h4 class="font-shippori text-md mb-small">「初心者でも安心して通えます」</h4>
+          <p class="font-zen text-gray text-xs line-height-long font-light">
+            体づくりのために始めました。体が硬く不安でしたが、インストラクターの方が優しくアジャストしてくださり、無理なく受講できています。金曜のキャンドルナイトクラスは私にとって最高の贅沢です。
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq bg-sand-light pt-xl pb-xl border-t-sage-thin" id="faq">
+    <div class="l-container">
+      <div class="center mb-large fade-target">
+        <h2 class="font-cormorant text-clay text-3xl italic tracking-widest mb-xs">FAQ</h2>
+        <span class="font-shippori text-slate text-lg tracking-widest display-block">よくあるご質問</span>
+      </div>
+
+      <div class="faq-list fade-target delay-1">
+        
+        <div class="faq-item">
+          <button class="faq-q font-shippori font-bold">
+            体が硬くてもヨガはできますか？
+            <i data-lucide="plus" class="faq-icon icon-sm"></i>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              もちろん大丈夫です。Studio Pranaでは最大5名までの少人数制を敷いており、お客様一人ひとりの柔軟性や骨格に合わせてインストラクターが無理のないポーズへと丁寧に導きます。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q font-shippori font-bold">
+            体験レッスンに持参するものはありますか？
+            <i data-lucide="plus" class="faq-icon icon-sm"></i>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              動きやすいウェア（Tシャツやレギンス等）とお水をお持ちください。最高級のヨガマットやタオルはスタジオにて無料でご用意しております。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q font-shippori font-bold">
+            シャワールームやメイク直しをする場所はありますか？
+            <i data-lucide="plus" class="faq-icon icon-sm"></i>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              はい、完備しております。オーガニックのアメニティ（化粧水、乳液など）やドライヤーを備えたパウダールームもございますので、お仕事前や後のお出かけ前にも安心してご利用いただけます。
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Trial Booking (Soft UI Form) -->
+  <section class="trial pt-xl pb-xl bg-sand relative border-t-sage-thin" id="trial">
+    <!-- Abstract Organic SVG Shapes -->
+    <div class="organic-shape shape-3 bg-clay opacity-5 absolute z-0 blur-lg mix-blend-multiply"></div>
+
+    <div class="l-container relative z-10 center">
+      
+      <div class="trial-card max-w-800 mx-auto fade-target text-center">
+        <div class="icon-round bg-sage text-white mx-auto center mb-small"><i data-lucide="sparkles" class="icon-lg"></i></div>
+        <h2 class="font-cormorant text-clay tracking-widest text-3xl italic mb-xs">Trial Lesson</h2>
+        <span class="font-shippori text-slate text-xl tracking-widest mb-medium display-block">体験レッスンのご予約</span>
+        
+        <div class="price-box bg-white box-shadow-soft rounded-lg p-small inline-block mb-large border-sage-thin">
+          <span class="font-zen text-gray text-xs display-block mb-xs">初回限定トライアル（手ぶらセット付）</span>
+          <div class="font-shippori text-slate text-2xl">\ 1,500 <span class="font-zen text-xs opacity-70"> / 60min</span></div>
+        </div>
+
+        <form class="booking-form text-left bg-cream p-large rounded-lg box-shadow-sm border-sage-thin">
+          <div class="flex-between gap-medium flex-col-sp">
+            <div class="f-group w-50">
+              <label class="font-zen text-gray text-xs tracking-widest mb-xs display-block">お名前</label>
+              <input type="text" class="f-input-soft font-zen" placeholder="例：青山 花子" required>
+            </div>
+            <div class="f-group w-50">
+              <label class="font-zen text-gray text-xs tracking-widest mb-xs display-block">メールアドレス</label>
+              <input type="email" class="f-input-soft font-zen" placeholder="mail@example.com" required>
+            </div>
+          </div>
+          
+          <div class="f-group mt-medium">
+            <label class="font-zen text-gray text-xs tracking-widest mb-xs display-block">ご希望のプログラム</label>
+            <select class="f-input-soft font-zen select-minimal">
+              <option>リラックスヨガ</option>
+              <option>ヴィンヤサフロー</option>
+              <option>キャンドルナイト</option>
+              <option>マタニティヨガ</option>
+            </select>
+          </div>
+          
+          <div class="mt-large text-center">
+            <button type="submit" class="btn btn-sage-solid btn-xl font-shippori tracking-widest hover-filter transition w-full max-w-400">
+              空き状況を確認する
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-slate pt-large pb-medium relative text-sand">
+    <div class="l-container flex-between align-start flex-col-sp gap-large font-zen font-light text-sm border-b-sage-thin pb-large mb-medium">
+      
+      <div class="f-left text-left w-40 text-center-sp">
+        <div class="font-cormorant text-sage text-2xl tracking-widest mb-xs">Studio Prana</div>
+        <p class="text-xs line-height-long opacity-70 mt-medium">
+          〒150-0000 東京都港区南青山 1-2-3<br>
+          ヒーリングビル 3F<br><br>
+          営業時間： 平日 10:00 - 22:00 / 休日 9:00 - 18:00<br>
+          月曜定休
+        </p>
+      </div>
+
+      <div class="f-right text-right w-60 text-center-sp">
+        <div class="sns-icons flex justify-end gap-small justify-center-sp mb-medium">
+          <a href="#" class="btn-circle border-sage-thin center text-sage hover-bg-sage transition"><i data-lucide="instagram" class="icon-sm"></i></a>
+          <a href="#" class="btn-circle border-sage-thin center text-sage hover-bg-sage transition"><i data-lucide="youtube" class="icon-sm"></i></a>
+        </div>
+        <ul class="footer-nav flex gap-medium justify-end flex-wrap justify-center-sp tracking-widest text-xs opacity-70">
+          <li><a href="#" class="hover-white transition">お問い合わせ</a></li>
+          <li><a href="#" class="hover-white transition">よくあるご質問</a></li>
+          <li><a href="#" class="hover-white transition">利用規約</a></li>
+          <li><a href="#" class="hover-white transition">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="l-container text-center">
+      <div class="copyright font-cormorant text-xs opacity-40 tracking-widest">
+        &copy; 2026 STUDIO PRANA. ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Header Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Intersection Observer for scroll reveals
+    const obs = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          
+          // Image reveal specifically
+          if (e.target.classList.contains('image-reveal')) {
+            e.target.classList.add('revealed');
+          }
+          
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-target, .image-reveal').forEach(el => obs.observe(el));
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-q').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('.faq-icon');
+        
+        // Close other open items
+        document.querySelectorAll('.faq-item.active').forEach(activeItem => {
+          if (activeItem !== item) {
+            activeItem.classList.remove('active');
+            activeItem.querySelector('.faq-a').style.maxHeight = null;
+            activeItem.querySelector('i').setAttribute('data-lucide', 'plus');
+          }
+        });
+
+        // Toggle current item
+        item.classList.toggle('active');
+        if (item.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          icon.setAttribute('data-lucide', 'minus');
+        } else {
+          answer.style.maxHeight = null;
+          icon.setAttribute('data-lucide', 'plus');
+        }
+        lucide.createIcons();
+      });
+    });
+  </script>
+</body>
+</html>'''
+
+with open(r'd:\sharkstars\demos\yoga-01\index.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("HTML rewritten successfully.")
