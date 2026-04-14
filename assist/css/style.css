@@ -2184,7 +2184,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
   .pricing-table tbody td {
     display: block;
-    text-align: left !important;
+    text-align: center !important;
     padding: 4px 0;
     border: none;
     white-space: normal !important;
@@ -2197,7 +2197,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
   .pricing-table td:last-child {
     font-size: 1rem;
-    text-align: left !important;
+    text-align: center !important;
   }
 }
 
