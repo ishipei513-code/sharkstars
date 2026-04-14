@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>業務委託契約書 - SHARKSTARS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      background: #f5f5f5;
+      color: #171717;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #fff;
+      position: relative;
+    }
+
+    /* === HEADER === */
+    .doc-header {
+      background: #0a0a0a;
+      color: #fff;
+      padding: 36px 50px 30px;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-mark { width: 28px; height: 28px; }
+    .logo-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+    }
+    .doc-type {
+      font-size: 10px;
+      color: #737373;
+      letter-spacing: 0.2em;
+    }
+    .doc-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .doc-title {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+    .doc-meta {
+      text-align: right;
+      font-size: 10px;
+      color: #a3a3a3;
+      line-height: 2;
+    }
+    .doc-meta span { color: #fff; font-weight: 500; }
+
+    /* === BODY === */
+    .doc-body {
+      padding: 30px 50px 60px;
+    }
+
+    /* === PARTIES === */
+    .parties-grid {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .party-box {
+      flex: 1;
+      background: #fafafa;
+      padding: 18px 22px;
+    }
+    .party-role {
+      font-size: 9px;
+      font-weight: 700;
+      color: #a3a3a3;
+      letter-spacing: 0.15em;
+      margin-bottom: 8px;
+    }
+    .party-name {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .party-sub {
+      font-size: 11px;
+      color: #525252;
+    }
+
+    /* === ARTICLES === */
+    .article {
+      margin-bottom: 20px;
+      page-break-inside: avoid;
+    }
+    .article-head {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #0a0a0a;
+    }
+    .article-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      color: #a3a3a3;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+    .article-title {
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .article-body {
+      padding-left: 4px;
+    }
+    .article-body p {
+      font-size: 11px;
+      color: #333;
+      margin-bottom: 6px;
+      line-height: 1.9;
+    }
+    .article-body ol {
+      list-style: none;
+      counter-reset: clause;
+    }
+    .article-body ol li {
+      font-size: 11px;
+      color: #333;
+      margin-bottom: 5px;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.9;
+      counter-increment: clause;
+    }
+    .article-body ol li::before {
+      content: counter(clause) '.';
+      position: absolute;
+      left: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      color: #a3a3a3;
+    }
+
+    /* === PRICE TABLE === */
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+    .price-table td {
+      font-size: 11px;
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .price-table td:last-child {
+      text-align: right;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+    .price-table .total td {
+      border-bottom: 2px solid #0a0a0a;
+      font-weight: 700;
+    }
+
+    /* === SIGNATURE === */
+    .signature-section {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid #e5e5e5;
+    }
+    .sig-date {
+      font-size: 12px;
+      text-align: center;
+      margin-bottom: 36px;
+      color: #525252;
+    }
+    .sig-grid {
+      display: flex;
+      gap: 60px;
+    }
+    .sig-box {
+      flex: 1;
+    }
+    .sig-role {
+      font-size: 9px;
+      font-weight: 700;
+      color: #a3a3a3;
+      letter-spacing: 0.15em;
+      margin-bottom: 12px;
+    }
+    .sig-line {
+      border-bottom: 1px solid #d4d4d4;
+      height: 50px;
+      margin-bottom: 6px;
+    }
+    .sig-label {
+      font-size: 10px;
+      color: #737373;
+    }
+    .sig-name {
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    /* === FOOTER === */
+    .doc-footer {
+      padding: 16px 50px;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #f0f0f0;
+      margin-top: 20px;
+    }
+    .footer-text {
+      font-size: 9px;
+      color: #a3a3a3;
+    }
+
+    /* === PAGE 2 === */
+    .page-break { page-break-before: always; }
+    .page + .page { margin-top: 40px; }
+    .page2-header {
+      background: #0a0a0a;
+      color: #fff;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .page2-title {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .page2-num {
+      font-size: 10px;
+      color: #737373;
+    }
+
+    /* === HANKO === */
+    .hanko {
+      width: 64px;
+      height: 64px;
+      border: 3px solid #c53030;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c53030;
+      font-size: 18px;
+      font-weight: 900;
+      font-family: 'Noto Sans JP', serif;
+      letter-spacing: 0.1em;
+      transform: rotate(-8deg);
+      opacity: 0.85;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .hanko::before {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border: 1px solid #c53030;
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; }
+    }
+    @media screen {
+      .page { box-shadow: 0 4px 40px rgba(0,0,0,0.08); margin: 40px auto; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1 ==================== -->
+<div class="page">
+
+  <div class="doc-header">
+    <div class="header-top">
+      <div class="logo-area">
+        <svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 4L8 28h20L18 4z" fill="#fff"/>
+          <path d="M18 10l1.5 4.5H24l-3.5 2.5 1.3 4.5L18 19l-3.8 2.5 1.3-4.5L12 14.5h4.5L18 10z" fill="#666"/>
+          <path d="M4 30q7-4 14 0t14-4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">SHARKSTARS</span>
+      </div>
+      <span class="doc-type">Service Agreement</span>
+    </div>
+    <div class="doc-title-row">
+      <h1 class="doc-title">業務委託契約書</h1>
+      <div class="doc-meta">
+        契約番号：<span>SS-C-20XX-XXX</span><br>
+        締結日：<span>20XX年　月　日</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-body">
+
+    <div class="parties-grid">
+      <div class="party-box">
+        <div class="party-role">甲（委託者）</div>
+        <div class="party-name">【お客様名】</div>
+        <div class="party-sub">【屋号】</div>
+      </div>
+      <div class="party-box">
+        <div class="party-role">乙（受託者）</div>
+        <div class="party-name">石橋昇平</div>
+        <div class="party-sub">SHARKSTARS（シャークスターズ）<br>〒810-0064 福岡市中央区地行3-18-16<br>TEL：080-4462-0389</div>
+      </div>
+    </div>
+
+    <!-- 第1条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第1条</span>
+        <span class="article-title">目的</span>
+      </div>
+      <div class="article-body">
+        <p>甲は乙に対し、以下の業務を委託し、乙はこれを受託する。</p>
+      </div>
+    </div>
+
+    <!-- 第2条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第2条</span>
+        <span class="article-title">業務内容</span>
+      </div>
+      <div class="article-body">
+        <ol>
+          <li>ホームページの制作・修正・SEO最適化</li>
+          <li>サーバーの管理・運用</li>
+          <li>SSL証明書の設定・管理</li>
+          <li>ホームページの保守管理・障害対応</li>
+          <li>月1回のテキストまたは画像の更新作業</li>
+          <li>Googleビジネスプロフィールとの連携設定</li>
+          <li>SNS（Instagram等）の連携設置</li>
+        </ol>
+        <p>上記以外の追加業務（新規ページ追加、ブログ記事作成代行、予約システム導入等）は別途協議の上、追加料金にて対応する。</p>
+      </div>
+    </div>
+
+    <!-- 第3条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第3条</span>
+        <span class="article-title">契約期間</span>
+      </div>
+      <div class="article-body">
+        <p>本契約の有効期間は、契約開始日より1年間とする。</p>
+        <table class="price-table">
+          <tr><td>契約開始日</td><td>2026年　月　日</td></tr>
+          <tr><td>契約終了日</td><td>2027年　月　日</td></tr>
+        </table>
+        <p>契約期間満了の30日前までに甲または乙から書面（メール・LINE含む）による解約の申し出がない場合、本契約は同一条件にて1年間自動更新されるものとする。</p>
+      </div>
+    </div>
+
+    <!-- 第4条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第4条</span>
+        <span class="article-title">料金</span>
+      </div>
+      <div class="article-body">
+        <table class="price-table">
+          <tr><td>ホームページ制作費（初期費用）</td><td>¥0</td></tr>
+          <tr><td>サーバー移行作業費</td><td>¥0</td></tr>
+          <tr><td>保守管理プラン（月額・税込）</td><td>¥3,980</td></tr>
+          <tr class="total"><td>年間合計（税込）</td><td>¥47,760</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 第5条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第5条</span>
+        <span class="article-title">支払方法</span>
+      </div>
+      <div class="article-body">
+        <ol>
+          <li>甲は乙に対し、月額費用をStripe（クレジットカード自動決済）にて毎月支払うものとする。</li>
+          <li>決済日は毎月、初回決済日と同日とする。</li>
+          <li>クレジットカード情報の登録は、乙が発行する専用の決済リンクより甲自身が行うものとする。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第6条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第6条</span>
+        <span class="article-title">サーバー・ドメインの管理</span>
+      </div>
+      <div class="article-body">
+        <ol>
+          <li>本契約に基づくホームページは、乙が管理するサーバー上で運用する。</li>
+          <li>サーバー移行に伴い、一時的にサイトが閲覧できなくなる場合がある。乙は影響を最小限にするよう努力する。</li>
+          <li>甲が既に保有するドメインを使用する場合、ドメインのネームサーバー変更は甲の責任において行うものとする。乙は設定方法の案内にて協力する。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第7条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第7条</span>
+        <span class="article-title">知的財産権</span>
+      </div>
+      <div class="article-body">
+        <ol>
+          <li>乙が本契約に基づき制作したデザイン・コードの著作権は乙に帰属する。</li>
+          <li>甲は本契約の有効期間中、当該成果物を自社のホームページとして使用する権利を有する。</li>
+          <li>甲が提供したテキスト・画像等の素材に関する権利は甲に帰属する。</li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="doc-footer">
+    <span class="footer-text">SHARKSTARS — sharkstars.jp</span>
+    <span class="footer-text">1 / 2</span>
+  </div>
+
+</div>
+
+<!-- ==================== PAGE 2 ==================== -->
+<div class="page page-break">
+
+  <div class="page2-header">
+    <span class="page2-title">業務委託契約書（続き）</span>
+    <span class="page2-num">SS-C-2026-001</span>
+  </div>
+
+  <div class="doc-body">
+
+    <!-- 第8条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第8条</span>
+        <span class="article-title">秘密保持</span>
+      </div>
+      <div class="article-body">
+        <p>甲および乙は、本契約に関連して知り得た相手方の業務上の秘密を、相手方の書面による事前の承諾なくして第三者に開示・漏洩してはならない。本条の義務は、本契約終了後も2年間有効に存続する。</p>
+      </div>
+    </div>
+
+    <!-- 第9条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第9条</span>
+        <span class="article-title">免責事項</span>
+      </div>
+      <div class="article-body">
+        <ol>
+          <li>乙は、検索エンジンにおける表示順位の向上を保証するものではない。SEO対策は検索エンジンの仕様変更等により効果が変動する可能性がある。</li>
+          <li>天災・サーバー障害・第三者による不正アクセス等、乙の責めに帰すことのできない事由による損害について、乙は責任を負わない。</li>
+          <li>甲が提供した情報・素材の正確性について、乙は責任を負わない。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第10条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第10条</span>
+        <span class="article-title">中途解約</span>
+      </div>
+      <div class="article-body">
+        <ol>
+          <li>甲は契約期間中であっても、30日前までに書面（メール・LINE含む）にて乙に通知することにより、本契約を解約することができる。</li>
+          <li>中途解約の場合、残存期間の月額費用の支払い義務は発生しない。</li>
+          <li>解約月の末日をもってホームページの公開を停止し、サーバー上のデータは乙が削除する。</li>
+          <li>甲がデータの引き渡しを希望する場合、解約申し出後14日以内に乙に申し出るものとする。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第11条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第11条</span>
+        <span class="article-title">契約解除</span>
+      </div>
+      <div class="article-body">
+        <p>甲または乙が以下のいずれかに該当した場合、相手方は催告なく直ちに本契約を解除することができる。</p>
+        <ol>
+          <li>本契約の条項に重大な違反があった場合</li>
+          <li>月額費用の支払いを3ヶ月以上滞納した場合</li>
+          <li>破産手続開始、民事再生手続開始の申立てがあった場合</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第12条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第12条</span>
+        <span class="article-title">反社会的勢力の排除</span>
+      </div>
+      <div class="article-body">
+        <p>甲および乙は、自らが反社会的勢力に該当しないことを表明し、将来にわたっても該当しないことを確約する。</p>
+      </div>
+    </div>
+
+    <!-- 第13条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第13条</span>
+        <span class="article-title">合意管轄</span>
+      </div>
+      <div class="article-body">
+        <p>本契約に関する紛争については、福岡地方裁判所を第一審の専属的合意管轄裁判所とする。</p>
+      </div>
+    </div>
+
+    <!-- 第14条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第14条</span>
+        <span class="article-title">協議事項</span>
+      </div>
+      <div class="article-body">
+        <p>本契約に定めのない事項または解釈に疑義が生じた場合は、甲乙誠意をもって協議の上、解決を図るものとする。</p>
+      </div>
+    </div>
+
+    <!-- SIGNATURE -->
+    <div class="signature-section">
+      <p class="sig-date">本契約の成立を証するため、本書を2通作成し、甲乙それぞれ署名の上、各1通を保有する。</p>
+
+      <div class="sig-grid">
+        <div class="sig-box">
+          <div class="sig-role">甲（委託者）</div>
+          <div class="sig-line"></div>
+          <div class="sig-label">署名</div>
+          <div class="sig-name">【お客様名】</div>
+          <div class="sig-label" style="margin-top: 4px;">【屋号】</div>
+        </div>
+        <div class="sig-box">
+          <div class="sig-role">乙（受託者）</div>
+          <div class="sig-line" style="position: relative;">
+            <div class="hanko" style="position: absolute; right: 10px; top: -5px;">石橋</div>
+          </div>
+          <div class="sig-label">署名</div>
+          <div class="sig-name">石橋昇平</div>
+          <div class="sig-label" style="margin-top: 4px;">SHARKSTARS</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="doc-footer">
+    <span class="footer-text">SHARKSTARS — sharkstars.jp</span>
+    <span class="footer-text">2 / 2</span>
+  </div>
+
+</div>
+
+</body>
+</html>
