@@ -103,32 +103,76 @@ function initSmoothScroll() {
 function initGalleryFilter() {
   const tabs = document.querySelectorAll('.gallery-tab');
   const cards = document.querySelectorAll('.demo-card');
+  const loadMoreBtn = document.querySelector('#gallery-load-more');
   if (!tabs.length || !cards.length) return;
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      // Update active tab
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
+  const INITIAL_SHOW = 8;
 
-      const filter = tab.getAttribute('data-filter');
+  function applyFilter(filter) {
+    let visibleCount = 0;
+    let totalMatch = 0;
 
-      // Filter cards with animation
-      cards.forEach((card, index) => {
-        const category = card.getAttribute('data-category');
+    cards.forEach((card) => {
+      const category = card.getAttribute('data-category');
+      const isMatch = (filter === 'all' || category === filter);
 
-        if (filter === 'all' || category === filter) {
+      if (isMatch) {
+        totalMatch++;
+        if (visibleCount < INITIAL_SHOW) {
           card.classList.remove('hidden');
           card.style.animation = 'none';
-          // Trigger reflow
           card.offsetHeight;
-          card.style.animation = `fadeInUp 0.4s ease ${index * 0.05}s forwards`;
+          card.style.animation = `fadeInUp 0.4s ease ${visibleCount * 0.05}s forwards`;
+          visibleCount++;
         } else {
           card.classList.add('hidden');
         }
-      });
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    // Show/hide load more button
+    if (loadMoreBtn) {
+      if (totalMatch > INITIAL_SHOW) {
+        loadMoreBtn.style.display = 'inline-flex';
+        loadMoreBtn.textContent = `もっと見る（残り${totalMatch - INITIAL_SHOW}件）`;
+        loadMoreBtn.dataset.filter = filter;
+      } else {
+        loadMoreBtn.style.display = 'none';
+      }
+    }
+  }
+
+  // Tab click
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      applyFilter(tab.getAttribute('data-filter'));
     });
   });
+
+  // Load more click
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      const filter = loadMoreBtn.dataset.filter || 'all';
+      cards.forEach((card, index) => {
+        const category = card.getAttribute('data-category');
+        const isMatch = (filter === 'all' || category === filter);
+        if (isMatch && card.classList.contains('hidden')) {
+          card.classList.remove('hidden');
+          card.style.animation = 'none';
+          card.offsetHeight;
+          card.style.animation = `fadeInUp 0.4s ease ${index * 0.03}s forwards`;
+        }
+      });
+      loadMoreBtn.style.display = 'none';
+    });
+  }
+
+  // Initial load
+  applyFilter('all');
 }
 
 /* ============================================

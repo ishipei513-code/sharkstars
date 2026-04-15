@@ -26,6 +26,27 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assist/css/style.css">
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SHARKSTARS",
+    "url": "https://sharkstars.jp",
+    "logo": "https://sharkstars.jp/assist/images/favicon.png",
+    "description": "\u798f\u5ca1\u306eHP\u5236\u4f5c0\u5186\u30fb\u6708\u984d3,980\u5186\u306e\u30db\u30fc\u30e0\u30da\u30fc\u30b8\u5236\u4f5c\u30b5\u30fc\u30d3\u30b9",
+    "areaServed": {
+      "@type": "Place",
+      "name": "\u798f\u5ca1\u770c"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "sharkstars0513@gmail.com"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -125,8 +146,8 @@
           <a href="#gallery" class="btn-primary" id="hero-cta-gallery">
             50種類以上のHPを見る
           </a>
-          <a href="#contact" class="btn-secondary btn-outline-white" id="hero-cta-contact">
-            無料で相談する
+          <a href="https://lin.ee/PCsXnGd" class="btn-secondary btn-outline-white" id="hero-cta-line" target="_blank" rel="noopener noreferrer" style="border-color: #06C755; color: #fff; background: #06C755;">
+            LINEで無料相談
           </a>
         </div>
       </div>
@@ -1942,6 +1963,13 @@
         </div>
 
       </div>
+
+      <!-- Load More Button -->
+      <div style="text-align: center; margin-top: 48px;">
+        <button class="btn-primary" id="gallery-load-more" style="padding: 14px 40px; font-size: 0.95rem; cursor: pointer; border: 1px solid var(--gray-300); background: var(--white); color: var(--gray-900);">
+          もっと見る
+        </button>
+      </div>
     </div>
   </section>
 
@@ -2265,7 +2293,8 @@
         <a href="privacy.html">プライバシーポリシー</a>
         <a href="tokushoho.html">特定商取引法に基づく表記</a>
       </div>
-      <p class="footer-copy">&copy; 2026 SHARKSTARS All rights reserved.</p>
+      <p class="footer-copy">&copy; <span id="footer-year">2026</span> SHARKSTARS All rights reserved.</p>
+      <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
     </div>
   </footer>
 
