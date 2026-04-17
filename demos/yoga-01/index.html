@@ -71,16 +71,16 @@
           </div>
         </div>
 
-        <!-- Images (Arch design) -->
+        <!-- Images (Organic design) -->
         <div class="hero-right w-60 relative h-600 fade-target delay-2 z-5 sp-mt-large">
-          <div class="arch-frame absolute right-0 top-0 w-80 h-full overflow-hidden image-reveal">
+          <div class="organic-radius absolute right-0 top-0 w-80 h-full overflow-hidden image-reveal">
             <!-- Using AI Generated High Quality Image -->
             <img src="assist/images/yoga_hero.png" alt="美しいヨガスタジオ" class="w-full h-full object-cover ken-burns" loading="eager">
             <div class="overlay-grad-light absolute inset-0"></div>
           </div>
           <!-- Floating Leaf Element -->
-          <div class="floating-element absolute left-10 bottom-20 bg-white p-medium arch-frame-small box-shadow-soft animate-float">
-            <img src="assist/images/yoga_concept.png" alt="マインドフルネス" class="w-full h-full object-cover arch-frame-small">
+          <div class="floating-element absolute left-10 bottom-20 bg-white p-medium organic-radius-alt box-shadow-float animate-float glass-panel">
+            <img src="assist/images/yoga_concept.png" alt="マインドフルネス" class="w-full h-full object-cover organic-radius-alt">
           </div>
         </div>
         
@@ -220,17 +220,17 @@
         </div>
 
         <!-- Program 3 -->
-        <div class="p-card bg-sand rounded-lg p-medium w-31 box-shadow-soft fade-target delay-2 hover-lift transition relative overflow-hidden">
+        <div class="p-card bg-sand rounded-lg p-medium w-31 box-shadow-soft fade-target delay-2 hover-lift transition relative overflow-hidden glass-panel-dark">
           <div class="flex-between align-center mb-small border-b-sage pb-xs">
-            <h3 class="font-shippori font-bold text-lg text-clay">キャンドルナイト</h3>
-            <span class="font-cormorant text-sage text-sm italic">Candle Night</span>
+            <h3 class="font-shippori font-bold text-lg text-white">キャンドルナイト</h3>
+            <span class="font-cormorant text-sand text-sm italic opacity-70">Candle Night</span>
           </div>
           <div class="flex gap-xs mb-small">
-            <span class="intensity-dot bg-sage"></span>
-            <span class="intensity-dot bg-gray-light"></span>
-            <span class="intensity-dot bg-gray-light"></span>
+            <span class="intensity-dot bg-sand"></span>
+            <span class="intensity-dot bg-sand opacity-40"></span>
+            <span class="intensity-dot bg-sand opacity-40"></span>
           </div>
-          <p class="font-zen text-gray text-xs line-height-long font-light mb-small h-80">
+          <p class="font-zen text-white text-xs line-height-long font-light mb-small h-80 opacity-90">
             【金曜夜限定】照明を落とし、キャンドルの揺らぐ灯りの中で極上のリラックスタイムを。1週間の疲れをリセットし、深い眠りへ導きます。
           </p>
           <img src="https://images.unsplash.com/photo-1602192509154-0b900ee1f851?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="キャンドルヨガ" class="w-full h-150 object-cover rounded-sm filter-sepia transition hover-normal">
@@ -346,20 +346,20 @@
         <h2 class="font-cormorant text-clay tracking-widest text-3xl italic mb-xs">Trial Lesson</h2>
         <span class="font-shippori text-slate text-xl tracking-widest mb-medium display-block">体験レッスンのご予約</span>
         
-        <div class="price-box bg-white box-shadow-soft rounded-lg p-small inline-block mb-large border-sage-thin">
+        <div class="price-box bg-white box-shadow-soft rounded-lg p-small inline-block mb-large border-sage-thin glass-panel">
           <span class="font-zen text-gray text-xs display-block mb-xs">初回限定トライアル（手ぶらセット付）</span>
           <div class="font-shippori text-slate text-2xl">¥ 1,500 <span class="font-zen text-xs opacity-70"> / 60min</span></div>
         </div>
 
-        <form class="booking-form text-left bg-cream p-large rounded-lg box-shadow-sm border-sage-thin">
+        <form class="booking-form text-left glass-panel p-large rounded-lg border-sage-thin">
           <div class="flex-between gap-medium flex-col-sp">
             <div class="f-group w-50">
               <label class="font-zen text-gray text-xs tracking-widest mb-xs display-block">お名前</label>
-              <input type="text" class="f-input-soft font-zen" placeholder="例：青山 花子" required>
+              <input type="text" class="f-input-soft font-zen glass-panel" placeholder="例：青山 花子" required>
             </div>
             <div class="f-group w-50">
               <label class="font-zen text-gray text-xs tracking-widest mb-xs display-block">メールアドレス</label>
-              <input type="email" class="f-input-soft font-zen" placeholder="mail@example.com" required>
+              <input type="email" class="f-input-soft font-zen glass-panel" placeholder="mail@example.com" required>
             </div>
           </div>
           
@@ -420,6 +420,11 @@
 
   <script>
     lucide.createIcons();
+    
+    // Page Load Animation Trigger
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
     
     // Header Scroll
     const header = document.getElementById('header');
