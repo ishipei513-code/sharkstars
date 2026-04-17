@@ -381,8 +381,8 @@ button { border: none; background: none; cursor: pointer; }
   margin-bottom: 4px;
 }
 .sns-card.ig .sns-followers { color: #dc2743; }
-.sns-card.tt .sns-followers { color: #00f2ea; }
-.sns-card.yt .sns-followers { color: #ff0000; }
+.sns-card.tt .sns-followers { color: var(--c-purple); }
+.sns-card.yt .sns-followers { color: var(--c-cyan); }
 .sns-flabel {
   font-size: 0.7rem; color: var(--c-gray); letter-spacing: 0.1em;
   text-transform: uppercase;
