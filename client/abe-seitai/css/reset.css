@@ -1,0 +1,13 @@
+/* Modern CSS Reset */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;scroll-behavior:smooth}
+body{min-height:100vh;line-height:1.8}
+h1,h2,h3,h4,h5,h6{text-wrap:balance}
+p{text-wrap:pretty}
+img,picture,video,canvas,svg{display:block;max-width:100%;height:auto}
+input,button,textarea,select{font:inherit}
+ul,ol{list-style:none}
+a{text-decoration:none;color:inherit}
+button{border:none;background:none;cursor:pointer}
+textarea:not([rows]){min-height:10em}
+:target{scroll-margin-top:5ex}

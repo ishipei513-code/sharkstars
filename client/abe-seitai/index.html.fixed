@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>髦ｿ驛ｨ謖・悸謨ｴ菴馴劼・應ｹ・ｱｱ逕ｺ縺ｮ蠑ｷ謚ｼ縺療励が繝ｼ繝繝ｼ繝｡繧､繝画紛菴薙・蜃ｺ蠑ｵ謨ｴ菴・/title>
+  <meta name="description" content="遖丞ｲ｡逵御ｹ・ｱｱ逕ｺ縺ｮ髦ｿ驛ｨ謖・悸謨ｴ菴馴劼縲ょ・繧翫・闃ｯ縺ｾ縺ｧ螻翫￥縲梧戟邯壼悸縲阪→荳莠ｺ荳莠ｺ縺ｫ蜷医ｏ縺帙◆繧ｪ繝ｼ繝繝ｼ繝｡繧､繝画紛菴薙ょ・蠑ｵ謨ｴ菴薙・遖丞ｲ｡蟶ゅ・邊募ｱ矩Γ繧ｨ繝ｪ繧｢蟇ｾ蠢懊・INE逶ｸ隲・庄縲・>
+  <meta name="keywords" content="荵・ｱｱ逕ｺ 謨ｴ菴・邊募ｱ矩Γ 謨ｴ菴・蜃ｺ蠑ｵ謨ｴ菴・遖丞ｲ｡,蠑ｷ謚ｼ縺・謨ｴ菴・繧ｪ繝ｼ繝繝ｼ繝｡繧､繝画紛菴・髦ｿ驛ｨ謖・悸謨ｴ菴馴劼">
+  <link rel="canonical" href="https://order-maid-seitai.com/">
+
+  <!-- OGP -->
+  <meta property="og:title" content="髦ｿ驛ｨ謖・悸謨ｴ菴馴劼・應ｹ・ｱｱ逕ｺ縺ｮ蠑ｷ謚ｼ縺療励が繝ｼ繝繝ｼ繝｡繧､繝画紛菴薙・蜃ｺ蠑ｵ謨ｴ菴・>
+  <meta property="og:description" content="蜃昴ｊ縺ｮ闃ｯ縺ｾ縺ｧ螻翫￥縲梧戟邯壼悸縲阪→荳莠ｺ荳莠ｺ縺ｫ蜷医ｏ縺帙◆繧ｪ繝ｼ繝繝ｼ繝｡繧､繝画紛菴薙ょ・蠑ｵ謨ｴ菴薙・遖丞ｲ｡蟶ゅお繝ｪ繧｢蟇ｾ蠢懊・>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://order-maid-seitai.com/">
+  <meta property="og:site_name" content="髦ｿ驛ｨ謖・悸謨ｴ菴馴劼">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "髦ｿ驛ｨ謖・悸謨ｴ菴馴劼",
+    "image": "https://order-maid-seitai.com/wp-content/uploads/2026/02/蝠剰ｨｺ-2-1024x768.jpg",
+    "url": "https://order-maid-seitai.com",
+    "telephone": "070-1263-7637",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "螟ｧ蟄怜ｱｱ逕ｰ2689-1",
+      "addressLocality": "荵・ｱｱ逕ｺ",
+      "addressRegion": "遖丞ｲ｡逵・,
+      "postalCode": "811-2502",
+      "addressCountry": "JP"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Saturday"], "opens": "11:00", "closes": "20:00" }
+    ],
+    "priceRange": "ﾂ･3,500縲慊･12,000",
+    "areaServed": ["遖丞ｲ｡蟶・,"荵・ｱｱ逕ｺ","邊募ｱ狗伴","遽譬礼伴","蠢怜・逕ｺ","鬆域・逕ｺ","譁ｰ螳ｮ逕ｺ","蜿､雉蟶・,"螳怜ワ蟶・]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="logo">髦ｿ驛ｨ謖・悸謨ｴ菴馴劼</div>
+
+      <nav class="nav" id="nav">
+        <div class="nav-links">
+          <a href="service.html">繧ｵ繝ｼ繝薙せ繝ｻ譁咎≡</a>
+          <a href="about.html">蠎苓・諠・ｱ</a>
+          <a href="faq.html">繧医￥縺ゅｋ雉ｪ蝠・/a>
+          <a href="contact.html">縺雁撫縺・粋繧上○</a>
+        </div>
+        <div class="header-cta">
+          <a href="https://airrsv.net/order-maid-seitai/calendar" target="_blank" class="btn btn-gold">縺比ｺ育ｴ・/a>
+        </div>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="繝｡繝九Η繝ｼ">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content fade-up">
+        <div class="hero-badge">螳悟・莠育ｴ・宛繝ｻ繧ｪ繝ｼ繝繝ｼ繝｡繧､繝画紛菴・/div>
+        <h1 class="hero-title">
+          蜃昴ｊ縺ｮ闃ｯ縺ｾ縺ｧ髻ｿ縺上・br>
+          <span class="accent">縺薙・謖∫ｶ壼悸</span>
+        </h1>
+        <p class="hero-desc">
+          縺雁ｮ｢讒倥・縺碑ｦ∵悍縲√◎縺ｮ譌･縺ｮ菴楢ｪｿ縲√♀霄ｫ菴薙・迥ｶ諷九∵勸谿ｵ縺ｮ菴ｿ縺・婿縺九ｉ縲・br>
+          荳莠ｺ荳莠ｺ縺ｫ蜷医▲縺滓怙驕ｩ縺ｪ譁ｽ陦薙ｒ縺疲署萓帙＠縺ｾ縺吶・        </p>
+        <div class="hero-actions">
+          <a href="https://airrsv.net/order-maid-seitai/calendar" target="_blank" class="btn btn-primary">縺比ｺ育ｴ・・縺薙■繧・/a>
+          <a href="https://lin.ee/b8cNj88" target="_blank" class="btn btn-line">LINE縺ｧ逶ｸ隲・/a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <div class="stat-num">4,000<span>蜀・・/span></div>
+            <div class="stat-label">蠎苓・謨ｴ菴・60蛻・/div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="stat-num">鄙・:00<span>縺ｾ縺ｧ</span></div>
+            <div class="stat-label">蜃ｺ蠑ｵ謨ｴ菴・蟇ｾ蠢・/div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="stat-num">16<span>繧ｨ繝ｪ繧｢</span></div>
+            <div class="stat-label">蜃ｺ蠑ｵ蟇ｾ蠢懷慍蝓・/div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEMS ===== -->
+  <section class="section problems" id="problems">
+    <div class="container">
+      <div class="section-header text-center">
+        <p class="section-label center">Concerns</p>
+        <h2 class="section-title">縺薙ｓ縺ｪ縺頑か縺ｿ縺ゅｊ縺ｾ縺帙ｓ縺具ｼ・/h2>
+      </div>
+      <div class="problems-grid">
+        <div class="problem-card fade-up">
+          <div class="card-icon">01</div>
+          <h3>縺・▽繧ゅ後ｂ縺｣縺ｨ蠑ｷ縺上阪→<br>險縺医↑縺・/h3>
+          <p>驕諷ｮ縺励※縺励∪縺・∫ｵ仙ｱ迚ｩ雜ｳ繧翫↑縺輔ｒ諢溘§縺溘∪縺ｾ蟶ｰ螳・ょ･ｽ縺ｿ縺ｮ蠑ｷ縺輔〒譛蠕後∪縺ｧ縺励▲縺九ｊ縺ｻ縺舌＆繧後◆縺・婿縺ｸ縲・/p>
+        </div>
+        <div class="problem-card fade-up delay-1">
+          <div class="card-icon">02</div>
+          <h3>鄙梧律縺ｫ縺ｯ逞帙∩縺・br>謌ｻ縺｣縺ｦ縺励∪縺・/h3>
+          <p>縺昴・蝣ｴ縺励・縺弱〒縺ｯ縺ｪ縺上∽ｻ雁ｺｦ縺薙◎譬ｹ譛ｬ縺九ｉ繧ｳ繝ｪ繧定ｧ｣豸医＠縺溘＞縺ｨ蛻・ｮ溘↓鬘倥▲縺ｦ縺・ｋ譁ｹ縺ｸ縲・/p>
+        </div>
+        <div class="problem-card fade-up delay-2">
+          <div class="card-icon">03</div>
+          <h3>蠢吶＠縺上※螟門・縺吶ｋ<br>譎る俣縺悟叙繧後↑縺・/h3>
+          <p>蟄占ご縺ｦ繧・ｻ穂ｺ九′蠢吶＠縺上∫ｧｻ蜍墓凾髢薙′繧ゅ▲縺溘＞縺ｪ縺・→隲ｦ繧√※縺・◆譁ｹ縺ｸ縲ょ・蠑ｵ謨ｴ菴薙〒隗｣豎ｺ縺ｧ縺阪∪縺吶・/p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Features</p>
+        <h2 class="section-title">蠖馴劼縺ｮ迚ｹ蠕ｴ</h2>
+      </div>
+
+      <!-- Feature 1 -->
+      <div class="feature-box fade-up">
+        <div class="feature-img">
+          <img src="images/feature-ordermaid.jpg" alt="髦ｿ驛ｨ謖・悸謨ｴ菴馴劼縺ｮ繧ｪ繝ｼ繝繝ｼ繝｡繧､繝画紛菴薙・蝠剰ｨｺ鬚ｨ譎ｯ" loading="lazy">
+        </div>
+        <div class="feature-text">
+          <h3><span>荳莠ｺ荳莠ｺ縺ｮ縺願ｺｫ菴薙↓蜷医ｏ縺帙◆</span>繧ｪ繝ｼ繝繝ｼ繝｡繧､繝画紛菴・/h3>
+          <p>縲弱＞縺､繧ゅ・逍ｲ繧後上・閭梧勹縺ｫ縺ｯ縲∽ｺｺ縺昴ｌ縺槭ｌ縺ｮ逅・罰縺後≠繧翫∪縺吶ょｽ馴劼縺ｮ繧ｪ繝ｼ繝繝ｼ繝｡繧､繝画紛菴薙・縲√♀螳｢讒倥・縺頑か縺ｿ繧・ｽ楢ｪｿ縲∵勸谿ｵ縺ｮ菴ｿ縺・婿縺ｫ蜷医ｏ縺帙◆譛驕ｩ縺ｪ繝励Λ繝ｳ繧偵＃謠先｡医ゅ◎縺ｮ蝣ｴ縺励・縺弱〒縺ｯ縺ｪ縺・∝ｿｫ驕ｩ縺ｪ豈取律繧帝℃縺斐☆縺溘ａ縺ｮ菴薙▼縺上ｊ繧貞・蜉帙〒繧ｵ繝昴・繝医＠縺ｾ縺吶・/p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-box reverse fade-up">
+        <div class="feature-img">
+          <img src="images/feature-jizokuatsu.jpg" alt="謖∫ｶ壼悸縺ｫ繧医ｋ豺ｱ螻､遲九∈縺ｮ譁ｽ陦・ loading="lazy">
+        </div>
+        <div class="feature-text">
+          <h3><span>蜃昴ｊ縺ｮ闃ｯ縺ｫ髻ｿ縺・/span>謖∫ｶ壼悸</h3>
+          <p>豺ｱ螻､遲九∪縺ｧ螻翫￥縲∫峡閾ｪ縺ｮ謖∫ｶ壼悸縲ゅヴ繝ｳ繝昴う繝ｳ繝医〒謐峨∴縺ｦ髻ｿ縺九○繧九い繝励Ο繝ｼ繝√〒縲・大崋縺ｪ繧ｳ繝ｪ繧偵§縺｣縺上ｊ隗｣縺阪⊇縺舌＠縺ｾ縺吶ょ悸縺九ｉ隗｣謾ｾ縺輔ｌ縺溽椪髢薙↓蟾｡繧翫′菫・＆繧後√♀霄ｫ菴薙ｒ蜀・・縺九ｉ繝ｪ繝輔Ξ繝・す繝･縲ょｿ・ｺｫ縺ｨ繧ゅ↓謨ｴ縺・─隕壹ｒ縺雁ｱ翫￠縺励∪縺吶・/p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-box fade-up">
+        <div class="feature-img">
+          <img src="images/feature-aftercare.png" alt="LINE縺ｧ縺ｮ繧｢繝輔ち繝ｼ繧ｱ繧｢逶ｸ隲・う繝｡繝ｼ繧ｸ" loading="lazy">
+        </div>
+        <div class="feature-text">
+          <h3><span>LINE繧・Γ繝ｼ繝ｫ縺ｧ逶ｸ隲・ｂ蜃ｺ譚･繧・/span>繧｢繝輔ち繝ｼ繧ｱ繧｢</h3>
+          <p>縲取命陦薙＠縺ｦ邨ゅｏ繧翫上〒縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲ゅ≠縺ｪ縺溘・"菴薙・繝代・繝医リ繝ｼ"縺ｨ縺励※蟇・ｊ豺ｻ縺・∪縺吶ゅ≠縺ｪ縺溘・菴薙↓蜷医ｏ縺帙◆縲弱が繝ｼ繝繝ｼ繝｡繧､繝峨・繧ｻ繝ｫ繝輔こ繧｢縲上ｒ荳∝ｯｧ縺ｫ縺贋ｼ昴∴縺励※縺・∪縺吶ゆｸ榊ｮ峨ｒ諢溘§縺滄圀縺ｯ縲√＞縺､縺ｧ繧ゅ♀豌苓ｻｽ縺ｫ縺皮嶌隲・￥縺縺輔＞縲・/p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-box reverse fade-up">
+        <div class="feature-img">
+          <img src="images/feature-shuccho.png" alt="蜃ｺ蠑ｵ謨ｴ菴薙〒繝励Ο莉墓ｧ倥・繝・ラ繧呈戟蜿ゅ☆繧区ｧ伜ｭ・ loading="lazy">
+        </div>
+        <div class="feature-text">
+          <h3><span>縺碑・螳・′譁ｽ陦灘ｮ､縺ｫ</span>蜃ｺ蠑ｵ謨ｴ菴・/h3>
+          <p>縺疲欠螳壹・蝣ｴ謇縺ｸ縺贋ｼｺ縺・☆繧句・蠑ｵ謨ｴ菴薙ｒ謇ｿ縺｣縺ｦ縺・∪縺吶ゅ・繝ｭ莉墓ｧ倥・謚倥ｊ逡ｳ縺ｿ蠑乗命陦薙・繝・ラ繧呈戟蜿ゅ＞縺溘＠縺ｾ縺吶・縺ｧ縲√＃閾ｪ螳・〒繧ょｺ苓・縺ｨ蜷後§繧ｯ繧ｪ繝ｪ繝・ぅ縺ｮ譛ｬ譬ｼ逧・↑譁ｽ陦薙ｒ蜿励￠縺ｦ縺・◆縺縺上％縺ｨ縺悟庄閭ｽ縺ｧ縺吶・/p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section id="pricing" class="section pricing bg-cream">
+    <div class="container">
+      <div class="section-header text-center">
+        <p class="section-label center">Pricing</p>
+        <h2 class="section-title">譁咎≡陦ｨ</h2>
+      </div>
+      <div class="pricing-container">
+
+        <div class="pricing-box">
+          <h3 class="pricing-title">縲仙ｺ苓・縲第紛菴・/h3>
+          <table class="premium-table">
+            <thead><tr><th>譎る俣</th><th>譁咎≡</th></tr></thead>
+            <tbody>
+              <tr><td>60蛻・/td><td class="price">4,000蜀・/td></tr>
+              <tr><td>90蛻・/td><td class="price">6,000蜀・/td></tr>
+              <tr><td>120蛻・/td><td class="price">8,000蜀・/td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pricing-box">
+          <h3 class="pricing-title">縲仙・蠑ｵ縲第紛菴・/h3>
+          <table class="premium-table">
+            <thead><tr><th>譎る俣</th><th>譁咎≡</th></tr></thead>
+            <tbody>
+              <tr><td>60蛻・/td><td class="price">6,000蜀・/td></tr>
+              <tr><td>90蛻・/td><td class="price">9,000蜀・/td></tr>
+              <tr><td>120蛻・/td><td class="price">12,000蜀・/td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pricing-box special-box">
+          <h3 class="pricing-title">縲蝉ｹ・ｱｱ繝ｻ蝨ｰ蜈・ｿ懈抄縲醍音蛻･譁咎≡</h3>
+          <table class="premium-table">
+            <thead><tr><th>繝｡繝九Η繝ｼ</th><th>騾壼ｸｸ譁咎≡</th><th>迚ｹ蛻･萓｡譬ｼ</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>蠎苓・謨ｴ菴・br><span style="font-size:0.85rem;color:var(--c-gray)">(60/90/120蛻・</span></td>
+                <td class="strikethrough">4,000蜀・br>6,000蜀・br>8,000蜀・/td>
+                <td class="special-price">3,500蜀・br>5,500蜀・br>7,500蜀・/td>
+              </tr>
+              <tr>
+                <td>蜃ｺ蠑ｵ謨ｴ菴・br><span style="font-size:0.85rem;color:var(--c-gray)">(60/90/120蛻・</span></td>
+                <td class="strikethrough">6,000蜀・br>9,000蜀・br>12,000蜀・/td>
+                <td class="special-price">5,000蜀・br>7,500蜀・br>10,000蜀・/td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VOICE ===== -->
+  <section id="voice" class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <p class="section-label center">Voice</p>
+        <h2 class="section-title">縺雁ｮ｢讒倥・螢ｰ</h2>
+        <p class="section-desc">Google繝槭ャ繝励ｄ莠育ｴ・し繧､繝医↓蟇・○繧峨ｌ縺溘∝ｮ滄圀縺ｮ蜿｣繧ｳ繝溘・荳驛ｨ繧偵＃邏ｹ莉九＠縺ｾ縺吶・/p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;max-width:900px;margin:0 auto">
+
+        <!-- Voice Card 1 -->
+        <div class="fade-up" style="background:var(--c-white);border-radius:16px;padding:36px 32px;border:1px solid rgba(0,0,0,0.04);transition:all 0.35s var(--ease-out)">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <div style="width:48px;height:48px;border-radius:50%;background:var(--c-cream);display:flex;align-items:center;justify-content:center;font-family:var(--f-serif);font-size:1.1rem;color:var(--c-gold);font-weight:600">M</div>
+            <div>
+              <div style="font-weight:600;font-size:0.95rem;color:var(--c-navy)">M.S 讒・/div>
+              <div style="font-size:0.75rem;color:var(--c-gray)">蠎苓・謨ｴ菴・90蛻・/div>
+            </div>
+            <div style="margin-left:auto;color:var(--c-gold);font-size:0.9rem;letter-spacing:2px">笘・・笘・・笘・/div>
+          </div>
+          <p style="font-size:0.9rem;color:var(--c-gray-dark);line-height:1.9">髟ｷ蟷ｴ縺ｮ閻ｰ逞帙↓謔ｩ繧薙〒縺・∪縺励◆縺後∵戟邯壼悸縺ｧ豺ｱ縺・Κ蛻・∪縺ｧ螻翫￥諢溯ｦ壹↓鬩壹″縺ｾ縺励◆縲らｵゅｏ縺｣縺溷ｾ後・菴薙・霆ｽ縺輔′蜈ｨ辟ｶ驕輔＞縺ｾ縺吶ゆｻ翫〒縺ｯ譛・蝗槭・螳壽悄繝｡繝ｳ繝・リ繝ｳ繧ｹ縺梧ｬ縺九○縺ｾ縺帙ｓ縲・/p>
+        </div>
+
+        <!-- Voice Card 2 -->
+        <div class="fade-up delay-1" style="background:var(--c-white);border-radius:16px;padding:36px 32px;border:1px solid rgba(0,0,0,0.04);transition:all 0.35s var(--ease-out)">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <div style="width:48px;height:48px;border-radius:50%;background:var(--c-cream);display:flex;align-items:center;justify-content:center;font-family:var(--f-serif);font-size:1.1rem;color:var(--c-gold);font-weight:600">K</div>
+            <div>
+              <div style="font-weight:600;font-size:0.95rem;color:var(--c-navy)">K.T 讒・/div>
+              <div style="font-size:0.75rem;color:var(--c-gray)">蜃ｺ蠑ｵ謨ｴ菴・120蛻・/div>
+            </div>
+            <div style="margin-left:auto;color:var(--c-gold);font-size:0.9rem;letter-spacing:2px">笘・・笘・・笘・/div>
+          </div>
+          <p style="font-size:0.9rem;color:var(--c-gray-dark);line-height:1.9">螟懷共譏弱￠縺ｧ菴薙′繝舌く繝舌く縺ｮ迥ｶ諷九〒蜃ｺ蠑ｵ繧偵♀鬘倥＞縺励∪縺励◆縲よｷｱ螟懊↓繧る未繧上ｉ縺壻ｸ∝ｯｧ縺ｫ蟇ｾ蠢懊＠縺ｦ縺・◆縺縺阪∬・螳・↑縺ｮ縺ｧ縺昴・縺ｾ縺ｾ逵繧後ｋ縺ｮ縺梧怙鬮倥〒縺吶ょｼｷ縺輔ｂ螂ｽ縺ｿ縺ｫ繝斐ャ繧ｿ繝ｪ縺ｧ縺励◆縲・/p>
+        </div>
+
+        <!-- Voice Card 3 -->
+        <div class="fade-up delay-2" style="background:var(--c-white);border-radius:16px;padding:36px 32px;border:1px solid rgba(0,0,0,0.04);transition:all 0.35s var(--ease-out)">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <div style="width:48px;height:48px;border-radius:50%;background:var(--c-cream);display:flex;align-items:center;justify-content:center;font-family:var(--f-serif);font-size:1.1rem;color:var(--c-gold);font-weight:600">Y</div>
+            <div>
+              <div style="font-weight:600;font-size:0.95rem;color:var(--c-navy)">Y.A 讒・/div>
+              <div style="font-size:0.75rem;color:var(--c-gray)">蠎苓・謨ｴ菴・60蛻・/div>
+            </div>
+            <div style="margin-left:auto;color:var(--c-gold);font-size:0.9rem;letter-spacing:2px">笘・・笘・・笘・/div>
+          </div>
+          <p style="font-size:0.9rem;color:var(--c-gray-dark);line-height:1.9">莉悶・謨ｴ菴薙〒縺ｯ迚ｩ雜ｳ繧翫↑縺輔ｒ諢溘§縺ｦ縺・∪縺励◆縺後√％縺薙・縲悟ｼｷ謚ｼ縺励阪′譛ｬ蠖薙↓縺励▲縺九ｊ蠑ｷ縺・る□諷ｮ縺ｪ縺剰ｦ∵悍繧剃ｼ昴∴繧峨ｌ繧矩峅蝗ｲ豌励ｂ濶ｯ縺・〒縺吶よ命陦灘ｾ後・LINE繝輔か繝ｭ繝ｼ繧ょｮ牙ｿ・─縺後≠繧翫∪縺吶・/p>
+        </div>
+
+      </div>
+
+      <!-- Google Reviews -->
+      <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:48px">
+        <div class="fade-up" style="max-width:380px;border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,0.06);box-shadow:0 4px 12px rgba(0,0,0,0.04)">
+          <img src="images/review-01.png" alt="Google繝ｬ繝薙Η繝ｼ" loading="lazy">
+        </div>
+        <div class="fade-up delay-1" style="max-width:380px;border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,0.06);box-shadow:0 4px 12px rgba(0,0,0,0.04)">
+          <img src="images/review-02.png" alt="Google繝ｬ繝薙Η繝ｼ" loading="lazy">
+        </div>
+      </div>
+
+      <div class="fade-up" style="text-align:center;margin-top:40px">
+        <a href="https://booking.hogugu.com/therapist/121571538867059/review?page=2" target="_blank" class="btn btn-outline" style="gap:6px">
+          蜿｣繧ｳ繝溘ｒ繧ゅ▲縺ｨ隕九ｋ 竊・        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSTAGRAM REELS ===== -->
+  <section id="instagram" class="section bg-cream">
+    <div class="container">
+      <div class="section-header text-center">
+        <p class="section-label center">Instagram</p>
+        <h2 class="section-title">譁ｽ陦薙・讒伜ｭ撰ｼ医Μ繝ｼ繝ｫ蜍慕判・・/h2>
+        <p class="section-desc">螳滄圀縺ｮ譁ｽ陦馴｢ｨ譎ｯ繧・そ繝ｫ繝輔こ繧｢譁ｹ豕輔ｒ蜍慕判縺ｧ逋ｺ菫｡縺励※縺・∪縺吶・/p>
+      </div>
+
+      <!-- Reels Container -->
+      <div style="display:flex; justify-content:center; gap:32px; flex-wrap:wrap;">
+        
+        <div class="fade-up">
+          <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DW-JFt-lSNa/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DW-JFt-lSNa/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DW-JFt-lSNa/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">阿部指圧整体院(@abesiatu.863902)がシェアした投稿</a></p></div></blockquote>
+        </div>
+
+        <div class="fade-up delay-1">
+          <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DXLc-HZko2N/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DXLc-HZko2N/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DXLc-HZko2N/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">阿部指圧整体院(@abesiatu.863902)がシェアした投稿</a></p></div></blockquote>
+        </div>
+
+      </div>
+      <script async src="//www.instagram.com/embed.js"></script>
+
+      <div class="fade-up" style="text-align:center;margin-top:48px">
+        <a href="https://www.instagram.com/abesiatu.863902/" target="_blank" class="btn btn-instagram" style="gap:6px">
+          Instagram繧偵ｂ縺｣縺ｨ隕九ｋ 竊・        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORE INFO ===== -->
+  <section id="info" class="section store-info">
+    <div class="container">
+      <div class="section-header text-center">
+        <p class="section-label center">Access</p>
+        <h2 class="section-title">蠎苓・諠・ｱ繝ｻ繧｢繧ｯ繧ｻ繧ｹ</h2>
+      </div>
+      <div class="info-card fade-up">
+        <table class="info-table">
+          <tr><th>髯｢蜷・/th><td>髦ｿ驛ｨ謖・悸謨ｴ菴馴劼</td></tr>
+          <tr><th>菴乗園</th><td>遖丞ｲ｡逵檎ｲ募ｱ矩Γ荵・ｱｱ逕ｺ螟ｧ蟄怜ｱｱ逕ｰ2689-1<br><span class="note">窶ｻ繝医Μ繧｢繧ｹ荵・ｱｱ繝ｻ繧ｳ繧ｹ繝医さ縺九ｉ霆翫〒5蛻・ｼ磯ｧ占ｻ雁ｴ螳悟ｙ・・/span></td></tr>
+          <tr><th>蝟ｶ讌ｭ譎る俣</th><td>縲仙ｺ苓・縲・1:00縲・0:00<br>縲仙・蠑ｵ縲・1:00縲懃ｿ・:00</td></tr>
+          <tr><th>螳壻ｼ第律</th><td>譌･繝ｻ譛医・驥・/td></tr>
+          <tr>
+            <th>蜃ｺ蠑ｵ蟇ｾ蠢懊お繝ｪ繧｢</th>
+            <td>
+              遖丞ｲ｡蟶ゅ・螳怜ワ蟶ゅ・蜿､雉蟶ゅ・遖乗ｴ･蟶ゅ・螳ｮ闍･蟶ゅ・鬟ｯ蝪壼ｸゅ・螟ｪ螳ｰ蠎懷ｸゅ・螟ｧ驥主沁蟶ゅ・譏･譌･蟶ゅ・螳・ｾ守伴繝ｻ遽譬礼伴繝ｻ蠢怜・逕ｺ繝ｻ鬆域・逕ｺ繝ｻ譁ｰ螳ｮ逕ｺ繝ｻ荵・ｱｱ逕ｺ繝ｻ邊募ｱ狗伴
+              <div style="margin-top:24px;">
+                <img src="images/map-fukuoka.png" alt="蜃ｺ蠑ｵ蟇ｾ蠢懊お繝ｪ繧｢ 遖丞ｲ｡蝨ｰ蝗ｳ" loading="lazy" style="display:block; max-width:100%; height:auto; border-radius:8px; border:1px solid rgba(0,0,0,0.06);">
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOKING CTA ===== -->
+  <section id="booking" class="booking-section">
+    <div class="container">
+      <div class="booking-inner">
+        <h2 class="section-title">縺比ｺ育ｴ・・縺雁撫縺・粋繧上○</h2>
+        <p class="store-desc" style="margin-top:16px;">
+          縺比ｺ育ｴ・・24譎る俣蜿嶺ｻ伜庄閭ｽ縺ｪWEB莠育ｴ・√∪縺溘・LINE繧医ｊ謇ｿ縺｣縺ｦ縺翫ｊ縺ｾ縺吶・br>
+          蜃ｺ蠑ｵ譁ｽ陦薙↓縺ｦ蠎苓・荳榊惠縺ｮ蝣ｴ蜷医′縺斐＊縺・∪縺吶・縺ｧ縲√♀諤･縺弱・譁ｹ縺ｯLINE縺ｫ縺ｦ縺秘｣邨｡縺上□縺輔＞縲・        </p>
+        <div class="cta-buttons">
+          <a href="https://airrsv.net/order-maid-seitai/calendar" target="_blank" class="btn btn-primary">WEB莠育ｴ・・縺薙■繧・/a>
+          <a href="https://lin.ee/b8cNj88" target="_blank" class="btn btn-line">LINE縺ｧ逶ｸ隲・・莠育ｴ・/a>
+          <a href="#" target="_blank" class="btn btn-instagram" style="padding: 16px 28px;">Instagram繧定ｦ九ｋ</a>
+        </div>
+        <div class="tel-number">
+          <a href="tel:070-1263-7637">TEL: 070-1263-7637</a>
+        </div>
+        <p class="tel-note">蝟ｶ讌ｭ譎る俣・壼ｺ苓・ 11:00縲・0:00 ・・蜃ｺ蠑ｵ 11:00縲懃ｿ・:00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo serif">髦ｿ驛ｨ謖・悸謨ｴ菴馴劼</span>
+          <p class="address">
+            遖丞ｲ｡逵檎ｲ募ｱ矩Γ荵・ｱｱ逕ｺ螟ｧ蟄怜ｱｱ逕ｰ2689-1<br>
+            TEL: 070-1263-7637<br>
+            蠎苓・・・1:00窶・0:00 ・・蜃ｺ蠑ｵ・・1:00窶鍋ｿ・:00<br>
+            螳壻ｼ第律・壽律繝ｻ譛医・驥・          </p>
+        </div>
+        <nav class="footer-nav">
+          <div class="footer-links">
+            <a href="index.html">繝帙・繝</a>
+            <a href="service.html">繧ｵ繝ｼ繝薙せ繝ｻ譁咎≡</a>
+            <a href="about.html">蠎苓・諠・ｱ</a>
+          </div>
+          <div class="footer-links">
+            <a href="faq.html">繧医￥縺ゅｋ雉ｪ蝠・/a>
+            <a href="contact.html">縺雁撫縺・粋繧上○</a>
+            <a href="https://airrsv.net/order-maid-seitai/calendar" target="_blank">縺比ｺ育ｴ・/a>
+          </div>
+        </nav>
+      </div>
+      <p class="footer-copy">ﾂｩ 髦ｿ驛ｨ謖・悸謨ｴ菴馴劼 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- MOBILE FIXED CTA -->
+  <a href="https://airrsv.net/order-maid-seitai/calendar" class="mobile-fixed-btn" target="_blank">
+    莉翫☆縺蝉ｺ育ｴ・☆繧・  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile Menu Toggle
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+    // Close on link click
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        nav.classList.remove('active');
+      });
+    });
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Intersection Observer for fade animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
+
+
+
