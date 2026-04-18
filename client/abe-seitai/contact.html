@@ -1,15 +1,89 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>お問い合わせ | 阿部指圧整体院 久山町</title>
+  <title>お問い合わせ｜阿部指圧整体院</title>
   <meta name="description" content="阿部指圧整体院へのお問い合わせ。WEB予約・LINE相談・お電話にて承ります。出張整体のご依頼もお気軽にどうぞ。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .contact-card {
+      background: var(--c-white);
+      border: 1px solid rgba(0,0,0,0.04);
+      border-radius: 16px;
+      padding: 48px 36px;
+      text-align: center;
+      transition: all 0.35s var(--ease-out);
+    }
+    .contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.06);
+      border-color: var(--c-gold);
+    }
+    .contact-card .card-emoji {
+      font-size: 2.6rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .contact-card h3 {
+      font-family: var(--f-serif);
+      font-size: 1.2rem;
+      color: var(--c-navy);
+      margin-bottom: 12px;
+    }
+    .contact-card p {
+      font-size: 0.88rem;
+      color: var(--c-gray);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .contact-card .btn {
+      width: 100%;
+      max-width: 260px;
+    }
+    .contact-note {
+      max-width: 640px;
+      margin: 56px auto 0;
+      background: var(--c-white);
+      border: 1px solid rgba(0,0,0,0.04);
+      border-radius: 12px;
+      padding: 36px;
+    }
+    .contact-note h3 {
+      font-family: var(--f-serif);
+      font-size: 1.05rem;
+      color: var(--c-navy);
+      margin-bottom: 16px;
+    }
+    .contact-note ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .contact-note li {
+      font-size: 0.88rem;
+      color: var(--c-gray-dark);
+      padding-left: 16px;
+      position: relative;
+    }
+    .contact-note li::before {
+      content: '・';
+      position: absolute;
+      left: 0;
+      color: var(--c-gold);
+    }
+  </style>
 </head>
 <body>
 
@@ -22,7 +96,7 @@
           <a href="service.html">サービス・料金</a>
           <a href="about.html">店舗情報</a>
           <a href="faq.html">よくある質問</a>
-          <a href="contact.html" class="active">お問い合わせ</a>
+          <a href="contact.html">お問い合わせ</a>
         </div>
         <div class="header-cta"><a href="https://airrsv.net/order-maid-seitai/calendar" target="_blank" class="btn btn-gold">ご予約</a></div>
       </nav>
@@ -35,55 +109,51 @@
     <div class="container">
       <p class="section-label center">Contact</p>
       <h1 class="section-title">お問い合わせ</h1>
-      <p class="breadcrumb"><a href="index.html">ホーム</a> / お問い合わせ</p>
+      <p class="breadcrumb"><a href="index.html">ホーム</a> ＞ お問い合わせ</p>
     </div>
   </div>
 
+  <!-- CONTACT METHODS -->
   <section class="section">
-    <div class="container" style="max-width:800px;">
-      
-      <div class="contact-intro text-center fade-up">
-        <p style="margin-bottom:32px;line-height:2">
-          阿部指圧整体院へのご予約・ご相談は、<br>便利なWEB予約またはLINEをご利用ください。
-        </p>
+    <div class="container">
+      <div class="section-header text-center">
+        <p class="section-label center">Get in Touch</p>
+        <h2 class="section-title">ご連絡方法</h2>
+        <p class="section-desc">ご予約・ご質問・出張整体のご依頼など、お気軽にお問い合わせください。</p>
       </div>
 
-      <div class="contact-methods grid-2">
-        <!-- WEB Reservation -->
-        <div class="method-card fade-up">
-          <div class="method-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          </div>
-          <h3>24時間WEB予約</h3>
-          <p>空き状況を確認しながら、24時間いつでもご予約いただけます。</p>
-          <a href="https://airrsv.net/order-maid-seitai/calendar" target="_blank" class="btn btn-primary" style="margin-top:24px;width:100%">WEB予約はこちら</a>
+      <div class="contact-cards">
+
+        <div class="contact-card fade-up">
+          <span class="card-emoji">📅</span>
+          <h3>WEB予約</h3>
+          <p>24時間受付可能。ご希望の日時・メニューを選んでそのまま予約完了。</p>
+          <a href="https://airrsv.net/order-maid-seitai/calendar" target="_blank" class="btn btn-gold">予約ページを開く</a>
         </div>
 
-        <!-- LINE Contact -->
-        <div class="method-card fade-up" style="transition-delay:0.1s">
-          <div class="method-icon" style="color:#06C755;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-          </div>
+        <div class="contact-card fade-up delay-1">
+          <span class="card-emoji">💬</span>
           <h3>LINE相談・予約</h3>
-          <p>「自分に合うメニューは？」「出張可能ですか？」などお気軽にご相談ください。</p>
-          <a href="https://lin.ee/b8cNj88" target="_blank" class="btn btn-line" style="margin-top:24px;width:100%">LINEで友だち追加</a>
+          <p>トークでお気軽に相談OK。出張の打ち合わせや変更連絡にも便利です。</p>
+          <a href="https://lin.ee/b8cNj88" target="_blank" class="btn btn-line">LINEで友だち追加</a>
         </div>
+
+        <div class="contact-card fade-up delay-2">
+          <span class="card-emoji">📞</span>
+          <h3>お電話</h3>
+          <p>出張施術中は応答できない場合がございます。折り返しご連絡いたします。</p>
+          <a href="tel:070-1263-7637" class="btn btn-outline">070-1263-7637</a>
+        </div>
+
       </div>
 
-      <!-- Phone -->
-      <div class="method-card text-center fade-up" style="margin-top:32px;">
-        <h3 style="margin-bottom:12px">お電話でのご予約</h3>
-        <p style="color:var(--c-gray);margin-bottom:16px;">※出張中・施術中は電話に出られない場合がございます。</p>
-        <a href="tel:070-1263-7637" style="font-size:2rem;font-weight:700;color:var(--c-gold);text-decoration:none;">070-1263-7637</a>
-      </div>
-
-      <!-- Notes -->
-      <div class="contact-notes fade-up" style="margin-top:48px;padding:24px;background:#f5f5f5;border-radius:8px;">
-        <h4 style="font-size:1.1rem;margin-bottom:16px;color:var(--c-primary)">ご予約に関するお願い</h4>
-        <ul style="list-style:disc;padding-left:20px;font-size:0.9rem;line-height:1.8;color:var(--c-gray-dark)">
+      <div class="contact-note fade-up">
+        <h3>ご予約・お問い合わせ前にご確認ください</h3>
+        <ul>
+          <li>当院は<strong>完全予約制</strong>です。予約なしでのご来院はご遠慮ください。</li>
+          <li>出張整体は11:00〜翌2:00まで対応しております。</li>
           <li>キャンセル・変更は前日までにLINEまたはお電話でご連絡ください。</li>
-          <li>出張整体をご希望の場合は、駐車場の有無を事前にお知らせください。（コインパーキング利用の場合は実費をご負担いただきます）</li>
-          <li>妊娠中の方、重度の疾患をお持ちの方は、事前にご相談ください。</li>
+          <li>定休日：日・月・金</li>
         </ul>
       </div>
 
@@ -96,22 +166,24 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <span class="logo serif">阿部指圧整体院</span>
-          <p class="address">福岡県糟屋郡久山町大字山田2689-1<br>TEL: 070-1263-7637</p>
+          <p class="address">福岡県粕屋郡久山町大字山田2689-1<br>TEL: 070-1263-7637</p>
         </div>
         <nav class="footer-nav">
           <div class="footer-links"><a href="index.html">ホーム</a><a href="service.html">サービス・料金</a><a href="about.html">店舗情報</a></div>
-          <div class="footer-links"><a href="faq.html">よくある質問</a><a href="contact.html" class="active">お問い合わせ</a><a href="https://airrsv.net/order-maid-seitai/calendar" target="_blank">ご予約</a></div>
+          <div class="footer-links"><a href="faq.html">よくある質問</a><a href="contact.html">お問い合わせ</a><a href="https://airrsv.net/order-maid-seitai/calendar" target="_blank">ご予約</a></div>
         </nav>
       </div>
       <p class="footer-copy">© 阿部指圧整体院 All Rights Reserved.</p>
     </div>
   </footer>
 
+  <a href="https://airrsv.net/order-maid-seitai/calendar" class="mobile-fixed-btn" target="_blank">今すぐ予約する</a>
+
   <script>
     const toggle=document.getElementById('menuToggle'),nav=document.getElementById('nav');
     toggle.addEventListener('click',()=>{toggle.classList.toggle('active');nav.classList.toggle('active')});
     nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.classList.remove('active');nav.classList.remove('active')}));
-    document.getElementById('header');window.addEventListener('scroll',()=>{document.getElementById('header').classList.toggle('scrolled',window.scrollY>40)});
+    window.addEventListener('scroll',()=>{document.getElementById('header').classList.toggle('scrolled',window.scrollY>40)});
     const observer=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target)}})},{threshold:.15});
     document.querySelectorAll('.fade-up,.fade-left,.fade-right').forEach(el=>observer.observe(el));
   </script>

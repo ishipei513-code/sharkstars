@@ -1,15 +1,95 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>よくある質問 | 阿部指圧整体院 久山町</title>
-  <meta name="description" content="阿部指圧整体院へ寄せられるよくある質問。「強押しは痛くないですか？」「出張整体可能エリアは？」など、皆様の疑問にお答えします。">
+  <title>よくある質問｜阿部指圧整体院</title>
+  <meta name="description" content="阿部指圧整体院のよくある質問。施術の流れ、持ち物、出張整体の準備、強さの調整、予約方法など、初めての方の不安を解消します。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .faq-list { max-width: 780px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid var(--c-warm-gray);
+      padding: 0;
+    }
+    .faq-q {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 24px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--c-navy);
+      text-align: left;
+      cursor: pointer;
+      font-family: var(--f-body);
+      line-height: 1.6;
+    }
+    .faq-q::before {
+      content: 'Q.';
+      flex-shrink: 0;
+      font-family: var(--f-serif);
+      font-size: 1.1rem;
+      color: var(--c-gold);
+      font-weight: 600;
+    }
+    .faq-q .faq-icon {
+      flex-shrink: 0;
+      width: 24px; height: 24px;
+      position: relative;
+      transition: transform 0.3s;
+    }
+    .faq-q .faq-icon::before,
+    .faq-q .faq-icon::after {
+      content: '';
+      position: absolute;
+      background: var(--c-gray);
+      border-radius: 2px;
+    }
+    .faq-q .faq-icon::before {
+      top: 50%; left: 4px;
+      width: 16px; height: 2px;
+      transform: translateY(-50%);
+    }
+    .faq-q .faq-icon::after {
+      top: 4px; left: 50%;
+      width: 2px; height: 16px;
+      transform: translateX(-50%);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .faq-item.open .faq-q .faq-icon::after {
+      transform: translateX(-50%) rotate(90deg);
+      opacity: 0;
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+    }
+    .faq-item.open .faq-a {
+      max-height: 400px;
+      padding-bottom: 24px;
+    }
+    .faq-a-inner {
+      padding-left: 32px;
+      font-size: 0.92rem;
+      color: var(--c-gray-dark);
+      line-height: 2;
+    }
+    .faq-a-inner::before {
+      content: 'A.';
+      font-family: var(--f-serif);
+      font-weight: 600;
+      color: var(--c-navy);
+      margin-right: 8px;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,7 +101,7 @@
         <div class="nav-links">
           <a href="service.html">サービス・料金</a>
           <a href="about.html">店舗情報</a>
-          <a href="faq.html" class="active">よくある質問</a>
+          <a href="faq.html">よくある質問</a>
           <a href="contact.html">お問い合わせ</a>
         </div>
         <div class="header-cta"><a href="https://airrsv.net/order-maid-seitai/calendar" target="_blank" class="btn btn-gold">ご予約</a></div>
@@ -35,83 +115,80 @@
     <div class="container">
       <p class="section-label center">FAQ</p>
       <h1 class="section-title">よくある質問</h1>
-      <p class="breadcrumb"><a href="index.html">ホーム</a> / よくある質問</p>
+      <p class="breadcrumb"><a href="index.html">ホーム</a> ＞ よくある質問</p>
     </div>
   </div>
 
-  <!-- FAQ LIST -->
+  <!-- FAQ -->
   <section class="section">
-    <div class="container" style="max-width:800px">
-      
-      <div class="faq-list fade-up">
-        
-        <!-- QA 1 -->
-        <details class="faq-item" open>
-          <summary class="faq-q">
-            <span>「強押し」は痛くないですか？揉み返しが心配です。</span>
-            <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-          </summary>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              当院の「持続圧」による強押しは、ただ力任せに押すのではなく、筋肉の走行や体の状態に合わせて垂直に圧を加えるため、「痛気持ちいい」感覚であり揉み返しが少ないのが特徴です。もちろん、痛みが強すぎる場合はすぐに調整いたしますので遠慮なくお伝えください。
-            </div>
-          </div>
-        </details>
+    <div class="container">
+      <div class="faq-list">
 
-        <!-- QA 2 -->
-        <details class="faq-item">
-          <summary class="faq-q">
-            <span>出張整体の対応エリアを教えてください。</span>
-            <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-          </summary>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              福岡市・宗像市・古賀市・福津市・宮若市・飯塚市・太宰府市・大野城市・春日市・宇美町・篠栗町・志免町・須恵町・新宮町・久山町・粕屋町に対応しております。出張費として別途1,000円を頂戴しております。（遠方の場合はご相談ください）
-            </div>
-          </div>
-        </details>
+        <div class="faq-item fade-up">
+          <button class="faq-q">
+            <span>施術の流れを教えてください</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">まずカウンセリングでお悩みや体調をお伺いし、お身体の状態を確認します。その上で最適な施術プランをご提案し、施術に入ります。施術後はセルフケアのアドバイスを行います。</div></div>
+        </div>
 
-        <!-- QA 3 -->
-        <details class="faq-item">
-          <summary class="faq-q">
-            <span>予約は必要ですか？</span>
-            <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-          </summary>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              当院は完全予約制です。出張施術で店舗不在の場合がございますので、必ず事前にWEB予約またはLINEにてご連絡ください。
-            </div>
-          </div>
-        </details>
+        <div class="faq-item fade-up">
+          <button class="faq-q">
+            <span>持ち物は必要ですか？</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">特に必要ありません。動きやすい服装でお越しください。出張の場合も、タオルや備品はすべてこちらで準備いたしますので、お客様にご用意いただくものはございません。</div></div>
+        </div>
 
-        <!-- QA 4 -->
-        <details class="faq-item">
-          <summary class="faq-q">
-            <span>着替えは必要ですか？</span>
-            <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-          </summary>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              動きやすい服装（ジャージやスウェットなど）でご来店、もしくはお待ちください。（店舗にはお着替えをご用意しておりません）
-            </div>
-          </div>
-        </details>
+        <div class="faq-item fade-up">
+          <button class="faq-q">
+            <span>強さの調整はできますか？</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">もちろんです。当院の特徴は「強押し・持続圧」ですが、お客様の好みや体調に合わせて強さを細かく調整します。遠慮なく「もっと強く」「少し弱めに」とお伝えください。</div></div>
+        </div>
 
-        <!-- QA 5 -->
-        <details class="faq-item">
-          <summary class="faq-q">
+        <div class="faq-item fade-up">
+          <button class="faq-q">
+            <span>出張整体の場合、何を準備すればいいですか？</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">施術ベッド（約2m×0.7m）を設置できるスペースがあれば大丈夫です。ベッド、タオル、備品はすべてこちらで持参しますので、お客様に準備していただくものはありません。</div></div>
+        </div>
+
+        <div class="faq-item fade-up">
+          <button class="faq-q">
+            <span>予約なしでも受けられますか？</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">当院は完全予約制です。出張施術で店舗不在の場合がございますので、必ず事前にWEB予約またはLINEにてご連絡ください。</div></div>
+        </div>
+
+        <div class="faq-item fade-up">
+          <button class="faq-q">
+            <span>深夜でも出張してもらえますか？</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">はい。出張整体は翌2:00まで対応しております。夜勤明けの方や、日中お忙しい方もご利用いただけます。</div></div>
+        </div>
+
+        <div class="faq-item fade-up">
+          <button class="faq-q">
             <span>施術後にLINEで相談してもいいですか？</span>
-            <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-          </summary>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              もちろんです。施術後の経過やセルフケアに関する質問など、いつでもLINEでお気軽にご相談ください。体の専門家として丁寧にお答えします。
-            </div>
-          </div>
-        </details>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">もちろんです。施術後の経過や、セルフケアに関する質問など、いつでもLINEでお気軽にご相談ください。体の専門家として丁寧にお答えします。</div></div>
+        </div>
+
+        <div class="faq-item fade-up">
+          <button class="faq-q">
+            <span>駐車場はありますか？</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">はい、駐車場を完備しております。トリアス久山・コストコから車で約5分の場所にございます。</div></div>
+        </div>
 
       </div>
-
     </div>
   </section>
 
@@ -119,12 +196,12 @@
   <section class="booking-section">
     <div class="container">
       <div class="booking-inner">
-        <h2 class="section-title">ご不明な点がありましたら</h2>
+        <h2 class="section-title">まだ疑問がありますか？</h2>
         <p class="store-desc" style="margin-top:16px;">お気軽にLINEまたはお電話でお問い合わせください。</p>
         <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary">お問い合わせ</a>
           <a href="https://lin.ee/b8cNj88" target="_blank" class="btn btn-line">LINEで質問する</a>
         </div>
-        <div class="tel-number"><a href="tel:070-1263-7637">TEL: 070-1263-7637</a></div>
       </div>
     </div>
   </section>
@@ -135,22 +212,37 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <span class="logo serif">阿部指圧整体院</span>
-          <p class="address">福岡県糟屋郡久山町大字山田2689-1<br>TEL: 070-1263-7637</p>
+          <p class="address">福岡県粕屋郡久山町大字山田2689-1<br>TEL: 070-1263-7637</p>
         </div>
         <nav class="footer-nav">
           <div class="footer-links"><a href="index.html">ホーム</a><a href="service.html">サービス・料金</a><a href="about.html">店舗情報</a></div>
-          <div class="footer-links"><a href="faq.html" class="active">よくある質問</a><a href="contact.html">お問い合わせ</a><a href="https://airrsv.net/order-maid-seitai/calendar" target="_blank">ご予約</a></div>
+          <div class="footer-links"><a href="faq.html">よくある質問</a><a href="contact.html">お問い合わせ</a><a href="https://airrsv.net/order-maid-seitai/calendar" target="_blank">ご予約</a></div>
         </nav>
       </div>
       <p class="footer-copy">© 阿部指圧整体院 All Rights Reserved.</p>
     </div>
   </footer>
 
+  <a href="https://airrsv.net/order-maid-seitai/calendar" class="mobile-fixed-btn" target="_blank">今すぐ予約する</a>
+
   <script>
+    // Menu
     const toggle=document.getElementById('menuToggle'),nav=document.getElementById('nav');
     toggle.addEventListener('click',()=>{toggle.classList.toggle('active');nav.classList.toggle('active')});
     nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.classList.remove('active');nav.classList.remove('active')}));
-    document.getElementById('header');window.addEventListener('scroll',()=>{document.getElementById('header').classList.toggle('scrolled',window.scrollY>40)});
+    window.addEventListener('scroll',()=>{document.getElementById('header').classList.toggle('scrolled',window.scrollY>40)});
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+
+    // Animations
     const observer=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target)}})},{threshold:.15});
     document.querySelectorAll('.fade-up,.fade-left,.fade-right').forEach(el=>observer.observe(el));
   </script>
