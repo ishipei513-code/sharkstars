@@ -1,0 +1,22 @@
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+
+# 301 Redirects from old WordPress to static HTML
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 初めての方へ -> faq.html
+  RewriteRule ^初めての方へ/?$ /faq.html [R=301,L]
+  RewriteRule ^%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E6%96%B9%E3%81%B8/?$ /faq.html [R=301,L]
+
+  # 料金表 -> service.html
+  RewriteRule ^sample-page/?$ /service.html [R=301,L]
+
+  # アクセス -> about.html
+  RewriteRule ^アクセス/?$ /about.html [R=301,L]
+  RewriteRule ^%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9/?$ /about.html [R=301,L]
+
+  # ブログ記事(hello-world) -> トップページ
+  RewriteRule ^2026/01/29/hello-world/?$ / [R=301,L]
+</IfModule>

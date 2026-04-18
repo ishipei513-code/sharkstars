@@ -498,7 +498,8 @@ html { overflow-x: hidden; }
 
 @media (max-width: 900px) {
   .feature-box, .feature-box.reverse { flex-direction: column; }
-  .feature-img { flex: none; height: 260px; }
+  .feature-img { flex: none; width: 100%; height: auto; }
+  .feature-img img { width: 100%; height: auto; }
   .feature-text { padding: 36px 28px; }
 }
 
