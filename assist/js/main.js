@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- FAQ Accordion ---
   initFaqAccordion();
 
+  // --- Merit Accordion ---
+  initMeritAccordion();
+
   // --- Scroll Animations (Intersection Observer) ---
   initScrollAnimations();
 
@@ -196,6 +199,28 @@ function initFaqAccordion() {
 
       // Toggle current item
       item.classList.toggle('active', !isActive);
+    });
+  });
+}
+
+/* ============================================
+   Merit Accordion
+   ============================================ */
+function initMeritAccordion() {
+  const toggles = document.querySelectorAll('.merit-toggle');
+  if (!toggles.length) return;
+
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const card = toggle.closest('.merit-card');
+      const isActive = card.classList.contains('active');
+
+      // Toggle current card
+      card.classList.toggle('active', !isActive);
+
+      // Update aria
+      toggle.setAttribute('aria-expanded', !isActive);
+      toggle.setAttribute('aria-label', isActive ? '詳細を開く' : '詳細を閉じる');
     });
   });
 }
