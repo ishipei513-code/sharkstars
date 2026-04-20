@@ -1,95 +1,90 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COFFEE ROASTERS | 自家焙煎のスペシャリティコーヒー</title>
   <meta name="description" content="喧騒から離れた路地裏にある、小さな自家焙煎カフェ。世界中から厳選したスペシャリティコーヒーと、手作りの焼き菓子で、特別なひとときを。">
-  
-  <!-- Typography -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="h-container">
-      <div class="logo">
-        <a href="#">COFFEE ROASTERS</a>
-      </div>
-      <nav class="nav">
-        <ul class="nav-links">
-          <li><a href="#concept">Story</a></li>
-          <li><a href="#commitment">Commitment</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#access">Access</a></li>
-        </ul>
-        <div class="header-sns">
-          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+
+  <!-- ===== Header ===== -->
+  <header class="hdr" id="header">
+    <div class="hdr-inner">
+      <div class="logo"><a href="#">COFFEE ROASTERS</a></div>
+      <nav class="nav" id="nav">
+        <div class="nav-links">
+          <a href="#concept">Story</a>
+          <a href="#commitment">Commitment</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#access">Access</a>
+        </div>
+        <div class="nav-sns">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram" style="width:18px;height:18px;"></i></a>
         </div>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+      <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-slider">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+  <!-- ===== Hero ===== -->
+  <section class="hero hero--split">
+    <div class="hero-text">
+      <span class="hero-tagline reveal">SPECIALTY COFFEE & ROASTERY</span>
+      <h1 class="hero-title reveal d1">
+        A Cup of<br>Comfort.
+      </h1>
+      <p class="hero-desc reveal d2">一杯の珈琲が、<br>日常を少しだけ特別にする。</p>
+      <div class="hero-meta reveal d3">
+        <span><i data-lucide="clock" style="width:14px;height:14px;"></i> 9:00 - 19:00</span>
+        <span><i data-lucide="map-pin" style="width:14px;height:14px;"></i> 恵比寿南</span>
+      </div>
     </div>
-    <div class="hero-mask"></div>
-    <div class="hero-content fade-target">
-      <div class="hero-logo-large">
-        <span class="en-serif">A Cup of Comfort.</span>
-      </div>
-      <h1 class="hero-title">一杯の珈琲が、<br>日常を少しだけ特別にする。</h1>
-      <div class="scroll-ind">
-        <span>SCROLL</span>
-        <div class="line"></div>
-      </div>
+    <div class="hero-img">
+      <img src="assist/images/hero.png" alt="自家焙煎カフェの店内">
     </div>
   </section>
 
-  <!-- Concept -->
-  <section class="section concept" id="concept">
-    <div class="l-container">
+  <!-- ===== Concept ===== -->
+  <section class="sect" id="concept">
+    <div class="wrap">
       <div class="concept-flex">
-        <div class="concept-text fade-target">
-          <span class="en-label">O U R &nbsp; S T O R Y</span>
-          <h2 class="sect-heading">豆の声を聞き、<br>最高の一杯を抽出する。</h2>
-          <div class="desc">
-            <p>路地裏にひっそりと佇む焙煎所。<br>ドアを開けると、深く甘い珈琲の香りがあなたを包み込みます。</p>
-            <p>私たちが提供するのは、単なる「飲み物」としてのコーヒーではありません。<br>生産者が丹精込めて育てた豆の個性を最大限に引き出し、カップに注ぐまでの「物語」です。</p>
-            <p>厳選されたシングルオリジンから、季節ごとに配合を変えるオリジナルブレンドまで。ホッと一息つきたい時、自分と向き合いたい時。いつでもここでお待ちしています。</p>
-          </div>
+        <div class="concept-text reveal">
+          <span class="s-label">O U R &nbsp; S T O R Y</span>
+          <h2 class="s-title" style="margin-bottom:28px;">豆の声を聞き、<br>最高の一杯を抽出する。</h2>
+          <p>路地裏にひっそりと佇む焙煎所。ドアを開けると、深く甘い珈琲の香りがあなたを包み込みます。</p>
+          <p>私たちが提供するのは、単なる「飲み物」としてのコーヒーではありません。生産者が丹精込めて育てた豆の個性を最大限に引き出し、カップに注ぐまでの「物語」です。</p>
+          <p>厳選されたシングルオリジンから、季節ごとに配合を変えるオリジナルブレンドまで。ホッと一息つきたい時、自分と向き合いたい時。いつでもここでお待ちしています。</p>
         </div>
-        <div class="concept-img fade-target offset-delay">
-          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlibhttps://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ハンドドリップコーヒー">
+        <div class="concept-img reveal d1">
+          <img src="assist/images/drip.png" alt="ハンドドリップコーヒー">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Commitment (Features) -->
-  <section class="section commitment bg-gray" id="commitment">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <span class="en-label">C O M M I T M E N T</span>
-        <h2 class="sect-heading">3つのこだわり</h2>
+  <!-- ===== Commitment ===== -->
+  <section class="sect" id="commitment" style="background:var(--c-warm);">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:48px;">
+        <span class="s-label">C O M M I T M E N T</span>
+        <h2 class="s-title">3つのこだわり</h2>
       </div>
-      
+
       <div class="commit-grid">
-        <div class="commit-card fade-target">
+        <div class="commit-card reveal">
           <div class="commit-img">
-            <img src="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="自家焙煎">
+            <img src="assist/images/beans.png" alt="自家焙煎の豆">
           </div>
           <div class="commit-body">
             <div class="c-num">01</div>
@@ -97,10 +92,10 @@
             <p>生豆の状態から、気候や湿度に合わせてベストなプロファイルで焙煎を行っています。常に新鮮で香り高い状態のコーヒーだけを提供します。</p>
           </div>
         </div>
-        
-        <div class="commit-card fade-target delay-1">
+
+        <div class="commit-card reveal d1">
           <div class="commit-img">
-            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="スペシャリティコーヒー">
+            <img src="assist/images/drip.png" alt="スペシャリティコーヒー">
           </div>
           <div class="commit-body">
             <div class="c-num">02</div>
@@ -108,34 +103,32 @@
             <p>生産者の顔が見える、トレーサビリティの確かなスペシャリティコーヒーのみを買い付け。産地ごとの個性溢れるフルーティーな酸味や深いコクをお楽しみください。</p>
           </div>
         </div>
-        
-        <div class="commit-card fade-target delay-2">
+
+        <div class="commit-card reveal d2">
           <div class="commit-img">
-            <img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="手作りの焼き菓子">
+            <img src="assist/images/hero.png" alt="手作りの焼き菓子">
           </div>
           <div class="commit-body">
             <div class="c-num">03</div>
             <h3>珈琲を引き立てる「自家製ベイク」</h3>
-            <p>パティシエが店内で毎日焼き上げる、スコーンやパウンドケーキ。上質な発酵バターと無添加の素材を使用し、コーヒーとのマリアージュ（相性）を計算し尽くしています。</p>
+            <p>パティシエが店内で毎日焼き上げる、スコーンやパウンドケーキ。上質な発酵バターと無添加の素材を使用し、コーヒーとのマリアージュを計算し尽くしています。</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Target Menu -->
-  <section class="section menu-highlight" id="menu">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <span class="en-label">M E N U</span>
-        <h2 class="sect-heading">定番メニュー</h2>
+  <!-- ===== Menu ===== -->
+  <section class="sect" id="menu">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:48px;">
+        <span class="s-label">M E N U</span>
+        <h2 class="s-title">定番メニュー</h2>
       </div>
 
-      <div class="menu-wrap fade-target">
-        
-        <!-- Coffee Menu -->
+      <div class="menu-wrap reveal">
         <div class="menu-block">
-          <h3 class="m-cat-title"><i data-lucide="coffee"></i> Coffee &amp; Espresso</h3>
+          <h3 class="m-cat-title"><i data-lucide="coffee"></i> Coffee & Espresso</h3>
           <ul class="m-list">
             <li>
               <div class="m-info">
@@ -161,12 +154,19 @@
               <div class="m-dots"></div>
               <div class="m-price">¥600</div>
             </li>
+            <li>
+              <div class="m-info">
+                <h4>エスプレッソ (Single / Double)</h4>
+                <p>深煎り豆を使った、凝縮されたアロマとコク。</p>
+              </div>
+              <div class="m-dots"></div>
+              <div class="m-price">¥450〜</div>
+            </li>
           </ul>
         </div>
 
-        <!-- Food Menu -->
         <div class="menu-block">
-          <h3 class="m-cat-title"><i data-lucide="cake"></i> Bake &amp; Sandwiches</h3>
+          <h3 class="m-cat-title"><i data-lucide="cake-slice"></i> Bake & Sandwiches</h3>
           <ul class="m-list">
             <li>
               <div class="m-info">
@@ -194,156 +194,130 @@
             </li>
           </ul>
         </div>
-        
       </div>
-      
-      <div class="center" style="margin-top: 40px;">
-        <p style="color:#78716C; font-size:0.9rem;">※テイクアウトも全品可能です。タンブラーご持参で50円引きとなります。</p>
+
+      <p class="menu-note reveal">※テイクアウトも全品可能です。タンブラーご持参で50円引き。</p>
+    </div>
+  </section>
+
+  <!-- ===== Gallery ===== -->
+  <section class="gallery-sect" id="gallery">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:48px;">
+        <span class="s-label" style="color:rgba(250,246,240,0.5);">G A L L E R Y</span>
+        <h2 class="s-title" style="color:var(--c-cream);">落ち着いた空間と、こだわりの一杯</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="g-item reveal"><img src="assist/images/hero.png" alt="カフェ店内"></div>
+        <div class="g-item reveal d1"><img src="assist/images/drip.png" alt="ラテアート"></div>
+        <div class="g-item reveal d2"><img src="assist/images/beans.png" alt="コーヒー豆"></div>
+        <div class="g-item reveal"><img src="assist/images/hero.png" alt="焙煎機"></div>
+        <div class="g-item reveal d1"><img src="assist/images/drip.png" alt="ソファー席"></div>
+        <div class="g-item reveal d2"><img src="assist/images/beans.png" alt="焼き菓子"></div>
       </div>
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section class="section gallery bg-dark" id="gallery">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <span class="en-label" style="color:#D6D3D1;">G A L L E R Y</span>
-        <h2 class="sect-heading" style="color:#fff;">落ち着いた空間と、こだわりの一杯</h2>
+  <!-- ===== FAQ ===== -->
+  <section class="sect" id="faq">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:48px;">
+        <span class="s-label">Q & A</span>
+        <h2 class="s-title">よくあるご質問</h2>
       </div>
-      
-      <div class="masonry-wrap">
-        <div class="m-item fade-target"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="カフェ店内 1"></div>
-        <div class="m-item fade-target delay-1"><img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ラテアート"></div>
-        <div class="m-item fade-target delay-2"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="コーヒー豆"></div>
-        <div class="m-item fade-target"><img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="焙煎機"></div>
-        <div class="m-item fade-target delay-1"><img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="店内ソファー席"></div>
-        <div class="m-item fade-target delay-2"><img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="焼き菓子"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section faq" id="faq">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <span class="en-label">Q &amp; A</span>
-        <h2 class="sect-heading">よくあるご質問</h2>
-      </div>
-      <div class="faq-accordion">
-        <details class="faq-item fade-target" open>
+      <div class="faq-list">
+        <details class="faq-item reveal" open>
           <summary>駐車場はありますか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
-          <div class="faq-ans"><p>店舗横に3台分の専用駐車場がございます。満車の場合は、恐れ入りますが近隣のコインパーキングをご利用ください。</p></div>
+          <div class="faq-ans"><p>店舗横に3台分の専用駐車場がございます。満車の場合は近隣のコインパーキングをご利用ください。</p></div>
         </details>
-        <details class="faq-item fade-target">
+        <details class="faq-item reveal">
           <summary>Wi-Fiや電源は利用できますか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
-          <div class="faq-ans"><p>はい、無料の高速Wi-Fiと、壁際のカウンター席（4席）に電源コンセントをご用意しております。PCでの作業などにご自由にお使いください。</p></div>
+          <div class="faq-ans"><p>はい、無料の高速Wi-Fiと、壁際のカウンター席（4席）に電源コンセントをご用意しております。</p></div>
         </details>
-        <details class="faq-item fade-target">
+        <details class="faq-item reveal">
           <summary>コーヒー豆だけの購入は可能ですか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
-          <div class="faq-ans"><p>大歓迎です。常時5〜7種類の自家焙煎豆（100g〜）を販売しております。お好みの味をお伝えいただければ、スタッフが最適な豆をお選びし、ご希望に応じて粉にお挽きすることも可能です。</p></div>
+          <div class="faq-ans"><p>大歓迎です。常時5〜7種類の自家焙煎豆（100g〜）を販売しております。お好みの味をお伝えいただければ、最適な豆をお選びします。</p></div>
         </details>
-        <details class="faq-item fade-target">
+        <details class="faq-item reveal">
           <summary>ペットの同伴は可能ですか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
-          <div class="faq-ans"><p>テラス席（2テーブル）のみ、リードを繋いだ状態でのペット同伴が可能です。店内へのご案内はご遠慮いただいておりますので、何卒ご了承ください。</p></div>
+          <div class="faq-ans"><p>テラス席（2テーブル）のみ、リードを繋いだ状態でのペット同伴が可能です。</p></div>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- Access & CTA -->
-  <section class="section access bg-gray" id="access">
-    <div class="l-container">
-      <div class="acc-wrap fade-target">
+  <!-- ===== Access ===== -->
+  <section class="sect" id="access" style="background:var(--c-warm);">
+    <div class="wrap">
+      <div class="acc-wrap reveal">
         <div class="acc-info">
-          <span class="en-label">A C C E S S</span>
-          <h2 class="sect-heading">店舗情報</h2>
+          <span class="s-label">A C C E S S</span>
+          <h2 class="s-title" style="margin-bottom:24px;">店舗情報</h2>
           <div class="info-list">
-            <dl>
-              <dt>店舗名</dt>
-              <dd>COFFEE ROASTERS（コーヒーロースターズ）</dd>
-            </dl>
-            <dl>
-              <dt>所在地</dt>
-              <dd>〒150-0000<br>東京都渋谷区恵比寿南 X-X-X<br>（恵比寿駅 ガーデンプレイス方面出口より徒歩5分）</dd>
-            </dl>
-            <dl>
-              <dt>営業時間</dt>
-              <dd>火曜〜土曜 : 9:00 - 19:00<br>日曜・祝日 : 10:00 - 18:00</dd>
-            </dl>
-            <dl>
-              <dt>定休日</dt>
-              <dd>月曜日（祝日の場合は営業、翌火曜日休み）</dd>
-            </dl>
-            <dl>
-              <dt>お問合せ</dt>
-              <dd>03-XXXX-XXXX</dd>
-            </dl>
+            <dl><dt>店舗名</dt><dd>COFFEE ROASTERS（コーヒーロースターズ）</dd></dl>
+            <dl><dt>所在地</dt><dd>〒150-0000<br>東京都渋谷区恵比寿南 X-X-X<br>（恵比寿駅 ガーデンプレイス方面出口より徒歩5分）</dd></dl>
+            <dl><dt>営業時間</dt><dd>火曜〜土曜 : 9:00 - 19:00<br>日曜・祝日 : 10:00 - 18:00</dd></dl>
+            <dl><dt>定休日</dt><dd>月曜日（祝日の場合は営業、翌火曜日休み）</dd></dl>
+            <dl><dt>お問合せ</dt><dd>03-XXXX-XXXX</dd></dl>
           </div>
           <div class="acc-actions">
-            <a href="#" class="btn btn-primary"><i data-lucide="instagram"></i> 公式Instagramはこちら</a>
+            <a href="#" class="btn-insta"><i data-lucide="instagram"></i> 公式Instagramはこちら</a>
           </div>
         </div>
         <div class="acc-map">
-          <div class="map-ph">
-            <span><i data-lucide="map"></i> Google Mapが開きます</span>
-          </div>
+          <i data-lucide="map-pin"></i> Google Mapが開きます
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="l-container">
-      <div class="ft-logo">
-        <a href="#">COFFEE ROASTERS</a>
-      </div>
-      <div class="ft-links">
+  <!-- ===== Footer ===== -->
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="ftr-logo">COFFEE ROASTERS</div>
+      <div class="ftr-links">
         <a href="#concept">Story</a>
         <a href="#menu">Menu</a>
         <a href="#gallery">Gallery</a>
         <a href="#access">Access</a>
       </div>
-      <div class="ft-bottom">
-        <p>&copy; 2025 Coffee Roasters. All Rights Reserved.</p>
-      </div>
+      <div class="ftr-copy">&copy; 2026 Coffee Roasters. All Rights Reserved.</div>
     </div>
   </footer>
 
   <script>
     lucide.createIcons();
-    
-    // Header Scroll
-    const header = document.getElementById('header');
+
+    // Header scroll
+    const hdr = document.getElementById('header');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) header.classList.add('scrolled');
-      else header.classList.remove('scrolled');
+      hdr.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // Mobile Menu
-    const menuToggle = document.getElementById('menuToggle');
-    const nav = document.querySelector('.nav');
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
+    // Mobile menu
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
       nav.classList.toggle('active');
     });
 
-    // Intersection Observer
+    // Scroll reveal
     const obs = new IntersectionObserver((entries, observer) => {
       entries.forEach(e => {
-        if(e.isIntersecting) {
+        if (e.isIntersecting) {
           e.target.classList.add('is-visible');
           observer.unobserve(e.target);
         }
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal, .reveal-left').forEach(el => obs.observe(el));
 
-    // Accordion Icon
-    document.querySelectorAll('details').forEach(detail => {
-      detail.addEventListener('toggle', () => {
-        const icon = detail.querySelector('.faq-icon');
-        icon.style.transform = detail.open ? 'rotate(180deg)' : 'rotate(0deg)';
+    // FAQ icon
+    document.querySelectorAll('details').forEach(d => {
+      d.addEventListener('toggle', () => {
+        const icon = d.querySelector('.faq-icon');
+        if (icon) icon.style.transform = d.open ? 'rotate(180deg)' : 'rotate(0deg)';
       });
     });
   </script>

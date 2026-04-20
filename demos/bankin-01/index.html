@@ -1,302 +1,501 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SPEED GARAGE | キズ・ヘコミの板金塗装・車検専門店</title>
-  <meta name="description" content="愛車のキズ・ヘコミ、最短即日で綺麗に直します。ディーラー見積もりの半額以下になることも！熟練の職人による完璧な修復技術と、安心のLINE無料見積もりならSPEED GARAGE（スピードガレージ）へ。">
-  
-  <!-- Typography -->
+  <meta name="description" content="愛車のキズ・ヘコミ、最短即日で綺麗に直します。ディーラー見積もりの半額以下になることも！熟練の職人による完璧な修復技術と、安心のLINE無料見積もりならSPEED GARAGEへ。">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-carbon text-white">
+<body>
 
-  <!-- Header -->
-  <header class="header bg-carbon-dark border-b-red" id="header">
-    <div class="h-container flex-between align-center">
-      <div class="logo">
-        <a href="#" class="flex gap-xs align-center">
-          <i data-lucide="wrench" class="text-red icon-lg"></i>
-          <span class="font-teko text-white font-bold text-2xl tracking-wide line-height-tight mt-xs">SPEED GARAGE</span>
-        </a>
-      </div>
-      <nav class="nav">
-        <ul class="nav-links font-zen font-bold text-sm tracking-widest text-silver">
-          <li><a href="#about" class="hover-red">当店の強み</a></li>
-          <li><a href="#menu" class="hover-red">料金表</a></li>
-          <li><a href="#works" class="hover-red">修復事例</a></li>
-          <li><a href="#flow" class="hover-red">ご依頼の流れ</a></li>
-        </ul>
-        <div class="h-btn sp-none ml-large flex gap-xs">
-          <div class="bg-dark border-line-dark px-small py-xs rounded-sm font-teko text-lg text-silver flex align-center gap-xs">
-            <i data-lucide="phone" class="icon-sm text-red"></i> 0120-000-000
-          </div>
-          <a href="#contact" class="btn btn-line font-zen font-bold text-sm slant-btn">
-             <span class="slant-text"><i data-lucide="message-circle" class="icon-sm"></i> LINEで無料見積</span>
-          </a>
+  <!-- ===== Header ===== -->
+  <header class="hdr" id="header">
+    <div class="hdr-inner">
+      <a href="#" class="logo">
+        <i data-lucide="wrench" class="logo-icon"></i>
+        <span class="logo-text">SPEED GARAGE</span>
+      </a>
+      <nav class="nav" id="nav">
+        <div class="nav-links">
+          <a href="#problems">当店の強み</a>
+          <a href="#pricing">料金表</a>
+          <a href="#works">修復事例</a>
+          <a href="#reviews">お客様の声</a>
+        </div>
+        <div class="hdr-cta">
+          <div class="hdr-tel"><i data-lucide="phone"></i> 0120-000-000</div>
+          <a href="#cta" class="btn-line-sm"><span><i data-lucide="message-circle" style="width:14px;height:14px;"></i> LINE見積</span></a>
         </div>
       </nav>
-      <button class="menu-toggle text-white" id="menuToggle" aria-label="メニューを開く">
-        <span class="bg-white"></span><span class="bg-white"></span><span class="bg-white"></span>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero relative h-screen min-h-80vh flex-center bg-pattern-carbon overflow-hidden">
-    <!-- Background Image -->
-    <div class="absolute inset-0 z-0 opacity-40">
-      <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="スポーツカー" class="w-full h-full object-cover">
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assist/images/hero.png" alt="板金修理工場">
     </div>
-    
-    <!-- Red Slant Overlay -->
-    <div class="slant-overlay bg-red-grad absolute z-1 top-0 bottom-0 left-0"></div>
+    <div class="hero-watermark">SPEED</div>
 
-    <div class="l-container relative z-10 w-full flex-between align-center flex-col-sp">
-      
-      <div class="hero-left text-left w-50 fade-target relative z-10">
-        <div class="font-teko text-white text-3xl font-bold tracking-widest mb-xs text-shadow animate-slide-right">AUTO BODY REPAIR</div>
-        <h1 class="font-zen font-black text-white text-4xl line-height-tight mb-medium tracking-tight animate-slide-right delay-1">
-          愛車のキズ・ヘコミ、<br>
-          <span class="text-red">最短即日</span>で魔法のように。
-        </h1>
-        <p class="font-zen text-silver text-md line-height-long font-bold mb-large animate-slide-right delay-2 text-shadow-dark border-l-red pl-small">
-          他店で「交換」と言われたパーツも、<br class="sp-none">
-          職人の板金技術で「修復」します。<br>
-          ディーラー見積もりの半額以下になることも。
-        </p>
-        <div class="flex gap-small flex-wrap animate-slide-right delay-3">
-          <a href="#contact" class="btn btn-red btn-xl font-bold font-zen slant-btn box-shadow-red hover-glitch">
-            <span class="slant-text text-xl">写真を送るだけ！LINE無料見積 <i data-lucide="chevron-right"></i></span>
-          </a>
-        </div>
+    <div class="hero-content">
+      <div class="reveal">
+        <div class="hero-label">AUTO BODY REPAIR</div>
       </div>
-
-      <!-- Trust Badge -->
-      <div class="hero-right relative w-40 flex-end animate-pop-in delay-4 sp-mt-large center-sp z-10">
-        <div class="trust-badge bg-carbon-dark border-red p-medium text-center box-shadow-xl relative overflow-hidden">
-          <div class="stripe-bg absolute inset-0 opacity-10"></div>
-          <div class="relative z-10">
-            <h3 class="font-teko text-red text-2xl font-bold mb-xs">No.1 QUALITY</h3>
-            <p class="font-zen text-white font-black text-lg mb-xs">年間施工実績 <span class="text-red text-2xl">2,000</span>台以上</p>
-            <div class="divider-dash mx-auto mb-xs"></div>
-            <ul class="text-left font-zen text-sm font-bold text-silver flex-column gap-xs mt-small">
-              <li class="flex align-center gap-xs"><i data-lucide="check-square" class="text-red icon-sm"></i> リサイクルパーツで格安修理</li>
-              <li class="flex align-center gap-xs"><i data-lucide="check-square" class="text-red icon-sm"></i> 代車無料貸出（全車ナビ付）</li>
-              <li class="flex align-center gap-xs"><i data-lucide="check-square" class="text-red icon-sm"></i> 保険修理も完全サポート</li>
-            </ul>
+      <h1 class="hero-title reveal d1">
+        愛車のキズ・ヘコミ、<br>
+        <span class="red">最短即日</span>で魔法のように。
+      </h1>
+      <p class="hero-desc reveal d2">
+        他店で「交換」と言われたパーツも、職人の板金技術で「修復」します。ディーラー見積もりの半額以下になることも。まずは写真1枚でLINE無料見積を。
+      </p>
+      <div class="hero-btns reveal d3">
+        <a href="#cta" class="btn-main">
+          <span><i data-lucide="message-circle" style="width:18px;height:18px;"></i> LINE無料見積</span>
+        </a>
+        <a href="#pricing" class="btn-ghost">
+          <span><i data-lucide="list" style="width:16px;height:16px;"></i> 料金を見る</span>
+        </a>
+      </div>
+      <div class="hero-badges reveal d4">
+        <div class="h-badge">
+          <i data-lucide="shield-check"></i>
+          <div>
+            <div class="val" data-count="2000">0</div>
+            <div class="lbl">年間施工台数</div>
+          </div>
+        </div>
+        <div class="h-badge">
+          <i data-lucide="star"></i>
+          <div>
+            <div class="val">4.9</div>
+            <div class="lbl">Google評価</div>
+          </div>
+        </div>
+        <div class="h-badge">
+          <i data-lucide="clock"></i>
+          <div>
+            <div class="val" data-count="20">0</div>
+            <div class="lbl">年の実績</div>
           </div>
         </div>
       </div>
-      
+    </div>
+    <div class="scroll-bar"><div class="inner"></div></div>
+  </section>
+
+  <!-- ===== Marquee ===== -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">板金塗装 <span class="dot"></span></span>
+      <span class="marquee-item">キズ修理 <span class="dot"></span></span>
+      <span class="marquee-item">ヘコミ修復 <span class="dot"></span></span>
+      <span class="marquee-item">車検整備 <span class="dot"></span></span>
+      <span class="marquee-item">保険対応 <span class="dot"></span></span>
+      <span class="marquee-item">代車無料 <span class="dot"></span></span>
+      <span class="marquee-item">LINE見積 <span class="dot"></span></span>
+      <span class="marquee-item">最短即日 <span class="dot"></span></span>
+      <span class="marquee-item">板金塗装 <span class="dot"></span></span>
+      <span class="marquee-item">キズ修理 <span class="dot"></span></span>
+      <span class="marquee-item">ヘコミ修復 <span class="dot"></span></span>
+      <span class="marquee-item">車検整備 <span class="dot"></span></span>
+      <span class="marquee-item">保険対応 <span class="dot"></span></span>
+      <span class="marquee-item">代車無料 <span class="dot"></span></span>
+      <span class="marquee-item">LINE見積 <span class="dot"></span></span>
+      <span class="marquee-item">最短即日 <span class="dot"></span></span>
+    </div>
+  </div>
+
+  <!-- ===== Stats Counter Bar ===== -->
+  <div class="stats-bar">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat-box reveal">
+          <div class="stat-num" data-count="2000">0<span>台+</span></div>
+          <div class="stat-label">年間施工実績</div>
+        </div>
+        <div class="stat-box reveal d1">
+          <div class="stat-num" data-count="50">0<span>%OFF</span></div>
+          <div class="stat-label">ディーラー比 最大</div>
+        </div>
+        <div class="stat-box reveal d2">
+          <div class="stat-num" data-count="98">0<span>%</span></div>
+          <div class="stat-label">お客様満足度</div>
+        </div>
+        <div class="stat-box reveal d3">
+          <div class="stat-num" data-count="20">0<span>年</span></div>
+          <div class="stat-label">地域密着の実績</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Problems / Solutions ===== -->
+  <section class="sect problems" id="problems">
+    <div class="wrap">
+      <div class="s-hdr center reveal">
+        <span class="s-label">PROBLEMS WE SOLVE</span>
+        <h2 class="s-title">こんなお悩み、<span style="color:var(--c-red);">即解決</span>します。</h2>
+        <div class="red-line center"></div>
+      </div>
+
+      <div class="problems-grid">
+        <div class="p-card reveal">
+          <div class="p-num">01</div>
+          <i data-lucide="frown" class="p-icon"></i>
+          <h3>ディーラーの見積もりが<br>高すぎて払えない</h3>
+          <p>ディーラーは原則「新品パーツに丸ごと交換」するため高額になります。当店は「直せるものは直す」板金技術と、良質な中古パーツの活用で大幅にコストをカットします。</p>
+        </div>
+        <div class="p-card reveal d1">
+          <div class="p-num">02</div>
+          <i data-lucide="clock" class="p-icon"></i>
+          <h3>車をつかう用事がある。<br>１日でも早く直したい</h3>
+          <p>小さな擦り傷なら朝お預かり→夕方お返しの「最短即日修理」が可能です。修理期間中は無料の代車（全車ナビ付き）をご用意しております。</p>
+        </div>
+        <div class="p-card reveal d2">
+          <div class="p-num">03</div>
+          <i data-lucide="shield-check" class="p-icon"></i>
+          <h3>保険をつかうべきか<br>自費か悩んでいる</h3>
+          <p>「保険を使うと等級が下がって保険料が上がる」デメリットも計算し、自費で直した方がトータルでお得になるか、プロの目線で正直にシミュレーションします。</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Problem / Solution (Black to Gray) -->
-  <section class="section about bg-gray pt-large pb-large border-t-red-thick relative" id="about">
-    <div class="l-container center">
-      <div class="sect-header center fade-target mb-medium">
-        <h2 class="font-zen font-black text-white text-3xl line-height-tight mb-xs">こんなお悩み、<span class="text-red border-b-red pb-xs">即解決</span>します。</h2>
-        <span class="font-teko text-silver font-bold text-xl tracking-widest uppercase display-block mt-xs">Professional Solutions</span>
+  <!-- ===== Pricing Table ===== -->
+  <section class="sect pricing" id="pricing">
+    <div class="wrap">
+      <div class="s-hdr reveal">
+        <span class="s-label">PRICE LIST</span>
+        <h2 class="s-title">料金目安表</h2>
+        <div class="red-line"></div>
+        <p class="s-desc">実際の金額はキズの状態によって変動します。正確なお見積りはLINEで写真を送るだけ。24時間以内にご返信。</p>
       </div>
 
-      <div class="grid-3 gap-medium mt-large">
-        <div class="card-black bg-carbon-dark p-medium text-left border-line-dark fade-target hover-red-glow transition">
-          <div class="flex-between align-center mb-small">
-            <span class="font-teko text-red text-4xl font-bold">01</span>
-            <i data-lucide="frown" class="text-silver icon-lg"></i>
-          </div>
-          <h3 class="font-zen font-black text-white text-lg mb-small">ディーラーの見積もりが<br>高すぎて払えない</h3>
-          <p class="font-zen text-silver text-sm line-height-long font-bold">
-            ディーラーは原則「新品パーツに丸ごと交換」するため高額になります。当店は「直せるものは直す」板金技術と、良質な中古パーツの活用で大幅にコストをカットします。
-          </p>
-        </div>
-
-        <div class="card-black bg-carbon-dark p-medium text-left border-line-dark fade-target delay-1 hover-red-glow transition">
-          <div class="flex-between align-center mb-small">
-            <span class="font-teko text-red text-4xl font-bold">02</span>
-            <i data-lucide="clock" class="text-silver icon-lg"></i>
-          </div>
-          <h3 class="font-zen font-black text-white text-lg mb-small">車をつかう用事がある。<br>１日でも早く直したい</h3>
-          <p class="font-zen text-silver text-sm line-height-long font-bold">
-            ご予約状況やキズの深さにもよりますが、小さな擦り傷なら朝お預かりして夕方お返しの「最短即日修理」が可能です。修理期間中は無料の代車をご用意しております。
-          </p>
-        </div>
-
-        <div class="card-black bg-carbon-dark p-medium text-left border-line-dark fade-target delay-2 hover-red-glow transition">
-          <div class="flex-between align-center mb-small">
-            <span class="font-teko text-red text-4xl font-bold">03</span>
-            <i data-lucide="shield-check" class="text-silver icon-lg"></i>
-          </div>
-          <h3 class="font-zen font-black text-white text-lg mb-small">保険をつかうべきか<br>自費か悩んでいる</h3>
-          <p class="font-zen text-silver text-sm line-height-long font-bold">
-            「保険を使うと等級が下がって今後の保険料が上がる」というデメリットも計算し、自費で直した方がトータルでお得になるか、プロの目線で正直にシミュレーションします。
-          </p>
-        </div>
-      </div>
+      <table class="price-table reveal">
+        <thead>
+          <tr>
+            <th>修理内容</th>
+            <th>料金目安</th>
+            <th>工期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              小さな擦り傷（10cm以内）
+              <span class="note">バンパー・ドアなど</span>
+            </td>
+            <td class="price">¥15,000〜</td>
+            <td>最短即日</td>
+          </tr>
+          <tr>
+            <td>
+              バンパーのえぐれキズ
+              <span class="note">パテ成形+部分塗装</span>
+            </td>
+            <td class="price">¥18,000〜</td>
+            <td>1泊2日</td>
+          </tr>
+          <tr>
+            <td>
+              ドアパネルのヘコミ
+              <span class="note">裏打ち出し板金+塗装</span>
+            </td>
+            <td class="price">¥35,000〜</td>
+            <td>2〜3日</td>
+          </tr>
+          <tr>
+            <td>
+              フェンダー交換
+              <span class="note">中古パーツ活用で大幅コストカット</span>
+            </td>
+            <td class="price">¥45,000〜</td>
+            <td>3〜5日</td>
+          </tr>
+          <tr>
+            <td>
+              全塗装（1パネル）
+              <span class="note">メタリック・パール対応</span>
+            </td>
+            <td class="price">¥50,000〜</td>
+            <td>3〜5日</td>
+          </tr>
+          <tr>
+            <td>
+              事故修理（保険対応可）
+              <span class="note">保険会社とのやり取りも代行</span>
+            </td>
+            <td class="price">保険適用</td>
+            <td>要相談</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
-  <!-- Works (Before/After UI) -->
-  <section class="section works bg-pattern-carbon pt-large pb-large" id="works">
-    <div class="l-container">
-      <div class="flex-between align-end mb-large fade-target flex-col-sp gap-small border-b-line-dark pb-small">
-        <div class="text-left center-sp">
-          <h2 class="font-zen font-black text-white text-3xl line-height-tight mb-xs">修復事例</h2>
-          <span class="font-teko text-red font-bold text-xl tracking-widest uppercase">Before & After</span>
-        </div>
-        <div class="font-zen text-silver text-sm font-bold text-right center-sp">
-          どんなに激しいヘコミも、<br class="sp-none">熟練の職人技で元通りに。
-        </div>
+  <!-- ===== Before/After Works ===== -->
+  <section class="sect works" id="works">
+    <div class="wrap">
+      <div class="s-hdr reveal">
+        <span class="s-label">BEFORE & AFTER</span>
+        <h2 class="s-title">修復事例</h2>
+        <div class="red-line"></div>
+        <p class="s-desc">どんなに深いヘコミやキズも、熟練の板金職人が元通りに仕上げます。</p>
       </div>
 
-      <div class="grid-2 gap-large">
-        
+      <div class="works-grid">
         <!-- Case 1 -->
-        <div class="work-card fade-target">
-          <div class="split-image relative overflow-hidden bg-gray h-250 border-red-thick">
-            <div class="absolute inset-0 flex">
-              <div class="w-50 relative border-r-white">
-                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="修理前" class="w-full h-full object-cover filter-grayscale opacity-70">
-                <span class="absolute top-0 left-0 bg-dark text-white font-teko text-lg px-small py-xs">BEFORE</span>
-              </div>
-              <div class="w-50 relative">
-                <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="修理後" class="w-full h-full object-cover">
-                <span class="absolute top-0 right-0 bg-red text-white font-teko text-lg px-small py-xs">AFTER</span>
-              </div>
+        <div class="w-card reveal">
+          <div class="w-split">
+            <div class="w-half before">
+              <img src="assist/images/before.png" alt="修理前">
+              <span class="w-tag before">BEFORE</span>
             </div>
-            <!-- Slant divider inside image -->
-            <div class="absolute top-0 bottom-0 left-50 w-2 bg-red transform -translate-x-1/2 rotate-15 z-10 box-shadow-glow display-none"></div>
+            <div class="w-divider"></div>
+            <div class="w-half">
+              <img src="assist/images/after.png" alt="修理後">
+              <span class="w-tag after">AFTER</span>
+            </div>
           </div>
-          <div class="bg-carbon-dark p-small text-left border-line-dark border-t-none">
-            <h3 class="font-zen font-black text-white text-lg mb-xs flex-between">フロントバンパー 擦り傷 <span class="text-red">¥18,000〜</span></h3>
-            <p class="font-zen text-silver text-xs line-height-long font-bold">ブロック塀に擦ってしまったえぐれキズ。専用パテで成形し、塗装範囲を最小限に抑えることで低価格を実現しました。（工期：1泊2日）</p>
+          <div class="w-info">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <h3>フロントバンパー 擦り傷</h3>
+              <span class="w-price">¥18,000〜</span>
+            </div>
+            <p>ブロック塀に擦ったえぐれキズ。専用パテで成形し、塗装範囲を最小限に抑えることで低価格を実現。工期：1泊2日。</p>
           </div>
         </div>
 
         <!-- Case 2 -->
-        <div class="work-card fade-target delay-1">
-          <div class="split-image relative overflow-hidden bg-gray h-250 border-red-thick">
-            <div class="absolute inset-0 flex">
-              <div class="w-50 relative border-r-white">
-                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="修理前" class="w-full h-full object-cover filter-grayscale opacity-70">
-                <span class="absolute top-0 left-0 bg-dark text-white font-teko text-lg px-small py-xs">BEFORE</span>
-              </div>
-              <div class="w-50 relative">
-                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="修理後" class="w-full h-full object-cover">
-                <span class="absolute top-0 right-0 bg-red text-white font-teko text-lg px-small py-xs">AFTER</span>
-              </div>
+        <div class="w-card reveal d1">
+          <div class="w-split">
+            <div class="w-half before">
+              <img src="assist/images/before.png" alt="修理前">
+              <span class="w-tag before">BEFORE</span>
+            </div>
+            <div class="w-divider"></div>
+            <div class="w-half">
+              <img src="assist/images/after.png" alt="修理後">
+              <span class="w-tag after">AFTER</span>
             </div>
           </div>
-          <div class="bg-carbon-dark p-small text-left border-line-dark border-t-none">
-            <h3 class="font-zen font-black text-white text-lg mb-xs flex-between">ドアパネル 大きなヘコミ <span class="text-red">¥45,000〜</span></h3>
-            <p class="font-zen text-silver text-xs line-height-long font-bold">駐車場で当て逃げされた深いヘコミ。ディーラーではドア交換で15万円と言われましたが、裏打ち出し板金で修復しました。（工期：3日）</p>
+          <div class="w-info">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <h3>ドアパネル 大きなヘコミ</h3>
+              <span class="w-price">¥45,000〜</span>
+            </div>
+            <p>駐車場で当て逃げされた深いヘコミ。ディーラーではドア交換15万円→裏打ち出し板金で1/3以下に。工期：3日。</p>
           </div>
         </div>
 
+        <!-- Case 3 -->
+        <div class="w-card reveal">
+          <div class="w-split">
+            <div class="w-half before">
+              <img src="assist/images/before.png" alt="修理前">
+              <span class="w-tag before">BEFORE</span>
+            </div>
+            <div class="w-divider"></div>
+            <div class="w-half">
+              <img src="assist/images/after.png" alt="修理後">
+              <span class="w-tag after">AFTER</span>
+            </div>
+          </div>
+          <div class="w-info">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <h3>リアフェンダー 接触事故</h3>
+              <span class="w-price">¥65,000〜</span>
+            </div>
+            <p>交差点での接触事故。中古フェンダーを活用し、新品交換の半額以下で新車同様の仕上がりに。保険対応可。</p>
+          </div>
+        </div>
+
+        <!-- Case 4 -->
+        <div class="w-card reveal d1">
+          <div class="w-split">
+            <div class="w-half before">
+              <img src="assist/images/before.png" alt="修理前">
+              <span class="w-tag before">BEFORE</span>
+            </div>
+            <div class="w-divider"></div>
+            <div class="w-half">
+              <img src="assist/images/after.png" alt="修理後">
+              <span class="w-tag after">AFTER</span>
+            </div>
+          </div>
+          <div class="w-info">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <h3>ボンネット 飛び石キズ</h3>
+              <span class="w-price">¥25,000〜</span>
+            </div>
+            <p>高速道路の飛び石による多数の小キズ。タッチアップでは消えないキズを、部分研磨＋塗装で完璧に修復。</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Box -->
-  <section class="cta pt-medium pb-medium bg-red-grad relative border-y-line-dark" id="contact">
-    <div class="l-container relative z-10 flex-between align-center flex-col-sp gap-large text-white">
-      
-      <div class="cta-text w-60 fade-target text-left center-sp">
-        <h2 class="font-zen font-black text-3xl mb-xs line-height-tight text-shadow-dark">スマホでパシャッ！<br>写真を送るだけで<span class="underline-white">すぐに見積り。</span></h2>
-        <p class="font-zen text-white text-sm mb-large line-height-long font-bold text-shadow-dark max-w-600">
-          「これっていくらで直るかな？」と思ったら、車のキズの写真をLINEで送ってください。24時間以内に概算のお見積りをご返信いたします。ご来店前の不安をなくします！
-        </p>
+  <!-- ===== Customer Reviews ===== -->
+  <section class="sect reviews" id="reviews">
+    <div class="wrap">
+      <div class="s-hdr center reveal">
+        <span class="s-label">CUSTOMER VOICE</span>
+        <h2 class="s-title">お客様の声</h2>
+        <div class="red-line center"></div>
       </div>
 
-      <div class="cta-action w-40 fade-target delay-1 center">
-        <div class="bg-carbon-dark p-medium rounded-sm box-shadow-xl border-line-dark text-center relative overflow-hidden">
-          <div class="stripe-bg absolute inset-0 opacity-10"></div>
-          <div class="relative z-10">
-            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="LINE" class="w-40px h-40px mx-auto mb-xs rounded-lg">
-            <h3 class="font-zen font-black text-white text-lg mb-xs">LINE無料見積もり</h3>
-            <span class="font-zen text-silver text-xs font-bold display-block mb-small">24時間受付 / キャンセル無料</span>
-            <a href="#" class="btn btn-green-solid btn-xl w-full font-zen font-black text-lg slant-btn hover-glitch">
-              <span class="slant-text w-full"><i data-lucide="message-circle" class="icon-sm"></i> 友だち追加して写真を送る</span>
-            </a>
+      <div class="reviews-grid">
+        <div class="r-card reveal">
+          <div class="r-stars">★★★★★</div>
+          <p class="r-text">ディーラーで「ドア交換15万円」と言われ絶望していましたが、SPEED GARAGEさんで板金修理4.5万円。仕上がりも完璧で、ディーラーとの差額に驚きました。</p>
+          <div class="r-author">
+            <div class="r-avatar"><i data-lucide="user"></i></div>
+            <div>
+              <div style="color:#fff;font-size:0.8rem;">T.K. 様</div>
+              <div style="font-size:0.7rem;">プリウス / ドアパネル修理</div>
+            </div>
+          </div>
+        </div>
+        <div class="r-card reveal d1">
+          <div class="r-stars">★★★★★</div>
+          <p class="r-text">朝預けて夕方には直って戻ってきました。代車もナビ付きで快適でした。子供の送り迎えがあるので、即日対応は本当に助かりました。</p>
+          <div class="r-author">
+            <div class="r-avatar"><i data-lucide="user"></i></div>
+            <div>
+              <div style="color:#fff;font-size:0.8rem;">M.S. 様</div>
+              <div style="font-size:0.7rem;">N-BOX / バンパー擦り傷</div>
+            </div>
+          </div>
+        </div>
+        <div class="r-card reveal d2">
+          <div class="r-stars">★★★★★</div>
+          <p class="r-text">保険を使うか自費か迷っていたところ、丁寧にシミュレーションしてくれて「自費の方がトータルでお得」と正直に教えてくれました。信頼できるお店です。</p>
+          <div class="r-author">
+            <div class="r-avatar"><i data-lucide="user"></i></div>
+            <div>
+              <div style="color:#fff;font-size:0.8rem;">Y.A. 様</div>
+              <div style="font-size:0.7rem;">CX-5 / フェンダー修理</div>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer bg-carbon pt-large pb-medium relative border-t-line-dark">
-    <div class="l-container flex-between align-start flex-col-sp gap-large font-zen font-bold text-sm border-b-line-dark pb-medium mb-medium">
-      
-      <div class="f-left text-left w-30 center-sp w-full-sp">
-        <div class="flex gap-xs align-center mb-small justify-center-sp">
-          <i data-lucide="wrench" class="text-red icon-lg"></i>
-          <span class="font-teko text-white font-bold text-2xl tracking-wide line-height-tight">SPEED GARAGE</span>
+  <!-- ===== CTA ===== -->
+  <section class="cta" id="cta">
+    <div class="wrap">
+      <div class="cta-inner">
+        <div class="cta-text reveal">
+          <h2>スマホでパシャッ！<br>写真を送るだけで<br>すぐに見積り。</h2>
+          <p>「これっていくらで直るかな？」と思ったら、車のキズの写真をLINEで送ってください。24時間以内に概算のお見積りをご返信。ご来店前の不安をなくします。</p>
         </div>
-        <p class="text-silver text-xs line-height-long max-w-400 mx-auto-sp">
-          〒100-0000 東京都オート区モータース 1-2-3<br>
-          営業時間: 9:00 - 19:00 (日曜定休)<br>
-          電話番号: 0120-000-000<br>
-          ※出張見積もり対応可能（エリア限定）
-        </p>
-      </div>
-      
-      <div class="f-right flex gap-large justify-end flex-wrap w-60 justify-center-sp w-full-sp">
-        <ul class="flex-column gap-small text-silver text-xs text-left">
-          <li><a href="#" class="hover-red transition">ホーム</a></li>
-          <li><a href="#" class="hover-red transition">当店の強み</a></li>
-          <li><a href="#" class="hover-red transition">修復事例・実績</a></li>
-          <li><a href="#" class="hover-red transition">料金目安表</a></li>
-        </ul>
-        <ul class="flex-column gap-small text-silver text-xs text-left">
-          <li><a href="#" class="hover-red transition">車検・整備案内</a></li>
-          <li><a href="#" class="hover-red transition">よくあるご質問</a></li>
-          <li><a href="#" class="hover-red transition">会社概要</a></li>
-          <li><a href="#" class="hover-red transition">プライバシーポリシー</a></li>
-        </ul>
+        <div class="cta-action reveal d2">
+          <div class="cta-box">
+            <div class="stripe-bg"></div>
+            <h3>LINE無料見積もり</h3>
+            <span class="sub">24時間受付 / キャンセル無料 / 秘密厳守</span>
+            <button class="btn-green">
+              <span><i data-lucide="message-circle" style="width:18px;height:18px;"></i> 友だち追加して写真を送る</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    
-    <div class="l-container text-center text-xs font-teko text-silver tracking-widest">
-       &copy; 2025 SPEED GARAGE. ALL RIGHTS RESERVED.
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="ftr-grid">
+        <div class="ftr-brand">
+          <span class="logo-text" style="font-family:var(--f-impact);">
+            <i data-lucide="wrench" style="width:20px;height:20px;color:var(--c-red);vertical-align:middle;margin-right:6px;"></i>SPEED GARAGE
+          </span>
+          <p class="address">
+            〒100-0000 東京都オート区モータース 1-2-3<br>
+            営業時間: 9:00 - 19:00（日曜定休）<br>
+            電話: 0120-000-000<br>
+            ※出張見積もり対応可能（エリア限定）
+          </p>
+        </div>
+        <div class="ftr-nav">
+          <div class="ftr-links">
+            <a href="#">ホーム</a>
+            <a href="#problems">当店の強み</a>
+            <a href="#pricing">料金目安表</a>
+            <a href="#works">修復事例</a>
+          </div>
+          <div class="ftr-links">
+            <a href="#reviews">お客様の声</a>
+            <a href="#">車検・整備案内</a>
+            <a href="#">会社概要</a>
+            <a href="#">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
+      <div class="ftr-copy">&copy; 2026 SPEED GARAGE. ALL RIGHTS RESERVED.</div>
     </div>
   </footer>
 
   <script>
     lucide.createIcons();
-    
-    // Header Scroll
-    const header = document.getElementById('header');
+
+    // Header scroll
+    const hdr = document.getElementById('header');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 40) header.classList.add('scrolled');
-      else header.classList.remove('scrolled');
+      hdr.classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    // Mobile Menu
-    const menuToggle = document.getElementById('menuToggle');
-    const nav = document.querySelector('.nav');
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
+    // Mobile menu
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
       nav.classList.toggle('active');
     });
 
-    // Intersection Observer
-    const obs = new IntersectionObserver((entries, observer) => {
+    // Cinematic scroll reveal
+    const revealObs = new IntersectionObserver((entries, obs) => {
       entries.forEach(e => {
-        if(e.isIntersecting) {
+        if (e.isIntersecting) {
           e.target.classList.add('is-visible');
-          observer.unobserve(e.target);
+          obs.unobserve(e.target);
         }
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-scale').forEach(el => revealObs.observe(el));
+
+    // Counter animation
+    const counterObs = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const target = parseInt(el.getAttribute('data-count'));
+          if (!target) return;
+          const suffix = el.innerHTML.replace(/[0-9,]/g, '');
+          let current = 0;
+          const step = target / 45;
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(timer); }
+            el.innerHTML = Math.floor(current).toLocaleString() + suffix;
+          }, 30);
+          obs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
   </script>
 </body>
 </html>
