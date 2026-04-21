@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/tmp/sharkstars_check/**)",
+      "Bash(python check.py)",
+      "Bash(python /tmp/sharkstars_check/check.py)",
+      "Read(//tmp/sharkstars_check/**)",
+      "Bash(mkdir -p C:/tmp/sharkstars_check)",
+      "Read(//c/tmp/**)",
+      "Bash(python \"C:/tmp/sharkstars_check/check.py\")",
+      "Bash(echo \"exit=$?\")",
+      "Bash(xargs -I{} dirname {})",
+      "Bash(npm -v)",
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(echo \"started pid $!\")",
+      "Bash(curl -s -o /tmp/gallery-response.html -w \"HTTP %{http_code} / %{size_download}B\\\\n\" http://localhost:4321/)",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://localhost:4321/)"
+    ]
+  }
+}

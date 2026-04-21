@@ -1,0 +1,104 @@
+---
+// 真鍮プレート — 水槽下部のエッチング風プレート
+interface Props {
+  no?: string;
+  label: string;
+  sub?: string;
+  size?: "sm" | "md" | "lg";
+}
+const { no, label, sub, size = "md" } = Astro.props;
+---
+
+<div class={`plate plate-${size}`}>
+  <svg class="plate-bg" viewBox="0 0 300 80" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <filter id="brass-grain">
+        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="7" />
+        <feColorMatrix
+          values="0 0 0 0 0.12
+                  0 0 0 0 0.10
+                  0 0 0 0 0.06
+                  0 0 0 0.22 0"
+        />
+      </filter>
+      <filter id="brass-wear">
+        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="2" seed="3" />
+        <feColorMatrix
+          values="0 0 0 0 0.05
+                  0 0 0 0 0.04
+                  0 0 0 0 0.02
+                  0 0 0 0.15 0"
+        />
+      </filter>
+      <linearGradient id="brass-grad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#d5c79a" />
+        <stop offset="35%" stop-color="#c4b890" />
+        <stop offset="80%" stop-color="#9d8f66" />
+        <stop offset="100%" stop-color="#8a7d5a" />
+      </linearGradient>
+    </defs>
+    <rect width="300" height="80" fill="url(#brass-grad)" />
+    <rect width="300" height="80" filter="url(#brass-wear)" />
+    <rect width="300" height="80" filter="url(#brass-grain)" />
+    <!-- screws at corners -->
+    <circle cx="9" cy="9" r="2.2" fill="#3a3324" />
+    <circle cx="291" cy="9" r="2.2" fill="#3a3324" />
+    <circle cx="9" cy="71" r="2.2" fill="#3a3324" />
+    <circle cx="291" cy="71" r="2.2" fill="#3a3324" />
+    <!-- etched top line -->
+    <line x1="18" y1="18" x2="282" y2="18" stroke="#3a3324" stroke-width="0.3" opacity="0.55" />
+    <line x1="18" y1="62" x2="282" y2="62" stroke="#3a3324" stroke-width="0.3" opacity="0.55" />
+  </svg>
+
+  <div class="plate-text mono">
+    {no && <span class="plate-no">№ {no}</span>}
+    <span class="plate-label">{label}</span>
+    {sub && <span class="plate-sub">{sub}</span>}
+  </div>
+</div>
+
+<style>
+  .plate {
+    position: relative;
+    display: inline-block;
+    color: #2a2416;
+  }
+  .plate-sm { width: 180px; height: 44px; }
+  .plate-md { width: 240px; height: 56px; }
+  .plate-lg { width: 320px; height: 72px; }
+
+  .plate-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.55));
+  }
+
+  .plate-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+    padding: 0 18px;
+    text-shadow: 0 1px 0 rgba(255, 240, 200, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.35);
+  }
+
+  .plate-sm .plate-label { font-size: 10px; letter-spacing: 0.28em; }
+  .plate-md .plate-label { font-size: 11px; letter-spacing: 0.3em; }
+  .plate-lg .plate-label { font-size: 13px; letter-spacing: 0.32em; }
+
+  .plate-no {
+    font-size: 9px;
+    opacity: 0.72;
+    letter-spacing: 0.22em;
+  }
+  .plate-sub {
+    font-size: 9px;
+    opacity: 0.72;
+    letter-spacing: 0.24em;
+  }
+</style>

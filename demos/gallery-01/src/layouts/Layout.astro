@@ -7,16 +7,25 @@ interface Props {
   keywords?: string;
 }
 
+const BASE = import.meta.env.BASE_URL;
+const withBase = (p: string) =>
+  `${BASE}${p.replace(/^\//, "")}`.replace(/\/{2,}/g, "/");
+
 const {
   title = "THE WALL — An Exhibition of Concrete Silence | 福岡現代美術ギャラリー",
   description = "打ち放しコンクリートの静寂に吊られた、たった一枚の絵。福岡のコンテンポラリー・アート・ギャラリー THE WALL 公式サイト。現代美術・ミニマルアート・建築美の常設展示。",
-  image = "/og.png",
+  image = "og.png",
   canonical = Astro.url.href,
   keywords = "現代美術,ギャラリー,福岡,コンクリート,ミニマルアート,建築美,コンテンポラリーアート,アートギャラリー,展示会",
 } = Astro.props;
 
+const faviconSvg = withBase("favicon.svg");
+const ogImageAbs = new URL(withBase(image), Astro.url).href;
+
 const siteName = "THE WALL";
 const locale = "ja_JP";
+
+const homeUrl = new URL(BASE, Astro.url).href;
 
 const galleryJsonLd = {
   "@context": "https://schema.org",
@@ -24,7 +33,7 @@ const galleryJsonLd = {
   name: siteName,
   alternateName: "ザ・ウォール",
   url: canonical,
-  image: new URL(image, Astro.url).href,
+  image: ogImageAbs,
   description,
   address: {
     "@type": "PostalAddress",
@@ -56,7 +65,7 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: new URL("/", Astro.url).href,
+      item: homeUrl,
     },
   ],
 };
@@ -65,7 +74,7 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: siteName,
-  url: new URL("/", Astro.url).href,
+  url: homeUrl,
   inLanguage: "ja-JP",
   description,
 };
@@ -87,7 +96,7 @@ const websiteJsonLd = {
     <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
     <link rel="canonical" href={canonical} />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={faviconSvg} />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={siteName} />
@@ -95,14 +104,14 @@ const websiteJsonLd = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL(image, Astro.url).href} />
+    <meta property="og:image" content={ogImageAbs} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(image, Astro.url).href} />
+    <meta name="twitter:image" content={ogImageAbs} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -1,0 +1,161 @@
+---
+// 深夜の展示水槽 — GLSL で水の深さ・コースティクス・気泡・浮遊物を生成
+// 画面全体の背景（position: fixed）
+---
+
+<canvas id="tank-bg" aria-hidden="true"></canvas>
+
+<script>
+  import * as THREE from "three";
+
+  const canvas = document.getElementById("tank-bg") as HTMLCanvasElement | null;
+  if (canvas) {
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: false,
+      alpha: false,
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+
+    const vertex = /* glsl */ `
+      varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = vec4(position, 1.0);
+      }
+    `;
+
+    const fragment = /* glsl */ `
+      precision highp float;
+      varying vec2 vUv;
+      uniform float uTime;
+      uniform float uScroll;
+      uniform vec2 uRes;
+
+      float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7)))*43758.5453); }
+      float noise(vec2 p){
+        vec2 i = floor(p), f = fract(p);
+        vec2 u = f*f*(3.0-2.0*f);
+        return mix(
+          mix(hash(i), hash(i+vec2(1,0)), u.x),
+          mix(hash(i+vec2(0,1)), hash(i+vec2(1,1)), u.x),
+          u.y);
+      }
+      float fbm(vec2 p){
+        float v=0.0, a=0.5;
+        mat2 r = mat2(0.8,-0.6,0.6,0.8);
+        for(int i=0;i<5;i++){ v+=a*noise(p); p=r*p*2.02; a*=0.5; }
+        return v;
+      }
+
+      vec3 aces(vec3 x){
+        return clamp((x*(2.51*x+0.03))/(x*(2.43*x+0.59)+0.14), 0.0, 1.0);
+      }
+
+      void main() {
+        vec2 uv = vUv;
+
+        // vertical depth gradient
+        float depth = clamp(uv.y - uScroll * 0.25, 0.0, 1.0);
+        vec3 surface = vec3(0.10, 0.33, 0.375);
+        vec3 deep    = vec3(0.020, 0.070, 0.095);
+        vec3 col = mix(deep, surface, pow(depth, 1.35));
+
+        // caustics — light net from above
+        vec2 p = uv * 6.0 + vec2(0.0, -uTime*0.12);
+        p += vec2(fbm(p + uTime*0.15), fbm(p - uTime*0.13 + 5.0)) * 0.6;
+        float c1 = abs(sin(p.x*2.6 + uTime*0.35));
+        float c2 = abs(sin(p.y*3.1 - uTime*0.28));
+        float caustic = pow(c1 * c2, 2.8);
+        caustic *= smoothstep(0.9, 0.0, 1.0 - uv.y + uScroll*0.4);
+        col += vec3(0.30, 0.58, 0.62) * caustic * 0.55;
+
+        // floating motes
+        float mote = fbm(uv * vec2(uRes.x/uRes.y, 1.0) * 40.0 - uTime*0.03);
+        col += vec3(0.18, 0.32, 0.34) * smoothstep(0.62, 0.82, mote) * 0.18;
+
+        // bubbles
+        for (int i = 0; i < 9; i++) {
+          float fi = float(i);
+          float speed = 0.05 + mod(fi*0.017, 0.04);
+          float rise = mod(uTime * speed + fi*0.137, 1.25) - 0.15;
+          vec2 bc = vec2(
+            0.08 + fract(fi * 0.199 + 0.13) * 0.84
+                 + 0.014 * sin(uTime*0.9 + fi*3.1),
+            1.0 - rise
+          );
+          float size = 0.0025 + fract(fi*0.71) * 0.0045;
+          vec2 d = (uv - bc) * vec2(uRes.x/uRes.y, 1.0);
+          float bd = length(d) - size;
+          float bubble = smoothstep(size*0.35, 0.0, bd);
+          float rim = smoothstep(0.0, size*0.15, bd + size*0.15) * (1.0 - bubble);
+          col += vec3(0.75, 0.92, 0.95) * bubble * 0.55;
+          col += vec3(0.55, 0.80, 0.85) * rim * 0.35;
+        }
+
+        // subtle vertical light shafts from above
+        float shaft = smoothstep(0.7, 1.0, uv.y) * (0.3 + 0.7 * fbm(vec2(uv.x*3.0, uTime*0.05)));
+        col += vec3(0.12, 0.30, 0.34) * shaft * 0.18;
+
+        // vignette
+        vec2 vc = uv - 0.5;
+        vc.x *= uRes.x / uRes.y;
+        float vig = smoothstep(1.5, 0.25, length(vc));
+        col *= mix(0.55, 1.0, vig);
+
+        // grain
+        col += (hash(uv * 1400.0 + uTime) - 0.5) * 0.025;
+
+        col = aces(col * 1.05);
+        gl_FragColor = vec4(col, 1.0);
+      }
+    `;
+
+    const material = new THREE.ShaderMaterial({
+      vertexShader: vertex,
+      fragmentShader: fragment,
+      uniforms: {
+        uTime: { value: 0 },
+        uScroll: { value: 0 },
+        uRes: { value: new THREE.Vector2(1, 1) },
+      },
+    });
+
+    (window as any).__tankBG = material;
+
+    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), material);
+    scene.add(mesh);
+
+    const resize = () => {
+      const w = Math.max(window.innerWidth, 1);
+      const h = Math.max(window.innerHeight, 1);
+      renderer.setSize(w, h, false);
+      material.uniforms.uRes.value.set(w, h);
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    const t0 = performance.now();
+    const loop = () => {
+      material.uniforms.uTime.value = (performance.now() - t0) / 1000;
+      renderer.render(scene, camera);
+      requestAnimationFrame(loop);
+    };
+    loop();
+  }
+</script>
+
+<style>
+  #tank-bg {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    display: block;
+    pointer-events: none;
+  }
+</style>

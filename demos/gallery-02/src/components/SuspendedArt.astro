@@ -1,0 +1,162 @@
+---
+interface Props {
+  no: string;
+  title: string;
+  artist: string;
+  year: string;
+  medium: string;
+  size?: string;
+}
+const { no, title, artist, year, medium, size = "220px" } = Astro.props;
+---
+
+<figure class="suspended" itemscope itemtype="https://schema.org/VisualArtwork">
+  <span class="filament" aria-hidden="true"></span>
+
+  <div class="art" style={`--art-w: ${size};`}>
+    <!-- 墨絵（SVG生成） -->
+    <svg viewBox="0 0 120 160" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <filter id="ink-blur">
+          <feGaussianBlur stdDeviation="0.22" />
+        </filter>
+        <filter id="washi">
+          <feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" seed="3" />
+          <feColorMatrix values="0 0 0 0 0.05  0 0 0 0 0.05  0 0 0 0 0.05  0 0 0 0.08 0" />
+        </filter>
+        <radialGradient id="paper" cx="0.5" cy="0.45" r="0.7">
+          <stop offset="0%" stop-color="#eee6cb" />
+          <stop offset="70%" stop-color="#d8cfae" />
+          <stop offset="100%" stop-color="#b4a77f" />
+        </radialGradient>
+      </defs>
+      <rect width="120" height="160" fill="url(#paper)" />
+      <rect width="120" height="160" filter="url(#washi)" />
+      <!-- 一筆の墨線 -->
+      <path
+        d="M 30 40 Q 50 22 76 50 Q 88 66 62 88 Q 46 100 78 120"
+        stroke="#0a0a0a"
+        stroke-width="2.8"
+        fill="none"
+        stroke-linecap="round"
+        filter="url(#ink-blur)"
+        opacity="0.92"
+      />
+      <!-- 滴り -->
+      <circle cx="78" cy="126" r="1.6" fill="#0a0a0a" opacity="0.85" />
+      <!-- 落款 -->
+      <rect x="92" y="130" width="12" height="12" fill="#6a1d18" opacity="0.78" />
+      <text
+        x="98"
+        y="139"
+        font-family="serif"
+        font-size="6"
+        fill="#e8e4dc"
+        text-anchor="middle"
+        opacity="0.9">有</text>
+    </svg>
+  </div>
+
+  <figcaption class="cap">
+    <span class="cap-no mono">№ {no}</span>
+    <h2 class="cap-title italic" itemprop="name">{title}</h2>
+    <p class="cap-meta mono">
+      <span itemprop="creator">{artist}</span>
+      <span class="m-dot">·</span>
+      <span itemprop="dateCreated">{year}</span>
+    </p>
+    <p class="cap-medium mono" itemprop="artMedium">{medium}</p>
+  </figcaption>
+</figure>
+
+<style>
+  .suspended {
+    position: relative;
+    display: inline-block;
+  }
+
+  .filament {
+    position: absolute;
+    top: -40vh;
+    left: calc(var(--art-w, 220px) * 0.5);
+    width: 1px;
+    height: 40vh;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(196, 184, 144, 0.1) 10%,
+      rgba(196, 184, 144, 0.5) 85%,
+      rgba(196, 184, 144, 0.7) 100%
+    );
+    transform: translateX(-0.5px);
+    transform-origin: top;
+  }
+
+  .art {
+    width: var(--art-w, 220px);
+    aspect-ratio: 3 / 4;
+    position: relative;
+    box-shadow:
+      0 1px 0 rgba(255, 240, 200, 0.12) inset,
+      0 32px 48px -18px rgba(0, 0, 0, 0.55),
+      0 10px 18px -8px rgba(0, 0, 0, 0.4);
+    /* subtle underwater blur */
+    filter: contrast(0.95) saturate(0.92);
+  }
+  .art::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(20, 18, 12, 0.35);
+    pointer-events: none;
+  }
+  .art svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cap {
+    position: absolute;
+    top: 20%;
+    left: calc(var(--art-w, 220px) + 36px);
+    min-width: 200px;
+    max-width: 240px;
+    border-left: 1px solid var(--hair-bright);
+    padding-left: 18px;
+    color: var(--brass);
+  }
+
+  .cap-no {
+    display: block;
+    font-size: 9.5px;
+    letter-spacing: 0.28em;
+    opacity: 0.7;
+    margin-bottom: 10px;
+  }
+
+  .cap-title {
+    font-family: "Cormorant", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    letter-spacing: 0.01em;
+    color: var(--paper);
+  }
+
+  .cap-meta {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    margin-bottom: 8px;
+    opacity: 0.82;
+  }
+  .m-dot { opacity: 0.45; margin: 0 5px; }
+
+  .cap-medium {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    opacity: 0.62;
+    text-transform: uppercase;
+  }
+</style>

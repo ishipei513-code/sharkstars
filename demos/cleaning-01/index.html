@@ -1,168 +1,167 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ピカピカ・クリーンサービス | エアコン・水回りのハウスクリーニング</title>
-  <meta name="description" content="諦めていた頑固なカビや油汚れも、プロの技術で見違えるほどの輝きに。小さなお子様やペットにも安心な「エコ洗剤」を使用。追加料金一切なしの完全固定料金で安心です。">
-  
-  <!-- Typography -->
+  <title>ピカピカクリーンサービス | エアコン・水回りのハウスクリーニング</title>
+  <meta name="description" content="諦めていた頑固なカビや油汚れも、プロの技術で見違える輝きに。小さなお子様やペットにも安心な「エコ洗剤」使用。追加料金なしの完全定額制。東京・神奈川・埼玉対応。">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="h-container">
+
+  <!-- ===== Header ===== -->
+  <header class="hdr" id="header">
+    <div class="hdr-inner">
       <div class="logo">
         <a href="#">
-          <i data-lucide="sparkles" class="text-blue"></i>
-          <div class="logo-text">
-            <span class="en">PIKAPIKA CLEAN</span>
-            ピカピカ・クリーンサービス
-          </div>
+          <i data-lucide="sparkles" class="logo-icon"></i>
+          <span>
+            <small class="logo-en">PIKAPIKA CLEAN</small>
+            ピカピカクリーン
+          </span>
         </a>
       </div>
-      <nav class="nav">
-        <ul class="nav-links">
-          <li><a href="#about">選ばれる理由</a></li>
-          <li><a href="#menu">清掃メニュー</a></li>
-          <li><a href="#before-after">ビフォーアフター</a></li>
-          <li><a href="#faq">よくある質問</a></li>
-        </ul>
-        <div class="h-action">
-          <a href="#contact" class="btn btn-blue"><i data-lucide="calendar-clock"></i> 無料見積り・予約</a>
+      <nav class="nav" id="nav">
+        <div class="nav-links">
+          <a href="#about">選ばれる理由</a>
+          <a href="#menu">清掃メニュー</a>
+          <a href="#ba">ビフォーアフター</a>
+          <a href="#faq">よくある質問</a>
+        </div>
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn-primary btn-sm"><i data-lucide="calendar-clock" style="width:14px;height:14px;"></i> 無料見積り</a>
         </div>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+      <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- ===== Hero ===== -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="笑顔で掃除するスタッフ">
+      <img src="assist/images/hero.png" alt="笑顔で清掃するスタッフ">
     </div>
-    <div class="hero-mask"></div>
-    <div class="l-container">
-      <div class="hero-content fade-target">
+    <div class="hero-overlay"></div>
+    <div class="wrap">
+      <div class="hero-content reveal">
         <div class="hero-labels">
-          <span class="label-eco"><i data-lucide="leaf"></i> 人と環境に優しいエコ洗剤使用</span>
-          <span class="label-price"><i data-lucide="shield-check"></i> 見積り後の追加料金 0円</span>
+          <span class="label label-eco"><i data-lucide="leaf" style="width:13px;height:13px;"></i> エコ洗剤使用</span>
+          <span class="label label-price"><i data-lucide="shield-check" style="width:13px;height:13px;"></i> 追加料金 0円</span>
         </div>
-        <h1 class="hero-title">プロの技術で、<br>見違えるような<span class="text-blue">輝き</span>を。</h1>
-        <p class="hero-desc">諦めていた換気扇の油汚れ、エアコンの奥の黒カビ、<br>水回りの頑固な水垢……。<br>プロ専用の洗剤と機材で、お部屋の空気を丸ごと綺麗にします。</p>
-        
-        <div class="hero-boxes">
-          <div class="h-box">
-            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="エアコン清掃">
-            <span>エアコン分解洗浄<br><strong>9,800円〜</strong></span>
+        <h1 class="hero-title">プロの技術で、<br>見違えるような<span class="accent">輝き</span>を。</h1>
+        <p class="hero-desc">
+          換気扇にこびりついた油、エアコン奥の黒カビ、水回りの頑固な水垢——。<br>
+          市販の洗剤では落としきれない汚れを、プロ専用の機材と技術で根こそぎ落とす。<br>
+          お部屋の空気ごと、まるごと綺麗に。
+        </p>
+        <div class="hero-prices">
+          <div class="hp-item">
+            <img src="assist/images/aircon.png" alt="エアコン清掃">
+            <div><small>エアコン分解洗浄</small><strong>9,800円〜</strong></div>
           </div>
-          <div class="h-box">
-            <img src="https://images.unsplash.com/photo-1676210134188-4c05dd172f89?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="キッチン清掃">
-            <span>キッチン換気扇<br><strong>14,000円〜</strong></span>
+          <div class="hp-item">
+            <img src="assist/images/hero.png" alt="キッチン清掃">
+            <div><small>キッチン換気扇</small><strong>14,000円〜</strong></div>
           </div>
-          <div class="h-box">
-            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="水回り清掃">
-            <span>浴室・水回り<br><strong>16,500円〜</strong></span>
+          <div class="hp-item">
+            <img src="assist/images/bath.png" alt="浴室清掃">
+            <div><small>浴室・水回り</small><strong>16,500円〜</strong></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About / Features -->
-  <section class="section about bg-sky" id="about">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <span class="en-label">O U R &nbsp; S T R E N G T H</span>
-        <h2 class="sect-heading">ピカピカ・クリーンが<br>皆様に選ばれる「3つの理由」</h2>
-        <p>お客様のプライベートな空間にお邪魔するからこそ、技術だけでなく「安心感」を徹底しています。</p>
+  <!-- ===== About / Features ===== -->
+  <section class="sect sect-sky" id="about">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:52px;">
+        <span class="s-label">W H Y &nbsp; U S</span>
+        <h2 class="s-title">ピカピカクリーンが<br>選ばれる「3つの理由」</h2>
+        <p class="s-sub">技術だけじゃない。大切にしているのは「安心感」。</p>
       </div>
 
-      <div class="feature-grid">
-        <!-- 01 -->
-        <div class="f-card fade-target">
-          <div class="f-icon"><i data-lucide="badge-check"></i></div>
-          <h3>完全自社スタッフによる<br>高品質な清掃サービス</h3>
-          <p>下請け業者への丸投げは一切いたしません。厳しい社内研修をクリアし、マナーと清掃技術を身につけた自社の専属スタッフのみがお伺いします。どんな汚れもプロの誇りにかけて落とします。</p>
-        </div>
-        
-        <!-- 02 -->
-        <div class="f-card fade-target delay-1">
-          <div class="f-icon text-green"><i data-lucide="leaf"></i></div>
-          <h3>お子様やペットにも安心<br>こだわりの「エコ洗剤」</h3>
-          <p>強い化学薬品の匂いが残るようなキツイ洗剤は極力使用せず、植物由来の環境に優しいエコ洗剤を中心に使用しています。赤ちゃんやアレルギー体質の方、室内犬・猫がいるご家庭でも安心です。</p>
+      <div class="feat-grid">
+        <div class="feat-card reveal">
+          <div class="feat-icon feat-icon--blue"><i data-lucide="badge-check"></i></div>
+          <h3>完全自社スタッフのみ</h3>
+          <p>下請け業者への丸投げは一切なし。厳しい社内研修をクリアした専属スタッフだけが伺う。マナーと技術、両方叩き込んだプロの手でお掃除する。</p>
         </div>
 
-        <!-- 03 -->
-        <div class="f-card fade-target delay-2">
-          <div class="f-icon text-orange"><i data-lucide="calculator"></i></div>
-          <h3>汚れがひどくても定額！<br>安心の「明朗会計」</h3>
-          <p>「汚れがひどいから」「作業時間が伸びたから」という理由で、事前のお見積り金額から追加料金をいただくことは100%ありません。事前の明確な料金提示をお約束いたします。</p>
+        <div class="feat-card reveal d1">
+          <div class="feat-icon feat-icon--green"><i data-lucide="leaf"></i></div>
+          <h3>赤ちゃん・ペットに安全な<br>「エコ洗剤」</h3>
+          <p>強い化学薬品の匂いが残るキツイ洗剤は使わない。植物由来のエコ洗剤を中心に使用。アレルギー体質の方や室内犬・猫がいるご家庭でも安心。</p>
+        </div>
+
+        <div class="feat-card reveal d2">
+          <div class="feat-icon feat-icon--orange"><i data-lucide="calculator"></i></div>
+          <h3>汚れがひどくても定額。<br>安心の「明朗会計」</h3>
+          <p>「汚れがひどいから追加料金」「作業時間が延びたから割増」——そんなことは絶対にない。事前の見積り金額で100%完結する。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Menu / Pricing -->
-  <section class="section menu" id="menu">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <span class="en-label">S E R V I C E S</span>
-        <h2 class="sect-heading">人気のハウスクリーニングメニュー</h2>
+  <!-- ===== Menu / Pricing ===== -->
+  <section class="sect" id="menu">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:52px;">
+        <span class="s-label">S E R V I C E S</span>
+        <h2 class="s-title">人気のクリーニングメニュー</h2>
       </div>
 
       <div class="menu-list">
         <!-- Aircon -->
-        <div class="m-row fade-target">
+        <div class="m-row reveal">
           <div class="m-img">
-            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="エアコン清掃">
+            <img src="assist/images/aircon.png" alt="エアコン分解洗浄">
             <span class="m-tag">人気 No.1</span>
           </div>
           <div class="m-body">
             <h3>エアコン分解高圧洗浄</h3>
-            <p>内部に潜む黒カビやホコリを、専用の高圧洗浄機で徹底的に洗い流します。嫌なニオイがなくなり、冷暖房の効きが良くなるため電気代の節約にも繋がります。</p>
-            <div class="m-price-box">
-              <div class="p-item">通常壁掛けタイプ <span>9,800円 (税込)</span></div>
-              <div class="p-item">お掃除機能付き <span>15,000円 (税込)</span></div>
+            <p>内部に潜む黒カビやホコリを、専用の高圧洗浄機で徹底的に洗い流す。嫌なニオイが消え、冷暖房の効きが改善するため電気代の節約にも繋がる。</p>
+            <div class="m-prices">
+              <div class="mp-item">通常壁掛けタイプ <span>9,800円 (税込)</span></div>
+              <div class="mp-item">お掃除機能付き <span>15,000円 (税込)</span></div>
             </div>
           </div>
         </div>
 
         <!-- Kitchen -->
-        <div class="m-row reverse fade-target">
+        <div class="m-row m-row--reverse reveal">
           <div class="m-img">
-            <img src="https://images.unsplash.com/photo-1676210134188-4c05dd172f89?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="キッチン清掃">
+            <img src="assist/images/hero.png" alt="換気扇・キッチン清掃">
           </div>
           <div class="m-body">
             <h3>換気扇（レンジフード）・キッチン</h3>
-            <p>ギトギトの油汚れで固まった換気扇のファンを分解し、専用の洗剤でつけ置き洗浄。シンクの水垢やコンロの焦げ付きも、素材を傷つけないよう丁寧に磨き上げます。</p>
-            <div class="m-price-box">
-              <div class="p-item">換気扇（レンジフード） <span>14,000円 (税込)</span></div>
-              <div class="p-item">キッチン一式 <span>16,500円 (税込)</span></div>
+            <p>ギトギトの油汚れで固まったファンを分解し、専用洗剤でつけ置き洗浄。シンクの水垢やコンロの焦げ付きも、素材を傷つけず丁寧に磨き上げる。</p>
+            <div class="m-prices">
+              <div class="mp-item">換気扇（レンジフード） <span>14,000円 (税込)</span></div>
+              <div class="mp-item">キッチン一式 <span>16,500円 (税込)</span></div>
             </div>
           </div>
         </div>
 
         <!-- Bath -->
-        <div class="m-row fade-target">
+        <div class="m-row reveal">
           <div class="m-img">
-            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="水回り清掃">
+            <img src="assist/images/bath.png" alt="浴室・水回り清掃">
           </div>
           <div class="m-body">
             <h3>水回り（浴室・トイレ・洗面所）</h3>
-            <p>浴室の赤カビ、鏡のウロコ汚れ、便器の尿石など、ご家庭の洗剤では落としきれない汚れを除去。毎日使う水回りを、ホテルのような清潔空間にリセットします。</p>
-            <div class="m-price-box">
-              <div class="p-item">浴室（お風呂） <span>16,500円 (税込)</span></div>
-              <div class="p-item">水回り3点セット <span>33,000円 (税込)</span></div>
+            <p>浴室の赤カビ、鏡のウロコ汚れ、便器の尿石——家庭の洗剤では太刀打ちできない汚れを除去。毎日使う水回りを、ホテルのような清潔空間にリセットする。</p>
+            <div class="m-prices">
+              <div class="mp-item">浴室（お風呂） <span>16,500円 (税込)</span></div>
+              <div class="mp-item">水回り3点セット <span>33,000円 (税込)</span></div>
             </div>
           </div>
         </div>
@@ -170,121 +169,99 @@
     </div>
   </section>
 
-  <!-- Before & After -->
-  <section class="section before-after bg-sky" id="before-after">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <span class="en-label">B e f o r e &nbsp; / &nbsp; A f t e r</span>
-        <h2 class="sect-heading">驚きのビフォー・アフター</h2>
-        <p>百聞は一見に如かず。プロの技術による汚れの落ち具合をご確認ください。</p>
+  <!-- ===== Before / After ===== -->
+  <section class="sect sect-sky" id="ba">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:52px;">
+        <span class="s-label">B E F O R E &nbsp; / &nbsp; A F T E R</span>
+        <h2 class="s-title">プロの仕事、見てほしい。</h2>
+        <p class="s-sub">百聞は一見に如かず。この差を実感してほしい。</p>
       </div>
 
       <div class="ba-grid">
-        <!-- Kitchen -->
-        <div class="ba-card fade-target">
-          <h3 class="ba-title">換気扇（レンジフード）の油汚れ</h3>
+        <div class="ba-card reveal">
+          <h3>換気扇（レンジフード）の油汚れ</h3>
           <div class="ba-images">
-            <div class="img-box before">
-              <div class="ba-label bg-gray text-black">施工前</div>
-              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="汚れた換気扇" style="filter: sepia(0.5) brightness(0.6);">
+            <div class="ba-box ba-before">
+              <span class="ba-label">Before</span>
+              <img src="assist/images/hero.png" alt="施工前の換気扇" style="filter:sepia(.4) brightness(.55);">
             </div>
             <div class="ba-arrow"><i data-lucide="arrow-right"></i></div>
-            <div class="img-box after">
-              <div class="ba-label bg-blue text-white">施工後</div>
-              <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="綺麗な換気扇">
+            <div class="ba-box ba-after">
+              <span class="ba-label ba-label--after">After</span>
+              <img src="assist/images/hero.png" alt="施工後の換気扇">
             </div>
           </div>
-          <p class="ba-desc">油で目詰まりしていたフィルターとファンが、新品同様のアルミ本来の輝きを取り戻しました。換気効率も大幅にアップします。</p>
+          <p class="ba-desc">油で目詰まりしていたフィルターとファンが、新品同様のアルミの輝きを取り戻した。換気効率も大幅アップ。</p>
         </div>
 
-        <!-- Bath -->
-        <div class="ba-card fade-target delay-1">
-          <h3 class="ba-title">浴室（お風呂）のカビ・水垢</h3>
+        <div class="ba-card reveal d1">
+          <h3>浴室（お風呂）のカビ・水垢</h3>
           <div class="ba-images">
-            <div class="img-box before">
-              <div class="ba-label bg-gray text-black">施工前</div>
-              <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=40" alt="汚れた浴室" style="filter: contrast(0.7) brightness(0.7);">
+            <div class="ba-box ba-before">
+              <span class="ba-label">Before</span>
+              <img src="assist/images/bath.png" alt="施工前の浴室" style="filter:contrast(.65) brightness(.6);">
             </div>
             <div class="ba-arrow"><i data-lucide="arrow-right"></i></div>
-            <div class="img-box after">
-              <div class="ba-label bg-blue text-white">施工後</div>
-              <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="綺麗な浴室">
+            <div class="ba-box ba-after">
+              <span class="ba-label ba-label--after">After</span>
+              <img src="assist/images/bath.png" alt="施工後の浴室">
             </div>
           </div>
-          <p class="ba-desc">床の黒ずみと浴槽のフチに固着した水垢を、素材に合わせた複数の酸性・アルカリ性洗剤を使い分けて完全に除去しました。</p>
+          <p class="ba-desc">床の黒ずみと浴槽に固着した水垢を、酸性・アルカリ性洗剤を使い分けて完全除去。新築のような光沢が蘇った。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section faq" id="faq">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <span class="en-label">F A Q</span>
-        <h2 class="sect-heading">よくあるご質問</h2>
+  <!-- ===== FAQ ===== -->
+  <section class="sect" id="faq">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:48px;">
+        <span class="s-label">Q & A</span>
+        <h2 class="s-title">よくある質問</h2>
       </div>
 
-      <div class="faq-wrap">
-        <div class="faq-item fade-target">
-          <div class="q-box">
-            <span class="q-icon">Q</span>
-            <h4>汚れがひどい場合、当日になって追加料金を請求されませんか？</h4>
-            <i data-lucide="chevron-down" class="faq-toggle"></i>
-          </div>
-          <div class="a-box">
-            <p><strong>一切ございません。</strong>事前にお電話や写真でお見積りした金額、またはホームページに記載の定額料金で必ず作業いたします。汚れ具合によって作業時間が長引いた場合でも、金額が変わることはありませんのでご安心ください。</p>
-          </div>
-        </div>
+      <div class="faq-list">
+        <details class="faq-item reveal" open>
+          <summary>汚れがひどい場合、追加料金を請求されない？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>一切ない。事前のお見積り金額、またはHP記載の定額料金で必ず作業する。汚れ具合で作業時間が延びても金額は変わらない。</p></div>
+        </details>
 
-        <div class="faq-item fade-target">
-          <div class="q-box">
-            <span class="q-icon">Q</span>
-            <h4>作業中は家にいなければいけませんか？</h4>
-            <i data-lucide="chevron-down" class="faq-toggle"></i>
-          </div>
-          <div class="a-box">
-            <p>作業開始前と作業完了後の「ご確認時」のみご在宅いただければ、作業中の外出は可能です。外出される場合は、貴重品の管理のみお客様ご自身でお願いしております。</p>
-          </div>
-        </div>
+        <details class="faq-item reveal">
+          <summary>作業中、家にいなくても大丈夫？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>作業開始前と完了後の確認時のみご在宅いただければ、作業中の外出は可能。貴重品の管理だけお願いしている。</p></div>
+        </details>
 
-        <div class="faq-item fade-target">
-          <div class="q-box">
-            <span class="q-icon">Q</span>
-            <h4>お支払い方法は何がありますか？</h4>
-            <i data-lucide="chevron-down" class="faq-toggle"></i>
-          </div>
-          <div class="a-box">
-            <p>作業終了後に仕上がりをご確認いただいた後、その場で【現金】【各種クレジットカード（Visa, Mastercard, JCB 等）】【PayPay】よりお選びいただけます。</p>
-          </div>
-        </div>
+        <details class="faq-item reveal">
+          <summary>支払い方法は？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>作業後に仕上がりを確認いただいた上で、現金・クレジットカード（Visa / Mastercard / JCB 等）・PayPayからお選びいただける。</p></div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>賃貸マンションでも依頼できる？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>もちろん対応可能。退去前のクリーニングや、入居後の気になる箇所のお掃除も多くご依頼いただいている。管理会社への事前連絡が必要な場合はお客様の方でご確認を。</p></div>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- CTA Reservation -->
-  <section class="section cta" id="contact">
-    <div class="l-container">
-      <div class="cta-inner fade-target">
-        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="スタッフ" class="cta-staff">
+  <!-- ===== CTA ===== -->
+  <section class="sect sect-cta" id="contact">
+    <div class="wrap">
+      <div class="cta-box reveal">
+        <img src="assist/images/hero.png" alt="スタッフ" class="cta-staff">
         <div class="cta-content">
-          <h2 class="cta-title">お部屋の汚れ、今すぐリセットしませんか？</h2>
-          <p class="cta-desc">「うちのエアコン、カビ生えてるかも…」「年末の大掃除をプロにお願いしたい」<br>お見積り・ご相談は完全無料です。下記よりお気軽にご連絡ください。</p>
-          
+          <h2 class="cta-title">お部屋の汚れ、<br>リセットしませんか？</h2>
+          <p class="cta-desc">「エアコン、カビ生えてるかも」「年末の大掃除をプロに任せたい」<br>お見積り・ご相談は完全無料。お気軽にどうぞ。</p>
           <div class="cta-actions">
             <a href="tel:0120-000-000" class="btn btn-tel">
               <i data-lucide="phone-call"></i>
-              <div class="b-text">
-                <span class="small">お電話でのご予約・相談 [9:00〜19:00]</span>
-                <span class="large">0120-000-000</span>
-              </div>
+              <div><small>お電話でのご予約 [9:00〜19:00]</small><strong>0120-000-000</strong></div>
             </a>
-            <a href="#" class="btn btn-web">
+            <a href="#" class="btn btn-primary btn-lg">
               <i data-lucide="mouse-pointer-click"></i>
-              <div class="b-text">
-                <span class="small">24時間受付中</span>
-                <span class="large">WEBから予約する</span>
-              </div>
+              <div><small>24時間受付</small><strong>WEBから予約する</strong></div>
             </a>
           </div>
         </div>
@@ -292,65 +269,64 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="l-container">
-      <div class="ft-inner">
-        <div class="logo">
-          <i data-lucide="sparkles"></i>
-          <span class="en">PIKAPIKA CLEAN</span>
-          ピカピカ・クリーンサービス
-        </div>
-        <div class="ft-info">
-          運営会社：株式会社クリーン<br>
-          〒100-0000 東京都ごみゼロ町 1-2-3<br>
-          対応エリア：東京都内全域・神奈川県東部・埼玉県南部
+  <!-- ===== Footer ===== -->
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="ftr-inner">
+        <div class="ftr-brand">
+          <div class="ftr-logo"><i data-lucide="sparkles"></i> <span><small>PIKAPIKA CLEAN</small>ピカピカクリーン</span></div>
+          <p class="ftr-info">
+            運営会社：株式会社ピカピカクリーン<br>
+            〒100-0000 東京都渋谷区クリーン町 1-2-3<br>
+            対応エリア：東京都内全域・神奈川県東部・埼玉県南部
+          </p>
         </div>
       </div>
-      <div class="ft-bottom">
-        &copy; 2025 Pikapika Clean Service. All Rights Reserved.
-      </div>
+      <div class="ftr-bottom">&copy; 2026 Pikapika Clean Service. All Rights Reserved.</div>
     </div>
   </footer>
 
   <script>
     lucide.createIcons();
-    
-    // Header Scroll
-    const header = document.getElementById('header');
+
+    // Header scroll
+    const hdr = document.getElementById('header');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) header.classList.add('scrolled');
-      else header.classList.remove('scrolled');
+      hdr.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // Mobile Menu
-    const menuToggle = document.getElementById('menuToggle');
-    const nav = document.querySelector('.nav');
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
+    // Mobile menu
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
       nav.classList.toggle('active');
     });
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        nav.classList.remove('active');
+      });
+    });
 
-    // Intersection Observer
+    // Scroll reveal
     const obs = new IntersectionObserver((entries, observer) => {
       entries.forEach(e => {
-        if(e.isIntersecting) {
+        if (e.isIntersecting) {
           e.target.classList.add('is-visible');
           observer.unobserve(e.target);
         }
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-    // FAQ Accordion
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-      const qBox = item.querySelector('.q-box');
-      qBox.addEventListener('click', () => {
-        item.classList.toggle('active');
+    // FAQ icon rotation
+    document.querySelectorAll('details').forEach(d => {
+      d.addEventListener('toggle', () => {
+        const icon = d.querySelector('.faq-icon');
+        if (icon) icon.style.transform = d.open ? 'rotate(180deg)' : 'rotate(0deg)';
       });
     });
   </script>
 </body>
 </html>
-

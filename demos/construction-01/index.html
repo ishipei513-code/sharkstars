@@ -6,10 +6,9 @@
   <title>匠工房 | 一級建築士と創るデザインリフォーム・リノベーション</title>
   <meta name="description" content="ただ新しくするだけではない、暮らしの質を高めるデザインリフォーム。地元密着の「匠工房」なら一級建築士があなたの理想を予算内で叶えます。フルリノベから水回りの改修まで。">
   
-  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -17,38 +16,42 @@
 <body>
   
   <!-- Header -->
-  <header class="header" id="header">
-    <div class="h-container">
+  <header class="hdr" id="header">
+    <div class="wrap hdr-wrap">
       <div class="logo">
-        <i data-lucide="home"></i>
-        <span>匠工房</span>
+        <a href="#">
+          <i data-lucide="home"></i>
+          <span>匠工房</span>
+        </a>
       </div>
-      <nav class="nav">
-        <ul class="nav-links">
-          <li><a href="#philosophy">私たちの想い</a></li>
-          <li><a href="#service">リフォームメニュー</a></li>
-          <li><a href="#works">施工事例</a></li>
-          <li><a href="#flow">ご相談の流れ</a></li>
-          <li><a href="#faq">よくある質問</a></li>
-        </ul>
-        <a href="#contact" class="btn btn-nav"><i data-lucide="mail"></i> 無料カタログ・ご相談</a>
+      <nav class="nav" id="nav">
+        <div class="nav-links">
+          <a href="#philosophy">私たちの想い</a>
+          <a href="#service">リフォームメニュー</a>
+          <a href="#works">施工事例</a>
+          <a href="#flow">ご相談の流れ</a>
+          <a href="#faq">よくある質問</a>
+        </div>
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn-primary btn-sm"><i data-lucide="mail" style="width:14px;height:14px;"></i> 無料カタログ・ご相談</a>
+        </div>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+      <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="美しいモダンリビング">
+      <img src="assist/images/hero.png" alt="美しいモダンリビング">
     </div>
     <div class="hero-mask"></div>
-    <div class="hero-content fade-target">
-      <div class="vertical-text">
-        <h1 class="hero-title">空間に、<br>新たな<span class="hero-hl">物語</span>を刻む。</h1>
-        <p class="hero-subtitle">ただ綺麗にするだけではない、<br>あなたの「これからの暮らし」をデザインする本格リノベーション。</p>
+    <div class="hero-content reveal">
+      <div class="hero-text-vert">
+        <h1 class="hero-title">空間に、<br>新たな<span class="hl">物語</span>を刻む。</h1>
+        <p class="hero-subtitle">ただ綺麗にするだけではない。<br>あなたの「これからの暮らし」をデザインする本格リノベーション。</p>
       </div>
       <div class="scroll-down">
         <span>SCROLL</span>
@@ -57,97 +60,91 @@
     </div>
   </section>
 
-  <!-- Trouble Section -->
-  <section class="section trouble" id="trouble">
-    <div class="l-container">
-      <div class="trouble-box fade-target">
-        <h2 class="sect-heading center">今の住まいに、こんなご不満はありませんか？</h2>
+  <!-- Trouble -->
+  <section class="sect trouble" id="trouble">
+    <div class="wrap">
+      <div class="trouble-box reveal">
+        <h2 class="sect-title center">今の住まいに、<br class="sp-only">こんなお悩みはありませんか？</h2>
         <div class="t-list">
-          <div class="t-item fade-target delay-1">
+          <div class="t-item reveal d1">
             <i data-lucide="snowflake"></i>
-            <p>冬になるとお風呂場や脱衣所が凍えるほど寒い。ヒートショックが心配…</p>
+            <p>冬になるとお風呂や脱衣所が凍えるほど寒い。ヒートショックが心配…</p>
           </div>
-          <div class="t-item fade-target delay-2">
+          <div class="t-item reveal d2">
             <i data-lucide="layout"></i>
-            <p>キッチンが壁を向いていて孤立している。家族と会話しながら料理したい…</p>
+            <p>キッチンが壁を向いて孤立している。家族と会話しながら料理したい…</p>
           </div>
-          <div class="t-item fade-target delay-3">
+          <div class="t-item reveal d3">
             <i data-lucide="building"></i>
-            <p>中古マンションを買ったけれど、昔ながらの細かく区切られた間取りが使いづらい…</p>
+            <p>中古マンションを買ったけれど、昔ながらの間仕切りが多くて使いづらい…</p>
           </div>
         </div>
-        <div class="t-answer fade-target delay-1">
-          <p><strong>そのお悩み、一級建築士と熟練の専属大工を抱える「匠工房」が、デザインと機能性を両立して解決します！</strong></p>
+        <div class="t-answer reveal d2">
+          <p><strong>そのお悩み、一級建築士と熟練の専属大工を抱える「匠工房」が、デザインと機能性を両立して解決します。</strong></p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Philosophy -->
-  <section class="section philosophy" id="philosophy">
-    <div class="l-container">
+  <section class="sect philosophy" id="philosophy">
+    <div class="wrap">
       <div class="phil-wrap">
-        <div class="phil-text fade-target">
-          <span class="en-label">P H I L O S O P H Y</span>
-          <h2 class="sect-heading">家への愛着を、<br>もう一度。</h2>
-          <div class="desc">
-            <p>リフォームとは、単に古くなった設備を新しいものに交換することではありません。「日々の家事の負担をどう減らすか」「休日に家族が自然と集まる空間をどう作るか」という、お客様の暮らしそのものを再設計することだと私たちは考えています。</p>
-            <p>匠工房には、デザイン力に優れた『一級建築士』と、ミリ単位の精度にこだわる『自社専属の熟練大工』が在籍しています。下請けへの丸投げは一切行いません。</p>
-            <p>建物の見えない構造（耐震性・断熱性）からシッカリと見直し、10年後、20年後も「この家にして本当に良かった」と思える、一生涯の愛着を持てる住まいをご提案いたします。</p>
+        <div class="phil-text reveal">
+          <span class="en-label">PHILOSOPHY</span>
+          <h2 class="sect-title">家への愛着を、<br>もう一度。</h2>
+          <div class="phil-desc">
+            <p>リフォームとは、単に古くなった設備を新しくすることではありません。「家事の負担をどう減らすか」「休日に家族が集まる空間をどう作るか」という、お客様の暮らしそのものを再設計することです。</p>
+            <p>匠工房には、デザイン力に優れた『一級建築士』と、ミリ単位の精度にこだわる『自社専属の熟練大工』が在籍。下請けへの丸投げは一切行いません。</p>
+            <p>見えない構造（耐震・断熱）からシッカリ見直し、末長く「この家で良かった」と思える住まいをご提案します。</p>
           </div>
           <div class="master-sign">
-            <p>代表建築士・一級建築士</p>
-            <p class="name">匠 建造</p>
+            <small>代表・一級建築士</small>
+            <strong>匠 建造</strong>
           </div>
         </div>
-        <div class="phil-img fade-target offset-delay">
-          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="設計図を引く建築士">
-          <div class="badge">自社<br><span class="num">大工</span></div>
+        <div class="phil-img reveal d1">
+          <img src="assist/images/architect.png" alt="設計図を引く建築士">
+          <div class="phil-badge">自社<br><span class="num">大工</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Service List -->
-  <section class="section service bg-gray" id="service">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <span class="en-label">S E R V I C E</span>
-        <h2 class="sect-heading">リフォームメニュー・料金目安</h2>
-        <p>※建物の広さや導入するメーカー設備により変動するため、プランニングとお見積り（無料）を通じて正確なご提案をいたします。</p>
+  <!-- Service -->
+  <section class="sect bg-gray" id="service">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:52px;">
+        <span class="en-label">SERVICE</span>
+        <h2 class="sect-title">リフォームメニュー</h2>
+        <p class="sect-sub">※広さや導入設備により変動するため、無料現場調査にて正確なプランをご提案します。</p>
       </div>
 
       <div class="srv-grid">
-        <div class="srv-card fade-target">
-          <div class="srv-img">
-            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="水回りリフォーム">
-          </div>
+        <div class="srv-card reveal">
+          <div class="srv-img"><img src="assist/images/carpenter.png" alt="水回りリフォーム"></div>
           <div class="srv-body">
             <h3><i data-lucide="droplets"></i> 水回りリフォーム</h3>
-            <p>最新のシステムキッチンへの交換や、保温性の高いユニットバスへの改装。家事動線を劇的に改善します。</p>
-            <div class="price">キッチン交換 <span>¥500,000〜</span></div>
+            <p>最新のシステムキッチンや、保温性の高いユニットバスへの改装。家事動線を劇的に改善します。</p>
+            <div class="srv-price">キッチン交換 <span>¥500,000〜</span></div>
           </div>
         </div>
         
-        <div class="srv-card fade-target delay-1">
-          <div class="srv-img">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="リビング・内装">
-          </div>
+        <div class="srv-card reveal d1">
+          <div class="srv-img"><img src="assist/images/hero.png" alt="リビング・内装"></div>
           <div class="srv-body">
             <h3><i data-lucide="sofa"></i> リビング・内装デザイン</h3>
-            <p>間仕切り壁を撤去して広大なLDKを創出したり、無垢材のフローリングや漆喰・珪藻土などの自然素材を施工します。</p>
-            <div class="price">LDK改装 <span>¥1,200,000〜</span></div>
+            <p>間仕切り壁を撤去し広大なLDKを創出。無垢材のフローリングや漆喰などの自然素材も対応します。</p>
+            <div class="srv-price">LDK改装 <span>¥1,200,000〜</span></div>
           </div>
         </div>
 
-        <div class="srv-card fade-target delay-2">
-          <div class="srv-img">
-            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="フルリノベーション">
-          </div>
+        <div class="srv-card reveal d2">
+          <div class="srv-img"><img src="assist/images/architect.png" alt="フルリノベーション"></div>
           <div class="srv-body">
-            <h3><i data-lucide="ruler"></i> フルリノベーション（まるごと）</h3>
-            <p>中古物件の購入時や、親との同居時など。骨組み（スケルトン）状態から、断熱性・耐震性を引き上げる根本的な大改修。</p>
-            <div class="price">マンション定額 <span>¥5,000,000〜</span></div>
+            <h3><i data-lucide="ruler"></i> フルリノベーション</h3>
+            <p>骨組み（スケルトン）状態から、断熱性・耐震性を引き上げる根本的な大改修プランです。</p>
+            <div class="srv-price">マンション <span>¥5,000,000〜</span></div>
           </div>
         </div>
       </div>
@@ -155,33 +152,33 @@
   </section>
 
   <!-- Works -->
-  <section class="section works" id="works">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <span class="en-label">W O R K S</span>
-        <h2 class="sect-heading">施工事例・お客様の声</h2>
+  <section class="sect works" id="works">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:52px;">
+        <span class="en-label">WORKS</span>
+        <h2 class="sect-title">施工事例</h2>
       </div>
 
       <div class="works-wrap">
-        <div class="work-item fade-target">
-          <div class="wa-img">
-            <div class="ba-tag">マンション フルリノベ</div>
-            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="施工事例1">
+        <div class="work-item reveal">
+          <div class="work-img">
+            <span class="work-tag">マンション フルリノベ</span>
+            <img src="assist/images/hero.png" alt="施工事例1">
           </div>
-          <div class="wa-text">
+          <div class="work-text">
             <h3>「暗くて狭い」から「光が巡る大空間」へ。アイランドキッチンのある暮らし。</h3>
-            <p>築30年の中古マンションを購入された30代ご夫婦からのご依頼。「細かく区切られた3LDK」の壁を大胆に取り払い、大空間の1LDKへとフルリノベーションしました。会話が弾むフルフラットのアイランドキッチンを採用し、週末には友人を招いてホームパーティーを楽しめる上質な空間が完成しました。</p>
+            <p>「細かく区切られた3LDK」の壁を大胆に取り払い、大空間の1LDKへとフルリノベーション。会話が弾むフルフラットのアイランドキッチンを採用し、週末には友人を招いてホームパーティーを楽しめる上質な空間が完成しました。</p>
           </div>
         </div>
 
-        <div class="work-item reverse fade-target delay-1">
-          <div class="wa-img">
-            <div class="ba-tag">戸建て 水回り＆断熱</div>
-            <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="施工事例2">
+        <div class="work-item work-reverse reveal d1">
+          <div class="work-img">
+            <span class="work-tag">戸建て 水回り＆断熱</span>
+            <img src="assist/images/carpenter.png" alt="施工事例2">
           </div>
-          <div class="wa-text">
-            <h3>冬の寒空とおさらば。高断熱仕様の浴室と、ホテルライクな洗面台</h3>
-            <p>「タイル張りのお風呂が寒すぎて限界」とお悩みだったご年配の施主様。浴室を最新のシステムバスに交換すると共に、窓をペアガラス（二重窓）に変更して徹底的な断熱対策を行いました。洗面台も造作（オーダーメイド）で設え、まるで高級ホテルのような優雅で暖かいパウダールームに生まれ変わりました。</p>
+          <div class="work-text">
+            <h3>冬の寒空とおさらば。高断熱仕様の浴室と、ホテルライクな洗面台。</h3>
+            <p>「タイル張りのお風呂が寒すぎて限界」とのお悩み。浴室を最新のシステムバスに交換し、窓をペアガラスにして徹底的に断熱。洗面台も造作（オーダーメイド）で設え、高級ホテルのような優雅で暖かいパウダールームに生まれ変わりました。</p>
           </div>
         </div>
       </div>
@@ -189,112 +186,115 @@
   </section>
 
   <!-- Flow -->
-  <section class="section flow bg-gray" id="flow">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <span class="en-label">F L O W</span>
-        <h2 class="sect-heading">ご相談から完成までの流れ</h2>
+  <section class="sect flow bg-gray" id="flow">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:52px;">
+        <span class="en-label">FLOW</span>
+        <h2 class="sect-title">ご相談〜完成までの流れ</h2>
       </div>
 
       <div class="flow-list">
-        <div class="flow-card fade-target">
-          <div class="f-num">01</div>
-          <h3>お問い合わせ・資料お取り寄せ</h3>
-          <p>まずはお電話かWEBから資料（施工事例集）をご請求いただくか、現状のお悩みをご相談ください。しつこい後追い営業は致しません。</p>
+        <div class="flow-card reveal">
+          <div class="flow-num">01</div>
+          <h3>お問い合わせ・資料請求</h3>
+          <p>まずはお電話かWEBから資料をご請求いただくか、現状のお悩みをご相談ください。しつこい営業は致しません。</p>
         </div>
-        <div class="flow-card fade-target delay-1">
-          <div class="f-num">02</div>
-          <h3>現地調査とライフスタイルのヒアリング</h3>
-          <p>一級建築士がご自宅に伺い、正確な採寸をします。その際、「どんな暮らしがしたいか」「何が一番不便か」を徹底的にお聞かせください。</p>
+        <div class="flow-card reveal d1">
+          <div class="flow-num">02</div>
+          <h3>現地調査とヒアリング</h3>
+          <p>一級建築士がご自宅に伺い正確に採寸。「どんな暮らしがしたいか」を徹底的にお聞かせください。</p>
         </div>
-        <div class="flow-card fade-target delay-2">
-          <div class="f-num">03</div>
-          <h3>3Dパースを用いたプラン・お見積りご提示</h3>
-          <p>設計図面だけでなく、完成後のイメージが直感的にわかる「3DCGパース」を作成してご提案します。ここまでは完全無料となります。</p>
+        <div class="flow-card reveal d2">
+          <div class="flow-num">03</div>
+          <h3>3Dパース・お見積り提示</h3>
+          <p>完成後のイメージが直感的にわかる「3DCGパース」を作成してご提案します。ここまでは完全無料です。</p>
         </div>
-        <div class="flow-card fade-target">
-          <div class="f-num">04</div>
-          <h3>ご契約・着工・自社大工による施工</h3>
-          <p>細部まで仕様が決まりましたらご契約となります。ご近所への挨拶回りを済ませた後、腕利きの自社大工が責任を持って工事を進めます。</p>
+        <div class="flow-card reveal">
+          <div class="flow-num">04</div>
+          <h3>ご契約・自社大工による施工</h3>
+          <p>仕様決定後にご契約。ご近所への挨拶回りを済ませ、腕利きの自社大工が責任を持って工事を進めます。</p>
         </div>
-        <div class="flow-card fade-target delay-1">
-          <div class="f-num">05</div>
-          <h3>お引き渡し・最長10年の保証システム</h3>
-          <p>厳しい社内検査とお客様立会い検査を経て完成です。施工箇所については独自の保証書を発行し、施工後も定期点検のご連絡を差し上げます。</p>
+        <div class="flow-card reveal d1">
+          <div class="flow-num">05</div>
+          <h3>お引き渡し・最長10年保証</h3>
+          <p>厳しい社内検査とお客様立会い検査を経て完成。独自の保証書を発行し、施工後も定期点検を行います。</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section faq" id="faq">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <span class="en-label">Q &amp; A</span>
-        <h2 class="sect-heading">よくあるご質問</h2>
+  <section class="sect" id="faq">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:48px;">
+        <span class="en-label">Q & A</span>
+        <h2 class="sect-title">よくあるご質問</h2>
       </div>
-      <div class="faq-accordion">
-        <details class="faq-item fade-target" open>
+
+      <div class="faq-list">
+        <details class="faq-item reveal" open>
           <summary>住みながらのリフォーム工事は可能ですか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
-          <div class="faq-ans"><p>はい、お住まいになりながらの工事も対応可能です。水回り（キッチン、お風呂、トイレ）を何日間使えなくなるか等、生活への影響を最小限に抑える工程表をご提示し、エリアを区切りながら順次作業を進める工夫をいたします。</p></div>
+          <div class="faq-ans"><p>はい、対応可能です。水回り（キッチン、お風呂、トイレ）を何日間使えなくなるか等、生活への影響を最小限に抑える工程表をご提示し、エリアを区切りながら順次作業を進めます。</p></div>
         </details>
-        <details class="faq-item fade-target">
-          <summary>他社と「相見積もり」をしているのですが構いませんか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
-          <div class="faq-ans"><p>はい、大歓迎です。リフォームは決して安くないお買い物ですので、複数社の提案や見積もりの詳細を比較検討されることを強く推奨しております。当社の提案内容に自信がありますので、じっくりとご検討ください。</p></div>
+        <details class="faq-item reveal">
+          <summary>他社と「相見積もり」をしてもいいですか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>大歓迎です。リフォームは決して安くないお買い物ですので、複数社の提案内容や見積もりの詳細を比較検討されることを強く推奨しております。</p></div>
         </details>
-        <details class="faq-item fade-target">
+        <details class="faq-item reveal">
           <summary>中古マンションの物件探しから手伝ってもらえますか？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
-          <div class="faq-ans"><p>ワンストップリノベーション（物件探し＋設計施工）のサービスも提供しております。提携の不動産エージェントと共に内見に同行し、「この壁は抜ける構造か」「希望のリノベが予算内で可能か」をその場でプロの目線でアドバイスいたします。</p></div>
+          <div class="faq-ans"><p>はい。提携の不動産エージェントと共に内見に同行し、「この壁は抜ける構造か」「希望のリノベが予算内で可能か」をその場でプロ目線でアドバイスするサービスも提供しております。</p></div>
         </details>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="section cta" id="contact">
-    <div class="l-container">
-      <div class="cta-inner fade-target">
+  <section class="sect cta" id="contact">
+    <div class="wrap">
+      <div class="cta-inner reveal">
         <div class="cta-head">
           <i data-lucide="home" class="cta-icon"></i>
-          <h2>理想の住まいへの第一歩。</h2>
-          <p>無料カタログの請求や、オンラインでのご相談も承っております。お気軽にお声がけください。</p>
+          <h2 class="cta-title">理想の住まいへの第一歩。</h2>
+          <p class="cta-desc">無料カタログの請求や、オンラインでのご相談も承っております。</p>
         </div>
         <div class="cta-actions">
-          <div class="tel-wrap">
-            <span class="tel-text">一級建築士が丁寧にお話を伺います</span>
-            <a href="tel:0120-000-000" class="tel-number"><i data-lucide="phone-call"></i> 0120-000-000</a>
-          </div>
-          <div class="btn-wrap">
-            <a href="#" class="btn btn-primary"><i data-lucide="book-open"></i> 無料カタログ・事例集を請求する</a>
-            <a href="#" class="btn btn-outline"><i data-lucide="mail"></i> WEBご相談フォーム</a>
-          </div>
+          <a href="tel:0120-000-000" class="btn btn-tel">
+            <i data-lucide="phone-call"></i>
+            <div><small>一級建築士が丁寧にお話を伺います</small><strong>0120-000-000</strong></div>
+          </a>
+          <a href="#" class="btn btn-primary btn-lg">
+            <i data-lucide="book-open"></i> 無料カタログ・ご相談
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="l-container">
-      <div class="ft-grid">
-        <div class="ft-brand">
-          <div class="logo">
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="ftr-grid">
+        <div class="ftr-brand">
+          <div class="ftr-logo">
             <i data-lucide="home"></i>
-            <span>匠工房（タクミコウボウ）</span>
+            <span>匠工房</span>
           </div>
-          <p class="address">〒100-0000<br>東京都千代田区〇〇 1-2-3<br>・一級建築士事務所 第XXXX号<br>・建設業許可（般-X）第XXXX号<br>・住宅リフォーム瑕疵保険 登録事業者</p>
+          <p class="ftr-meta">
+            〒100-0000 東京都千代田区〇〇 1-2-3<br>
+            ・一級建築士事務所 第XXXX号<br>
+            ・建設業許可（般-X）第XXXX号<br>
+            ・住宅リフォーム瑕疵保険 登録事業者
+          </p>
         </div>
-        <div class="ft-nav">
-          <ul class="ft-links">
-             <li><a href="#philosophy">私たちの想い</a></li>
-             <li><a href="#service">リフォームメニュー</a></li>
-             <li><a href="#works">施工事例</a></li>
-             <li><a href="#flow">ご相談の流れ</a></li>
-             <li><a href="#faq">よくある質問</a></li>
-          </ul>
+        <div class="ftr-nav">
+          <a href="#philosophy">私たちの想い</a>
+          <a href="#service">リフォームメニュー</a>
+          <a href="#works">施工事例</a>
+          <a href="#flow">ご相談の流れ</a>
+          <a href="#faq">よくある質問</a>
         </div>
       </div>
-      <div class="ft-bottom">
+      <div class="ftr-bottom">
         <p>&copy; 2026 TAKUMI KOUBOU. All Rights Reserved.</p>
       </div>
     </div>
@@ -303,22 +303,27 @@
   <script>
     lucide.createIcons();
     
-    // Header Scroll
-    const header = document.getElementById('header');
+    // Header
+    const hdr = document.getElementById('header');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) header.classList.add('scrolled');
-      else header.classList.remove('scrolled');
+      hdr.classList.toggle('scrolled', window.scrollY > 50);
     });
 
     // Mobile Menu
     const menuToggle = document.getElementById('menuToggle');
-    const nav = document.querySelector('.nav');
+    const nav = document.getElementById('nav');
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('active');
       nav.classList.toggle('active');
     });
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        nav.classList.remove('active');
+      });
+    });
 
-    // Intersection Observer
+    // Scroll reveal
     const obs = new IntersectionObserver((entries, observer) => {
       entries.forEach(e => {
         if(e.isIntersecting) {
@@ -327,13 +332,13 @@
         }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
     // Accordion
     document.querySelectorAll('details').forEach(detail => {
       detail.addEventListener('toggle', () => {
         const icon = detail.querySelector('.faq-icon');
-        icon.style.transform = detail.open ? 'rotate(180deg)' : 'rotate(0deg)';
+        if(icon) icon.style.transform = detail.open ? 'rotate(180deg)' : 'rotate(0deg)';
       });
     });
   </script>

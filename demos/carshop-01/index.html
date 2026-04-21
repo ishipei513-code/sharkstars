@@ -1,250 +1,280 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>株式会社マツダオートサービス | 車検・キズ修理・一般整備</title>
-  <meta name="description" content="ディーラー品質の整備を、街の車屋さんの価格で。国土交通省「指定工場」完備で最短1日車検が可能。ちょっとしたキズの修理からオイル交換まで、愛車のことなら何でもご相談ください。代車無料貸出。">
-  
-  <!-- Typography -->
+  <title>イイダオートサービス | 車検・板金・整備の指定工場</title>
+  <meta name="description" content="ディーラー品質の技術を、街の車屋さんの価格で。国土交通省「指定工場」だからできる最短1日車検。キズ・ヘコミ修理、オイル交換、タイヤ持ち込みOK。代車無料。名古屋の自動車整備はお任せください。">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assist/css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  
-  <!-- Top Banner -->
-  <div class="top-banner bg-orange text-white center">
-    <div class="l-container">
-      <p class="tb-text"><i data-lucide="info"></i> LINEからキズの写真を送るだけで、簡単・無料でお見積りいたします！</p>
+
+  <!-- ===== Top Banner ===== -->
+  <div class="top-bar">
+    <div class="wrap">
+      <p><i data-lucide="camera" style="width:14px;height:14px;"></i> LINEでキズの写真を送るだけ → 無料で見積り完了</p>
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="h-container">
+  <!-- ===== Header ===== -->
+  <header class="hdr" id="header">
+    <div class="hdr-inner">
       <div class="logo">
         <a href="#">
-          <span class="l-badge bg-navy text-white">指定工場</span>
-          <span class="l-text text-navy">マツダオートサービス</span>
+          <span class="logo-badge">指定工場</span>
+          <span class="logo-name">イイダオートサービス</span>
         </a>
       </div>
-      <nav class="nav">
-        <ul class="nav-links">
-          <li><a href="#strength">当社の強み</a></li>
-          <li><a href="#services">サービス内容</a></li>
-          <li><a href="#shaken">車検の流れ・料金</a></li>
-          <li><a href="#faq">よくある質問</a></li>
-        </ul>
-        <div class="h-contact sp-none">
-          <div class="h-tel text-navy">
-            <span class="sub">ご予約・お問い合わせ</span>
-            <span class="main"><i data-lucide="phone"></i> 0120-000-000</span>
-          </div>
-          <a href="#" class="btn btn-line">LINEで見積り</a>
+      <nav class="nav" id="nav">
+        <div class="nav-links">
+          <a href="#strength">選ばれる理由</a>
+          <a href="#services">サービス</a>
+          <a href="#shaken">車検・料金</a>
+          <a href="#faq">よくある質問</a>
+        </div>
+        <div class="nav-cta">
+          <a href="tel:0120-000-000" class="h-tel"><i data-lucide="phone" style="width:14px;height:14px;"></i> 0120-000-000</a>
+          <a href="#" class="btn-line-sm">LINE見積り</a>
         </div>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+      <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero bg-navy">
-    <div class="l-container hero-flex">
-      <div class="h-left fade-target">
-        <div class="h-catch text-orange font-inter">MAZDA AUTO SERVICE</div>
-        <h1 class="hero-title text-white">
-          ディーラー品質の整備を、<br>
-          <span class="text-orange line-marker">街の車屋さんの価格で。</span>
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assist/images/hero.png" alt="整備士が車を整備する様子">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="wrap">
+      <div class="hero-content reveal">
+        <span class="hero-sub">IIDA AUTO SERVICE — Since 1998</span>
+        <h1 class="hero-title">
+          ディーラー品質を、<br>
+          <span class="accent">街の価格</span>で。
         </h1>
-        <p class="hero-desc text-gray">
-          「車検費用が高すぎる」「キズを安く直したい」<br>
-          そんなお悩みにお応えします。国土交通省指定工場だからできる【最短1日車検】と、中間マージンを省いた直営価格。あなたの愛車を、国家資格整備士が確かな技術でお守りします。
+        <p class="hero-desc">
+          「車検費用が高すぎる」「ちょっとしたキズを安く直したい」——<br>
+          国土交通省の指定工場だからできる、最短1日車検と直営価格。<br>
+          あなたの愛車を、国家資格整備士の確かな手で。
         </p>
-        <div class="h-badges">
-          <span><i data-lucide="check-circle-2"></i> 代車無料貸出</span>
-          <span><i data-lucide="check-circle-2"></i> クレジットカード決済可</span>
-          <span><i data-lucide="check-circle-2"></i> 土日祝も営業</span>
+        <div class="hero-badges">
+          <span><i data-lucide="shield-check" style="width:16px;height:16px;"></i> 指定工場認定</span>
+          <span><i data-lucide="car" style="width:16px;height:16px;"></i> 代車無料</span>
+          <span><i data-lucide="calendar" style="width:16px;height:16px;"></i> 土日祝も営業</span>
         </div>
-        <div class="h-cta">
-          <a href="tel:0120-000-000" class="btn btn-outline border-white text-white btn-large">
-            <i data-lucide="phone-call"></i> お電話で相談
-          </a>
-          <a href="#" class="btn btn-orange btn-large pulse-anim">
-            <i data-lucide="calendar"></i> WEB入庫予約
-          </a>
+        <div class="hero-cta">
+          <a href="tel:0120-000-000" class="btn btn-ghost"><i data-lucide="phone-call"></i> 電話で相談</a>
+          <a href="#" class="btn btn-primary pulse"><i data-lucide="calendar"></i> WEB入庫予約</a>
         </div>
       </div>
-      <div class="h-right fade-target delay-1">
-        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="整備士が車を点検する様子" class="hero-img">
-        <div class="badge-float bg-white text-navy box-shadow">
-          <div class="bf-inner">
-            <span class="bf-num text-orange">25,000</span>台以上の<br>年間整備実績
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Diagonal background cut -->
-    <div class="hero-cut"></div>
-  </section>
-
-  <!-- Notice -->
-  <section class="notice bg-light">
-    <div class="l-container">
-      <div class="n-box border-navy">
-        <span class="n-label bg-navy text-white">お知らせ</span>
-        <p class="n-text">冬用タイヤへの交換予約を受付中です。11月末からは混雑が予想されますので、お早めのご予約をお願いいたします。</p>
+      <div class="hero-counter reveal d1">
+        <div class="counter-num">25,000<span>台+</span></div>
+        <div class="counter-label">年間整備実績</div>
       </div>
     </div>
   </section>
 
-  <!-- Strengths -->
-  <section class="section strength bg-light" id="strength">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <h2 class="sect-heading text-navy">安心してお任せいただける<br>3つの理由</h2>
+  <!-- ===== Marquee ===== -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>TOYOTA <span class="dot"></span></span>
+      <span>HONDA <span class="dot"></span></span>
+      <span>NISSAN <span class="dot"></span></span>
+      <span>MAZDA <span class="dot"></span></span>
+      <span>SUBARU <span class="dot"></span></span>
+      <span>SUZUKI <span class="dot"></span></span>
+      <span>DAIHATSU <span class="dot"></span></span>
+      <span>MITSUBISHI <span class="dot"></span></span>
+      <span>BMW <span class="dot"></span></span>
+      <span>BENZ <span class="dot"></span></span>
+      <span>TOYOTA <span class="dot"></span></span>
+      <span>HONDA <span class="dot"></span></span>
+      <span>NISSAN <span class="dot"></span></span>
+      <span>MAZDA <span class="dot"></span></span>
+      <span>SUBARU <span class="dot"></span></span>
+      <span>SUZUKI <span class="dot"></span></span>
+      <span>DAIHATSU <span class="dot"></span></span>
+      <span>MITSUBISHI <span class="dot"></span></span>
+      <span>BMW <span class="dot"></span></span>
+      <span>BENZ <span class="dot"></span></span>
+    </div>
+  </div>
+
+  <!-- ===== Notice ===== -->
+  <div class="notice">
+    <div class="wrap">
+      <div class="notice-inner">
+        <span class="n-badge">お知らせ</span>
+        <p>冬用タイヤへの交換予約を受付中。11月末から混雑が予想されるため、お早めのご予約を。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Strength ===== -->
+  <section class="sect" id="strength">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:52px;">
+        <span class="s-label">W H Y &nbsp; U S</span>
+        <h2 class="s-title">安心して預けられる、<br>3つの理由。</h2>
       </div>
 
-      <div class="s-grid">
-        <!-- 01 -->
-        <div class="s-card bg-white box-shadow fade-target">
-          <div class="s-img-wrap">
-            <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="指定工場">
-            <div class="s-num bg-orange text-white font-inter">01</div>
+      <div class="str-grid">
+        <div class="str-card reveal">
+          <div class="str-img">
+            <img src="assist/images/inspection.png" alt="指定工場の設備">
+            <div class="str-num">01</div>
           </div>
-          <div class="s-body">
-            <h3 class="text-navy">国土交通省「指定工場」完備</h3>
-            <p class="text-gray">国から基準を満たしていると認定された民間車検場（指定工場）です。陸運局に車を持ち込む必要がなく、自社内で車検の全工程が完了するため、最短1日での納車が可能です。</p>
-          </div>
-        </div>
-
-        <!-- 02 -->
-        <div class="s-card bg-white box-shadow fade-target delay-1">
-          <div class="s-img-wrap">
-            <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="丁寧な説明">
-            <div class="s-num bg-orange text-white font-inter">02</div>
-          </div>
-          <div class="s-body">
-            <h3 class="text-navy">勝手な整備は一切なしの事前見積り</h3>
-            <p class="text-gray">「頼んでいない部品まで交換されて費用が高くなった」ということは絶対にありません。必ず故障箇所をお客様と一緒に確認し、お見積りにご納得いただいてから作業を開始します。</p>
+          <div class="str-body">
+            <h3>国から認定された「指定工場」</h3>
+            <p>陸運局に車を持ち込む必要がない。自社の検査ラインで車検の全工程が完結するため、最短1日で車検が終わる。これが指定工場の強みだ。認証工場とは検査体制のレベルがまるで違う。</p>
           </div>
         </div>
 
-        <!-- 03 -->
-        <div class="s-card bg-white box-shadow fade-target delay-2">
-          <div class="s-img-wrap">
-            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="綺麗な代車">
-            <div class="s-num bg-orange text-white font-inter">03</div>
+        <div class="str-card reveal d1">
+          <div class="str-img">
+            <img src="assist/images/hero.png" alt="事前見積りの様子">
+            <div class="str-num">02</div>
           </div>
-          <div class="s-body">
-            <h3 class="text-navy">清潔な代車を「全車無料」で貸出</h3>
-            <p class="text-gray">車検や修理でお車をお預かりしている間、ご希望のお客様には代車を無料でご用意いたします。すべて禁煙車で、軽自動車からミニバンまで用途に合わせてお選びいただけます。</p>
+          <div class="str-body">
+            <h3>勝手な整備は、絶対にしない</h3>
+            <p>「頼んでないのに部品が交換されていて、請求が膨らんだ」——そんな経験はないだろうか。当社は必ず症状をお客様と一緒に確認し、見積りに納得いただいてから作業を始める。例外はない。</p>
+          </div>
+        </div>
+
+        <div class="str-card reveal d2">
+          <div class="str-img">
+            <img src="assist/images/finished.png" alt="清潔な代車">
+            <div class="str-num">03</div>
+          </div>
+          <div class="str-body">
+            <h3>代車は全車「無料・禁煙」</h3>
+            <p>車検や修理でお預かりしている間、代車を無料でお貸しする。すべて禁煙車。軽自動車からミニバンまで揃えているので、普段の生活リズムを崩さずに済む。</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="section services bg-navy text-white text-center" id="services">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <h2 class="sect-heading text-white">主なサービス内容</h2>
-        <p class="text-gray">日常のメンテナンスから重整備まで、車のことならすべて自社で対応可能です。</p>
+  <!-- ===== Services ===== -->
+  <section class="sect sect-dark" id="services">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:52px;">
+        <span class="s-label" style="color:rgba(255,255,255,0.4);">S E R V I C E S</span>
+        <h2 class="s-title" style="color:#fff;">車のことなら、何でも。</h2>
+        <p class="s-sub" style="color:rgba(255,255,255,0.6);">日常のオイル交換から、事故の重整備まで。すべて自社で完結。</p>
       </div>
 
       <div class="srv-grid">
-        <div class="srv-box fade-target border-gray">
-          <div class="srv-icon bg-orange"><i data-lucide="wrench"></i></div>
+        <div class="srv-card reveal">
+          <div class="srv-icon"><i data-lucide="wrench"></i></div>
           <h3>安心・格安車検</h3>
-          <p class="text-gray">法定56項目の点検に加え、次回の車検まで安心してお乗りいただけるよう予防整備を提案します。</p>
-          <a href="#shaken" class="srv-link text-orange">料金表を見る <i data-lucide="chevron-right"></i></a>
+          <p>法定56項目の点検に加え、次回車検まで安心して乗れるよう予防整備も提案する。</p>
+          <a href="#shaken" class="srv-link">料金表を見る <i data-lucide="chevron-right" style="width:14px;height:14px;"></i></a>
         </div>
 
-        <div class="srv-box fade-target delay-1 border-gray">
-          <div class="srv-icon bg-orange"><i data-lucide="pen-tool"></i></div>
-          <h3>キズ・ヘコミ修理（鈑金塗装）</h3>
-          <p class="text-gray">ちょっとした擦りキズから、事故による大きなヘコミまで。リサイクル部品を使った格安修理も可能です。</p>
-          <a href="#" class="srv-link text-orange">事例を見る <i data-lucide="chevron-right"></i></a>
+        <div class="srv-card reveal d1">
+          <div class="srv-icon"><i data-lucide="pen-tool"></i></div>
+          <h3>キズ・ヘコミ修理</h3>
+          <p>擦りキズから事故車まで。リサイクル部品を活用した格安修理にも対応。LINEで写真を送れば即見積り。</p>
+          <a href="#" class="srv-link">事例を見る <i data-lucide="chevron-right" style="width:14px;height:14px;"></i></a>
         </div>
 
-        <div class="srv-box fade-target delay-2 border-gray">
-          <div class="srv-icon bg-orange"><i data-lucide="power"></i></div>
-          <h3>オイル・タイヤ・バッテリー</h3>
-          <p class="text-gray">ネットで購入したタイヤやドラレコの「持ち込み取り付け」も大歓迎です。オイル交換は予約なしでもOK。</p>
-          <a href="#" class="srv-link text-orange">詳細を見る <i data-lucide="chevron-right"></i></a>
+        <div class="srv-card reveal d2">
+          <div class="srv-icon"><i data-lucide="circle-dot"></i></div>
+          <h3>タイヤ・オイル・バッテリー</h3>
+          <p>ネットで買ったタイヤやドラレコの「持ち込み取り付け」も大歓迎。オイル交換は予約なしでもOK。</p>
+          <a href="#" class="srv-link">詳細を見る <i data-lucide="chevron-right" style="width:14px;height:14px;"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Shaken Price & Flow -->
-  <section class="section shaken bg-light" id="shaken">
-    <div class="l-container">
+  <!-- ===== Shaken Price & Flow ===== -->
+  <section class="sect" id="shaken">
+    <div class="wrap">
       <div class="shaken-wrap">
-        <div class="sh-left fade-target">
-          <h2 class="sect-heading text-navy">車検基本料金表</h2>
-          <p class="text-gray mb-1">法定費用（自賠責保険・重量税・印紙代）を含んだ、車検にかかる最低限の料金目安です。<br>※追加の部品交換が必要な場合は別途お見積りとなります。</p>
-          
-          <div class="price-table box-shadow">
-            <div class="p-row p-head bg-navy text-white">
-              <div class="p-col">車種クラス</div>
-              <div class="p-col center-align">車検総額（最安）</div>
+        <div class="sh-left reveal">
+          <span class="s-label">P R I C E</span>
+          <h2 class="s-title" style="margin-bottom:16px;">車検基本料金</h2>
+          <p class="sh-note">法定費用（自賠責・重量税・印紙代）込み。追加部品交換は別途見積り。</p>
+
+          <div class="price-table">
+            <div class="pt-head">
+              <div class="pt-col">車種クラス</div>
+              <div class="pt-col r">車検総額（税込）</div>
             </div>
-            <div class="p-row bg-white">
-              <div class="p-col"><strong>軽自動車</strong><br><small>N-BOX / タント / スペーシア 等</small></div>
-              <div class="p-col center-align text-orange font-inter price-val">¥ 43,800<span>〜</span></div>
+            <div class="pt-row">
+              <div class="pt-col">
+                <strong>軽自動車</strong>
+                <small>N-BOX / タント / スペーシア 等</small>
+              </div>
+              <div class="pt-col r"><span class="price">¥43,800</span><span class="from">〜</span></div>
             </div>
-            <div class="p-row bg-light">
-              <div class="p-col"><strong>小型乗用車（〜1.0t）</strong><br><small>ヤリス / フィット / ルーミー 等</small></div>
-              <div class="p-col center-align text-orange font-inter price-val">¥ 54,900<span>〜</span></div>
+            <div class="pt-row alt">
+              <div class="pt-col">
+                <strong>小型乗用車（〜1.0t）</strong>
+                <small>ヤリス / フィット / ルーミー 等</small>
+              </div>
+              <div class="pt-col r"><span class="price">¥54,900</span><span class="from">〜</span></div>
             </div>
-            <div class="p-row bg-white">
-              <div class="p-col"><strong>中型乗用車（〜1.5t）</strong><br><small>プリウス / ヴォクシー / フリード 等</small></div>
-              <div class="p-col center-align text-orange font-inter price-val">¥ 63,100<span>〜</span></div>
+            <div class="pt-row">
+              <div class="pt-col">
+                <strong>中型乗用車（〜1.5t）</strong>
+                <small>プリウス / ヴォクシー / フリード 等</small>
+              </div>
+              <div class="pt-col r"><span class="price">¥63,100</span><span class="from">〜</span></div>
             </div>
-            <div class="p-row bg-light">
-              <div class="p-col"><strong>大型乗用車（〜2.0t）</strong><br><small>アルファード / ステップワゴン 等</small></div>
-              <div class="p-col center-align text-orange font-inter price-val">¥ 71,300<span>〜</span></div>
+            <div class="pt-row alt">
+              <div class="pt-col">
+                <strong>大型乗用車（〜2.0t）</strong>
+                <small>アルファード / ステップワゴン 等</small>
+              </div>
+              <div class="pt-col r"><span class="price">¥71,300</span><span class="from">〜</span></div>
             </div>
           </div>
-          <div class="t-note">※お車の年式が13年、18年を超える場合は重量税が異なります。詳細はお問い合わせください。</div>
+          <p class="pt-footnote">※13年・18年超の車両は重量税が異なる。詳細はお問い合わせを。</p>
         </div>
 
-        <div class="sh-right fade-target delay-1">
-          <h2 class="sect-heading text-navy">車検の流れ</h2>
+        <div class="sh-right reveal d1">
+          <span class="s-label">F L O W</span>
+          <h2 class="s-title" style="margin-bottom:16px;">車検の流れ</h2>
           <ol class="flow-list">
             <li>
-              <span class="f-num bg-orange text-white font-inter">01</span>
+              <span class="f-num">01</span>
               <div>
                 <strong>無料見積り・ご予約</strong>
-                <p>WEB予約はお安くなる割引がございます。車検証をお手元にご用意の上ご連絡ください。</p>
+                <p>WEB予約で割引あり。車検証をお手元にご用意の上、ご連絡を。</p>
               </div>
             </li>
             <li>
-              <span class="f-num bg-orange text-white font-inter">02</span>
+              <span class="f-num">02</span>
               <div>
-                <strong>お車のお預かり・立会点検</strong>
-                <p>ご予約日時にご来店ください。リフトアップして、お客様と一緒に下回りなどの状態を確認します。</p>
+                <strong>お預かり・立会い点検</strong>
+                <p>リフトアップして下回りの状態をお客様と一緒に確認する。</p>
               </div>
             </li>
             <li>
-              <span class="f-num bg-orange text-white font-inter">03</span>
+              <span class="f-num">03</span>
               <div>
-                <strong>整備作業・完成検査</strong>
-                <p>国家資格を持った整備士が確実に作業を行います。追加整備が発生する場合は必ずご連絡します。</p>
+                <strong>整備・完成検査</strong>
+                <p>国家資格整備士が作業。追加整備が発生する場合は必ず事前連絡。</p>
               </div>
             </li>
             <li>
-              <span class="f-num bg-orange text-white font-inter">04</span>
+              <span class="f-num">04</span>
               <div>
                 <strong>ご精算・お引き渡し</strong>
-                <p>最短1日（朝お預かり→夕方お渡し）で完了します。費用をお支払いいただき、そのままお帰りいただけます。</p>
+                <p>最短1日（朝預かり→夕方渡し）で完了。その場でお帰りいただける。</p>
               </div>
             </li>
           </ol>
@@ -253,115 +283,151 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section faq" id="faq">
-    <div class="l-container">
-      <div class="sect-header center fade-target">
-        <h2 class="sect-heading text-navy">よくあるご質問</h2>
+  <!-- ===== FAQ ===== -->
+  <section class="sect sect-warm" id="faq">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:48px;">
+        <span class="s-label">Q & A</span>
+        <h2 class="s-title">よくある質問</h2>
       </div>
 
-      <div class="faq-list max-w-800 mx-auto fade-target delay-1">
-        <details class="faq-accordion bg-white box-shadow" open>
-          <summary class="text-navy">ネットで購入したタイヤやドラレコの持ち込み取り付けは可能ですか？ <i data-lucide="chevron-down"></i></summary>
-          <div class="faq-content text-gray">
-            はい、大歓迎です！Amazonや楽天で購入したパーツを当店へ直送いただくことも可能です（事前にご連絡をお願いします）。車種やパーツによって工賃が異なりますので、事前にLINE等でお見積りをお願いいたします。
-          </div>
+      <div class="faq-list">
+        <details class="faq-item reveal" open>
+          <summary>ネットで買ったタイヤやドラレコの持ち込み取り付けはできる？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>大歓迎。Amazonや楽天で買ったパーツを当店に直送してもらうことも可能だ（事前連絡をお願いしたい）。車種やパーツによって工賃が変わるので、LINE等で事前見積りを推奨。</p></div>
         </details>
-        <details class="faq-accordion bg-white box-shadow">
-          <summary class="text-navy">車検が切れてしまっているのですが、依頼できますか？ <i data-lucide="chevron-down"></i></summary>
-          <div class="faq-content text-gray">
-            はい、対応可能です。公道を走ることができないため、当社の積載車（レッカー）でお車を引き取りに伺うか、お客様の方で市役所にて「仮ナンバー」を取得していただく必要がございます。まずはご相談ください。
-          </div>
+
+        <details class="faq-item reveal">
+          <summary>車検が切れている車でも頼める？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>対応可能。公道を走れないため、当社の積載車（レッカー）で引き取りに伺うか、市役所で「仮ナンバー」を取得してもらう形になる。まずはご相談を。</p></div>
         </details>
-        <details class="faq-accordion bg-white box-shadow">
-          <summary class="text-navy">支払いにクレジットカードやPayPayは使えますか？ <i data-lucide="chevron-down"></i></summary>
-          <div class="faq-content text-gray">
-            はい、ご利用いただけます（VISA, Mastercard, JCB, AMEX, PayPay対応）。ただし、車検費用のうち「法定費用（自賠責保険・重量税・印紙代）」に関しては、現金でのみのお支払いとなりますのでご了承ください。
-          </div>
+
+        <details class="faq-item reveal">
+          <summary>クレジットカードやPayPayは使える？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>使える（VISA / Mastercard / JCB / AMEX / PayPay 対応）。ただし車検費用のうち「法定費用（自賠責・重量税・印紙代）」は現金のみとなる点をご了承いただきたい。</p></div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>輸入車（外車）の車検や修理もできる？<i data-lucide="chevron-down" class="faq-icon"></i></summary>
+          <div class="faq-ans"><p>対応可能。BMW、メルセデス・ベンツ、フォルクスワーゲン等の一般整備・車検は日常的に受けている。ただし特殊な診断機が必要な修理や、純正部品の取り寄せに時間がかかるケースがあるため、事前にご相談いただきたい。</p></div>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- Sticky Mobile Footer -->
-  <div class="fixed-cta sp-only box-shadow">
-    <div class="fc-inner">
-      <a href="tel:0120-000-000" class="fc-btn bg-white text-navy border-right">
-        <i data-lucide="phone-call" class="text-orange"></i>
-        <span>電話で無料相談</span>
-      </a>
-      <a href="#" class="fc-btn bg-orange text-white border-right">
-        <i data-lucide="calendar"></i>
-        <span>WEB予約</span>
-      </a>
-      <a href="#" class="fc-btn bg-line text-white">
-        <i data-lucide="camera"></i>
-        <span>キズ写真見積り</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer bg-navy text-white">
-    <div class="l-container">
-      <div class="f-top">
-        <div class="f-info">
-          <div class="f-logo">
-            <span class="l-badge bg-white text-navy">指定工場</span>マツダオートサービス
-          </div>
-          <p class="text-gray mb-1">
-            中部運輸局長指定民間車検工場<br>
-            〒450-0000 愛知県名古屋市自動車区 1-2-3<br>
-            営業時間：9:00 - 18:00 (年中無休)
-          </p>
-          <div class="f-tel">
-            <i data-lucide="phone"></i> 0120-000-000
-          </div>
-        </div>
-        
-        <div class="f-map">
-          <!-- Placeholder map box -->
-          <div class="map-ph bg-light text-navy center-align box-shadow">
-            <i data-lucide="map-pin"></i> Google Map
-          </div>
+  <!-- ===== CTA ===== -->
+  <section class="sect sect-dark" id="contact">
+    <div class="wrap">
+      <div class="cta-box reveal">
+        <h2 class="cta-title">愛車のこと、<br>気軽に相談してほしい。</h2>
+        <p class="cta-desc">「車検いくら？」「このキズ直せる？」——<br>そんな一言からで大丈夫。見積り・相談は完全無料。</p>
+        <div class="cta-actions">
+          <a href="tel:0120-000-000" class="btn btn-ghost">
+            <i data-lucide="phone-call"></i>
+            <div><small>ご予約・お問い合わせ</small><strong>0120-000-000</strong></div>
+          </a>
+          <a href="#" class="btn btn-primary">
+            <i data-lucide="calendar"></i>
+            <div><small>24時間受付</small><strong>WEB入庫予約</strong></div>
+          </a>
+          <a href="#" class="btn btn-line">
+            <i data-lucide="camera"></i>
+            <div><small>キズの写真を送るだけ</small><strong>LINE見積り</strong></div>
+          </a>
         </div>
       </div>
-      
-      <div class="f-bottom border-top text-gray center-align pl-1">
-        &copy; 2025 Mazda Auto Service. All Rights Reserved.
+    </div>
+  </section>
+
+  <!-- ===== Sticky Mobile Bar ===== -->
+  <div class="fixed-bar" id="fixedBar">
+    <a href="tel:0120-000-000" class="fb-item">
+      <i data-lucide="phone-call" style="width:18px;height:18px;"></i>
+      <span>電話</span>
+    </a>
+    <a href="#" class="fb-item fb-accent">
+      <i data-lucide="calendar" style="width:18px;height:18px;"></i>
+      <span>WEB予約</span>
+    </a>
+    <a href="#" class="fb-item fb-line">
+      <i data-lucide="camera" style="width:18px;height:18px;"></i>
+      <span>LINE見積</span>
+    </a>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="ftr-top">
+        <div class="ftr-brand">
+          <div class="ftr-logo">
+            <span class="logo-badge">指定工場</span> イイダオートサービス
+          </div>
+          <p class="ftr-meta">
+            中部運輸局長指定民間車検工場<br>
+            〒450-0000 愛知県名古屋市自動車区 1-2-3<br>
+            営業時間：9:00 - 18:00（年中無休）
+          </p>
+          <div class="ftr-tel"><i data-lucide="phone" style="width:16px;height:16px;"></i> 0120-000-000</div>
+        </div>
+        <div class="ftr-map">
+          <i data-lucide="map-pin"></i> Google Mapが開きます
+        </div>
+      </div>
+      <div class="ftr-bottom">
+        &copy; 2026 IIDA AUTO SERVICE. All Rights Reserved.
       </div>
     </div>
   </footer>
 
   <script>
     lucide.createIcons();
-    
-    // Header Scroll
-    const header = document.getElementById('header');
+
+    // Header scroll
+    const hdr = document.getElementById('header');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 40) header.classList.add('scrolled');
-      else header.classList.remove('scrolled');
+      hdr.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // Mobile Menu
-    const menuToggle = document.getElementById('menuToggle');
-    const nav = document.querySelector('.nav');
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
+    // Mobile menu
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
       nav.classList.toggle('active');
     });
+    // Close menu on link click
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        nav.classList.remove('active');
+      });
+    });
 
-    // Intersection Observer
+    // Scroll reveal
     const obs = new IntersectionObserver((entries, observer) => {
       entries.forEach(e => {
-        if(e.isIntersecting) {
+        if (e.isIntersecting) {
           e.target.classList.add('is-visible');
           observer.unobserve(e.target);
         }
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-target').forEach(el => obs.observe(el));
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // FAQ icon rotation
+    document.querySelectorAll('details').forEach(d => {
+      d.addEventListener('toggle', () => {
+        const icon = d.querySelector('.faq-icon');
+        if (icon) icon.style.transform = d.open ? 'rotate(180deg)' : 'rotate(0deg)';
+      });
+    });
+
+    // Fixed bar show on scroll
+    const fixedBar = document.getElementById('fixedBar');
+    window.addEventListener('scroll', () => {
+      fixedBar.classList.toggle('show', window.scrollY > 600);
+    });
   </script>
 </body>
 </html>
-
