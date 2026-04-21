@@ -1,0 +1,220 @@
+---
+interface Props {
+  no: string;
+  title: string;
+  artist: string;
+  year: string;
+  medium: string;
+  dimensions: string;
+}
+const { no, title, artist, year, medium, dimensions } = Astro.props;
+---
+
+<figure class="piece" itemscope itemtype="https://schema.org/VisualArtwork">
+  <span class="wire" aria-hidden="true"></span>
+
+  <!-- 寸法線（建築ドローイング風） -->
+  <svg class="dim dim-w" viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true">
+    <g stroke="currentColor" fill="none" stroke-width="0.6">
+      <line class="dim-tick" x1="0.5" y1="2" x2="0.5" y2="14" />
+      <line class="dim-tick" x1="199.5" y1="2" x2="199.5" y2="14" />
+      <line class="dim-line" x1="0.5" y1="8" x2="199.5" y2="8" stroke-dasharray="200" stroke-dashoffset="200" />
+    </g>
+    <text class="dim-text mono" x="100" y="18" text-anchor="middle">1,120 MM</text>
+  </svg>
+
+  <svg class="dim dim-h" viewBox="0 0 20 200" preserveAspectRatio="none" aria-hidden="true">
+    <g stroke="currentColor" fill="none" stroke-width="0.6">
+      <line class="dim-tick" x1="2" y1="0.5" x2="14" y2="0.5" />
+      <line class="dim-tick" x1="2" y1="199.5" x2="14" y2="199.5" />
+      <line class="dim-line" x1="8" y1="0.5" x2="8" y2="199.5" stroke-dasharray="200" stroke-dashoffset="200" />
+    </g>
+    <text class="dim-text mono" x="18" y="100" writing-mode="tb" text-anchor="middle">1,620 MM</text>
+  </svg>
+
+  <div class="frame">
+    <div class="canvas-inner">
+      <svg viewBox="0 0 100 140" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <filter id="paintNoise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" />
+            <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.15 0" />
+          </filter>
+          <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#eae6de" />
+            <stop offset="58%" stop-color="#c7c3bd" />
+            <stop offset="100%" stop-color="#a09b94" />
+          </linearGradient>
+          <filter id="bleed" x="-10%" y="-10%" width="120%" height="120%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0.3" />
+          </filter>
+        </defs>
+        <rect width="100" height="140" fill="url(#field)" />
+        <rect width="100" height="140" filter="url(#paintNoise)" />
+
+        <!-- インクの滴り（スクロールで延伸） -->
+        <path
+          class="ink-path"
+          d="M 50 22 L 50 60 Q 49.4 62 50 64 L 50 82 Q 49 84 50 86 L 50.2 102 Q 49.6 105 50.1 108 L 50 125"
+          stroke="#0a0a0a"
+          stroke-width="0.9"
+          fill="none"
+          stroke-linecap="round"
+          stroke-dasharray="200"
+          stroke-dashoffset="180"
+          filter="url(#bleed)"
+        />
+        <circle class="ink-pool" cx="50.2" cy="125" r="0" fill="#0a0a0a" />
+      </svg>
+    </div>
+  </div>
+
+  <figcaption class="caption" itemprop="description">
+    <div class="caption-strip">
+      <p class="mono cap-no">№ {no}</p>
+    </div>
+    <h2 class="cap-title" itemprop="name">{title}</h2>
+    <p class="cap-artist">
+      <span itemprop="creator">{artist}</span>
+      <span class="slash">／</span>
+      <span itemprop="dateCreated" class="mono">{year}</span>
+    </p>
+    <p class="cap-meta mono">
+      <span itemprop="artMedium">{medium}</span>
+    </p>
+    <p class="cap-dim mono">{dimensions}</p>
+  </figcaption>
+</figure>
+
+<style>
+  .piece {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 36px;
+  }
+
+  .wire {
+    position: absolute;
+    top: -50vh;
+    left: calc(var(--frame-w, 180px) * 0.5);
+    width: 1px;
+    height: 50vh;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(10, 10, 10, 0.15) 8%,
+      rgba(10, 10, 10, 0.45) 60%,
+      rgba(10, 10, 10, 0.6) 100%
+    );
+    transform: translateX(-0.5px);
+    transform-origin: top;
+  }
+
+  .frame {
+    width: var(--frame-w, 180px);
+    aspect-ratio: 5 / 7;
+    background: #f3efe8;
+    padding: 6px;
+    position: relative;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.5) inset,
+      0 22px 36px -18px rgba(0, 0, 0, 0.38),
+      0 6px 10px -6px rgba(0, 0, 0, 0.22),
+      0 1px 0 rgba(0, 0, 0, 0.08);
+  }
+  .frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(10, 10, 10, 0.12);
+    pointer-events: none;
+  }
+
+  .canvas-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(10, 10, 10, 0.08);
+  }
+  .canvas-inner svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* 寸法線 */
+  .dim {
+    position: absolute;
+    color: rgba(10, 10, 10, 0.62);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .dim-w {
+    width: var(--frame-w, 180px);
+    height: 22px;
+    top: -26px;
+    left: 0;
+  }
+  .dim-h {
+    width: 22px;
+    height: calc((var(--frame-w, 180px)) * 7 / 5);
+    top: 0;
+    left: calc(var(--frame-w, 180px) + 6px);
+  }
+  .dim-text {
+    font-size: 7px;
+    letter-spacing: 0.28em;
+    fill: currentColor;
+  }
+
+  /* Caption */
+  .caption {
+    padding-top: 2px;
+    min-width: 200px;
+    max-width: 240px;
+    border-left: 1px solid var(--hair);
+    padding-left: 20px;
+    margin-left: 40px;
+  }
+
+  .caption-strip {
+    margin-bottom: 14px;
+  }
+  .cap-no {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: var(--ink);
+    opacity: 0.7;
+  }
+
+  .cap-title {
+    font-family: "Cormorant", "Didot", serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    letter-spacing: 0.01em;
+  }
+
+  .cap-artist {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .cap-artist .slash {
+    opacity: 0.4;
+    margin: 0 4px;
+  }
+
+  .cap-meta,
+  .cap-dim {
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    opacity: 0.62;
+    line-height: 1.6;
+    text-transform: uppercase;
+  }
+</style>

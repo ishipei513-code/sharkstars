@@ -1,0 +1,773 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ConcreteWall from "../components/ConcreteWall.astro";
+import ArtPiece from "../components/ArtPiece.astro";
+import MercuryDrop from "../components/MercuryDrop.astro";
+
+const exhibitionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ExhibitionEvent",
+  name: "AN EXHIBITION OF CONCRETE SILENCE",
+  description:
+    "THE WALL 開廊記念展。打ち放しコンクリートの静寂と、ただ一枚の絵画による空間構成。",
+  startDate: "2026-04-01",
+  endDate: "2026-07-31",
+  eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  location: {
+    "@type": "Place",
+    name: "THE WALL",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "JP",
+      addressRegion: "福岡県",
+      addressLocality: "福岡市中央区",
+    },
+  },
+  organizer: {
+    "@type": "Organization",
+    name: "THE WALL",
+  },
+};
+
+const artists = [
+  { no: "01", name: "Yuu Nakamura", jp: "中村 有", works: "Ink, gesso on linen", origin: "Kyoto / 1984" },
+  { no: "02", name: "Sei Oda", jp: "織田 星", works: "Oil, concrete pigment", origin: "Fukuoka / 1991" },
+  { no: "03", name: "Marek Varga", jp: "マレク・ヴァルガ", works: "Graphite, beeswax", origin: "Budapest / 1978" },
+  { no: "04", name: "Ren Hoshino", jp: "星野 蓮", works: "Mercury leaf on paper", origin: "Tokyo / 1989" },
+];
+---
+
+<Layout
+  title="THE WALL — An Exhibition of Concrete Silence | 福岡現代美術ギャラリー"
+  description="打ち放しコンクリートの壁に吊られた、たった一枚の絵。福岡のコンテンポラリー・アート・ギャラリー THE WALL。現代美術・ミニマリズム・建築美の常設展示。"
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(exhibitionJsonLd)} slot="head" />
+
+  <ConcreteWall />
+
+  <main class="stage">
+    <!-- 上部メタ情報（常時固定） -->
+    <header class="stage-header">
+      <p class="hdr-left mono">
+        <span class="m-brand">THE WALL</span>
+        <span class="m-dot">·</span>
+        <span class="m-loc">FUKUOKA</span>
+      </p>
+      <p class="hdr-right mono">
+        <span>№ 001</span>
+        <span class="m-dot">·</span>
+        <span>MMXXVI</span>
+        <span class="m-dot">·</span>
+        <span>SPRING</span>
+      </p>
+    </header>
+
+    <!-- ================================== -->
+    <!-- HERO (pinned)                      -->
+    <!-- ================================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-piece" style="--frame-w: 168px;">
+        <ArtPiece
+          no="001"
+          title="Silence, I."
+          artist="Yuu Nakamura"
+          year="2026"
+          medium="Ink, gesso on linen"
+          dimensions="H 1,620 × W 1,120 mm"
+        />
+      </div>
+
+      <aside class="hero-mercury" aria-hidden="true">
+        <MercuryDrop />
+      </aside>
+
+      <h1
+        id="hero-title"
+        class="hero-title"
+        aria-label="THE WALL — An Exhibition of Concrete Silence"
+      >
+        <span class="line-wrap"><span class="line">THE</span></span>
+        <span class="line-wrap"><span class="line">WALL<span class="asterisk">*</span></span></span>
+      </h1>
+
+      <aside class="hero-meta">
+        <p class="meta-no mono">*An Exhibition</p>
+        <p class="meta-sub mono">of Concrete Silence</p>
+        <p class="meta-dates mono">
+          <time datetime="2026-04-01">01.04</time>
+          <span class="m-dash">—</span>
+          <time datetime="2026-07-31">31.07.2026</time>
+        </p>
+      </aside>
+
+      <!-- SEO向け説明（pin中に滲んで浮かぶ） -->
+      <div class="hero-intro" aria-hidden="false">
+        <p class="jp">
+          THE WALL は福岡市中央区に 2026 年春に開廊した
+          コンテンポラリー・アート・ギャラリーです。
+        </p>
+        <p class="jp">
+          打ち放しコンクリートの壁面そのものを展示装置として捉え、
+          一度にただ一枚の絵画を、異常な余白の中に吊り下げます。
+        </p>
+      </div>
+
+      <div class="hero-scroll mono" aria-hidden="true">
+        <span class="s-label">Walk the wall</span>
+        <span class="s-arrow">↓</span>
+      </div>
+    </section>
+
+    <!-- ================================== -->
+    <!-- MANIFESTO (crack reveal)           -->
+    <!-- ================================== -->
+    <section class="manifesto" id="about" aria-labelledby="manifesto-title">
+      <div class="manifesto-grid">
+        <div class="manifesto-label mono">
+          <span>§ 01</span>
+          <span class="m-dot">·</span>
+          <span>STATEMENT</span>
+        </div>
+
+        <div class="manifesto-text">
+          <h2 id="manifesto-title" class="m-title">
+            <span class="jp">壁のための、ひとつの絵。</span>
+          </h2>
+          <p class="jp">
+            美術館は、作品の群れを並べる倉庫ではない。
+            壁とは、見る者の呼吸と作品の沈黙とが出会う、たったひとつの舞台である。
+          </p>
+          <p class="jp">
+            THE WALL は、常に <strong>一作品のみ</strong> を展示する。
+            他のいかなる装飾も、導線も、解説も持ち込まない。
+            ただ打ち放しコンクリートの肌理と、細い糸で吊られたカンバスだけを置く。
+          </p>
+          <p class="jp">
+            それは、都市の中に突き放された、極小の静寂である。
+          </p>
+        </div>
+      </div>
+
+      <!-- コンクリートの裂け目オーバーレイ -->
+      <svg class="manifesto-overlay" viewBox="0 0 1200 800" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <filter id="m-grain">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="5" />
+            <feColorMatrix values="0 0 0 0 0.12  0 0 0 0 0.12  0 0 0 0 0.12  0 0 0 0.35 0" />
+          </filter>
+          <filter id="m-blotch">
+            <feTurbulence type="fractalNoise" baseFrequency="0.006" numOctaves="2" seed="9" />
+            <feColorMatrix values="0 0 0 0 0.05  0 0 0 0 0.05  0 0 0 0 0.05  0 0 0 0.18 0" />
+          </filter>
+          <clipPath id="crack-clip" clipPathUnits="userSpaceOnUse">
+            <path d="M 200 0 L 240 140 L 200 260 L 260 380 L 220 500 L 300 620 L 260 800 L 1200 800 L 1200 0 Z" />
+            <path d="M 0 0 L 200 0 L 240 140 L 200 260 L 260 380 L 220 500 L 300 620 L 260 800 L 0 800 Z" />
+          </clipPath>
+        </defs>
+        <g>
+          <rect width="1200" height="800" fill="#bdb9b4" />
+          <rect width="1200" height="800" filter="url(#m-blotch)" />
+          <rect width="1200" height="800" filter="url(#m-grain)" />
+        </g>
+        <path
+          class="crack-path"
+          d="M 200 0 L 240 140 L 200 260 L 260 380 L 220 500 L 300 620 L 260 800"
+          stroke="#0a0a0a"
+          stroke-width="1.2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-dasharray="1200"
+          stroke-dashoffset="1200"
+        />
+      </svg>
+    </section>
+
+    <!-- ================================== -->
+    <!-- EXHIBITION DETAIL                  -->
+    <!-- ================================== -->
+    <section class="exhibition" id="exhibition" aria-labelledby="exh-title">
+      <div class="exh-grid">
+        <p class="exh-label mono">§ 02 · CURRENT EXHIBITION</p>
+        <article class="exh-body" itemscope itemtype="https://schema.org/ExhibitionEvent">
+          <h2 id="exh-title" class="exh-title" itemprop="name">
+            <span class="italic">An Exhibition</span> <span class="jp">の</span><br />
+            <span>Concrete Silence</span>
+          </h2>
+          <p class="exh-lead jp" itemprop="description">
+            開廊記念展。打ち放しコンクリートの壁面に、ただ一枚、
+            中村 有による黒インクの絵画が吊られる。
+          </p>
+          <dl class="exh-dl mono">
+            <div>
+              <dt>DATES</dt>
+              <dd>
+                <time datetime="2026-04-01" itemprop="startDate">01.04.2026</time>
+                <span class="m-dash">—</span>
+                <time datetime="2026-07-31" itemprop="endDate">31.07.2026</time>
+              </dd>
+            </div>
+            <div>
+              <dt>HOURS</dt>
+              <dd>TUE — SUN　11:00 — 19:00</dd>
+            </div>
+            <div>
+              <dt>ADMISSION</dt>
+              <dd>¥ 1,200 / Student ¥ 800</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================================== -->
+    <!-- ARTISTS — 糸が降りてくる           -->
+    <!-- ================================== -->
+    <section class="artists" id="artists" aria-labelledby="artists-title">
+      <div class="artists-head">
+        <p class="mono art-label">§ 03 · ARTISTS</p>
+        <h2 id="artists-title" class="art-title">
+          <span class="italic">Four</span> <span class="jp">の</span> <span class="italic">hands</span>
+        </h2>
+      </div>
+
+      <ul class="artist-list">
+        {
+          artists.map((a) => (
+            <li class="artist-row">
+              <span class="artist-wire" aria-hidden="true"></span>
+              <div class="artist-tag">
+                <p class="mono artist-no">№ {a.no}</p>
+                <p class="artist-name italic">{a.name}</p>
+                <p class="jp artist-jp">{a.jp}</p>
+              </div>
+              <div class="artist-meta mono">
+                <span>{a.works}</span>
+                <span class="m-dash">—</span>
+                <span>{a.origin}</span>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <!-- ================================== -->
+    <!-- VISIT — 彫り込み                   -->
+    <!-- ================================== -->
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <p class="mono visit-label">§ 04 · VISIT</p>
+      <h2 id="visit-title" class="visit-inscribed" aria-label="THE WALL, Fukuoka">
+        <span>THE&nbsp;WALL</span>
+      </h2>
+
+      <div class="visit-body">
+        <address class="jp visit-addr" itemprop="address">
+          〒 810-0001<br />
+          福岡県福岡市中央区 天神 X-Y-Z<br />
+          THE WALL 1F
+        </address>
+        <dl class="visit-dl mono">
+          <div>
+            <dt>HOURS</dt>
+            <dd>11:00 — 19:00</dd>
+          </div>
+          <div>
+            <dt>CLOSED</dt>
+            <dd>MON</dd>
+          </div>
+          <div>
+            <dt>ACCESS</dt>
+            <dd>地下鉄 天神駅 徒歩 4 分</dd>
+          </div>
+          <div>
+            <dt>EMAIL</dt>
+            <dd><a href="mailto:hello@thewall.gallery">hello@thewall.gallery</a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p class="mono foot-brand">THE WALL © MMXXVI</p>
+      <p class="mono foot-meta">Fukuoka, Japan · Est. 2026</p>
+    </footer>
+  </main>
+</Layout>
+
+<script>
+  import "../scripts/init.ts";
+</script>
+
+<style>
+  .stage {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .stage-header {
+    position: fixed;
+    top: 28px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 20;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+  .stage-header p {
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    color: var(--ink);
+    opacity: 0.72;
+  }
+  .hdr-left .m-brand {
+    font-weight: 400;
+  }
+  .m-dot {
+    display: inline-block;
+    margin: 0 10px;
+    opacity: 0.5;
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 720px;
+    z-index: 2;
+  }
+
+  .hero-piece {
+    position: absolute;
+    top: 18%;
+    right: 16.5%;
+    z-index: 3;
+    will-change: transform, opacity;
+  }
+
+  .hero-mercury {
+    position: absolute;
+    right: 7.5%;
+    bottom: 8%;
+    width: 118px;
+    height: 118px;
+    z-index: 3;
+  }
+
+  .hero-title {
+    position: absolute;
+    left: 7%;
+    bottom: 9%;
+    font-family: "Cormorant", "Didot", "Bodoni 72", serif;
+    font-weight: 300;
+    font-size: clamp(88px, 15vw, 220px);
+    line-height: 0.88;
+    letter-spacing: -0.02em;
+    z-index: 3;
+  }
+  .hero-title .line-wrap {
+    display: block;
+    overflow: hidden;
+  }
+  .hero-title .line {
+    display: inline-block;
+    --fill: 0%;
+    background: linear-gradient(
+      0deg,
+      #e8e4dc 0%,
+      #9a9791 calc(var(--fill) * 0.6),
+      #4a4845 calc(var(--fill) * 0.85),
+      #0a0a0a var(--fill),
+      #0a0a0a 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* mercury sheen at fill edge */
+    filter:
+      drop-shadow(0 0 0.1px rgba(10, 10, 10, 0.4));
+  }
+  .hero-title .asterisk {
+    font-size: 0.28em;
+    vertical-align: top;
+    margin-left: 0.12em;
+    opacity: 0.7;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    color: var(--ink);
+  }
+
+  .hero-meta {
+    position: absolute;
+    left: 42%;
+    bottom: 14%;
+    color: var(--ink);
+    z-index: 3;
+    border-left: 1px solid var(--hair);
+    padding-left: 22px;
+    transform: translateY(8px);
+  }
+  .meta-no,
+  .meta-sub {
+    font-family: "Cormorant", serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    opacity: 0.82;
+  }
+  .meta-no { margin-bottom: 4px; }
+  .meta-sub { margin-bottom: 16px; }
+  .meta-dates {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    opacity: 0.78;
+  }
+  .m-dash {
+    display: inline-block;
+    margin: 0 8px;
+    opacity: 0.5;
+  }
+
+  .hero-intro {
+    position: absolute;
+    left: 7%;
+    top: 34%;
+    max-width: 320px;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .hero-intro p {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    opacity: 0.82;
+    margin-bottom: 10px;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    right: 40px;
+    bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--ink);
+    opacity: 0.6;
+    z-index: 4;
+  }
+  .s-arrow {
+    font-size: 14px;
+    animation: drift 2.6s ease-in-out infinite;
+  }
+  @keyframes drift {
+    0%, 100% { transform: translateY(-1px); opacity: 0.55; }
+    50%      { transform: translateY(4px);  opacity: 0.95; }
+  }
+
+  /* ============ MANIFESTO ============ */
+  .manifesto {
+    position: relative;
+    width: 100%;
+    min-height: 110vh;
+    padding: 28vh 7% 18vh;
+    z-index: 3;
+  }
+  .manifesto-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    pointer-events: none;
+  }
+  .manifesto-grid {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 60px;
+    max-width: 980px;
+    margin-left: auto;
+  }
+  .manifesto-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--ink);
+    opacity: 0.72;
+    padding-top: 8px;
+    border-top: 1px solid var(--hair);
+  }
+  .manifesto-text {
+    max-width: 620px;
+  }
+  .m-title {
+    font-family: "Cormorant", "Didot", serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(32px, 3.6vw, 54px);
+    line-height: 1.1;
+    margin-bottom: 44px;
+  }
+  .manifesto-text p {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 2.3;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    color: var(--ink);
+  }
+  .manifesto-text strong {
+    font-weight: 400;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  /* ============ EXHIBITION ============ */
+  .exhibition {
+    position: relative;
+    padding: 22vh 7% 18vh;
+    z-index: 3;
+  }
+  .exh-grid {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 60px;
+    max-width: 980px;
+  }
+  .exh-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    opacity: 0.72;
+    padding-top: 8px;
+    border-top: 1px solid var(--hair);
+  }
+  .exh-title {
+    font-family: "Cormorant", "Didot", serif;
+    font-weight: 300;
+    font-size: clamp(40px, 5.2vw, 76px);
+    line-height: 1;
+    margin-bottom: 36px;
+    letter-spacing: -0.01em;
+  }
+  .exh-title .italic { font-style: italic; }
+  .exh-lead {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 2.2;
+    max-width: 560px;
+    margin-bottom: 48px;
+    opacity: 0.92;
+  }
+  .exh-dl {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+  }
+  .exh-dl > div {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    padding: 14px 0;
+    border-top: 1px solid var(--hair);
+  }
+  .exh-dl > div:last-child { border-bottom: 1px solid var(--hair); }
+  .exh-dl dt { opacity: 0.6; }
+
+  /* ============ ARTISTS ============ */
+  .artists {
+    position: relative;
+    padding: 20vh 7% 20vh;
+    z-index: 3;
+  }
+  .artists-head {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+    max-width: 980px;
+  }
+  .art-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    opacity: 0.72;
+    padding-top: 8px;
+    border-top: 1px solid var(--hair);
+  }
+  .art-title {
+    font-family: "Cormorant", serif;
+    font-weight: 300;
+    font-size: clamp(36px, 4.6vw, 64px);
+    line-height: 1;
+  }
+  .art-title .italic { font-style: italic; }
+
+  .artist-list {
+    list-style: none;
+    display: grid;
+    gap: 100px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .artist-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 160px 1fr 1fr;
+    align-items: start;
+    gap: 60px;
+    padding-top: 28px;
+  }
+  .artist-wire {
+    position: absolute;
+    top: -60px;
+    left: 196px;
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(10, 10, 10, 0.1) 20%,
+      rgba(10, 10, 10, 0.55) 100%
+    );
+    transform-origin: top;
+  }
+  .artist-tag {
+    padding-left: 20px;
+    border-left: 1px solid var(--hair);
+  }
+  .artist-no {
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    opacity: 0.55;
+    margin-bottom: 10px;
+  }
+  .artist-name {
+    font-family: "Cormorant", serif;
+    font-style: italic;
+    font-size: clamp(22px, 2.4vw, 32px);
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+  }
+  .artist-jp {
+    font-size: 12px;
+    opacity: 0.7;
+    letter-spacing: 0.1em;
+  }
+  .artist-meta {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    opacity: 0.7;
+    line-height: 1.8;
+    padding-top: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* ============ VISIT — 彫り込み ============ */
+  .visit {
+    position: relative;
+    padding: 22vh 7% 20vh;
+    z-index: 3;
+  }
+  .visit-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    opacity: 0.72;
+    padding-top: 8px;
+    border-top: 1px solid var(--hair);
+    max-width: 160px;
+    margin-bottom: 30px;
+  }
+  .visit-inscribed {
+    --carve: 1;
+    font-family: "Cormorant", "Didot", serif;
+    font-weight: 300;
+    font-size: clamp(70px, 12vw, 180px);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: transparent;
+    text-shadow:
+      calc(-1px * var(--carve)) calc(-1px * var(--carve)) 0 rgba(255, 255, 255, 0.18),
+      calc(1.5px * var(--carve)) calc(1.5px * var(--carve)) 2px rgba(0, 0, 0, 0.55),
+      0 0 1px rgba(0, 0, 0, 0.9);
+    -webkit-text-stroke: 0.5px rgba(10, 10, 10, 0.85);
+    margin-bottom: 80px;
+  }
+
+  .visit-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 860px;
+  }
+  .visit-addr {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 2.1;
+    letter-spacing: 0.08em;
+    font-style: normal;
+  }
+  .visit-dl {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+  }
+  .visit-dl > div {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    padding: 12px 0;
+    border-top: 1px solid var(--hair);
+  }
+  .visit-dl > div:last-child { border-bottom: 1px solid var(--hair); }
+  .visit-dl dt { opacity: 0.55; }
+  .visit-dl a {
+    text-decoration: underline;
+    text-decoration-color: rgba(10, 10, 10, 0.3);
+    text-underline-offset: 3px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot {
+    position: relative;
+    z-index: 3;
+    padding: 60px 40px 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    opacity: 0.7;
+    border-top: 1px solid var(--hair);
+    margin: 0 7%;
+  }
+
+  @media (max-width: 900px) {
+    .stage-header { padding: 0 20px; top: 18px; }
+    .stage-header p { font-size: 9px; letter-spacing: 0.22em; }
+    .hero-piece { right: 10%; top: 14%; }
+    .hero-mercury { right: 8%; bottom: 28%; width: 92px; height: 92px; }
+    .hero-title { left: 5%; bottom: 8%; font-size: clamp(72px, 22vw, 140px); }
+    .hero-meta { left: 50%; bottom: 19%; padding-left: 14px; }
+    .hero-intro { top: 42%; max-width: 60%; }
+    .hero-scroll { right: 18px; bottom: 18px; }
+    .manifesto-grid,
+    .exh-grid,
+    .artists-head { grid-template-columns: 1fr; gap: 24px; }
+    .manifesto { padding: 20vh 5% 14vh; }
+    .exhibition, .artists, .visit { padding: 16vh 5% 14vh; }
+    .artist-row { grid-template-columns: 1fr; gap: 18px; }
+    .artist-wire { left: 20px; }
+    .visit-body { grid-template-columns: 1fr; gap: 40px; }
+    .foot { margin: 0 5%; }
+  }
+</style>

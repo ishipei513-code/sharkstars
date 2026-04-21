@@ -1,0 +1,154 @@
+---
+// 液体水銀の雫 — Three.js + GLSL（uScroll 連動で吸着/拡散）
+---
+
+<canvas id="mercury-canvas" aria-hidden="true"></canvas>
+
+<script>
+  import * as THREE from "three";
+
+  const canvas = document.getElementById("mercury-canvas") as HTMLCanvasElement | null;
+  if (canvas) {
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: true,
+      alpha: true,
+      premultipliedAlpha: false,
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+
+    const vertex = /* glsl */ `
+      varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = vec4(position, 1.0);
+      }
+    `;
+
+    const fragment = /* glsl */ `
+      precision highp float;
+      varying vec2 vUv;
+      uniform float uTime;
+      uniform float uScroll;
+      uniform vec2 uRes;
+
+      float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+      float noise(vec2 p) {
+        vec2 i = floor(p);
+        vec2 f = fract(p);
+        vec2 u = f * f * (3.0 - 2.0 * f);
+        return mix(
+          mix(hash(i), hash(i + vec2(1.0, 0.0)), u.x),
+          mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), u.x),
+          u.y
+        );
+      }
+      float fbm(vec2 p) {
+        float v = 0.0;
+        float a = 0.5;
+        mat2 rot = mat2(0.8, -0.6, 0.6, 0.8);
+        for (int i = 0; i < 6; i++) {
+          v += a * noise(p);
+          p = rot * p * 2.02;
+          a *= 0.5;
+        }
+        return v;
+      }
+
+      float blobField(vec2 p, float energy) {
+        float t = uTime * (0.35 + energy * 0.5);
+        float spread = 1.0 + energy * 0.7;
+        vec2 c1 = vec2(sin(t) * 0.22, cos(t * 0.87) * 0.18) * spread;
+        vec2 c2 = vec2(cos(t * 1.1) * 0.28, sin(t * 0.63) * 0.22) * spread;
+        vec2 c3 = vec2(sin(t * 0.45 + 2.0) * 0.18, cos(t * 0.5 + 1.0) * 0.14) * spread;
+        float r1 = 0.34 + 0.03 * sin(t * 1.4);
+        float r2 = 0.27 + 0.04 * cos(t * 1.1);
+        float r3 = 0.22 + 0.02 * sin(t * 1.7);
+        return r1 / length(p - c1) + r2 / length(p - c2) + r3 / length(p - c3);
+      }
+
+      void main() {
+        vec2 uv = vUv - 0.5;
+        uv.x *= uRes.x / uRes.y;
+
+        float energy = uScroll;
+        vec2 warp = vec2(
+          fbm(uv * 2.4 + uTime * 0.12),
+          fbm(uv * 2.4 - uTime * 0.10 + 13.0)
+        ) - 0.5;
+        vec2 wp = uv + warp * (0.08 + energy * 0.10);
+
+        float field = blobField(wp, energy);
+        float th = mix(1.9, 1.35, energy);
+        float mask = smoothstep(1.2, th, field);
+
+        float n1 = fbm(wp * 4.5 + uTime * 0.18);
+        float spec = smoothstep(0.56, 0.92, pow(n1, 1.6));
+        float rim = smoothstep(1.9, 1.4, field);
+
+        vec3 dark = vec3(0.035);
+        vec3 steel = vec3(0.62, 0.62, 0.63);
+        vec3 bright = vec3(0.96, 0.96, 0.97);
+
+        vec3 col = mix(dark, steel, smoothstep(0.2, 0.75, n1));
+        col = mix(col, bright, spec);
+        col = mix(col, vec3(0.9), rim * 0.18);
+        col *= vec3(0.98, 0.99, 1.02);
+
+        float edgeDark = 1.0 - smoothstep(1.25, 2.5, field);
+        col *= mix(0.55, 1.0, 1.0 - edgeDark * 0.6);
+        col += (hash(wp * 800.0 + uTime) - 0.5) * 0.04;
+
+        gl_FragColor = vec4(col, mask);
+      }
+    `;
+
+    const material = new THREE.ShaderMaterial({
+      vertexShader: vertex,
+      fragmentShader: fragment,
+      transparent: true,
+      uniforms: {
+        uTime: { value: 0 },
+        uScroll: { value: 0 },
+        uRes: { value: new THREE.Vector2(1, 1) },
+      },
+    });
+
+    // Expose for ScrollTrigger orchestration
+    (window as any).__wallMercury = material;
+
+    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), material);
+    scene.add(mesh);
+
+    const resize = () => {
+      const rect = canvas.getBoundingClientRect();
+      const w = Math.max(rect.width, 1);
+      const h = Math.max(rect.height, 1);
+      renderer.setSize(w, h, false);
+      material.uniforms.uRes.value.set(w, h);
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    const t0 = performance.now();
+    const loop = () => {
+      material.uniforms.uTime.value = (performance.now() - t0) / 1000;
+      renderer.render(scene, camera);
+      requestAnimationFrame(loop);
+    };
+    loop();
+  }
+</script>
+
+<style>
+  #mercury-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.28))
+      drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
+  }
+</style>
