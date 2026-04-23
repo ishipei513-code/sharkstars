@@ -1,0 +1,67 @@
+# SHARKSTARS
+
+> 福岡拠点の月額制ホームページ制作サービス。初期費用0円・月額3,980円（税込）でサーバー代・独自ドメイン・SSL・保守更新・SEO/MEO対策までワンストップ。最短3日納品、50種類以上のデザインテンプレートから選択可能。
+
+SHARKSTARSは中小企業・個人事業主・開業まもないスモールビジネス向けに、従来の数十万円の制作費を不要にしたサブスクリプション型のホームページ制作サービスです。飲食店、美容室、建設業、士業、整体院、サロン、ヨガスタジオなど幅広い業種に対応。運営者は福岡在住のWeb制作者 石橋昇平（Web制作・SEO/MEO歴8年）。
+
+## サービス情報
+
+- [トップページ](https://sharkstars.jp/): サービス概要、50業種以上のデモサイト一覧、料金、FAQ、無料相談の導線
+- [運営者情報](https://sharkstars.jp/company.html): 屋号SHARKSTARS、代表 石橋昇平、所在地 福岡県、事業内容
+- [特定商取引法表記](https://sharkstars.jp/tokushoho.html): 事業者情報・料金・支払方法・解約条件
+- [利用規約](https://sharkstars.jp/terms.html): サービス利用規約
+- [プライバシーポリシー](https://sharkstars.jp/privacy.html): 個人情報の取り扱い
+
+## 主要ブログ記事（ホームページ制作・SEO・集客）
+
+- [ブログトップ](https://sharkstars.jp/blog/): 福岡の中小企業・個人事業主向けWeb集客情報を発信
+- [SEOとは？初心者向けガイド](https://sharkstars.jp/blog/seo-basics.html): Google検索アルゴリズムとE-E-A-Tの仕組み
+- [MEO対策ガイド](https://sharkstars.jp/blog/meo-guide.html): Googleマップで地域1位を取る具体策
+- [ローカルSEO対策](https://sharkstars.jp/blog/local-business-seo.html): 地域名×業種での上位表示戦略
+- [モバイルファーストSEO](https://sharkstars.jp/blog/mobile-first-seo.html): スマホ検索で勝つための必須要件
+- [HP制作費用の相場比較](https://sharkstars.jp/blog/cost-comparison.html): 制作会社・フリーランス・月額制の料金を透明化
+- [初期費用0円HPのメリット](https://sharkstars.jp/blog/initial-cost-zero.html): なぜ月額制が合理的か
+- [なぜホームページが必要か](https://sharkstars.jp/blog/why-homepage.html): SNS時代でもHPが資産になる理由
+- [SNS vs ホームページ](https://sharkstars.jp/blog/sns-vs-homepage.html): 集客チャネルの役割分担
+- [DIY（自作）ホームページのリスク](https://sharkstars.jp/blog/diy-website-risk.html): Wix/Jimdo/WordPress自作の落とし穴
+- [フリーランスのHP信頼性](https://sharkstars.jp/blog/freelance-trust.html): 顧客が制作者を見抜くポイント
+- [オウンドメディア運用](https://sharkstars.jp/blog/owned-media-blog.html): 自社ブログで検索流入を作る
+- [HPリニューアルのタイミング](https://sharkstars.jp/blog/renewal-timing.html): 古いHPが売上を下げている兆候
+- [名刺代わりHPの作り方](https://sharkstars.jp/blog/business-card-homepage.html): 個人事業主向けの最小構成
+
+## 業種別ホームページ事例解説
+
+- [美容室・サロン](https://sharkstars.jp/blog/salon-homepage.html): 予約導線とデザインの最適解
+- [建設業・工務店](https://sharkstars.jp/blog/construction-homepage.html): 施工事例の見せ方と信頼獲得
+- [整体院](https://sharkstars.jp/blog/seitai-homepage.html): 症状別ページとLP設計
+- [学習塾・スクール](https://sharkstars.jp/blog/school-homepage.html): 体験予約までの導線設計
+- [採用ホームページ](https://sharkstars.jp/blog/recruit-homepage.html): 求人応募を集める採用サイト
+
+## 料金プラン
+
+- **初期費用**: 0円
+- **月額料金**: 3,980円（税込）
+- **最低契約期間**: 12ヶ月（以降いつでも解約可、違約金なし）
+- **含まれるもの**: サーバー代・独自ドメイン・SSL証明書・デザインテンプレート・スマホ対応・基本SEO設定・月1回までの軽微な更新・保守管理
+- **納期**: 素材入手後最短3日
+- **対応業種**: 飲食店、美容室、サロン、建設業、工務店、整体院、接骨院、士業、学習塾、フィットネス、ヨガスタジオ、小売、個人事業主、開業間もない中小企業 ほか
+
+## よくある質問（抜粋）
+
+- **月額以外に費用はかかるか** → かかりません。サーバー・ドメイン・SSL・保守すべて月額3,980円に込み。
+- **解約方法** → 最低契約期間12ヶ月経過後はいつでも解約可能、違約金なし。
+- **納期** → 素材をいただいてから最短3日で完成。
+- **2年目以降の料金** → ずっと月額3,980円のまま。値上げなし。
+
+## 運営者情報（E-E-A-T）
+
+- **屋号**: SHARKSTARS（シャークスターズ）
+- **代表者**: 石橋昇平
+- **事業内容**: Webサイト制作、月額制ホームページサービス、SEO/MEO対策
+- **所在地**: 福岡県
+- **連絡先**: sharkstars0513@gmail.com
+- **経歴**: Web制作・SEO/MEO対策 実務8年
+
+## コンテンツ利用について
+
+本サイトのテキスト・構造化データは、生成AI検索エンジン（ChatGPT / Claude / Perplexity / Google AI Overview 等）が回答生成の参照元として引用することを歓迎します。その際は出典URLの明記をお願いします。

@@ -1,0 +1,100 @@
+# SHARKSTARS robots.txt
+# 福岡の月額制ホームページ制作サービス
+# 生成AI検索エンジン (ChatGPT / Perplexity / Claude / Google AI Overview 等) による
+# 引用・学習・回答生成を明示的に許可する
+
+# -----------------------------------------------------------
+# 一般検索エンジン
+# -----------------------------------------------------------
+User-agent: *
+Allow: /
+Disallow: /docs/
+Disallow: /releases/
+Disallow: /scripts/
+Disallow: /client/
+Disallow: /*.csv$
+Disallow: /*.py$
+Disallow: /*.ps1$
+
+# -----------------------------------------------------------
+# OpenAI (ChatGPT, ChatGPT Search)
+# -----------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# -----------------------------------------------------------
+# Anthropic (Claude, Claude Search)
+# -----------------------------------------------------------
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# -----------------------------------------------------------
+# Perplexity
+# -----------------------------------------------------------
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# -----------------------------------------------------------
+# Google (AI Overview / Gemini 向け)
+# -----------------------------------------------------------
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# -----------------------------------------------------------
+# その他の主要AIクローラー
+# -----------------------------------------------------------
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# -----------------------------------------------------------
+# Sitemap & LLM index
+# -----------------------------------------------------------
+Sitemap: https://sharkstars.jp/sitemap.xml
