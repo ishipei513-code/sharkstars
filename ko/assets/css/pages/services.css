@@ -1,0 +1,326 @@
+/* ============================================
+   KOJP — Services Page Styles
+   DNA: Linear + Plus X + Toss
+   ============================================ */
+
+/* ── Services Hero ────────────────────────── */
+
+.services-hero {
+  padding: 160px var(--gutter-mobile) var(--space-3xl);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(250, 250, 247, 0.92) 0%,
+      rgba(244, 241, 236, 0.82) 60%,
+      rgba(168, 197, 214, 0.14) 100%
+    ),
+    var(--services-hero-bg, none) center/cover no-repeat;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.services-hero__label {
+  font-size: var(--font-size-small);
+  color: var(--color-accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-md);
+}
+
+.services-hero__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-lg);
+}
+
+.services-hero__sub {
+  font-size: var(--font-size-body-lg);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body-lg);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  .services-hero {
+    padding: 180px var(--gutter-desktop) var(--space-4xl);
+  }
+}
+
+
+/* ── Service Cards Grid [Tamburins editorial] ─ */
+
+.services-list {
+  gap: var(--space-xl);
+}
+
+.services-list__card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.services-list__card:hover {
+  border-color: var(--color-accent-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.services-list__card--wide {
+  grid-column: 1 / -1;
+}
+
+/* Photo strip at top (editorial feel) */
+.services-list__thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-base-secondary);
+}
+
+.services-list__card--wide .services-list__thumb {
+  aspect-ratio: 21 / 9;
+}
+
+.services-list__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.85) contrast(0.95);
+  transition: transform 0.8s ease-out, filter var(--transition-slow);
+}
+
+.services-list__card:hover .services-list__thumb img {
+  transform: scale(1.04);
+  filter: saturate(1) contrast(1);
+}
+
+.services-list__thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(250, 250, 247, 0) 60%,
+    rgba(250, 250, 247, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+/* Icon badge overlay on thumbnail */
+.services-list__icon {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(250, 250, 247, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent-primary);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(58, 61, 69, 0.08);
+  transition: color var(--transition-fast);
+}
+
+.services-list__card:hover .services-list__icon {
+  color: var(--color-cta);
+}
+
+.services-list__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.services-list__tag {
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+  letter-spacing: 0.08em;
+  font-weight: var(--font-weight-medium);
+  margin: 0;
+}
+
+.services-list__title {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: var(--line-height-h3);
+  margin: 0;
+}
+
+.services-list__desc {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+.services-list__points {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-sm) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.services-list__points li {
+  font-size: var(--font-size-small);
+  color: var(--color-text-sub);
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.services-list__points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 1px;
+  background: var(--color-accent-primary);
+}
+
+.services-list__link {
+  margin-top: var(--space-md);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent-primary);
+  transition: color var(--transition-fast);
+}
+
+.services-list__card:hover .services-list__link {
+  color: var(--color-cta);
+}
+
+
+/* ── Why Integrated Grid ──────────────────── */
+
+.integrated-grid {
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+.integrated-card {
+  padding: var(--space-xl) var(--space-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: left;
+}
+
+.integrated-card__num {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent-primary);
+  line-height: 1;
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.02em;
+}
+
+.integrated-card__title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+  line-height: var(--line-height-h3);
+}
+
+.integrated-card__desc {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+
+/* ── Synergy Flow ─────────────────────────── */
+
+.synergy-flow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.synergy-flow__step {
+  padding: var(--space-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.synergy-flow__step--result {
+  background: var(--color-highlight);
+  border-color: var(--color-accent-primary);
+}
+
+.synergy-flow__label {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent-primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.synergy-flow__step--result .synergy-flow__label {
+  color: var(--color-cta);
+}
+
+.synergy-flow__text {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+.synergy-flow__step--result .synergy-flow__text {
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.synergy-flow__arrow {
+  display: flex;
+  justify-content: center;
+  color: var(--color-text-light);
+}
+
+
+/* ── Responsive ───────────────────────────── */
+
+@media (max-width: 768px) {
+  .services-list__card {
+    grid-template-columns: 48px 1fr;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+  }
+
+  .services-list__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .services-list__title {
+    font-size: 1.25rem;
+  }
+}

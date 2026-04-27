@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ============================================
+       Korean (Default Language) — 5 pages
+       ============================================ -->
+
+  <!-- Korean Top Page -->
+  <url>
+    <loc>https://sharkstars.jp/ko/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/" />
+  </url>
+
+  <!-- Korean Pricing -->
+  <url>
+    <loc>https://sharkstars.jp/ko/pricing/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/pricing/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/pricing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/pricing/" />
+  </url>
+
+  <!-- Korean Free Diagnosis -->
+  <url>
+    <loc>https://sharkstars.jp/ko/free-diagnosis/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/free-diagnosis/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/free-diagnosis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/free-diagnosis/" />
+  </url>
+
+  <!-- Korean Contact -->
+  <url>
+    <loc>https://sharkstars.jp/ko/contact/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/contact/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/contact/" />
+  </url>
+
+  <!-- Korean Legal Privacy -->
+  <url>
+    <loc>https://sharkstars.jp/ko/legal/privacy/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/legal/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/legal/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/legal/privacy/" />
+  </url>
+
+  <!-- Korean Services (6 pages: top + 5 details) -->
+  <url>
+    <loc>https://sharkstars.jp/ko/services/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/services/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/services/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/services/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/services/seo/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/services/seo/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/services/seo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/services/seo/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/services/aeo/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/services/aeo/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/services/aeo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/services/aeo/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/services/geo/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/services/geo/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/services/geo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/services/geo/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/services/meo/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/services/meo/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/services/meo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/services/meo/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/services/localization/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/services/localization/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/services/localization/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/services/localization/" />
+  </url>
+
+  <!-- Korean About / FAQ / Process -->
+  <url>
+    <loc>https://sharkstars.jp/ko/about/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/about/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/about/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/faq/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/faq/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/faq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/faq/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/process/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/process/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/process/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/process/" />
+  </url>
+
+  <!-- Korean About Team / Case Studies / Comparison / Legal Terms -->
+  <url>
+    <loc>https://sharkstars.jp/ko/about/team/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/about/team/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/about/team/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/about/team/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/case-studies/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/case-studies/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/case-studies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/case-studies/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/comparison/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/comparison/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/comparison/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/comparison/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/legal/terms/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/legal/terms/" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/legal/terms/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/legal/terms/" />
+  </url>
+
+  <!-- NOTE: Korean blog content is published on Naver Blog (external), not in this site.
+       Japanese blog entries below are JA-only. -->
+
+
+  <!-- ============================================
+       Japanese (Secondary Language) — 19 pages
+       ============================================ -->
+
+  <!-- Japanese Top Page -->
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/" />
+  </url>
+
+  <!-- Japanese About -->
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/about/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/about/team/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Japanese Services -->
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/services/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/services/seo/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/services/aeo/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/services/geo/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/services/meo/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/services/localization/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Japanese Pricing / Free Diagnosis / Contact (have KO counterparts) -->
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/pricing/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/pricing/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/pricing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/pricing/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/free-diagnosis/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/free-diagnosis/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/free-diagnosis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/free-diagnosis/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/contact/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/contact/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/contact/" />
+  </url>
+
+  <!-- Japanese Process / Case Studies / Comparison / FAQ / Blog (JA-only) -->
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/process/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/case-studies/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/comparison/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/faq/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- Blog pages excluded from sitemap (navigation-hidden; Naver Blog for KO). -->
+  <!-- Japanese blog files remain at /ko/ja/blog/ for archival but not promoted. -->
+
+  <!-- Japanese Legal -->
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/legal/privacy/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://sharkstars.jp/ko/ja/legal/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://sharkstars.jp/ko/legal/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharkstars.jp/ko/legal/privacy/" />
+  </url>
+  <url>
+    <loc>https://sharkstars.jp/ko/ja/legal/terms/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+</urlset>

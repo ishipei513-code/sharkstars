@@ -1,0 +1,11 @@
+# KOJP Robots.txt
+# https://sharkstars.jp/ko/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://sharkstars.jp/ko/sitemap.xml
+
+# AI-readable documentation
+# https://sharkstars.jp/ko/llms.txt
+# https://sharkstars.jp/ko/llms-full.txt

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="KOJP mark">
+  <defs>
+    <linearGradient id="kojp-mark-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8C5D6"/>
+      <stop offset="50%" stop-color="#C5D6C0"/>
+      <stop offset="100%" stop-color="#E8A598"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#FAFAF7" stroke="url(#kojp-mark-grad)" stroke-width="2"/>
+  <path d="M 18 20 L 18 44 M 18 32 L 28 20 M 18 32 L 28 44 M 34 20 L 34 36 Q 34 44 42 44 M 46 20 L 46 44 M 46 20 L 56 20 Q 60 20 60 26 Q 60 32 56 32 L 46 32" stroke="#3A3D45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

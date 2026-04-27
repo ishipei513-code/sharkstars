@@ -1,0 +1,233 @@
+/* ============================================
+   KOJP — Pricing Page Styles
+   DNA: Linear + Toss
+   ============================================ */
+
+/* ── Pricing Hero ────────────────────────── */
+
+.pricing-hero {
+  padding: 160px var(--gutter-mobile) var(--space-3xl);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(250, 250, 247, 0.92) 0%,
+      rgba(244, 241, 236, 0.82) 60%,
+      rgba(168, 197, 214, 0.14) 100%
+    ),
+    var(--pricing-hero-bg, none) center/cover no-repeat;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.pricing-hero__label {
+  font-size: var(--font-size-small);
+  color: var(--color-accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-md);
+}
+
+.pricing-hero__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-lg);
+}
+
+.pricing-hero__sub {
+  font-size: var(--font-size-body-lg);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body-lg);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  .pricing-hero {
+    padding: 180px var(--gutter-desktop) var(--space-4xl);
+  }
+}
+
+
+/* ── Pricing Cards (Full) ────────────────── */
+
+.pricing-plans {
+  margin-top: 0;
+}
+
+.pricing-plans .pricing-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.pricing-card__header {
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  text-align: center;
+}
+
+.pricing-card__period {
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+  margin-top: var(--space-xs);
+}
+
+.pricing-card__monthly {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  padding: var(--space-xs) var(--space-md);
+  background: var(--color-base-secondary);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-small);
+  color: var(--color-text-sub);
+  font-weight: var(--font-weight-medium);
+}
+
+.pricing-plans .pricing-card__desc {
+  padding: 0 var(--space-lg);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: 1.6;
+}
+
+.pricing-plans .pricing-card__features {
+  padding: 0 var(--space-lg);
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+.pricing-plans .pricing-card__features li {
+  border-bottom: 1px solid var(--color-border);
+  padding: 10px 0;
+}
+
+.pricing-plans .pricing-card__features li.is-excluded {
+  color: var(--color-text-light);
+}
+
+.pricing-plans .pricing-card__features li.is-excluded svg {
+  color: var(--color-text-light);
+}
+
+.pricing-plans .pricing-card__features li.is-included svg {
+  color: var(--color-accent-secondary);
+}
+
+.pricing-plans .pricing-card__features li.highlight {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.pricing-card__footer {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.pricing-card__delivery {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--font-size-small);
+  color: var(--color-text-sub);
+  justify-content: center;
+}
+
+.pricing-card__footer .btn {
+  width: 100%;
+}
+
+/* Popular highlight */
+.pricing-plans .pricing-card--popular {
+  background: var(--color-highlight);
+  border-color: var(--color-accent-primary);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.pricing-plans .pricing-card--popular .pricing-card__header {
+  background: transparent;
+}
+
+.pricing-plans .pricing-card--popular .pricing-card__monthly {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+
+/* ── Comparison Table ────────────────────── */
+
+.compare-table {
+  overflow-x: auto;
+  margin-top: var(--space-xl);
+}
+
+.compare-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: var(--space-md) var(--space-lg);
+  text-align: left;
+  font-size: var(--font-size-body);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.compare-table thead th {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  font-size: var(--font-size-body);
+  padding-bottom: var(--space-lg);
+  border-bottom: 2px solid var(--color-border);
+  vertical-align: bottom;
+}
+
+.compare-table__sub {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-small);
+  color: var(--color-text-sub);
+}
+
+.compare-table td {
+  color: var(--color-text-sub);
+}
+
+.compare-table__highlight {
+  background: rgba(245, 220, 200, 0.12);
+  color: var(--color-text) !important;
+  font-weight: var(--font-weight-medium);
+}
+
+.compare-table__total td {
+  border-top: 2px solid var(--color-border);
+  border-bottom: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-body-lg);
+  color: var(--color-text);
+  padding-top: var(--space-lg);
+}
+
+.compare-table__total .compare-table__highlight strong {
+  color: var(--color-accent-primary);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.compare-table__savings td {
+  border: none;
+  padding-top: var(--space-xs);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent-secondary);
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" width="200" height="48" role="img" aria-label="KOJP">
+  <defs>
+    <linearGradient id="kojp-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8C5D6"/>
+      <stop offset="100%" stop-color="#E8A598"/>
+    </linearGradient>
+  </defs>
+  <g fill="#3A3D45" font-family="Pretendard, 'Pretendard JP', -apple-system, system-ui, sans-serif" font-weight="600">
+    <text x="0" y="32" font-size="28" letter-spacing="0.02em">KOJP</text>
+  </g>
+  <circle cx="128" cy="24" r="4" fill="url(#kojp-grad)"/>
+</svg>

@@ -1,0 +1,180 @@
+/* ============================================
+   KOJP — Animations
+   Based on: 14_サイト構成書.md §5-G タイミング早見表
+   DNA: Linear (微細ホバー) × Plus X (数字活字)
+   ============================================ */
+
+/* ── A. Page Load — Hero ─────────────────── */
+
+/* A-1. ヒーロータイトル 単語ごとフェードイン */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+.hero-title .word:nth-child(1)  { animation-delay: 0.1s; }
+.hero-title .word:nth-child(2)  { animation-delay: 0.25s; }
+.hero-title .word:nth-child(3)  { animation-delay: 0.4s; }
+.hero-title .word:nth-child(4)  { animation-delay: 0.55s; }
+.hero-title .word:nth-child(5)  { animation-delay: 0.7s; }
+.hero-title .word:nth-child(6)  { animation-delay: 0.85s; }
+.hero-title .word:nth-child(7)  { animation-delay: 1.0s; }
+.hero-title .word:nth-child(8)  { animation-delay: 1.15s; }
+.hero-title .word:nth-child(9)  { animation-delay: 1.3s; }
+.hero-title .word:nth-child(10) { animation-delay: 1.45s; }
+
+/* A-2. ヒーローCTA 遅延フェードイン */
+.hero-cta {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out 0.8s forwards;
+}
+
+/* A-3. ヒーロー背景 超ゆっくりグラデーションシフト */
+@keyframes subtleGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+
+/* ── B. Scroll Trigger ───────────────────── */
+
+/* B-1. フェードアップ (汎用) */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* B-2. スタガー (カードグリッド) */
+.card-grid .card,
+.stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.card-grid.visible .card:nth-child(1),
+.stagger.visible > *:nth-child(1)  { transition-delay: 0s; }
+.card-grid.visible .card:nth-child(2),
+.stagger.visible > *:nth-child(2)  { transition-delay: 0.1s; }
+.card-grid.visible .card:nth-child(3),
+.stagger.visible > *:nth-child(3)  { transition-delay: 0.15s; }
+.card-grid.visible .card:nth-child(4),
+.stagger.visible > *:nth-child(4)  { transition-delay: 0.2s; }
+.card-grid.visible .card:nth-child(5),
+.stagger.visible > *:nth-child(5)  { transition-delay: 0.25s; }
+.card-grid.visible .card:nth-child(6),
+.stagger.visible > *:nth-child(6)  { transition-delay: 0.3s; }
+.card-grid.visible .card:nth-child(7),
+.stagger.visible > *:nth-child(7)  { transition-delay: 0.35s; }
+
+.card-grid.visible .card,
+.stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* B-3. フェードイン (左から) */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* B-4. フェードイン (右から) */
+.fade-right {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* B-5. スケールイン */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* ── D. Special ──────────────────────────── */
+
+/* D-1. ロゴマーキー (横スクロール、30秒) */
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.logo-marquee__track {
+  display: flex;
+  gap: 64px;
+  animation: marqueeScroll 30s linear infinite;
+}
+
+/* D-2. パルス (人気バッジ、控えめ) */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.7; }
+}
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* D-3. プログレスバー */
+.progress-bar {
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.progress-bar.visible {
+  width: var(--target-width, 100%);
+}
+
+/* D-4. Shake (バリデーションエラー、控えめ) */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%      { transform: translateX(-4px); }
+  40%      { transform: translateX(4px); }
+  60%      { transform: translateX(-3px); }
+  80%      { transform: translateX(3px); }
+}
+.shake {
+  animation: shake 0.4s ease-out;
+}
+
+/* D-5. Tamburins風 画像ホバー拡大 */
+.img-hover-zoom {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+.img-hover-zoom img {
+  transition: transform 0.6s ease-out;
+}
+.img-hover-zoom:hover img {
+  transform: scale(1.03);
+}

@@ -98,3 +98,9 @@ Allow: /
 # Sitemap & LLM index
 # -----------------------------------------------------------
 Sitemap: https://sharkstars.jp/sitemap.xml
+Sitemap: https://sharkstars.jp/ko/sitemap.xml
+
+# KOJP (韓国企業向け日本市場進出支援サービス) — subdirectory at /ko/
+# Korean (default) + Japanese (/ko/ja/) bilingual site
+# https://sharkstars.jp/ko/llms.txt
+# https://sharkstars.jp/ko/llms-full.txt

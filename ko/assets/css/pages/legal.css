@@ -1,0 +1,183 @@
+/* ============================================
+   KOJP — Legal Pages (Privacy, Terms)
+   DNA: Aesop (文章中心、装飾控えめ)
+   ============================================ */
+
+.legal-page {
+  padding-top: 120px;
+  padding-bottom: var(--space-4xl);
+}
+
+.legal-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--gutter-mobile);
+}
+
+.legal-footer {
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-small);
+  color: var(--color-text-sub);
+}
+
+.legal-footer p {
+  margin-bottom: var(--space-sm);
+  line-height: var(--line-height-body);
+}
+
+.legal-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-footer strong {
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+@media (min-width: 769px) {
+  .legal-page {
+    padding-top: 160px;
+  }
+  .legal-container {
+    padding: 0 var(--gutter-desktop);
+  }
+}
+
+
+/* ── Header ───────────────────────────────── */
+
+.legal-header {
+  margin-bottom: var(--space-2xl);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-xl);
+}
+
+.legal-header__label {
+  font-size: var(--font-size-small);
+  color: var(--color-accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-md);
+}
+
+.legal-header__title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-md);
+}
+
+.legal-header__updated {
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+}
+
+
+/* ── TOC ──────────────────────────────────── */
+
+.legal-toc {
+  background: var(--color-base-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.legal-toc__title {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+.legal-toc__list {
+  counter-reset: toc;
+  padding-left: 0;
+  list-style: none;
+}
+
+.legal-toc__list li {
+  counter-increment: toc;
+  margin-bottom: var(--space-sm);
+}
+
+.legal-toc__list li a {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.legal-toc__list li a:hover {
+  color: var(--color-accent-primary);
+}
+
+
+/* ── Body ─────────────────────────────────── */
+
+.legal-intro {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body);
+  margin-bottom: var(--space-2xl);
+}
+
+.legal-body section {
+  margin-bottom: var(--space-2xl);
+  scroll-margin-top: 100px;
+}
+
+.legal-body h2 {
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.legal-body p {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body);
+  margin-bottom: var(--space-md);
+}
+
+.legal-body ul {
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.legal-body ul li {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body);
+  margin-bottom: var(--space-sm);
+}
+
+.legal-body a {
+  color: var(--color-accent-primary);
+  text-decoration: underline;
+}
+
+.legal-body a:hover {
+  color: var(--color-text);
+}
+
+
+/* ── Contact Block ────────────────────────── */
+
+.legal-contact {
+  background: var(--color-base-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.legal-contact p {
+  margin-bottom: var(--space-xs);
+  color: var(--color-text);
+}

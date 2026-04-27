@@ -1,0 +1,365 @@
+/* ============================================
+   KOJP — About Page Styles
+   DNA: Aesop (余白) + Tamburins (エディトリアル)
+   ============================================ */
+
+/* ── About Hero ───────────────────────────── */
+
+.about-hero {
+  position: relative;
+  padding: 160px var(--gutter-mobile) var(--space-3xl);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(250, 250, 247, 0.92) 0%,
+      rgba(244, 241, 236, 0.88) 60%,
+      rgba(168, 197, 214, 0.12) 100%
+    ),
+    var(--about-hero-bg, none) center/cover no-repeat;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(245, 220, 200, 0.18),
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.about-hero__inner {
+  max-width: var(--max-width-text);
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.about-hero__label {
+  font-size: var(--font-size-small);
+  color: var(--color-accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-md);
+}
+
+.about-hero__title {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: var(--space-lg);
+  letter-spacing: var(--letter-spacing-cjk);
+}
+
+.about-hero__sub {
+  font-size: var(--font-size-body-lg);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body-lg);
+}
+
+@media (min-width: 769px) {
+  .about-hero {
+    padding: 180px var(--gutter-desktop) var(--space-4xl);
+  }
+}
+
+
+/* ── Mission Statement (Aesop centered) ───── */
+
+.mission {
+  padding: var(--space-3xl) var(--gutter-mobile);
+}
+
+.mission__inner {
+  max-width: var(--max-width-text);
+  margin: 0 auto;
+}
+
+.mission__statement {
+  font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+  color: var(--color-text);
+  line-height: 1.75;
+  text-align: center;
+  font-weight: var(--font-weight-regular);
+}
+
+.mission__statement strong {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent-primary);
+}
+
+@media (min-width: 769px) {
+  .mission {
+    padding: var(--space-4xl) var(--gutter-desktop);
+  }
+}
+
+
+/* ── Values Grid ──────────────────────────── */
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+.value-card {
+  padding: var(--space-xl);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.value-card:hover {
+  border-color: var(--color-accent-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.value-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-base-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent-primary);
+  margin-bottom: var(--space-md);
+}
+
+.value-card__title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+  line-height: var(--line-height-h3);
+}
+
+.value-card__desc {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+@media (min-width: 769px) {
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ── Story Timeline ───────────────────────── */
+
+.story-timeline {
+  max-width: 640px;
+  margin: var(--space-xl) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.story-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.story-item:last-child {
+  border-bottom: none;
+}
+
+.story-item__year {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent-primary);
+  letter-spacing: 0.04em;
+}
+
+.story-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.story-item__title {
+  font-size: 1.0625rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.story-item__desc {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  margin: 0;
+  line-height: var(--line-height-body);
+}
+
+@media (max-width: 480px) {
+  .story-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+}
+
+
+/* ── CEO Message ──────────────────────────── */
+
+.ceo-message {
+  max-width: var(--max-width-text);
+  margin: var(--space-xl) auto 0;
+  padding: var(--space-2xl) var(--space-xl);
+  background: var(--color-highlight);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.ceo-message__quote-mark {
+  font-size: 5rem;
+  line-height: 0.8;
+  color: var(--color-accent-primary);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.05em;
+}
+
+.ceo-message__text {
+  font-size: var(--font-size-body-lg);
+  color: var(--color-text);
+  line-height: 1.85;
+  margin-bottom: var(--space-lg);
+}
+
+.ceo-message__signature {
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+}
+
+.ceo-message__role {
+  font-size: var(--font-size-small);
+  color: var(--color-text-sub);
+  margin: 0;
+}
+
+
+/* ── Company Info Table ───────────────────── */
+
+.company-info {
+  max-width: 640px;
+  margin: var(--space-xl) auto 0;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.company-info__row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+  align-items: center;
+}
+
+.company-info__row:last-child {
+  border-bottom: none;
+}
+
+.company-info__label {
+  font-size: var(--font-size-small);
+  color: var(--color-text-sub);
+  font-weight: var(--font-weight-medium);
+}
+
+.company-info__value {
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+}
+
+@media (max-width: 480px) {
+  .company-info__row {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+  }
+}
+
+
+/* ── Team Roles (for /about/team/) ────────── */
+
+.team-roles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.role-card {
+  padding: var(--space-xl);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.role-card__flag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-small);
+  color: var(--color-accent-primary);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.role-card__title {
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.role-card__desc {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+.role-card__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+
+.role-card__skill {
+  font-size: var(--font-size-small);
+  padding: 4px 12px;
+  background: var(--color-base-secondary);
+  border-radius: 999px;
+  color: var(--color-text-sub);
+}
+
+@media (min-width: 769px) {
+  .team-roles {
+    grid-template-columns: 1fr 1fr;
+  }
+}

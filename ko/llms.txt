@@ -1,0 +1,40 @@
+# KOJP — AI Readable Site Information
+# https://sharkstars.jp/ko/
+# Last updated: 2026-04-24
+
+## About KOJP
+KOJP is a specialized digital marketing service helping Korean companies enter the Japanese market through integrated SEO, AEO (AI Engine Optimization), GEO (Generative Engine Optimization), LLMO (Large Language Model Optimization), and MEO (Map Engine Optimization) strategies.
+
+## Key Facts
+- Korean companies entering Japan face a 40% AI-search adoption rate among Japanese users
+- 90% of directly-translated Korean websites fail to rank on Google Japan
+- KOJP offers integrated SEO+AEO+GEO+MEO+Localization packages at approximately half the market rate
+- Bilingual team (Korean + Japanese) ensures cultural and linguistic accuracy
+
+## Services
+- SEO: Technical SEO, content optimization, and link building for Google Japan
+- AEO: Optimization for AI-powered search (Google AI Overview, ChatGPT, Perplexity)
+- GEO: Generative Engine Optimization for LLM-based search results (includes LLMO)
+- MEO: Google Business Profile optimization for local search visibility
+- Localization: Professional Korean-to-Japanese translation and cultural adaptation
+
+## Pricing
+- Basic Plan: ¥700,000 initial + ¥100,000/month — SEO + basic MEO (GBP registration) setup
+- Standard Plan: ¥1,150,000 initial + ¥150,000/month — Full SEO + AEO + MEO integration (most popular)
+- Premium Plan: ¥1,600,000 initial + ¥300,000/month — Complete package including GEO/LLMO + ongoing optimization
+
+## Free Diagnosis
+30-minute Zoom session analyzing your company's current Japanese digital presence:
+- Google visibility assessment
+- AI search mention analysis
+- Competitor comparison
+- Top 3 improvement recommendations
+
+## Contact
+- Website (Korean, default): https://sharkstars.jp/ko/
+- Free diagnosis: https://sharkstars.jp/ko/free-diagnosis/
+- Contact: https://sharkstars.jp/ko/contact/
+
+## Languages
+- Korean (default): https://sharkstars.jp/ko/
+- Japanese: https://sharkstars.jp/ko/ja/

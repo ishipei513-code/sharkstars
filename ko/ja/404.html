@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — ページが見つかりません | KOJP</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="ページが見つかりません — KOJP 韓国企業向け日本市場進出支援">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard-jp/dist/web/static/pretendard-jp.min.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <link rel="stylesheet" href="/ko/assets/css/main.css">
+  <meta data-base-path="/ko/ja/">
+
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      text-align: center;
+      background: var(--color-base);
+    }
+    .error-page__code {
+      font-size: clamp(5rem, 15vw, 10rem);
+      font-weight: 600;
+      color: var(--color-border);
+      line-height: 1;
+      margin-bottom: 16px;
+      letter-spacing: -0.04em;
+    }
+    .error-page__title {
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+    .error-page__text {
+      font-size: 1rem;
+      color: var(--color-text-sub);
+      max-width: 400px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .error-page__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicons/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/img/favicons/favicon.svg">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+<div class="error-page">
+    <div>
+      <p class="error-page__code">404</p>
+      <h1 class="error-page__title">ページが見つかりません</h1>
+      <p class="error-page__text">お探しのページは移動または削除された可能性があります。</p>
+      <div class="error-page__actions">
+        <a href="/ko/ja/" class="btn btn--primary">トップページへ</a>
+        <a href="/ko/ja/contact/" class="btn btn--secondary">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

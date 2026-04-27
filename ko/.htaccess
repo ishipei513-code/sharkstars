@@ -1,0 +1,80 @@
+# ============================================
+#   KOJP — Apache .htaccess (ロリポップ用)
+#   sharkstars.jp/ko/ 配下
+# ============================================
+
+# -----------------------------------------------------------
+# 1. セキュリティヘッダー
+# -----------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# -----------------------------------------------------------
+# 2. キャッシュコントロール
+# -----------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML: 1時間
+  ExpiresByType text/html "access plus 1 hour"
+
+  # CSS / JS: 1年（ファイル名更新時にバージョン付与 推奨）
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+
+  # 画像: 1年
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # robots.txt / sitemap / llms.txt: 1日
+  ExpiresByType text/plain "access plus 1 day"
+  ExpiresByType application/xml "access plus 1 day"
+</IfModule>
+
+# -----------------------------------------------------------
+# 3. Gzip 圧縮
+# -----------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/xml application/json application/rss+xml image/svg+xml
+</IfModule>
+
+# -----------------------------------------------------------
+# 4. 内部ドキュメントへのアクセス拒否
+#    (万一 _docs/ がアップされた場合の保険)
+# -----------------------------------------------------------
+RedirectMatch 403 ^/ko/_docs(/.*)?$
+
+# -----------------------------------------------------------
+# 5. 404 エラーページ
+# -----------------------------------------------------------
+ErrorDocument 404 /ko/404.html
+
+# -----------------------------------------------------------
+# 6. 末尾スラッシュ統一（SEO 重複回避）
+# -----------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /ko/
+
+  # index.html を末尾スラッシュに統一
+  RewriteRule ^(.*)/index\.html$ /ko/$1/ [R=301,L]
+  RewriteRule ^index\.html$ /ko/ [R=301,L]
+</IfModule>
+
+# -----------------------------------------------------------
+# 7. MIME types (念のため)
+# -----------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType image/svg+xml .svg
+  AddType image/webp .webp
+  AddType text/plain .txt
+</IfModule>

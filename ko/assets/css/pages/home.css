@@ -1,0 +1,611 @@
+/* ============================================
+   KOJP — Page-specific Styles (Top Page)
+   DNA: Toss × Tamburins × Aesop × Plus X × Linear
+   ============================================ */
+
+/* ── Hero [Tamburins + Toss] ────────────── */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px var(--gutter-mobile) var(--space-3xl);
+  background: linear-gradient(135deg, #FAFAF7, #F4F1EC, #FAFAF7);
+  background-size: 200% 200%;
+  animation: subtleGradient 20s ease infinite;
+  overflow: hidden;
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  align-items: center;
+  max-width: var(--max-width-hero);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero__content {
+  max-width: 640px;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.15;
+  color: var(--color-text);
+  margin-bottom: var(--space-lg);
+  letter-spacing: var(--letter-spacing-cjk);
+}
+
+.hero__sub {
+  font-size: var(--font-size-body-lg);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+/* Hero visual placeholder */
+.hero__visual {
+  width: 100%;
+  max-width: 480px;
+}
+
+.hero__image-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--color-base-secondary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.88) contrast(0.96);
+  transition: filter var(--transition-slow);
+}
+
+.hero__image-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(168, 197, 214, 0.08), rgba(245, 220, 200, 0.12));
+  pointer-events: none;
+}
+
+@media (min-width: 769px) {
+  .hero {
+    padding: 0 var(--gutter-desktop);
+  }
+
+  .hero__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  .hero__content {
+    flex: 1;
+    max-width: 580px;
+  }
+
+  .hero__visual {
+    flex: 1;
+    max-width: 520px;
+  }
+}
+
+
+/* ── Stats [Plus X] ──────────────────────── */
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  text-align: center;
+}
+
+.stats__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.stats__number {
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.stats__label {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+@media (min-width: 769px) {
+  .stats {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-4xl);
+  }
+}
+
+
+/* ── Services Grid [Tamburins editorial cards] ── */
+
+.services-grid {
+  margin-top: var(--space-xl);
+}
+
+.services-grid .card {
+  text-align: left;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Editorial thumbnail (full-bleed top of card) */
+.card__thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  position: relative;
+  background: var(--color-base-secondary);
+}
+
+.card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.85) contrast(0.95);
+  transition: transform 0.8s ease-out, filter var(--transition-slow);
+}
+
+.services-grid .card:hover .card__thumb img {
+  transform: scale(1.04);
+  filter: saturate(1) contrast(1);
+}
+
+/* Tinted overlay for editorial feel */
+.card__thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(250, 250, 247, 0) 40%,
+    rgba(250, 250, 247, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+/* Small icon badge floating on thumbnail */
+.card__thumb-icon {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(250, 250, 247, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--radius-md);
+  color: var(--color-accent-primary);
+  box-shadow: 0 2px 8px rgba(58, 61, 69, 0.08);
+}
+
+/* Card body */
+.services-grid .card__body {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  flex: 1;
+}
+
+.services-grid .card__title {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+.services-grid .card__text {
+  margin: 0;
+  color: var(--color-text-sub);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  flex: 1;
+}
+
+.services-grid .card__link {
+  margin-top: var(--space-md);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent-primary);
+  align-self: flex-start;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.services-grid .card:hover .card__link {
+  color: var(--color-cta);
+  transform: translateX(2px);
+}
+
+
+/* ── Why KOJP [Aesop] ────────────────────── */
+
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.why-item {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.why-item__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.why-item__icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-highlight);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+}
+
+.why-item__title {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.why-item__text {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body);
+}
+
+/* ── Pricing Plans [Linear + Toss] ───────── */
+
+.pricing-grid {
+  margin-top: var(--space-xl);
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  position: relative;
+}
+
+.pricing-card .badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pricing-card__name {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-md);
+}
+
+.pricing-card__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: var(--space-md);
+}
+
+.pricing-card__currency {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-sub);
+}
+
+.pricing-card__amount {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.pricing-card__unit {
+  font-size: var(--font-size-small);
+  color: var(--color-text-sub);
+}
+
+.pricing-card__desc {
+  font-size: var(--font-size-small);
+  color: var(--color-text-sub);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.pricing-card__features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: var(--space-xl);
+  flex-grow: 1;
+}
+
+.pricing-card__features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pricing-card__features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-card__features svg {
+  color: var(--color-accent-secondary);
+  flex-shrink: 0;
+}
+
+.pricing-card .btn {
+  width: 100%;
+}
+
+/* Popular plan highlight */
+.pricing-card--popular {
+  background: var(--color-highlight);
+  border-color: transparent;
+  box-shadow: var(--shadow-lg);
+  transform: scale(1);
+}
+
+.pricing-card--popular:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 32px rgba(58, 61, 69, 0.1);
+}
+
+
+/* ── Case Studies [Tamburins + Plus X] ───── */
+
+/* Logo Marquee */
+.logo-marquee {
+  overflow: hidden;
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.logo-marquee__item {
+  flex-shrink: 0;
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-light);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  transition: color var(--transition-normal);
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+
+.logo-marquee__item:hover {
+  color: var(--color-text);
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Case Cards */
+.case-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.case-card:hover {
+  border-color: var(--color-accent-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.case-card__image-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, var(--color-base-secondary) 0%, var(--color-highlight) 100%);
+}
+
+.case-card__body {
+  padding: var(--space-lg);
+}
+
+.case-card__tag {
+  margin-bottom: var(--space-sm);
+}
+
+.case-card__title {
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.case-card__result {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body);
+}
+
+.case-card__result strong {
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/* ── Process Timeline [Plus X] ───────────── */
+
+.process-timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  position: relative;
+}
+
+.process-step {
+  position: relative;
+  padding-left: 80px;
+}
+
+/* Vertical line */
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--color-border);
+}
+
+.process-step__number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent-primary);
+  line-height: 1;
+  width: 64px;
+  text-align: center;
+  background: var(--color-base);
+  padding: var(--space-xs) 0;
+  z-index: 1;
+}
+
+.process-step__title {
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.process-step__text {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+  line-height: var(--line-height-body);
+}
+
+@media (min-width: 769px) {
+  .process-timeline {
+    grid-template-columns: repeat(7, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .process-timeline::before {
+    left: 0;
+    right: 0;
+    top: 24px;
+    bottom: auto;
+    width: auto;
+    height: 1px;
+  }
+
+  .process-step {
+    padding-left: 0;
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  .process-step__number {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: auto;
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
+
+/* ── Trust Signals [Aesop] ───────────────── */
+
+.trust__stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.trust__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.trust__number {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.trust__label {
+  font-size: var(--font-size-body);
+  color: var(--color-text-sub);
+}
+
+@media (min-width: 769px) {
+  .trust__stats {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-4xl);
+  }
+}
+
+
+/* Final CTA styles moved to components.css (used site-wide) */
