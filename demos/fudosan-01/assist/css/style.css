@@ -7,6 +7,7 @@
   /* Colors */
   --c-navy: #0f172a;       /* Slate 900 (Trust, High-end) */
   --c-navy-light: #1e293b;
+  --c-text: #0f172a;       /* Alias for --c-navy */
   --c-teal: #0d9488;       /* Teal 600 (Refresh, Life, Nature) */
   --c-teal-light: #ccfbf1; /* Teal 50 (Highlight) */
   --c-white: #ffffff;

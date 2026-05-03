@@ -7,6 +7,7 @@
   /* Colors */
   --c-primary: #2563EB;    /* Water Blue */
   --c-primary-dark: #1E40AF;
+  --c-secondary: #1E40AF;  /* Alias for --c-primary-dark */
   --c-accent: #EF4444;     /* Urgent Red */
   --c-accent-dark: #DC2626;
   --c-yellow: #FACC15;     /* Warning/Discount Yellow */

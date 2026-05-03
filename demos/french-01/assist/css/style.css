@@ -17,6 +17,7 @@
   /* Typography */
   --f-serif: 'Shippori Mincho', serif;
   --f-en: 'Cormorant Garamond', serif;
+  --f-sans: 'Noto Sans JP', sans-serif;
 
   /* Fluid Type */
   --fs-hero: clamp(2.5rem, 5vw, 4.5rem);

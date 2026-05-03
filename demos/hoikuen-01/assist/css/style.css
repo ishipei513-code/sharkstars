@@ -24,6 +24,7 @@
   --c-brown-light: #78350f;
   
   --c-cream: #fffdf0;      /* Gentle off-white background */
+  --c-light: #fffdf0;      /* Alias for --c-cream */
   --c-white: #ffffff;
   --c-gray-light: #e5e7eb;
   

@@ -7,10 +7,12 @@ interface Props {
   keywords?: string;
 }
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const {
   title = "NOCTURNE — Contemporary Ink Art Gallery | 福岡の現代墨アート・ギャラリー",
   description = "夜の水槽にただ一点、墨の絵が浮かぶ。福岡市のコンテンポラリー墨アート・ギャラリー NOCTURNE 公式サイト。常設展 / 企画展 / アーティスト / プログラム / 来館情報。",
-  image = "/og.png",
+  image = `${baseUrl}og.png`,
   canonical = Astro.url.href,
   keywords = "墨アート,現代美術,ギャラリー,福岡,コンテンポラリーアート,インクアート,夜の美術館,NOCTURNE,水墨,企画展",
 } = Astro.props;
@@ -52,7 +54,7 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: new URL("/", Astro.url).href },
+    { "@type": "ListItem", position: 1, name: "Home", item: new URL(baseUrl, Astro.url).href },
   ],
 };
 
@@ -60,7 +62,7 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: siteName,
-  url: new URL("/", Astro.url).href,
+  url: new URL(baseUrl, Astro.url).href,
   inLanguage: "ja-JP",
   description,
 };
@@ -70,7 +72,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: siteName,
   url: canonical,
-  logo: new URL("/favicon.svg", Astro.url).href,
+  logo: new URL(`${baseUrl}favicon.svg`, Astro.url).href,
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -100,7 +102,7 @@ const organizationJsonLd = {
       content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
     />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${baseUrl}favicon.svg`} />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={siteName} />

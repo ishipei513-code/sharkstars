@@ -20,6 +20,7 @@
   --f-serif: 'Noto Serif JP', serif;
   --f-en: 'Cormorant Garamond', serif;
   --f-en-alt: 'Cinzel', serif; /* For numbers/headings */
+  --f-sans: 'Noto Sans JP', sans-serif;
 
   /* Fluid Type */
   --fs-hero: clamp(2rem, 4.5vw, 4rem);
