@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お見積書 - SHARKSTARS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      background: #f5f5f5;
+      color: #171717;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* === HEADER === */
+    .doc-header {
+      background: #0a0a0a;
+      color: #fff;
+      padding: 40px 50px 35px;
+      position: relative;
+    }
+    .doc-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+      right: 50px;
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+    }
+    .logo-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+    }
+    .doc-type {
+      font-size: 11px;
+      font-weight: 400;
+      color: #737373;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .doc-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .doc-title {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+    .doc-meta {
+      text-align: right;
+      font-size: 11px;
+      color: #a3a3a3;
+      line-height: 2;
+    }
+    .doc-meta span {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    /* === TOTAL BANNER === */
+    .total-banner {
+      background: #fafafa;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 28px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .total-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #525252;
+    }
+    .total-amount {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: #0a0a0a;
+      letter-spacing: -0.02em;
+    }
+    .total-amount .yen {
+      font-size: 18px;
+      font-weight: 500;
+      margin-right: 2px;
+    }
+    .total-amount .tax {
+      font-size: 12px;
+      font-weight: 400;
+      color: #737373;
+      margin-left: 4px;
+    }
+
+    /* === BODY === */
+    .doc-body {
+      padding: 35px 50px 40px;
+    }
+
+    /* === PARTIES === */
+    .parties {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 35px;
+    }
+    .party {
+      flex: 1;
+    }
+    .party-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: #a3a3a3;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .party-name {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .party-detail {
+      font-size: 11px;
+      color: #525252;
+      line-height: 1.8;
+    }
+
+    /* === TABLE === */
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: #a3a3a3;
+      letter-spacing: 0.15em;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #0a0a0a;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    thead th {
+      font-size: 10px;
+      font-weight: 700;
+      color: #a3a3a3;
+      text-align: left;
+      padding: 10px 0;
+      border-bottom: 1px solid #e5e5e5;
+      letter-spacing: 0.08em;
+    }
+    thead th:last-child {
+      text-align: right;
+    }
+    tbody td {
+      font-size: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f0f0;
+      vertical-align: top;
+    }
+    tbody td:last-child {
+      text-align: right;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    tbody td:nth-child(2) {
+      text-align: center;
+      color: #737373;
+      font-family: 'Inter', sans-serif;
+    }
+    tbody td:nth-child(3) {
+      text-align: right;
+      font-family: 'Inter', sans-serif;
+      color: #737373;
+    }
+    .item-name {
+      font-weight: 600;
+    }
+    .item-desc {
+      font-size: 10px;
+      color: #737373;
+      margin-top: 3px;
+    }
+    .subtotal-row td {
+      border-bottom: 2px solid #0a0a0a;
+      font-weight: 700;
+      padding-top: 16px;
+    }
+
+    /* === INCLUDED === */
+    .included-box {
+      background: #fafafa;
+      padding: 20px 24px;
+      margin-bottom: 30px;
+    }
+    .included-title {
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .included-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+    .included-item {
+      font-size: 11px;
+      color: #525252;
+      padding-left: 16px;
+      position: relative;
+    }
+    .included-item::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #a3a3a3;
+    }
+
+    /* === SCOPE === */
+    .scope-list {
+      margin-bottom: 30px;
+    }
+    .scope-item {
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 12px;
+    }
+    .scope-num {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      color: #a3a3a3;
+      min-width: 20px;
+    }
+    .scope-text {
+      flex: 1;
+    }
+    .scope-text strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .scope-text small {
+      font-size: 10px;
+      color: #737373;
+    }
+
+    /* === NOTES === */
+    .notes {
+      padding: 20px 24px;
+      border: 1px solid #e5e5e5;
+      margin-bottom: 30px;
+    }
+    .notes-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #a3a3a3;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .notes p {
+      font-size: 10px;
+      color: #737373;
+      margin-bottom: 4px;
+      padding-left: 12px;
+      position: relative;
+    }
+    .notes p::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+    }
+
+    /* === FOOTER === */
+    .doc-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #f0f0f0;
+    }
+    .footer-text {
+      font-size: 9px;
+      color: #a3a3a3;
+      letter-spacing: 0.05em;
+    }
+
+    /* === HANKO === */
+    .hanko {
+      width: 64px;
+      height: 64px;
+      border: 3px solid #c53030;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c53030;
+      font-size: 18px;
+      font-weight: 900;
+      font-family: 'Noto Sans JP', serif;
+      letter-spacing: 0.1em;
+      transform: rotate(-8deg);
+      opacity: 0.85;
+      position: relative;
+    }
+    .hanko::before {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border: 1px solid #c53030;
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; }
+    }
+    @media screen {
+      .page { box-shadow: 0 4px 40px rgba(0,0,0,0.08); margin: 40px auto; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="doc-header">
+    <div class="header-top">
+      <div class="logo-area">
+        <svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 4L8 28h20L18 4z" fill="#fff"/>
+          <path d="M18 10l1.5 4.5H24l-3.5 2.5 1.3 4.5L18 19l-3.8 2.5 1.3-4.5L12 14.5h4.5L18 10z" fill="#666"/>
+          <path d="M4 30q7-4 14 0t14-4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">SHARKSTARS</span>
+      </div>
+      <span class="doc-type">Estimate</span>
+    </div>
+    <div class="doc-title-row">
+      <h1 class="doc-title">お見積書</h1>
+      <div class="doc-meta">
+        見積番号：<span>SS-2026-004</span><br>
+        発行日：<span>2026年5月3日</span><br>
+        有効期限：<span>2026年6月3日</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOTAL BANNER -->
+  <div class="total-banner">
+    <span class="total-label">ご請求額（税込）</span>
+    <span class="total-amount"><span class="yen">¥</span>3,980<span class="tax">/ 月</span></span>
+  </div>
+
+  <!-- BODY -->
+  <div class="doc-body">
+
+    <!-- PARTIES -->
+    <div class="parties">
+      <div class="party">
+        <div class="party-label">宛先</div>
+        <div class="party-name">村岡 宏樹 様</div>
+        <div class="party-detail">Muku株式会社 代表取締役<br>千葉県<br>TEL：090-6199-2951<br>ご連絡担当：中山 幸樹 様</div>
+      </div>
+      <div class="party" style="display: flex; gap: 20px; align-items: flex-start;">
+        <div style="flex: 1;">
+          <div class="party-label">発行元</div>
+          <div class="party-name">SHARKSTARS（シャークスターズ）</div>
+          <div class="party-detail">
+            代表：石橋昇平<br>
+            〒810-0064 福岡市中央区地行3-18-16<br>
+            TEL：080-4462-0389<br>
+            sharkstars0513@gmail.com
+          </div>
+        </div>
+        <div class="hanko" style="margin-top: 16px;">石橋</div>
+      </div>
+    </div>
+
+    <!-- INITIAL COST -->
+    <div class="section-title">初期費用</div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:55%">項目</th>
+          <th style="width:10%">数量</th>
+          <th style="width:15%">単価</th>
+          <th style="width:20%">金額</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="item-name">ホームページ新規制作（6ページ構成）</div>
+            <div class="item-desc">トップ／取扱商品／会社情報／お問い合わせ／プラポリ／FAQ</div>
+          </td>
+          <td>1</td>
+          <td>¥0</td>
+          <td>¥0</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="item-name">ターゲットキーワード設計・競合調査</div>
+            <div class="item-desc">「再生医療」「医療痩身」等のキーワード調査・設計</div>
+          </td>
+          <td>1</td>
+          <td>¥0</td>
+          <td>¥0</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="item-name">初期SEO設定</div>
+            <div class="item-desc">タイトル・メタ・JSON-LD構造化データ・OGP設定</div>
+          </td>
+          <td>1</td>
+          <td>¥0</td>
+          <td>¥0</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="item-name">アクセス解析導入</div>
+            <div class="item-desc">Googleアナリティクス・サーチコンソール設置</div>
+          </td>
+          <td>1</td>
+          <td>¥0</td>
+          <td>¥0</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="item-name">スマホ最適化・SSL／サーバー設定</div>
+            <div class="item-desc">レスポンシブ実装・SSL証明書発行・サーバー初期設定</div>
+          </td>
+          <td>1</td>
+          <td>¥0</td>
+          <td>¥0</td>
+        </tr>
+        <tr class="subtotal-row">
+          <td colspan="3">初期費用 合計</td>
+          <td>¥0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- MONTHLY COST -->
+    <div class="section-title">月額費用</div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:55%">項目</th>
+          <th style="width:10%">数量</th>
+          <th style="width:15%">単価</th>
+          <th style="width:20%">金額</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="item-name">保守管理プラン</div>
+            <div class="item-desc">サーバー・SSL・保守管理・月1回更新</div>
+          </td>
+          <td>1</td>
+          <td>¥3,980</td>
+          <td>¥3,980</td>
+        </tr>
+        <tr class="subtotal-row">
+          <td colspan="3">月額費用 合計（税込）</td>
+          <td>¥3,980</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- INCLUDED -->
+    <div class="included-box">
+      <div class="included-title">月額に含まれるもの</div>
+      <div class="included-grid">
+        <div class="included-item">月1回の更新（画像/テキスト）</div>
+        <div class="included-item">超高速サーバー維持費</div>
+        <div class="included-item">SSL暗号化（https）の維持・更新</div>
+        <div class="included-item">システムの監視（24時間）</div>
+        <div class="included-item">既存ページのSEO対策（検索エンジン最適化）</div>
+        <div class="included-item">MEO対策（Googleマップ連携等）</div>
+      </div>
+    </div>
+
+    <!-- NOTES -->
+    <div class="notes">
+      <div class="notes-title">備考</div>
+      <p>本見積書の有効期限は発行日より30日間です</p>
+      <p>契約期間は1年間（自動更新）、お支払いはStripe自動決済（クレジットカード）です</p>
+      <p>最低契約期間（12ヶ月）未満の途中解約の場合、残存期間×月額5,500円（税込）の違約金が発生します</p>
+      <p>年間合計：¥47,760（税込）</p>
+      <p>サーバー移行に伴い、一時的にサイトが閲覧できなくなる場合があります（最大数時間）</p>
+      <p>SEOの効果は検索エンジンの仕様により変動します。順位保証ではございません</p>
+      <p>新規ページ追加・ブログ記事作成代行・予約システム導入等は別途お見積り</p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <span class="footer-text">SHARKSTARS — sharkstars.jp</span>
+    <span class="footer-text">SS-2026-004</span>
+  </div>
+
+</div>
+
+</body>
+</html>
