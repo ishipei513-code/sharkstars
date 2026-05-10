@@ -54,6 +54,27 @@ def extract_new_content(payload: dict) -> str:
     return "\n".join(pieces)
 
 
+def get_file_path(payload: dict) -> str:
+    """Extract file_path from the hook envelope (for context-aware checking)."""
+    tool_input = payload.get("tool_input") or {}
+    return str(tool_input.get("file_path", "")).replace("\\", "/")
+
+
+def is_contract_document(file_path: str) -> bool:
+    """Contract/estimate documents legitimately contain a non-石橋 name on the
+    甲 (client) side. The 乙 (SHARKSTARS) side still has 石橋 as hanko + sig.
+    For these files we relax the broad party-name/sig-name slot checks but
+    keep hanko, 代表者:, and JSON-LD checks (which only ever identify SHARKSTARS).
+    """
+    p = file_path.lower()
+    return (
+        "docs/clients/" in p
+        or "docs/templates/" in p
+        or p.endswith("/contract.html")
+        or p.endswith("/estimate.html")
+    )
+
+
 def normalize(name: str) -> str:
     return re.sub(r"[\s　]+", "", name).strip()
 
@@ -65,12 +86,13 @@ def is_canonical(name: str) -> bool:
     return n in {normalize(v) for v in CANONICAL_FULL_VARIANTS}
 
 
-def find_violations(content: str) -> list[str]:
+def find_violations(content: str, is_contract: bool = False) -> list[str]:
     violations = []
 
     # Hard denylist — if any known-bad name appears in owner context, fail.
+    # This always applies, even in contracts (the historical 石井 mistake must
+    # never appear anywhere associated with an owner-like keyword).
     for bad in KNOWN_BAD_NAMES:
-        # Look for the bad name within ~30 chars of an owner keyword.
         pattern = re.compile(
             r"(代表|代表者|Founder|familyName|party-name|sig-name|hanko|運営責任者)"
             r"[\s\S]{0,40}?" + re.escape(bad)
@@ -81,12 +103,21 @@ def find_violations(content: str) -> list[str]:
                 f"Canonical owner is 石橋昇平."
             )
 
-    # Slot patterns — value in the slot must be a canonical variant.
+    # In contract/estimate documents, the 甲 side legitimately holds a
+    # non-石橋 client name in party-name/sig-name slots. Skip those broad
+    # patterns; rely on hanko + JSON-LD + 代表者: which are only ever 乙 side.
+    skip_party_slots = is_contract
+    SKIPPED_IN_CONTRACTS = {
+        '<div class="party-name">',
+        '<div class="sig-name">',
+    }
+
     for pat in OWNER_SLOT_PATTERNS:
+        if skip_party_slots and any(s in pat.pattern for s in SKIPPED_IN_CONTRACTS):
+            continue
         for m in pat.finditer(content):
             value = m.group(1)
             if not is_canonical(value):
-                # Allow givenName=昇平 alone (canonical given name) — handle here
                 if normalize(value) in {"昇平", "Shohei"}:
                     continue
                 violations.append(
@@ -109,7 +140,10 @@ def main() -> int:
     if not content:
         return 0
 
-    violations = find_violations(content)
+    file_path = get_file_path(payload)
+    is_contract = is_contract_document(file_path)
+
+    violations = find_violations(content, is_contract=is_contract)
     if not violations:
         return 0
 

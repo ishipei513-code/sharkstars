@@ -1,4 +1,10 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  },
   "hooks": {
     "PreToolUse": [
       {
@@ -6,7 +12,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python scripts/hooks/check_owner_name.py"
+            "command": "python D:/sharkstars/scripts/hooks/check_owner_name.py"
           }
         ]
       }
@@ -17,7 +23,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python scripts/hooks/check_demo_propagation.py"
+            "command": "python D:/sharkstars/scripts/hooks/check_demo_propagation.py"
           }
         ]
       }
