@@ -1,0 +1,91 @@
+/* ============================================================
+   株式会社Bolon Shareee / B.villea
+   Design System: E. Editorial × Gold ／ C. Old Luxe Typography
+   ============================================================ */
+
+:root {
+  /* Colors */
+  --primary: #C8276B;
+  --primary-deep: #A11E55;
+  --bg-base: #FFFFFF;
+  --bg-warm: #FBF6EF;
+  --gold: #D4A657;
+  --text-main: #3A1A2A;
+  --text-sub: #5A4050;
+  --border: #EDE4DC;
+
+  /* Typography */
+  --font-jp-serif: 'Zen Old Mincho', serif;
+  --font-en-serif: 'Cormorant Garamond', serif;
+  --font-jp-sans: 'Zen Kaku Gothic Antique', sans-serif;
+
+  /* Spacing scale */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-xxl: 100px;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-pad: 32px;
+
+  /* Easing */
+  --ease: cubic-bezier(.4, 0, .2, 1);
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+
+body {
+  font-family: var(--font-jp-sans);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.95;
+  letter-spacing: 0.06em;
+  color: var(--text-main);
+  background: var(--bg-base);
+  overflow-x: hidden;
+}
+
+html, body { overflow-x: hidden; }
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-jp-serif);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+h1 { font-size: 64px; }
+h2 { font-size: 42px; }
+h3 { font-size: 24px; }
+
+a { color: inherit; transition: color .2s var(--ease); }
+a:hover { color: var(--primary); }
+
+/* ============================================================
+   Mobile base
+   ============================================================ */
+
+@media (max-width: 880px) {
+  :root {
+    --container-pad: 20px;
+    --space-xl: 48px;
+    --space-xxl: 72px;
+  }
+  body { font-size: 14px; }
+  h1 { font-size: 40px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 20px; }
+}
