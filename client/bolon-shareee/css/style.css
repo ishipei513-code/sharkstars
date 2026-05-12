@@ -345,3 +345,67 @@ a:hover { color: var(--primary); }
   .intro-meta { grid-template-columns: 1fr; gap: 18px; padding-top: 22px; }
   .intro-meta .value { font-size: 15px; }
 }
+
+/* ============================================================
+   Strengths — asymmetric 1+2
+   ============================================================ */
+
+.strengths { padding: var(--space-xxl) 0; }
+.section-title {
+  font-size: 42px;
+  line-height: 1.55;
+  margin-bottom: 64px;
+  letter-spacing: 0.05em;
+}
+
+.strengths-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 32px;
+}
+.strength-large { grid-row: 1 / span 2; }
+.strength-card {
+  padding: 48px 36px;
+  background: var(--bg-warm);
+  border-radius: 4px;
+  position: relative;
+}
+.strength-large {
+  background: var(--text-main);
+  color: var(--bg-warm);
+}
+.strength-large .strength-body { color: rgba(251,246,239,0.85); }
+.strength-num {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: 56px;
+  font-weight: 400;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 24px;
+  opacity: 0.85;
+}
+.strength-large .strength-num { color: var(--gold); }
+.strength-title {
+  font-size: 24px;
+  margin-bottom: 18px;
+  letter-spacing: 0.06em;
+}
+.strength-body {
+  font-family: var(--font-jp-sans);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 2.0;
+  color: var(--text-sub);
+}
+
+@media (max-width: 880px) {
+  .strengths { padding: var(--space-xxl) 0 var(--space-xl); }
+  .section-title { font-size: 28px; margin-bottom: 40px; }
+  .strengths-grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 16px; }
+  .strength-large { grid-row: auto; }
+  .strength-card { padding: 36px 28px; }
+  .strength-num { font-size: 44px; margin-bottom: 16px; }
+  .strength-title { font-size: 20px; }
+}
