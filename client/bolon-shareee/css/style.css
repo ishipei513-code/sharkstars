@@ -1163,4 +1163,11 @@ a:hover { color: var(--primary); }
   .company-table > div { grid-template-columns: 1fr; gap: 6px; padding: 20px 0; }
   .company-table dt { font-size: 12px; }
   .company-table dd { font-size: 14px; }
+
+/* ============================================================
+   FAQ Full page
+   ============================================================ */
+
+.faq-full { padding: var(--space-xxl) 0; }
+.faq-full .faq-items { max-width: 880px; margin: 0 auto; }
 }
