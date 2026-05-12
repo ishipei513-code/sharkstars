@@ -409,3 +409,71 @@ a:hover { color: var(--primary); }
   .strength-num { font-size: 44px; margin-bottom: 16px; }
   .strength-title { font-size: 20px; }
 }
+
+/* ============================================================
+   Founder Story
+   ============================================================ */
+
+.story { padding: var(--space-xxl) 0; background: var(--bg-warm); }
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+.story-image { position: relative; }
+.story-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.story-image-caption {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--text-sub);
+  margin-top: 16px;
+  text-align: right;
+}
+.story-headline {
+  font-size: 40px;
+  line-height: 1.6;
+  margin-bottom: 36px;
+  letter-spacing: 0.05em;
+}
+.story-headline .accent { color: var(--primary); }
+.story-body { font-family: var(--font-jp-sans); }
+.story-body p {
+  font-size: 15px;
+  line-height: 2.1;
+  color: var(--text-sub);
+  margin-bottom: 22px;
+}
+.story-emphasis {
+  color: var(--text-main);
+  font-weight: 500;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+}
+.story-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--font-jp-sans);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--text-main);
+  padding-bottom: 4px;
+  transition: color .2s, border-color .2s;
+}
+.story-link:hover { color: var(--primary); border-color: var(--primary); }
+
+@media (max-width: 880px) {
+  .story { padding: var(--space-xxl) 0 var(--space-xl); }
+  .story-grid { grid-template-columns: 1fr; gap: 40px; }
+  .story-headline { font-size: 28px; margin-bottom: 24px; line-height: 1.7; }
+  .story-body p { font-size: 14px; line-height: 2.0; margin-bottom: 18px; }
+}
