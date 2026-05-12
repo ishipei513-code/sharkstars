@@ -1258,3 +1258,22 @@ a:hover { color: var(--primary); }
 @media (max-width: 880px) {
   .route-grid { grid-template-columns: 1fr; gap: 12px; }
 }
+
+/* ============================================================
+   Privacy / Legal page
+   ============================================================ */
+
+.privacy-body { padding: var(--space-xxl) 0; }
+.legal-article { max-width: 760px; margin: 0 auto; font-family: var(--font-jp-sans); }
+.legal-article h2 {
+  font-family: var(--font-jp-serif);
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  margin: 36px 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.legal-article p { font-size: 14px; line-height: 2.0; color: var(--text-sub); margin-bottom: 16px; }
+.legal-article ul { padding-left: 28px; margin-bottom: 16px; }
+.legal-article ul li { font-size: 14px; line-height: 2.0; color: var(--text-sub); list-style: disc; }
+.privacy-date { margin-top: 48px; text-align: right; color: var(--text-sub); font-style: italic; }
