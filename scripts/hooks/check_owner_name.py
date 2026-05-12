@@ -117,6 +117,15 @@ def find_violations(content: str, is_contract: bool = False) -> list[str]:
             continue
         for m in pat.finditer(content):
             value = m.group(1)
+            match_start = m.start()
+            css_open = content.rfind("/*", 0, match_start)
+            css_close = content.rfind("*/", 0, match_start)
+            if css_open != -1 and css_open > css_close:
+                continue
+            html_open = content.rfind("<!--", 0, match_start)
+            html_close = content.rfind("-->", 0, match_start)
+            if html_open != -1 and html_open > html_close:
+                continue
             if not is_canonical(value):
                 if normalize(value) in {"昇平", "Shohei"}:
                     continue
