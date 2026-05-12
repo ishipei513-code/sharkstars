@@ -747,3 +747,61 @@ a:hover { color: var(--primary); }
   .faq-head { position: static; }
   .faq-q { font-size: 15px; padding-right: 32px; }
 }
+
+/* ============================================================
+   Studio / Access
+   ============================================================ */
+
+.studio { padding: var(--space-xxl) 0; }
+.studio-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  margin-top: 48px;
+  align-items: stretch;
+}
+.studio-map {
+  border-radius: 4px;
+  overflow: hidden;
+  min-height: 420px;
+  background: var(--bg-warm);
+}
+.studio-map iframe { min-height: 420px; display: block; }
+.studio-info {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-jp-sans);
+}
+.studio-info > div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.studio-info > div:first-child { padding-top: 0; }
+.studio-info > div:last-child { border-bottom: 0; }
+.studio-info dt {
+  font-family: var(--font-en-serif);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  text-transform: uppercase;
+  padding-top: 4px;
+}
+.studio-info dd {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--text-main);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 880px) {
+  .studio { padding: var(--space-xxl) 0 var(--space-xl); }
+  .studio-grid { grid-template-columns: 1fr; gap: 28px; margin-top: 32px; }
+  .studio-map, .studio-map iframe { min-height: 300px; }
+  .studio-info > div { grid-template-columns: 90px 1fr; gap: 14px; padding: 16px 0; }
+  .studio-info dt { font-size: 10px; }
+  .studio-info dd { font-size: 13px; }
+}
