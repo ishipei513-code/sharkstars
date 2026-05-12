@@ -291,3 +291,57 @@ a:hover { color: var(--primary); }
   .sp-hide { display: none; }
   .pc-hide { display: inline; }
 }
+
+/* ============================================================
+   Section common — eyebrow / spacing
+   ============================================================ */
+
+.section-eyebrow {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 0.22em;
+  color: var(--primary);
+  margin-bottom: 24px;
+}
+
+.intro { padding: var(--space-xxl) 0; background: var(--bg-warm); }
+.intro-headline {
+  font-size: 44px;
+  line-height: 1.7;
+  margin-bottom: 56px;
+  letter-spacing: 0.05em;
+  max-width: 880px;
+}
+.intro-headline .accent { color: var(--primary); }
+.intro-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+}
+.intro-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.intro-meta .label {
+  font-family: var(--font-en-serif);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.intro-meta .value {
+  font-family: var(--font-jp-serif);
+  font-size: 16px;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 880px) {
+  .intro { padding: var(--space-xxl) 0 var(--space-xl); }
+  .intro-headline { font-size: 26px; margin-bottom: 36px; line-height: 1.75; }
+  .intro-meta { grid-template-columns: 1fr; gap: 18px; padding-top: 22px; }
+  .intro-meta .value { font-size: 15px; }
+}
