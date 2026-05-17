@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow"><!-- プレビュー用：本番公開時に削除 -->
 
   <!-- SEO -->
   <title>B.villea｜福岡・警固のバストアップ専門サロン｜株式会社Bolon Shareee</title>
@@ -28,7 +29,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Zen+Old+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,600;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Zen+Old+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/reset.css">
@@ -86,11 +87,10 @@
     </button>
     <nav class="nav">
       <div class="nav-links">
-        <a href="#story">代表ストーリー</a>
-        <a href="#menu">メニュー</a>
-        <a href="school.html">スクール</a>
-        <a href="company.html">会社情報</a>
-        <a href="faq.html">FAQ</a>
+        <a href="index.html">トップ</a>
+        <a href="business.html">事業内容</a>
+        <a href="company.html">会社概要</a>
+        <a href="faq.html">よくある質問</a>
       </div>
       <a href="contact.html" class="nav-cta">CONTACT</a>
     </nav>
@@ -100,298 +100,206 @@
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero-bg" aria-hidden="true">
-    <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1597762470488-3877b1f538c6?w=1800&q=85');"></div>
+    <div class="hero-slides">
+      <div class="hero-slide" style="background-image: url('images/download.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/C037959832.jpg');"></div>
+    </div>
     <div class="hero-overlay"></div>
   </div>
 
   <div class="hero-vertical" aria-hidden="true">B.villea — Bougainvillea Blooms</div>
 
-  <div class="hero-inner">
-    <p class="hero-eyebrow">Bougainvillea Blooms</p>
-    <h1 class="hero-title">
-      <span class="word"><span>咲き誇る</span></span>
-      <span class="word"><span>あなたを、</span></span>
-      <span class="word"><span><span class="accent">ここから</span>。</span></span>
-    </h1>
-    <p class="hero-lead">
-      福岡・警固のバストアップ専門サロン。<br>
-      代表・蒲池百都子の人柄と、14年の積み重ねを<br class="sp-hide">、<br class="pc-hide">ひとりずつに。
-    </p>
-    <a href="#line" class="hero-cta">LINEで気軽に相談する →</a>
+  <div class="hero-inner reveal">
+    <h1 class="hero-title hero-title-brand">B<span class="brand-dot">.</span>villea</h1>
+    <div class="hero-meta">
+      <span class="hero-rule" aria-hidden="true"></span>
+      <p class="hero-sub">福岡・警固　バストアップ専門サロン</p>
+    </div>
   </div>
+
+  <a href="#message" class="hero-scroll" aria-label="下へスクロール">
+    <span class="hero-scroll-label">Scroll</span>
+    <span class="hero-scroll-line" aria-hidden="true"></span>
+  </a>
 </section>
 
-<!-- ===== INTRO ===== -->
-<section class="intro">
+<!-- ===== MESSAGE ===== -->
+<section class="message" id="message">
   <div class="container">
-    <p class="section-eyebrow">— Bougainvillea Blooms</p>
-    <h2 class="intro-headline">
-      14年、ひとつひとつのお胸に。<br>
-      <span class="accent">咲かせてきたものがあります。</span>
+    <p class="section-eyebrow reveal">— Message</p>
+    <h2 class="message-headline reveal reveal--d1">
+      技術の前に<br>
+      <span class="accent">あなたの気持ちに触れたい</span>
     </h2>
-    <div class="intro-meta">
-      <div><span class="label">開業</span><span class="value">2013年（個人事業）</span></div>
-      <div><span class="label">法人化</span><span class="value">2025年12月26日</span></div>
-      <div><span class="label">所在地</span><span class="value">福岡市中央区警固</span></div>
-    </div>
+    <p class="message-body reveal reveal--d2">
+      バストの悩みは人に言いにくいもの。<br>
+      だからこそ おひとりずつの時間とことばを大切に。<br>
+      14年変えずに続けてきたことです。
+    </p>
+    <figure class="message-portrait reveal reveal--d3">
+      <img src="images/C057417807.jpg" alt="代表 蒲池百都子" loading="lazy" width="164" height="219">
+    </figure>
+    <p class="message-sign reveal reveal--d4">B.villea ／ 蒲池 百都子</p>
   </div>
 </section>
 
-<!-- ===== STRENGTHS ===== -->
-<section class="strengths">
+<!-- ===== BUSINESS ===== -->
+<section class="company-summary" id="business">
   <div class="container">
-    <p class="section-eyebrow">— Our Strength</p>
-    <h2 class="section-title">B.villea が選ばれる、<br>3つの理由。</h2>
+    <p class="section-eyebrow reveal">— Our Business</p>
+    <h2 class="section-title reveal reveal--d1">3つの事業で<br>女性を支える</h2>
 
-    <div class="strengths-grid">
-      <article class="strength-card strength-large">
-        <div class="strength-num">01</div>
-        <h3 class="strength-title">Motokoの人柄</h3>
-        <p class="strength-body">
-          「Motokoさんに会いに行きたい」<br>
-          常連のお客様から、いちばん多くいただく声です。<br>
-          技術だけではない、その場の温度。<br>
-          14年積み重ねた信頼関係を、<br>
-          おひとりずつとつくっていきます。
-        </p>
+    <div class="business-list">
+      <article class="business-item reveal">
+        <div class="business-num">01</div>
+        <h3 class="business-title">B.villea サロン</h3>
+        <figure class="business-ph"><span>ここに写真が入ります</span></figure>
+        <p class="business-desc">福岡・警固のバストアップ専門サロン。完全予約制で、ひと組ずつのプライベートな時間をご用意します。</p>
       </article>
-      <article class="strength-card">
-        <div class="strength-num">02</div>
-        <h3 class="strength-title">14年で磨いた施術</h3>
-        <p class="strength-body">2013年の開業から、ひたすらバストアップひと筋。経験から生まれた手技を、丁寧にお届けします。</p>
+
+      <article class="business-item reveal">
+        <div class="business-num">02</div>
+        <h3 class="business-title">バストスクール</h3>
+        <figure class="business-ph"><span>ここに写真が入ります</span></figure>
+        <p class="business-desc">14年で培った技術と経営の知見を、サロン開業を目指す方へ。卒業生は当社の業務委託パートナーとしてもご活躍いただけます。</p>
       </article>
-      <article class="strength-card">
-        <div class="strength-num">03</div>
-        <h3 class="strength-title">警固の隠れ家</h3>
-        <p class="strength-body">福岡市中央区警固、S-FORTタワー1801。完全予約制、ひと組ずつのプライベートな時間。</p>
+
+      <article class="business-item reveal">
+        <div class="business-num">03</div>
+        <h3 class="business-title">バスト機器 代理店・販売</h3>
+        <figure class="business-ph"><span>ここに写真が入ります</span></figure>
+        <p class="business-desc">サロンで使用している専門機器を、信頼できるサロン様へ。お取り扱いについてはお問い合わせください。</p>
       </article>
     </div>
+
+    <a href="business.html" class="business-cta reveal">事業内容を詳しく見る →</a>
   </div>
 </section>
 
-<!-- ===== FOUNDER STORY ===== -->
-<section class="story" id="story">
+<!-- ===== BEFORE / AFTER ===== -->
+<section class="gallery" id="gallery">
   <div class="container">
-    <div class="story-grid">
-      <div class="story-image">
-        <img src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?w=900&q=85" alt="代表 蒲池百都子" loading="lazy">
-        <p class="story-image-caption">代表・蒲池百都子（がま ちもとこ）</p>
-      </div>
-      <div class="story-text">
-        <p class="section-eyebrow">— Founder's Story</p>
-        <h2 class="story-headline">
-          バストの悩みに、<br>
-          <span class="accent">ひとりずつ寄り添う。</span>
-        </h2>
-        <div class="story-body">
-          <p>2013年2月、福岡で個人事業として B.villea を開業しました。</p>
-          <p>「もっとお胸に自信を持ちたい」「人に言えない悩みを抱えている」<br>そんなお客様おひとりずつに、技術と時間で向き合う14年。</p>
-          <p>2025年12月、株式会社 Bolon Shareee として法人化。<br>サロンに加え、バストスクール、バスト機器の代理店も運営する形になりました。</p>
-          <p>規模が変わっても、変えたくないことが一つあります。<br><span class="story-emphasis">来てくださった方の温度に、ちゃんと触れること。</span></p>
+    <p class="section-eyebrow reveal">— Before / After</p>
+    <h2 class="section-title reveal reveal--d1">バストアップの<br>ビフォーアフター</h2>
+
+    <!-- Before/After ペア写真は蒲池さんより提供待ち。提供後にプレースホルダを差し替える。 -->
+    <div class="ba-list">
+      <figure class="ba-case reveal">
+        <div class="ba-pair">
+          <span class="ba-tile"><span class="ba-label">Before</span><span class="gallery-ph">写真準備中</span></span>
+          <span class="ba-tile"><span class="ba-label ba-label-after">After</span><span class="gallery-ph">写真準備中</span></span>
         </div>
-        <a href="company.html" class="story-link">会社情報を詳しく見る →</a>
-      </div>
+        <figcaption class="ba-cap">Case 01</figcaption>
+      </figure>
+      <figure class="ba-case reveal">
+        <div class="ba-pair">
+          <span class="ba-tile"><span class="ba-label">Before</span><span class="gallery-ph">写真準備中</span></span>
+          <span class="ba-tile"><span class="ba-label ba-label-after">After</span><span class="gallery-ph">写真準備中</span></span>
+        </div>
+        <figcaption class="ba-cap">Case 02</figcaption>
+      </figure>
+      <figure class="ba-case reveal">
+        <div class="ba-pair">
+          <span class="ba-tile"><span class="ba-label">Before</span><span class="gallery-ph">写真準備中</span></span>
+          <span class="ba-tile"><span class="ba-label ba-label-after">After</span><span class="gallery-ph">写真準備中</span></span>
+        </div>
+        <figcaption class="ba-cap">Case 03</figcaption>
+      </figure>
     </div>
+    <p class="gallery-note">※掲載写真はご本人の同意を得て掲載しています。個人の感想であり、効果には個人差があります。施術効果を保証するものではありません。</p>
   </div>
 </section>
 
-<!-- ===== MENU ===== -->
-<section class="menu" id="menu">
+<!-- ===== INSTAGRAM ===== -->
+<section class="insta" id="insta">
   <div class="container">
-    <p class="section-eyebrow">— Menu & Care</p>
-    <h2 class="section-title">バストアップ専門の、<br>メニュー。</h2>
+    <p class="section-eyebrow reveal">— Instagram</p>
+    <h2 class="section-title reveal reveal--d1">日々の発信を<br>Instagram で</h2>
 
-    <div class="menu-list">
-      <article class="menu-item">
-        <div class="menu-meta">
-          <span class="menu-num">M01</span>
-          <span class="menu-duration">90分</span>
-        </div>
-        <h3 class="menu-name">B.villea バストケア / 初回体験</h3>
-        <p class="menu-desc">14年の手技でじっくりお胸を整える、定番のフルケア。施術前のカウンセリングからアフターまで丁寧に。</p>
-        <div class="menu-price">
-          <span class="price-label">初回</span>
-          <span class="price-value">¥◯,◯◯◯</span>
-          <span class="price-note">（税込 / 仮）</span>
-        </div>
-      </article>
-
-      <article class="menu-item">
-        <div class="menu-meta">
-          <span class="menu-num">M02</span>
-          <span class="menu-duration">60分</span>
-        </div>
-        <h3 class="menu-name">継続コース</h3>
-        <p class="menu-desc">2回目以降の方向け、リズムを保つための定期ケア。お一人ずつの状態に合わせた施術内容。</p>
-        <div class="menu-price">
-          <span class="price-label">2回目以降</span>
-          <span class="price-value">¥◯,◯◯◯</span>
-          <span class="price-note">（税込 / 仮）</span>
-        </div>
-      </article>
-
-      <article class="menu-item">
-        <div class="menu-meta">
-          <span class="menu-num">M03</span>
-          <span class="menu-duration">120分</span>
-        </div>
-        <h3 class="menu-name">プレミアム / 集中ケア</h3>
-        <p class="menu-desc">じっくり時間をかけて、お胸と全身を整える贅沢なコース。特別なタイミングに。</p>
-        <div class="menu-price">
-          <span class="price-label">プレミアム</span>
-          <span class="price-value">¥◯,◯◯◯</span>
-          <span class="price-note">（税込 / 仮）</span>
-        </div>
-      </article>
+    <!-- スクショはクライアント提供の手動キャプチャ（ログイン状態のプロフィール画面）。
+         各アカウントの役割（サロン公式/個人/提携先）はクライアント確認待ち。 -->
+    <div class="insta-grid">
+      <a class="insta-card reveal" href="https://www.instagram.com/b.villea.fukuoka/" target="_blank" rel="noopener">
+        <span class="insta-shot"><img src="images/insta-bvillea.jpg" alt="@b.villea.fukuoka のInstagramプロフィール" loading="lazy" width="1497" height="816"></span>
+        <span class="insta-handle">@b.villea.fukuoka</span>
+        <span class="insta-go">Instagramで見る →</span>
+      </a>
+      <a class="insta-card reveal" href="https://www.instagram.com/motoko0204/" target="_blank" rel="noopener">
+        <span class="insta-shot"><img src="images/insta-motoko.jpg" alt="@motoko0204 のInstagramプロフィール" loading="lazy" width="1477" height="892"></span>
+        <span class="insta-handle">@motoko0204</span>
+        <span class="insta-go">Instagramで見る →</span>
+      </a>
+      <a class="insta-card reveal" href="https://www.instagram.com/barian0204/" target="_blank" rel="noopener">
+        <span class="insta-shot"><img src="images/insta-barian.jpg" alt="@barian0204 のInstagramプロフィール" loading="lazy" width="1487" height="841"></span>
+        <span class="insta-handle">@barian0204</span>
+        <span class="insta-go">Instagramで見る →</span>
+      </a>
     </div>
-
-    <div class="menu-flow">
-      <h3 class="flow-title">— 施術の流れ</h3>
-      <ol class="flow-steps">
-        <li><span class="flow-num">01</span><span class="flow-text"><strong>カウンセリング</strong>お悩み・ご希望をうかがいます。</span></li>
-        <li><span class="flow-num">02</span><span class="flow-text"><strong>お着替え</strong>専用のお部屋でゆっくり。</span></li>
-        <li><span class="flow-num">03</span><span class="flow-text"><strong>施術</strong>お胸まわりを丁寧に整えます。</span></li>
-        <li><span class="flow-num">04</span><span class="flow-text"><strong>アフター</strong>お茶をご用意。次回のご相談も。</span></li>
-      </ol>
-    </div>
-
-    <p class="menu-note">※料金は仮表示です。実際の料金はLINEまたはお問い合わせよりご確認ください。</p>
   </div>
 </section>
 
 <!-- ===== VOICE ===== -->
-<section class="voice">
+<section class="voice" id="voice">
   <div class="container">
-    <p class="section-eyebrow">— Voice</p>
-    <h2 class="section-title">お客様の、<br>声から。</h2>
+    <p class="section-eyebrow reveal">— Voice</p>
+    <h2 class="section-title reveal reveal--d1">お客様の声</h2>
 
     <div class="voice-list">
-      <article class="voice-item">
-        <p class="voice-quote">「Motokoさんに会うと元気になる」</p>
-        <p class="voice-body">3年通っています。技術はもちろんですが、いちばんは話を聴いてくれること。終わったあとはお胸も心も軽くなって帰ります。</p>
-        <p class="voice-author">— S様 / 40代 / 福岡市</p>
+      <article class="voice-item reveal">
+        <p class="voice-quote">「通うのが私のご褒美です」</p>
+        <p class="voice-body">軽い気持ちで体験を受けましたが、即決でした。スタッフさんがとても優しくお店の雰囲気もよくて、毎回癒されています。本気で悩んでいる方はぜひ体験だけでも。</p>
+        <p class="voice-author">— えりさん / 20代後半 / 会社員</p>
       </article>
 
-      <article class="voice-item">
-        <p class="voice-quote">「自分のお胸が、好きになった」</p>
-        <p class="voice-body">ずっとコンプレックスでした。1年通って、いまは鏡の前で自分を見るのが嫌じゃなくなりました。それがいちばんの変化です。</p>
-        <p class="voice-author">— K様 / 30代 / 福岡市</p>
+      <article class="voice-item reveal">
+        <p class="voice-quote">「私の人生を変えてくれました」</p>
+        <p class="voice-body">どうせ何をしても無駄だと思っていた私。あたたかな笑顔と清潔に整ったサロンで、見た目だけでなく性格まで前向きに。悩んで諦めている方こそ、安心して委ねてほしいです。</p>
+        <p class="voice-author">— かなさん / 30代前半 / 自営業</p>
       </article>
 
-      <article class="voice-item">
-        <p class="voice-quote">「サロンに行く時間そのものが好き」</p>
-        <p class="voice-body">完全予約制で、人と会わずに通えるのがありがたい。自分のためだけの90分です。</p>
-        <p class="voice-author">— M様 / 50代 / 北九州市</p>
+      <article class="voice-item reveal">
+        <p class="voice-quote">「自分に自信がつきました」</p>
+        <p class="voice-body">変化を実感し、自分に自信がつきました。丁寧な施術で安心して通える、おすすめのサロンです。</p>
+        <p class="voice-author">— みよさん / 30代後半</p>
       </article>
     </div>
 
-    <p class="voice-disclaimer">※個人の感想であり、効果には個人差があります。</p>
+    <p class="voice-disclaimer">※ホットペッパービューティーに寄せられた口コミより。個人の感想であり、効果には個人差があります。</p>
   </div>
 </section>
 
-<!-- ===== FAQ EXCERPT ===== -->
-<section class="faq-excerpt">
+<!-- ===== COMPANY INFO ===== -->
+<section class="access" id="access">
   <div class="container">
-    <div class="faq-grid">
-      <div class="faq-head">
-        <p class="section-eyebrow">— Questions</p>
-        <h2 class="section-title">よくいただく、<br>ご質問。</h2>
-        <a href="faq.html" class="faq-link">FAQをすべて見る →</a>
-      </div>
+    <p class="section-eyebrow reveal">— Company</p>
+    <h2 class="section-title reveal reveal--d1">会社情報</h2>
 
-      <div class="faq-items">
-        <details class="faq-item">
-          <summary class="faq-q">お胸の変化は、本当にありますか？</summary>
-          <div class="faq-a">個人差はありますが、続けていただくことで多くのお客様に変化を感じていただいています。詳しくはカウンセリング時にご相談ください。<br><small>※個人の感想であり、効果には個人差があります。</small></div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-q">初めてでも大丈夫ですか？</summary>
-          <div class="faq-a">もちろんです。初めての方には、カウンセリングからお流れをご説明し、安心して受けていただけるようにしています。</div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-q">男性スタッフはいますか？</summary>
-          <div class="faq-a">スタッフはすべて女性です（代表 蒲池 + 業務委託の女性スタッフ）。安心してお越しください。</div>
-        </details>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== STUDIO / ACCESS ===== -->
-<section class="studio">
-  <div class="container">
-    <p class="section-eyebrow">— Studio</p>
-    <h2 class="section-title">お越しいただく、<br>場所のこと。</h2>
-
-    <div class="studio-grid">
-      <div class="studio-map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.0!2d130.392!3d33.585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zSi1GT1JU5pyo5LiB44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1700000000000"
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+    <div class="studio-grid studio-grid-solo reveal reveal--d1">
       <dl class="studio-info">
+        <div><dt>運営会社</dt><dd>株式会社Bolon Shareee</dd></div>
         <div><dt>所在地</dt><dd>〒810-0023<br>福岡市中央区警固2-13-17<br>S-FORT警固タワー 1801</dd></div>
-        <div><dt>最寄駅</dt><dd>福岡市営地下鉄 赤坂駅 徒歩◯分<br>西鉄バス 警固町停 徒歩◯分</dd></div>
         <div><dt>営業時間</dt><dd>10:00 – 19:00（最終受付 17:30 / 仮）</dd></div>
         <div><dt>定休日</dt><dd>不定休（LINEにてご確認ください）</dd></div>
-        <div><dt>予約方法</dt><dd>完全予約制 / LINE優先</dd></div>
+        <div><dt>予約方法</dt><dd>完全予約制<br><a class="hpb-link" href="https://beauty.hotpepper.jp/kr/slnH000634079/" target="_blank" rel="noopener">ホットペッパービューティーで予約する →</a></dd></div>
       </dl>
     </div>
   </div>
 </section>
 
-<!-- ===== COMPANY SUMMARY ===== -->
-<section class="company-summary">
+<!-- ===== CONTACT ===== -->
+<section class="contact-cta-sec" id="contact-cta">
   <div class="container">
-    <p class="section-eyebrow">— Bolon Shareee</p>
-    <h2 class="section-title">3つの事業で、<br>女性を支える。</h2>
+    <p class="section-eyebrow reveal">— Contact</p>
+    <h2 class="section-title reveal reveal--d1">ご相談はお気軽に</h2>
 
-    <div class="business-list">
-      <article class="business-item">
-        <div class="business-num">事業 01</div>
-        <h3 class="business-title">B.villea サロン</h3>
-        <p class="business-desc">福岡・警固のバストアップ専門サロン。本サイトでご紹介している事業の中心です。</p>
-        <a href="#menu" class="business-link">メニューを見る →</a>
-      </article>
-
-      <article class="business-item">
-        <div class="business-num">事業 02</div>
-        <h3 class="business-title">バストスクール</h3>
-        <p class="business-desc">14年で培った技術と経営の知見を、サロン開業を目指す方へ。卒業生は当社の業務委託パートナーとしてもご活躍いただけます。</p>
-        <a href="school.html" class="business-link">スクール詳細 →</a>
-      </article>
-
-      <article class="business-item">
-        <div class="business-num">事業 03</div>
-        <h3 class="business-title">バスト機器 代理店・販売</h3>
-        <p class="business-desc">サロンで使用している専門機器を、信頼できるサロン様へ。お取り扱いについてはお問い合わせください。</p>
-        <a href="company.html" class="business-link">会社情報 →</a>
-      </article>
+    <div class="access-cta">
+      <div class="line-actions reveal reveal--d1">
+        <a href="https://lin.ee/" class="line-btn line-btn-primary" target="_blank" rel="noopener">
+          公式LINEはこちら
+        </a>
+        <a href="contact.html" class="line-btn line-btn-secondary">お問い合わせはこちら</a>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== LINE CTA ===== -->
-<section class="line-cta" id="line">
-  <div class="container">
-    <p class="section-eyebrow" style="color: var(--gold);">— Get in Touch</p>
-    <h2 class="line-headline">
-      まずはLINEで、<br>
-      <span class="accent">気軽にご相談ください。</span>
-    </h2>
-    <p class="line-lead">
-      お悩み、お見積もり、初めての方のご不安。<br>
-      おひとりずつ、Motokoが直接お返事しています。
-    </p>
-    <div class="line-actions">
-      <a href="https://lin.ee/" class="line-btn line-btn-primary" target="_blank" rel="noopener">
-        <span class="line-icon" aria-hidden="true">L</span>
-        LINEで相談する
-      </a>
-      <a href="contact.html" class="line-btn line-btn-secondary">フォームから問い合わせる</a>
-    </div>
-    <p class="line-note">電話でも承ります： <a href="tel:+819095749566">090-9574-9566</a></p>
   </div>
 </section>
 
@@ -407,17 +315,12 @@
       <nav class="footer-nav">
         <h4>Site</h4>
         <a href="index.html">トップ</a>
-        <a href="school.html">スクール</a>
-        <a href="company.html">会社情報</a>
-        <a href="faq.html">FAQ</a>
+        <a href="business.html">事業内容</a>
+        <a href="company.html">会社概要</a>
+        <a href="faq.html">よくある質問</a>
         <a href="contact.html">お問い合わせ</a>
         <a href="privacy.html">プライバシーポリシー</a>
       </nav>
-      <div class="footer-meta">
-        <h4>Contact</h4>
-        <p>TEL <a href="tel:+819095749566">090-9574-9566</a></p>
-        <p>Mail <a href="mailto:motoko19750204@gmail.com">motoko19750204@gmail.com</a></p>
-      </div>
     </div>
     <div class="footer-bottom">
       <p class="copyright">© 2026 株式会社Bolon Shareee. All Rights Reserved.</p>

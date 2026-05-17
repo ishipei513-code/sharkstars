@@ -144,9 +144,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://sharkstars.jp/client/bolon-shareee/</loc><lastmod>2026-05-12</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://sharkstars.jp/client/bolon-shareee/school.html</loc><lastmod>2026-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://sharkstars.jp/client/bolon-shareee/company.html</loc><lastmod>2026-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://sharkstars.jp/client/bolon-shareee/faq.html</loc><lastmod>2026-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://sharkstars.jp/client/bolon-shareee/contact.html</loc><lastmod>2026-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <!-- B.villea / Bolon Shareee はプレビュー中のためサイトマップから一時除外。本番公開時に下記コメントを解除する。
+  <url><loc>https://sharkstars.jp/client/bolon-shareee/</loc><lastmod>2026-05-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sharkstars.jp/client/bolon-shareee/business.html</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://sharkstars.jp/client/bolon-shareee/company.html</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sharkstars.jp/client/bolon-shareee/faq.html</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sharkstars.jp/client/bolon-shareee/contact.html</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sharkstars.jp/client/bolon-shareee/privacy.html</loc><lastmod>2026-05-17</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  -->
 </urlset>

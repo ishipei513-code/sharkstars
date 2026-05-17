@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow"><!-- プレビュー用：本番公開時に削除 -->
 
   <!-- SEO -->
   <title>お問い合わせ｜B.villea｜株式会社Bolon Shareee</title>
@@ -59,9 +60,9 @@
     <nav class="nav">
       <div class="nav-links">
         <a href="index.html">トップ</a>
-        <a href="school.html">スクール</a>
-        <a href="company.html">会社情報</a>
-        <a href="faq.html">FAQ</a>
+        <a href="business.html">事業内容</a>
+        <a href="company.html">会社概要</a>
+        <a href="faq.html">よくある質問</a>
       </div>
       <a href="contact.html" class="nav-cta">CONTACT</a>
     </nav>
@@ -105,12 +106,17 @@
     <div class="container">
       <p class="section-eyebrow">— Form</p>
       <h2 class="section-title">お問い合わせフォーム</h2>
-      <form class="contact-form" action="#" method="post" novalidate>
+      <!-- Formspree: formspree.io に蒲池さんのGmail(motoko19750204@gmail.com)で登録し、
+           フォーム作成後に発行される8桁IDで下記 action の REPLACE_WITH_FORMSPREE_ID を差し替える。
+           例: action="https://formspree.io/f/myyabcde" -->
+      <form class="contact-form" action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST">
         <label>お名前 <span class="req">必須</span><input type="text" name="name" required></label>
         <label>メールアドレス <span class="req">必須</span><input type="email" name="email" required></label>
         <label>電話番号<input type="tel" name="tel"></label>
         <label>ご相談内容<select name="topic"><option>サロン体験について</option><option>料金について</option><option>バストスクールについて</option><option>機器販売について</option><option>業務委託について</option><option>その他</option></select></label>
         <label>メッセージ <span class="req">必須</span><textarea name="message" rows="6" required></textarea></label>
+        <input type="hidden" name="_subject" value="【B.villea】サイトからのお問い合わせ">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
         <p class="form-note">送信前に<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p>
         <button type="submit" class="hero-cta">送信する →</button>
       </form>
@@ -130,17 +136,12 @@
       <nav class="footer-nav">
         <h4>Site</h4>
         <a href="index.html">トップ</a>
-        <a href="school.html">スクール</a>
-        <a href="company.html">会社情報</a>
-        <a href="faq.html">FAQ</a>
+        <a href="business.html">事業内容</a>
+        <a href="company.html">会社概要</a>
+        <a href="faq.html">よくある質問</a>
         <a href="contact.html">お問い合わせ</a>
         <a href="privacy.html">プライバシーポリシー</a>
       </nav>
-      <div class="footer-meta">
-        <h4>Contact</h4>
-        <p>TEL <a href="tel:+819095749566">090-9574-9566</a></p>
-        <p>Mail <a href="mailto:motoko19750204@gmail.com">motoko19750204@gmail.com</a></p>
-      </div>
     </div>
     <div class="footer-bottom">
       <p class="copyright">© 2026 株式会社Bolon Shareee. All Rights Reserved.</p>
