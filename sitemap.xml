@@ -152,4 +152,11 @@
   <url><loc>https://sharkstars.jp/client/bolon-shareee/contact.html</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://sharkstars.jp/client/bolon-shareee/privacy.html</loc><lastmod>2026-05-17</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   -->
+  <!-- マリンケア訪問看護ステーション はプレビュー中のためサイトマップから一時除外。本番公開時に下記コメントを解除する。
+  <url><loc>https://sharkstars.jp/client/marin/</loc><lastmod>2026-05-24</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sharkstars.jp/client/marin/service.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://sharkstars.jp/client/marin/company.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sharkstars.jp/client/marin/contact.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sharkstars.jp/client/marin/privacy.html</loc><lastmod>2026-05-24</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  -->
 </urlset>
