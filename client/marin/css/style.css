@@ -1070,34 +1070,36 @@ select {
 /* Arrow connector between steps */
 .flow-arrow {
   width: 28px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 22px; /* align with step number circle */
   align-self: start;
-  margin-top: calc(clamp(20px, 3vw, 28px) + 22px); /* push down to center on num */
+  /* vertically align with center of the .flow-num circle (44px tall, preceded by padding) */
+  margin-top: calc(clamp(20px, 3vw, 28px) + 22px);
   flex-shrink: 0;
 }
 
+/* Horizontal line */
 .flow-arrow::after {
   content: "";
   display: block;
-  width: 20px;
+  width: 16px;
   height: 2px;
   background: var(--accent);
-  position: relative;
 }
 
+/* Arrowhead — positioned relative to .flow-arrow */
 .flow-arrow::before {
   content: "";
   display: block;
   position: absolute;
+  right: 0;
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-left: 7px solid var(--accent);
-  margin-left: 14px;
 }
 
 /* ---- 05 AREA CARD ---- */
