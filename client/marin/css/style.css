@@ -1239,28 +1239,23 @@ select {
 }
 
 /* ---- Standalone access map (full-width, fixed height) ---- */
-.company-info + .access .access-map {
+.access-map--standalone {
   min-height: 420px;
   height: 420px;
 }
 
-/* Mobile: slightly shorter map */
+/* Mobile: slightly shorter map, iframe unclipped */
 @media (max-width: 600px) {
-  .company-info + .access .access-map {
+  .access-map--standalone {
     min-height: 300px;
     height: 300px;
   }
+  .access-map--standalone iframe { min-height: 0; }
   .company-dl > div {
     grid-template-columns: 1fr;
     gap: 4px;
-  }
-  .company-dl dt {
-    font-size: 12px;
-    padding-bottom: 0;
-    border-bottom: none;
-  }
-  .company-dl > div {
     border-bottom: 1px solid #eaf5f9;
     padding-bottom: 14px;
   }
+  .company-dl dt { font-size: 12px; }
 }
