@@ -1536,7 +1536,7 @@ select {
 
 /* Body text within clauses */
 .legal-clause p {
-  font-size: clamp(14px, 2vw, 15px);
+  font-size: clamp(15px, 2.2vw, 16px);
   color: var(--text);
   line-height: 1.95;
   margin-bottom: 10px;
@@ -1573,7 +1573,7 @@ select {
 .legal-list li {
   padding-left: 18px;
   position: relative;
-  font-size: clamp(14px, 2vw, 15px);
+  font-size: clamp(15px, 2.2vw, 16px);
   color: var(--text);
   line-height: 1.85;
   word-break: auto-phrase;
@@ -1589,7 +1589,6 @@ select {
   height: 8px;
   border-radius: 50%;
   background: var(--accent);
-  flex-shrink: 0;
 }
 
 /* Definition list within clauses (事業者情報 / お問い合わせ) */
