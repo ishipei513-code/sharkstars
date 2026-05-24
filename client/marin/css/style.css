@@ -360,3 +360,498 @@ select {
     padding: 16px var(--gut);
   }
 }
+
+/* ============================================================
+   ===== TOP PAGE =====
+   Section-specific styles for client/marin/index.html
+   Built on existing tokens. Mobile-first, single-column at 360px.
+   ============================================================ */
+
+/* --- Staggered reveal delays (main.js toggles .is-in) --- */
+.reveal.d1 { transition-delay: .08s; }
+.reveal.d2 { transition-delay: .16s; }
+.reveal.d3 { transition-delay: .24s; }
+
+/* --- Floating bubble accent (signature ocean motif) --- */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 30%, rgba(255, 255, 255, .9), rgba(127, 208, 224, .35) 60%, rgba(127, 208, 224, 0));
+  pointer-events: none;
+  animation: bubble-float 9s ease-in-out infinite;
+}
+@keyframes bubble-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-16px) scale(1.05); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bubble { animation: none; }
+}
+
+/* ============================================================
+   01 HERO — full-bleed photo, no frame
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: clamp(560px, 88vh, 720px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 40%;
+  z-index: -2;
+  transform: scale(1.04);
+  animation: hero-drift 18s ease-in-out infinite alternate;
+}
+@keyframes hero-drift {
+  to { transform: scale(1.1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo { animation: none; transform: none; }
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(105deg, rgba(10, 77, 110, .58) 0%, rgba(10, 90, 130, .30) 42%, rgba(10, 90, 130, .04) 70%),
+    linear-gradient(180deg, rgba(10, 77, 110, .12), rgba(191, 232, 245, .28));
+}
+.hero-inner {
+  padding-block: clamp(80px, 14vw, 120px);
+  max-width: 640px;
+}
+.hero-eyebrow {
+  font-family: var(--ff-en);
+  font-size: 12px;
+  letter-spacing: .24em;
+  font-weight: 600;
+  color: #eafaff;
+  text-shadow: 0 1px 8px rgba(10, 77, 110, .4);
+  margin-bottom: 18px;
+}
+.hero-title {
+  font-size: clamp(44px, 12vw, 84px);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #fff;
+  letter-spacing: .02em;
+  text-shadow: 0 4px 26px rgba(10, 60, 90, .35);
+  word-break: auto-phrase;
+}
+.hero-sub {
+  margin-top: 22px;
+  font-size: clamp(15px, 3.4vw, 19px);
+  font-weight: 500;
+  line-height: 1.9;
+  color: #f3fcff;
+  text-shadow: 0 2px 12px rgba(10, 60, 90, .42);
+}
+.hero-cta {
+  margin-top: 32px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.hero .bubble-a { width: 90px; height: 90px; top: 16%; right: 12%; }
+.hero .bubble-b { width: 44px; height: 44px; top: 58%; right: 26%; animation-delay: 2.5s; }
+.hero .bubble-c { width: 28px; height: 28px; top: 34%; right: 6%; animation-delay: 4s; }
+
+/* --- Wave divider (signature hook between sections) --- */
+.wave-divider {
+  position: relative;
+  line-height: 0;
+}
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: clamp(48px, 7vw, 90px);
+}
+/* hero -> page: white wave sits at hero bottom */
+.hero .wave-divider-light {
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  z-index: 1;
+}
+.hero .wave-divider-light svg path { fill: var(--bg-1); }
+/* upward wave used between strengths(white frame area) and story */
+.wave-divider-up svg path { fill: #fff; opacity: .55; }
+
+/* ============================================================
+   02 写真ストリップ — wide row, edge-to-edge feel
+   ============================================================ */
+.photostrip { padding-top: clamp(28px, 5vw, 48px); }
+.strip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(12px, 2vw, 20px);
+}
+.strip-item {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.strip-item img {
+  width: 100%;
+  height: clamp(180px, 26vw, 280px);
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.strip-item:hover img { transform: scale(1.06); }
+.strip-item figcaption {
+  position: absolute;
+  left: 16px; bottom: 14px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: 0 2px 10px rgba(10, 60, 90, .55);
+  letter-spacing: .04em;
+}
+.strip-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(10, 77, 110, .42));
+}
+
+/* ============================================================
+   03 理念メッセージ — THE white card moment
+   ============================================================ */
+.philosophy-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  max-width: 860px;
+  margin-inline: auto;
+}
+.philosophy-card .label { display: inline-block; }
+.philosophy-card .title { margin-bottom: 26px; }
+.philosophy-body {
+  font-size: clamp(15px, 2.2vw, 17px);
+  line-height: 2.1;
+  color: var(--text);
+  text-align: left;
+}
+.philosophy-close {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e3f3f9;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 2;
+  color: var(--muted);
+}
+.philosophy-close strong {
+  color: var(--deep);
+  font-weight: 700;
+}
+.philosophy-card .bubble-soft {
+  background: radial-gradient(circle at 35% 30%, rgba(234, 250, 255, .9), rgba(127, 208, 224, .18) 65%, transparent);
+}
+.philosophy-card .b1 { width: 120px; height: 120px; top: -30px; right: -24px; }
+.philosophy-card .b2 { width: 70px; height: 70px; bottom: -16px; left: -14px; animation-delay: 3s; }
+
+/* ============================================================
+   04 3つの導線カード — staggered arrangement
+   ============================================================ */
+.route-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.4vw, 26px);
+  align-items: start;
+}
+.route-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.route-card-raise { transform: translateY(-22px); }
+.route-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 50px rgba(10, 77, 110, .16);
+}
+.route-card-raise:hover { transform: translateY(-28px); }
+.route-icon {
+  width: 56px; height: 56px;
+  display: grid; place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f1fbff, #e3f4fa);
+  margin-bottom: 16px;
+}
+.route-icon svg { width: 34px; height: 34px; }
+.route-title {
+  font-size: clamp(16px, 2.4vw, 19px);
+  font-weight: 700;
+  color: var(--deep);
+  line-height: 1.5;
+}
+.route-desc {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.85;
+  flex: 1;
+}
+.route-go {
+  margin-top: 18px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--accent);
+}
+.route-card:hover .route-go { color: var(--deep); }
+.route-badge {
+  position: absolute;
+  top: 18px; right: 18px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--muted);
+  background: #eef7fb;
+  border: 1px solid #d7ecf4;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* ============================================================
+   05 マリンケアの強み — single frame, 3 columns
+   ============================================================ */
+.section-head-center { text-align: center; }
+.section-head-center .label { display: inline-block; }
+.strengths-card { overflow: hidden; }
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+  margin-top: clamp(12px, 2vw, 20px);
+}
+.strength-item {
+  text-align: center;
+  position: relative;
+  padding-inline: 8px;
+}
+.strength-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 12%; right: calc(clamp(20px, 3vw, 40px) / -2);
+  height: 76%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, #e1f1f7, transparent);
+}
+.strength-icon {
+  width: 76px; height: 76px;
+  display: grid; place-items: center;
+  margin: 0 auto 16px;
+}
+.strength-icon svg { width: 76px; height: 76px; }
+.strength-title {
+  font-size: clamp(16px, 2.6vw, 20px);
+  font-weight: 700;
+  color: var(--deep);
+  line-height: 1.5;
+}
+.strength-desc {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.95;
+}
+
+/* ============================================================
+   06 ストーリー — split photo + text
+   ============================================================ */
+.story-inner {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: clamp(24px, 5vw, 64px);
+  align-items: center;
+}
+.story-photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.story-photo img {
+  width: 100%;
+  height: clamp(280px, 42vw, 460px);
+  object-fit: cover;
+}
+.story-text .title { margin-bottom: 18px; }
+.story-body {
+  font-size: clamp(16px, 2.4vw, 19px);
+  line-height: 2.1;
+  color: var(--text);
+}
+
+/* ============================================================
+   07 写真ギャラリー — tile grid
+   ============================================================ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(12px, 1.6vw, 18px);
+}
+.gal-item {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.gal-item.gal-wide { grid-column: span 2; }
+.gal-item img {
+  width: 100%;
+  height: clamp(160px, 22vw, 240px);
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.gal-item:hover img { transform: scale(1.05); }
+
+/* ============================================================
+   08 お客様・スタッフの声 — 3 frame cards
+   ============================================================ */
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.4vw, 26px);
+}
+.voice-card {
+  position: relative;
+  padding-top: clamp(34px, 5vw, 50px);
+}
+.voice-mark {
+  position: absolute;
+  top: 8px; left: 22px;
+  font-family: var(--ff-en);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--accent-2);
+  opacity: .5;
+}
+.voice-quote {
+  font-size: clamp(15px, 2.2vw, 17px);
+  font-weight: 500;
+  line-height: 1.95;
+  color: var(--deep);
+}
+.voice-author {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ============================================================
+   09 採用CTA — full-bleed deep gradient band, white text
+   ============================================================ */
+.recruit {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, var(--ink) 0%, var(--deep) 55%, var(--accent) 130%);
+  text-align: center;
+  isolation: isolate;
+}
+.recruit-inner {
+  max-width: 720px;
+  margin-inline: auto;
+}
+.recruit-eyebrow {
+  font-family: var(--ff-en);
+  font-size: 12px;
+  letter-spacing: .24em;
+  font-weight: 600;
+  color: var(--accent-2);
+  margin-bottom: 14px;
+}
+.recruit-title {
+  font-size: clamp(24px, 5.5vw, 38px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+  word-break: auto-phrase;
+}
+.recruit-body {
+  margin-top: 20px;
+  font-size: clamp(15px, 2.2vw, 17px);
+  line-height: 1.95;
+  color: #dcf3fb;
+}
+.recruit-btn { margin-top: 28px; }
+.recruit-note {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #9fd6e8;
+}
+.recruit .bubble-r1 { width: 110px; height: 110px; top: 14%; left: 8%; }
+.recruit .bubble-r2 { width: 60px; height: 60px; bottom: 18%; right: 12%; animation-delay: 3s; }
+
+/* ============================================================
+   10 事業所情報＋アクセス
+   ============================================================ */
+.access-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(16px, 2.4vw, 28px);
+  align-items: stretch;
+}
+.access-info { display: flex; flex-direction: column; }
+.info-list { display: grid; gap: 14px; }
+.info-list > div {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eaf5f9;
+}
+.info-list dt {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: .04em;
+}
+.info-list dd {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.7;
+}
+.access-cta { margin-top: auto; align-self: flex-start; }
+.access-map {
+  padding: 0;
+  overflow: hidden;
+  min-height: 340px;
+}
+.access-map iframe { display: block; min-height: 340px; }
+
+/* ============================================================
+   TOP PAGE — TABLET / MOBILE
+   ============================================================ */
+@media (max-width: 860px) {
+  .story-inner { grid-template-columns: 1fr; }
+  .access-grid { grid-template-columns: 1fr; }
+  .route-card-raise { transform: none; }
+  .route-card-raise:hover { transform: translateY(-6px); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gal-item.gal-wide { grid-column: span 2; }
+  .strength-grid { grid-template-columns: 1fr; gap: 28px; }
+  .strength-item:not(:last-child)::after { display: none; }
+  .strength-item:not(:last-child) {
+    padding-bottom: 28px;
+    border-bottom: 1px solid #eaf5f9;
+  }
+}
+
+@media (max-width: 600px) {
+  .strip-grid { grid-template-columns: 1fr; }
+  .strip-item img { height: clamp(200px, 56vw, 300px); }
+  .route-grid { grid-template-columns: 1fr; }
+  .voice-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gal-item.gal-wide { grid-column: span 1; }
+  .hero-cta { gap: 10px; }
+  .hero-cta .btn { flex: 1 1 auto; justify-content: center; }
+}
