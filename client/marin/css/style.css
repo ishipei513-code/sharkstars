@@ -1226,3 +1226,41 @@ select {
   .svc-cta-btns { gap: 10px; }
   .svc-cta-btns .btn { flex: 1 1 auto; justify-content: center; }
 }
+
+/* ============================================================
+   ===== COMPANY PAGE =====
+   client/marin/company.html — 会社概要
+   Mobile-first, single-column at 360px. Reuses existing tokens.
+   ============================================================ */
+
+/* ---- 会社情報 definition list: wider dt for 代表取締役 etc. ---- */
+.company-dl > div {
+  grid-template-columns: 110px 1fr;
+}
+
+/* ---- Standalone access map (full-width, fixed height) ---- */
+.company-info + .access .access-map {
+  min-height: 420px;
+  height: 420px;
+}
+
+/* Mobile: slightly shorter map */
+@media (max-width: 600px) {
+  .company-info + .access .access-map {
+    min-height: 300px;
+    height: 300px;
+  }
+  .company-dl > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .company-dl dt {
+    font-size: 12px;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .company-dl > div {
+    border-bottom: 1px solid #eaf5f9;
+    padding-bottom: 14px;
+  }
+}
