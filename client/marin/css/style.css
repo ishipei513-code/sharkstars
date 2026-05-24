@@ -18,7 +18,7 @@
   --accent: #34b3d1;
   --accent-2: #7fd0e0;
   --text: #3a5663;
-  --muted: #6f8a98;
+  --muted: #5a7585;
 
   /* Geometry */
   --radius: 22px;
@@ -46,7 +46,6 @@ body {
   font-family: var(--ff-jp);
   color: var(--text);
   background: linear-gradient(180deg, var(--bg-1), var(--bg-2) 40%, var(--bg-3));
-  background-attachment: fixed;
   line-height: 1.85;
 }
 
@@ -120,10 +119,8 @@ h2.title {
 /* ============================================================
    LINKS
    ============================================================ */
-a:hover {
-  color: var(--accent);
-  transition: color .2s;
-}
+a { transition: color .2s; }
+a:hover { color: var(--accent); }
 
 a:focus-visible {
   outline: 3px solid var(--accent);
@@ -187,6 +184,7 @@ a:focus-visible {
   z-index: 50;
   background: rgba(255, 255, 255, .85);
   backdrop-filter: saturate(140%) blur(8px);
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
   transition: box-shadow .3s;
 }
 
@@ -226,6 +224,12 @@ a:focus-visible {
   display: none;
 }
 
+.menu-toggle:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
@@ -240,7 +244,8 @@ a:focus-visible {
 }
 
 .footer a:hover {
-  color: var(--accent-2);
+  color: #cdeffa;
+  text-decoration: underline;
 }
 
 .footer .wrap {
@@ -254,6 +259,7 @@ a:focus-visible {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity .7s ease, transform .7s ease;
+  will-change: opacity, transform;
 }
 
 .reveal.is-in {
@@ -291,6 +297,9 @@ select {
    MOBILE NAV (≤860px)
    ============================================================ */
 @media (max-width: 860px) {
+  /* Suppress backdrop-filter on mobile (iOS repaint cost) */
+  .header { backdrop-filter: none; -webkit-backdrop-filter: none; }
+
   /* Show hamburger button */
   .menu-toggle {
     display: flex;
