@@ -82,3 +82,46 @@
     });
   });
 })();
+
+// 6) Recruit FAB — dismiss + in-view hide (top page only)
+(function () {
+  var fab = document.getElementById('recruitFab');
+  if (!fab) return;
+
+  var SESSION_KEY = 'marinRecruitFabClosed';
+
+  // If already dismissed this session, hide immediately (no animation flash)
+  if (sessionStorage.getItem(SESSION_KEY)) {
+    fab.classList.add('is-hidden');
+    return;
+  }
+
+  // Close button — dismiss for the session
+  var closeBtn = fab.querySelector('.recruit-fab-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      fab.classList.add('is-hidden');
+      sessionStorage.setItem(SESSION_KEY, '1');
+    });
+  }
+
+  // Top-page only: hide FAB while #recruit section is in view
+  var recruitSection = document.getElementById('recruit');
+  if (recruitSection && 'IntersectionObserver' in window) {
+    var sectionObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          // Only toggle visibility if user has not dismissed
+          if (sessionStorage.getItem(SESSION_KEY)) return;
+          if (e.isIntersecting) {
+            fab.classList.add('is-hidden');
+          } else {
+            fab.classList.remove('is-hidden');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    sectionObserver.observe(recruitSection);
+  }
+})();
