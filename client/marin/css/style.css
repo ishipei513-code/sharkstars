@@ -163,7 +163,7 @@ a:focus-visible {
 }
 
 .btn-line {
-  background: #06C755;
+  background: #048a3a;
   color: #fff;
 }
 
@@ -1280,7 +1280,6 @@ select {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0;
   background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -1300,7 +1299,7 @@ select {
 
 /* LINE card — green background, white text */
 .contact-card--line {
-  background: #06C755;
+  background: #048a3a;
   color: #fff;
 }
 
@@ -1327,7 +1326,7 @@ select {
 }
 
 .contact-card--line .contact-card-title {
-  color: rgba(255, 255, 255, .8);
+  color: #fff;
 }
 
 /* Phone number / email / CTA label */
@@ -1336,7 +1335,7 @@ select {
   font-weight: 700;
   color: var(--deep);
   line-height: 1.35;
-  word-break: break-all;
+  overflow-wrap: anywhere;
   flex: 1;
 }
 
@@ -1353,7 +1352,7 @@ select {
 }
 
 .contact-card--line .contact-card-note {
-  color: rgba(255, 255, 255, .8);
+  color: #fff;
 }
 
 /* "→ 電話をかける" action label at bottom of card */
@@ -1366,7 +1365,7 @@ select {
 }
 
 .contact-card--line .contact-card-cta {
-  color: rgba(255, 255, 255, .9);
+  color: #fff;
 }
 
 .contact-card:hover .contact-card-cta {
