@@ -22,6 +22,8 @@
     toggle.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     document.body.style.overflow = open ? 'hidden' : '';
+    const fab = document.getElementById('recruitFab');
+    if (fab) fab.classList.toggle('is-nav-open', open);
   });
   nav.querySelectorAll('a').forEach((a) =>
     a.addEventListener('click', () => {
@@ -29,6 +31,8 @@
       toggle.classList.remove('is-open');
       toggle.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
+      const fab = document.getElementById('recruitFab');
+      if (fab) fab.classList.remove('is-nav-open');
     })
   );
 })();
@@ -85,10 +89,10 @@
 
 // 6) Recruit FAB — dismiss + in-view hide (top page only)
 (function () {
-  var fab = document.getElementById('recruitFab');
+  const fab = document.getElementById('recruitFab');
   if (!fab) return;
 
-  var SESSION_KEY = 'marinRecruitFabClosed';
+  const SESSION_KEY = 'marinRecruitFabClosed';
 
   // If already dismissed this session, hide immediately (no animation flash)
   if (sessionStorage.getItem(SESSION_KEY)) {
@@ -96,21 +100,24 @@
     return;
   }
 
+  // FAB is shown — make it visible (both normal and reduced-motion paths)
+  fab.classList.add('is-ready');
+
   // Close button — dismiss for the session
-  var closeBtn = fab.querySelector('.recruit-fab-close');
+  const closeBtn = fab.querySelector('.recruit-fab-close');
   if (closeBtn) {
-    closeBtn.addEventListener('click', function () {
+    closeBtn.addEventListener('click', () => {
       fab.classList.add('is-hidden');
       sessionStorage.setItem(SESSION_KEY, '1');
     });
   }
 
   // Top-page only: hide FAB while #recruit section is in view
-  var recruitSection = document.getElementById('recruit');
+  const recruitSection = document.getElementById('recruit');
   if (recruitSection && 'IntersectionObserver' in window) {
-    var sectionObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (e) {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
           // Only toggle visibility if user has not dismissed
           if (sessionStorage.getItem(SESSION_KEY)) return;
           if (e.isIntersecting) {

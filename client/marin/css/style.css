@@ -1680,6 +1680,10 @@ select {
   display: none;
 }
 
+.recruit-fab.is-nav-open {
+  display: none;
+}
+
 .recruit-fab-btn {
   display: flex;
   align-items: center;
@@ -1748,6 +1752,12 @@ select {
   padding: 0;
 }
 
+.recruit-fab-close::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+}
+
 .recruit-fab-close:hover {
   background: var(--deep);
   color: #fff;
@@ -1758,9 +1768,12 @@ select {
   outline-offset: 2px;
 }
 
+.recruit-fab.is-ready {
+  opacity: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .recruit-fab {
     animation: none;
-    opacity: 1;
   }
 }
