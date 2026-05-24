@@ -1,0 +1,353 @@
+/* マリンケア訪問看護ステーション — Design System (B: 光の波打ち際) */
+
+/* ============================================================
+   CSS CUSTOM PROPERTIES (design tokens)
+   ============================================================ */
+:root {
+  /* Background palette — water-blue gradient layers */
+  --bg-1: #eafaff;
+  --bg-2: #d2f0fb;
+  --bg-3: #bfe8f5;
+
+  /* Surface */
+  --card: #ffffff;
+
+  /* Typography & brand colours */
+  --ink: #0a4d6e;
+  --deep: #0a5a82;
+  --accent: #34b3d1;
+  --accent-2: #7fd0e0;
+  --text: #3a5663;
+  --muted: #6f8a98;
+
+  /* Geometry */
+  --radius: 22px;
+  --radius-sm: 14px;
+
+  /* Layout */
+  --maxw: 1080px;
+  --gut: clamp(16px, 4vw, 40px);
+
+  /* Effects */
+  --shadow: 0 18px 40px rgba(10, 77, 110, .10);
+  --grad-ink: linear-gradient(120deg, #0a5a82, #34b3d1);
+
+  /* Typography */
+  --ff-jp: 'Zen Maru Gothic', 'Zen Kaku Gothic Antique', system-ui, sans-serif;
+  --ff-en: 'Inter', sans-serif;
+}
+
+/* ============================================================
+   GLOBAL BASE
+   (reset.css already sets box-sizing, margin, img, list, a,
+    button, input/select/textarea, h* line-height:1.3)
+   ============================================================ */
+body {
+  font-family: var(--ff-jp);
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg-1), var(--bg-2) 40%, var(--bg-3));
+  background-attachment: fixed;
+  line-height: 1.85;
+}
+
+/* ============================================================
+   LAYOUT UTILITIES
+   ============================================================ */
+.wrap {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gut);
+}
+
+/* White "floating frame" card */
+.frame {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(24px, 5vw, 56px);
+}
+
+/* Section vertical rhythm */
+section {
+  padding-block: clamp(40px, 8vw, 88px);
+}
+
+/* Section head: label + title combo */
+.section-head {
+  margin-bottom: clamp(24px, 4vw, 40px);
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+/* Gradient text utility (applies to inline/heading elements) */
+.grad {
+  background: var(--grad-ink);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Eyebrow label */
+.label {
+  font-family: var(--ff-en);
+  font-size: 12px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Section heading */
+h2.title {
+  font-size: clamp(24px, 5.5vw, 38px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--deep);
+  word-break: auto-phrase;
+  margin-top: 8px;
+}
+
+/* Lead paragraph */
+.lead {
+  font-size: clamp(15px, 2vw, 17px);
+  color: var(--muted);
+  line-height: 1.9;
+  margin-top: 12px;
+}
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+a:hover {
+  color: var(--accent);
+  transition: color .2s;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: opacity .2s, transform .15s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: .88;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: var(--grad-ink);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(52, 179, 209, .35);
+}
+
+.btn-line {
+  background: #06C755;
+  color: #fff;
+}
+
+.btn-ghost {
+  background: #fff;
+  color: var(--deep);
+  border: 1.5px solid #cfe6f0;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, .85);
+  backdrop-filter: saturate(140%) blur(8px);
+  transition: box-shadow .3s;
+}
+
+.header.is-scrolled {
+  box-shadow: 0 4px 20px rgba(10, 77, 110, .08);
+}
+
+.header .bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.header .logo img {
+  height: 34px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.nav a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--deep);
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+/* Hamburger — hidden on desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--deep);
+  color: #cdeffa;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: #cdeffa;
+}
+
+.footer a:hover {
+  color: var(--accent-2);
+}
+
+.footer .wrap {
+  padding-block: 40px;
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============================================================
+   ACCESSIBILITY & MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ============================================================
+   MOBILE PITFALL: iOS input zoom prevention
+   (font-size must be ≥16px — reset.css sets font:inherit,
+    so we set it explicitly here)
+   ============================================================ */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+/* ============================================================
+   MOBILE NAV (≤860px)
+   ============================================================ */
+@media (max-width: 860px) {
+  /* Show hamburger button */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--deep);
+    transition: .3s;
+  }
+
+  /* Animate hamburger → X */
+  .menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Slide-down full-width nav */
+  .nav {
+    position: fixed;
+    inset: 64px 0 auto 0;
+    background: #fff;
+    transform: translateY(-120%);
+    transition: transform .35s;
+    box-shadow: 0 12px 30px rgba(10, 77, 110, .12);
+  }
+
+  .nav.is-open {
+    transform: translateY(0);
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0;
+  }
+
+  .nav li {
+    width: 100%;
+  }
+
+  .nav a {
+    display: block;
+    padding: 16px var(--gut);
+  }
+}
