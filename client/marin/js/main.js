@@ -1,4 +1,4 @@
-/* 株式会社Bolon Shareee / B.villea — Interactive scripts */
+/* マリンケア訪問看護ステーション — Interactive scripts */
 
 // 1) Header: add .is-scrolled when page is scrolled
 (function () {
