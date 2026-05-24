@@ -863,3 +863,350 @@ select {
   .hero-cta { gap: 10px; }
   .hero-cta .btn { flex: 1 1 auto; justify-content: center; }
 }
+
+/* ============================================================
+   ===== SERVICE PAGE =====
+   client/marin/service.html — 訪問看護内容
+   Mobile-first, single-column at 360px. Reuses existing tokens.
+   ============================================================ */
+
+/* ---- 01 PAGE HERO BAND ---- */
+.svc-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(120deg, var(--ink) 0%, var(--deep) 52%, #1c91bb 100%);
+  padding-bottom: clamp(56px, 10vw, 88px);
+}
+
+.svc-hero-photo {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/sea.jpg');
+  background-size: cover;
+  background-position: center 55%;
+  z-index: -2;
+  opacity: .22;
+}
+
+.svc-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(108deg, rgba(10,77,110,.72) 0%, rgba(10,90,130,.40) 50%, rgba(10,90,130,.14) 100%);
+}
+
+.svc-hero-inner {
+  padding-top: clamp(64px, 11vw, 96px);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(24px, 5vw, 56px);
+  align-items: center;
+}
+
+.svc-hero-label {
+  color: var(--accent-2);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.svc-hero-title {
+  font-size: clamp(26px, 6vw, 44px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: #fff;
+  letter-spacing: .02em;
+  text-shadow: 0 3px 18px rgba(10, 60, 90, .35);
+  word-break: auto-phrase;
+  overflow-wrap: anywhere;
+  margin-bottom: 18px;
+}
+
+.svc-hero-lead {
+  color: #d4f0fa;
+  text-shadow: 0 1px 8px rgba(10, 60, 90, .30);
+}
+
+.svc-hero-img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 52px rgba(10, 60, 90, .38);
+}
+
+.svc-hero-img img {
+  width: 100%;
+  height: clamp(220px, 34vw, 380px);
+  object-fit: cover;
+}
+
+/* wave at hero bottom */
+.svc-hero-wave {
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  z-index: 1;
+}
+.svc-hero-wave svg path { fill: var(--bg-1); }
+
+/* ---- 02-03 SHARED: section image + items grid layout ---- */
+.svc-section-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: clamp(24px, 4vw, 52px);
+  align-items: start;
+  margin-top: clamp(24px, 4vw, 40px);
+}
+
+/* Reversed layout for rehab (photo left, grid right) */
+.svc-section-inner--rev {
+  grid-template-columns: 0.85fr 1.6fr;
+}
+
+.svc-section-photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 88px;
+}
+
+.svc-section-photo img {
+  width: 100%;
+  height: clamp(240px, 30vw, 400px);
+  object-fit: cover;
+}
+
+/* ---- SERVICE CARDS GRID ---- */
+.svc-items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(12px, 2vw, 20px);
+}
+
+.svc-card {
+  background: var(--card);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px rgba(10, 77, 110, .08);
+  padding: clamp(16px, 3vw, 24px);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.svc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(10, 77, 110, .14);
+}
+
+.svc-card-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+}
+
+.svc-card-title {
+  font-size: clamp(13px, 1.8vw, 15px);
+  font-weight: 700;
+  color: var(--deep);
+  line-height: 1.55;
+  word-break: auto-phrase;
+}
+
+.svc-card-desc {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* Section background alternation */
+.svc-nursing { background: transparent; }
+.svc-rehab   { background: rgba(10, 77, 110, .03); }
+
+/* ---- 04 FLOW STEPS ---- */
+.flow-steps {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 0;
+  align-items: start;
+  margin-top: clamp(24px, 4vw, 40px);
+}
+
+.flow-step {
+  background: var(--card);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px rgba(10, 77, 110, .08);
+  padding: clamp(20px, 3vw, 28px);
+  text-align: center;
+}
+
+.flow-num {
+  width: 44px;
+  height: 44px;
+  background: var(--grad-ink);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 14px;
+  font-family: var(--ff-en);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.flow-title {
+  font-size: clamp(13px, 2vw, 15px);
+  font-weight: 700;
+  color: var(--deep);
+  line-height: 1.5;
+}
+
+.flow-desc {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* Arrow connector between steps */
+.flow-arrow {
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 22px; /* align with step number circle */
+  align-self: start;
+  margin-top: calc(clamp(20px, 3vw, 28px) + 22px); /* push down to center on num */
+  flex-shrink: 0;
+}
+
+.flow-arrow::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--accent);
+  position: relative;
+}
+
+.flow-arrow::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid var(--accent);
+  margin-left: 14px;
+}
+
+/* ---- 05 AREA CARD ---- */
+.svc-area-card { max-width: 760px; margin-inline: auto; }
+
+.svc-area-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(20px, 4vw, 44px);
+  align-items: center;
+}
+
+.svc-area-note {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.svc-area-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.svc-area-badge svg {
+  width: 84px;
+  height: 84px;
+}
+
+.svc-area-badge-text {
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.svc-area-badge-text strong {
+  color: var(--deep);
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+}
+
+/* ---- 06 CTA BAND ---- */
+.svc-cta {
+  background: linear-gradient(120deg, var(--ink) 0%, var(--deep) 55%, #1c91bb 130%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.svc-cta-inner {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.svc-cta-inner .label { color: var(--accent-2); display: inline-block; }
+
+.svc-cta-title {
+  font-size: clamp(24px, 5.5vw, 38px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+  word-break: auto-phrase;
+  overflow-wrap: anywhere;
+  margin-top: 10px;
+}
+
+.svc-cta-lead { color: #d4f0fa; margin-top: 14px; }
+
+.svc-cta-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+/* ============================================================
+   SERVICE PAGE — TABLET / MOBILE  (≤860px)
+   ============================================================ */
+@media (max-width: 860px) {
+  .svc-hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .svc-hero-img { display: none; } /* hide split photo on mobile hero */
+
+  .svc-section-inner,
+  .svc-section-inner--rev {
+    grid-template-columns: 1fr;
+  }
+
+  /* On mobile show photo before grid for nursing, after for rehab */
+  .svc-section-inner--rev .svc-section-photo { order: -1; }
+  .svc-section-photo { position: static; }
+
+  .flow-steps {
+    grid-template-columns: 1fr;
+  }
+  .flow-arrow { display: none; }
+
+  .svc-area-inner { grid-template-columns: 1fr; }
+  .svc-area-badge { flex-direction: row; justify-content: flex-start; }
+}
+
+@media (max-width: 600px) {
+  .svc-items-grid { grid-template-columns: 1fr; }
+  .svc-cta-btns { gap: 10px; }
+  .svc-cta-btns .btn { flex: 1 1 auto; justify-content: center; }
+}
