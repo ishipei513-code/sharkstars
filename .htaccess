@@ -1,5 +1,16 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
+
+# www → non-www（HTTPSに統一する前に正規化）
+RewriteCond %{HTTP_HOST} ^www\.sharkstars\.jp$ [NC]
+RewriteRule ^(.*)$ https://sharkstars.jp/$1 [R=301,L]
+
+# HTTP → HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# HSTS（HTTPS-only であることを Google・ブラウザに強く伝える）
+<IfModule mod_headers.c>
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>
