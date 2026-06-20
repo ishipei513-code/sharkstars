@@ -239,6 +239,7 @@ img{max-width:100%;height:auto}
 /* ===== 06 numbers（明るい背景・左見出し＋右写真・白カード4つ） ===== */
 .numbers{padding:clamp(90px,12vw,160px) 0;background:#fff}
 .num-head{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;margin-bottom:50px}
+.num-head--merged{margin-top:clamp(56px,8vw,96px)}
 .num-head .grad{color:var(--blue)}
 .num-head h2{font-size:clamp(30px,5vw,56px);font-weight:900;color:var(--head);margin:8px 0 18px;line-height:1.3}
 .num-lead{color:var(--sub);font-size:15px;line-height:2;max-width:460px}
