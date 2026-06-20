@@ -301,11 +301,12 @@
 <!-- 求職者向け 追従フローティングCTA -->
 <div class="recruit-fab" id="recruitFab">
   <a class="recruit-fab-btn" href="#recruit" aria-label="求職者の方へ：採用情報を見る">
-    <svg class="recruit-fab-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM10 5h4v2h-4z"/>
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <defs><path id="fabCirc" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs>
+      <g class="fab-ring"><text><textPath href="#fabCirc" textLength="232" lengthAdjust="spacing">求職者の方へ ・ RECRUIT ・ </textPath></text></g>
+      <circle class="fab-core" cx="50" cy="50" r="26"/>
+      <text class="fab-jp" x="50" y="55.5" text-anchor="middle">採用</text>
     </svg>
-    <span class="recruit-fab-text">求職者は<br>コチラ</span>
-    <svg class="recruit-fab-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </a>
 </div>
 <script src="js/top.js" defer></script>
