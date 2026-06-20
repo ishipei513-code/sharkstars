@@ -1894,6 +1894,53 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================
+   CONTACT FORM (index #contact)
+   ============================================ */
+/* iOS Safari は font-size<16px の入力欄フォーカスで自動ズームするため、
+   このフォームの入力欄だけ 16px に引き上げる（既存 .form-input=0.85rem を上書き） */
+#contact-form .form-input,
+#contact-form .form-textarea {
+  font-size: 16px;
+}
+
+.form-consent {
+  font-size: 0.72rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.form-consent a { color: var(--gray-700); text-decoration: underline; }
+
+.form-status {
+  margin-top: 16px;
+  padding: 12px 14px;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+.form-status a { color: #b91c1c; text-decoration: underline; }
+
+.form-success {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--gray-900);
+  padding: 24px 0;
+}
+
+.contact-fallback-note {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  margin-top: 28px;
+  line-height: 1.6;
+}
+.contact-fallback-note a { color: var(--gray-700); text-decoration: underline; }
+
+/* ============================================
    LEGAL / PAGE CONTENT
    ============================================ */
 .legal-page {
