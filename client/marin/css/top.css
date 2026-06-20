@@ -108,12 +108,36 @@ img{max-width:100%;height:auto}
 .marquee:hover .marquee-track{animation-play-state:paused}
 
 /* ===== 01.5 写真ストリップ ===== */
-.photoband{display:block;background:#fff}
-.pb-item{position:relative;margin:0;overflow:hidden;height:clamp(240px,32vw,440px)}
-.pb-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.pb-item:hover img{transform:scale(1.05)}
-.pb-item figcaption{position:absolute;left:0;bottom:0;right:0;padding:12px 16px;color:#fff;font-size:14px;font-weight:700;background:rgba(8,40,70,.45)}
-@media (max-width:760px){.photoband{grid-template-columns:1fr}.pb-item{aspect-ratio:16/9}}
+/* ===== 01.5 3Dカバーフロー・カルーセル（box1風・中央前面／左右が奥へ回り込む） ===== */
+.coverflow{padding:clamp(44px,6vw,86px) 0;background:#fff;overflow:hidden;
+  background-image:linear-gradient(rgba(0,90,170,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,90,170,.05) 1px,transparent 1px);
+  background-size:46px 46px}
+.cf-stage{position:relative;max-width:1180px;margin-inline:auto;height:clamp(250px,40vw,440px);perspective:1600px}
+.cf-track{position:absolute;inset:0;transform-style:preserve-3d}
+.cf-slide{position:absolute;top:50%;left:50%;margin:0;width:clamp(260px,42vw,560px);aspect-ratio:3/2;overflow:hidden;background:#dfeaf3;box-shadow:0 24px 60px rgba(16,58,92,.22);transform:translate(-50%,-50%) scale(.66);opacity:0;z-index:0;pointer-events:none;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .7s}
+.cf-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.cf-slide.is-center{transform:translate(-50%,-50%) translateZ(120px) rotateY(0deg) scale(1);opacity:1;z-index:5;pointer-events:auto}
+.cf-slide.is-prev{transform:translate(-50%,-50%) translateX(-58%) rotateY(38deg) scale(.82);opacity:.55;z-index:3;pointer-events:auto;cursor:pointer}
+.cf-slide.is-next{transform:translate(-50%,-50%) translateX(58%) rotateY(-38deg) scale(.82);opacity:.55;z-index:3;pointer-events:auto;cursor:pointer}
+.cf-slide.is-prev:hover,.cf-slide.is-next:hover{opacity:.82}
+
+.cf-view{position:absolute;top:50%;left:calc(50% + clamp(150px,24vw,300px));transform:translate(-50%,-50%);z-index:8;width:clamp(64px,8vw,92px);height:clamp(64px,8vw,92px);border-radius:50%;border:0;cursor:pointer;background:var(--blue-soft);color:#fff;font-family:var(--ff-en);font-size:13px;letter-spacing:.06em;font-weight:600;box-shadow:0 12px 30px rgba(0,90,170,.35);transition:transform .25s,box-shadow .25s}
+.cf-view:hover{transform:translate(-50%,-50%) scale(1.07);box-shadow:0 16px 38px rgba(0,90,170,.45)}
+
+.cf-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:8;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.92);color:var(--blue);font-size:24px;line-height:1;cursor:pointer;box-shadow:var(--shadow);transition:transform .2s,background .2s}
+.cf-nav:hover{background:#fff;transform:translateY(-50%) scale(1.06)}
+.cf-prev{left:clamp(8px,3vw,40px)}
+.cf-next{right:clamp(8px,3vw,40px)}
+
+.cf-dots{display:flex;justify-content:center;gap:8px;margin-top:24px}
+.cf-dots span{width:8px;height:8px;border-radius:50%;background:var(--line);cursor:pointer;transition:width .2s,background .2s}
+.cf-dots span.on{background:var(--pink);width:22px;border-radius:4px}
+
+@media (max-width:760px){
+  .cf-view{display:none}
+  .cf-slide.is-prev{transform:translate(-50%,-50%) translateX(-44%) rotateY(34deg) scale(.78);opacity:.4}
+  .cf-slide.is-next{transform:translate(-50%,-50%) translateX(44%) rotateY(-34deg) scale(.78);opacity:.4}
+}
 
 /* ===== sec-head 共通 ===== */
 .sec-head{text-align:center;margin-bottom:48px}

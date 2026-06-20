@@ -134,4 +134,38 @@
       });
     }).catch(function(){ /* サンプル表示のまま */ });
   })();
+
+  // 10) 3Dカバーフロー・カルーセル（中央前面＋左右が奥へ／矢印・View・サイド画像クリック・ドット・自動送り）
+  (function(){
+    var track=document.getElementById('cfTrack'); if(!track) return;
+    var slides=Array.prototype.slice.call(track.querySelectorAll('.cf-slide'));
+    var n=slides.length; if(!n) return;
+    var dotsEl=document.getElementById('cfDots'), dots=[], cur=0, timer=null;
+    function render(){
+      slides.forEach(function(s,k){
+        s.classList.remove('is-center','is-prev','is-next');
+        var d=(k-cur+n)%n;
+        if(d===0)s.classList.add('is-center');
+        else if(d===1)s.classList.add('is-next');
+        else if(d===n-1)s.classList.add('is-prev');
+      });
+      dots.forEach(function(dt,k){ dt.className=(k===cur)?'on':''; });
+    }
+    function go(i){ cur=(i%n+n)%n; render(); }
+    function next(){ go(cur+1); } function prev(){ go(cur-1); }
+    if(dotsEl){ slides.forEach(function(_,k){ var s=document.createElement('span'); s.addEventListener('click',function(){go(k);}); dotsEl.appendChild(s); dots.push(s); }); }
+    render();
+    var bn=document.getElementById('cfNext'), bp=document.getElementById('cfPrev'), bv=document.getElementById('cfView');
+    if(bn)bn.addEventListener('click',next);
+    if(bp)bp.addEventListener('click',prev);
+    if(bv)bv.addEventListener('click',next);
+    slides.forEach(function(s){ s.addEventListener('click',function(){ if(s.classList.contains('is-next'))next(); else if(s.classList.contains('is-prev'))prev(); }); });
+    if(!REDUCED && n>1){
+      var stop=function(){ if(timer){clearInterval(timer);timer=null;} };
+      var start=function(){ stop(); timer=setInterval(next,4200); };
+      start();
+      var stage=document.getElementById('cfStage');
+      if(stage){ stage.addEventListener('mouseenter',stop); stage.addEventListener('mouseleave',start); }
+    }
+  })();
 })();

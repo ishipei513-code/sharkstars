@@ -115,9 +115,21 @@
   </div>
 </div>
 
-<!-- ===== 01.5 写真ストリップ（サンプル写真・公開前に実写真へ差し替え） ===== -->
-<section class="photoband" aria-label="マリンケアの風景">
-  <figure class="pb-item reveal"><img src="images/sample.svg" alt="ご自宅を訪問する看護師" loading="lazy" width="1920" height="820"><figcaption>いのちの、そばで。</figcaption></figure>
+<!-- ===== 01.5 3Dカバーフロー・カルーセル（box1風／サンプル写真・公開前に実写真へ差し替え） ===== -->
+<section class="coverflow reveal" aria-label="マリンケアの風景">
+  <div class="cf-stage" id="cfStage">
+    <div class="cf-track" id="cfTrack">
+      <figure class="cf-slide"><img src="images/sample.svg" alt="マリンケアの風景1" loading="lazy"></figure>
+      <figure class="cf-slide"><img src="images/sample.svg" alt="マリンケアの風景2" loading="lazy"></figure>
+      <figure class="cf-slide"><img src="images/sample.svg" alt="マリンケアの風景3" loading="lazy"></figure>
+      <figure class="cf-slide"><img src="images/sample.svg" alt="マリンケアの風景4" loading="lazy"></figure>
+      <figure class="cf-slide"><img src="images/sample.svg" alt="マリンケアの風景5" loading="lazy"></figure>
+    </div>
+    <button class="cf-nav cf-prev" id="cfPrev" type="button" aria-label="前の写真へ">&#8249;</button>
+    <button class="cf-nav cf-next" id="cfNext" type="button" aria-label="次の写真へ">&#8250;</button>
+    <button class="cf-view" id="cfView" type="button" aria-label="次の写真へ"><span>View</span></button>
+  </div>
+  <div class="cf-dots" id="cfDots" aria-hidden="true"></div>
 </section>
 
 <!-- ===== 02 理念・キャッチ ===== -->
