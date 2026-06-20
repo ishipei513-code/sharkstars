@@ -82,13 +82,6 @@ img{max-width:100%;height:auto}
 .hero-dots{position:absolute;bottom:10px;right:12px;display:flex;gap:5px}
 .hero-dots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.7);transition:.35s}
 .hero-dots span.on{background:var(--pink);width:16px;border-radius:3px}
-.hero-cta{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:26px;flex-wrap:wrap}
-.hero-entry{display:inline-block;line-height:0}
-.hero-entry-ring{transform-origin:60px 60px;animation:spin 24s linear infinite}
-.hero-entry-ring text{fill:var(--blue);font-size:8.5px;font-family:var(--ff-en);font-weight:600}
-.hero-entry-bg{fill:var(--pink)}
-.hero-entry-jp{fill:#fff;font-weight:800;font-size:15px;font-family:var(--ff-jp)}
-.hero-entry:hover .hero-entry-ring{animation-duration:6s}
 .hero-scroll{position:absolute;left:50%;bottom:14px;z-index:3;transform:translateX(-50%);color:var(--blue);font-size:10px;letter-spacing:.2em;font-family:var(--ff-en);animation:bob 1.8s ease-in-out infinite}
 /* 動く波（縞なし・実体は波形シェイプ） */
 .hero-waves{position:absolute;left:0;right:0;bottom:0;height:300px;overflow:hidden;pointer-events:none;z-index:1}
