@@ -79,6 +79,7 @@ img{max-width:100%;height:auto}
 .hero-sub{color:var(--pink);letter-spacing:.22em;font-size:clamp(12px,2.2vw,15px);font-weight:700}
 /* 写真カルーセル＝大きめ・主役 */
 .hero-carousel{position:relative;width:min(560px,92vw);margin:24px auto 6px;overflow:hidden;border:6px solid #fff;box-shadow:var(--shadow);aspect-ratio:16/10}
+.hero-carousel img{width:100%;height:100%;object-fit:cover;display:block}
 .hero-carousel-track{display:flex;height:100%;transition:transform 1.3s cubic-bezier(.45,0,.18,1)}
 .hero-slide{min-width:100%;height:100%}
 .hero-slide img{width:100%;height:100%;object-fit:cover}
@@ -100,8 +101,8 @@ img{max-width:100%;height:auto}
 .marquee:hover .marquee-track{animation-play-state:paused}
 
 /* ===== 01.5 写真ストリップ ===== */
-.photoband{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:#fff}
-.pb-item{position:relative;margin:0;overflow:hidden;aspect-ratio:4/3}
+.photoband{display:block;background:#fff}
+.pb-item{position:relative;margin:0;overflow:hidden;height:clamp(240px,32vw,440px)}
 .pb-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .pb-item:hover img{transform:scale(1.05)}
 .pb-item figcaption{position:absolute;left:0;bottom:0;right:0;padding:12px 16px;color:#fff;font-size:14px;font-weight:700;background:rgba(8,40,70,.45)}
@@ -111,12 +112,19 @@ img{max-width:100%;height:auto}
 .sec-head{text-align:center;margin-bottom:48px}
 .sec-head h2{font-size:clamp(30px,6.4vw,62px);font-weight:900;color:var(--head);margin-top:8px;line-height:1.26;letter-spacing:.01em}
 
-/* ===== 02 philosophy ===== */
+/* ===== 02 philosophy（ラベル＋色付きキーワード＋中央区切り） ===== */
 .philosophy{padding:clamp(96px,13vw,170px) 0;text-align:center;background:#fff}
-.phi-title{font-size:clamp(22px,4.4vw,38px);font-weight:900;color:var(--head);line-height:1.7;margin:10px 0 22px}
-.phi-key{position:relative;display:inline-block}
-.phi-key::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;background:var(--pink);border-radius:2px}
-.phi-body{max-width:720px;margin-inline:auto;color:var(--sub)}
+.phi-eyebrow{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:24px}
+.phi-en{font-family:var(--ff-en);font-size:12px;letter-spacing:.34em;color:var(--blue);font-weight:600}
+.phi-jp{display:inline-flex;align-items:center;gap:14px;font-size:14px;font-weight:700;color:var(--head);letter-spacing:.2em}
+.phi-jp i{display:block;width:30px;height:1px;background:var(--blue);opacity:.55}
+.phi-title{font-size:clamp(28px,5.2vw,56px);font-weight:900;color:var(--head);line-height:1.6;margin:0}
+.phi-blue{color:var(--blue)}
+.phi-pink{color:var(--pink)}
+.phi-divider{width:min(440px,72%);height:1px;background:var(--line);margin:32px auto;position:relative}
+.phi-divider::before{content:"";position:absolute;left:calc(50% - 32px);top:-1.5px;width:32px;height:4px;background:var(--blue)}
+.phi-divider::after{content:"";position:absolute;left:50%;top:-1.5px;width:32px;height:4px;background:var(--pink)}
+.phi-body{max-width:760px;margin-inline:auto;color:var(--sub);line-height:2.1;font-size:15px}
 
 /* ===== 03 routes（写真＋丸アイコン＋斜めカット＋ボタン・採用カード強調） ===== */
 .routes{padding:clamp(60px,9vw,110px) 0}
@@ -172,19 +180,29 @@ img{max-width:100%;height:auto}
 .statement .label{color:#cfe7ff}
 .statement-h{font-size:clamp(30px,7vw,72px);font-weight:900;line-height:1.32;margin-top:14px;text-shadow:0 2px 20px rgba(0,0,0,.28)}
 
-/* ===== 06 numbers（青のアクセント・ブロック） ===== */
-.numbers{padding:clamp(90px,12vw,160px) 0;background:var(--blue)}
-.numbers .sec-head h2{color:#fff}
-.numbers .label{color:#cfe7ff}
-.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.num-card{position:relative;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);padding:24px 18px;text-align:center}
-.num-tag{position:absolute;top:8px;right:10px;font-size:9px;color:rgba(255,255,255,.6);letter-spacing:.1em}
-.num-big{font-size:clamp(34px,5vw,46px);font-weight:900;color:#fff;line-height:1}
-.num-big i{font-style:normal;font-size:18px;color:#ffd2e1;margin-left:2px}
-.num-lab{margin-top:10px;font-size:12px;color:#e4f1fc;letter-spacing:.05em}
-.num-ratio{height:6px;border-radius:3px;background:rgba(255,255,255,.25);overflow:hidden;margin-bottom:14px}
-.num-ratio-f{display:block;height:100%;background:var(--pink)}
-.num-note{text-align:center;color:rgba(255,255,255,.7);font-size:11px;margin-top:16px}
+/* ===== 06 numbers（明るい背景・左見出し＋右写真・白カード4つ） ===== */
+.numbers{padding:clamp(90px,12vw,160px) 0;background:#fff}
+.num-head{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;margin-bottom:50px}
+.num-head .grad{color:var(--blue)}
+.num-head h2{font-size:clamp(30px,5vw,56px);font-weight:900;color:var(--head);margin:8px 0 18px;line-height:1.3}
+.num-lead{color:var(--sub);font-size:15px;line-height:2;max-width:460px}
+.num-head-photo{position:relative;overflow:hidden;aspect-ratio:16/10;clip-path:polygon(10% 0,100% 0,100% 100%,0 100%)}
+.num-head-photo img{width:100%;height:100%;object-fit:cover}
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.num-card{position:relative;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:24px 22px;text-align:left}
+.num-tag{position:absolute;top:8px;right:10px;font-size:9px;color:#9fb6cc;letter-spacing:.1em}
+.num-card-top{display:flex;align-items:center;gap:12px;margin-bottom:16px;min-height:32px}
+.num-ic{display:inline-flex;color:var(--blue)}
+.num-ic svg{width:30px;height:30px}
+.num-vline{width:1px;height:26px;background:var(--line)}
+.num-card-top .num-ratio{flex:1;height:6px;background:#e3ecf5;overflow:hidden}
+.num-ratio-f{display:block;height:100%;background:var(--blue)}
+.num-big{font-size:clamp(34px,4vw,44px);font-weight:900;color:var(--blue);line-height:1}
+.num-big i{font-style:normal;font-size:17px;color:var(--blue);margin-left:2px}
+.num-lab{margin-top:8px;font-size:15px;font-weight:700;color:var(--head)}
+.num-desc{margin-top:10px;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px;color:var(--sub);line-height:1.7}
+.num-note{text-align:center;color:#9fb6cc;font-size:11px;margin-top:26px}
+@media (max-width:900px){.num-head{grid-template-columns:1fr;gap:22px}.num-head-photo{clip-path:none;aspect-ratio:16/9}}
 @media (max-width:760px){.num-grid{grid-template-columns:1fr 1fr}}
 
 /* ===== 07 staff ===== */
