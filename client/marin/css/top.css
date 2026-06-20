@@ -106,11 +106,11 @@ img{max-width:100%;height:auto}
 @media (max-width:760px){.photoband{grid-template-columns:1fr}.pb-item{aspect-ratio:16/9}}
 
 /* ===== sec-head 共通 ===== */
-.sec-head{text-align:center;margin-bottom:34px}
-.sec-head h2{font-size:clamp(28px,5.6vw,54px);font-weight:900;color:var(--head);margin-top:6px;line-height:1.32}
+.sec-head{text-align:center;margin-bottom:48px}
+.sec-head h2{font-size:clamp(30px,6.4vw,62px);font-weight:900;color:var(--head);margin-top:8px;line-height:1.26;letter-spacing:.01em}
 
 /* ===== 02 philosophy ===== */
-.philosophy{padding:clamp(70px,10vw,120px) 0;text-align:center;background:#fff}
+.philosophy{padding:clamp(96px,13vw,170px) 0;text-align:center;background:#fff}
 .phi-title{font-size:clamp(22px,4.4vw,38px);font-weight:900;color:var(--head);line-height:1.7;margin:10px 0 22px}
 .phi-key{position:relative;display:inline-block}
 .phi-key::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;background:var(--pink);border-radius:2px}
@@ -130,7 +130,7 @@ img{max-width:100%;height:auto}
 @media (max-width:760px){.route-grid{grid-template-columns:1fr}}
 
 /* ===== 04 biz ===== */
-.biz{padding:clamp(60px,9vw,110px) 0;background:var(--sky)}
+.biz{padding:clamp(84px,12vw,150px) 0;background:var(--sky)}
 .biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .biz-col{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow)}
 .biz-col h3{font-size:20px;color:var(--head);margin-bottom:14px;display:flex;align-items:center;gap:10px}
@@ -143,7 +143,7 @@ img{max-width:100%;height:auto}
 .biz-cta{text-align:center}
 
 /* ===== 05 strengths ===== */
-.strengths{padding:clamp(60px,9vw,110px) 0}
+.strengths{padding:clamp(84px,12vw,150px) 0}
 .strength-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .strength-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow)}
 .strength-no{font-family:var(--ff-en);font-size:30px;font-weight:800;color:var(--pink)}
@@ -153,8 +153,16 @@ img{max-width:100%;height:auto}
 .from-left.is-in,.from-right.is-in{transform:none}
 @media (max-width:760px){.biz-grid{grid-template-columns:1fr}.strength-grid{grid-template-columns:1fr}}
 
+/* ===== 全幅ステートメント（メリハリ：大きな写真＋特大コピー） ===== */
+.statement{position:relative;min-height:clamp(380px,54vw,600px);display:flex;align-items:center;overflow:hidden}
+.statement-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.statement::after{content:"";position:absolute;inset:0;background:rgba(8,36,64,.48)}
+.statement-inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut);text-align:center;color:#fff}
+.statement .label{color:#cfe7ff}
+.statement-h{font-size:clamp(30px,7vw,72px);font-weight:900;line-height:1.32;margin-top:14px;text-shadow:0 2px 20px rgba(0,0,0,.28)}
+
 /* ===== 06 numbers（青のアクセント・ブロック） ===== */
-.numbers{padding:clamp(64px,9vw,120px) 0;background:var(--blue)}
+.numbers{padding:clamp(90px,12vw,160px) 0;background:var(--blue)}
 .numbers .sec-head h2{color:#fff}
 .numbers .label{color:#cfe7ff}
 .num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -169,7 +177,7 @@ img{max-width:100%;height:auto}
 @media (max-width:760px){.num-grid{grid-template-columns:1fr 1fr}}
 
 /* ===== 07 staff ===== */
-.staff{padding:clamp(60px,9vw,110px) 0;background:var(--sky)}
+.staff{padding:clamp(84px,12vw,150px) 0;background:var(--sky)}
 .staff-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .staff-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:0;box-shadow:var(--shadow)}
 .staff-card img{width:100%;height:220px;object-fit:cover}
@@ -179,7 +187,7 @@ img{max-width:100%;height:auto}
 @media (max-width:760px){.staff-grid{grid-template-columns:1fr}}
 
 /* ===== 08 recruit CTA（青のアクセント・ブロック） ===== */
-.recruit{padding:clamp(70px,11vw,140px) 0;text-align:center;background:var(--blue)}
+.recruit{padding:clamp(96px,13vw,180px) 0;text-align:center;background:var(--blue)}
 .recruit-inner{position:relative;z-index:2}
 .recruit .label{color:#cfe7ff}
 .recruit-title{font-size:clamp(26px,5.2vw,46px);font-weight:900;color:#fff;line-height:1.5;margin:10px 0 14px}
@@ -189,7 +197,7 @@ img{max-width:100%;height:auto}
 .recruit .btn-ghost:hover{background:rgba(255,255,255,.12)}
 
 /* ===== 09 voices ===== */
-.voices{padding:clamp(60px,9vw,110px) 0}
+.voices{padding:clamp(84px,12vw,150px) 0}
 .voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .voice-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;margin:0;box-shadow:var(--shadow)}
 .voice-mark{position:absolute;top:8px;left:14px;font-size:40px;color:rgba(255,93,143,.35);font-family:Georgia,serif}
@@ -198,14 +206,14 @@ img{max-width:100%;height:auto}
 @media (max-width:760px){.voice-grid{grid-template-columns:1fr}}
 
 /* ===== 10 instagram ===== */
-.insta{padding:clamp(60px,9vw,110px) 0;background:var(--sky)}
+.insta{padding:clamp(84px,12vw,150px) 0;background:var(--sky)}
 .insta-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
 .insta-grid span{aspect-ratio:1;background:#fff;border:1px solid var(--line);border-radius:10px}
 .insta-cta{text-align:center;margin-top:22px}
 @media (max-width:760px){.insta-grid{grid-template-columns:repeat(3,1fr)}}
 
 /* ===== 11 access ===== */
-.access{padding:clamp(60px,9vw,110px) 0}
+.access{padding:clamp(84px,12vw,150px) 0}
 .access-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .access-info,.access-map{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;overflow:hidden;box-shadow:var(--shadow)}
 .access-map{padding:0;min-height:320px}
