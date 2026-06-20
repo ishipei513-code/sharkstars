@@ -108,4 +108,30 @@
       card.addEventListener('mouseleave',function(){ card.style.transform=''; });
     });
   }
+
+  // 9) Instagram 最新投稿の自動取得（公開JSONフィード）
+  //    有効化：#instaMosaic に data-ig-feed="<公開フィードURL>" を付ける、または window.IG_FEED_URL を設定。
+  //    例）Behold.so（無料）で @marin_care_nurse のフィードを作成 → 発行されるJSON URLを指定するだけ。
+  //    未設定 or 取得失敗時は、設置済みのサンプルタイルをそのまま表示（壊れない）。
+  (function(){
+    var mosaic=document.getElementById('instaMosaic'); if(!mosaic) return;
+    var feed=window.IG_FEED_URL||mosaic.getAttribute('data-ig-feed'); if(!feed||!window.fetch) return;
+    var tiles=mosaic.querySelectorAll('.insta-tile'); if(!tiles.length) return;
+    var pick=function(p){
+      return p.mediaUrl||p.media_url||p.thumbnailUrl||p.thumbnail_url||
+        (p.sizes&&((p.sizes.medium&&p.sizes.medium.mediaUrl)||(p.sizes.full&&p.sizes.full.mediaUrl)||(p.sizes.small&&p.sizes.small.mediaUrl)))||
+        (p.images&&p.images.standard_resolution&&p.images.standard_resolution.url)||'';
+    };
+    fetch(feed,{mode:'cors'}).then(function(r){return r.json();}).then(function(data){
+      var posts=Array.isArray(data)?data:(data.feed||data.posts||data.media||data.data||[]);
+      if(!posts||!posts.length) return;
+      tiles.forEach(function(tile,i){
+        var p=posts[i]; if(!p) return;
+        var img=tile.querySelector('img'), src=pick(p), link=p.permalink||p.link||p.url;
+        if(img&&src){ img.removeAttribute('srcset'); img.setAttribute('src',src); }
+        if(link){ tile.setAttribute('href',link); }
+        if(p.caption){ tile.setAttribute('aria-label',String(p.caption).slice(0,80)); }
+      });
+    }).catch(function(){ /* サンプル表示のまま */ });
+  })();
 })();
