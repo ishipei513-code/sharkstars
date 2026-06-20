@@ -180,6 +180,33 @@ img{max-width:100%;height:auto}
 .recruit .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
 @media (max-width:760px){.staff-grid{grid-template-columns:1fr}}
 
+/* ===== 09 voices（フラット） ===== */
+.voices{padding:clamp(60px,9vw,110px) 0}
+.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.voice-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;margin:0}
+.voice-mark{position:absolute;top:8px;left:14px;font-size:40px;color:rgba(255,93,143,.4);font-family:Georgia,serif}
+.voice-card blockquote{margin:10px 0 8px;color:var(--ink);line-height:1.9}
+.voice-card figcaption{color:var(--sub);font-size:13px}
+
+/* ===== 10 instagram（フラットタイル） ===== */
+.insta{padding:clamp(60px,9vw,110px) 0}
+.insta-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.insta-grid span{aspect-ratio:1;background:var(--card);border:1px solid var(--line);border-radius:8px}
+.insta-cta{text-align:center;margin-top:22px}
+
+/* ===== 11 access（フラット） ===== */
+.access{padding:clamp(60px,9vw,110px) 0}
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.access-info,.access-map{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;overflow:hidden}
+.access-map{padding:0;min-height:320px}
+.access-map iframe{display:block;height:100%;min-height:320px}
+.info-list div{display:flex;gap:14px;padding:9px 0;border-bottom:1px solid var(--line)}
+.info-list dt{flex:none;width:80px;color:var(--sea);font-size:13px}
+.info-list dd{color:var(--ink);font-size:14px}
+.info-list a{color:var(--ink)}
+.access-info .btn{margin-top:18px}
+@media (max-width:760px){.voice-grid{grid-template-columns:1fr}.insta-grid{grid-template-columns:1fr 1fr}.access-grid{grid-template-columns:1fr}}
+
 /* ===== Motion keyframes ===== */
 @keyframes seadrift{to{background-position:300px 0}}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
