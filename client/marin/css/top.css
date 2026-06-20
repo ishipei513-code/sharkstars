@@ -98,6 +98,26 @@ img{max-width:100%;height:auto}
 .hero-dots span.on{background:var(--pink);width:15px;border-radius:3px}
 .hero-scroll{position:absolute;left:50%;bottom:14px;z-index:3;transform:translateX(-50%);color:var(--sea);font-size:10px;letter-spacing:.2em;font-family:var(--ff-en);animation:bob 1.8s ease-in-out infinite}
 
+/* ===== 02 philosophy（フラット） ===== */
+.philosophy{padding:clamp(70px,10vw,120px) 0;text-align:center}
+.phi-title{font-size:clamp(22px,4.4vw,38px);font-weight:900;color:#fff;line-height:1.7;margin:10px 0 22px}
+.phi-key{position:relative;display:inline-block}
+.phi-key::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;background:var(--pink);border-radius:2px}
+.phi-body{max-width:720px;margin-inline:auto;color:var(--sub)}
+
+/* ===== 03 routes（フラットカード・線SVGアイコン） ===== */
+.routes{padding-bottom:clamp(40px,6vw,80px)}
+.route-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.route-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;text-decoration:none;color:var(--ink);transition:.18s}
+.route-card:hover{transform:translateY(-4px);border-color:var(--navy-2)}
+.route-card--job{border-left:4px solid var(--pink)}
+.route-ic{display:inline-flex;color:var(--pink)}
+.route-ic svg{width:30px;height:30px}
+.route-card h3{font-size:16px;color:#fff;margin:12px 0 6px}
+.route-card p{font-size:13px;color:var(--sub);line-height:1.7}
+.route-go{display:inline-block;margin-top:12px;font-size:13px;color:var(--sea)}
+@media (max-width:760px){.route-grid{grid-template-columns:1fr}}
+
 /* ===== Motion keyframes ===== */
 @keyframes seadrift{to{background-position:300px 0}}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
