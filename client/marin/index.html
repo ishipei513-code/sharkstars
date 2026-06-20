@@ -78,6 +78,11 @@
 
 <!-- ===== 01 ヒーロー（C3）／海動画素材が揃うまで sea.jpg 静止＋CSS海ゆらぎで暫定。後日 <video> へ差し替え ===== -->
 <section class="hero" aria-label="メインビジュアル">
+  <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="images/sea.jpg" aria-hidden="true">
+    <!-- TODO: 実写の波のループ動画。client/marin/images/hero-waves.mp4 に配置（無い間はposter=sea.jpg＋下のSVG波がフォールバック） -->
+    <source src="images/hero-waves.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-waves" aria-hidden="true"><span class="hero-wave w1"></span><span class="hero-wave w2"></span><span class="hero-wave w3"></span></div>
   <div class="hero-ghost" aria-hidden="true"><b>NURSE</b></div>
   <div class="hero-ghost hero-ghost--2" aria-hidden="true"><b>+REHA</b></div>

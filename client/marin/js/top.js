@@ -84,6 +84,17 @@
     }
   }
 
+  // 8.5) hero video（実写の波。再生できたらSVG波を隠す。reduced時は静止ポスター）
+  var hv=document.getElementById('heroVideo'), heroEl=document.querySelector('.hero');
+  if(hv){
+    if(REDUCED){ hv.removeAttribute('autoplay'); try{hv.pause();}catch(e){} }
+    else{
+      var markVideo=function(){ if(heroEl)heroEl.classList.add('has-video'); };
+      hv.addEventListener('playing',markVideo);
+      hv.addEventListener('loadeddata',function(){ if(hv.readyState>=2 && !hv.error){markVideo();} });
+    }
+  }
+
   // 8) 3D tilt on cards（マウスでカードが傾く。reduced/タッチ時は無効）
   if(!REDUCED && window.matchMedia && window.matchMedia('(hover:hover)').matches){
     var tiltSel='.route-card,.strength-item,.biz-col,.num-card,.staff-card,.voice-card,.pb-item';
