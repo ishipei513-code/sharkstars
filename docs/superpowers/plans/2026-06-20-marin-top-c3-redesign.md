@@ -45,6 +45,8 @@ grepチェックは PowerShell では `Select-String`、bash では `grep` を�
 
 **命名方針：** 既存と同じクラス名（`.wrap` `.header` `.nav` `.menu-toggle` `.reveal`/`.is-in` `.footer` `.recruit-fab` `.btn`）は top.css でも踏襲し、JSロジックを再利用する。C3固有の見た目クラスは新規に足す。`.reveal`要素は表示時に `.is-in` が付く前提（top.jsが付与）。
 
+**重要（行番号・DOM順）：** plan中の行番号は*元ファイル基準の目安*。**Task 3で旧`<main>`の全セクションを一括削除**した後、各セクションを **`</main>` の直前に順番に追加**して `<main>` を spec順に組み直す（タスクは番号順に実行する＝追加順がそのまま spec順になり、採用クラスター 06→07→08 が連続する）。編集箇所はセクションの**クラス名／コメント**で特定し、ドリフトする行番号には依存しないこと。
+
 ---
 
 ## Task 1: スキャフォールド（head差し替え・top.css土台・top.js土台）
@@ -225,8 +227,10 @@ git commit -m "feat(marin-top): C3刷新の土台（top.css/top.js・head差し�
 - [ ] **Step 1: top.css に header スタイルを追加**
 
 ```css
-.header{position:sticky;top:0;z-index:50;background:rgba(8,23,38,.72);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line);transition:background .2s}
+.header{position:sticky;top:0;z-index:50;background:rgba(8,23,38,.72);-webkit-backdrop-filter:saturate(140%) blur(6px);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line);transition:background .2s}
 .header.is-scrolled{background:rgba(6,18,30,.92)}
+/* backdrop-filter非対応/負荷回避：不透明背景にフォールバック（spec§4・モバイル罠メモ） */
+@supports not ((backdrop-filter:blur(6px)) or (-webkit-backdrop-filter:blur(6px))){.header{background:rgba(6,18,30,.96)}}
 .header .bar{display:flex;align-items:center;gap:18px;height:var(--header-h)}
 .header .logo img{display:block;filter:brightness(0) invert(1)} /* 濃紺背景に白ロゴ */
 .header .nav{margin-left:auto}
@@ -318,6 +322,11 @@ git commit -m "feat(marin-top): C3ヘッダー（濃紺ナビ・太い下線・�
 ```
 
 > ※ヒーロー見出しは spec §5 の通り主案「いのちの、そばに。」。別案「地域の看護を、私たちがつくる。」は実装前に確定（変更時はこの `<h1>` と `hero-sub` を差し替え）。動画素材取得後は `.hero-bg` を `<video>` ループに差し替え（reduced/低速時 sea.jpg 静止フォールバック）。
+
+- [ ] **Step 1b: 旧 `<main>` の残りセクションを全削除（DOM順を spec順に組み直すため）**
+
+新ヒーロー `</section>` の直後から `</main>` の直前までにある**旧セクションをすべて削除**する：`photostrip` / `philosophy` / `routes` / `biz` / `strengths` / `story` / `voices--user` / `insta` / `voices--staff` / `recruit`（cta-band） / `access`、および途中の `wave-divider` 2箇所。削除後、`<main>` の中身は**新ヒーロー1つだけ**になる。
+以降の Task 5〜9 は各セクションを **`</main>` の直前に順番に追加**する（タスクを番号順に実行すれば 02→03→04→05→06→07→08→09→10→11 の spec順に並び、採用クラスター 06→07→08 が連続する）。この削除で旧 `photostrip`・旧 `story` の取り残しも同時に解消する。
 
 - [ ] **Step 2: top.css にヒーロー静的CSS＋CSSアニメを追加**
 
@@ -443,14 +452,14 @@ git commit -m "feat(marin-top): カルーセル自動送り＋汎用カウント
 ## Task 5: ブロック02 理念 ＋ 03 3つの入口
 
 **Files:**
-- Modify: `client/marin/index.html`（既存 philosophy(line 122) と routes(line 137) を置換）
+- Modify: `client/marin/index.html`（02理念・03入口を `</main>` 直前に追加。旧mainはTask3で削除済み）
 - Modify: `client/marin/css/top.css`
 
 既存の理念テキストはそのまま流用（コピーは確定済み）。3つの入口は spec §6 のリンク先（①service ②採用クラスター#numbers ③company）に確定する。
 
-- [ ] **Step 1: 理念（02）markup を置換**
+- [ ] **Step 1: 理念（02）を `</main>` 直前に追加**
 
-`index.html` の `<section class="philosophy">…</section>`（line 122-134）を：
+以下を `</main>` の直前に追加：
 ```html
 <section class="philosophy" aria-labelledby="philosophy-title">
   <div class="wrap">
@@ -461,9 +470,9 @@ git commit -m "feat(marin-top): カルーセル自動送り＋汎用カウント
 </section>
 ```
 
-- [ ] **Step 2: 3つの入口（03）markup を置換**
+- [ ] **Step 2: 3つの入口（03）を `</main>` 直前に追加**
 
-`index.html` の `<section class="routes">…</section>`（line 137-170）を：
+02 の直後（＝`</main>` の直前）に以下を追加：
 ```html
 <section class="routes" aria-label="ご覧の方別のご案内">
   <div class="wrap route-grid">
@@ -530,12 +539,12 @@ git commit -m "feat(marin-top): 02理念・03三つの入口（採用は#numbers
 ## Task 6: ブロック04 事業内容（看護＋リハ）＋ 05 選ばれる理由・体制
 
 **Files:**
-- Modify: `client/marin/index.html`（既存 biz(line 173) と strengths(line 220) を置換。`wave-divider`(line 254-257) は削除）
+- Modify: `client/marin/index.html`（04事業内容・05選ばれる理由を `</main>` 直前に順に追加。旧mainはTask3で削除済み）
 - Modify: `client/marin/css/top.css`
 
-既存の看護/リハ項目・強み3項目のテキストは流用。SVGアイコンは濃紺向けに stroke 色を調整。
+既存の看護/リハ項目・強み3項目のテキストは流用。
 
-- [ ] **Step 1: 04 事業内容 markup を置換**（既存の項目テキストを流用、クラスをC3用に）
+- [ ] **Step 1: 04 事業内容 を `</main>` 直前に追加**（既存の項目テキストを流用）
 
 ```html
 <section class="biz" aria-labelledby="biz-title">
@@ -557,7 +566,7 @@ git commit -m "feat(marin-top): 02理念・03三つの入口（採用は#numbers
 </section>
 ```
 
-- [ ] **Step 2: 05 選ばれる理由 markup を置換**（強み3項目テキスト流用）
+- [ ] **Step 2: 05 選ばれる理由 を `</main>` 直前に追加**（強み3項目テキスト流用。04の直後）
 
 ```html
 <section class="strengths" aria-labelledby="strengths-title">
@@ -571,7 +580,7 @@ git commit -m "feat(marin-top): 02理念・03三つの入口（採用は#numbers
   </div>
 </section>
 ```
-そして直後の `wave-divider`（line 254-257）を削除する。
+（旧 `wave-divider` は Task 3 の一括削除で既に除去済み。追加不要。）
 
 - [ ] **Step 3: top.css に 04/05 ＋ sec-head 共通＋ from-left/right を追加**
 
@@ -618,12 +627,12 @@ git commit -m "feat(marin-top): 04事業内容・05選ばれる理由（左右�
 ## Task 7: ブロック06 採用の数字（4つ・カウントアップ）
 
 **Files:**
-- Modify: `client/marin/index.html`（採用ゾーンの起点。既存 story(line 260) の前に新規 numbers セクションを挿入）
+- Modify: `client/marin/index.html`（採用ゾーンの起点。06数字を `</main>` 直前に追加＝05の直後）
 - Modify: `client/marin/css/top.css`
 
 数字は spec §7 の4つ：男女比率（割合バー）・月平均残業（◯h）・年間休日（◯日）・平均年齢（◯歳）。**全て仮値**で `data-countup` を埋め、`<!-- 仮 -->` を明示。`id="numbers"` を付け Task 5 の②アンカー先にする。
 
-- [ ] **Step 1: numbers セクション markup を挿入**（既存 story セクションの直前に）
+- [ ] **Step 1: numbers セクション markup を `</main>` 直前に追加**（05の直後）
 
 ```html
 <!-- ===== 06【採用】働く環境の数字（4つ・全て仮値→西社長から実数差し替え） ===== -->
@@ -690,12 +699,13 @@ git commit -m "feat(marin-top): 06採用の数字4つ（カウントアップ・
 ## Task 8: ブロック07 スタッフの声・一日 ＋ 08 採用CTA（→LINE / Indeed）
 
 **Files:**
-- Modify: `client/marin/index.html`（既存 voices--staff(line 356) と recruit cta-band(line 379) を置換。story(07旧) と voices--user は Task 9 で扱う）
+- Modify: `client/marin/index.html`（07スタッフの声・08採用CTAを `</main>` 直前に順に追加＝06の直後。これで採用クラスター06→07→08が連続する）
 - Modify: `client/marin/css/top.css`
 
 採用クラスターの締め。CTAは spec §8：エントリー→**公式LINE**（当面プレースホルダーURL）＋ **Indeed求人リンク**（プレースホルダー）。
+> ※spec ブロック07は「スタッフの声・**一日の流れ**」。本タスクでは**スタッフの声（2枚）を実装**し、**「一日の流れ」タイムラインは次パスに延期**（実コンテンツ取得後）。spec との差分として明記。
 
-- [ ] **Step 1: 07 スタッフの声 markup を置換**（既存仮コメント流用）
+- [ ] **Step 1: 07 スタッフの声 を `</main>` 直前に追加**（06の直後・既存仮コメント流用）
 
 ```html
 <section class="staff" aria-labelledby="staff-title">
@@ -710,7 +720,7 @@ git commit -m "feat(marin-top): 06採用の数字4つ（カウントアップ・
 </section>
 ```
 
-- [ ] **Step 2: 08 採用CTA markup を置換**
+- [ ] **Step 2: 08 採用CTA を `</main>` 直前に追加**（07の直後）
 
 ```html
 <section id="recruit" class="recruit" aria-labelledby="recruit-title">
@@ -767,12 +777,12 @@ git commit -m "feat(marin-top): 07スタッフの声・08採用CTA（LINE/Indeed
 ## Task 9: ブロック09 利用者の声 ＋ 10 Instagram ＋ 11 アクセス（＋旧storyの除去）
 
 **Files:**
-- Modify: `client/marin/index.html`（旧 story(line 260-304) を削除。voices--user(line 307) → 09、insta(line 330) → 10、access(line 393) → 11 を置換）
+- Modify: `client/marin/index.html`（09利用者の声・10Instagram・11アクセスを `</main>` 直前に順に追加＝08の直後。旧 story 等は Task 3 で削除済み）
 - Modify: `client/marin/css/top.css`
 
-- [ ] **Step 1: 旧 story セクション（line 260-304）を削除**（採用07に置換済みのため重複を除去）
+- [ ] **Step 1: （旧 story 等は Task 3 で削除済み）09/10/11 を順に `</main>` 直前へ追加していく**
 
-- [ ] **Step 2: 09 利用者の声 markup を置換**（既存仮コメント流用）
+- [ ] **Step 2: 09 利用者の声 を `</main>` 直前に追加**（08の直後・既存仮コメント流用）
 
 ```html
 <section class="voices" aria-labelledby="voice-title">
@@ -787,7 +797,7 @@ git commit -m "feat(marin-top): 07スタッフの声・08採用CTA（LINE/Indeed
 </section>
 ```
 
-- [ ] **Step 3: 10 Instagram markup を置換**（プレースホルダーグリッド＋ウィジェット差し替え前提・既存方針流用）
+- [ ] **Step 3: 10 Instagram を `</main>` 直前に追加**（09の直後・プレースホルダーグリッド＋ウィジェット差し替え前提）
 
 ```html
 <section class="insta" aria-labelledby="insta-title">
@@ -800,7 +810,7 @@ git commit -m "feat(marin-top): 07スタッフの声・08採用CTA（LINE/Indeed
 </section>
 ```
 
-- [ ] **Step 4: 11 アクセス markup を置換**（既存の連絡先・地図・住所コメントを流用）
+- [ ] **Step 4: 11 アクセス を `</main>` 直前に追加**（10の直後・既存の連絡先・地図・住所コメントを流用）
 
 ```html
 <section class="access" aria-labelledby="access-title">
@@ -924,6 +934,10 @@ grep -nE 'href="#' client/marin/index.html
 ```
 Expected：`#numbers`（03②）と `#recruit`（FAB）のみ。両アンカー id が本文に存在することを目視確認（`id="numbers"` `id="recruit"`）。`href="#"` 単体や存在しないアンカーが**無い**こと。
 
+- [ ] **Step 1b: セクション順＝spec順を検証（採用クラスター連続性）**
+
+`<main>` 内の `<section>` を上から読み、順序が **hero → 02理念(philosophy) → 03入口(routes) → 04事業(biz) → 05強み(strengths) → 06数字(numbers) → 07スタッフ(staff) → 08採用CTA(recruit) → 09利用者声(voices) → 10IG(insta) → 11アクセス(access)** であることを確認。とくに **06(numbers)→07(staff)→08(recruit) が連続**していること。旧 `photostrip`・旧 `story` が**残っていない**こと（`grep -c 'class="photostrip"' client/marin/index.html` → 0、`grep -c 'class="story"' client/marin/index.html` → 0）。
+
 - [ ] **Step 2: SEO/構造化データ無傷**
 
 ```bash
@@ -994,9 +1008,12 @@ git commit -m "feat(marin-top): オレンジ・アクセントA/B切替（body.a
 ## Self-Review（このplanの自己点検）
 
 - **Spec coverage**：①C3ビジュアル(Task1,3)②モーション一式(Task1,3,4,6,8＋reduced対応)③ヒーロー（海/カルーセル/重ね文字/回るボタン/2CTA, Task3,4）④12ブロック構成(Task2-10)⑤数字4つ(Task7)⑥採用=LINE/Indeed(Task8)⑦トップのみ・別CSS/JSで既存非破壊(Task1,11)⑧採用ページ無し→#numbersアンカー(Task5,7)⑨SEO/JSON-LD踏襲(Task1,11)⑩素材プレースホルダー(Task3,7,9)⑪オレンジA/B(Task12) — spec各項に対応タスクあり。
-- **Placeholder scan**：仮値・TODOは「素材/実数の差し替え」を意図した実コンテンツ（実在URL・実在画像・具体値）であり、コード上の未実装プレースホルダーではない。`href="#"` 単体やダミーリンクは禁止と明記(Task5,11)。
-- **Type/命名整合**：`#numbers`(Task7定義←Task5参照)、`#recruit`(Task8定義←Task10 FAB参照)、`[data-countup]`/`data-unit`(Task4実装←Task7使用)、`.reveal/.is-in`(Task1←全タスク)、`--pink`変数(全タスク←Task12で一括上書き) が一致。
+- **DOM順＝spec順（最重要）**：Task 3 で旧 `<main>` の全セクション（旧 photostrip/story 含む）を一括削除し、Task 5〜9 で各セクションを `</main>` 直前に**番号順に追加**するため、最終DOMは hero,02,03,04,05,06,07,08,09,10,11 となり、**採用クラスター 06→07→08 が連続**する（ユーザー確認事項）。Task 11 で order を検証。
+- **取り残しなし**：旧 photostrip・旧 story は Task 3 の一括削除で除去（top.css に対応スタイルも作らない）。
+- **Placeholder scan**：仮値・TODOは「素材/実数の差し替え」を意図した実コンテンツ（実在URL・実在画像・具体値）であり、コード上の未実装プレースホルダーではない。`href="#"` 単体やダミーリンクは禁止と明記(Task5,11)。spec ブロック07「一日の流れ」は次パス延期と明記(Task8)。
+- **Type/命名整合**：`#numbers`(Task7定義←Task5参照)、`#recruit`(Task8定義←Task10 FAB参照)、`[data-countup]`/`data-unit`(Task4実装←Task7使用)、`.reveal/.is-in`(Task1←全タスク)、`.hero-entry-bg`(Task3 markup←CSS)、`--pink`変数(全タスク←Task12で一括上書き) が一致。SVG presentation属性に `var()` を使わない（CSSで `fill`）。
 
 ## Execution Handoff
 
-実行方法は呼び出し側（writing-plansの完了メッセージ）で選択する。各タスクは独立コミット可能で、Task順に積み上げると常に表示可能なトップが保たれる。
+各タスクは独立コミット可能で、Task順に積み上げると常に表示可能なトップが保たれる。
+**実行方式は Inline 実行（superpowers:executing-plans）を推奨**：本planは1つの `index.html` ＋ `top.css` ＋ `top.js` を12タスクで**逐次的に育てる**構造で、各タスクが直前のファイル状態（特に `</main>` 直前への追加順）に依存する。タスクごとに新規サブエージェントを立てる subagent-driven は、ファイル状態の共有が無く相性が悪い。Inline でチェックポイントを挟みつつ進めるのが安全。
