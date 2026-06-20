@@ -3129,6 +3129,43 @@
   </script>
 
   <!-- JavaScript -->
+  <!-- Contact form submit (Web3Forms) -->
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      var status = document.getElementById('form-status');
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var btn = form.querySelector('.form-submit');
+        var original = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = '送信中…';
+        if (status) { status.hidden = true; status.textContent = ''; }
+        try {
+          var payload = JSON.stringify(Object.fromEntries(new FormData(form)));
+          var res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: payload
+          });
+          var data = await res.json();
+          if (res.status === 200 && data.success) {
+            form.innerHTML = '<p class="form-success" role="status">✓ 送信ありがとうございました。<br>1〜2営業日以内にご返信します。</p>';
+          } else {
+            throw new Error((data && data.message) || '送信に失敗しました');
+          }
+        } catch (err) {
+          if (status) {
+            status.hidden = false;
+            status.innerHTML = '送信に失敗しました。お手数ですが LINE または <a href="mailto:sharkstars0513@gmail.com">sharkstars0513@gmail.com</a> までご連絡ください。';
+          }
+          btn.disabled = false;
+          btn.textContent = original;
+        }
+      });
+    })();
+  </script>
   <script src="assist/js/main.js"></script>
 </body>
 
