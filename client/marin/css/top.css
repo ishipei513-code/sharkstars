@@ -148,18 +148,28 @@ img{max-width:100%;height:auto}
 @media (min-width:861px){.route-card--job{transform:translateY(-16px)}.route-card--job:hover{transform:translateY(-22px)}}
 @media (max-width:860px){.route-grid{grid-template-columns:1fr;max-width:460px;margin-inline:auto}}
 
-/* ===== 04 biz ===== */
+/* ===== 04 biz（円バッジ・色分け・チェックリスト・装飾ライン） ===== */
 .biz{padding:clamp(84px,12vw,150px) 0;background:var(--sky)}
-.biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.biz-col{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow)}
-.biz-col h3{font-size:20px;color:var(--head);margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.biz-ic{display:inline-flex;color:var(--pink)}
-.biz-ic svg{width:24px;height:24px}
-.biz-col ul{list-style:none;margin:0;padding:0}
-.biz-col li{padding:9px 0 9px 20px;position:relative;color:var(--ink);border-bottom:1px solid var(--line)}
-.biz-col li::before{content:"";position:absolute;left:2px;top:16px;width:7px;height:7px;border:1.5px solid var(--pink);border-radius:50%}
-.biz-meta{text-align:center;color:var(--sub);margin:22px 0;font-size:14px}
-.biz-cta{text-align:center}
+.biz-lead{max-width:680px;margin:18px auto 0;color:var(--sub);font-size:15px;line-height:2}
+.biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.biz-col{position:relative;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);padding:32px 30px;overflow:hidden}
+.biz-col--nurse{--accent:#ff5d8f}
+.biz-col--reha{--accent:#005aaa}
+.biz-col-head{display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--accent);padding-bottom:18px;margin-bottom:8px}
+.biz-badge{flex:none;width:52px;height:52px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center}
+.biz-badge svg{width:26px;height:26px}
+.biz-col-head h3{margin:0;font-size:22px;font-weight:900;color:var(--accent)}
+.biz-list{list-style:none;margin:0;padding:0;position:relative;z-index:1}
+.biz-list li{position:relative;padding:14px 0 14px 34px;color:var(--ink);border-bottom:1px dashed var(--line)}
+.biz-list li:last-child{border-bottom:0}
+.biz-list li::before{content:"";position:absolute;left:2px;top:15px;width:20px;height:20px;border-radius:50%;background:var(--accent)}
+.biz-list li::after{content:"";position:absolute;left:9px;top:19px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.biz-art{position:absolute;right:-4px;bottom:-4px;width:clamp(120px,17vw,168px);color:var(--accent);opacity:.12;pointer-events:none}
+.biz-meta{text-align:center;color:var(--sub);margin:38px 0 0;font-size:14px}
+.biz-cta{text-align:center;margin-top:28px}
+.biz-btn{padding:16px 16px 16px 36px;font-size:16px;gap:16px}
+.biz-btn-arrow{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.25);font-size:17px}
+@media (max-width:760px){.biz-grid{grid-template-columns:1fr}}
 
 /* ===== 05 strengths ===== */
 .strengths{padding:clamp(84px,12vw,150px) 0}
