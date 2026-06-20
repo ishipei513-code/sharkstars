@@ -78,9 +78,7 @@
 
 <!-- ===== 01 ヒーロー（C3）／海動画素材が揃うまで sea.jpg 静止＋CSS海ゆらぎで暫定。後日 <video> へ差し替え ===== -->
 <section class="hero" aria-label="メインビジュアル">
-  <div class="hero-bg" style="background-image:url('images/sea.jpg')" aria-hidden="true"></div>
-  <div class="hero-sea" aria-hidden="true"></div>
-  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-waves" aria-hidden="true"><span class="hero-wave w1"></span><span class="hero-wave w2"></span><span class="hero-wave w3"></span></div>
   <div class="hero-ghost" aria-hidden="true"><b>NURSE</b></div>
   <div class="hero-ghost hero-ghost--2" aria-hidden="true"><b>+REHA</b></div>
 
@@ -104,7 +102,6 @@
     <p class="hero-sub reveal d3">365日、いのちのそばで。</p>
 
     <div class="hero-cta reveal d3">
-      <a class="btn btn-ghost" href="contact.html">ご相談はこちら</a>
       <a class="hero-entry" href="contact.html" aria-label="採用エントリー（LINEへ）">
         <svg viewBox="0 0 120 120" width="118" height="118" aria-hidden="true">
           <defs><path id="entryCirc" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
@@ -117,6 +114,13 @@
   </div>
 
   <div class="hero-scroll" aria-hidden="true">SCROLL ↓</div>
+</section>
+
+<!-- ===== 01.5 写真ストリップ（サンプル写真・公開前に実写真へ差し替え） ===== -->
+<section class="photoband" aria-label="マリンケアの風景">
+  <figure class="pb-item reveal"><img src="images/vn.jpg" alt="ご自宅を訪問する看護師" loading="lazy" width="1920" height="1280"><figcaption>暮らしのそばで</figcaption></figure>
+  <figure class="pb-item reveal d1"><img src="images/reha.jpg" alt="リハビリに寄り添うスタッフ" loading="lazy" width="1920" height="1280"><figcaption>その人らしさを支える</figcaption></figure>
+  <figure class="pb-item reveal d2"><img src="images/feature.jpg" alt="ご家族とともに過ごすご利用者さま" loading="lazy" width="1920" height="1280"><figcaption>笑顔のそばに</figcaption></figure>
 </section>
 
 <!-- ===== 02 理念・キャッチ ===== -->
@@ -223,7 +227,6 @@
 
 <!-- ===== 08【採用】CTA → LINE / Indeed ===== -->
 <section id="recruit" class="recruit" aria-labelledby="recruit-title">
-  <div class="recruit-sea" aria-hidden="true"></div>
   <div class="wrap recruit-inner reveal">
     <p class="label">RECRUIT</p>
     <h2 class="recruit-title" id="recruit-title">一緒に、地域の看護を<br>つくりませんか。</h2>
@@ -302,6 +305,7 @@
 <div class="recruit-fab" id="recruitFab">
   <a class="recruit-fab-btn" href="#recruit" aria-label="求職者の方へ：採用情報を見る">
     <svg viewBox="0 0 100 100" aria-hidden="true">
+      <circle class="fab-bg" cx="50" cy="50" r="47"/>
       <defs><path id="fabCirc" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs>
       <g class="fab-ring"><text><textPath href="#fabCirc" textLength="232" lengthAdjust="spacing">求職者の方へ ・ RECRUIT ・ </textPath></text></g>
       <circle class="fab-core" cx="50" cy="50" r="26"/>
