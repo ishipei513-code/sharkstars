@@ -76,350 +76,47 @@
 
 <main>
 
-<!-- ===== 01 動画ヒーロー（動画素材が揃うまで sea.jpg 静止ヒーロー＋CSS演出で暫定／後日差し替え） ===== -->
+<!-- ===== 01 ヒーロー（C3）／海動画素材が揃うまで sea.jpg 静止＋CSS海ゆらぎで暫定。後日 <video> へ差し替え ===== -->
 <section class="hero" aria-label="メインビジュアル">
-  <!-- TODO: 動画素材取得後、hero-photo を <video> ループに差し替え。prefers-reduced-motion/低速時は sea.jpg 静止フォールバック -->
-  <div class="hero-photo" style="background-image:url('images/sea.jpg')" aria-hidden="true"></div>
+  <div class="hero-bg" style="background-image:url('images/sea.jpg')" aria-hidden="true"></div>
+  <div class="hero-sea" aria-hidden="true"></div>
   <div class="hero-overlay" aria-hidden="true"></div>
-  <!-- floating bubble accents -->
-  <span class="bubble bubble-a" aria-hidden="true"></span>
-  <span class="bubble bubble-b" aria-hidden="true"></span>
-  <span class="bubble bubble-c" aria-hidden="true"></span>
+  <div class="hero-ghost" aria-hidden="true"><b>NURSE</b></div>
+  <div class="hero-ghost hero-ghost--2" aria-hidden="true"><b>+REHA</b></div>
 
-  <div class="wrap hero-inner reveal is-in">
-    <p class="hero-eyebrow">MARIN CARE ／ 訪問看護ステーション</p>
-    <h1 class="hero-title">いのちの<br>そばに。</h1>
-    <ul class="hero-badges" aria-label="サービスの特長">
-      <li>福岡市全域</li>
-      <li>24時間365日</li>
-      <li>保険適用</li>
-    </ul>
-  </div>
+  <div class="wrap hero-inner">
+    <p class="hero-eyebrow reveal d1">RECRUIT &amp; CARE ／ 訪問看護ステーション</p>
 
-  <!-- wave divider into the page -->
-  <div class="wave-divider wave-divider-light" aria-hidden="true">
-    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0,48 C180,12 360,12 540,40 C760,74 920,74 1140,40 C1280,16 1380,16 1440,30 L1440,90 L0,90 Z"/></svg>
-  </div>
-</section>
-
-<!-- ===== 02 写真ストリップ ===== -->
-<section class="photostrip" aria-label="マリンケアの風景">
-  <div class="wrap">
-    <div class="strip-grid reveal">
-      <figure class="strip-item">
-        <img src="images/vn.jpg" alt="ご自宅を訪問する看護師" loading="lazy" width="1920" height="1280">
-        <figcaption>暮らしのそばで</figcaption>
-      </figure>
-      <figure class="strip-item">
-        <img src="images/reha.jpg" alt="リハビリに寄り添うスタッフ" loading="lazy" width="1920" height="1280">
-        <figcaption>その人らしさを支える</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 03 理念メッセージ (white frame) ===== -->
-<section class="philosophy" aria-labelledby="philosophy-title">
-  <div class="wrap">
-    <div class="frame philosophy-card reveal">
-      <span class="bubble bubble-soft b1" aria-hidden="true"></span>
-      <span class="bubble bubble-soft b2" aria-hidden="true"></span>
-      <p class="label">理念 / PHILOSOPHY</p>
-      <h2 class="title" id="philosophy-title">あなたの物語を大切に。<br><span class="grad">その〝人〟らしく生きるを看る。</span></h2>
-      <p class="philosophy-lead">いのちの、そばに。</p>
-      <p class="philosophy-body">人生という物語の主人公であるあなたが大切にしてきた生き方を尊重し、最期まで共に寄り添います。住み慣れた家や家族との生活を手放さなくても安心して年齢を重ねられる。『自分らしく生きたい』と願うあなたやご家族に、訪問看護の限界を一歩越えた希望ある選択肢をご提供いたします。</p>
-      <p class="philosophy-close">人生の先輩方への恩返し、そしてこれからの未来を支える次の世代への恩送り。<strong>マリンケアの揺るぎない想いです。</strong></p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 04 3ターゲット導線カード ===== -->
-<section class="routes" aria-label="ご覧の方別のご案内">
-  <div class="wrap">
-    <div class="route-grid">
-      <a class="route-card frame reveal d1" href="service.html">
-        <span class="route-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none"><path d="M24 41C13 33 7 26 7 18.5 7 13 11 9 16 9c3 0 6 1.6 8 4.6C26 10.6 29 9 32 9c5 0 9 4 9 9.5C41 26 35 33 24 41Z" fill="#e7f6fb" stroke="#34b3d1" stroke-width="2" stroke-linejoin="round"/></svg>
-        </span>
-        <h3 class="route-title">利用者・ご家族の方へ</h3>
-        <p class="route-desc">訪問看護でできること、ご利用までの流れをご案内します。</p>
-        <span class="route-go">くわしく見る →</span>
-      </a>
-
-      <!-- 採用LP準備中：当面リンクなし（div で実装し押下不可）。採用LP完成後に <a href="recruit.html"> へ差し替え -->
-      <div class="route-card route-card--soon frame reveal d2 route-card-raise" aria-disabled="true">
-        <span class="route-badge">準備中</span>
-        <span class="route-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" fill="#e7f6fb" stroke="#34b3d1" stroke-width="2"/><path d="M9 40c1.5-8 7.5-12 15-12s13.5 4 15 12" fill="#e7f6fb" stroke="#34b3d1" stroke-width="2" stroke-linecap="round"/></svg>
-        </span>
-        <h3 class="route-title">採用をお考えの方へ</h3>
-        <p class="route-desc">一緒に地域の看護をつくる仲間を募集しています。採用ページは準備中です。</p>
-        <span class="route-go route-go--soon">準備中</span>
+    <div class="hero-carousel reveal d1" aria-label="マリンケアの風景">
+      <div class="hero-carousel-track" id="heroTrack">
+        <div class="hero-slide"><img src="images/vn.jpg" alt="ご自宅を訪問する看護師" width="1920" height="1280"></div>
+        <div class="hero-slide"><img src="images/reha.jpg" alt="リハビリに寄り添うスタッフ" width="1920" height="1280"></div>
+        <div class="hero-slide"><img src="images/feature.jpg" alt="ご家族とともに過ごすご利用者さま" width="1920" height="1280"></div>
+        <div class="hero-slide"><img src="images/vn.jpg" alt="暮らしのそばで支える看護" width="1920" height="1280"></div>
       </div>
+      <div class="hero-dots" id="heroDots" aria-hidden="true"></div>
+    </div>
 
-      <a class="route-card frame reveal d3" href="company.html">
-        <span class="route-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none"><path d="M24 7l4.6 9.3 10.3 1.5-7.4 7.3 1.7 10.2L24 40.4l-9.2 4.9 1.7-10.2-7.4-7.3 10.3-1.5L24 7Z" fill="#e7f6fb" stroke="#34b3d1" stroke-width="2" stroke-linejoin="round"/></svg>
-        </span>
-        <h3 class="route-title">連携先の医療・介護の方へ</h3>
-        <p class="route-desc">多職種で地域を支える連携先を歓迎いたします。</p>
-        <span class="route-go">会社概要を見る →</span>
+    <h1 class="hero-title">
+      <span class="reveal d2">いのちの、</span><br>
+      <span class="reveal d3">そばに<span class="key">。</span></span>
+    </h1>
+    <p class="hero-sub reveal d3">365日、いのちのそばで。</p>
+
+    <div class="hero-cta reveal d3">
+      <a class="btn btn-ghost" href="contact.html">ご相談はこちら</a>
+      <a class="hero-entry" href="contact.html" aria-label="採用エントリー（LINEへ）">
+        <svg viewBox="0 0 120 120" width="118" height="118" aria-hidden="true">
+          <defs><path id="entryCirc" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+          <g class="hero-entry-ring"><text font-size="8.5" letter-spacing="3"><textPath href="#entryCirc">採用エントリー ・ ENTRY ・ 採用エントリー ・ ENTRY ・ </textPath></text></g>
+          <circle class="hero-entry-bg" cx="60" cy="60" r="31"/>
+          <text class="hero-entry-arrow" x="60" y="67" text-anchor="middle" font-size="20">→</text>
+        </svg>
       </a>
     </div>
   </div>
-</section>
 
-<!-- ===== 05 事業内容・できること（新規・2カラム） ===== -->
-<section class="biz" aria-labelledby="biz-title">
-  <div class="wrap">
-    <div class="section-head section-head-center reveal">
-      <p class="label">WHAT WE DO</p>
-      <h2 class="title" id="biz-title">事業内容・<span class="grad">できること</span></h2>
-    </div>
-    <div class="biz-grid">
-      <div class="frame biz-col reveal d1">
-        <div class="biz-col-head">
-          <span class="biz-emoji" aria-hidden="true">🩺</span>
-          <h3 class="biz-col-title">訪問看護</h3>
-        </div>
-        <ul class="biz-list">
-          <li>健康観察・バイタルチェック</li>
-          <li>服薬管理・栄養管理</li>
-          <li>点滴・注射・医師の指示による医療行為</li>
-          <li>小児看護</li>
-          <li>疼痛緩和・ターミナルケア</li>
-          <li>ほか、暮らしに合わせたケア</li>
-        </ul>
-      </div>
-      <div class="frame biz-col reveal d2">
-        <div class="biz-col-head">
-          <span class="biz-emoji" aria-hidden="true">🌿</span>
-          <h3 class="biz-col-title">リハビリ</h3>
-        </div>
-        <ul class="biz-list">
-          <li>運動機能の回復・維持</li>
-          <li>ADL向上・廃用症候群の予防</li>
-          <li>呼吸器・心臓リハビリ</li>
-          <li>難病の進行予防</li>
-          <li>福祉用具の調整</li>
-          <li>ほか、その人らしい生活への支援</li>
-        </ul>
-      </div>
-    </div>
-    <div class="biz-meta reveal">
-      <p class="biz-meta-row"><span class="biz-meta-key">対象</span>赤ちゃん〜高齢の方まで</p>
-      <p class="biz-meta-row"><span class="biz-meta-key">対応エリア</span>福岡市全域</p>
-    </div>
-    <div class="biz-cta reveal">
-      <a class="btn btn-primary" href="service.html">サービスを詳しく見る →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 06 選ばれる理由・強み・体制 (3 columns w/ inline-SVG icons) ===== -->
-<section class="strengths" aria-labelledby="strengths-title">
-  <div class="wrap">
-    <div class="frame strengths-card reveal">
-      <div class="section-head section-head-center">
-        <p class="label">OUR STRENGTHS</p>
-        <h2 class="title" id="strengths-title">マリンケアが<span class="grad">選ばれる理由</span></h2>
-      </div>
-      <div class="strength-grid">
-        <div class="strength-item">
-          <span class="strength-icon" aria-hidden="true">
-            <svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" fill="#eafaff" stroke="#34b3d1" stroke-width="2.4"/><path d="M28 16v12l8 5" stroke="#0a5a82" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <h3 class="strength-title">24時間365日対応</h3>
-          <p class="strength-desc">緊急時もご連絡いただけます。夜間・休日も、暮らしのそばで備えています。</p>
-        </div>
-        <div class="strength-item">
-          <span class="strength-icon" aria-hidden="true">
-            <svg viewBox="0 0 56 56" fill="none"><path d="M28 44C16 36 9 28.5 9 20.5 9 14.7 13.3 10 19 10c3.6 0 6.9 1.9 9 5 2.1-3.1 5.4-5 9-5 5.7 0 10 4.7 10 10.5C47 28.5 40 36 28 44Z" fill="#eafaff" stroke="#34b3d1" stroke-width="2.4" stroke-linejoin="round"/><path d="M17 27h6l3-6 4 11 3-5h6" stroke="#0a5a82" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <h3 class="strength-title">看護＋リハの多職種連携</h3>
-          <p class="strength-desc">一人ひとりに最適なケアを多職種で。医療と暮らしのあいだをつなぎます。</p>
-        </div>
-        <div class="strength-item">
-          <span class="strength-icon" aria-hidden="true">
-            <svg viewBox="0 0 56 56" fill="none"><circle cx="18" cy="20" r="6" fill="#eafaff" stroke="#34b3d1" stroke-width="2.4"/><circle cx="36" cy="18" r="8" fill="#eafaff" stroke="#34b3d1" stroke-width="2.4"/><path d="M8 46c1-7 5-11 10-11s9 4 10 11M26 46c1.2-8.5 5.5-13 10-13s8.8 4.5 10 13" stroke="#0a5a82" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <h3 class="strength-title">小児〜難病・終末期対応</h3>
-          <p class="strength-desc">小児から難病・終末期まで。幅広いステージのご利用者さまに寄り添います。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- wave divider -->
-<div class="wave-divider wave-divider-up" aria-hidden="true">
-  <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0,40 C180,76 360,76 540,48 C760,14 920,14 1140,48 C1280,72 1380,72 1440,58 L1440,90 L0,90 Z"/></svg>
-</div>
-
-<!-- ===== 07 わたしたちの看護（ストーリー）※動画素材が無いため実話エピソード2〜3本で実装。動画完成後に差し替え可。本文は仮テキスト＝取得後差し替え ===== -->
-<section class="story" aria-labelledby="story-title">
-  <div class="wrap">
-    <div class="section-head section-head-center reveal">
-      <p class="label">OUR CARE</p>
-      <h2 class="title" id="story-title">わたしたちの看護</h2>
-      <p class="lead">住み慣れた我が家で、その人らしく。<br>マリンケアが寄り添ってきた、いくつかの物語。</p>
-    </div>
-
-    <!-- TODO: エピソード本文は仮テキスト。西社長へのヒアリングで取得した実話に差し替え。将来はストーリー動画への差し替えも可 -->
-    <div class="episodes">
-      <article class="episode reveal">
-        <figure class="episode-photo">
-          <img src="images/vn.jpg" alt="ご自宅で過ごすご利用者さまに寄り添う看護師" loading="lazy" width="1920" height="1280">
-        </figure>
-        <div class="episode-text">
-          <p class="episode-tag">EPISODE 01</p>
-          <h3 class="episode-title">「家に帰りたい」を、あきらめない。</h3>
-          <p class="episode-body">病院では難しいと言われた在宅での生活。ご本人とご家族の「最期まで自宅で」という願いに、看護とリハビリのチームで向き合いました。点滴も痛みのケアも、住み慣れた部屋の光のなかで。お孫さんに囲まれた穏やかな時間を、最後まで支えることができました。</p>
-        </div>
-      </article>
-
-      <article class="episode episode--rev reveal">
-        <figure class="episode-photo">
-          <img src="images/reha.jpg" alt="リハビリに取り組むご利用者さまとスタッフ" loading="lazy" width="1920" height="1280">
-        </figure>
-        <div class="episode-text">
-          <p class="episode-tag">EPISODE 02</p>
-          <h3 class="episode-title">もう一度、自分の足で。</h3>
-          <p class="episode-body">退院後、外に出るのが怖くなってしまった方。焦らず、少しずつ。玄関までの数歩から始めたリハビリは、やがて近所の散歩へとつながりました。「また孫と公園に行けた」——その一言が、わたしたちのいちばんの喜びです。</p>
-        </div>
-      </article>
-
-      <article class="episode reveal">
-        <figure class="episode-photo">
-          <img src="images/feature.jpg" alt="ご家族とともに過ごすご利用者さま" loading="lazy" width="1920" height="1280">
-        </figure>
-        <div class="episode-text">
-          <p class="episode-tag">EPISODE 03</p>
-          <h3 class="episode-title">小さな手のぬくもりにも、寄り添う。</h3>
-          <p class="episode-body">医療的ケアが必要なお子さまと、そのご家族の毎日。ご両親が安心して眠れる夜を一日でも増やせるように。小児看護の経験を活かし、ご家庭のリズムに合わせたケアを続けています。きょうだいの笑い声があふれる、いつもの暮らしのそばで。</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 08 利用者・ご家族の声（匿名の仮テキスト・取得後差し替え） ===== -->
-<section class="voices voices--user" aria-labelledby="voice-user-title">
-  <div class="wrap">
-    <div class="section-head section-head-center reveal">
-      <p class="label">VOICE ／ FAMILY</p>
-      <h2 class="title" id="voice-user-title">利用者・ご家族の声</h2>
-    </div>
-    <!-- TODO: 実コメント未取得。公開前に実際のお客様の声へ差し替え -->
-    <div class="voice-grid voice-grid--2">
-      <figure class="voice-card frame reveal d1">
-        <span class="voice-mark" aria-hidden="true">“</span>
-        <blockquote class="voice-quote">夜間も相談できる体制があり、安心して任せられました。住み慣れた家で家族と過ごせたことに、心から感謝しています。</blockquote>
-        <figcaption class="voice-author">ご家族</figcaption>
-      </figure>
-      <figure class="voice-card frame reveal d2">
-        <span class="voice-mark" aria-hidden="true">“</span>
-        <blockquote class="voice-quote">いつもやさしく声をかけてくださって、訪問の時間が楽しみになりました。一人ひとりに寄り添ってくれるのが伝わります。</blockquote>
-        <figcaption class="voice-author">ご利用者さま</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 09 Instagramブロック（新規・自動更新ウィジェットを後で貼る前提のプレースホルダー） ===== -->
-<section class="insta" aria-labelledby="insta-title">
-  <div class="wrap">
-    <div class="section-head section-head-center reveal">
-      <p class="label">INSTAGRAM</p>
-      <h2 class="title" id="insta-title">日々の<span class="grad">あたたかい風景</span></h2>
-      <p class="lead">訪問の様子やスタッフの日常を、Instagramで発信しています。</p>
-    </div>
-
-    <!-- TODO: Instagram自動更新ウィジェット（SnapWidget/LightWidget/Behold等）の埋め込みコードをここに。下のプレースホルダーグリッドはウィジェット設置後に削除 -->
-    <div class="insta-grid reveal" aria-hidden="true">
-      <div class="insta-tile"></div>
-      <div class="insta-tile"></div>
-      <div class="insta-tile"></div>
-      <div class="insta-tile"></div>
-      <div class="insta-tile"></div>
-      <div class="insta-tile"></div>
-    </div>
-
-    <div class="insta-cta reveal">
-      <!-- TODO: 正式な Instagram アカウントURLに差し替え -->
-      <a class="btn btn-primary" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">＠marin で最新を見る →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 10 スタッフの声（匿名の仮テキスト・取得後差し替え／採用ゾーンの前フリ） ===== -->
-<section class="voices voices--staff" aria-labelledby="voice-staff-title">
-  <div class="wrap">
-    <div class="section-head section-head-center reveal">
-      <p class="label">VOICE ／ STAFF</p>
-      <h2 class="title" id="voice-staff-title">スタッフの声</h2>
-    </div>
-    <!-- TODO: 実コメント未取得。公開前に実際のスタッフの声へ差し替え -->
-    <div class="voice-grid voice-grid--2">
-      <figure class="voice-card frame reveal d1">
-        <span class="voice-mark" aria-hidden="true">“</span>
-        <blockquote class="voice-quote">チームがあたたかく、困ったときはすぐに相談できます。看護師とリハビリ職が連携しているので、一人で抱え込まずに働けています。</blockquote>
-        <figcaption class="voice-author">看護師</figcaption>
-      </figure>
-      <figure class="voice-card frame reveal d2">
-        <span class="voice-mark" aria-hidden="true">“</span>
-        <blockquote class="voice-quote">ライフスタイルに合わせて働けるので、家庭との両立ができています。利用者さまの「ありがとう」が、毎日のやりがいです。</blockquote>
-        <figcaption class="voice-author">リハビリスタッフ</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 11 採用CTA (deep gradient band, white text)／採用LP未完のため当面「採用準備中」表示（リンクなし・押せない見た目）。LP完成後に <a href="recruit.html"> へ差し替え ===== -->
-<section id="recruit" class="cta-band recruit" aria-labelledby="recruit-title">
-  <span class="bubble bubble-r1" aria-hidden="true"></span>
-  <span class="bubble bubble-r2" aria-hidden="true"></span>
-  <div class="wrap recruit-inner reveal">
-    <p class="recruit-eyebrow">RECRUIT</p>
-    <h2 class="recruit-title" id="recruit-title">一緒に、地域の看護を<br>つくりませんか。</h2>
-    <p class="recruit-body">正看護師さん（パート・アルバイト）を募集しています。未経験歓迎、同行訪問・無料の見学体験もご用意しています。</p>
-    <!-- 採用LP完成後、この span を <a class="btn btn-ghost recruit-btn" href="recruit.html"> に差し替え -->
-    <span class="btn btn-disabled recruit-btn" role="button" aria-disabled="true" tabindex="-1">採用準備中</span>
-    <p class="recruit-note">※採用専用ページは現在準備中です。公開までしばらくお待ちください。</p>
-  </div>
-</section>
-
-<!-- ===== 12 事業所情報・アクセス・問い合わせ ===== -->
-<section class="access" aria-labelledby="access-title">
-  <div class="wrap">
-    <div class="section-head section-head-center reveal">
-      <p class="label">ACCESS</p>
-      <h2 class="title" id="access-title">事業所情報・アクセス</h2>
-    </div>
-    <div class="access-grid reveal">
-      <div class="frame access-info">
-        <!-- 公開前確認：住所は契約書=板倉。移行元サイト=飯倉。西社長にLINEで正式表記を確認のこと -->
-        <dl class="info-list">
-          <div><dt>名称</dt><dd>マリンケア訪問看護ステーション</dd></div>
-          <div><dt>住所</dt><dd>〒814-0134<br>福岡県福岡市城南区板倉1-5-35</dd></div>
-          <div><dt>TEL</dt><dd><a href="tel:0924001821">092-400-1821</a></dd></div>
-          <div><dt>FAX</dt><dd>092-400-1831</dd></div>
-          <div><dt>LINE</dt><dd><a href="contact.html">LINEで相談する</a></dd></div>
-          <div><dt>対応エリア</dt><dd>福岡市全域（拠点＝城南区）</dd></div>
-          <div><dt>営業</dt><dd>24時間365日 緊急対応</dd></div>
-        </dl>
-        <a class="btn btn-primary access-cta" href="contact.html">お問い合わせはこちら</a>
-      </div>
-      <div class="frame access-map">
-        <iframe
-          src="https://maps.google.com/maps?q=福岡県福岡市城南区板倉1-5-35&output=embed"
-          title="マリンケア訪問看護ステーションの地図（福岡県福岡市城南区板倉1-5-35）"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          width="100%" height="100%" style="border:0"></iframe>
-      </div>
-    </div>
-  </div>
+  <div class="hero-scroll" aria-hidden="true">SCROLL ↓</div>
 </section>
 
 </main>

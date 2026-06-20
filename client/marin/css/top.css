@@ -66,6 +66,38 @@ img{max-width:100%;height:auto}
   .header .nav a[aria-current="page"]::after{left:0;right:auto;width:24px}
 }
 
+/* ===== Hero (01) ===== */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(130% 120% at 50% -15%,var(--navy-2),var(--navy-1) 58%,var(--navy-0))}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.28}
+.hero-sea{position:absolute;inset:-20%;opacity:.16;background:repeating-linear-gradient(104deg,var(--sea) 0 2px,transparent 2px 30px);animation:seadrift 9s linear infinite}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,18,30,.25),rgba(6,18,30,.65))}
+.hero-ghost{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.hero-ghost b{font-size:clamp(70px,16vw,170px);font-weight:900;color:transparent;-webkit-text-stroke:1.5px rgba(127,180,214,.16);font-family:var(--ff-en);animation:floatY 8s ease-in-out infinite}
+.hero-ghost--2{justify-content:flex-end;align-items:flex-end}
+.hero-ghost--2 b{font-size:clamp(36px,7vw,66px);-webkit-text-stroke:1px rgba(255,93,143,.20);margin:0 6vw 8vh 0;animation:floatY 6s ease-in-out infinite reverse}
+.hero-inner{position:relative;z-index:3;text-align:center;padding-block:clamp(80px,12vh,140px)}
+.hero-eyebrow{font-family:var(--ff-en);font-size:12px;letter-spacing:.3em;color:var(--sea)}
+.hero-title{font-size:clamp(38px,9vw,84px);font-weight:900;line-height:1.3;color:#fff;margin:14px 0 6px;letter-spacing:.02em}
+.hero-title .key{position:relative}
+.hero-title .key::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:6px;width:0;background:var(--pink);border-radius:3px}
+.hero-title .is-in .key::after,.hero-title .key.is-in::after{animation:drawline .7s ease forwards .4s}
+.hero-sub{color:var(--pink);letter-spacing:.22em;font-size:clamp(12px,2.2vw,15px)}
+.hero-cta{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:30px;flex-wrap:wrap}
+.hero-entry{display:inline-block;line-height:0}
+.hero-entry-ring{transform-origin:60px 60px;animation:spin 13s linear infinite}
+.hero-entry-ring text{fill:var(--ink)}
+.hero-entry-bg{fill:var(--pink)}
+.hero-entry-arrow{fill:#fff;font-weight:700}
+.hero-entry:hover .hero-entry-ring{animation-duration:5s}
+.hero-carousel{position:relative;width:min(340px,80vw);margin:22px auto 4px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.16);box-shadow:0 14px 40px rgba(0,0,0,.45);aspect-ratio:16/10}
+.hero-carousel-track{display:flex;height:100%;transition:transform 1.3s cubic-bezier(.45,0,.18,1)}
+.hero-slide{min-width:100%;height:100%}
+.hero-slide img{width:100%;height:100%;object-fit:cover}
+.hero-dots{position:absolute;bottom:8px;right:10px;display:flex;gap:5px}
+.hero-dots span{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.45);transition:.35s}
+.hero-dots span.on{background:var(--pink);width:15px;border-radius:3px}
+.hero-scroll{position:absolute;left:50%;bottom:14px;z-index:3;transform:translateX(-50%);color:var(--sea);font-size:10px;letter-spacing:.2em;font-family:var(--ff-en);animation:bob 1.8s ease-in-out infinite}
+
 /* ===== Motion keyframes ===== */
 @keyframes seadrift{to{background-position:300px 0}}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
