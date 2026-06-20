@@ -126,7 +126,7 @@ img{max-width:100%;height:auto}
 .route-photo{position:relative;overflow:hidden;aspect-ratio:16/10;clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}
 .route-photo img{width:100%;height:100%;object-fit:cover}
 .route-body{display:flex;flex-direction:column;flex:1;padding:0 26px 30px}
-.route-ic{display:flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:50%;background:#fff;box-shadow:0 6px 16px rgba(16,58,92,.16);margin-top:-30px;margin-bottom:16px;position:relative;z-index:2}
+.route-ic{display:flex;align-items:center;justify-content:center;align-self:center;width:58px;height:58px;border-radius:50%;background:#fff;box-shadow:0 6px 16px rgba(16,58,92,.16);margin-top:-30px;margin-bottom:16px;position:relative;z-index:2}
 .route-ic svg{width:30px;height:30px;color:var(--pink)}
 .route-body h3{font-size:18px;color:var(--head);position:relative;padding-bottom:12px;margin-bottom:12px}
 .route-body h3::after{content:"";position:absolute;left:0;bottom:0;width:40px;height:3px;background:var(--blue)}
