@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="https://sharkstars.jp/client/marin/images/ogp.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Yomogi&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/top.css">
 <!-- 公開前確認：streetAddress 板倉/飯倉 を西社長に確認 -->
@@ -314,13 +314,23 @@
 
 <!-- ===== 08【採用】CTA → LINE / Indeed ===== -->
 <section id="recruit" class="recruit" aria-labelledby="recruit-title">
-  <div class="wrap recruit-inner reveal">
-    <p class="label">RECRUIT</p>
-    <h2 class="recruit-title" id="recruit-title">一緒に、地域の看護を<br>つくりませんか。</h2>
-    <p class="recruit-body">正看護師さん（パート・アルバイト）を募集中。未経験歓迎、同行訪問・無料の見学体験あり。</p>
-    <div class="recruit-cta">
+  <div class="wrap recruit-grid">
+    <div class="recruit-text reveal">
+      <p class="label">RECRUIT</p>
+      <h2 class="recruit-title" id="recruit-title">一緒に、<span class="grad">地域の看護</span>を<br>つくりませんか。</h2>
+      <div class="recruit-divider" aria-hidden="true"></div>
+      <p class="recruit-body">正看護師さん（パート・アルバイト）を募集中。未経験歓迎。<br>同行訪問・教育の充実体制で、安心してスタートできます。</p>
       <!-- TODO: 公式LINEの友だち追加URLに差し替え（現状プレースホルダー） -->
-      <a class="btn btn-primary" href="https://line.me/" target="_blank" rel="noopener noreferrer">LINEで応募・相談する</a>
+      <a class="btn btn-primary recruit-btn" href="https://line.me/" target="_blank" rel="noopener noreferrer">LINEで応募・相談する<span class="recruit-arrow" aria-hidden="true">→</span></a>
+      <ul class="recruit-feats">
+        <li><span class="rf-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.6-7-9.4A3.6 3.6 0 0 1 12 8a3.6 3.6 0 0 1 7 2.6C19 15.4 12 20 12 20Z"/></svg></span><span>地域に寄り添う<br>温かいケア</span></li>
+        <li><span class="rf-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="16.5" cy="10" r="2.3"/><path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><path d="M15.5 15c2.3.2 4 2 4 4.2"/></svg></span><span>チームで支え合う<br>安心のサポート</span></li>
+        <li><span class="rf-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20c0-5 2-9 8-10-1 6-4 9-8 10Z"/><path d="M12 20C7 19 4 15 4 9c5 0 8 3 8 11Z"/></svg></span><span>ムリなく働ける<br>柔軟な環境</span></li>
+      </ul>
+    </div>
+    <div class="recruit-photo reveal d1">
+      <div class="recruit-photo-img" style="background-image:url('images/vn.jpg')" aria-hidden="true"></div>
+      <span class="recruit-script">あなたの想いが、<br>誰かの暮らしを支える。</span>
     </div>
   </div>
 </section>
