@@ -13,12 +13,14 @@
   // 2) mobile menu
   var toggle=document.querySelector('.menu-toggle'), nav=document.querySelector('.nav');
   if(toggle&&nav){
-    var closeNav=function(){nav.classList.remove('is-open');toggle.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');document.body.style.overflow='';};
+    var setFab=function(open){var fab=document.getElementById('recruitFab');if(fab)fab.classList.toggle('is-nav-open',open);};
+    var closeNav=function(){nav.classList.remove('is-open');toggle.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');document.body.style.overflow='';setFab(false);};
     toggle.addEventListener('click',function(){
       var open=nav.classList.toggle('is-open');
       toggle.classList.toggle('is-open',open);
       toggle.setAttribute('aria-expanded',open?'true':'false');
       document.body.style.overflow=open?'hidden':'';
+      setFab(open);
     });
     nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeNav);});
   }
