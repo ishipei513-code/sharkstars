@@ -118,6 +118,34 @@ img{max-width:100%;height:auto}
 .route-go{display:inline-block;margin-top:12px;font-size:13px;color:var(--sea)}
 @media (max-width:760px){.route-grid{grid-template-columns:1fr}}
 
+/* ===== sec-head 共通 ===== */
+.sec-head{text-align:center;margin-bottom:34px}
+.sec-head h2{font-size:clamp(24px,4.6vw,40px);font-weight:900;color:#fff;margin-top:6px}
+
+/* ===== 04 biz（フラット・線SVG） ===== */
+.biz{padding:clamp(60px,9vw,110px) 0}
+.biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.biz-col{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px}
+.biz-col h3{font-size:20px;color:#fff;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.biz-ic{display:inline-flex;color:var(--pink)}
+.biz-ic svg{width:24px;height:24px}
+.biz-col ul{list-style:none;margin:0;padding:0}
+.biz-col li{padding:9px 0 9px 20px;position:relative;color:var(--sub);border-bottom:1px solid var(--line)}
+.biz-col li::before{content:"";position:absolute;left:2px;top:16px;width:7px;height:7px;border:1.5px solid var(--pink);border-radius:50%}
+.biz-meta{text-align:center;color:var(--sub);margin:22px 0;font-size:14px}
+.biz-cta{text-align:center}
+
+/* ===== 05 strengths（フラット） ===== */
+.strengths{padding:clamp(60px,9vw,110px) 0}
+.strength-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.strength-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;text-align:center}
+.strength-no{font-family:var(--ff-en);font-size:30px;font-weight:800;color:var(--pink)}
+.strength-item h3{color:#fff;font-size:17px;margin:8px 0}
+.strength-item p{color:var(--sub);font-size:13px;line-height:1.8}
+.from-left{transform:translateX(-40px)}.from-right{transform:translateX(40px)}
+.from-left.is-in,.from-right.is-in{transform:none}
+@media (max-width:760px){.biz-grid{grid-template-columns:1fr}.strength-grid{grid-template-columns:1fr}}
+
 /* ===== Motion keyframes ===== */
 @keyframes seadrift{to{background-position:300px 0}}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
