@@ -121,9 +121,6 @@ img{max-width:100%;height:auto}
 .cf-slide.is-next{transform:translate(-50%,-50%) translateX(58%) rotateY(-38deg) scale(.82);opacity:.55;z-index:3;pointer-events:auto;cursor:pointer}
 .cf-slide.is-prev:hover,.cf-slide.is-next:hover{opacity:.82}
 
-.cf-view{position:absolute;top:50%;left:calc(50% + clamp(150px,24vw,300px));transform:translate(-50%,-50%);z-index:8;width:clamp(64px,8vw,92px);height:clamp(64px,8vw,92px);border-radius:50%;border:0;cursor:pointer;background:var(--blue-soft);color:#fff;font-family:var(--ff-en);font-size:13px;letter-spacing:.06em;font-weight:600;box-shadow:0 12px 30px rgba(0,90,170,.35);transition:transform .25s,box-shadow .25s}
-.cf-view:hover{transform:translate(-50%,-50%) scale(1.07);box-shadow:0 16px 38px rgba(0,90,170,.45)}
-
 .cf-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:8;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.92);color:var(--blue);font-size:24px;line-height:1;cursor:pointer;box-shadow:var(--shadow);transition:transform .2s,background .2s}
 .cf-nav:hover{background:#fff;transform:translateY(-50%) scale(1.06)}
 .cf-prev{left:clamp(8px,3vw,40px)}
@@ -134,7 +131,6 @@ img{max-width:100%;height:auto}
 .cf-dots span.on{background:var(--pink);width:22px;border-radius:4px}
 
 @media (max-width:760px){
-  .cf-view{display:none}
   .cf-slide.is-prev{transform:translate(-50%,-50%) translateX(-44%) rotateY(34deg) scale(.78);opacity:.4}
   .cf-slide.is-next{transform:translate(-50%,-50%) translateX(44%) rotateY(-34deg) scale(.78);opacity:.4}
 }
