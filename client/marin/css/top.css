@@ -172,16 +172,28 @@ img{max-width:100%;height:auto}
 .biz-btn-arrow{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.25);font-size:17px}
 @media (max-width:760px){.biz-grid{grid-template-columns:1fr}}
 
-/* ===== 05 strengths ===== */
-.strengths{padding:clamp(84px,12vw,150px) 0}
-.strength-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.strength-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow)}
-.strength-no{font-family:var(--ff-en);font-size:30px;font-weight:800;color:var(--pink)}
-.strength-item h3{color:var(--head);font-size:17px;margin:8px 0}
-.strength-item p{color:var(--sub);font-size:13px;line-height:1.8}
+/* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
+.strengths{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:var(--bg)}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg') center/cover;opacity:.3;pointer-events:none}
+.strengths .wrap{position:relative;z-index:1}
+.str-eyebrow{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:8px}
+.str-wave{color:var(--pink);width:46px;height:9px;display:block}
+.str-marker{position:relative}
+.str-marker::after{content:"";position:absolute;left:-3px;right:-3px;bottom:1px;height:9px;background:var(--pink);opacity:.4;transform:rotate(-1deg);z-index:-1}
+.str-lead{max-width:680px;margin:18px auto 0;color:var(--sub);font-size:15px;line-height:2}
+.strength-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:74px}
+.strength-item{position:relative;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:52px 26px 60px;text-align:center}
+.str-badge{position:absolute;top:-34px;left:50%;transform:translateX(-50%);width:74px;height:74px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:0 8px 20px rgba(255,93,143,.18);display:flex;align-items:center;justify-content:center}
+.str-badge svg{width:36px;height:36px;color:var(--pink)}
+.strength-no{font-family:var(--ff-en);font-size:46px;font-weight:800;color:var(--pink);line-height:1}
+.strength-item h3{color:var(--head);font-size:18px;font-weight:900;margin:10px 0 0}
+.str-line{display:block;width:40px;height:3px;background:var(--pink);margin:14px auto 16px}
+.strength-item p{color:var(--sub);font-size:13.5px;line-height:1.9;position:relative;z-index:1}
+.str-wave-bottom{position:absolute;left:0;right:0;bottom:0;height:56px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60' preserveAspectRatio='none'%3E%3Cpath fill='%23ffd9e4' d='M0,30 C80,5 140,5 200,30 C260,55 320,55 400,30 L400,60 L0,60 Z'/%3E%3C/svg%3E") bottom/100% 100% no-repeat;opacity:.6}
+.str-note{text-align:center;color:var(--sub);font-size:13px;margin-top:38px}
 .from-left{transform:translateX(-40px)}.from-right{transform:translateX(40px)}
 .from-left.is-in,.from-right.is-in{transform:none}
-@media (max-width:760px){.biz-grid{grid-template-columns:1fr}.strength-grid{grid-template-columns:1fr}}
+@media (max-width:760px){.biz-grid{grid-template-columns:1fr}.strength-grid{grid-template-columns:1fr;margin-top:60px}}
 
 /* ===== 全幅ステートメント（メリハリ：大きな写真＋特大コピー） ===== */
 .statement{position:relative;min-height:clamp(380px,54vw,600px);display:flex;align-items:center;overflow:hidden}
