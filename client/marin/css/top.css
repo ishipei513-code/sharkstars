@@ -41,6 +41,31 @@ img{max-width:100%;height:auto}
 .reveal.is-in{opacity:1;transform:none}
 .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.20s}.reveal.d3{transition-delay:.32s}
 
+/* ===== Header ===== */
+.header{position:sticky;top:0;z-index:50;background:rgba(8,23,38,.72);-webkit-backdrop-filter:saturate(140%) blur(6px);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line);transition:background .2s}
+.header.is-scrolled{background:rgba(6,18,30,.92)}
+/* backdrop-filter非対応/負荷回避：不透明背景にフォールバック */
+@supports not ((backdrop-filter:blur(6px)) or (-webkit-backdrop-filter:blur(6px))){.header{background:rgba(6,18,30,.96)}}
+.header .bar{display:flex;align-items:center;gap:18px;height:var(--header-h)}
+.header .logo img{display:block;filter:brightness(0) invert(1)} /* 濃紺背景に白ロゴ */
+.header .nav{margin-left:auto}
+.header .nav ul{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0}
+.header .nav a{color:var(--ink);text-decoration:none;font-size:14px;position:relative;padding:6px 0}
+.header .nav a[aria-current="page"]::after{content:"";position:absolute;left:-2px;right:-2px;bottom:-6px;height:4px;background:var(--pink);border-radius:2px} /* 太いライン */
+.header .nav .btn-line{background:var(--pink);color:#fff;padding:9px 18px;border-radius:999px}
+.header .nav .btn-line::after{display:none}
+.menu-toggle{display:none;margin-left:auto;width:42px;height:42px;background:none;border:0;flex-direction:column;justify-content:center;gap:5px;cursor:pointer}
+.menu-toggle span{display:block;height:2px;background:var(--ink);transition:.2s}
+@media (max-width:820px){
+  .menu-toggle{display:flex}
+  .header .nav{position:fixed;inset:var(--header-h) 0 auto 0;background:var(--navy-0);margin:0;max-height:0;overflow:hidden;transition:max-height .3s}
+  .header .nav.is-open{max-height:80vh}
+  .header .nav ul{flex-direction:column;align-items:stretch;gap:0;padding:8px var(--gut) 18px}
+  .header .nav li{border-bottom:1px solid var(--line)}
+  .header .nav a{display:block;padding:14px 0}
+  .header .nav a[aria-current="page"]::after{left:0;right:auto;width:24px}
+}
+
 /* ===== Motion keyframes ===== */
 @keyframes seadrift{to{background-position:300px 0}}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
