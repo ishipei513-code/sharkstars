@@ -90,8 +90,13 @@
   <div class="wrap hero-inner">
     <p class="hero-eyebrow reveal d1">RECRUIT &amp; CARE ／ 訪問看護ステーション</p>
 
-    <div class="hero-carousel reveal d1">
-      <img src="images/vn.jpg" alt="ご自宅を訪問する看護師" width="1920" height="1200">
+    <div class="hero-carousel reveal d1" aria-label="マリンケアの風景">
+      <div class="hero-carousel-track" id="heroTrack">
+        <div class="hero-slide"><img src="images/sample.svg" alt="サンプル画像" width="1920" height="1200"></div>
+        <div class="hero-slide"><img src="images/sample.svg" alt="サンプル画像" width="1920" height="1200"></div>
+        <div class="hero-slide"><img src="images/sample.svg" alt="サンプル画像" width="1920" height="1200"></div>
+      </div>
+      <div class="hero-dots" id="heroDots" aria-hidden="true"></div>
     </div>
 
     <h1 class="hero-title">
@@ -112,7 +117,7 @@
 
 <!-- ===== 01.5 写真ストリップ（サンプル写真・公開前に実写真へ差し替え） ===== -->
 <section class="photoband" aria-label="マリンケアの風景">
-  <figure class="pb-item reveal"><img src="images/vn.jpg" alt="ご自宅を訪問する看護師" loading="lazy" width="1920" height="820"><figcaption>いのちの、そばで。</figcaption></figure>
+  <figure class="pb-item reveal"><img src="images/sample.svg" alt="ご自宅を訪問する看護師" loading="lazy" width="1920" height="820"><figcaption>いのちの、そばで。</figcaption></figure>
 </section>
 
 <!-- ===== 02 理念・キャッチ ===== -->
@@ -129,7 +134,7 @@
 <section class="routes" aria-label="ご覧の方別のご案内">
   <div class="wrap route-grid">
     <a class="route-card reveal d1" href="service.html">
-      <div class="route-photo"><img src="images/vn.jpg" alt="" loading="lazy" width="800" height="500"></div>
+      <div class="route-photo"><img src="images/sample.svg" alt="" loading="lazy" width="800" height="500"></div>
       <div class="route-body">
         <span class="route-ic" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l11-8 11 8"/><path d="M8 13v12h16V13"/><path d="M16 22c-2.2-1.5-3.6-2.8-3.6-4.4 0-1.1.9-1.9 1.9-1.9.8 0 1.3.4 1.7 1 .4-.6.9-1 1.7-1 1 0 1.9.8 1.9 1.9 0 1.6-1.4 2.9-3.6 4.4Z"/></svg></span>
         <h3>利用者・ご家族の方へ</h3>
@@ -138,7 +143,7 @@
       </div>
     </a>
     <a class="route-card route-card--job reveal d2" href="#numbers">
-      <div class="route-photo"><img src="images/vn.jpg" alt="" loading="lazy" width="800" height="500"></div>
+      <div class="route-photo"><img src="images/sample.svg" alt="" loading="lazy" width="800" height="500"></div>
       <div class="route-body">
         <span class="route-ic" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="11" r="3.2"/><circle cx="8" cy="13" r="2.6"/><circle cx="24" cy="13" r="2.6"/><path d="M11 25c0-3 2.2-5 5-5s5 2 5 5"/><path d="M3.5 24c0-2.3 1.6-4 4-4"/><path d="M28.5 24c0-2.3-1.6-4-4-4"/></svg></span>
         <h3>採用をお考えの方へ</h3>
@@ -147,7 +152,7 @@
       </div>
     </a>
     <a class="route-card reveal d3" href="company.html">
-      <div class="route-photo"><img src="images/vn.jpg" alt="" loading="lazy" width="800" height="500"></div>
+      <div class="route-photo"><img src="images/sample.svg" alt="" loading="lazy" width="800" height="500"></div>
       <div class="route-body">
         <span class="route-ic" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5-2 7 3 7-3 5 2"/><path d="M16 13l-3 3a1.6 1.6 0 0 0 2.3 2.3l.7-.7.7.7a1.6 1.6 0 0 0 2.3-2.3L18 13"/><path d="M9 20l3 3"/><path d="M23 20l-3 3"/></svg></span>
         <h3>連携先の医療・介護の方へ</h3>
@@ -243,7 +248,7 @@
 
 <!-- ===== 全幅ステートメント（メリハリ・大きな写真＋特大コピー） ===== -->
 <section class="statement" aria-label="わたしたちの想い">
-  <div class="statement-bg" style="background-image:url('images/vn.jpg')" aria-hidden="true"></div>
+  <div class="statement-bg" style="background-image:url('images/sample.svg')" aria-hidden="true"></div>
   <div class="statement-inner reveal">
     <p class="label">OUR MIND</p>
     <h2 class="statement-h">その人らしく生きるを、<br>ずっと、そばで。</h2>
@@ -255,8 +260,8 @@
   <div class="wrap">
     <div class="sec-head reveal"><p class="label">VOICE / STAFF</p><h2 id="staff-title">はたらく人の声</h2></div>
     <div class="staff-grid">
-      <figure class="staff-card reveal d1"><img src="images/vn.jpg" alt="看護師スタッフ" loading="lazy" width="1920" height="1280"><figcaption><blockquote>チームがあたたかく、困ったときはすぐ相談できます。看護とリハが連携しているので一人で抱え込まずに働けます。</blockquote><span>看護師</span></figcaption></figure>
-      <figure class="staff-card reveal d2"><img src="images/vn.jpg" alt="リハビリスタッフ" loading="lazy" width="1920" height="1280"><figcaption><blockquote>ライフスタイルに合わせて働けて、家庭と両立できています。利用者さまの「ありがとう」が毎日のやりがいです。</blockquote><span>リハビリスタッフ</span></figcaption></figure>
+      <figure class="staff-card reveal d1"><img src="images/sample.svg" alt="看護師スタッフ" loading="lazy" width="1920" height="1280"><figcaption><blockquote>チームがあたたかく、困ったときはすぐ相談できます。看護とリハが連携しているので一人で抱え込まずに働けます。</blockquote><span>看護師</span></figcaption></figure>
+      <figure class="staff-card reveal d2"><img src="images/sample.svg" alt="リハビリスタッフ" loading="lazy" width="1920" height="1280"><figcaption><blockquote>ライフスタイルに合わせて働けて、家庭と両立できています。利用者さまの「ありがとう」が毎日のやりがいです。</blockquote><span>リハビリスタッフ</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -270,7 +275,7 @@
         <h2 id="numbers-title">働く環境を、<span class="grad">数字</span>で。</h2>
         <p class="num-lead">私たちは、データで働きやすさを可視化し、より良い職場づくりを追求しています。</p>
       </div>
-      <div class="num-head-photo reveal d1"><img src="images/vn.jpg" alt="" loading="lazy" width="900" height="560"></div>
+      <div class="num-head-photo reveal d1"><img src="images/sample.svg" alt="" loading="lazy" width="900" height="560"></div>
     </div>
     <div class="num-grid">
       <div class="num-card reveal d1"><span class="num-tag">仮</span>
@@ -329,7 +334,7 @@
       </ul>
     </div>
     <div class="recruit-photo reveal d1">
-      <div class="recruit-photo-img" style="background-image:url('images/vn.jpg')" aria-hidden="true"></div>
+      <div class="recruit-photo-img" style="background-image:url('images/sample.svg')" aria-hidden="true"></div>
       <span class="recruit-script">あなたの想いが、<br>誰かの暮らしを支える。</span>
     </div>
   </div>
