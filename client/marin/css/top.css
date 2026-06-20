@@ -160,6 +160,26 @@ img{max-width:100%;height:auto}
 .num-note{text-align:center;color:rgba(255,255,255,.6);font-size:11px;margin-top:16px}
 @media (max-width:760px){.num-grid{grid-template-columns:1fr 1fr}}
 
+/* ===== 07 staff（フラット） ===== */
+.staff{padding:clamp(60px,9vw,110px) 0}
+.staff-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.staff-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:0}
+.staff-card img{width:100%;height:200px;object-fit:cover}
+.staff-card figcaption{padding:20px}
+.staff-card blockquote{margin:0 0 10px;color:var(--ink);font-size:14px;line-height:1.9}
+.staff-card span{color:var(--pink);font-size:12px;font-weight:700}
+
+/* ===== 08 recruit CTA（フラット・青の単色ブロック） ===== */
+.recruit{position:relative;overflow:hidden;padding:clamp(70px,11vw,140px) 0;text-align:center;background:var(--navy-2)}
+.recruit-sea{position:absolute;inset:-20%;opacity:.12;background:repeating-linear-gradient(104deg,rgba(255,255,255,.5) 0 1px,transparent 1px 32px);animation:seadrift 9s linear infinite}
+.recruit-inner{position:relative;z-index:2}
+.recruit .label{color:#cfe7ff}
+.recruit-title{font-size:clamp(26px,5.2vw,46px);font-weight:900;color:#fff;line-height:1.5;margin:10px 0 14px}
+.recruit-body{color:#dceafa;max-width:560px;margin:0 auto 26px}
+.recruit-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.recruit .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
+@media (max-width:760px){.staff-grid{grid-template-columns:1fr}}
+
 /* ===== Motion keyframes ===== */
 @keyframes seadrift{to{background-position:300px 0}}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
