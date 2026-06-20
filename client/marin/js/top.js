@@ -83,4 +83,18 @@
       counters.forEach(function(el){cio.observe(el);});
     }
   }
+
+  // 8) 3D tilt on cards（マウスでカードが傾く。reduced/タッチ時は無効）
+  if(!REDUCED && window.matchMedia && window.matchMedia('(hover:hover)').matches){
+    var tiltSel='.route-card,.strength-item,.biz-col,.num-card,.staff-card,.voice-card,.pb-item';
+    document.querySelectorAll(tiltSel).forEach(function(card){
+      card.addEventListener('mousemove',function(e){
+        var r=card.getBoundingClientRect();
+        var px=(e.clientX-r.left)/r.width-0.5;
+        var py=(e.clientY-r.top)/r.height-0.5;
+        card.style.transform='perspective(720px) rotateX('+(-py*7).toFixed(2)+'deg) rotateY('+(px*9).toFixed(2)+'deg) translateY(-5px)';
+      });
+      card.addEventListener('mouseleave',function(){ card.style.transform=''; });
+    });
+  }
 })();

@@ -90,6 +90,12 @@ img{max-width:100%;height:auto}
 .hero-wave.w2{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200' preserveAspectRatio='none'%3E%3Cpath fill='%234ea7dd' d='M0,110 C300,50 540,50 720,110 C900,170 1140,170 1440,110 L1440,200 L0,200 Z'/%3E%3C/svg%3E");opacity:.6;animation:waveX 19s linear infinite reverse}
 .hero-wave.w3{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200' preserveAspectRatio='none'%3E%3Cpath fill='%231f80c4' d='M0,130 C360,80 720,80 1080,130 C1260,155 1350,155 1440,130 L1440,200 L0,200 Z'/%3E%3C/svg%3E");opacity:.72;animation:waveX 27s linear infinite}
 
+/* ===== マーキー帯（流れるキーワード・ホバーで停止） ===== */
+.marquee{overflow:hidden;background:var(--blue);padding:14px 0;white-space:nowrap}
+.marquee-track{display:inline-flex;will-change:transform;animation:marquee 28s linear infinite}
+.marquee-track span{display:inline-block;font-size:clamp(20px,3.2vw,36px);font-weight:900;color:#fff;letter-spacing:.03em}
+.marquee:hover .marquee-track{animation-play-state:paused}
+
 /* ===== 01.5 写真ストリップ ===== */
 .photoband{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:#fff}
 .pb-item{position:relative;margin:0;overflow:hidden;aspect-ratio:4/3}
@@ -248,6 +254,7 @@ body.accent-orange{--pink:#ff8a3d}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,6px)}}
 @keyframes waveX{from{background-position-x:0}to{background-position-x:-1440px}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ===== prefers-reduced-motion ===== */
 @media (prefers-reduced-motion: reduce){
