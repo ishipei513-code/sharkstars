@@ -1,0 +1,55 @@
+/* マリンケア訪問看護ステーション — トップC3「深海」 Design System */
+:root{
+  /* C3 palette */
+  --navy-0:#06182b;  /* 最深部 */
+  --navy-1:#0a2540;  /* ベース濃紺 */
+  --navy-2:#0a5a82;  /* 海の明るい青 */
+  --sea:#3aa0c9;     /* 波・ゆらぎ */
+  --pink:#ff5d8f;    /* アクセント（主軸） */
+  --ink:#eaf4fb;     /* 濃紺上の本文 */
+  --sub:#9fb6cc;     /* 補助テキスト */
+  --card:#0c2236;    /* カード面 */
+  --line:#1f3a58;    /* 罫線 */
+  /* layout */
+  --maxw:1120px;
+  --gut:clamp(16px,4vw,40px);
+  --header-h:64px;
+  --radius:14px;
+  /* type */
+  --ff-jp:'Zen Kaku Gothic New','Zen Maru Gothic',system-ui,sans-serif;
+  --ff-en:'Inter',sans-serif;
+  /* accent override hook（オレンジA/B用・Task 12） */
+}
+html,body{overflow-x:hidden}
+body{
+  font-family:var(--ff-jp);
+  color:var(--ink);
+  background:var(--navy-1);
+  line-height:1.85;
+}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
+img{max-width:100%;height:auto}
+.label{font-size:11px;letter-spacing:.35em;color:var(--sea);font-family:var(--ff-en)}
+.grad{color:var(--pink)}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 28px;font-weight:700;font-size:15px;text-decoration:none;transition:.18s}
+.btn-primary{background:var(--pink);color:#fff;box-shadow:0 10px 28px rgba(255,93,143,.45)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid var(--sea);color:var(--ink)}
+.btn-ghost:hover{background:rgba(58,160,201,.14)}
+/* reveal（top.jsが.is-inを付与） */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.20s}.reveal.d3{transition-delay:.32s}
+
+/* ===== Motion keyframes ===== */
+@keyframes seadrift{to{background-position:300px 0}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes drawline{to{width:100%}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,6px)}}
+
+/* ===== prefers-reduced-motion：動きを止め、即表示 ===== */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+}
