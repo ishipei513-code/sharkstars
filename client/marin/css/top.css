@@ -107,7 +107,7 @@ img{max-width:100%;height:auto}
 
 /* ===== sec-head 共通 ===== */
 .sec-head{text-align:center;margin-bottom:34px}
-.sec-head h2{font-size:clamp(24px,4.6vw,40px);font-weight:900;color:var(--head);margin-top:6px}
+.sec-head h2{font-size:clamp(28px,5.6vw,54px);font-weight:900;color:var(--head);margin-top:6px;line-height:1.32}
 
 /* ===== 02 philosophy ===== */
 .philosophy{padding:clamp(70px,10vw,120px) 0;text-align:center;background:#fff}
