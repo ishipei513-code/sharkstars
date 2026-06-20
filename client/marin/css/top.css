@@ -146,6 +146,20 @@ img{max-width:100%;height:auto}
 .from-left.is-in,.from-right.is-in{transform:none}
 @media (max-width:760px){.biz-grid{grid-template-columns:1fr}.strength-grid{grid-template-columns:1fr}}
 
+/* ===== 06 numbers（フラット・青の単色ブロック #005aaa） ===== */
+.numbers{padding:clamp(64px,9vw,120px) 0;background:var(--navy-2)}
+.numbers .label{color:#cfe7ff}
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.num-card{position:relative;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:24px 18px;text-align:center}
+.num-tag{position:absolute;top:8px;right:10px;font-size:9px;color:rgba(255,255,255,.55);letter-spacing:.1em}
+.num-big{font-size:clamp(34px,5vw,46px);font-weight:900;color:#fff;line-height:1}
+.num-big i{font-style:normal;font-size:18px;color:#ffd2e1;margin-left:2px}
+.num-lab{margin-top:10px;font-size:12px;color:#dceafa;letter-spacing:.05em}
+.num-ratio{height:6px;border-radius:3px;background:rgba(255,255,255,.22);overflow:hidden;margin-bottom:14px}
+.num-ratio-f{display:block;height:100%;background:var(--pink)}
+.num-note{text-align:center;color:rgba(255,255,255,.6);font-size:11px;margin-top:16px}
+@media (max-width:760px){.num-grid{grid-template-columns:1fr 1fr}}
+
 /* ===== Motion keyframes ===== */
 @keyframes seadrift{to{background-position:300px 0}}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
