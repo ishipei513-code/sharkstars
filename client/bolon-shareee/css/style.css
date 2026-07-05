@@ -1836,3 +1836,99 @@ a:hover { color: var(--primary); }
     transition: none;
   }
 }
+
+/* ============================================================
+   Corporate Hero (typographic, no photo) + Mission band
+   2026-07-05 コーポレート転換で追加
+   ============================================================ */
+.hero-corporate {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: calc(72px + var(--space-xl)) var(--container-pad) var(--space-xl);
+  background: radial-gradient(120% 80% at 50% 0%, #ffffff 0%, var(--bg-warm) 58%, #f3e7d6 100%);
+  overflow: hidden;
+}
+.hero-corporate::before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border: 1px solid rgba(212, 166, 87, 0.35);
+  pointer-events: none;
+}
+.hero-corp-inner {
+  position: relative;
+  max-width: 760px;
+}
+.hero-corp-eyebrow {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin-bottom: var(--space-md);
+}
+.hero-corp-title {
+  font-family: var(--font-jp-serif);
+  font-weight: 500;
+  font-size: clamp(30px, 5vw, 52px);
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  color: var(--text-main);
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+.hero-corp-rule {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: var(--space-lg) auto;
+}
+.hero-corp-copy {
+  font-family: var(--font-jp-serif);
+  font-weight: 500;
+  font-size: clamp(20px, 3.4vw, 30px);
+  line-height: 1.85;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+.hero-corp-sub {
+  margin-top: var(--space-md);
+  font-family: var(--font-jp-sans);
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--text-sub);
+}
+
+/* Mission band */
+.mission-body {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--font-jp-sans);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.95;
+  letter-spacing: 0.06em;
+  color: var(--text-sub);
+}
+
+/* Contact CTA — ブランド・マゼンタの主ボタン（LINE緑と明確に区別） */
+.line-btn.btn-contact { background: var(--primary); color: #fff; }
+.line-btn.btn-contact:hover { background: var(--primary-deep); }
+
+@media (max-width: 880px) {
+  .hero-corporate {
+    padding: calc(60px + var(--space-lg)) var(--container-pad) var(--space-lg);
+  }
+  .hero-corporate::before { inset: 14px; }
+  .mission-body { font-size: 14px; }
+}
