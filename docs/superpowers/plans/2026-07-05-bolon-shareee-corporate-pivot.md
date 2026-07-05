@@ -456,7 +456,7 @@ git commit -m "style(bolon): 文字組ヒーロー(hero-corporate)とミッシ�
 
 - [ ] **Step 8: お問い合わせCTAを「問合を主・LINEを副」に差し替え**
 
-旧 `<section class="contact-cta-sec" id="contact-cta">` の見出しを「お気軽にご相談ください」、リード（あれば）を「サロンのご予約から、スクール・機器のご相談まで。まずは総合お問い合わせ窓口へ。」にし、`.line-actions` を次へ:
+旧 `<section class="contact-cta-sec" id="contact-cta">` の見出しを「お気軽にご相談ください」にする。リード段落を置く場合は**既存の `access-cta-lead` クラス**（`.contact-cta-sec` 用にボタン前 margin-bottom 32px/モバイル24px を持つ）で「サロンのご予約から、スクール・機器のご相談まで。まずは総合お問い合わせ窓口へ。」を配置する（`.mission-body` は縦マージン0でボタンが詰まるため**使わない**）。`.line-actions` を次へ:
 ```html
 <div class="line-actions reveal reveal--d1">
   <a href="contact.html" class="line-btn btn-contact">お問い合わせはこちら</a>
