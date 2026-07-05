@@ -74,7 +74,7 @@ Expected: 6ページ全てのヘッダー `.logo` が `>B.villea<`、フッタ�
 を次へ:
 ```html
 <p class="footer-logo">Bolon Shareee</p>
-<p class="footer-corp">株式会社Bolon Shareee（バストケアサロン B.villea）</p>
+<p class="footer-corp">株式会社Bolon Shareee（バストアップ専門サロン B.villea）</p>
 ```
 
 - [ ] **Step 4: 検証（会社主役に統一されたか）**
@@ -132,15 +132,15 @@ Expected: og:site_name は5ページ（index/business/company/contact/faq）で 
 - [ ] **Step 3: index.html の title / og:title / twitter:title を会社主役へ**
 
 ```html
-<title>株式会社Bolon Shareee｜福岡・警固のバストケアサロン B.villea・スクール事業</title>
+<title>株式会社Bolon Shareee｜福岡・警固のバストアップ専門サロン B.villea・スクール事業</title>
 ```
 og:title:
 ```html
-<meta property="og:title" content="株式会社Bolon Shareee｜福岡・警固のバストケアサロン B.villea・スクール事業">
+<meta property="og:title" content="株式会社Bolon Shareee｜福岡・警固のバストアップ専門サロン B.villea・スクール事業">
 ```
 twitter:title:
 ```html
-<meta name="twitter:title" content="株式会社Bolon Shareee｜福岡・警固のバストケア事業">
+<meta name="twitter:title" content="株式会社Bolon Shareee｜福岡・警固のバストアップ・スクール事業">
 ```
 
 - [ ] **Step 4: faq.html の title / og:title / twitter:title / description / keywords を会社主役へ**
@@ -154,7 +154,7 @@ twitter:title:
 ```
 meta description は先頭を会社主役に（例）:
 ```html
-<meta name="description" content="株式会社Bolon Shareee が運営するバストケアサロン B.villea へのよくあるご質問。初めての方・ご予約・施術内容・通い方・アクセスについてお答えします。">
+<meta name="description" content="株式会社Bolon Shareee が運営するバストアップ専門サロン B.villea へのよくあるご質問。初めての方・ご予約・施術内容・通い方・アクセスについてお答えします。">
 ```
 keywords は先頭を会社主役に並べ替え（`株式会社Bolon Shareee,B.villea,...` の順）。
 
@@ -164,7 +164,7 @@ keywords は先頭を会社主役に並べ替え（`株式会社Bolon Shareee,B.
 <title>お問い合わせ｜株式会社Bolon Shareee</title>
 ```
 ```html
-<meta name="description" content="株式会社Bolon Shareee（バストケアサロン B.villea）へのお問い合わせ。サロンのご予約・スクール・機器のご相談まで、LINE・お電話・フォームで承ります。福岡市中央区警固より。">
+<meta name="description" content="株式会社Bolon Shareee（バストアップ専門サロン B.villea）へのお問い合わせ。サロンのご予約・スクール・機器のご相談まで、LINE・お電話・フォームで承ります。福岡市中央区警固より。">
 ```
 ```html
 <meta property="og:title" content="お問い合わせ｜株式会社Bolon Shareee">
@@ -281,6 +281,10 @@ git commit -m "seo(bolon): title/OGP/site_nameを会社主役に統一(JSON-LD�
   color: var(--text-sub);
 }
 
+/* Contact CTA — ブランド・マゼンタの主ボタン（LINE緑と明確に区別） */
+.line-btn.btn-contact { background: var(--primary); color: #fff; }
+.line-btn.btn-contact:hover { background: var(--primary-deep); }
+
 @media (max-width: 880px) {
   .hero-corporate {
     padding: calc(60px + var(--space-lg)) var(--container-pad) var(--space-lg);
@@ -329,7 +333,7 @@ git commit -m "style(bolon): 文字組ヒーロー(hero-corporate)とミッシ�
     <h1 class="hero-corp-title">株式会社Bolon&nbsp;Shareee</h1>
     <span class="hero-corp-rule" aria-hidden="true"></span>
     <p class="hero-corp-copy">女性の美と自信を、<br>事業で支える。</p>
-    <p class="hero-corp-sub">福岡・警固｜バストケアサロン &amp; スクール事業</p>
+    <p class="hero-corp-sub">福岡・警固｜バストアップ専門サロン &amp; スクール事業</p>
   </div>
   <a href="#mission" class="hero-scroll" aria-label="下へスクロール">
     <span class="hero-scroll-label">Scroll</span>
@@ -346,12 +350,14 @@ git commit -m "style(bolon): 文字組ヒーロー(hero-corporate)とミッシ�
 <section class="company-summary" id="mission">
   <div class="container reveal">
     <p class="section-eyebrow">— Mission</p>
-    <h2 class="section-title">女性の「美と自信」を、<br>事業で支える。</h2>
+    <h2 class="section-title">確かな技術を、<br>誠実に届ける。</h2>
     <p class="mission-body">
       株式会社Bolon Shareee は、福岡・警固を拠点に、<br>
-      バストケア専門サロン「B.villea」の運営と、その技術を次の世代へ伝えるスクール事業を営んでいます。<br>
-      ひとりの女性が自分らしく前を向ける——その一歩を、確かな技術と誠実な関わりで支えます。
+      バストアップ専門サロン「B.villea」の運営と、その技術を次の世代へ伝えるスクール事業を営む会社です。<br>
+      ひとりずつに寄り添う姿勢で、女性が自分らしく前を向ける場をつくります。
     </p>
+
+> コピー方針: ヒーローのタグライン「女性の美と自信を、事業で支える。」とは**別の言い回し**にする（同一文の反復＝AI感を避けるため）。ミッション帯は「会社が何をやっているか（2事業）」を語り、代表メッセージ（後述）は「創業者の個人的な動機（エステ歴23年）」を語る、と役割を分ける。
   </div>
 </section>
 ```
@@ -365,7 +371,7 @@ git commit -m "style(bolon): 文字組ヒーロー(hero-corporate)とミッシ�
     <div class="business-num">01</div>
     <h3 class="business-title">サロン事業 ／ B.villea</h3>
     <figure class="business-ph"><span>ここに写真が入ります</span></figure>
-    <p class="business-desc">福岡・警固のバストケア専門サロン。完全予約・完全個室で、おひとりずつに寄り添います。</p>
+    <p class="business-desc">福岡・警固のバストアップ専門サロン。完全予約・完全個室で、おひとりずつに寄り添います。</p>
     <a href="business.html#salon" class="business-link">サロン事業を見る →</a>
   </article>
   <article class="business-item reveal">
@@ -393,7 +399,7 @@ git commit -m "style(bolon): 文字組ヒーロー(hero-corporate)とミッシ�
       ひとりの変化から、<br><span class="accent">事業へ。</span>
     </h2>
     <p class="message-body reveal reveal--d2">
-      バストケアの現場で23年。技術を磨くほどに実感したのは、<br>
+      この道ひとすじ、エステ歴23年。技術を磨くほどに実感したのは、<br>
       変化のきっかけは「安心して委ねられる関係」から生まれるということでした。<br>
       B.villea で培った手技と姿勢を、スクールを通じて次の担い手へ。<br>
       女性が自分らしく輝ける場を、これからも事業として広げていきます。
@@ -406,9 +412,9 @@ git commit -m "style(bolon): 文字組ヒーロー(hero-corporate)とミッシ�
 </section>
 ```
 
-- [ ] **Step 5: Before/After・Instagram セクションを index から削除（→ Task5でbusiness.htmlへ移設）**
+- [ ] **Step 5: Before/After・Instagram セクションは この Task では残す（移設は Task5 で原子的に実施）**
 
-`<section class="gallery" id="gallery">…</section>` と `<section class="insta" id="insta">…</section>` を index.html から**丸ごと削除**。（この2セクションのマークアップは Task5 で business.html に貼り付けるため、削除前に内容を控えておく。）
+`<section class="gallery" id="gallery">…</section>` と `<section class="insta" id="insta">…</section>` は **この Task では削除しない**。Task5 で「live な index.html からコピー → business.html へ貼付 → index から削除 → 両ファイルを同一コミット」を原子的に行う。subagent実行でも移設元が確実に存在するよう、index.html にマークアップを残したまま次へ進む。（配置は代表メッセージの後・声セクションの前のまま。）
 
 - [ ] **Step 6: お客様の声（voice）は維持（信頼材料）**
 
@@ -429,7 +435,7 @@ git commit -m "style(bolon): 文字組ヒーロー(hero-corporate)とミッシ�
         <div><dt>代表者</dt><dd>代表取締役 蒲池 百都子</dd></div>
         <div><dt>設立</dt><dd>2025年12月26日<br><small>（前身の個人事業は2013年2月開業）</small></dd></div>
         <div><dt>所在地</dt><dd>〒810-0023<br>福岡市中央区警固2-13-17<br>S-FORT警固タワー 1801</dd></div>
-        <div><dt>事業内容</dt><dd>バストケア専門サロンの運営（B.villea）<br>バストケアスクールの運営（施術機器の販売・代理店を含む）</dd></div>
+        <div><dt>事業内容</dt><dd>バストアップ専門サロンの運営（B.villea）<br>バストアップ起業スクールの運営（施術機器の販売・代理店を含む）</dd></div>
       </dl>
     </div>
     <a href="company.html" class="business-cta reveal">会社概要を詳しく見る →</a>
@@ -439,16 +445,15 @@ git commit -m "style(bolon): 文字組ヒーロー(hero-corporate)とミッシ�
 
 - [ ] **Step 8: お問い合わせCTAを「問合を主・LINEを副」に差し替え**
 
-旧 `<section class="contact-cta-sec" id="contact-cta">` の `.line-actions` を次の順序へ（primaryを問合、secondaryをLINE）:
+旧 `<section class="contact-cta-sec" id="contact-cta">` の見出しを「お気軽にご相談ください」、リード（あれば）を「サロンのご予約から、スクール・機器のご相談まで。まずは総合お問い合わせ窓口へ。」にし、`.line-actions` を次へ:
 ```html
 <div class="line-actions reveal reveal--d1">
-  <a href="contact.html" class="line-btn line-btn-primary">お問い合わせはこちら</a>
-  <a href="https://lin.ee/" class="line-btn line-btn-secondary" target="_blank" rel="noopener">公式LINEはこちら</a>
+  <a href="contact.html" class="line-btn btn-contact">お問い合わせはこちら</a>
+  <a href="https://lin.ee/" class="line-btn line-btn-primary" target="_blank" rel="noopener">公式LINEはこちら</a>
 </div>
 ```
-見出しは「お気軽にご相談ください」、リード（あれば）は「サロンのご予約から、スクール・機器のご相談まで。まずは総合お問い合わせ窓口へ。」
 
-> 注: 既存 `.line-btn-primary` は LINE緑(#06C755)配色の可能性が高い。問合を primary にすると緑ボタン＝「お問い合わせ」になり違和感。**ブラウザ目視で確認し**、必要なら Task末尾で `.line-btn-primary` の緑固定を見直す代わりに、問合ボタンに `line-btn-secondary`＋LINEに緑…ではなく、CTA配色は「問合＝ブランド色(primary magenta)ボタン／LINE＝緑ボタン」が自然。実装時に配色が破綻する場合は、`contact-cta-sec` 用の最小CSS（`.contact-cta-sec .line-btn-primary{background:var(--primary)}` 等）を style.css 末尾に追加してよい（既存 `.line-cta` バンド内の緑は変更しない）。
+> 配色の意図（緑ボタン問題の回避）: お問い合わせ＝**ブランド・マゼンタ**（`btn-contact`＝Task3で追加した `background:var(--primary)`）で最優先。公式LINE＝**LINE緑**（既存 `line-btn-primary` の #06C755）で副。**緑ボタンを「お問い合わせ」に使わない。** 優先度は「色（マゼンタ＞緑）」と「並び順（問合を先頭）」で表現する。既存 `.line-cta` バンド内の緑配色は変更しない。
 
 - [ ] **Step 9: JSON-LD 確認（変更しない）**
 
@@ -458,20 +463,20 @@ git commit -m "style(bolon): 文字組ヒーロー(hero-corporate)とミッシ�
 
 Run:
 ```
-grep -n "id=\"gallery\"\|id=\"insta\"" client/bolon-shareee/index.html
-```
-Expected: **0件**（Before/After・Instagram は index から消えた）。
-```
 grep -n "hero-corporate\|id=\"mission\"\|id=\"rep-message\"\|id=\"company\"" client/bolon-shareee/index.html
 ```
 Expected: 各1件。
-ブラウザで index.html を開き、PC/375px の両方で: ①文字組ヒーローがクリーム地で表示・横スクロール無し ②9セクションが順に表示 ③代表写真が表示 ④声セクション健在 ⑤お問い合わせがCTA主・LINE副 ⑥崩れ無し。
+```
+grep -n "id=\"gallery\"\|id=\"insta\"" client/bolon-shareee/index.html
+```
+Expected: **この時点ではまだ各1件残存が正常**（gallery/insta の移設・削除は Task5 で実施）。
+ブラウザで index.html を開き、PC/375px の両方で: ①文字組ヒーローがクリーム地で表示・横スクロール無し ②ヒーロー→ミッション→2事業→代表→(gallery/insta残)→声→会社概要→CTA の順で表示 ③代表写真が表示 ④声セクション健在 ⑤お問い合わせボタンがマゼンタ・LINEが緑で問合が先頭 ⑥崩れ無し。
 
 - [ ] **Step 11: コミット**
 
 ```
 git add client/bolon-shareee/index.html
-git commit -m "feat(bolon): TOPをコーポレート9セクション構成へ大改修(文字組ヒーロー/2事業/声維持/BA・IG撤去)"
+git commit -m "feat(bolon): TOPをコーポレート化(文字組ヒーロー/ミッション/2事業/代表/会社概要/CTA)"
 ```
 
 ---
@@ -487,15 +492,15 @@ git commit -m "feat(bolon): TOPをコーポレート9セクション構成へ大
 <p class="page-lead">株式会社Bolon Shareee は<br>2つの事業で女性の美と自信を支えています。</p>
 ```
 
-- [ ] **Step 2: #salon の末尾に、index から移設した Before/After・Instagram を挿入**
+- [ ] **Step 2: #salon の末尾に、live な index.html からコピーした Before/After・Instagram を挿入**
 
-`<section class="biz-detail" id="salon">` 内、HotPepper予約CTA（`<a ... class="hero-cta">ホットペッパービューティーで予約する →</a>`）の**直前**に、index から控えた2ブロックを `school-block` でラップして挿入:
+**先に `client/bolon-shareee/index.html` を開き**、`<section class="gallery" id="gallery">` の `.ba-list`（3 figure）と `<section class="insta" id="insta">` の `.insta-grid`（3 a.insta-card）の**現物マークアップを取得**する。`<section class="biz-detail" id="salon">` 内、HotPepper予約CTA（`<a ... class="hero-cta">ホットペッパービューティーで予約する →</a>`）の**直前**に、取得した2ブロックを `school-block` でラップして挿入:
 ```html
 <div class="school-block">
   <p class="section-eyebrow">— Before / After</p>
   <h3 class="biz-subhead">バストアップのビフォーアフター</h3>
   <div class="ba-list">
-    <!-- index.html の gallery セクションの .ba-list 内 3 figure をそのまま移設 -->
+    <!-- index.html の gallery セクションの .ba-list 内 3 figure をそのままコピー -->
   </div>
   <p class="gallery-note">※掲載写真はご本人の同意を得て掲載しています。個人の感想であり、効果には個人差があります。施術効果を保証するものではありません。</p>
 </div>
@@ -504,11 +509,11 @@ git commit -m "feat(bolon): TOPをコーポレート9セクション構成へ大
   <p class="section-eyebrow">— Instagram</p>
   <h3 class="biz-subhead">日々の発信を Instagram で</h3>
   <div class="insta-grid">
-    <!-- index.html の insta セクションの .insta-grid 内 3 a.insta-card をそのまま移設 -->
+    <!-- index.html の insta セクションの .insta-grid 内 3 a.insta-card をそのままコピー -->
   </div>
 </div>
 ```
-> `.ba-list` / `.insta-grid` 等のクラスは既存CSSで定義済（audit確認済）。中身のfigure/aは index から**移動**（複製しない）。
+> `.ba-list` / `.insta-grid` 等のクラスは既存CSSで定義済（audit確認済）。実体は「index からコピー → 後続 Step で index から削除」で**移動**する（最終的に複製は残さない）。
 
 - [ ] **Step 3: #school に「機器販売」を内包サブブロックとして統合**
 
@@ -533,7 +538,11 @@ git commit -m "feat(bolon): TOPをコーポレート9セクション構成へ大
 
 #salon の `— Business 01`、#school の `— Business 02` は維持でOK。#equipment 由来の `— Business 03` は削除済。
 
-- [ ] **Step 6: 検証**
+- [ ] **Step 6: コピー完了を確認のうえ、index.html から #gallery / #insta を削除（移設の完了）**
+
+Step2 で business.html に Before/After・Instagram を貼付できたことを確認したら、Task4で残しておいた index.html の `<section class="gallery" id="gallery">…</section>` と `<section class="insta" id="insta">…</section>` を**丸ごと削除**する。これで「コピー→削除」の移設が完了する（両ファイルを次の同一コミットに含める）。
+
+- [ ] **Step 7: 検証**
 
 Run:
 ```
@@ -544,13 +553,17 @@ Expected: **0件**。
 grep -n "id=\"salon\"\|id=\"school\"\|ba-list\|insta-grid" client/bolon-shareee/business.html
 ```
 Expected: salon/school 各1、ba-list/insta-grid 各1（移設済）。
+```
+grep -n "id=\"gallery\"\|id=\"insta\"" client/bolon-shareee/index.html
+```
+Expected: **0件**（index から撤去済）。
 ブラウザで business.html を開き、#salon にBefore/After・IGが表示、#school に機器サブブロックがある、2事業のみ、崩れ無しを確認。index.html にBefore/After・IGが**無い**ことも再確認。
 
-- [ ] **Step 7: コミット**
+- [ ] **Step 8: コミット（business.html と index.html を同一コミットで）**
 
 ```
 git add client/bolon-shareee/business.html client/bolon-shareee/index.html
-git commit -m "feat(bolon): 事業を2本に再編(機器販売をスクール内包/BA・IGを#salonへ移設)"
+git commit -m "feat(bolon): 事業を2本に再編(機器販売をスクール内包/BA・IGを#salonへ原子的に移設)"
 ```
 
 ---
@@ -565,8 +578,8 @@ git commit -m "feat(bolon): 事業を2本に再編(機器販売をスクール�
 `事業内容` の dd を:
 ```html
 <dd>
-  ① バストケア専門サロンの運営（B.villea）<br>
-  ② バストケアスクールの運営（施術機器の販売・代理店を含む）
+  ① バストアップ専門サロンの運営（B.villea）<br>
+  ② バストアップ起業スクールの運営（施術機器の販売・代理店を含む）
 </dd>
 ```
 
