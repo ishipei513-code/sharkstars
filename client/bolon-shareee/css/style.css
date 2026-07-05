@@ -2011,9 +2011,9 @@ a:hover { color: var(--primary); }
 .hs-portrait {
   position: absolute;
   inset: 0;
-  background-image: url('../images/hero-portrait-sample.jpg');
+  background-image: url('../images/hero-portrait.jpg');
   background-size: cover;
-  background-position: center top;
+  background-position: 60% 18%;
   border-top-left-radius: 260px;
   border-top-right-radius: 260px;
 }
@@ -2025,9 +2025,10 @@ a:hover { color: var(--primary); }
   font-family: var(--font-en-serif);
   letter-spacing: 0.42em;
   font-size: 13px;
-  color: var(--text-sub);
+  color: var(--bg-warm);
   z-index: 3;
-  opacity: 0.85;
+  opacity: 0.92;
+  text-shadow: 0 1px 6px rgba(46,22,34,0.45);
 }
 @media (max-width: 880px) {
   .hero-split { grid-template-columns: 1fr; grid-template-rows: auto; min-height: auto; }
