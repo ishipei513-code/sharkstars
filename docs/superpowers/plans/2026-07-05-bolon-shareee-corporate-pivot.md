@@ -129,18 +129,29 @@ Expected: og:site_name は5ページ（index/business/company/contact/faq）で 
 <meta property="og:site_name" content="株式会社Bolon Shareee / B.villea">
 ```
 
-- [ ] **Step 3: index.html の title / og:title / twitter:title を会社主役へ**
+- [ ] **Step 3: index.html の title / og:title / twitter:title / description / og:description を会社主役へ**
 
+> title は SERP/OGP で切れないよう ~30全角に収める（会社名＋2事業が見える長さ）。description は会社主役かつ**2事業**（機器販売はスクール内包）に更新し、旧文の「機器代理店＝3事業目」表現を排除する。
+
+title:
 ```html
-<title>株式会社Bolon Shareee｜福岡・警固のバストアップ専門サロン B.villea・スクール事業</title>
+<title>株式会社Bolon Shareee｜福岡・警固のバストアップサロン＆スクール</title>
 ```
 og:title:
 ```html
-<meta property="og:title" content="株式会社Bolon Shareee｜福岡・警固のバストアップ専門サロン B.villea・スクール事業">
+<meta property="og:title" content="株式会社Bolon Shareee｜福岡・警固のバストアップサロン＆スクール">
 ```
 twitter:title:
 ```html
 <meta name="twitter:title" content="株式会社Bolon Shareee｜福岡・警固のバストアップ・スクール事業">
+```
+meta description:
+```html
+<meta name="description" content="株式会社Bolon Shareee は福岡・警固を拠点に、バストアップ専門サロン「B.villea」と、その技術を伝えるスクール事業（施術機器の販売を含む）を運営しています。エステ歴23年・代表 蒲池百都子。">
+```
+og:description:
+```html
+<meta property="og:description" content="株式会社Bolon Shareee｜福岡・警固でバストアップサロン「B.villea」とスクール事業を運営。エステ歴23年・代表 蒲池百都子。">
 ```
 
 - [ ] **Step 4: faq.html の title / og:title / twitter:title / description / keywords を会社主役へ**
@@ -492,6 +503,16 @@ git commit -m "feat(bolon): TOPをコーポレート化(文字組ヒーロー/�
 <p class="page-lead">株式会社Bolon Shareee は<br>2つの事業で女性の美と自信を支えています。</p>
 ```
 
+- [ ] **Step 1b: business.html の HEADメタを2事業へ（「3事業／バスト機器代理店」を排除）**
+
+`<head>` に残る「3事業／バスト機器代理店」表現を2事業（サロン＋スクール〈機器販売含む〉）に更新する。対象は `<meta name="description">`・`<meta property="og:description">`（L16付近）・`<meta name="twitter:description">`（L26付近）。例:
+```html
+<meta name="description" content="株式会社Bolon Shareeeの事業内容。バストアップ専門サロンB.villeaと、その技術を伝えるスクール事業（施術機器の販売を含む）の2事業。福岡発、代表蒲池百都子。">
+<meta property="og:description" content="バストアップ専門サロンB.villeaと、スクール事業（施術機器の販売を含む）の2事業。福岡発、代表蒲池百都子。">
+<meta name="twitter:description" content="バストアップ専門サロン・スクール（機器販売を含む）の2事業。福岡発、代表蒲池百都子。">
+```
+検証: `grep -n "機器代理店\|3事業" client/bolon-shareee/business.html` が0件。JSON-LD `name`/`@type` は不変。
+
 - [ ] **Step 2: #salon の末尾に、live な index.html からコピーした Before/After・Instagram を挿入**
 
 **先に `client/bolon-shareee/index.html` を開き**、`<section class="gallery" id="gallery">` の `.ba-list`（3 figure）と `<section class="insta" id="insta">` の `.insta-grid`（3 a.insta-card）の**現物マークアップを取得**する。`<section class="biz-detail" id="salon">` 内、HotPepper予約CTA（`<a ... class="hero-cta">ホットペッパービューティーで予約する →</a>`）の**直前**に、取得した2ブロックを `school-block` でラップして挿入:
@@ -582,6 +603,15 @@ git commit -m "feat(bolon): 事業を2本に再編(機器販売をスクール�
   ② バストアップ起業スクールの運営（施術機器の販売・代理店を含む）
 </dd>
 ```
+
+- [ ] **Step 1b: company.html の HEADメタを2事業へ（「3事業／バスト機器代理店」を排除）**
+
+`<head>` の `<meta name="description">`（L10付近）・`<meta property="og:description">`（L16付近）に残る「バスト機器代理店の3事業」を2事業に更新。例:
+```html
+<meta name="description" content="株式会社Bolon Shareeeの会社概要。バストアップ専門サロンB.villeaと、その技術を伝えるスクール事業（施術機器の販売を含む）の2事業を運営。福岡発、代表蒲池百都子。">
+<meta property="og:description" content="バストアップ専門サロンB.villeaと、スクール事業（施術機器の販売を含む）の2事業を運営。福岡発、代表蒲池百都子。">
+```
+検証: `grep -n "機器代理店\|3事業" client/bolon-shareee/company.html` が0件（本文・head両方）。JSON-LD `name`/`@type` は不変。
 
 - [ ] **Step 2: 「3つの事業について」→「2つの事業について」カードを 3→2 へ**
 
