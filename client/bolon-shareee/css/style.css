@@ -1938,3 +1938,106 @@ a:hover { color: var(--primary); }
 .hero .hero-title { font-size: clamp(30px, 5.2vw, 58px); line-height: 1.5; margin-bottom: 24px; }
 .hero .hero-eyebrow { margin-bottom: 18px; }
 .hero .hero-sub { max-width: 640px; margin-left: auto; margin-right: auto; }
+
+/* ============================================================
+   Split editorial hero — brand+message | portrait (2026-07-05)
+   ============================================================ */
+.hero-split {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-rows: 1fr;
+  background: var(--bg-warm);
+  overflow: hidden;
+}
+.hero-split-left {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(72px + var(--space-lg)) var(--space-lg) var(--space-xl) max(var(--container-pad), 6vw);
+}
+.hs-eyebrow {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-bottom: var(--space-md);
+}
+.hs-brand {
+  font-family: 'Bodoni Moda', var(--font-en-serif);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  color: var(--text-main);
+  font-size: clamp(48px, 7vw, 104px);
+  margin-bottom: var(--space-lg);
+}
+.hs-brand .accent { color: var(--primary); font-style: italic; }
+.hs-message {
+  font-family: var(--font-jp-serif);
+  font-weight: 500;
+  font-size: clamp(20px, 2.4vw, 30px);
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+  color: var(--text-main);
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+.hs-message .em { color: var(--primary); }
+.hs-sub-jp {
+  margin-top: var(--space-md);
+  font-family: var(--font-jp-sans);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--text-sub);
+}
+.hs-sub-en {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-top: 6px;
+}
+.hs-rule { display: block; width: 60px; height: 1px; background: var(--gold); margin-top: var(--space-lg); }
+
+.hero-split-right { position: relative; }
+.hs-portrait {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/hero-portrait-sample.jpg');
+  background-size: cover;
+  background-position: center top;
+  border-top-left-radius: 260px;
+  border-top-right-radius: 260px;
+}
+.hs-vertical {
+  position: absolute;
+  right: 16px; top: 50%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  font-family: var(--font-en-serif);
+  letter-spacing: 0.42em;
+  font-size: 13px;
+  color: var(--text-sub);
+  z-index: 3;
+  opacity: 0.85;
+}
+@media (max-width: 880px) {
+  .hero-split { grid-template-columns: 1fr; grid-template-rows: auto; min-height: auto; }
+  .hero-split-right { order: -1; min-height: 44vh; }
+  .hs-portrait { border-radius: 0 0 110px 110px; }
+  .hero-split-left {
+    padding: var(--space-lg) var(--container-pad) var(--space-xl);
+    text-align: center;
+    align-items: center;
+  }
+  .hs-rule { margin-left: auto; margin-right: auto; }
+  .hs-vertical { display: none; }
+}
