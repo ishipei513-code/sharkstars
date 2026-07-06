@@ -74,6 +74,20 @@ a{color:inherit}
 .page-hero .en-t{font-family:var(--serif-en);font-style:italic;font-size:15px;color:var(--rattan)}
 .page-hero h1{font-size:clamp(24px,5vw,34px);font-weight:500;letter-spacing:.14em;margin-top:10px}
 
+/* --- 作品集ギャラリー（works.html） --- */
+.works-lead{text-align:center;margin-bottom:56px;color:var(--ink-soft)}
+.works-note{text-align:center;font-size:12px;color:var(--ink-soft);letter-spacing:.14em;margin:30px 0 34px}
+.gallery{columns:3;gap:26px}
+.gallery figure{break-inside:avoid;margin-bottom:26px;cursor:zoom-in}
+.gallery img{width:100%;box-shadow:0 24px 48px -28px rgba(28,27,25,.3);transition:.5s}
+.gallery figure:hover img{transform:translateY(-4px)}
+
+/* --- ライトボックス --- */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(28,27,25,.92);display:grid;place-items:center;opacity:0;pointer-events:none;transition:.35s}
+.lb.is-open{opacity:1;pointer-events:auto}
+.lb img{max-width:92vw;max-height:86vh;width:auto;height:auto;box-shadow:0 40px 80px rgba(0,0,0,.5)}
+.lb-close{position:absolute;top:18px;right:22px;color:#fff;font-size:26px;background:none;border:0;cursor:pointer;line-height:1}
+
 /* --- モバイル --- */
 @media (max-width:768px){
   .sec{padding:64px 0}
@@ -88,4 +102,6 @@ a{color:inherit}
   .menu-open .nav{opacity:1;pointer-events:auto}
   .nav ul{flex-direction:column;text-align:center;gap:30px}
   .nav a{color:var(--ink)!important;font-size:13px}
+  .gallery{columns:2;gap:14px}
+  .gallery figure{margin-bottom:14px}
 }
