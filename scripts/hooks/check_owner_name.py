@@ -138,6 +138,15 @@ def find_violations(content: str, is_contract: bool = False) -> list[str]:
 
 
 def main() -> int:
+    # Windows: Claude Code sends the envelope as UTF-8, but Python's default
+    # stdio encoding is cp932 — force UTF-8, otherwise names in the payload
+    # are mangled, which both false-blocks the canonical 石橋 and lets the
+    # 石井 denylist go unmatched.
+    for stream in (sys.stdin, sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
     try:
         payload = json.load(sys.stdin)
     except Exception as e:
