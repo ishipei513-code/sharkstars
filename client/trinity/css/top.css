@@ -21,3 +21,29 @@
   .hero-en,.hero-title,.hero-sub{animation:none;opacity:1}
   .hero-scroll::after{animation:none}
 }
+
+/* ---- TOPセクション ---- */
+.pc{display:block}
+@media (max-width:768px){.pc{display:none}}
+.concept{padding-top:110px}
+.concept-lead{text-align:center;font-size:clamp(15px,2.4vw,18px);line-height:2.6;letter-spacing:.08em}
+.works-preview{display:grid;grid-template-columns:1.3fr 1fr 1.1fr;gap:28px;align-items:start}
+.works-preview figure:nth-child(2){margin-top:52px}
+.works-preview figure:nth-child(3){margin-top:24px}
+.works-note{text-align:center;font-size:12px;color:var(--ink-soft);letter-spacing:.14em;margin:30px 0 34px}
+.story{background:var(--cream)}   /* TOPのSTORY帯（下層ではstyle.cssの.bandを使う） */
+.story-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:56px;align-items:center}
+.story-en{font-size:15px;margin-bottom:4px}
+.lesson-grid,.atelier-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center}
+.atelier-grid{grid-template-columns:1fr 1fr}
+.note{font-size:12px;color:var(--ink-soft)}
+.contact{background:var(--cream)}
+.contact-btns{display:flex;justify-content:center;gap:18px;margin:34px 0 26px;flex-wrap:wrap}
+.contact-note{font-size:12px;color:var(--ink-soft)}
+.contact-note a{color:var(--rattan-deep)}
+@media (max-width:768px){
+  .works-preview{grid-template-columns:1fr 1fr}
+  .works-preview figure:first-child{grid-column:1/-1}
+  .story-grid,.lesson-grid,.atelier-grid{grid-template-columns:1fr;gap:30px}
+  .center-sp{text-align:center}
+}
