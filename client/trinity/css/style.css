@@ -97,6 +97,9 @@ a{color:inherit}
 .faq dd{border-bottom:1px solid #f0ece4;padding-bottom:22px;color:var(--ink-soft);font-size:14px}
 .faq dd a{color:var(--rattan-deep)}
 
+/* --- プライバシーポリシー --- */
+.pp-h{font-size:15px;letter-spacing:.14em;color:var(--rattan-deep);margin:36px 0 8px}
+
 /* --- ライトボックス --- */
 .lb{position:fixed;inset:0;z-index:200;background:rgba(28,27,25,.92);display:grid;place-items:center;opacity:0;pointer-events:none;transition:.35s}
 .lb.is-open{opacity:1;pointer-events:auto}
