@@ -97,6 +97,21 @@ a{color:inherit}
 .faq dd{border-bottom:1px solid #f0ece4;padding-bottom:22px;color:var(--ink-soft);font-size:14px}
 .faq dd a{color:var(--rattan-deep)}
 
+/* --- 講師プロフィール（profile.html） --- */
+.profile-grid{display:grid;grid-template-columns:220px 1fr;gap:56px;align-items:start}
+.profile-photo img{width:100%;max-width:200px}   /* 低解像写真のため小さめ表示（高解像提供後に拡大可） */
+.profile-photo figcaption{font-size:12px;letter-spacing:.14em;color:var(--ink-soft);margin-top:14px}
+.cred-list{list-style:none;max-width:760px;margin:0 auto}
+.cred-list li{font-size:14px;padding:16px 4px;border-bottom:1px solid #e8e2d6;color:var(--ink-soft)}
+.cred-list li::before{content:"—";color:var(--rattan);margin-right:14px}
+.message-body p{margin-bottom:14px}
+.message-sign{text-align:right;margin-top:28px;letter-spacing:.14em}
+@media (max-width:768px){
+  .profile-grid{grid-template-columns:1fr;gap:30px}
+  .profile-photo{text-align:center}
+  .profile-photo img{margin:0 auto}
+}
+
 /* --- プライバシーポリシー --- */
 .pp-h{font-size:15px;letter-spacing:.14em;color:var(--rattan-deep);margin:36px 0 8px}
 
