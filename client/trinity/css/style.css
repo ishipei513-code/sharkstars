@@ -82,6 +82,21 @@ a{color:inherit}
 .gallery img{width:100%;box-shadow:0 24px 48px -28px rgba(28,27,25,.3);transition:.5s}
 .gallery figure:hover img{transform:translateY(-4px)}
 
+/* --- レッスンページ（lesson.html） --- */
+.hist-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.nouvelle{margin-top:64px;padding:40px;background:var(--paper);border:1px solid rgba(184,161,125,.35)}
+.course-list{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-bottom:64px}
+.course{background:var(--paper);padding:34px 28px}
+.course h3{font-size:16px;letter-spacing:.14em;margin-bottom:14px;color:var(--rattan-deep)}
+.price-t{text-align:center;font-size:17px;letter-spacing:.2em;margin-bottom:26px}
+.price-table{width:100%;max-width:640px;margin:0 auto;border-collapse:collapse}
+.price-table th,.price-table td{border-bottom:1px solid #e8e2d6;padding:16px 12px;font-weight:400;text-align:left;font-size:14px}
+.price-table th{width:34%;color:var(--ink-soft);letter-spacing:.1em}
+.faq dt{font-size:15px;letter-spacing:.08em;padding:22px 0 6px;color:var(--rattan-deep)}
+.faq dt::before{content:"Q. ";font-family:var(--serif-en);font-style:italic}
+.faq dd{border-bottom:1px solid #f0ece4;padding-bottom:22px;color:var(--ink-soft);font-size:14px}
+.faq dd a{color:var(--rattan-deep)}
+
 /* --- ライトボックス --- */
 .lb{position:fixed;inset:0;z-index:200;background:rgba(28,27,25,.92);display:grid;place-items:center;opacity:0;pointer-events:none;transition:.35s}
 .lb.is-open{opacity:1;pointer-events:auto}
@@ -104,4 +119,7 @@ a{color:inherit}
   .nav a{color:var(--ink)!important;font-size:13px}
   .gallery{columns:2;gap:14px}
   .gallery figure{margin-bottom:14px}
+  .hist-grid{grid-template-columns:1fr;gap:28px}
+  .course-list{grid-template-columns:1fr;gap:14px}
+  .nouvelle{padding:26px 20px}
 }
