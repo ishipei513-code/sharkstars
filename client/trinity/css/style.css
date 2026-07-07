@@ -124,6 +124,7 @@ a{color:inherit}
 /* --- モバイル --- */
 @media (max-width:768px){
   .sec{padding:64px 0}
+  .sec-head .t{letter-spacing:.16em;font-size:11px}   /* 長い見出し（ナンタケットバスケット〜）の折返し防止 */
   .menu-toggle{display:block;width:40px;height:40px;background:none;border:0;position:relative;z-index:120;cursor:pointer}
   .menu-toggle span{position:absolute;left:9px;width:22px;height:1px;background:currentColor;color:#fff;transition:.35s}
   .header.solid .menu-toggle span,.header.sub .menu-toggle span,.menu-open .menu-toggle span{color:var(--ink)}
