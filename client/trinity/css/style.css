@@ -19,6 +19,8 @@ a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 .en{font-family:var(--serif-en);font-style:italic;color:var(--rattan)}
 .center{text-align:center}
+.sp{display:none}   /* モバイル専用改行（日本語見出しの折返し制御） */
+@media (max-width:768px){.sp{display:block}}
 
 /* --- セクション見出し（美術館キャプション式：籐の細線＋通し番号） --- */
 .sec{padding:96px 0}
