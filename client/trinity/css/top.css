@@ -33,8 +33,8 @@
 .works-note{text-align:center;font-size:12px;color:var(--ink-soft);letter-spacing:.14em;margin:30px 0 34px}
 /* INSTAGRAM：プロフィール埋め込み（実投稿グリッドが自動表示・自動更新。サイズはiframeで固定） */
 .insta-embed{max-width:680px;margin:0 auto;border:1px solid #eee;background:#fff;box-shadow:0 24px 48px -32px rgba(28,27,25,.25);overflow:hidden}
-.insta-embed iframe{display:block;width:100%;height:620px;border:0}   /* 初期値。実高はtop.jsがInstagramのMEASURE通知で上書き */
-@media (max-width:768px){.insta-embed iframe{height:440px}}
+.insta-embed iframe{display:block;width:100%;height:601px;border:0}   /* 初期値=680px幅時の実測値。実高はtop.jsの計算式が上書き */
+@media (max-width:768px){.insta-embed iframe{height:500px}}
 
 .story{background:var(--cream)}   /* TOPのSTORY帯（下層ではstyle.cssの.bandを使う） */
 .story-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:56px;align-items:center}
