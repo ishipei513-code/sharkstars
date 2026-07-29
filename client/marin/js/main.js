@@ -87,48 +87,11 @@
   });
 })();
 
-// 6) Recruit FAB — dismiss + in-view hide (top page only)
+// 6) Recruit FAB — always visible (常時表示)
 (function () {
   const fab = document.getElementById('recruitFab');
   if (!fab) return;
-
-  const SESSION_KEY = 'marinRecruitFabClosed';
-
-  // If already dismissed this session, hide immediately (no animation flash)
-  if (sessionStorage.getItem(SESSION_KEY)) {
-    fab.classList.add('is-hidden');
-    return;
-  }
-
-  // FAB is shown — make it visible (both normal and reduced-motion paths)
+  // 常に表示する：スクロールでの自動非表示・閉じる機能は撤去。
+  // モバイルメニュー開閉中の一時非表示のみ、セクション2の is-nav-open で制御。
   fab.classList.add('is-ready');
-
-  // Close button — dismiss for the session
-  const closeBtn = fab.querySelector('.recruit-fab-close');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      fab.classList.add('is-hidden');
-      sessionStorage.setItem(SESSION_KEY, '1');
-    });
-  }
-
-  // Top-page only: hide FAB while #recruit section is in view
-  const recruitSection = document.getElementById('recruit');
-  if (recruitSection && 'IntersectionObserver' in window) {
-    const sectionObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          // Only toggle visibility if user has not dismissed
-          if (sessionStorage.getItem(SESSION_KEY)) return;
-          if (e.isIntersecting) {
-            fab.classList.add('is-hidden');
-          } else {
-            fab.classList.remove('is-hidden');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    sectionObserver.observe(recruitSection);
-  }
 })();

@@ -21,8 +21,8 @@
   --muted: #5a7585;
 
   /* Geometry */
-  --radius: 22px;
-  --radius-sm: 14px;
+  --radius: 0px;
+  --radius-sm: 0px;
 
   /* Layout */
   --maxw: 1080px;
@@ -73,6 +73,20 @@ body {
 section {
   padding-block: clamp(40px, 8vw, 88px);
 }
+
+/* Section backgrounds — セクションごとのメリハリ（2026-06-14）
+   hero=写真 / recruit=濃いグラデ は各自の背景のまま。
+   白カードが乗るセクションは水色地にしてカードを映えさせる。 */
+.photostrip    { background: #ffffff; }
+.philosophy    { background: #dff2f9; }
+.routes        { background: #ffffff; }
+.biz           { background: #e9f6fb; }
+.strengths     { background: #ffffff; }
+.story         { background: #eef8fc; }
+.voices--user  { background: #dff2f9; }
+.insta         { background: #ffffff; }
+.voices--staff { background: #e9f6fb; }
+.access        { background: #eef8fc; }
 
 /* Section head: label + title combo */
 .section-head {
@@ -128,7 +142,7 @@ a:hover { color: var(--accent); }
 a:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 /* ============================================================
@@ -230,7 +244,7 @@ a:focus-visible {
 .menu-toggle:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 /* ============================================================
@@ -484,7 +498,7 @@ select {
   left: 0; right: 0; bottom: -1px;
   z-index: 1;
 }
-.hero .wave-divider-light svg path { fill: var(--bg-1); }
+.hero .wave-divider-light svg path { fill: #ffffff; }
 /* upward wave used between strengths(white frame area) and story */
 .wave-divider-up svg path { fill: #fff; opacity: .55; }
 
@@ -494,7 +508,7 @@ select {
 .photostrip { padding-top: clamp(28px, 5vw, 48px); }
 .strip-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(12px, 2vw, 20px);
 }
 .strip-item {
@@ -588,7 +602,7 @@ select {
 .route-icon {
   width: 56px; height: 56px;
   display: grid; place-items: center;
-  border-radius: 16px;
+  border-radius: 0;
   background: linear-gradient(135deg, #f1fbff, #e3f4fa);
   margin-bottom: 16px;
 }
@@ -623,7 +637,7 @@ select {
   background: #eef7fb;
   border: 1px solid #d7ecf4;
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: 0;
 }
 
 /* ============================================================
@@ -1689,7 +1703,7 @@ select {
   align-items: center;
   gap: 8px;
   padding: 12px 18px;
-  border-radius: 999px;
+  border-radius: 0;
   background: linear-gradient(135deg, var(--deep), #0a6a90);
   color: #fff;
   text-decoration: none;
@@ -1776,4 +1790,281 @@ select {
   .recruit-fab {
     animation: none;
   }
+}
+
+/* ============================================================
+   ===== TOP PAGE — 2026-06-13 12ブロックリニューアル追加分 =====
+   新規クラスのみ。既存クラス・他ページは一切変更しない。
+   Mobile-first / 既知の罠回避（backdrop-filter不使用・大型見出し折返し・
+   100vh不使用・inline grid回避）。
+   ============================================================ */
+
+/* ---- 01 HERO: 特長バッジ（福岡市全域／24時間365日／保険適用） ---- */
+.hero-badges {
+  list-style: none;
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+.hero-badges li {
+  font-size: clamp(12px, 2.6vw, 14px);
+  font-weight: 700;
+  color: #f3fcff;
+  letter-spacing: .04em;
+  padding: 7px 14px;
+  border-radius: 0;
+  background: rgba(10, 77, 110, .30);
+  border: 1px solid rgba(255, 255, 255, .45);
+  text-shadow: 0 1px 6px rgba(10, 60, 90, .35);
+}
+
+/* ---- 03 PHILOSOPHY: 「いのちの、そばに。」グラデのリード ---- */
+.philosophy-lead {
+  margin-top: 18px;
+  font-size: clamp(18px, 4vw, 26px);
+  font-weight: 700;
+  letter-spacing: .04em;
+  background: var(--grad-ink);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---- 04 ROUTES: 採用＝準備中カード（div・押下不可の見た目） ---- */
+.route-card--soon {
+  cursor: default;
+  opacity: .92;
+}
+.route-card--soon:hover {
+  transform: none;
+  box-shadow: var(--shadow);
+}
+.route-go--soon {
+  color: var(--muted);
+}
+
+/* ============================================================
+   05 事業内容・できること — 2カラム（訪問看護／リハビリ）
+   ============================================================ */
+.biz-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 2.6vw, 28px);
+  align-items: stretch;
+}
+.biz-col {
+  display: flex;
+  flex-direction: column;
+}
+.biz-col-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e3f3f9;
+}
+.biz-emoji {
+  font-size: 30px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.biz-col-title {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 700;
+  color: var(--deep);
+  line-height: 1.4;
+}
+.biz-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+.biz-list li {
+  position: relative;
+  padding-left: 26px;
+  font-size: clamp(14px, 2.2vw, 16px);
+  color: var(--text);
+  line-height: 1.75;
+  word-break: auto-phrase;
+}
+.biz-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .55em;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #7fd0e0, #34b3d1);
+  box-shadow: 0 2px 6px rgba(52, 179, 209, .35);
+}
+.biz-meta {
+  margin-top: clamp(20px, 3vw, 32px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 28px;
+}
+.biz-meta-row {
+  font-size: clamp(14px, 2.2vw, 16px);
+  color: var(--text);
+  font-weight: 500;
+}
+.biz-meta-key {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: #fff;
+  background: var(--accent);
+  padding: 3px 10px;
+  border-radius: 0;
+  vertical-align: 2px;
+}
+.biz-cta {
+  margin-top: clamp(24px, 4vw, 36px);
+  text-align: center;
+}
+
+/* ============================================================
+   07 わたしたちの看護 — 実話エピソード（写真＋テキスト交互）
+   ============================================================ */
+.episodes {
+  display: grid;
+  gap: clamp(28px, 5vw, 56px);
+  margin-top: clamp(28px, 4vw, 48px);
+}
+.episode {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 4vw, 52px);
+  align-items: center;
+}
+.episode-photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.episode-photo img {
+  width: 100%;
+  height: clamp(220px, 32vw, 380px);
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.episode-photo:hover img { transform: scale(1.05); }
+/* Reversed layout: photo to the right on desktop */
+.episode--rev .episode-photo { order: 2; }
+.episode-tag {
+  font-family: var(--ff-en);
+  font-size: 12px;
+  letter-spacing: .2em;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.episode-title {
+  font-size: clamp(19px, 3.4vw, 27px);
+  font-weight: 700;
+  color: var(--deep);
+  line-height: 1.5;
+  word-break: auto-phrase;
+  margin-bottom: 14px;
+}
+.episode-body {
+  font-size: clamp(14px, 2.2vw, 16px);
+  line-height: 2;
+  color: var(--text);
+}
+
+/* ============================================================
+   08 / 10 利用者の声・スタッフの声 — 2カラム版
+   （既存 .voice-grid は3カラムなので変更せず modifier を追加）
+   ============================================================ */
+.voice-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+/* ============================================================
+   09 Instagramブロック — 自動更新ウィジェット用プレースホルダー
+   ============================================================ */
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(8px, 1.4vw, 14px);
+  max-width: 920px;
+  margin-inline: auto;
+}
+.insta-tile {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .6), rgba(127, 208, 224, .18)),
+    linear-gradient(135deg, #e7f6fb, #d2f0fb);
+  box-shadow: inset 0 0 0 1px rgba(52, 179, 209, .14);
+  position: relative;
+  overflow: hidden;
+}
+.insta-tile::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px;
+  height: 26px;
+  transform: translate(-50%, -50%);
+  border-radius: 0;
+  border: 2px solid rgba(52, 179, 209, .45);
+}
+.insta-tile::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid rgba(52, 179, 209, .45);
+  z-index: 1;
+}
+.insta-cta {
+  margin-top: clamp(20px, 3vw, 30px);
+  text-align: center;
+}
+
+/* ============================================================
+   11 採用CTA — 「採用準備中」無効ボタン（押せない見た目）
+   ============================================================ */
+.btn-disabled {
+  background: rgba(255, 255, 255, .18);
+  color: #cfeaf5;
+  border: 1.5px solid rgba(255, 255, 255, .35);
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
+.btn-disabled:hover {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============================================================
+   12ブロックリニューアル — タブレット / モバイル
+   ============================================================ */
+@media (max-width: 860px) {
+  .biz-grid { grid-template-columns: 1fr; }
+  .episode { grid-template-columns: 1fr; }
+  /* On mobile always show photo above text (reset reversed order) */
+  .episode--rev .episode-photo { order: -1; }
+  .voice-grid--2 { grid-template-columns: 1fr; }
+  .insta-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .biz-meta { flex-direction: column; align-items: flex-start; gap: 8px; }
 }

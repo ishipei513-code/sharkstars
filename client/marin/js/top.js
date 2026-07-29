@@ -58,7 +58,7 @@
         i=(i+1)%n;
         track.style.transform='translateX(-'+(i*100)+'%)';
         dots.forEach(function(d,j){d.className=(j===i)?'on':'';});
-      },3000);
+      },4500);
     }
   }
 
@@ -68,7 +68,7 @@
     var end=parseFloat(el.getAttribute('data-countup'));
     var unit=el.getAttribute('data-unit')||'';
     if(REDUCED){ el.textContent=end+unit; return; }
-    var t0=null,dur=1300;
+    var t0=null,dur=1950;
     function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); el.textContent=Math.round(end*easeOutCubic(p))+unit; if(p<1)requestAnimationFrame(step); }
     el.textContent='0'+unit; requestAnimationFrame(step);
   }
@@ -161,7 +161,7 @@
     slides.forEach(function(s){ s.addEventListener('click',function(){ if(s.classList.contains('is-next'))next(); else if(s.classList.contains('is-prev'))prev(); }); });
     if(!REDUCED && n>1){
       var stop=function(){ if(timer){clearInterval(timer);timer=null;} };
-      var start=function(){ stop(); timer=setInterval(next,4200); };
+      var start=function(){ stop(); timer=setInterval(next,6300); };
       start();
       var stage=document.getElementById('cfStage');
       if(stage){ stage.addEventListener('mouseenter',stop); stage.addEventListener('mouseleave',start); }
