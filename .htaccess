@@ -1,6 +1,12 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+# ── client/muku → muku.homes（独自ドメイン移行・301）──
+# sharkstars.jp に来たアクセスだけ muku.homes へ転送する。
+# muku.homes 自身（公開フォルダ = client/muku）では発火させず、リダイレクトループを防ぐ。
+RewriteCond %{HTTP_HOST} ^(www\.)?sharkstars\.jp$ [NC]
+RewriteRule ^client/muku/(.*)$ https://muku.homes/$1 [R=301,L]
+
 # www → non-www（HTTPSに統一する前に正規化）
 RewriteCond %{HTTP_HOST} ^www\.sharkstars\.jp$ [NC]
 RewriteRule ^(.*)$ https://sharkstars.jp/$1 [R=301,L]
