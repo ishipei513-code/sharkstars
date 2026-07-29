@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ホームページ制作契約書 - SHARKSTARS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      background: #f5f5f5;
+      color: #171717;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      margin: 0 auto;
+      background: #fff;
+      position: relative;
+    }
+
+    /* === HEADER === */
+    .doc-header {
+      background: #0a0a0a;
+      color: #fff;
+      padding: 36px 50px 30px;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-mark { width: 28px; height: 28px; }
+    .logo-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+    }
+    .doc-type {
+      font-size: 10px;
+      color: #737373;
+      letter-spacing: 0.2em;
+    }
+    .doc-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .doc-title {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+    .doc-meta {
+      text-align: right;
+      font-size: 10px;
+      color: #a3a3a3;
+      line-height: 2;
+    }
+    .doc-meta span { color: #fff; font-weight: 500; }
+
+    /* === BODY === */
+    .doc-body {
+      padding: 30px 50px 60px;
+    }
+
+    /* === PARTIES === */
+    .parties-grid {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .party-box {
+      flex: 1;
+      background: #fafafa;
+      padding: 18px 22px;
+    }
+    .party-role {
+      font-size: 9px;
+      font-weight: 700;
+      color: #a3a3a3;
+      letter-spacing: 0.15em;
+      margin-bottom: 8px;
+    }
+    .party-name {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .party-sub {
+      font-size: 11px;
+      color: #525252;
+    }
+
+    /* === ARTICLES === */
+    .article {
+      margin-bottom: 20px;
+      page-break-inside: avoid;
+    }
+    .article-head {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #0a0a0a;
+    }
+    .article-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      color: #a3a3a3;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+    .article-title {
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .article-body {
+      padding-left: 4px;
+    }
+    .article-body p {
+      font-size: 11px;
+      color: #333;
+      margin-bottom: 6px;
+      line-height: 1.9;
+    }
+    .article-body ol {
+      list-style: none;
+      counter-reset: clause;
+    }
+    .article-body ol li {
+      font-size: 11px;
+      color: #333;
+      margin-bottom: 5px;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.9;
+      counter-increment: clause;
+    }
+    .article-body ol li::before {
+      content: counter(clause) '.';
+      position: absolute;
+      left: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      color: #a3a3a3;
+    }
+
+    /* === PRICE TABLE === */
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+    .price-table td {
+      font-size: 11px;
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .price-table td:last-child {
+      text-align: right;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+    .price-table .total td {
+      border-bottom: 2px solid #0a0a0a;
+      font-weight: 700;
+    }
+
+    /* === SIGNATURE === */
+    .signature-section {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid #e5e5e5;
+      page-break-inside: avoid;
+    }
+    .sig-date {
+      font-size: 12px;
+      text-align: center;
+      margin-bottom: 36px;
+      color: #525252;
+    }
+    .sig-grid {
+      display: flex;
+      gap: 60px;
+    }
+    .sig-box {
+      flex: 1;
+    }
+    .sig-role {
+      font-size: 9px;
+      font-weight: 700;
+      color: #a3a3a3;
+      letter-spacing: 0.15em;
+      margin-bottom: 12px;
+    }
+    .sig-line {
+      border-bottom: 1px solid #d4d4d4;
+      height: 50px;
+      margin-bottom: 6px;
+    }
+    .sig-label {
+      font-size: 10px;
+      color: #737373;
+    }
+    .sig-name {
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    /* === FOOTER === */
+    .doc-footer {
+      padding: 16px 50px;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #f0f0f0;
+      margin-top: 20px;
+    }
+    .footer-text {
+      font-size: 9px;
+      color: #a3a3a3;
+    }
+
+    /* === HANKO === */
+    .hanko {
+      width: 64px;
+      height: 64px;
+      border: 3px solid #c53030;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c53030;
+      font-size: 18px;
+      font-weight: 900;
+      font-family: 'Noto Sans JP', serif;
+      letter-spacing: 0.1em;
+      transform: rotate(-8deg);
+      opacity: 0.85;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .hanko::before {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border: 1px solid #c53030;
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; }
+    }
+    @media screen {
+      .page { box-shadow: 0 4px 40px rgba(0,0,0,0.08); margin: 40px auto; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div class="header-top">
+      <div class="logo-area">
+        <svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 4L8 28h20L18 4z" fill="#fff"/>
+          <path d="M18 10l1.5 4.5H24l-3.5 2.5 1.3 4.5L18 19l-3.8 2.5 1.3-4.5L12 14.5h4.5L18 10z" fill="#666"/>
+          <path d="M4 30q7-4 14 0t14-4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">SHARKSTARS</span>
+      </div>
+      <span class="doc-type">Website Production Agreement</span>
+    </div>
+    <div class="doc-title-row">
+      <h1 class="doc-title">ホームページ制作契約書</h1>
+      <div class="doc-meta">
+        契約番号：<span>SS-C-2026-007</span><br>
+        締結日：<span>2026年7月25日</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-body">
+
+    <div class="parties-grid">
+      <div class="party-box">
+        <div class="party-role">甲（発注者）</div>
+        <div class="party-name">株式会社ハーモメディ</div>
+        <div class="party-sub">代表取締役社長　奥 益　様<br>所在地：〒108-0074 東京都港区高輪3-19-44-303<br>TEL：070-8574-4025</div>
+      </div>
+      <div class="party-box">
+        <div class="party-role">乙（制作者）</div>
+        <div class="party-name">SHARKSTARS（シャークスターズ）</div>
+        <div class="party-sub">代表　石橋昇平<br>〒810-0064 福岡市中央区地行3-18-16<br>TEL：080-4462-0389</div>
+      </div>
+    </div>
+
+    <!-- 第1条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第1条</span>
+        <span class="article-title">目的</span>
+      </div>
+      <div class="article-body">
+        <p>甲は乙に対し、甲のホームページ（以下「本サイト」）の制作を発注し、乙はこれを受託する。本契約は制作費を一括で支払う買い切り型の制作請負契約であり、月額の保守管理費用は発生しない。</p>
+      </div>
+    </div>
+
+    <!-- 第2条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第2条</span>
+        <span class="article-title">業務内容</span>
+      </div>
+      <div class="article-body">
+        <p>乙が本契約に基づき提供する業務は、以下の一式とする。</p>
+        <ol>
+          <li>本サイトの企画・構成（サイトマップ・ページ設計）</li>
+          <li>デザイン制作</li>
+          <li>WordPressによる構築（使用テーマ：SWELL）</li>
+          <li>レスポンシブ対応（スマートフォン・タブレット表示の最適化）</li>
+          <li>お問い合わせフォームの設置</li>
+          <li>基本SEO設定（メタ情報・構造化データ・OGP・sitemap.xml等）</li>
+          <li>GoogleアナリティクスおよびGoogleサーチコンソールの設定</li>
+          <li>サーバーおよび独自ドメインの取得代行・初期設定（第6条）</li>
+          <li>企業メール（独自ドメインのメールアドレス）の設定</li>
+          <li>本サイトの公開作業</li>
+          <li>公開までの修正対応（回数無制限。第4条）</li>
+          <li>公開後の保守点検（無償。第7条）</li>
+        </ol>
+        <p>本契約の制作費には、本サイトの制作10ページ分までを含む。ページ構成は、企画・構成の段階で甲乙協議の上確定する。公開時のページ数が10ページに満たない場合、その残余のページ数分は、公開後の新規ページの追加に充当することができる（繰り越し）。ただし、繰り越し分の充当は、本サイト公開後6ヶ月以内に甲が依頼したものに限る。繰り越し分を含め合計10ページを超える新規ページの追加は、別途協議の上、追加料金にて対応する。</p>
+      </div>
+    </div>
+
+    <!-- 第3条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第3条</span>
+        <span class="article-title">対価および支払方法</span>
+      </div>
+      <div class="article-body">
+        <table class="price-table">
+          <tr><td>ホームページ制作費一式（第2条の業務・10ページまでを含む／税込）</td><td>¥250,000</td></tr>
+          <tr><td>テーマ「SWELL」利用料</td><td>乙保有ライセンスにより追加費用なし</td></tr>
+          <tr class="total"><td>お支払い合計（税込）</td><td>¥250,000</td></tr>
+        </table>
+        <ol>
+          <li>甲は乙に対し、上記代金を、乙が発行する請求書に基づき、当該請求書に記載する支払期日までに銀行振込にて一括で前払いするものとする。振込先口座は請求書に記載のとおりとし、振込手数料は甲の負担とする。</li>
+          <li>乙は、前項の入金を確認した後、速やかに本サイトの制作に着手する。</li>
+          <li>本契約締結後に甲の都合により本契約を解除する場合、乙は、解除の時点までに乙が実施した業務の出来高に相当する額を控除した残額を甲に返金する。出来高の算定は甲乙協議の上定める。乙の責めに帰すべき事由により制作が完了しない場合は、乙は既に受領した代金を甲に返金する。</li>
+          <li>乙は適格請求書発行事業者の登録を受けていないため、乙が発行する請求書には適格請求書発行事業者の登録番号は記載されない。甲は、本取引に係る消費税額が仕入税額控除の対象とならない場合があることを了承する。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第4条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第4条</span>
+        <span class="article-title">制作中の修正対応</span>
+      </div>
+      <div class="article-body">
+        <ol>
+          <li>乙は、本サイトの公開までの間、甲からのデザイン・構成・テキスト・画像等に関する修正依頼に、回数の制限を設けず無償で対応する。</li>
+          <li>前項の修正は、第2条に基づき甲乙協議の上確定したページ構成およびデザインの方向性の枠内での修正を対象とする。デザイン全体の再制作、ページ構成の全面的な再設計、確定後の新規ページの追加（第2条の繰り越し分を充当する場合を除く）および機能の追加は対象外とし、別途協議の上、追加料金にて対応する。</li>
+          <li>修正依頼はLINE・カカオトーク・Slackのいずれかにて行うことができる。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第5条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第5条</span>
+        <span class="article-title">納品および検収</span>
+      </div>
+      <div class="article-body">
+        <ol>
+          <li>乙は、第3条第2項の着手日から1ヶ月以内の本サイトの公開を目標とする。遅延が見込まれる場合、乙は速やかに甲に通知し、公開時期を甲乙協議の上再設定する。</li>
+          <li>乙は、本サイトを公開し、WordPressの管理者アカウント、サーバー・ドメイン・企業メールの管理情報一式を甲に引き渡すことをもって納品とする。</li>
+          <li>甲は納品後14日以内に内容を確認し、修正の申し出がない場合、検収は完了したものとみなす。</li>
+          <li>検収完了までの間の修正は、第4条に基づき無償で対応する。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第6条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第6条</span>
+        <span class="article-title">サーバー・ドメイン・企業メール・テーマ</span>
+      </div>
+      <div class="article-body">
+        <ol>
+          <li>本サイトの運用に必要なレンタルサーバーおよび独自ドメインは、甲の名義で契約するものとし、乙はサービスの選定・申込手続き・初期設定を無償で代行する。</li>
+          <li>サーバー利用料およびドメインの取得・更新費用等の実費は、甲の負担とする。</li>
+          <li>企業メール（独自ドメインのメールアドレス）の作成および利用開始設定は、乙が無償で行う。メールソフト等への設定は、乙の案内に基づき甲が行うものとし、乙はその設定方法の案内にて協力する。</li>
+          <li>サーバー・ドメイン等の契約情報（ID・パスワード等）は甲に帰属し、乙は納品時にその一式を甲に引き渡す。</li>
+          <li>本サイトのテーマ「SWELL」は、乙が保有するライセンスにより乙がユーザー認証を行うものとし、甲に追加費用は発生しない。テーマのアップデートは、第7条の保守点検の一環として乙が適用する。乙がテーマの更新環境を維持できなくなる場合は、事前に甲に通知し、甲が当該テーマを直接購入する等の対応が取れるよう協力する。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第7条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第7条</span>
+        <span class="article-title">公開後の保守点検（無償）</span>
+      </div>
+      <div class="article-body">
+        <ol>
+          <li>乙は、本サイトの公開後、以下の保守点検を無償で行う。回数および期間の制限は設けない。
+            ①WordPress本体・テーマ・プラグインのアップデート対応　②サイトの稼働確認　③既存ページの軽微な修正（テキスト・画像の差し替え等）</li>
+          <li>新規ページの追加（第2条の繰り越し分を充当する場合を除く）、大幅なデザイン変更、機能の追加、および甲または乙以外の第三者が行った設定変更・プラグイン導入・コンテンツ編集等に起因する不具合の復旧は、前項の対象外とし、別途協議の上、追加料金にて対応する。</li>
+          <li>甲は、乙が保守点検を行うために必要なWordPress・サーバー等のアカウントおよびアクセス権限を、乙に付与・維持するものとする。</li>
+          <li>保守点検の依頼および完了の連絡は、LINE・カカオトーク・Slackのいずれかにて行うことができる。</li>
+          <li>甲が本サイトを自ら管理することを希望した場合、乙は必要な情報を引き渡した上で、本条の保守点検を終了することができる。乙の都合により保守点検を終了する場合は、60日前までに甲に通知する。</li>
+          <li>乙が甲に雇用された場合、本条の保守点検は、甲乙協議の上、甲の社内業務に引き継ぐことができる。</li>
+          <li>本条の保守点検は乙の厚意による無償提供であり、乙は対応期日その他の品質を保証しない。ただし不具合発生時は合理的な範囲で速やかな対応に努める。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第8条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第8条</span>
+        <span class="article-title">知的財産権</span>
+      </div>
+      <div class="article-body">
+        <ol>
+          <li>乙が本契約に基づき制作した本サイトのデザイン・構成・設定・コンテンツ等に関する一切の著作権（著作権法第27条および第28条に定める権利を含む）は、本サイトの制作完了（第5条第2項の納品）をもって、乙から甲にすべて移転する。ただし、納品の時点で第3条の代金が完済されていない場合は、完済の時をもって移転する。</li>
+          <li>乙は、甲および甲の指定する者に対し、著作者人格権を行使しない。</li>
+          <li>WordPress本体、テーマ「SWELL」、プラグインその他の第三者が提供するソフトウェア・素材の権利は各権利者に帰属し、その利用条件は各提供元のライセンス（GPL等）に従う。</li>
+          <li>甲が提供したテキスト・画像等の素材の権利は、従前より甲に帰属する。甲は当該素材が第三者の権利を侵害しないことを保証する。</li>
+          <li>乙は、本サイトを乙の制作実績として自己のホームページ等で紹介できる。ただし甲が申し出た場合はこれを取りやめる。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第9条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第9条</span>
+        <span class="article-title">契約不適合責任</span>
+      </div>
+      <div class="article-body">
+        <p>検収完了後30日以内に発見された、乙の制作に起因する不具合（表示崩れ・リンク切れ・フォームの不作動等）は、乙が無償で修正する。当該期間経過後に発見された同種の不具合についても、乙は第7条に準じて無償で修正するよう努める。</p>
+      </div>
+    </div>
+
+    <!-- 第10条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第10条</span>
+        <span class="article-title">秘密保持</span>
+      </div>
+      <div class="article-body">
+        <p>甲および乙は、本契約に関連して知り得た相手方の業務上の秘密を、相手方の書面による事前の承諾なくして第三者に開示・漏洩してはならない。本条の義務は、本契約の終了後も2年間有効に存続する。</p>
+      </div>
+    </div>
+
+    <!-- 第11条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第11条</span>
+        <span class="article-title">免責事項・責任の制限</span>
+      </div>
+      <div class="article-body">
+        <ol>
+          <li>乙は、検索エンジンおよびAI検索における表示順位・表示内容を保証するものではない。</li>
+          <li>天災・サーバー障害・第三者による不正アクセス等、乙の責めに帰すことのできない事由による損害について、乙は責任を負わない。</li>
+          <li>WordPress本体・テーマ・プラグイン等の第三者ソフトウェアの仕様変更・提供終了・脆弱性等に起因する不具合について、乙は損害賠償の責任を負わない。ただし第7条に基づき合理的な範囲で復旧に努める。</li>
+          <li>甲が提供した情報・素材の正確性について、乙は責任を負わない。</li>
+          <li>乙が本契約に関連して甲に対して負う損害賠償責任は、債務不履行・契約不適合・不法行為その他請求原因のいかんを問わず、甲が乙に支払った制作代金の額を上限とする。また、乙の故意または重過失による場合を除き、逸失利益・営業機会の喪失その他の間接損害について、乙は責任を負わない。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第12条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第12条</span>
+        <span class="article-title">契約解除</span>
+      </div>
+      <div class="article-body">
+        <p>甲または乙が以下のいずれかに該当した場合、相手方は催告なく直ちに本契約を解除することができる。</p>
+        <ol>
+          <li>本契約の条項に重大な違反があった場合</li>
+          <li>第3条の代金が支払期日から30日を超えて支払われない場合（この場合、乙は本サイトの制作着手を留保することができ、既に着手しているときは、著作権は移転せず、乙は本サイトの公開を停止できる）</li>
+          <li>破産手続開始、民事再生手続開始の申立てがあった場合</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 第13条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第13条</span>
+        <span class="article-title">反社会的勢力の排除</span>
+      </div>
+      <div class="article-body">
+        <p>甲および乙は、自らが反社会的勢力に該当しないことを表明し、将来にわたっても該当しないことを確約する。</p>
+      </div>
+    </div>
+
+    <!-- 第14条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第14条</span>
+        <span class="article-title">合意管轄</span>
+      </div>
+      <div class="article-body">
+        <p>本契約に関する紛争については、福岡地方裁判所を第一審の専属的合意管轄裁判所とする。</p>
+      </div>
+    </div>
+
+    <!-- 第15条 -->
+    <div class="article">
+      <div class="article-head">
+        <span class="article-num">第15条</span>
+        <span class="article-title">協議事項</span>
+      </div>
+      <div class="article-body">
+        <p>本契約に定めのない事項または解釈に疑義が生じた場合は、甲乙誠意をもって協議の上、解決を図るものとする。</p>
+      </div>
+    </div>
+
+    <!-- SIGNATURE -->
+    <div class="signature-section">
+      <p class="sig-date">本契約の成立を証するため、本書を2通作成し、甲乙それぞれ署名の上、各1通を保有する。</p>
+
+      <div class="sig-grid">
+        <div class="sig-box">
+          <div class="sig-role">甲（発注者）</div>
+          <div class="sig-line"></div>
+          <div class="sig-label">署名</div>
+          <div class="sig-name">株式会社ハーモメディ</div>
+          <div class="sig-label" style="margin-top: 4px;">代表取締役社長　奥 益</div>
+        </div>
+        <div class="sig-box">
+          <div class="sig-role">乙（制作者）</div>
+          <div class="sig-line" style="position: relative;">
+            <div class="hanko" style="position: absolute; right: 10px; top: -5px;">石橋</div>
+          </div>
+          <div class="sig-label">署名</div>
+          <div class="sig-name">SHARKSTARS</div>
+          <div class="sig-label" style="margin-top: 4px;">代表　石橋昇平</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="doc-footer">
+    <span class="footer-text">SHARKSTARS — sharkstars.jp</span>
+    <span class="footer-text">ホームページ制作契約書　SS-C-2026-007</span>
+  </div>
+
+</div>
+
+</body>
+</html>
