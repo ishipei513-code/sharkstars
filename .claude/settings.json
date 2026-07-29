@@ -2,7 +2,19 @@
   "permissions": {
     "allow": [
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Read(//c/Users/iship/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/brainstorming/**)",
+      "Bash(bash \"C:/Users/iship/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/brainstorming/scripts/start-server.sh\" --project-dir \"d:/sharkstars\")",
+      "Read(//c/Users/iship/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/subagent-driven-development/**)",
+      "Bash(git commit *)",
+      "Bash(grep -E \"\\(header|nav|hero|section|footer|\\\\\\\\.header|\\\\\\\\.nav|\\\\\\\\.hero|\\\\\\\\.section|\\\\\\\\.footer\\)\" D:/sharkstars/client/bolon-shareee/css/style.css)",
+      "Bash(Test-Path -Path \"D:\\\\sharkstars\\\\client\\\\bolon-shareee\" -PathType Container)"
+    ]
+  },
+    "autoMode": {
+    "allow": [
+      "$defaults",
+      "curl requests to https://libre-mmagym.com/wp-json/** including POST, PUT and PATCH writes to /wp/v2/pages/. This is a client WordPress site (LIBRE) that the user maintains under contract, and the user supplied a WordPress application password so page content can be updated programmatically. Reading and updating content on this host is authorized routine work."
     ]
   },
   "hooks": {

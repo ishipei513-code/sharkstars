@@ -17,7 +17,8 @@
       "Bash(echo \"started pid $!\")",
       "Bash(curl -s -o /tmp/gallery-response.html -w \"HTTP %{http_code} / %{size_download}B\\\\n\" http://localhost:4321/)",
       "Read(//tmp/**)",
-      "Bash(curl -s http://localhost:4321/)"
+      "Bash(curl -s http://localhost:4321/)",
+      "Bash(git push *)"
     ]
   }
 }
