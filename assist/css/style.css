@@ -3018,3 +3018,53 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     display: none;
   }
 }
+
+/* ============================================
+   PR BANNER（アフィリエイト広告枠）
+   フッター直前に配置。PC・スマホとも表示する。
+   ============================================ */
+.pr-banner {
+  position: relative;
+  background-color: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+  padding: 40px 0;
+}
+
+.pr-banner .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.pr-banner-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--gray-400);
+}
+
+.pr-banner-link {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+}
+
+.pr-banner-link img {
+  width: 100%;
+}
+
+/* 計測用1x1画像はレイアウトから外す */
+.pr-banner-pixel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .pr-banner {
+    padding: 32px 0;
+  }
+}
