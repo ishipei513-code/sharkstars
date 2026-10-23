@@ -4,37 +4,39 @@
    CSS CUSTOM PROPERTIES (design tokens)
    ============================================================ */
 :root {
-  /* Background palette — water-blue gradient layers */
-  --bg-1: #eafaff;
-  --bg-2: #d2f0fb;
-  --bg-3: #bfe8f5;
+  /* Background palette — トップ(top.css)と同じ淡い空色 */
+  --bg-1: #eef7fd;
+  --bg-2: #e3f1fb;
+  --bg-3: #d9ecf8;
 
   /* Surface */
   --card: #ffffff;
 
-  /* Typography & brand colours */
-  --ink: #0a4d6e;
-  --deep: #0a5a82;
-  --accent: #34b3d1;
-  --accent-2: #7fd0e0;
-  --text: #3a5663;
-  --muted: #5a7585;
+  /* Typography & brand colours — top.css と同値
+     --ink はヒーロー等グラデーションの最暗ストップ、--deep は見出し・ナビ文字 */
+  --ink: #07243d;
+  --deep: #0c2f4d;
+  --accent: #005aaa;
+  --accent-2: #2f86c9;
+  --pink: #ff5d8f;
+  --text: #143a5a;
+  --muted: #5e7a90;
 
   /* Geometry */
   --radius: 0px;
   --radius-sm: 0px;
 
   /* Layout */
-  --maxw: 1080px;
+  --maxw: 1120px;
   --gut: clamp(16px, 4vw, 40px);
   --header-h: 64px;
 
   /* Effects */
-  --shadow: 0 18px 40px rgba(10, 77, 110, .10);
-  --grad-ink: linear-gradient(120deg, #0a5a82, #34b3d1);
+  --shadow: 0 12px 30px rgba(16, 58, 92, .10);
+  --grad-ink: linear-gradient(120deg, #0c2f4d, #005aaa);
 
   /* Typography */
-  --ff-jp: 'Zen Maru Gothic', 'Zen Kaku Gothic Antique', system-ui, sans-serif;
+  --ff-jp: 'Zen Kaku Gothic New', 'Zen Maru Gothic', system-ui, sans-serif;
   --ff-en: 'Inter', sans-serif;
 }
 
@@ -171,20 +173,21 @@ a:focus-visible {
 }
 
 .btn-primary {
-  background: var(--grad-ink);
+  background: var(--pink);
   color: #fff;
-  box-shadow: 0 8px 20px rgba(52, 179, 209, .35);
+  box-shadow: 0 10px 24px rgba(255, 93, 143, .32);
 }
 
 .btn-line {
-  background: #04823a;
+  background: var(--accent);
   color: #fff;
+  box-shadow: 0 6px 16px rgba(0, 90, 170, .22);
 }
 
 .btn-ghost {
   background: #fff;
-  color: var(--deep);
-  border: 1.5px solid #cfe6f0;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
 }
 
 .btn:focus-visible {
@@ -217,7 +220,9 @@ a:focus-visible {
 }
 
 .header .logo img {
+  display: block;
   height: 34px;
+  width: auto; /* logo.svg は 300x32。width:auto が無いと属性の160pxで横に潰れる */
 }
 
 .nav ul {
@@ -234,6 +239,30 @@ a:focus-visible {
 
 .nav a:hover {
   color: var(--accent);
+}
+
+/* 現在地・ホバーのピンク下線（トップと同じ表現） */
+.nav a:not(.btn-line) {
+  position: relative;
+  padding: 8px 1px;
+}
+
+.nav a:not(.btn-line)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  height: 2px;
+  background: var(--pink);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .45s cubic-bezier(.2, .7, .2, 1);
+}
+
+.nav a:not(.btn-line):hover::after,
+.nav a[aria-current="page"]::after {
+  transform: scaleX(1);
 }
 
 /* Hamburger — hidden on desktop */
@@ -897,7 +926,7 @@ select {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background: linear-gradient(120deg, var(--ink) 0%, var(--deep) 52%, #1c91bb 100%);
+  background: linear-gradient(120deg, var(--ink) 0%, var(--deep) 52%, #2f86c9 100%);
   padding-bottom: clamp(56px, 10vw, 88px);
 }
 
@@ -1178,7 +1207,7 @@ select {
 
 /* ---- 06 CTA BAND ---- */
 .svc-cta {
-  background: linear-gradient(120deg, var(--ink) 0%, var(--deep) 55%, #1c91bb 130%);
+  background: linear-gradient(120deg, var(--ink) 0%, var(--deep) 55%, #2f86c9 130%);
 }
 
 .svc-cta-inner {
@@ -1313,8 +1342,9 @@ select {
 
 /* LINE card — green background, white text */
 .contact-card--line {
-  background: #04823a;
+  background: var(--accent);
   color: #fff;
+  box-shadow: 0 6px 16px rgba(0, 90, 170, .22);
 }
 
 .contact-card--line:hover {
@@ -1355,6 +1385,12 @@ select {
 
 .contact-card--line .contact-card-number {
   color: #fff;
+}
+
+/* メールアドレスは長いので1行に収まるサイズへ（"gmail.co / m" の泣き別れ防止） */
+.contact-card--mail .contact-card-number {
+  font-size: clamp(14px, 2.2vw, 17px);
+  letter-spacing: 0;
 }
 
 /* Small note */
@@ -1897,7 +1933,7 @@ select {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #7fd0e0, #34b3d1);
+  background: radial-gradient(circle at 35% 30%, #2f86c9, #005aaa);
   box-shadow: 0 2px 6px rgba(52, 179, 209, .35);
 }
 .biz-meta {
