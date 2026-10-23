@@ -55,7 +55,8 @@
     };
     toggle.addEventListener('click',function(){ isOpen()?closeMenu():openMenu(); });
     gmenu.addEventListener('click',function(e){
-      if(e.target===gmenu||e.target.classList.contains('gmenu-inner')) closeMenu();
+      // リンク・ボタン以外のどこを押しても閉じる（ul/li/nav の余白も拾う）
+      if(!e.target.closest||!e.target.closest('a,button')) closeMenu();
     });
     gmenu.querySelectorAll('a').forEach(function(a){
       a.addEventListener('click',function(){ closeMenu(false); });
