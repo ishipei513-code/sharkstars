@@ -3,26 +3,73 @@
   'use strict';
   var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // 1) header scrolled
+  // 1) header scrolled ＋ ヒーロー表示中はフローティングCTAを隠す
+  //    （波帯の右下リンクと重なるため。メニュー開閉の is-nav-open とは別クラスで管理する）
   var header=document.querySelector('.header');
-  if(header){
-    var onScroll=function(){ header.classList.toggle('is-scrolled', window.scrollY>20); };
-    onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
-  }
+  var heroEl=document.querySelector('.hero');
+  var fabEl=document.getElementById('recruitFab');
+  var onScroll=function(){
+    if(header) header.classList.toggle('is-scrolled', window.scrollY>20);
+    if(fabEl&&heroEl) fabEl.classList.toggle('is-over-hero', window.scrollY < heroEl.offsetHeight*0.6);
+  };
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll,{passive:true});
 
-  // 2) mobile menu
-  var toggle=document.querySelector('.menu-toggle'), nav=document.querySelector('.nav');
-  if(toggle&&nav){
-    var setFab=function(open){var fab=document.getElementById('recruitFab');if(fab)fab.classList.toggle('is-nav-open',open);};
-    var closeNav=function(){nav.classList.remove('is-open');toggle.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');document.body.style.overflow='';setFab(false);};
-    toggle.addEventListener('click',function(){
-      var open=nav.classList.toggle('is-open');
-      toggle.classList.toggle('is-open',open);
-      toggle.setAttribute('aria-expanded',open?'true':'false');
-      document.body.style.overflow=open?'hidden':'';
-      setFab(open);
+  // 2) 全画面メニュー（開閉・Esc・背景クリック・フォーカストラップ・スクロールロック）
+  var toggle=document.getElementById('menuToggle'), gmenu=document.getElementById('globalMenu');
+  if(toggle&&gmenu){
+    var lastFocus=null, lockedY=0;
+    var focusables=function(){
+      return Array.prototype.slice.call(gmenu.querySelectorAll('a[href],button:not([disabled])'));
+    };
+    var isOpen=function(){ return gmenu.classList.contains('is-open'); };
+    var openMenu=function(){
+      lastFocus=document.activeElement;
+      lockedY=window.scrollY||window.pageYOffset||0;
+      gmenu.classList.add('is-open'); gmenu.removeAttribute('inert');
+      toggle.classList.add('is-open');
+      toggle.setAttribute('aria-expanded','true');
+      toggle.setAttribute('aria-label','メニューを閉じる');
+      document.body.classList.add('menu-open');
+      // iOS でも背景が動かないよう body を固定（閉じたら元の位置へ戻す）
+      document.body.style.position='fixed';
+      document.body.style.top=(-lockedY)+'px';
+      document.body.style.left='0'; document.body.style.right='0'; document.body.style.width='100%';
+      var f=focusables(); if(f.length) f[0].focus();
+      var fab=document.getElementById('recruitFab'); if(fab) fab.classList.add('is-nav-open');
+    };
+    var closeMenu=function(restoreFocus){
+      gmenu.classList.remove('is-open'); gmenu.setAttribute('inert','');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded','false');
+      toggle.setAttribute('aria-label','メニューを開く');
+      document.body.classList.remove('menu-open');
+      document.body.style.position=''; document.body.style.top='';
+      document.body.style.left=''; document.body.style.right=''; document.body.style.width='';
+      window.scrollTo(0,lockedY);
+      var fab=document.getElementById('recruitFab'); if(fab) fab.classList.remove('is-nav-open');
+      if(restoreFocus!==false){
+        var back=(lastFocus&&lastFocus.focus&&lastFocus!==document.body)?lastFocus:toggle;
+        back.focus();
+      }
+    };
+    toggle.addEventListener('click',function(){ isOpen()?closeMenu():openMenu(); });
+    gmenu.addEventListener('click',function(e){
+      if(e.target===gmenu||e.target.classList.contains('gmenu-inner')) closeMenu();
     });
-    nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeNav);});
+    gmenu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){ closeMenu(false); });
+    });
+    document.addEventListener('keydown',function(e){
+      if(!isOpen()) return;
+      if(e.key==='Escape'||e.key==='Esc'){ e.preventDefault(); closeMenu(); return; }
+      if(e.key!=='Tab') return;
+      var f=focusables(); if(!f.length) return;
+      f.push(toggle); // ハンバーガー（＝閉じるボタン）もトラップに含める
+      var first=f[0], last=f[f.length-1];
+      if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+    });
   }
 
   // 3) reveal on scroll（reduced時は即表示）
@@ -48,17 +95,21 @@
   // 5) FAB ready
   var fab=document.getElementById('recruitFab'); if(fab)fab.classList.add('is-ready');
 
-  // 6) hero carousel（reduced時は1枚目固定）
-  var track=document.getElementById('heroTrack'), dotsEl=document.getElementById('heroDots');
-  if(track){
-    var n=track.children.length, i=0, dots=[];
-    if(dotsEl){ for(var k=0;k<n;k++){var s=document.createElement('span');if(k===0)s.className='on';dotsEl.appendChild(s);dots.push(s);} }
-    if(!REDUCED && n>1){
+  // 6) ヒーロー：全面写真のクロスフェード（reduced時は1枚目で固定）
+  //    ゆっくりしたズームはCSS側で全スライドに常時かけている（切替時の縮みを避けるため）
+  var heroMedia=document.getElementById('heroMedia');
+  if(heroMedia){
+    var shots=Array.prototype.slice.call(heroMedia.querySelectorAll('.hero-shot'));
+    if(!REDUCED && shots.length>1){
+      var hi=0, zi=1;
       setInterval(function(){
-        i=(i+1)%n;
-        track.style.transform='translateX(-'+(i*100)+'%)';
-        dots.forEach(function(d,j){d.className=(j===i)?'on':'';});
-      },4500);
+        var prev=hi;
+        hi=(hi+1)%shots.length;
+        // 次の1枚を手前に重ねてフェードインさせる（両方を半透明にすると下地が透けて濁る）
+        shots[hi].style.zIndex=(++zi);
+        shots[hi].classList.add('is-on');
+        setTimeout(function(){ shots[prev].classList.remove('is-on'); },1300);
+      },6000);
     }
   }
 
@@ -81,17 +132,6 @@
         entries.forEach(function(e){ if(e.isIntersecting){countEl(e.target);cio.unobserve(e.target);} });
       },{threshold:.4});
       counters.forEach(function(el){cio.observe(el);});
-    }
-  }
-
-  // 8.5) hero video（実写の波。再生できたらSVG波を隠す。reduced時は静止ポスター）
-  var hv=document.getElementById('heroVideo'), heroEl=document.querySelector('.hero');
-  if(hv){
-    if(REDUCED){ hv.removeAttribute('autoplay'); try{hv.pause();}catch(e){} }
-    else{
-      var markVideo=function(){ if(heroEl)heroEl.classList.add('has-video'); };
-      hv.addEventListener('playing',markVideo);
-      hv.addEventListener('loadeddata',function(){ if(hv.readyState>=2 && !hv.error){markVideo();} });
     }
   }
 

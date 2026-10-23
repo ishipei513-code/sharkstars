@@ -57,13 +57,15 @@
 }
 </script>
 </head>
-<body>
+<body class="is-home">
 
 <!-- ===== HEADER ===== -->
 <header class="header">
   <div class="wrap bar">
-    <a class="logo" href="index.html" aria-label="マリンケア訪問看護ステーション"><img src="images/logo.svg" alt="マリンケア訪問看護ステーション" width="160" height="34"></a>
-    <button class="menu-toggle" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="logo" href="index.html" aria-label="マリンケア訪問看護ステーション">
+      <img class="logo-dark" src="images/logo.svg" alt="マリンケア訪問看護ステーション" width="402" height="42">
+      <img class="logo-light" src="images/logo_white.svg" alt="" aria-hidden="true" width="402" height="42">
+    </a>
     <nav class="nav"><ul>
       <li><a href="index.html" aria-current="page">トップ</a></li>
       <li><a href="recruit.html">採用情報</a></li>
@@ -71,40 +73,89 @@
       <li><a href="company.html">会社概要</a></li>
       <li><a href="contact.html">お問い合わせ</a></li>
     </ul></nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="globalMenu">
+      <svg class="menu-icon" viewBox="0 0 46 30" aria-hidden="true">
+        <path class="ml ml1" d="M1,6 C12,12 34,0 45,6"/>
+        <path class="ml ml2" d="M1,15 C12,21 34,9 45,15"/>
+        <path class="ml ml3" d="M1,24 C12,30 34,18 45,24"/>
+      </svg>
+    </button>
   </div>
 </header>
 
+<!-- ===== 全画面メニュー ===== -->
+<div class="gmenu" id="globalMenu" inert>
+  <div class="gmenu-inner">
+    <nav class="gmenu-nav" aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html"><span class="gm-jp">トップ</span><span class="gm-en">Top</span></a></li>
+        <li><a href="recruit.html"><span class="gm-jp">採用情報</span><span class="gm-en">Recruit</span></a></li>
+        <li><a href="service.html"><span class="gm-jp">訪問看護内容</span><span class="gm-en">Service</span></a></li>
+        <li><a href="company.html"><span class="gm-jp">会社概要</span><span class="gm-en">Company</span></a></li>
+        <li><a href="contact.html"><span class="gm-jp">お問い合わせ</span><span class="gm-en">Contact</span></a></li>
+      </ul>
+    </nav>
+    <div class="gmenu-foot">
+      <p class="gmenu-addr">〒814-0134 福岡県福岡市城南区<span class="nw">飯倉1-5-35</span></p>
+      <p class="gmenu-tel"><span class="nw">TEL <a href="tel:0924001821">092-400-1821</a></span></p>
+      <p class="gmenu-links"><a href="privacy.html">プライバシーポリシー</a></p>
+      <p class="gmenu-copy">&copy; MARIN株式会社</p>
+    </div>
+  </div>
+</div>
+
 <main>
 
-<!-- ===== 01 ヒーロー（C3）／海動画素材が揃うまで sea.jpg 静止＋CSS海ゆらぎで暫定。後日 <video> へ差し替え ===== -->
+<!-- ===== 01 ヒーロー（全面写真スライダー＋波帯＋波の稜線をまたぐカーブコピー） ===== -->
 <section class="hero" aria-label="メインビジュアル">
-  <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="images/sea.jpg" aria-hidden="true">
-    <!-- TODO: 実写の波のループ動画。client/marin/images/hero-waves.mp4 に配置（無い間はposter=sea.jpg＋下のSVG波がフォールバック） -->
-    <source src="images/hero-waves.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay" aria-hidden="true"></div>
-  <div class="hero-waves" aria-hidden="true"><span class="hero-wave w1"></span><span class="hero-wave w2"></span><span class="hero-wave w3"></span></div>
-  <div class="hero-ghost" aria-hidden="true"><b>NURSE</b></div>
-  <div class="hero-ghost hero-ghost--2" aria-hidden="true"><b>+REHA</b></div>
-
-  <div class="wrap hero-inner">
-    <p class="hero-eyebrow reveal d1"><span class="nb">RECRUIT &amp; CARE</span> ／ <span class="nb">訪問看護ステーション</span></p>
-
-    <div class="hero-carousel reveal d1" aria-label="マリンケアの風景">
-      <div class="hero-carousel-track" id="heroTrack">
-        <div class="hero-slide"><img src="images/hero-01.webp" alt="訪問先へ向かうマリンケアの訪問看護師" width="1200" height="800"></div>
-        <div class="hero-slide"><img src="images/hero-02.webp" alt="福岡市城南区の住宅街を歩くマリンケアの訪問看護チーム" width="1200" height="800"></div>
-        <div class="hero-slide"><img src="images/hero-03.webp" alt="福岡の海を望むデッキに立つマリンケアの訪問看護師" width="1200" height="800"></div>
-      </div>
-      <div class="hero-dots" id="heroDots" aria-hidden="true"></div>
+  <div class="hero-media" id="heroMedia">
+    <div class="hero-shot is-on">
+      <img src="images/hero-01-1920.webp" srcset="images/hero-01.webp 1200w, images/hero-01-1920.webp 1920w" sizes="100vw"
+           alt="訪問先へ向かうマリンケアの訪問看護師" width="1920" height="1280" fetchpriority="high" decoding="async">
     </div>
-
-    <h1 class="hero-title">
-      <span class="nb"><span class="hero-char" style="animation-delay:.05s">い</span><span class="hero-char" style="animation-delay:.12s">の</span><span class="hero-char" style="animation-delay:.19s">ち</span><span class="hero-char" style="animation-delay:.26s">の</span><span class="hero-char" style="animation-delay:.33s">、</span></span><span class="nb"><span class="hero-char" style="animation-delay:.40s">そ</span><span class="hero-char" style="animation-delay:.47s">ば</span><span class="hero-char" style="animation-delay:.54s">に</span><span class="hero-char" style="animation-delay:.61s">。</span></span>
-    </h1>
+    <div class="hero-shot">
+      <img src="images/hero-02-1920.webp" srcset="images/hero-02.webp 1200w, images/hero-02-1920.webp 1920w" sizes="100vw"
+           alt="福岡市城南区の住宅街を歩くマリンケアの訪問看護チーム" width="1920" height="1280" loading="lazy" decoding="async">
+    </div>
+    <div class="hero-shot">
+      <img src="images/hero-03-1920.webp" srcset="images/hero-03.webp 1200w, images/hero-03-1920.webp 1920w" sizes="100vw"
+           alt="福岡の海を望むデッキに立つマリンケアの訪問看護師" width="1920" height="1280" loading="lazy" decoding="async">
+    </div>
   </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
 
-  <div class="hero-scroll" aria-hidden="true">SCROLL ↓</div>
+  <div class="hero-foot">
+    <!-- 見出しの実テキストはh1に持たせ、装飾のSVGは別要素に出す（h1のテキストが重複するのを避ける） -->
+    <h1 class="sr-only">マリンケア訪問看護ステーション｜いのちの、そばに。</h1>
+    <div class="hero-copy" aria-hidden="true">
+      <!-- PC用：波の稜線と文字を同一SVG・同一viewBoxで描く（幅が変わってもずれない） -->
+      <svg class="hero-arc hero-arc--pc" viewBox="0 0 1440 270" aria-hidden="true">
+        <defs>
+          <path id="arcJpPc" d="M0,56 C240,0 470,-18 720,24 C960,64 1180,110 1440,72"/>
+          <path id="arcEnPc" d="M0,182 C240,126 470,108 720,150 C960,190 1180,236 1440,198"/>
+        </defs>
+        <path class="arc-fill" d="M0,152 C240,96 470,78 720,120 C960,160 1180,206 1440,168 L1440,270 L0,270 Z"/>
+        <text class="arc-jp"><textPath href="#arcJpPc" startOffset="50%" text-anchor="middle" textLength="360" lengthAdjust="spacing">いのちの、そばに。</textPath></text>
+        <text class="arc-en"><textPath href="#arcEnPc" startOffset="50%" text-anchor="middle" textLength="1150" lengthAdjust="spacing">MARIN VISITING NURSE</textPath></text>
+      </svg>
+      <!-- SP用：英字を右端へ流して切る（パスをviewBox外まで伸ばし overflow:visible で描画） -->
+      <svg class="hero-arc hero-arc--sp" viewBox="0 0 390 210" aria-hidden="true">
+        <defs>
+          <path id="arcJpSp" d="M-12,48 C60,18 150,6 222,28 C292,49 342,76 462,62"/>
+          <path id="arcEnSp" d="M-12,116 C60,86 150,74 222,96 C292,117 342,144 462,130"/>
+        </defs>
+        <path class="arc-fill" d="M-12,100 C60,70 150,58 222,80 C292,101 342,128 462,114 L462,210 L-12,210 Z"/>
+        <text class="arc-jp"><textPath href="#arcJpSp" startOffset="40" text-anchor="start" textLength="196" lengthAdjust="spacing">いのちの、そばに。</textPath></text>
+        <text class="arc-en"><textPath href="#arcEnSp" startOffset="20" text-anchor="start" textLength="470" lengthAdjust="spacing">MARIN VISITING NURSE</textPath></text>
+      </svg>
+    </div>
+    <div class="hero-band">
+      <div class="wrap hero-band-row">
+        <a class="hero-scroll" href="#scenes"><span class="hero-scroll-dot" aria-hidden="true"></span>Scroll down</a>
+        <a class="hero-sub" href="recruit.html">採用情報<span aria-hidden="true">&#8594;</span></a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ===== マーキー（流れるキーワード帯） ===== -->
@@ -116,7 +167,7 @@
 </div>
 
 <!-- ===== 01.5 3Dカバーフロー・カルーセル（box1風／サンプル写真・公開前に実写真へ差し替え） ===== -->
-<section class="coverflow reveal" aria-label="マリンケアの風景">
+<section class="coverflow reveal" id="scenes" aria-label="マリンケアの風景">
   <div class="cf-stage" id="cfStage">
     <div class="cf-track" id="cfTrack">
       <figure class="cf-slide"><img src="images/gallery-01.webp" alt="博多湾を背に両手を広げるマリンケアの訪問看護師" loading="lazy" width="1200" height="900"></figure>
