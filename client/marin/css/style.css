@@ -75,22 +75,16 @@ body {
 
 /* Section vertical rhythm */
 section {
-  padding-block: clamp(40px, 8vw, 88px);
+  padding-block: clamp(54px, 8vw, 106px);  /* トップと同じ値（2026-10-24）*/
 }
 
 /* Section backgrounds — セクションごとのメリハリ（2026-06-14）
    hero=写真 / recruit=濃いグラデ は各自の背景のまま。
    白カードが乗るセクションは水色地にしてカードを映えさせる。 */
-.photostrip    { background: #ffffff; }
-.philosophy    { background: #dff2f9; }
-.routes        { background: #ffffff; }
-.biz           { background: #e9f6fb; }
-.strengths     { background: #ffffff; }
-.story         { background: #eef8fc; }
-.voices--user  { background: #dff2f9; }
-.insta         { background: #ffffff; }
-.voices--staff { background: #e9f6fb; }
-.access        { background: #eef8fc; }
+/* セクション単位のベタ塗りはやめ、main の海のグラデーションを通す（2026-10-24）。
+   ベタ塗りだと境目で色が切り替わり、トップの「溶ける繋ぎ」と揃わない。 */
+.photostrip,.philosophy,.routes,.biz,.strengths,
+.story,.voices--user,.insta,.voices--staff,.access{background:transparent}
 
 /* Section head: label + title combo */
 .section-head {
@@ -433,7 +427,7 @@ body.menu-open .header .nav { opacity: 0; pointer-events: none; }
    FOOTER
    ============================================================ */
 .footer {
-  background: #dcecf8;
+  background: #dcebf8;
   color: var(--text);
   margin-top: 40px;
   border-top: 1px solid var(--line);
@@ -1031,7 +1025,7 @@ select {
 .svc-hero-photo {
   position: absolute;
   inset: 0;
-  background-image: url('../images/sea.jpg?v=261024cf');
+  background-image: url('../images/sea.jpg?v=261024ch');
   background-size: cover;
   background-position: center 55%;
   z-index: -2;
@@ -1308,7 +1302,12 @@ select {
 
 /* ---- 06 CTA BAND ---- */
 .svc-cta {
-  background: linear-gradient(120deg, var(--ink) 0%, var(--deep) 55%, #2f86c9 130%);
+  /* 背景は main の海のグラデーションを通す（ファイル末尾の
+     main > section:not(.svc-hero){background:transparent} が効くため、
+     ここで色を指定しても出ない）。
+     以前はここが濃紺グラデーションだったが、その透明化指定に上書きされて
+     **淡い面の上に白文字が乗り、見出しが読めなくなっていた**。
+     文字色を濃紺・グレーに直した（.svc-cta-title / .svc-cta-lead）。 */
 }
 
 .svc-cta-inner {
@@ -1322,13 +1321,13 @@ select {
   font-size: clamp(24px, 5.5vw, 38px);
   font-weight: 700;
   line-height: 1.4;
-  color: #fff;
+  color: var(--deep);
   word-break: auto-phrase;
   overflow-wrap: anywhere;
   margin-top: 10px;
 }
 
-.svc-cta-lead { color: #d4f0fa; margin-top: 14px; }
+.svc-cta-lead { color: var(--muted); margin-top: 14px; }
 
 .svc-cta-btns {
   display: flex;
@@ -2211,7 +2210,17 @@ select {
    サブページも前の終了色＝次の開始色で繋ぎ、境界を消す。
    ============================================================ */
 main > section:not(.svc-hero) { background: transparent; }
-main { background: linear-gradient(180deg, var(--bg-1) 0%, #ffffff 22%, #f2f9fe 58%, #eef7fd 82%, #dcecf8 100%); }
+/* 海の場面でつなぐ（トップと同じ色・2026-10-24）。
+   サブページはページごとにセクション構成が違うので、
+   セクション単位ではなく main に1本通す。これなら連鎖が切れない。 */
+main { background: linear-gradient(180deg,
+  #d6e9f7 0%,      /* 朝の空 */
+  #ffffff 15%,     /* 波の泡 */
+  #e6f6f4 32%,     /* 遠浅 */
+  #d2eeea 48%,     /* ターコイズ */
+  #dfeefa 64%,     /* 沖の青 */
+  #faf2e4 82%,     /* 砂浜 */
+  #dcebf8 100%);   /* 凪の水面 */ }
 
 /* カードのごく薄い縦グラデーション（紙のような奥行き・2026-10-24） */
 .card, .svc-card, .info-card, .flow-item, .faq-item, .contact-card {
