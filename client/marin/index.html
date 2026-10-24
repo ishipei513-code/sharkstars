@@ -22,8 +22,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Yomogi&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/reset.css?v=261024v">
-<link rel="stylesheet" href="css/top.css?v=261024v">
+<link rel="stylesheet" href="css/reset.css?v=261024z">
+<link rel="stylesheet" href="css/top.css?v=261024z">
 <!-- オープニングの幕：2回目以降は出さない。描画前に決める必要があるためインライン -->
 <script>try{if(sessionStorage.getItem('marinOpened'))document.documentElement.classList.add('no-opening');}catch(e){}</script>
 <!-- streetAddress：Googleビジネスプロフィールで「飯倉」と確認済み（2026-06-20） -->
@@ -219,6 +219,10 @@
 
 <!-- ===== 02 理念・キャッチ ===== -->
 <section class="philosophy" aria-labelledby="philosophy-title">
+  <div class="cutouts cutouts--phi" aria-hidden="true">
+    <img class="cut cut--phi-l" src="images/cut-nurse-a.webp" alt="" width="368" height="900" loading="lazy" decoding="async">
+    <img class="cut cut--phi-r" src="images/cut-nurse-c.webp" alt="" width="645" height="820" loading="lazy" decoding="async">
+  </div>
   <div class="wrap">
     <p class="phi-eyebrow reveal"><span class="phi-jp"><i></i>理念<i></i></span></p>
     <h2 class="phi-title reveal d1" id="philosophy-title">あなたの<span class="phi-blue">物語</span>を大切に。<br>その<span class="phi-pink">人らしく生きる</span><span class="nb">を看る。</span></h2>
@@ -436,6 +440,10 @@
 
 <!-- ===== 08【採用】CTA → LINE / Indeed ===== -->
 <section id="recruit" class="recruit" aria-labelledby="recruit-title">
+  <div class="cutouts cutouts--rec" aria-hidden="true">
+    <img class="cut cut--rec-l" src="images/cut-staff-d.webp" alt="" width="396" height="820" loading="lazy" decoding="async">
+    <img class="cut cut--rec-r" src="images/cut-nurse-b.webp" alt="" width="434" height="760" loading="lazy" decoding="async">
+  </div>
   <div class="wrap recruit-grid">
     <div class="recruit-text reveal">
       <h2 class="recruit-title" id="recruit-title">一緒に、<span class="nb"><span class="grad">地域の看護</span>を</span><br>つくりませんか。</h2>
@@ -548,6 +556,6 @@
     </svg>
   </a>
 </div>
-<script src="js/top.js?v=261024v" defer></script>
+<script src="js/top.js?v=261024z" defer></script>
 </body>
 </html>

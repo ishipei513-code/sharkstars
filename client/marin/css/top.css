@@ -540,3 +540,36 @@ body.accent-orange{--pink:#ff8a3d}
   padding-inline:clamp(10px,2vw,28px);
   border-radius:0;
 }
+
+/* ===== 切り抜き写真を余白に散らす（参考：meisei.ac.jp/kg・2026-10-24）=====
+   rembg(u2net) で背景を抜いたアルファ付きWebP。文章の左右に置いて、
+   テキストだけのセクションに人の気配を入れる。
+   文章には重ねない（読みづらくなるので、本文の外側だけに置く）。 */
+.philosophy,.recruit{position:relative;overflow:hidden}
+.cutouts{position:absolute;inset:0;pointer-events:none;z-index:0}
+.philosophy > .wrap,.recruit > .wrap{position:relative;z-index:1}
+
+.cut{position:absolute;bottom:0;height:auto;width:auto;
+  filter:drop-shadow(0 18px 26px rgba(16,58,92,.16))}
+
+/* 理念：左は立ち姿、右は両手を広げる */
+.cut--phi-l{left:clamp(-18px,1vw,40px);max-height:clamp(190px,30vh,420px)}
+.cut--phi-r{right:clamp(-26px,0.5vw,24px);max-height:clamp(165px,26vh,370px)}
+
+/* 採用CTA：左に男性スタッフ、右に看護師 */
+.cut--rec-l{left:clamp(-20px,1vw,36px);max-height:clamp(150px,22vw,330px)}
+.cut--rec-r{right:clamp(-24px,1vw,30px);max-height:clamp(140px,20vw,300px)}
+
+/* 本文の幅が確保できない画面では1人ずつに絞り、さらに画面外へ逃がして
+   「見切れて覗いている」配置にする（本文に重ねない） */
+@media (max-width:1365px){
+  .cut--phi-r,.cut--rec-l{display:none}
+  .cut--phi-l{max-height:clamp(150px,20vw,210px);left:-13%;opacity:.95}
+  .cut--rec-r{max-height:clamp(130px,18vw,190px);right:-13%}
+}
+/* さらに狭い画面では文章にかかるので出さない */
+/* 文章の幅が足りない画面では出さない（本文に重なるため） */
+@media (max-width:480px){
+  .cut{display:none}
+}
+
