@@ -106,7 +106,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .gmenu.is-open .gmenu-nav li:nth-child(5) a{transition-delay:.34s}
 .gm-jp{font-size:clamp(23px,4.4vw,38px);font-weight:900;letter-spacing:.04em;line-height:1.35}
 .gm-en{font-family:var(--ff-en);font-size:clamp(10px,1.3vw,12px);font-weight:600;letter-spacing:.26em;color:#79c0ea;text-transform:uppercase}
-.gmenu-nav a:hover .gm-jp{color:var(--pink)}
+.gmenu-nav a:hover .gm-jp,.gmenu-nav a[aria-current="page"] .gm-jp{color:var(--pink)}
 .gmenu-foot{border-top:1px solid rgba(255,255,255,.22);padding-top:clamp(14px,3vh,24px);color:#b7d4e8;font-size:13px;line-height:1.95}
 .gmenu-foot p{margin:0}
 .gmenu-foot a{color:#b7d4e8;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}

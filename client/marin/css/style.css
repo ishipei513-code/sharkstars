@@ -196,84 +196,237 @@ a:focus-visible {
 }
 
 /* ============================================================
-   HEADER
+   HEADER（トップと統一：濃紺ヒーローに重ねる透明ヘッダー → スクロールで白）
+   サブページのヒーロー .svc-hero は全ページ濃紺グラデなので白文字で成立する。
    ============================================================ */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 50;
-  background: rgba(255, 255, 255, .85);
-  backdrop-filter: saturate(140%) blur(8px);
-  -webkit-backdrop-filter: saturate(140%) blur(8px);
-  transition: box-shadow .3s;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  background: transparent;
+  transition: background .38s, box-shadow .38s;
 }
 
 .header.is-scrolled {
+  background: rgba(255, 255, 255, .97);
   box-shadow: 0 4px 20px rgba(10, 77, 110, .08);
 }
 
 .header .bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 64px;
+  gap: 18px;
+  height: var(--header-h);
 }
+
+/* ロゴは白/濃色の2枚を重ねて不透明度で切替（src差し替えのチラつき回避。viewBoxは同一） */
+.header .logo { position: relative; display: block; line-height: 0; }
 
 .header .logo img {
   display: block;
   height: 34px;
-  width: auto; /* logo.svg は 300x32。width:auto が無いと属性の160pxで横に潰れる */
+  width: auto; /* logo.svg は 402x42。width:auto が無いと属性値で横に潰れる */
+  transition: opacity .38s;
 }
+
+.header .logo .logo-light {
+  position: absolute;
+  left: 0;
+  top: 0;
+  filter: drop-shadow(0 1px 10px rgba(7, 36, 61, .55));
+}
+
+.header .logo .logo-dark { opacity: 0; }
+.header.is-scrolled .logo .logo-dark { opacity: 1; }
+.header.is-scrolled .logo .logo-light { opacity: 0; }
+
+.nav { margin-left: auto; transition: opacity .25s; }
 
 .nav ul {
   display: flex;
-  gap: 26px;
+  gap: 30px;
   align-items: center;
 }
 
 .nav a {
   font-size: 14px;
-  font-weight: 500;
-  color: var(--deep);
-}
-
-.nav a:hover {
-  color: var(--accent);
-}
-
-/* 現在地・ホバーのピンク下線（トップと同じ表現） */
-.nav a:not(.btn-line) {
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: #fff;
+  text-shadow: 0 1px 12px rgba(7, 36, 61, .45);
   position: relative;
-  padding: 8px 1px;
+  padding: 10px 1px;
+  transition: color .3s;
 }
 
-.nav a:not(.btn-line)::after {
+.header.is-scrolled .nav a { color: var(--deep); text-shadow: none; }
+.header.is-scrolled .nav a:hover { color: var(--accent); }
+
+/* 現在地・ホバーの下線は太く（打合せメモ「ラインを太く」） */
+.nav a::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 2px;
-  height: 2px;
+  bottom: 0;
+  height: 4px;
   background: var(--pink);
   transform: scaleX(0);
-  transform-origin: center;
+  transform-origin: left center;
   transition: transform .45s cubic-bezier(.2, .7, .2, 1);
 }
 
-.nav a:not(.btn-line):hover::after,
-.nav a[aria-current="page"]::after {
-  transform: scaleX(1);
-}
+.nav a:hover::after,
+.nav a[aria-current="page"]::after { transform: scaleX(1); }
 
-/* Hamburger — hidden on desktop */
+/* 波線ハンバーガー（PCでも表示） */
 .menu-toggle {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-left: 2px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .menu-toggle:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
-  border-radius: 0;
+  outline: 2px solid var(--pink);
+  outline-offset: 2px;
+}
+
+.menu-icon { width: 30px; height: 20px; overflow: visible; }
+
+.menu-icon .ml {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform .42s cubic-bezier(.2, .7, .2, 1), opacity .3s, stroke .38s;
+}
+
+.header.is-scrolled .menu-icon .ml { stroke: var(--deep); }
+.menu-toggle.is-open .ml1 { transform: translateY(9px) rotate(14deg); }
+.menu-toggle.is-open .ml2 { opacity: 0; }
+.menu-toggle.is-open .ml3 { transform: translateY(-9px) rotate(-14deg); }
+
+/* メニュー展開中はヘッダーを常に透明＋白ロゴに戻す */
+body.menu-open .header { background: transparent; box-shadow: none; }
+body.menu-open .header .logo .logo-dark { opacity: 0; }
+body.menu-open .header .logo .logo-light { opacity: 1; }
+body.menu-open .header .menu-icon .ml { stroke: #fff; }
+body.menu-open .header .nav { opacity: 0; pointer-events: none; }
+
+/* ============================================================
+   全画面メニュー
+   backdrop-filter は使わない（モバイルで重い／描画が崩れる）
+   ============================================================ */
+.gmenu {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  background: var(--deep);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s cubic-bezier(.2, .7, .2, 1), visibility .5s;
+}
+
+.gmenu.is-open { opacity: 1; visibility: visible; }
+
+.gmenu-inner {
+  height: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: calc(var(--header-h) + 6vh) var(--gut) 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(26px, 6vh, 56px);
+  overflow-y: auto;
+}
+
+.gmenu-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(8px, 2.2vh, 22px) 40px;
+}
+
+.gmenu-nav a {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .55s cubic-bezier(.2, .7, .2, 1), transform .55s cubic-bezier(.2, .7, .2, 1), color .3s;
+}
+
+.gmenu.is-open .gmenu-nav a { opacity: 1; transform: none; }
+.gmenu.is-open .gmenu-nav li:nth-child(1) a { transition-delay: .10s; }
+.gmenu.is-open .gmenu-nav li:nth-child(2) a { transition-delay: .16s; }
+.gmenu.is-open .gmenu-nav li:nth-child(3) a { transition-delay: .22s; }
+.gmenu.is-open .gmenu-nav li:nth-child(4) a { transition-delay: .28s; }
+.gmenu.is-open .gmenu-nav li:nth-child(5) a { transition-delay: .34s; }
+
+.gm-jp {
+  font-size: clamp(23px, 4.4vw, 38px);
+  font-weight: 900;
+  letter-spacing: .04em;
+  line-height: 1.35;
+}
+
+.gm-en {
+  font-family: var(--ff-en);
+  font-size: clamp(10px, 1.3vw, 12px);
+  font-weight: 600;
+  letter-spacing: .26em;
+  color: #79c0ea;
+  text-transform: uppercase;
+}
+
+.gmenu-nav a:hover .gm-jp,
+.gmenu-nav a[aria-current="page"] .gm-jp { color: var(--pink); }
+
+.gmenu-foot {
+  border-top: 1px solid rgba(255, 255, 255, .22);
+  padding-top: clamp(14px, 3vh, 24px);
+  color: #b7d4e8;
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+.gmenu-foot p { margin: 0; }
+
+.gmenu-foot a {
+  color: #b7d4e8;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.gmenu-foot a:hover { color: #fff; border-color: #fff; }
+
+.gmenu-copy {
+  font-family: var(--ff-en);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: #7b9ab0;
+  margin-top: 10px !important;
+}
+
+@media (max-width: 700px) {
+  .gmenu-nav ul { grid-template-columns: 1fr; }
+  .gmenu-inner { justify-content: flex-start; }
 }
 
 /* ============================================================
@@ -340,71 +493,12 @@ select {
 }
 
 /* ============================================================
-   MOBILE NAV (≤860px)
+   MOBILE NAV
+   横並びナビは900px以下で隠し、ハンバーガー→全画面メニューに任せる。
+   旧プルダウン（.nav.is-open の translateY）は撤去した。
    ============================================================ */
-@media (max-width: 860px) {
-  /* Suppress backdrop-filter on mobile (iOS repaint cost) */
-  .header { backdrop-filter: none; -webkit-backdrop-filter: none; }
-
-  /* Show hamburger button */
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 44px;
-    height: 44px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .menu-toggle span {
-    width: 24px;
-    height: 2px;
-    background: var(--deep);
-    transition: .3s;
-  }
-
-  /* Animate hamburger → X */
-  .menu-toggle.is-open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-
-  .menu-toggle.is-open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.is-open span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-
-  /* Slide-down full-width nav */
-  .nav {
-    position: fixed;
-    inset: 64px 0 auto 0;
-    background: #fff;
-    transform: translateY(-120%);
-    transition: transform .35s;
-    box-shadow: 0 12px 30px rgba(10, 77, 110, .12);
-  }
-
-  .nav.is-open {
-    transform: translateY(0);
-  }
-
-  .nav ul {
-    flex-direction: column;
-    gap: 0;
-    padding: 8px 0;
-  }
-
-  .nav li {
-    width: 100%;
-  }
-
-  .nav a {
-    display: block;
-    padding: 16px var(--gut);
-  }
+@media (max-width: 900px) {
+  .header .nav { display: none; }
 }
 
 /* ============================================================
@@ -948,7 +1042,8 @@ select {
 }
 
 .svc-hero-inner {
-  padding-top: clamp(64px, 11vw, 96px);
+  /* ヘッダーが fixed で浮いているぶん、その高さを足す */
+  padding-top: calc(var(--header-h) + clamp(28px, 7vw, 64px));
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: clamp(24px, 5vw, 56px);

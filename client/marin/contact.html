@@ -41,8 +41,10 @@
 <!-- ===== HEADER ===== -->
 <header class="header">
   <div class="wrap bar">
-    <a class="logo" href="index.html" aria-label="マリンケア訪問看護ステーション"><img src="images/logo.svg" alt="マリンケア訪問看護ステーション" width="160" height="34"></a>
-    <button class="menu-toggle" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="logo" href="index.html" aria-label="マリンケア訪問看護ステーション">
+      <img class="logo-dark" src="images/logo.svg" alt="マリンケア訪問看護ステーション" width="402" height="42">
+      <img class="logo-light" src="images/logo_white.svg" alt="" aria-hidden="true" width="402" height="42">
+    </a>
     <nav class="nav"><ul>
       <li><a href="index.html">トップ</a></li>
       <li><a href="recruit.html">採用情報</a></li>
@@ -50,8 +52,36 @@
       <li><a href="company.html">会社概要</a></li>
       <li><a href="contact.html" aria-current="page">お問い合わせ</a></li>
     </ul></nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="globalMenu">
+      <svg class="menu-icon" viewBox="0 0 46 30" aria-hidden="true">
+        <path class="ml ml1" d="M1,6 C12,12 34,0 45,6"/>
+        <path class="ml ml2" d="M1,15 C12,21 34,9 45,15"/>
+        <path class="ml ml3" d="M1,24 C12,30 34,18 45,24"/>
+      </svg>
+    </button>
   </div>
 </header>
+
+<!-- ===== 全画面メニュー ===== -->
+<div class="gmenu" id="globalMenu" inert>
+  <div class="gmenu-inner">
+    <nav class="gmenu-nav" aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html"><span class="gm-jp">トップ</span><span class="gm-en">Top</span></a></li>
+        <li><a href="recruit.html"><span class="gm-jp">採用情報</span><span class="gm-en">Recruit</span></a></li>
+        <li><a href="service.html"><span class="gm-jp">訪問看護内容</span><span class="gm-en">Service</span></a></li>
+        <li><a href="company.html"><span class="gm-jp">会社概要</span><span class="gm-en">Company</span></a></li>
+        <li><a href="contact.html" aria-current="page"><span class="gm-jp">お問い合わせ</span><span class="gm-en">Contact</span></a></li>
+      </ul>
+    </nav>
+    <div class="gmenu-foot">
+      <p class="gmenu-addr">〒814-0134 福岡県福岡市城南区<span class="nw">飯倉1-5-35</span></p>
+      <p class="gmenu-tel"><span class="nw">TEL <a href="tel:0924001821">092-400-1821</a></span></p>
+      <p class="gmenu-links"><a href="privacy.html">プライバシーポリシー</a></p>
+      <p class="gmenu-copy">&copy; MARIN株式会社</p>
+    </div>
+  </div>
+</div>
 
 <main>
 
