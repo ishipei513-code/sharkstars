@@ -418,3 +418,24 @@
   .lp-strip-grid { grid-template-columns: repeat(3, 1fr); gap: 7px; }
   .lp-band { min-height: 280px; }
 }
+
+/* ---------- スマホ・タブレットの見出しは中央揃え（2026-10-25） ----------
+   1カラムなので、見出しが左に寄っていると重心が偏る。
+   中央に置くと、下に続くカード・リスト（左揃え）との対比で見出しが立つ。
+   821px以上は横一列（左＝英字／右＝日本語）のままなので、ここだけに効かせる。 */
+@media (max-width: 820px) {
+  .lp-head--row { text-align: center; justify-items: center; }
+  .lp-head--row .lp-sub { justify-content: center; }
+  .lp-head--row .lp-head-l,
+  .lp-head--row .lp-head-r { width: 100%; }
+  /* 行が長いと中央揃えは読みにくいので、リードだけ幅を絞る */
+  .lp-head--row .lp-lead { max-width: 34em; margin-inline: auto; }
+
+  /* ファーストビューも同じ扱い（ページの主見出しなので揃える） */
+  .lp-fv-copy { text-align: center; }
+  .lp-fv-badges,
+  .lp-fv-btns { justify-content: center; }
+  .lp-fv-lead { max-width: 34em; margin-inline: auto; }
+
+  /* 最終CTAは元から中央 */
+}
