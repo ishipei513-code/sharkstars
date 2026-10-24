@@ -15,6 +15,23 @@
    英字が主役で日本語が従。左揃え。
    TVerは濃紺のベタ面も使うが、こちらは淡い面の方針なので面は借りない。 */
 .lp-head { text-align: left; margin-bottom: clamp(30px, 4.4vw, 54px); }
+
+/* 横一列：左に「小ラベル＋英字」、右に日本語。英字の下端と日本語の下端を揃える。
+   スマホは幅が足りず両方潰れるので、820px以下では縦積みに戻す。 */
+.lp-head--row { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media (min-width: 821px) {
+  .lp-head--row {
+    grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+    column-gap: clamp(28px, 4.5vw, 72px);
+    align-items: end;
+  }
+  .lp-head--row .lp-title { margin-top: 0; }
+  .lp-head--row .lp-head-r { padding-bottom: clamp(2px, .6vw, 8px); }
+  .lp-head--row .lp-head-l { min-width: 0; }
+  /* 横に並べると英字が幅を食う（REQUIREMENTS は12文字）。
+     横並びのときだけ一段小さくし、折り返さないようにする。 */
+  .lp-head--row .lp-en { font-size: clamp(30px, 4.6vw, 64px); white-space: nowrap; }
+}
 .lp-sub {
   display: flex;
   align-items: center;
