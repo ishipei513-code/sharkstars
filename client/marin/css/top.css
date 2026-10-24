@@ -176,40 +176,6 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
   .hero-scroll{font-size:10px;letter-spacing:.2em}
 }
 
-/* ===== 章扉（全画面）＝セクションの繋ぎ =====
-   ヒーローと同じ波の曲線で、前後のセクションの色から濃紺へ切り替える。
-   上辺の波は「前のセクションの色」、下辺の波は「次のセクションの色」で塗る。
-   章扉2だけは前が写真なので、波を statement 側（.st-wave）に置いている。 */
-.chapter{position:relative;min-height:72svh;display:grid;place-items:center;
-  background:var(--head);color:#fff;overflow:hidden;isolation:isolate;text-align:center}
-@media (min-width:901px){ .chapter{min-height:100vh;min-height:100svh} }
-
-.ch-wave{position:absolute;left:0;right:0;width:100%;height:clamp(64px,9vw,140px);display:block;z-index:1}
-.ch-wave--top{top:-1px}
-.ch-wave--bottom{bottom:-1px}
-/* ごくゆっくり上下に揺らす（海の呼吸。reduced-motion では止まる） */
-.ch-wave--top{animation:chWaveA 11s ease-in-out infinite alternate}
-.ch-wave--bottom{animation:chWaveB 13s ease-in-out infinite alternate}
-
-/* 章番号は透かし。背面に特大で置く */
-.ch-no{position:absolute;z-index:0;font-family:var(--ff-en);font-weight:900;line-height:1;
-  font-size:clamp(190px,34vw,430px);color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.16);
-  letter-spacing:-.02em;pointer-events:none;user-select:none}
-
-.ch-inner{position:relative;z-index:2;padding-inline:var(--gut)}
-.ch-en{font-family:var(--ff-en);font-weight:800;font-size:clamp(42px,8.5vw,116px);line-height:1;
-  letter-spacing:.02em;color:#fff}
-.ch-jp{font-size:clamp(17px,2.6vw,24px);font-weight:700;letter-spacing:.22em;color:#9fd3f2;
-  margin-top:clamp(14px,2.4vw,22px)}
-.ch-lead{font-size:clamp(13px,1.7vw,16px);color:#c3dcec;margin-top:clamp(16px,2.6vw,26px);line-height:2}
-
-/* ステートメント下端の濃紺の波（写真 → 章扉2 の繋ぎ） */
-.st-wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:clamp(64px,9vw,140px);
-  display:block;z-index:3;animation:chWaveB 13s ease-in-out infinite alternate}
-
-@keyframes chWaveA{from{transform:translateY(-5px)}to{transform:translateY(4px)}}
-@keyframes chWaveB{from{transform:translateY(4px)}to{transform:translateY(-5px)}}
-
 /* ===== マーキー帯（流れるキーワード・ホバーで停止） ===== */
 .marquee{overflow:hidden;background:var(--blue);padding:14px 0;white-space:nowrap}
 .marquee-track{display:inline-flex;will-change:transform;animation:marquee 42s linear infinite}
