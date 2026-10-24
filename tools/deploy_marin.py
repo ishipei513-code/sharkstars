@@ -346,7 +346,7 @@ def main():
             except Exception as e:
                 print('client/marin の走査に失敗: %s' % e)
             return
-        stamp = time.strftime('%Y%m%d')
+        stamp = time.strftime('%Y%m%d-%H%M%S')   # 同日に複数回でも衝突しない
         if a.rollback:
             rollback(ftp, webroot, a.rollback)
         elif a.deploy:
