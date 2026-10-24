@@ -312,7 +312,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(54px,8vw,106px) 0;background:linear-gradient(180deg,#dfeefa 0%,#cbe3f5 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024ci') center/cover;opacity:.3;pointer-events:none}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024ck') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
@@ -636,16 +636,15 @@ body.accent-orange{--pink:#ff8a3d}
   74% {transform:rotate(calc(var(--rot,0deg) + var(--r3,2deg)))
        translate(calc(var(--x3,16px) * var(--amp,1)), calc(var(--y3,6px) * var(--amp,1)))}
 }
-/* 画面が狭いと横70pxの流れで画面外へ出てしまうので、振れ幅だけ縮める */
-@media (max-width:820px){ .mo{--amp:.45} }
-@media (max-width:420px){ .mo{--amp:.34} }
+/* 移動量は vw（画面幅基準）で、行き先も「残っている余地」に収めてあるので
+   画面外には出ない。狭い画面でも大きく縮める必要はない。 */
+@media (max-width:820px){ .mo{--amp:.85} }
 
 /* 余白が足りない画面では本文にかかるので出さない。
    ただし対象は「左右のガターに置いたもの」だけ。
    隙間に散らした .mo--sc は本文とぶつからないので、ここでは消さない。 */
-@media (max-width:1199px){
-  .motifs .mo{display:none}
-}
+/* 全面配置になったので狭い画面でも隠さない。
+   本文に重なるものは位置そのものを直してある。 */
 
 /* ===== セクションの繋ぎ：アーチで滑り込ませる（参考：meisei.ac.jp/kg・2026-10-24）=====
    固定したステートメント写真の上を、次のセクションがアーチ型の縁で滑り上がる。
@@ -692,11 +691,7 @@ body.accent-orange{--pink:#ff8a3d}
 .mo--i2{right:2.5%;top:58%;width:clamp(28px,2.5vw,44px);aspect-ratio:40/24;animation-delay:1.7s}
 
 
-/* 本文幅が画面いっぱいになる＝ガターが無い画面では線画を出さない。
-   理念・採用CTAの既存モチーフも同じ理由でここに含めている。 */
-@media (max-width:1300px){
-  .motifs{display:none}
-}
+
 
 /* staff のカード群と数字ブロックの間（200px以上空く）に淡い波を1本通す */
 /* 面の色が変わるので、波のラインもその面の色相に寄せる */
@@ -725,8 +720,7 @@ body.accent-orange{--pink:#ff8a3d}
    はみ出した分だけがチラッと見える＝参考サイトの見え方になるうえ、
    万一ブロックに重なっても文字が読めなくなることがない。
    セクションの背景より手前なので、余白では普通に見える。 */
-.scatter{position:absolute;left:0;top:100%;width:100%;height:0;
-  display:block;z-index:-1;pointer-events:none}
+
 
 /* 形ごとの縦横比（viewBox と合わせる） */
 .mo-wave{aspect-ratio:40/24}
@@ -743,8 +737,9 @@ body.accent-orange{--pink:#ff8a3d}
 .mo-bubble{aspect-ratio:1}
 
 /* 位置・大きさ・傾き・間はインラインのカスタムプロパティで1つずつ指定している */
-.mo--x,.mo--sc{left:var(--l,auto);right:var(--r,auto);top:var(--t,0);
-  width:var(--s,26px);height:auto;opacity:var(--o,.24)}
+/* 位置・大きさ・濃さ・経路は1つずつインラインで持たせている */
+.mo{left:var(--l,auto);top:var(--t,auto);
+  width:var(--s,26px);height:auto;opacity:var(--o,.36)}
 
 /* 速さ・経路は要素ごとに持たせているので、ここでまとめて散らす必要はない */
 
@@ -752,34 +747,7 @@ body.accent-orange{--pink:#ff8a3d}
 .mo--pink{stroke:var(--pink)}
 .mo--sun{stroke:#dd8d16}
 
-/* ===== スマホでのアイコンの居場所（2026-10-24）=====
-   スマホは隙間が33〜49pxしかない場所があり、そこへ2段ぶんを詰め込んだ結果
-   アイコンが1列に潰れて、すぐ下のボタンと窮屈にぶつかって見えていた。
-   「残った隙間に押し込む」のをやめて、**アイコンのための帯を確保する**。
-   基準要素に margin-bottom を入れ、その帯の中で上段・下段に置き直す。
-   margin は隣接マージンと相殺されるので、既に広い場所（Instagramの139pxなど）
-   では何も起きない。 */
-@media (max-width:900px){
-  /* アイコンの上下を揃えるため、**素の空きに応じて足す量を変える**。
-     一律に足すと、もともと空いている場所では下にだけ余白が偏る（石橋さん指摘）。
-     素の空き：理念15 / 事業内容51 / 選ばれる理由54 / はたらく人の声120 /
-               Instagram107 / 採用65 / 利用者の声0 → 目標は約102px */
-  .phi-body{margin-bottom:80px}
-  .biz-grid{margin-bottom:46px}
-  .strength-grid{margin-bottom:44px}
-  .recruit-text{margin-bottom:32px}
-  /* はたらく人の声とInstagramは素のままで空きが足りているので、
-     帯を足す代わりにアイコンを少し下げて上下を均す */
-  .staff .mo--sc{top:29px}
-  .staff .mo--sc.is-far{top:65px}
-  .insta .mo--sc{top:41px}
-  .insta .mo--sc.is-far{top:77px}
-  .mo--sc{top:20px}
-  .mo--sc.is-far{top:56px}
-  /* 本数は間引かない。帯を確保したので全部置ける */
-  .scatter .mo--sc:nth-child(4n+3){display:revert}
-}
-@media (max-width:420px){
-  .scatter .mo--sc:nth-child(5n+4){display:none}
-}
+/* アイコンはセクション全面に散らすようになったので、
+   「帯を確保する」ための指定（margin-bottom と段の top）は不要になった。
+   そのぶんページも短くなる。 */
 
