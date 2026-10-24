@@ -288,6 +288,9 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .biz{padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#d2eeea 0%,#dfeefa 100%)}
 .biz-lead{max-width:680px;margin:18px auto 0;color:var(--sub);font-size:15px;line-height:2}
 .biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+/* 参考 hanabi-nurse.co.jp：サービスは箇条書きの前に「何をするか」を文章で書く */
+.biz-col-lead{color:var(--sub);font-size:clamp(13px,1.6vw,14.5px);line-height:1.95;
+  margin:0 0 22px;padding-bottom:20px;border-bottom:1px solid var(--line)}
 .biz-col{position:relative;background:linear-gradient(180deg,#ffffff 0%,#f6fbff 100%);border:1px solid var(--line);box-shadow:var(--shadow);padding:32px 30px;overflow:hidden}
 .biz-col--nurse{--accent:#ff5d8f}
 .biz-col--reha{--accent:#005aaa}
@@ -309,7 +312,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#dfeefa 0%,#cbe3f5 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024bd') center/cover;opacity:.3;pointer-events:none}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024be') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
