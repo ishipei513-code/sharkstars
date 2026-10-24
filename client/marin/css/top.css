@@ -215,7 +215,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .coverflow{padding:clamp(30px,4.5vw,64px) 0;overflow:hidden;
   background-image:linear-gradient(rgba(0,90,170,.05) 1px,transparent 1px),
     linear-gradient(90deg,rgba(0,90,170,.05) 1px,transparent 1px),
-    linear-gradient(180deg,var(--band) 0%,#ffffff 100%);
+    linear-gradient(180deg,#e6f6f4 0%,#d2eeea 100%);
   background-size:46px 46px,46px 46px,100% 100%;
   background-repeat:repeat,repeat,no-repeat}
 .cf-stage{position:relative;max-width:1180px;margin-inline:auto;height:clamp(250px,40vw,440px);perspective:1600px}
@@ -247,7 +247,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .sec-head h2{font-size:clamp(30px,6.4vw,62px);font-weight:900;color:var(--head);margin-top:8px;line-height:1.26;letter-spacing:.01em}
 
 /* ===== 02 philosophy（ラベル＋色付きキーワード＋中央区切り） ===== */
-.philosophy{padding:clamp(62px,9vw,120px) 0;text-align:center;background:linear-gradient(180deg,#ffffff 0%,#e6f6f4 100%)}
+.philosophy{padding:clamp(62px,9vw,120px) 0;text-align:center;background:linear-gradient(180deg,#d6e9f7 0%,#ffffff 100%)}
 /* PCでは理念を1画面に。写真を外してコピーだけになったので、画面を占有させて読ませる */
 @media (min-width:901px){
   .philosophy{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(80px,9vh,130px)}
@@ -312,7 +312,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(54px,8vw,106px) 0;background:linear-gradient(180deg,#dfeefa 0%,#cbe3f5 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024cb') center/cover;opacity:.3;pointer-events:none}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024cd') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
@@ -346,7 +346,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 main > section{position:relative;z-index:1}
 .statement{z-index:0}
 .access{background:linear-gradient(180deg,#fdeedd 0%,#dcebf8 100%)}
-.routes{background:linear-gradient(180deg,#e6f6f4 0%,#d2eeea 100%)}
+.routes{background:linear-gradient(180deg,#ffffff 0%,#e6f6f4 100%)}
 .statement-bg{position:absolute;inset:0;background-size:cover;background-position:center}
 .statement::after{content:"";position:absolute;inset:0;background:rgba(8,36,64,.48)}
 .statement-inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut);text-align:center;color:#fff}
@@ -610,7 +610,8 @@ body.accent-orange{--pink:#ff8a3d}
 .motifs{position:absolute;inset:0;pointer-events:none;z-index:0}
 .mo{position:absolute;fill:none;stroke:var(--blue);stroke-width:2;
   stroke-linecap:round;stroke-linejoin:round;opacity:.22;
-  animation:moFloat 7s ease-in-out infinite alternate}
+  /* 水に浮いたものがゆっくり漂うように、円を描いて動かし続ける */
+  animation:moDrift 10s linear infinite}
 .mo use{fill:none}
 
 /* 理念：左右の余白に5つ */
@@ -625,7 +626,13 @@ body.accent-orange{--pink:#ff8a3d}
 .mo--7{right:4%;top:78%;width:clamp(28px,3.2vw,48px);aspect-ratio:40/24;animation-delay:1.2s}
 .mo--8{right:8.5%;top:70%;width:clamp(15px,1.6vw,22px);aspect-ratio:24/30;animation-delay:2.2s;opacity:.18}
 
-@keyframes moFloat{from{transform:translateY(-4px) rotate(-2deg)}to{transform:translateY(5px) rotate(2deg)}}
+@keyframes moDrift{
+  0%  {transform:rotate(var(--rot,0deg))                 translate(0,-9px)}
+  25% {transform:rotate(calc(var(--rot,0deg) + 3.5deg))  translate(7px,0)}
+  50% {transform:rotate(var(--rot,0deg))                 translate(0,9px)}
+  75% {transform:rotate(calc(var(--rot,0deg) - 3.5deg))  translate(-7px,0)}
+  100%{transform:rotate(var(--rot,0deg))                 translate(0,-9px)}
+}
 
 /* 余白が足りない画面では本文にかかるので出さない。
    ただし対象は「左右のガターに置いたもの」だけ。
@@ -732,11 +739,15 @@ body.accent-orange{--pink:#ff8a3d}
 /* 位置・大きさ・傾き・間はインラインのカスタムプロパティで1つずつ指定している */
 .mo--x,.mo--sc{left:var(--l,auto);right:var(--r,auto);top:var(--t,0);
   width:var(--s,26px);height:auto;opacity:var(--o,.24);
-  animation-name:moFloat2;animation-delay:var(--d,0s)}
-@keyframes moFloat2{
-  from{transform:rotate(var(--rot,0deg)) translateY(-4px)}
-  to{transform:rotate(var(--rot,0deg)) translateY(5px)}
-}
+  animation-delay:var(--d,0s)}
+
+/* 速さを散らす。全部が同じ周期だと一斉に同じ向きへ動いて機械的に見える */
+.mo:nth-child(4n+1){animation-duration:9s}
+.mo:nth-child(4n+2){animation-duration:12.5s}
+.mo:nth-child(4n+3){animation-duration:10.5s}
+.mo:nth-child(4n+4){animation-duration:14s}
+/* 半分は逆回りにして、流れが揃わないようにする */
+.mo:nth-child(odd){animation-direction:reverse}
 
 /* 色も増やす。青一色だと数を増やしても賑やかにならない */
 .mo--pink{stroke:var(--pink)}
