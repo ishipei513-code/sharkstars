@@ -309,7 +309,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#dcecf8 0%,#eef7fd 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg') center/cover;opacity:.3;pointer-events:none}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024ai') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
@@ -335,7 +335,9 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 /* ===== 全幅ステートメント（メリハリ：大きな写真＋特大コピー） ===== */
 /* ===== セクションの繋ぎ：ステートメントの写真を固定し、次のセクションが上を滑って覆う =====
    新しい「空の画面」を足さずにリズムだけ作る。濃い面は増やさない。 */
-.statement{position:sticky;top:0;min-height:72svh;display:flex;align-items:center;overflow:hidden;z-index:0}
+.statement{position:sticky;top:0;min-height:72svh;display:flex;align-items:center;overflow:hidden;z-index:0;
+  /* コピーを少し上に寄せる。下の余白をアーチが先に通るので、文字が弧で欠けて見えない */
+  padding-bottom:clamp(56px,11vh,150px)}
 @media (min-width:901px){ .statement{min-height:100vh;min-height:100svh} }
 /* 固定した写真の上に後続セクションを重ねる。透明だと写真が透けるので背景を明示する */
 main > section{position:relative;z-index:1}
@@ -533,12 +535,14 @@ body.accent-orange{--pink:#ff8a3d}
    効くのは「中央に揃った箱の連続」を崩すこと＝画面端へのはみ出し。
    列ごとの段差や左右の互い違いは「変」とのことで撤去した（2026-10-24）。 */
 
-/* Instagramのモザイクは画面いっぱいまではみ出す。写真が並ぶ枠なので端まで出ると効く */
+/* Instagramのモザイクは画面いっぱいまではみ出し、上辺を大円弧で切り抜く
+   （参考 meisei.ac.jp/kg の写真帯。色面を重ねるのではなく、写真そのものを弧で切る） */
 .insta-mosaic{
   width:100vw;
   margin-inline:calc(50% - 50vw);
   padding-inline:clamp(10px,2vw,28px);
   border-radius:0;
+  clip-path:url(#arcTop);   /* 上辺を大円弧で切る。padding を入れると弧が写真に届かないので入れない */
 }
 
 /* ===== 切り抜き写真を余白に散らす（参考：meisei.ac.jp/kg・2026-10-24）=====
@@ -601,3 +605,12 @@ body.accent-orange{--pink:#ff8a3d}
   .mo{display:none}
 }
 
+/* ===== セクションの繋ぎ：アーチで滑り込ませる（参考：meisei.ac.jp/kg・2026-10-24）=====
+   固定したステートメント写真の上を、次のセクションがアーチ型の縁で滑り上がる。
+   セクションの上辺に楕円のドームを足すと、左右の角でぴったり合流して「一本の弧」になる。
+   高さは px の clamp なのでセクションの高さに左右されない。
+   ※ 当初ステートメント側の下端にSVGの弧を置いたが、上を滑る staff に覆われて
+     まったく見えなかった。弧は「滑り込む側の縁」に付けるのが正しい。 */
+.staff::before{content:"";position:absolute;left:-1px;right:-1px;bottom:100%;
+  height:clamp(40px,6.4vw,104px);background:#e3f1fb;
+  border-radius:50% 50% 0 0 / 100% 100% 0 0;pointer-events:none}
