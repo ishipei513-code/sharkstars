@@ -309,7 +309,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#dcecf8 0%,#eef7fd 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024ap') center/cover;opacity:.3;pointer-events:none}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024aw') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
@@ -556,7 +556,9 @@ body.accent-orange{--pink:#ff8a3d}
 .cut{position:absolute;bottom:0;height:auto;width:auto;
   /* 横長の切り抜きに差し替えたとき、本文まで伸びて重なった事故があったので
      幅にも上限をかけている（余白の幅を超えさせない）。 */
-  max-width:clamp(130px,15vw,300px);
+  /* 本文幅1134pxに対する左右のガターは、1440pxで153px・1366pxで116px しかない。
+     8vw なら 1440px で115px に収まり、文字に届かない。 */
+  max-width:clamp(104px,8vw,240px);
   filter:drop-shadow(0 18px 26px rgba(16,58,92,.16))}
 
 /* 理念：左は立ち姿、右は両手を広げる */
@@ -603,9 +605,11 @@ body.accent-orange{--pink:#ff8a3d}
 
 @keyframes moFloat{from{transform:translateY(-4px) rotate(-2deg)}to{transform:translateY(5px) rotate(2deg)}}
 
-/* 余白が足りない画面では本文にかかるので出さない（1200px以上だけ） */
+/* 余白が足りない画面では本文にかかるので出さない。
+   ただし対象は「左右のガターに置いたもの」だけ。
+   隙間に散らした .mo--sc は本文とぶつからないので、ここでは消さない。 */
 @media (max-width:1199px){
-  .mo{display:none}
+  .motifs .mo{display:none}
 }
 
 /* ===== セクションの繋ぎ：アーチで滑り込ませる（参考：meisei.ac.jp/kg・2026-10-24）=====
@@ -660,4 +664,57 @@ body.accent-orange{--pink:#ff8a3d}
   margin:clamp(30px,4.6vw,70px) 0 clamp(6px,1vw,14px);
   fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round;opacity:.22;
   pointer-events:none}
+
+/* ===== わちゃわちゃ増量（2026-10-24）=====
+   石橋さん「もうちょっとわちゃわちゃした感じがいいな」
+
+   モチーフを4種類→12種類に増やし、数も増やした。
+   これまで左右のガターにしか置いておらず1300px未満では全部消えていた＝
+   石橋さんが見ているスマホでは何も増えていなかったので、
+   「ブロックの真下の隙間に横いっぱいへ散らす」系統（.mo--sc）を足した。
+
+   位置決めは **基準要素の中に入れて top:100%**。
+   兄弟として置いて static position に任せると、親が grid だったり段落をまたいだときに
+   想定外の場所へ飛ぶ（実際に本文へ重なった）。基準要素の下端からの px なら安定する。
+   span なので <p> の中にも入れられる。高さ0・絶対配置なのでレイアウトには影響しない。 */
+.philosophy > .wrap,.phi-body,.route-grid,.biz-meta,.strength-grid,.staff-grid,
+.insta-head,.recruit-text,.voice-grid,.access .sec-head{position:relative}
+/* z-index:-1 ＝ カードや写真の「背面」。
+   はみ出した分だけがチラッと見える＝参考サイトの見え方になるうえ、
+   万一ブロックに重なっても文字が読めなくなることがない。
+   セクションの背景より手前なので、余白では普通に見える。 */
+.scatter{position:absolute;left:0;top:100%;width:100%;height:0;
+  display:block;z-index:-1;pointer-events:none}
+
+/* 形ごとの縦横比（viewBox と合わせる） */
+.mo-wave{aspect-ratio:40/24}
+.mo-drop{aspect-ratio:24/30}
+.mo-shell{aspect-ratio:30/28}
+.mo-star{aspect-ratio:1}
+.mo-fish{aspect-ratio:34/22}
+.mo-sun{aspect-ratio:1}
+.mo-cloud{aspect-ratio:40/24}
+.mo-ring{aspect-ratio:1}
+.mo-heart{aspect-ratio:26/24}
+.mo-plus{aspect-ratio:1}
+.mo-boat{aspect-ratio:32/28}
+.mo-bubble{aspect-ratio:1}
+
+/* 位置・大きさ・傾き・間はインラインのカスタムプロパティで1つずつ指定している */
+.mo--x,.mo--sc{left:var(--l,auto);right:var(--r,auto);top:var(--t,0);
+  width:var(--s,26px);height:auto;opacity:var(--o,.24);
+  animation-name:moFloat2;animation-delay:var(--d,0s)}
+@keyframes moFloat2{
+  from{transform:rotate(var(--rot,0deg)) translateY(-4px)}
+  to{transform:rotate(var(--rot,0deg)) translateY(5px)}
+}
+
+/* 色も増やす。青一色だと数を増やしても賑やかにならない */
+.mo--pink{stroke:var(--pink)}
+.mo--sun{stroke:#f0a93a}
+
+/* 狭い画面は隙間自体が狭いので、本数を間引いて密度を揃える */
+@media (max-width:420px){
+  .scatter .mo--sc:nth-child(4n+3){display:none}
+}
 
