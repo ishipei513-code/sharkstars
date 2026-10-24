@@ -298,7 +298,15 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 @media (max-width:760px){.biz-grid{grid-template-columns:1fr}.strength-grid{grid-template-columns:1fr;margin-top:60px}}
 
 /* ===== 全幅ステートメント（メリハリ：大きな写真＋特大コピー） ===== */
-.statement{position:relative;min-height:clamp(380px,54vw,600px);display:flex;align-items:center;overflow:hidden}
+/* ===== セクションの繋ぎ：ステートメントの写真を固定し、次のセクションが上を滑って覆う =====
+   新しい「空の画面」を足さずにリズムだけ作る。濃い面は増やさない。 */
+.statement{position:sticky;top:0;min-height:72svh;display:flex;align-items:center;overflow:hidden;z-index:0}
+@media (min-width:901px){ .statement{min-height:100vh;min-height:100svh} }
+/* 固定した写真の上に後続セクションを重ねる。透明だと写真が透けるので背景を明示する */
+main > section{position:relative;z-index:1}
+.statement{z-index:0}
+.access{background:var(--bg)}
+.routes{background:var(--bg)}
 .statement-bg{position:absolute;inset:0;background-size:cover;background-position:center}
 .statement::after{content:"";position:absolute;inset:0;background:rgba(8,36,64,.48)}
 .statement-inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut);text-align:center;color:#fff}
