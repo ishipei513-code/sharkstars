@@ -141,7 +141,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .hero-shot:nth-child(2) img{object-position:55% 38%}   /* hero-03：海を望む。頭と水平線を残すため上寄り */
 .hero-shot:nth-child(3) img{object-position:58% 42%}   /* hero-01：被写体が右寄りなので右へ */
 .hero-shot img{animation:heroZoom 16s ease-in-out infinite alternate}
-.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,36,61,.56) 0%,rgba(7,36,61,.16) 24%,rgba(7,36,61,.05) 42%,rgba(7,36,61,.32) 72%,rgba(7,36,61,.56) 100%)}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,36,61,.56) 0%,rgba(7,36,61,.16) 24%,rgba(7,36,61,.06) 40%,rgba(7,36,61,.34) 62%,rgba(7,36,61,.56) 78%,rgba(7,36,61,.64) 100%)}
 
 .hero-foot{position:absolute;left:0;right:0;bottom:0;z-index:2}
 .hero-copy{margin:0;line-height:0}
@@ -149,8 +149,14 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .hero-arc--sp{display:none}
 .arc-fill{fill:var(--blue)}
 .arc-en{font-family:var(--ff-en);font-weight:800;fill:#fff}
-/* 写真に重なる部分の可読性を確保（白文字が明るい被写体に埋もれるため） */
-.arc-en,.arc-jp{filter:drop-shadow(0 2px 12px rgba(7,36,61,.55))}
+/* 写真に重なる部分の可読性を確保。影だけでは明るい被写体（白い壁・グレーの制服）に
+   埋もれるため、paint-order で文字の外側に濃紺の縁取りを回す */
+.arc-en,.arc-jp{paint-order:stroke fill;stroke:rgba(7,36,61,.55);stroke-linejoin:round;
+  filter:drop-shadow(0 2px 10px rgba(7,36,61,.45))}
+.hero-arc--pc .arc-jp{stroke-width:7px}
+.hero-arc--pc .arc-en{stroke-width:10px}
+.hero-arc--sp .arc-jp{stroke-width:5px}
+.hero-arc--sp .arc-en{stroke-width:3px}
 .arc-jp{font-family:var(--ff-jp);font-weight:700;fill:#fff}
 .hero-arc--pc .arc-en{font-size:88px}
 .hero-arc--pc .arc-jp{font-size:28px}
@@ -158,19 +164,16 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .hero-arc--sp .arc-jp{font-size:36px;font-weight:900}
 
 .hero-band{background:var(--blue);padding-bottom:max(8px,env(safe-area-inset-bottom))}
-.hero-band-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px}
+.hero-band-row{display:flex;align-items:center;gap:16px;min-height:56px}
 .hero-scroll{display:inline-flex;align-items:center;gap:11px;color:#fff;text-decoration:none;font-family:var(--ff-en);font-size:11px;letter-spacing:.26em;font-weight:600}
 .hero-scroll-dot{position:relative;width:26px;height:26px;flex:none;border:1px solid rgba(255,255,255,.5);border-radius:50%}
 .hero-scroll-dot::after{content:"";position:absolute;left:50%;top:50%;width:1px;height:9px;background:#fff;animation:scrollDot 2.4s ease-in-out infinite}
-.hero-sub{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:.06em;border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:3px;transition:gap .3s,border-color .3s}
-.hero-sub:hover{gap:14px;border-color:#fff}
 @media (max-width:700px){
   /* スマホは被写体中心に切り出し済み。nth-child の指定より詳細度を上げて中央寄せに戻す */
   .hero-shot:nth-child(1) img,.hero-shot:nth-child(2) img,.hero-shot:nth-child(3) img{object-position:50% 45%}
   .hero-arc--pc{display:none}
   .hero-arc--sp{display:block}
   .hero-scroll{font-size:10px;letter-spacing:.2em}
-  .hero-sub{font-size:13px}
 }
 
 /* ===== マーキー帯（流れるキーワード・ホバーで停止） ===== */
@@ -447,7 +450,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 /* ===== 追従FAB（円形・白背景で常に視認可） ===== */
 .recruit-fab{position:fixed;right:30px;bottom:22px;z-index:60;opacity:0;transform:translateY(10px);transition:.45s}
 .recruit-fab.is-ready{opacity:1;transform:none}
-.recruit-fab.is-nav-open,.recruit-fab.is-over-hero{opacity:0;pointer-events:none}
+.recruit-fab.is-nav-open{opacity:0;pointer-events:none}
 .recruit-fab-btn{display:block;line-height:0;text-decoration:none}
 .recruit-fab-btn svg{width:112px;height:112px;overflow:visible}
 .fab-ring{transform-origin:50px 50px;animation:spin 36s linear infinite}
@@ -455,7 +458,8 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .fab-core{fill:var(--pink);filter:drop-shadow(0 6px 14px rgba(255,93,143,.5))}
 .fab-jp{fill:#fff;font-weight:800;font-size:15px;font-family:var(--ff-jp)}
 .recruit-fab-btn:hover .fab-ring{animation-duration:9s}
-@media (max-width:760px){.recruit-fab-btn svg{width:94px;height:94px}}
+/* スマホは帯のカーブ文字と重ならないよう、少し小さく角に寄せる */
+@media (max-width:760px){.recruit-fab{right:16px;bottom:16px}.recruit-fab-btn svg{width:82px;height:82px}}
 
 /* ===== オレンジ・アクセントA/B（body.accent-orange で一括差し替え） ===== */
 body.accent-orange{--pink:#ff8a3d}

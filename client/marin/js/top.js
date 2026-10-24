@@ -3,14 +3,12 @@
   'use strict';
   var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // 1) header scrolled ＋ ヒーロー表示中はフローティングCTAを隠す
-  //    （波帯の右下リンクと重なるため。メニュー開閉の is-nav-open とは別クラスで管理する）
+  // 1) header scrolled
+  //    ピンクの丸ボタン（#recruitFab）はヒーロー上でも出しっぱなしにする。
+  //    帯の中にあったテキストリンクは撤去して、採用への導線をこのボタン1つに寄せた。
   var header=document.querySelector('.header');
-  var heroEl=document.querySelector('.hero');
-  var fabEl=document.getElementById('recruitFab');
   var onScroll=function(){
     if(header) header.classList.toggle('is-scrolled', window.scrollY>20);
-    if(fabEl&&heroEl) fabEl.classList.toggle('is-over-hero', window.scrollY < heroEl.offsetHeight*0.6);
   };
   onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
   window.addEventListener('resize',onScroll,{passive:true});
