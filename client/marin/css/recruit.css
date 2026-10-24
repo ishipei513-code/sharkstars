@@ -120,7 +120,7 @@
   overflow: hidden;
   box-shadow: 0 26px 60px rgba(16, 58, 92, .16);
 }
-.lp-fv-photo img { width: 100%; aspect-ratio: 1500 / 1136; height: auto; object-fit: cover; display: block; }
+.lp-fv-photo img { width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: cover; display: block; }
 
 /* ---------- 02 不安 → 答え ---------- */
 .lp-worry { background: linear-gradient(180deg, #ffffff 0%, #e6f6f4 100%); }
