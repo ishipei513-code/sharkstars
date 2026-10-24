@@ -110,8 +110,11 @@
 .lp-fv-en {
   font-family: var(--ff-en);
   font-weight: 700;
-  font-size: clamp(38px, 11vw, 124px);
-  line-height: .88;
+  /* 1行で出すので、FVの左カラム（1440pxで約572px）に収まる上限にしている。
+     10文字 × 約0.58em × 90px ≒ 522px。折り返しも禁止。 */
+  font-size: clamp(34px, 7.2vw, 90px);
+  white-space: nowrap;
+  line-height: 1.02;
   letter-spacing: -.03em;
   color: var(--accent);
   margin-top: 18px;
@@ -428,14 +431,20 @@
   .lp-head--row .lp-sub { justify-content: center; }
   .lp-head--row .lp-head-l,
   .lp-head--row .lp-head-r { width: 100%; }
-  /* 行が長いと中央揃えは読みにくいので、リードだけ幅を絞る */
-  .lp-head--row .lp-lead { max-width: 34em; margin-inline: auto; }
+  /* 見出しは中央でよいが、**本文は左揃え**に戻す。
+     日本語の長い文を中央に置くと行頭が毎行ずれて読みにくい（実機で確認）。 */
+  .lp-head--row .lp-lead { text-align: left; max-width: 34em; margin-inline: auto; }
 
   /* ファーストビューも同じ扱い（ページの主見出しなので揃える） */
   .lp-fv-copy { text-align: center; }
   .lp-fv-badges,
   .lp-fv-btns { justify-content: center; }
-  .lp-fv-lead { max-width: 34em; margin-inline: auto; }
+  .lp-fv-lead { text-align: left; max-width: 34em; margin-inline: auto; }
 
   /* 最終CTAは元から中央 */
 }
+
+/* 日本語の改行位置を文節で区切る（「マリンケ／ア」のような途中改行を避ける）。
+   対応していないブラウザでは従来どおりの改行になるだけ。 */
+.lp-fv-title, .lp-title, .lp-cta-title, .lp-fv-lead, .lp-lead,
+.lp-answer h3, .lp-worry-card b { word-break: auto-phrase; }

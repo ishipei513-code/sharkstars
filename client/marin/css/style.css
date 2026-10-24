@@ -1028,7 +1028,7 @@ select {
 .svc-hero-photo {
   position: absolute;
   inset: 0;
-  background-image: url('../images/sea.jpg?v=261025a');
+  background-image: url('../images/sea.jpg?v=261025d');
   background-size: cover;
   background-position: center 55%;
   z-index: -2;
