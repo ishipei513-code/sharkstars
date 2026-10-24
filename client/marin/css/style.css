@@ -1025,7 +1025,7 @@ select {
 .svc-hero-photo {
   position: absolute;
   inset: 0;
-  background-image: url('../images/sea.jpg?v=261024cn');
+  background-image: url('../images/sea.jpg?v=261024cq');
   background-size: cover;
   background-position: center 55%;
   z-index: -2;
@@ -2229,68 +2229,3 @@ main { background: linear-gradient(180deg,
 .card, .svc-card, .info-card, .flow-item, .faq-item, .contact-card {
   background-image: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
 }
-
-/* ============================================================
-   採用ページの追加ブロック（2026-10-24）
-   ・A DAY … 既存の .rec-steps に時刻を足しただけ
-   ・VOICE … 既存の .voice-grid / .voice-card を流用
-   ・FAQ  … details/summary。JSなしで開閉できる
-   ============================================================ */
-.rec-steps--day .rec-step { padding-top: 6px; }
-.day-time {
-  display: inline-block;
-  font-family: var(--ff-en);
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: .06em;
-  color: var(--accent);
-  background: #eaf4fc;
-  border-radius: 999px;
-  padding: 3px 11px;
-  margin-bottom: 8px;
-}
-.voice-role {
-  margin-top: 14px;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--accent);
-}
-.rec-tag--abs { position: absolute; top: 12px; right: 14px; }
-
-.rec-faq { display: grid; gap: 12px; }
-.rec-faq-item {
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: #fff;
-  overflow: hidden;
-}
-.rec-faq-item > summary {
-  cursor: pointer;
-  list-style: none;
-  padding: 16px clamp(44px, 6vw, 56px) 16px clamp(16px, 2.4vw, 22px);
-  font-weight: 700;
-  color: var(--deep);
-  position: relative;
-}
-.rec-faq-item > summary::-webkit-details-marker { display: none; }
-.rec-faq-item > summary::after {
-  content: "";
-  position: absolute;
-  right: clamp(16px, 2.4vw, 22px);
-  top: 50%;
-  width: 10px; height: 10px;
-  margin-top: -6px;
-  border-right: 2px solid var(--accent);
-  border-bottom: 2px solid var(--accent);
-  transform: rotate(45deg);
-  transition: transform .25s;
-}
-.rec-faq-item[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
-.rec-faq-item > p {
-  margin: 0;
-  padding: 0 clamp(16px, 2.4vw, 22px) 18px;
-  color: var(--muted);
-  font-size: clamp(13px, 2vw, 14.5px);
-  line-height: 1.95;
-}
-.rec-faq-item > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
