@@ -309,7 +309,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#dfeefa 0%,#cbe3f5 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024bb') center/cover;opacity:.3;pointer-events:none}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024bd') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
@@ -545,41 +545,30 @@ body.accent-orange{--pink:#ff8a3d}
   clip-path:url(#arcTop);   /* 上辺を大円弧で切る。padding を入れると弧が写真に届かないので入れない */
 }
 
-/* ===== 切り抜き写真を余白に散らす（参考：meisei.ac.jp/kg・2026-10-24）=====
-   rembg(u2net) で背景を抜いたアルファ付きWebP。文章の左右に置いて、
-   テキストだけのセクションに人の気配を入れる。
-   文章には重ねない（読みづらくなるので、本文の外側だけに置く）。 */
+/* ===== 切り抜き写真を余白にバラバラに散らす（参考：meisei.ac.jp/kg）=====
+   rembg(u2net) で背景を抜いたアルファ付きWebP。10枚を8セクションに分散。
+
+   以前は理念と採用CTAの2箇所だけ、しかも全部「下端に揃えて左右対称」で、
+   置き方が規則的すぎた（石橋さん「等間隔ではなくて」）。
+   縦位置（--t / --b）・幅（--w）・左右を1枚ずつバラバラに指定している。
+
+   置ける幅の制約：本文幅1134pxに対する左右のガターは
+     1920px→393px / 1600px→233px / 1440px→153px / 1366px→116px
+   ガターが足りない 1400px 未満では出さない。スマホは余白そのものが無いので、
+   人物ではなく線画モチーフ（.mo--sc）で賑やかさを作っている。 */
 .philosophy,.recruit{position:relative;overflow:hidden}
 .cutouts{position:absolute;inset:0;pointer-events:none;z-index:0}
-.philosophy > .wrap,.recruit > .wrap{position:relative;z-index:1}
+.philosophy > .wrap,.recruit > .wrap,.strengths > .wrap{position:relative;z-index:1}
 
-.cut{position:absolute;bottom:0;height:auto;width:auto;
-  /* 横長の切り抜きに差し替えたとき、本文まで伸びて重なった事故があったので
-     幅にも上限をかけている（余白の幅を超えさせない）。 */
-  /* 本文幅1134pxに対する左右のガターは、1440pxで153px・1366pxで116px しかない。
-     8vw なら 1440px で115px に収まり、文字に届かない。 */
-  max-width:clamp(104px,8vw,240px);
-  filter:drop-shadow(0 18px 26px rgba(16,58,92,.16))}
+.cutx{position:absolute;
+  left:var(--l,auto);right:var(--r,auto);
+  top:var(--t,auto);bottom:var(--b,auto);
+  width:var(--w,110px);height:auto;
+  filter:drop-shadow(0 16px 26px rgba(16,58,92,.15))}
 
-/* 理念：左は立ち姿、右は両手を広げる */
-.cut--phi-l{left:clamp(-18px,1vw,40px);max-height:clamp(190px,30vh,420px)}
-.cut--phi-r{right:clamp(-26px,0.5vw,24px);max-height:clamp(165px,26vh,370px)}
-
-/* 採用CTA：左に男性スタッフ、右に看護師 */
-.cut--rec-l{left:clamp(-20px,1vw,36px);max-height:clamp(150px,22vw,330px)}
-.cut--rec-r{right:clamp(-24px,1vw,30px);max-height:clamp(140px,20vw,300px)}
-
-/* 本文の幅が確保できない画面では1人ずつに絞り、さらに画面外へ逃がして
-   「見切れて覗いている」配置にする（本文に重ねない） */
-@media (max-width:1365px){
-  .cut--phi-r,.cut--rec-l{display:none}
-  .cut--phi-l{max-height:clamp(150px,20vw,210px);left:-13%;opacity:.95}
-  .cut--rec-r{max-height:clamp(130px,18vw,190px);right:-13%}
-}
-/* さらに狭い画面では文章にかかるので出さない */
-/* 文章の幅が足りない画面では出さない（本文に重なるため） */
-@media (max-width:480px){
-  .cut{display:none}
+/* ガターが無い画面では本文に重なるので出さない */
+@media (max-width:1399px){
+  .cutouts{display:none}
 }
 
 /* ===== 線画モチーフ（2026-10-24）=====
