@@ -309,7 +309,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#dfeefa 0%,#cbe3f5 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024az') center/cover;opacity:.3;pointer-events:none}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024bb') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
@@ -586,7 +586,7 @@ body.accent-orange{--pink:#ff8a3d}
    参考 meisei.ac.jp/kg のクレヨン風落書きを、医療系でも成立する細い線画に置き換えた。
    波・しずく・貝・ひとでを余白に淡く散らす。本文には重ねない。 */
 .motifs{position:absolute;inset:0;pointer-events:none;z-index:0}
-.mo{position:absolute;fill:none;stroke:var(--blue);stroke-width:1.6;
+.mo{position:absolute;fill:none;stroke:var(--blue);stroke-width:2;
   stroke-linecap:round;stroke-linejoin:round;opacity:.22;
   animation:moFloat 7s ease-in-out infinite alternate}
 .mo use{fill:none}
@@ -719,7 +719,7 @@ body.accent-orange{--pink:#ff8a3d}
 
 /* 色も増やす。青一色だと数を増やしても賑やかにならない */
 .mo--pink{stroke:var(--pink)}
-.mo--sun{stroke:#f0a93a}
+.mo--sun{stroke:#dd8d16}
 
 /* 狭い画面は隙間自体が狭いので、本数を間引いて密度を揃える */
 @media (max-width:420px){
