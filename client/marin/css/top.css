@@ -93,6 +93,9 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 @media (max-width:900px){
   .header .nav{display:none}
+  /* ナビを消すと、ナビに付けていた margin-left:auto ごと消えて
+     ハンバーガーがロゴの真横に来てしまう。ボタン自身に右寄せを持たせる */
+  .menu-toggle{margin-left:auto}
 }
 
 /* ===== 全画面メニュー ===== */
