@@ -215,7 +215,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .coverflow{padding:clamp(30px,4.5vw,64px) 0;overflow:hidden;
   background-image:linear-gradient(rgba(0,90,170,.05) 1px,transparent 1px),
     linear-gradient(90deg,rgba(0,90,170,.05) 1px,transparent 1px),
-    linear-gradient(180deg,#e6f6f4 0%,#d2eeea 100%);
+    linear-gradient(180deg,#d2eeea 0%,#dfeefa 100%);
   background-size:46px 46px,46px 46px,100% 100%;
   background-repeat:repeat,repeat,no-repeat}
 .cf-stage{position:relative;max-width:1180px;margin-inline:auto;height:clamp(250px,40vw,440px);perspective:1600px}
@@ -285,7 +285,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 @media (max-width:860px){.route-grid{grid-template-columns:1fr;max-width:460px;margin-inline:auto}}
 
 /* ===== 04 biz（円バッジ・色分け・チェックリスト・装飾ライン） ===== */
-.biz{padding:clamp(54px,8vw,106px) 0;background:linear-gradient(180deg,#d2eeea 0%,#dfeefa 100%)}
+.biz{padding:clamp(54px,8vw,106px) 0;background:linear-gradient(180deg,#e6f6f4 0%,#d2eeea 100%)}
 .biz-lead{max-width:680px;margin:18px auto 0;color:var(--sub);font-size:15px;line-height:2}
 .biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 /* 参考 hanabi-nurse.co.jp：サービスは箇条書きの前に「何をするか」を文章で書く */
@@ -312,7 +312,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(54px,8vw,106px) 0;background:linear-gradient(180deg,#dfeefa 0%,#cbe3f5 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024ch') center/cover;opacity:.3;pointer-events:none}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024ci') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
