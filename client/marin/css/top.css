@@ -530,8 +530,8 @@ body.accent-orange{--pink:#ff8a3d}
 /* ===== 「積み重なって見える」の解消（2026-10-24）=====
    背景が連続グラデーションなので、負のマージンでカードを持ち上げても
    跨ぐ境界そのものが無く、マージン相殺でセクションごと動くだけだった。
-   効くのは「中央に揃った箱の連続」を崩すこと＝画面端へのはみ出しと、
-   列ごとの段差。 */
+   効くのは「中央に揃った箱の連続」を崩すこと＝画面端へのはみ出し。
+   列ごとの段差や左右の互い違いは「変」とのことで撤去した（2026-10-24）。 */
 
 /* Instagramのモザイクは画面いっぱいまではみ出す。写真が並ぶ枠なので端まで出ると効く */
 .insta-mosaic{
@@ -539,24 +539,4 @@ body.accent-orange{--pink:#ff8a3d}
   margin-inline:calc(50% - 50vw);
   padding-inline:clamp(10px,2vw,28px);
   border-radius:0;
-}
-
-/* 事業内容・選ばれる理由は列ごとに段差をつけ、横一列に見えないようにする */
-@media (min-width:821px){
-  .biz-grid > :nth-child(2){margin-top:clamp(28px,3.6vw,64px)}
-  .strength-grid > :nth-child(2){margin-top:clamp(22px,2.8vw,48px)}
-  .strength-grid > :nth-child(3){margin-top:clamp(44px,5.6vw,96px)}
-  /* はたらく人の声の2枚も段差 */
-  .staff-grid > :nth-child(2){margin-top:clamp(26px,3.2vw,56px)}
-  /* 利用者の声も */
-  .voice-grid > :nth-child(2){margin-top:clamp(24px,3vw,52px)}
-}
-
-/* スマホは縦積みなので、互い違いに少しだけ横へずらして単調さを崩す */
-@media (max-width:820px){
-  .strength-grid > :nth-child(odd){margin-right:clamp(10px,4vw,22px)}
-  .strength-grid > :nth-child(even){margin-left:clamp(10px,4vw,22px)}
-  .biz-grid > :nth-child(even){margin-left:clamp(10px,4vw,22px)}
-  .voice-grid > :nth-child(even){margin-left:clamp(10px,4vw,22px)}
-  .staff-grid > :nth-child(even){margin-left:clamp(10px,4vw,22px)}
 }
