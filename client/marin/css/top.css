@@ -117,6 +117,14 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
   .gmenu-inner{justify-content:flex-start}
 }
 
+/* ===== オープニングの幕 =====
+   マリンブルーのベタ面が剥がれて写真が出る。ヘッダーより下・それ以外より上に置く。
+   JSが動かなくてもCSSアニメだけで消えること、
+   prefers-reduced-motion 時は（全アニメが止まるので）最初から出さないことが条件。 */
+.opening{position:fixed;inset:0;z-index:58;background:var(--blue);pointer-events:none;animation:openingOut .95s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes openingOut{0%,20%{opacity:1}100%{opacity:0;visibility:hidden}}
+.no-opening .opening{display:none}
+
 /* ===== Hero（全面写真スライダー × 波帯 × カーブコピー） =====
    波の稜線（.arc-fill）とカーブ文字（textPath）は同一SVG・同一viewBoxに描く。
    別SVGに分けて preserveAspectRatio を変えると、幅によって文字が稜線からずれる。 */
@@ -453,6 +461,7 @@ body.accent-orange{--pink:#ff8a3d}
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal{opacity:1!important;transform:none!important}
+  .opening{display:none!important}  /* アニメを止めると消えなくなるため */
   .hero-shot img{animation:none!important;transform:none!important}
   .gmenu .gmenu-nav a{opacity:1!important;transform:none!important}
 }

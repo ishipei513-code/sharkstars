@@ -114,6 +114,42 @@
     }
   }
 
+  // 6.5) カーブコピーが波に乗って右から流れ込む
+  //      参照サイトは1文字ずつSVGグリフをモーションパス配置しているが、
+  //      textPath の startOffset を動かせば曲線に沿った回転はブラウザが処理する。
+  (function(){
+    var skipOpening = document.documentElement.classList.contains('no-opening');
+    try{ sessionStorage.setItem('marinOpened','1'); }catch(e){}
+
+    var tps = document.querySelectorAll('.hero-arc textPath[data-from]');
+    if(!tps.length || REDUCED) return;   // reduced時は最終位置のまま動かさない
+
+    var parse = function(v){ return { n: parseFloat(v), pct: /%\s*$/.test(v) }; };
+    var easeOutCubic = function(p){ return 1-Math.pow(1-p,3); };
+
+    Array.prototype.forEach.call(tps, function(tp){
+      var to = parse(tp.getAttribute('startOffset'));
+      var from = parse(tp.getAttribute('data-from'));
+      var dur = parseFloat(tp.getAttribute('data-dur')||'1500');
+      // 幕を出さない回（2回目以降）は待たずに動かす
+      var delay = skipOpening ? 140 : parseFloat(tp.getAttribute('data-delay')||'0');
+      var unit = to.pct ? '%' : '';
+
+      tp.setAttribute('startOffset', from.n + unit);
+      var t0 = null;
+      var step = function(ts){
+        if(t0===null) t0=ts;
+        var e = ts - t0 - delay;
+        if(e < 0){ requestAnimationFrame(step); return; }
+        var p = Math.min(e/dur, 1);
+        tp.setAttribute('startOffset', (from.n + (to.n-from.n)*easeOutCubic(p)) + unit);
+        if(p < 1) requestAnimationFrame(step);
+        else tp.setAttribute('startOffset', to.n + unit);
+      };
+      requestAnimationFrame(step);
+    });
+  })();
+
   // 7) count-up（数字セクション等。reduced時は即・最終値）
   function easeOutCubic(p){return 1-Math.pow(1-p,3);}
   function countEl(el){
