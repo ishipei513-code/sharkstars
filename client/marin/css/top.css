@@ -247,7 +247,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .sec-head h2{font-size:clamp(30px,6.4vw,62px);font-weight:900;color:var(--head);margin-top:8px;line-height:1.26;letter-spacing:.01em}
 
 /* ===== 02 philosophy（ラベル＋色付きキーワード＋中央区切り） ===== */
-.philosophy{padding:clamp(96px,13vw,170px) 0;text-align:center;background:linear-gradient(180deg,#ffffff 0%,#f7fbfe 100%)}
+.philosophy{padding:clamp(96px,13vw,170px) 0;text-align:center;background:linear-gradient(180deg,#ffffff 0%,#eff8f3 100%)}
 /* PCでは理念を1画面に。写真を外してコピーだけになったので、画面を占有させて読ませる */
 @media (min-width:901px){
   .philosophy{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(80px,9vh,130px)}
@@ -285,7 +285,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 @media (max-width:860px){.route-grid{grid-template-columns:1fr;max-width:460px;margin-inline:auto}}
 
 /* ===== 04 biz（円バッジ・色分け・チェックリスト・装飾ライン） ===== */
-.biz{padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#eaf4fc 0%,#dcecf8 100%)}
+.biz{padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#def1e9 0%,#e6f2fc 100%)}
 .biz-lead{max-width:680px;margin:18px auto 0;color:var(--sub);font-size:15px;line-height:2}
 .biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .biz-col{position:relative;background:linear-gradient(180deg,#ffffff 0%,#f6fbff 100%);border:1px solid var(--line);box-shadow:var(--shadow);padding:32px 30px;overflow:hidden}
@@ -308,8 +308,8 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 @media (max-width:760px){.biz-grid{grid-template-columns:1fr}}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
-.strengths{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#dcecf8 0%,#eef7fd 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024aw') center/cover;opacity:.3;pointer-events:none}
+.strengths{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#e6f2fc 0%,#d7e8f7 100%)}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024ay') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
@@ -342,8 +342,8 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 /* 固定した写真の上に後続セクションを重ねる。透明だと写真が透けるので背景を明示する */
 main > section{position:relative;z-index:1}
 .statement{z-index:0}
-.access{background:linear-gradient(180deg,#eef7fd 0%,var(--band-2) 100%)}
-.routes{background:linear-gradient(180deg,#f7fbfe 0%,#eaf4fc 100%)}
+.access{background:linear-gradient(180deg,#fbeaf1 0%,#e3edfa 100%)}
+.routes{background:linear-gradient(180deg,#eff8f3 0%,#def1e9 100%)}
 .statement-bg{position:absolute;inset:0;background-size:cover;background-position:center}
 .statement::after{content:"";position:absolute;inset:0;background:rgba(8,36,64,.48)}
 .statement-inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut);text-align:center;color:#fff}
@@ -380,7 +380,7 @@ main > section{position:relative;z-index:1}
 @media (max-width:760px){.num-grid{grid-template-columns:1fr 1fr}}
 
 /* ===== 07 staff ===== */
-.staff{padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#e3f1fb 0%,#f2f9fe 100%)}
+.staff{padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#fdf5e8 0%,#faecd9 100%)}
 .staff-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .staff-card{background:linear-gradient(180deg,#ffffff 0%,#f6fbff 100%);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:0;box-shadow:var(--shadow)}
 .staff-card img{width:100%;height:220px;object-fit:cover}
@@ -390,7 +390,7 @@ main > section{position:relative;z-index:1}
 @media (max-width:760px){.staff-grid{grid-template-columns:1fr}}
 
 /* ===== 08 recruit CTA（左テキスト／右写真・想いコピー） ===== */
-.recruit{padding:clamp(80px,12vw,160px) 0;background:linear-gradient(180deg,#ffffff 0%,#f4fafe 100%)}
+.recruit{padding:clamp(80px,12vw,160px) 0;background:linear-gradient(180deg,#ffffff 0%,#edf0fc 100%)}
 .recruit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
 .recruit-title{font-size:clamp(28px,4.2vw,40px);font-weight:900;color:var(--head);line-height:1.5;margin:10px 0 0}
 .recruit-divider{width:90px;height:2px;background:var(--line);margin:22px 0}
@@ -407,9 +407,9 @@ main > section{position:relative;z-index:1}
 @media (max-width:860px){.recruit-grid{grid-template-columns:1fr;gap:30px}.recruit-photo{min-height:300px}.recruit-photo-img{clip-path:polygon(0 8%,100% 0,100% 100%,0 100%)}}
 
 /* ===== 09 voices（参考デザイン：番号付き2カード＋大きな引用符＋役割アイコン＋ハート区切り） ===== */
-.voices{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#f4fafe 0%,#eef7fd 100%)}
+.voices{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#edf0fc 0%,#fbeaf1 100%)}
 .voices-blob{position:absolute;z-index:0;border-radius:50%;filter:blur(10px);pointer-events:none}
-.voices-blob--tl{top:-70px;left:-80px;width:360px;height:250px;background:radial-gradient(closest-side,rgba(120,182,230,.45),rgba(120,182,230,0));transform:rotate(-12deg)}
+.voices-blob--tl{top:-70px;left:-80px;width:360px;height:250px;background:radial-gradient(closest-side,rgba(150,152,220,.38),rgba(150,152,220,0));transform:rotate(-12deg)}
 .voices-blob--br{right:-60px;bottom:30px;width:300px;height:230px;background:radial-gradient(closest-side,rgba(255,141,178,.40),rgba(255,141,178,0))}
 .voices .wrap{position:relative;z-index:1}
 
@@ -441,7 +441,7 @@ main > section{position:relative;z-index:1}
 
 /* ===== 10 instagram ===== */
 /* ===== 10 Instagram（モザイク5枚＋公開JSONフィードで最新投稿に自動更新） ===== */
-.insta{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#f2f9fe 0%,#ffffff 100%)}
+.insta{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#faecd9 0%,#ffffff 100%)}
 .insta-head{text-align:center;margin-bottom:clamp(32px,4.5vw,52px)}
 .insta-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-en);font-size:13px;letter-spacing:.28em;color:var(--blue);font-weight:600}
 .insta-eyebrow-glyph{width:20px;height:20px;color:var(--blue)}
@@ -486,7 +486,7 @@ main > section{position:relative;z-index:1}
 @media (max-width:760px){.access-grid{grid-template-columns:1fr}}
 
 /* ===== Footer（指定のブルーで締める） ===== */
-.footer{background:linear-gradient(180deg,var(--band-2) 0%,var(--band) 100%);padding:48px 0 60px;text-align:center;color:var(--ink);border-top:1px solid var(--line)}
+.footer{background:linear-gradient(180deg,#e3edfa 0%,var(--band) 100%);padding:48px 0 60px;text-align:center;color:var(--ink);border-top:1px solid var(--line)}
 .footer img{height:38px;width:auto;margin-bottom:14px;opacity:.98}
 .footer p{font-size:13px;line-height:1.9}
 .footer a{color:var(--blue)}
@@ -619,7 +619,7 @@ body.accent-orange{--pink:#ff8a3d}
    ※ 当初ステートメント側の下端にSVGの弧を置いたが、上を滑る staff に覆われて
      まったく見えなかった。弧は「滑り込む側の縁」に付けるのが正しい。 */
 .staff::before{content:"";position:absolute;left:-1px;right:-1px;bottom:100%;
-  height:clamp(40px,6.4vw,104px);background:#e3f1fb;
+  height:clamp(40px,6.4vw,104px);background:#fdf5e8;
   border-radius:50% 50% 0 0 / 100% 100% 0 0;pointer-events:none}
 
 /* ===== 背景の寂しさ対策：やわらかい光のにじみ（2026-10-24）=====
@@ -635,6 +635,11 @@ body.accent-orange{--pink:#ff8a3d}
 .glow--blue{background:radial-gradient(closest-side,rgba(120,182,230,.48),rgba(120,182,230,0))}
 .glow--blue2{background:radial-gradient(closest-side,rgba(93,173,226,.36),rgba(93,173,226,0))}
 .glow--pink{background:radial-gradient(closest-side,rgba(255,141,178,.30),rgba(255,141,178,0))}
+/* セクションごとに背景の色相を変えたので、にじみもその色に合わせる。
+   クリームの面に青いにじみを置くと濁って見える。 */
+.glow--mint{background:radial-gradient(closest-side,rgba(104,198,170,.30),rgba(104,198,170,0))}
+.glow--cream{background:radial-gradient(closest-side,rgba(236,180,104,.30),rgba(236,180,104,0))}
+.glow--lav{background:radial-gradient(closest-side,rgba(150,152,220,.28),rgba(150,152,220,0))}
 
 /* 線画モチーフを余白（左右のガター）にも追加。
    ガターが確保できるのは本文幅1134pxに対して1300px以上の画面だけなので、
@@ -660,6 +665,9 @@ body.accent-orange{--pink:#ff8a3d}
 }
 
 /* staff のカード群と数字ブロックの間（200px以上空く）に淡い波を1本通す */
+/* 面の色が変わるので、波のラインもその面の色相に寄せる */
+.staff .band-wave{stroke:#d7a35b}
+.access .band-wave{stroke:#e08aa8}
 .band-wave{display:block;width:100%;height:clamp(34px,4.4vw,70px);
   margin:clamp(30px,4.6vw,70px) 0 clamp(6px,1vw,14px);
   fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round;opacity:.22;
