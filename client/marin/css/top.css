@@ -189,9 +189,13 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 01.5 写真ストリップ ===== */
 /* ===== 01.5 3Dカバーフロー・カルーセル（box1風・中央前面／左右が奥へ回り込む） ===== */
-.coverflow{padding:clamp(44px,6vw,86px) 0;background:#fff;overflow:hidden;
-  background-image:linear-gradient(rgba(0,90,170,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,90,170,.05) 1px,transparent 1px);
-  background-size:46px 46px}
+/* セクション背景のグラデーション連鎖。前の終了色＝次の開始色で境界を消す（2026-10-24） */
+.coverflow{padding:clamp(44px,6vw,86px) 0;overflow:hidden;
+  background-image:linear-gradient(rgba(0,90,170,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,90,170,.05) 1px,transparent 1px),
+    linear-gradient(180deg,var(--band) 0%,#ffffff 100%);
+  background-size:46px 46px,46px 46px,100% 100%;
+  background-repeat:repeat,repeat,no-repeat}
 .cf-stage{position:relative;max-width:1180px;margin-inline:auto;height:clamp(250px,40vw,440px);perspective:1600px}
 .cf-track{position:absolute;inset:0;transform-style:preserve-3d}
 .cf-slide{position:absolute;top:50%;left:50%;margin:0;width:clamp(260px,42vw,560px);aspect-ratio:3/2;overflow:hidden;background:#dfeaf3;box-shadow:0 24px 60px rgba(16,58,92,.22);transform:translate(-50%,-50%) scale(.66);opacity:0;z-index:0;pointer-events:none;transition:transform 1.05s cubic-bezier(.2,.7,.2,1),opacity 1.05s}
@@ -259,7 +263,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 @media (max-width:860px){.route-grid{grid-template-columns:1fr;max-width:460px;margin-inline:auto}}
 
 /* ===== 04 biz（円バッジ・色分け・チェックリスト・装飾ライン） ===== */
-.biz{padding:clamp(84px,12vw,150px) 0;background:var(--sky)}
+.biz{padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#eaf4fc 0%,#dcecf8 100%)}
 .biz-lead{max-width:680px;margin:18px auto 0;color:var(--sub);font-size:15px;line-height:2}
 .biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .biz-col{position:relative;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);padding:32px 30px;overflow:hidden}
@@ -282,7 +286,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 @media (max-width:760px){.biz-grid{grid-template-columns:1fr}}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
-.strengths{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:var(--bg)}
+.strengths{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#dcecf8 0%,#eef7fd 100%)}
 .strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg') center/cover;opacity:.3;pointer-events:none}
 .strengths .wrap{position:relative;z-index:1}
 .str-eyebrow{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:8px}
@@ -310,8 +314,8 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 /* 固定した写真の上に後続セクションを重ねる。透明だと写真が透けるので背景を明示する */
 main > section{position:relative;z-index:1}
 .statement{z-index:0}
-.access{background:var(--bg)}
-.routes{background:var(--bg)}
+.access{background:linear-gradient(180deg,#eef7fd 0%,var(--band-2) 100%)}
+.routes{background:linear-gradient(180deg,#ffffff 0%,#eaf4fc 100%)}
 .statement-bg{position:absolute;inset:0;background-size:cover;background-position:center}
 .statement::after{content:"";position:absolute;inset:0;background:rgba(8,36,64,.48)}
 .statement-inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut);text-align:center;color:#fff}
@@ -348,7 +352,7 @@ main > section{position:relative;z-index:1}
 @media (max-width:760px){.num-grid{grid-template-columns:1fr 1fr}}
 
 /* ===== 07 staff ===== */
-.staff{padding:clamp(84px,12vw,150px) 0;background:var(--sky)}
+.staff{padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#e3f1fb 0%,#f2f9fe 100%)}
 .staff-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .staff-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:0;box-shadow:var(--shadow)}
 .staff-card img{width:100%;height:220px;object-fit:cover}
@@ -375,7 +379,7 @@ main > section{position:relative;z-index:1}
 @media (max-width:860px){.recruit-grid{grid-template-columns:1fr;gap:30px}.recruit-photo{min-height:300px}.recruit-photo-img{clip-path:polygon(0 8%,100% 0,100% 100%,0 100%)}}
 
 /* ===== 09 voices（参考デザイン：番号付き2カード＋大きな引用符＋役割アイコン＋ハート区切り） ===== */
-.voices{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:#f5fbff}
+.voices{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#ffffff 0%,#eef7fd 100%)}
 .voices-blob{position:absolute;z-index:0;border-radius:50%;filter:blur(10px);pointer-events:none}
 .voices-blob--tl{top:-70px;left:-80px;width:360px;height:250px;background:radial-gradient(closest-side,rgba(120,182,230,.45),rgba(120,182,230,0));transform:rotate(-12deg)}
 .voices-blob--br{right:-60px;bottom:30px;width:300px;height:230px;background:radial-gradient(closest-side,rgba(255,141,178,.40),rgba(255,141,178,0))}
@@ -409,7 +413,7 @@ main > section{position:relative;z-index:1}
 
 /* ===== 10 instagram ===== */
 /* ===== 10 Instagram（モザイク5枚＋公開JSONフィードで最新投稿に自動更新） ===== */
-.insta{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:#fff}
+.insta{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#f2f9fe 0%,#ffffff 100%)}
 .insta-head{text-align:center;margin-bottom:clamp(32px,4.5vw,52px)}
 .insta-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-en);font-size:13px;letter-spacing:.28em;color:var(--blue);font-weight:600}
 .insta-eyebrow-glyph{width:20px;height:20px;color:var(--blue)}

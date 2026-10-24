@@ -2205,3 +2205,10 @@ select {
 @media (max-width: 600px) {
   .biz-meta { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
+
+/* ============================================================
+   セクション背景のグラデーション連鎖（2026-10-24）
+   サブページも前の終了色＝次の開始色で繋ぎ、境界を消す。
+   ============================================================ */
+main > section:not(.svc-hero) { background: transparent; }
+main { background: linear-gradient(180deg, var(--bg-1) 0%, #ffffff 22%, #f2f9fe 58%, #eef7fd 82%, #dcecf8 100%); }
