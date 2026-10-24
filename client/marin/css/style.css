@@ -1025,7 +1025,7 @@ select {
 .svc-hero-photo {
   position: absolute;
   inset: 0;
-  background-image: url('../images/sea.jpg?v=261024cl');
+  background-image: url('../images/sea.jpg?v=261024cm');
   background-size: cover;
   background-position: center 55%;
   z-index: -2;
@@ -1117,7 +1117,10 @@ select {
 
 .svc-section-photo img {
   width: 100%;
-  height: clamp(240px, 30vw, 400px);
+  /* 写真は 1200x800（3:2）。高さを固定すると縦長の枠になり、
+     1440pxでは原本の57%しか出ず左右の人が切れていた（2026-10-24）。 */
+  aspect-ratio: 3 / 2;
+  height: auto;
   object-fit: cover;
 }
 

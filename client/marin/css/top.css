@@ -312,7 +312,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(54px,8vw,106px) 0;background:linear-gradient(180deg,#dfeefa 0%,#cbe3f5 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024cl') center/cover;opacity:.3;pointer-events:none}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024cm') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
@@ -386,7 +386,9 @@ main > section{position:relative;z-index:1}
 .staff{padding:clamp(54px,8vw,106px) 0;background:linear-gradient(180deg,#faf2e4 0%,#f5e8d2 100%)}
 .staff-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .staff-card{background:linear-gradient(180deg,#ffffff 0%,#f6fbff 100%);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:0;box-shadow:var(--shadow)}
-.staff-card img{width:100%;height:220px;object-fit:cover}
+/* 写真を 4:3 に切り直したので、枠も 4:3。以前は縦長写真を 2.57:1 の帯に入れて
+   原本の31%しか出ていなかった（2026-10-24） */
+.staff-card img{width:100%;aspect-ratio:4/3;height:auto;object-fit:cover}
 .staff-card figcaption{padding:20px}
 .staff-card blockquote{margin:0 0 10px;color:var(--ink);font-size:14px;line-height:1.9}
 .staff-card span{color:var(--blue);font-size:12px;font-weight:700}
