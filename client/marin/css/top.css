@@ -312,7 +312,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#dfeefa 0%,#cbe3f5 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024be') center/cover;opacity:.3;pointer-events:none}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024bh') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
@@ -586,13 +586,13 @@ body.accent-orange{--pink:#ff8a3d}
 /* 理念：左右の余白に5つ */
 .mo--1{left:4%;top:18%;width:clamp(30px,3.4vw,52px);height:auto;aspect-ratio:40/24}
 .mo--2{left:9%;top:52%;width:clamp(16px,1.7vw,24px);aspect-ratio:24/30;animation-delay:.9s}
-.mo--3{right:3.5%;top:24%;width:clamp(22px,2.4vw,34px);aspect-ratio:30/28;animation-delay:1.8s;opacity:.2}
+.mo--3{right:3.5%;top:72%;width:clamp(22px,2.4vw,34px);aspect-ratio:30/28;animation-delay:1.8s;opacity:.2}
 .mo--4{right:7%;top:60%;width:clamp(18px,2vw,28px);aspect-ratio:1;animation-delay:2.6s;opacity:.18}
 .mo--5{right:2%;top:80%;width:clamp(26px,3vw,46px);aspect-ratio:40/24;animation-delay:3.4s;opacity:.16}
 
 /* 採用CTA：3つ */
 .mo--6{left:4%;top:22%;width:clamp(18px,2vw,28px);aspect-ratio:1;opacity:.2}
-.mo--7{right:4%;top:30%;width:clamp(28px,3.2vw,48px);aspect-ratio:40/24;animation-delay:1.2s}
+.mo--7{right:4%;top:78%;width:clamp(28px,3.2vw,48px);aspect-ratio:40/24;animation-delay:1.2s}
 .mo--8{right:8.5%;top:70%;width:clamp(15px,1.6vw,22px);aspect-ratio:24/30;animation-delay:2.2s;opacity:.18}
 
 @keyframes moFloat{from{transform:translateY(-4px) rotate(-2deg)}to{transform:translateY(5px) rotate(2deg)}}
