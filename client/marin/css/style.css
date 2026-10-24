@@ -174,11 +174,14 @@ a:focus-visible {
   box-shadow: 0 10px 24px rgba(255, 93, 143, .32);
 }
 
+/* LINEのボタンは公式の緑（#06C755）。白文字はLINE公式ボタンと同じ扱い。
+   淡色化の作業で一度 --accent（青）に戻ってしまっていた（2026-10-24 修正）。 */
 .btn-line {
-  background: var(--accent);
+  background: #06C755;
   color: #fff;
-  box-shadow: 0 6px 16px rgba(0, 90, 170, .22);
+  box-shadow: 0 6px 16px rgba(6, 199, 85, .28);
 }
+.btn-line:hover { background: #05b44c; }
 
 .btn-ghost {
   background: #fff;
@@ -1025,7 +1028,7 @@ select {
 .svc-hero-photo {
   position: absolute;
   inset: 0;
-  background-image: url('../images/sea.jpg?v=261024cu');
+  background-image: url('../images/sea.jpg?v=261024cv');
   background-size: cover;
   background-position: center 55%;
   z-index: -2;
@@ -1445,9 +1448,9 @@ select {
 
 /* LINE card — green background, white text */
 .contact-card--line {
-  background: var(--accent);
+  background: #06C755;
   color: #fff;
-  box-shadow: 0 6px 16px rgba(0, 90, 170, .22);
+  box-shadow: 0 6px 16px rgba(6, 199, 85, .28);
 }
 
 .contact-card--line:hover {
