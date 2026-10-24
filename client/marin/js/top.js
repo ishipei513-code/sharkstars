@@ -247,3 +247,84 @@
     }
   })();
 })();
+
+
+/* ===== お声カルーセル（2026-10-24）=====
+   スクロール位置を動かすだけ。中身の順番やDOMは触らないので、
+   JSが止まっても横スクロールで全部読める。
+   ・見えていないときは止める（IntersectionObserver）
+   ・指やマウスが乗っている間は止める
+   ・prefers-reduced-motion なら自動では動かさない */
+(function(){
+  var car = document.querySelector('.voice-car');
+  if(!car) return;
+  var track = car.querySelector('.voice-track');
+  var dots  = [].slice.call(car.querySelectorAll('.voice-dot'));
+  var cards = [].slice.call(track.children).filter(function(e){
+    return e.classList.contains('voice-card');
+  });
+  if(!track || cards.length < 2) return;
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var interval = parseInt(car.getAttribute('data-interval'), 10) || 5200;
+  var timer = null, visible = false, hold = false;
+
+  function step(){
+    if(cards.length < 2) return 1;
+    return cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left;
+  }
+  function maxIndex(){
+    var per = Math.max(1, Math.round(track.clientWidth / step()));
+    return Math.max(0, cards.length - per);
+  }
+  function current(){
+    return Math.round(track.scrollLeft / step());
+  }
+  function sync(){
+    var i = current();
+    dots.forEach(function(d, k){ d.classList.toggle('is-on', k === i); });
+  }
+  function go(i){
+    track.scrollTo({ left: i * step(), behavior: reduce ? 'auto' : 'smooth' });
+  }
+  function next(){
+    var i = current() + 1;
+    if(i > maxIndex()) i = 0;
+    go(i);
+  }
+  function start(){
+    if(reduce || timer || !visible || hold) return;
+    timer = setInterval(next, interval);
+  }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+
+  track.addEventListener('scroll', function(){
+    clearTimeout(track._t);
+    track._t = setTimeout(sync, 90);
+  }, { passive: true });
+
+  dots.forEach(function(d, k){
+    d.addEventListener('click', function(){ go(Math.min(k, maxIndex())); });
+  });
+
+  ['mouseenter','focusin','touchstart','pointerdown'].forEach(function(ev){
+    car.addEventListener(ev, function(){ hold = true; stop(); }, { passive: true });
+  });
+  ['mouseleave','focusout','touchend','pointerup'].forEach(function(ev){
+    car.addEventListener(ev, function(){ hold = false; start(); }, { passive: true });
+  });
+
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      visible = es[0].isIntersecting;
+      visible ? start() : stop();
+    }, { threshold: 0.25 }).observe(car);
+  } else {
+    visible = true; start();
+  }
+  window.addEventListener('resize', function(){
+    clearTimeout(window._vcR);
+    window._vcR = setTimeout(sync, 160);
+  });
+  sync();
+})();
