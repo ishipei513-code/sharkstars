@@ -27,11 +27,13 @@ def bump(root, ver):
         s = re.sub(r'(href="css/[a-z0-9_-]+\.css)(\?v=[^"]*)?"', r'\1?v=%s"' % ver, s)
         s = re.sub(r'(src="js/[a-z0-9_-]+\.js)(\?v=[^"]*)?"', r'\1?v=%s"' % ver, s)
         # 画像（src / srcset / インラインの background-image）
-        s = re.sub(r'(images/[A-Za-z0-9_.-]+\.%s)(\?v=[^"\')\s,]*)?' % IMG_EXT,
+        # 直前が「/」や英数字のものは絶対URL（OGP・JSON-LD の image）なので触らない。
+        # サイト内の参照は必ず "images/... と相対で書いてある。
+        s = re.sub(r'(?<![/\w.-])(images/[A-Za-z0-9_.-]+\.%s)(\?v=[^"\')\s,]*)?' % IMG_EXT,
                    r'\1?v=%s' % ver, s)
-        # OGPはSNS側のキャッシュ単位なので、クエリは付けない
-        s = re.sub(r'(og:image" content="[^"]*ogp\.png)\?v=[^"]*"', r'\1"', s)
-        s = re.sub(r'(twitter:image" content="[^"]*ogp\.png)\?v=[^"]*"', r'\1"', s)
+        # OGP／JSON-LD の image はSNS・検索側のキャッシュ単位なので、クエリは絶対に付けない。
+        # 付けるとバージョンを上げるたびに別画像として再取得され、構造化データも揺れる。
+        s = re.sub(r'(sharkstars\.jp/[^"\s]*\.%s)\?v=[^"\s]*' % IMG_EXT, r'\1', s)
         if s != o:
             io.open(f, 'w', encoding='utf-8', newline='\n').write(s)
             n_html += 1
