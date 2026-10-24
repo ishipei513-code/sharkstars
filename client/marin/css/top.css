@@ -229,7 +229,8 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .phi-divider::after{content:"";position:absolute;left:50%;top:-1.5px;width:32px;height:4px;background:var(--pink)}
 .phi-body{max-width:880px;margin-inline:auto;color:var(--sub);line-height:2.1;font-size:15px}
 .phi-photo{max-width:880px;margin:clamp(40px,6vw,64px) auto 0;overflow:hidden;box-shadow:var(--shadow)}
-.phi-photo img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+/* 4:3を16:9に入れるので上下25%が落ちる。人物の顔を残すため上寄せ */
+.phi-photo img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 32%}
 
 /* ===== 03 routes（写真＋丸アイコン＋斜めカット＋ボタン・採用カード強調） ===== */
 .routes{padding:clamp(60px,9vw,110px) 0}
