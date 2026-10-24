@@ -89,7 +89,11 @@
     a.addEventListener('click',function(e){
       var id=a.getAttribute('href').slice(1); if(!id)return;
       var t=document.getElementById(id); if(!t)return;
-      e.preventDefault(); t.scrollIntoView({behavior:REDUCED?'auto':'smooth',block:'start'});
+      e.preventDefault();
+      // ヘッダーが fixed なので、その高さぶん手前で止める（潜り防止）
+      var off=(header?header.offsetHeight:0)+12;
+      var y=t.getBoundingClientRect().top+window.scrollY-off;
+      window.scrollTo({top:y,behavior:REDUCED?'auto':'smooth'});
     });
   });
 

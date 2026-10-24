@@ -145,7 +145,10 @@
       const target = document.getElementById(id);
       if (!target) return;
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // ヘッダーが fixed なので、その高さぶん手前で止める（潜り防止）
+      const hd = document.querySelector('.header');
+      const off = (hd ? hd.offsetHeight : 0) + 12;
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - off, behavior: 'smooth' });
     });
   });
 })();

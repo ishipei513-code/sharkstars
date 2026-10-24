@@ -30,6 +30,8 @@
 /* 文節境界での改行（Chromium系のみ／非対応は .nb 束ねで担保） */
 .phi-title,.sec-head h2,.num-head h2,.recruit-title,
 .insta-head h2,.voice-head h2,.statement-h,.route-body h3,.strength-item h3{word-break:auto-phrase;line-break:strict}
+/* ヘッダーが fixed なので、アンカー遷移先がヘッダーに潜らないよう逃がす */
+html{scroll-padding-top:calc(var(--header-h) + 12px)}
 html,body{overflow-x:clip}
 body{font-family:var(--ff-jp);color:var(--ink);background:var(--bg);line-height:1.85}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
@@ -132,21 +134,28 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .hero-media{position:absolute;inset:0;z-index:0}  /* スライド側で z-index を上げるので土台を固定 */
 .hero-shot{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
 .hero-shot.is-on{opacity:1}
+.hero-shot picture{display:block;width:100%;height:100%}
 .hero-shot img{width:100%;height:100%;object-fit:cover;display:block}
+/* 被写体の位置に合わせて寄せる（中央固定だと頭や人物が枠外に出る） */
+.hero-shot:nth-child(1) img{object-position:50% 46%}   /* hero-02：住宅街を歩くチーム。人物が中央に横並び */
+.hero-shot:nth-child(2) img{object-position:55% 38%}   /* hero-03：海を望む。頭と水平線を残すため上寄り */
+.hero-shot:nth-child(3) img{object-position:58% 42%}   /* hero-01：被写体が右寄りなので右へ */
 .hero-shot img{animation:heroZoom 16s ease-in-out infinite alternate}
 .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,36,61,.56) 0%,rgba(7,36,61,.16) 24%,rgba(7,36,61,.05) 42%,rgba(7,36,61,.32) 72%,rgba(7,36,61,.56) 100%)}
 
 .hero-foot{position:absolute;left:0;right:0;bottom:0;z-index:2}
 .hero-copy{margin:0;line-height:0}
-.hero-arc{display:block;width:100%;height:auto;overflow:visible}
+.hero-arc{display:block;width:100%;height:auto}
 .hero-arc--sp{display:none}
 .arc-fill{fill:var(--blue)}
 .arc-en{font-family:var(--ff-en);font-weight:800;fill:#fff}
+/* 写真に重なる部分の可読性を確保（白文字が明るい被写体に埋もれるため） */
+.arc-en,.arc-jp{filter:drop-shadow(0 2px 12px rgba(7,36,61,.55))}
 .arc-jp{font-family:var(--ff-jp);font-weight:700;fill:#fff}
 .hero-arc--pc .arc-en{font-size:88px}
 .hero-arc--pc .arc-jp{font-size:28px}
-.hero-arc--sp .arc-en{font-size:36px}
-.hero-arc--sp .arc-jp{font-size:15px}
+.hero-arc--sp .arc-en{font-size:14px}
+.hero-arc--sp .arc-jp{font-size:36px;font-weight:900}
 
 .hero-band{background:var(--blue);padding-bottom:max(8px,env(safe-area-inset-bottom))}
 .hero-band-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px}
@@ -156,6 +165,8 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .hero-sub{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:.06em;border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:3px;transition:gap .3s,border-color .3s}
 .hero-sub:hover{gap:14px;border-color:#fff}
 @media (max-width:700px){
+  /* スマホは被写体中心に切り出し済み。nth-child の指定より詳細度を上げて中央寄せに戻す */
+  .hero-shot:nth-child(1) img,.hero-shot:nth-child(2) img,.hero-shot:nth-child(3) img{object-position:50% 45%}
   .hero-arc--pc{display:none}
   .hero-arc--sp{display:block}
   .hero-scroll{font-size:10px;letter-spacing:.2em}
@@ -176,7 +187,8 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .cf-stage{position:relative;max-width:1180px;margin-inline:auto;height:clamp(250px,40vw,440px);perspective:1600px}
 .cf-track{position:absolute;inset:0;transform-style:preserve-3d}
 .cf-slide{position:absolute;top:50%;left:50%;margin:0;width:clamp(260px,42vw,560px);aspect-ratio:3/2;overflow:hidden;background:#dfeaf3;box-shadow:0 24px 60px rgba(16,58,92,.22);transform:translate(-50%,-50%) scale(.66);opacity:0;z-index:0;pointer-events:none;transition:transform 1.05s cubic-bezier(.2,.7,.2,1),opacity 1.05s}
-.cf-slide img{width:100%;height:100%;object-fit:cover;display:block}
+/* 集合写真は頭が上寄りなので、上下を切るときは上を残す */
+.cf-slide img{object-position:50% 36%;width:100%;height:100%;object-fit:cover;display:block}
 .cf-slide.is-center{transform:translate(-50%,-50%) translateZ(120px) rotateY(0deg) scale(1);opacity:1;z-index:5;pointer-events:auto}
 .cf-slide.is-prev{transform:translate(-50%,-50%) translateX(-58%) rotateY(38deg) scale(.82);opacity:.55;z-index:3;pointer-events:auto;cursor:pointer}
 .cf-slide.is-next{transform:translate(-50%,-50%) translateX(58%) rotateY(-38deg) scale(.82);opacity:.55;z-index:3;pointer-events:auto;cursor:pointer}

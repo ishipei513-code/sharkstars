@@ -115,16 +115,28 @@
 <section class="hero" aria-label="メインビジュアル">
   <div class="hero-media" id="heroMedia">
     <div class="hero-shot is-on">
-      <img src="images/hero-01-1920.webp" srcset="images/hero-01.webp 1200w, images/hero-01-1920.webp 1920w" sizes="100vw"
-           alt="訪問先へ向かうマリンケアの訪問看護師" width="1920" height="1280" fetchpriority="high" decoding="async">
+      <picture>
+        <!-- スマホは3:4の縦構図を配る。横写真を縦長枠にcoverで入れると左右70%が落ちるため -->
+        <source media="(max-width: 700px)" srcset="images/hero-02-sp.webp" width="960" height="1280">
+        <img src="images/hero-02-1920.webp" srcset="images/hero-02.webp 1200w, images/hero-02-1920.webp 1920w" sizes="100vw"
+             alt="福岡市城南区の住宅街を歩くマリンケアの訪問看護チーム" width="1920" height="1280" fetchpriority="high" decoding="async">
+      </picture>
     </div>
     <div class="hero-shot">
-      <img src="images/hero-02-1920.webp" srcset="images/hero-02.webp 1200w, images/hero-02-1920.webp 1920w" sizes="100vw"
-           alt="福岡市城南区の住宅街を歩くマリンケアの訪問看護チーム" width="1920" height="1280" loading="lazy" decoding="async">
+      <picture>
+        <!-- スマホは3:4の縦構図を配る。横写真を縦長枠にcoverで入れると左右70%が落ちるため -->
+        <source media="(max-width: 700px)" srcset="images/hero-03-sp.webp" width="960" height="1280">
+        <img src="images/hero-03-1920.webp" srcset="images/hero-03.webp 1200w, images/hero-03-1920.webp 1920w" sizes="100vw"
+             alt="福岡の海を望むデッキに立つマリンケアの訪問看護師" width="1920" height="1280" loading="lazy" decoding="async">
+      </picture>
     </div>
     <div class="hero-shot">
-      <img src="images/hero-03-1920.webp" srcset="images/hero-03.webp 1200w, images/hero-03-1920.webp 1920w" sizes="100vw"
-           alt="福岡の海を望むデッキに立つマリンケアの訪問看護師" width="1920" height="1280" loading="lazy" decoding="async">
+      <picture>
+        <!-- スマホは3:4の縦構図を配る。横写真を縦長枠にcoverで入れると左右70%が落ちるため -->
+        <source media="(max-width: 700px)" srcset="images/hero-01-sp.webp" width="960" height="1280">
+        <img src="images/hero-01-1920.webp" srcset="images/hero-01.webp 1200w, images/hero-01-1920.webp 1920w" sizes="100vw"
+             alt="訪問先へ向かうマリンケアの訪問看護師" width="1920" height="1280" loading="lazy" decoding="async">
+      </picture>
     </div>
   </div>
   <div class="hero-scrim" aria-hidden="true"></div>
@@ -143,15 +155,16 @@
         <text class="arc-jp"><textPath href="#arcJpPc" startOffset="50%" data-from="150%" data-delay="620" data-dur="1350" text-anchor="middle" textLength="360" lengthAdjust="spacing">いのちの、そばに。</textPath></text>
         <text class="arc-en"><textPath href="#arcEnPc" startOffset="50%" data-from="152%" data-delay="480" data-dur="1550" text-anchor="middle" textLength="1150" lengthAdjust="spacing">MARIN VISITING NURSE</textPath></text>
       </svg>
-      <!-- SP用：英字を右端へ流して切る（パスをviewBox外まで伸ばし overflow:visible で描画） -->
-      <svg class="hero-arc hero-arc--sp" viewBox="0 0 390 210" aria-hidden="true">
+      <!-- SP用：日本語を主役に入れ替える。英字1行は幅に収まらないので小さく下段へ。
+           中身を viewBox(0〜390) の内側に収めてあるので、320pxでも比例縮小するだけで切れない -->
+      <svg class="hero-arc hero-arc--sp" viewBox="0 0 390 200" aria-hidden="true">
         <defs>
-          <path id="arcJpSp" d="M-12,48 C60,18 150,6 222,28 C292,49 342,76 462,62"/>
-          <path id="arcEnSp" d="M-12,116 C60,86 150,74 222,96 C292,117 342,144 462,130"/>
+          <path id="arcJpSp" d="M0,116 C70,86 150,74 222,94 C292,114 342,140 390,128"/>
+          <path id="arcEnSp" d="M0,166 C70,136 150,124 222,144 C292,164 342,190 390,178"/>
         </defs>
-        <path class="arc-fill" d="M-12,100 C60,70 150,58 222,80 C292,101 342,128 462,114 L462,210 L-12,210 Z"/>
-        <text class="arc-jp"><textPath href="#arcJpSp" startOffset="40" data-from="520" data-delay="620" data-dur="1350" text-anchor="start" textLength="196" lengthAdjust="spacing">いのちの、そばに。</textPath></text>
-        <text class="arc-en"><textPath href="#arcEnSp" startOffset="20" data-from="540" data-delay="480" data-dur="1550" text-anchor="start" textLength="470" lengthAdjust="spacing">MARIN VISITING NURSE</textPath></text>
+        <path class="arc-fill" d="M0,104 C70,74 150,62 222,82 C292,102 342,128 390,116 L390,200 L0,200 Z"/>
+        <text class="arc-jp"><textPath href="#arcJpSp" startOffset="50%" data-from="150%" data-delay="480" data-dur="1550" text-anchor="middle" textLength="330" lengthAdjust="spacing">いのちの、そばに。</textPath></text>
+        <text class="arc-en"><textPath href="#arcEnSp" startOffset="50%" data-from="150%" data-delay="640" data-dur="1350" text-anchor="middle" textLength="300" lengthAdjust="spacing">MARIN VISITING NURSE</textPath></text>
       </svg>
     </div>
     <div class="hero-band">
