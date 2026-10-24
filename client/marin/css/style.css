@@ -2212,3 +2212,8 @@ select {
    ============================================================ */
 main > section:not(.svc-hero) { background: transparent; }
 main { background: linear-gradient(180deg, var(--bg-1) 0%, #ffffff 22%, #f2f9fe 58%, #eef7fd 82%, #dcecf8 100%); }
+
+/* カードのごく薄い縦グラデーション（紙のような奥行き・2026-10-24） */
+.card, .svc-card, .info-card, .flow-item, .faq-item, .contact-card {
+  background-image: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+}

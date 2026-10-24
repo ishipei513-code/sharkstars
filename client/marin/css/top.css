@@ -128,9 +128,28 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
    マリンブルーのベタ面が剥がれて写真が出る。ヘッダーより下・それ以外より上に置く。
    JSが動かなくてもCSSアニメだけで消えること、
    prefers-reduced-motion 時は（全アニメが止まるので）最初から出さないことが条件。 */
-.opening{position:fixed;inset:0;z-index:58;background:var(--blue);pointer-events:none;animation:openingOut .95s cubic-bezier(.4,0,.2,1) forwards}
-@keyframes openingOut{0%,20%{opacity:1}100%{opacity:0;visibility:hidden}}
+.opening{position:fixed;inset:0;z-index:70;display:grid;place-items:center;
+  background:var(--bg);pointer-events:none;
+  animation:openingOut 1.6s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes openingOut{0%,62%{opacity:1}100%{opacity:0;visibility:hidden}}
 .no-opening .opening{display:none}
+
+/* 波に浮かぶ船。濃い面を作らない方針なので、淡い水色の面に濃紺の線画で描く */
+.op-sea{width:min(260px,52vw);height:auto;overflow:visible}
+.op-ship{transform-box:fill-box;transform-origin:50% 100%;
+  animation:opRock 2.1s ease-in-out infinite}
+.op-hull{fill:var(--head)}
+.op-sail{fill:var(--blue)}
+.op-sail--2{fill:var(--blue-soft)}
+.op-mast{fill:var(--head)}
+.op-waves{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 82%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 82%,transparent 100%)}
+.op-wave{fill:none;stroke:var(--blue);stroke-width:3;stroke-linecap:round;opacity:.5}
+.op-wave--1{animation:opDrift 2.4s linear infinite}
+.op-wave--2{animation:opDrift 3.2s linear infinite;opacity:.34}
+.op-wave--3{animation:opDrift 4.2s linear infinite;opacity:.22}
+@keyframes opRock{0%,100%{transform:translateY(0) rotate(-3.5deg)}50%{transform:translateY(-5px) rotate(3.5deg)}}
+@keyframes opDrift{from{transform:translateX(0)}to{transform:translateX(90px)}}
 
 /* ===== Hero（全面写真スライダー × 波帯 × カーブコピー） =====
    波の稜線（.arc-fill）とカーブ文字（textPath）は同一SVG・同一viewBoxに描く。
@@ -152,7 +171,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .hero-copy{margin:0;line-height:0}
 .hero-arc{display:block;width:100%;height:auto}
 .hero-arc--sp{display:none}
-.arc-fill{fill:var(--band)}
+.arc-fill{fill:url(#bandGrad)}
 .arc-en{font-family:var(--ff-en);font-weight:800;fill:var(--head)}
 /* 淡い帯に合わせて文字を反転：濃紺の塗り＋白の縁取り。
    写真をまたぐ部分は白い縁取りが効いて、暗い被写体の上でも輪郭が立つ */
@@ -168,7 +187,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .hero-arc--sp .arc-en{font-size:14px}
 .hero-arc--sp .arc-jp{font-size:36px;font-weight:900}
 
-.hero-band{background:var(--band);padding-bottom:max(8px,env(safe-area-inset-bottom))}
+.hero-band{background:linear-gradient(180deg,#e4f1fb 0%,var(--band) 100%);padding-bottom:max(8px,env(safe-area-inset-bottom))}
 .hero-band-row{display:flex;align-items:center;gap:16px;min-height:56px}
 .hero-scroll{display:inline-flex;align-items:center;gap:11px;color:var(--head);text-decoration:none;font-family:var(--ff-en);font-size:11px;letter-spacing:.26em;font-weight:600}
 .hero-scroll-dot{position:relative;width:26px;height:26px;flex:none;border:1px solid rgba(12,47,77,.35);border-radius:50%}
@@ -182,7 +201,10 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 }
 
 /* ===== マーキー帯（流れるキーワード・ホバーで停止） ===== */
-.marquee{overflow:hidden;background:var(--band);padding:14px 0;white-space:nowrap}
+/* 流れる文字が画面端で唐突に切れないよう、両端をフェードさせる */
+.marquee{overflow:hidden;background:var(--band);padding:14px 0;white-space:nowrap;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%)}
 .marquee-track{display:inline-flex;will-change:transform;animation:marquee 42s linear infinite}
 .marquee-track span{display:inline-block;font-size:clamp(20px,3.2vw,36px);font-weight:900;color:var(--head);letter-spacing:.03em}
 .marquee:hover .marquee-track{animation-play-state:paused}
@@ -225,7 +247,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .sec-head h2{font-size:clamp(30px,6.4vw,62px);font-weight:900;color:var(--head);margin-top:8px;line-height:1.26;letter-spacing:.01em}
 
 /* ===== 02 philosophy（ラベル＋色付きキーワード＋中央区切り） ===== */
-.philosophy{padding:clamp(96px,13vw,170px) 0;text-align:center;background:#fff}
+.philosophy{padding:clamp(96px,13vw,170px) 0;text-align:center;background:linear-gradient(180deg,#ffffff 0%,#f7fbfe 100%)}
 /* PCでは理念を1画面に。写真を外してコピーだけになったので、画面を占有させて読ませる */
 @media (min-width:901px){
   .philosophy{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(80px,9vh,130px)}
@@ -245,7 +267,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 /* ===== 03 routes（写真＋丸アイコン＋斜めカット＋ボタン・採用カード強調） ===== */
 .routes{padding:clamp(60px,9vw,110px) 0}
 .route-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.route-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);text-decoration:none;color:var(--ink);overflow:hidden;transition:.3s}
+.route-card{display:flex;flex-direction:column;background:linear-gradient(180deg,#ffffff 0%,#f6fbff 100%);border:1px solid var(--line);box-shadow:var(--shadow);text-decoration:none;color:var(--ink);overflow:hidden;transition:.3s}
 .route-card:hover{transform:translateY(-6px)}
 .route-photo{position:relative;overflow:hidden;aspect-ratio:16/10;clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}
 .route-photo img{width:100%;height:100%;object-fit:cover}
@@ -266,7 +288,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .biz{padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#eaf4fc 0%,#dcecf8 100%)}
 .biz-lead{max-width:680px;margin:18px auto 0;color:var(--sub);font-size:15px;line-height:2}
 .biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.biz-col{position:relative;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);padding:32px 30px;overflow:hidden}
+.biz-col{position:relative;background:linear-gradient(180deg,#ffffff 0%,#f6fbff 100%);border:1px solid var(--line);box-shadow:var(--shadow);padding:32px 30px;overflow:hidden}
 .biz-col--nurse{--accent:#ff5d8f}
 .biz-col--reha{--accent:#005aaa}
 .biz-col-head{display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--accent);padding-bottom:18px;margin-bottom:8px}
@@ -288,6 +310,10 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#dcecf8 0%,#eef7fd 100%)}
 .strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg') center/cover;opacity:.3;pointer-events:none}
+/* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
+   上下は背景色に溶かして境目を消す */
+.strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
+  mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%)}
 .strengths .wrap{position:relative;z-index:1}
 .str-eyebrow{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:8px}
 .str-wave{color:var(--pink);width:46px;height:9px;display:block}
@@ -295,7 +321,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 .str-marker::after{content:"";position:absolute;left:-3px;right:-3px;bottom:1px;height:9px;background:var(--pink);opacity:.4;transform:rotate(-1deg);z-index:-1}
 .str-lead{max-width:680px;margin:18px auto 0;color:var(--sub);font-size:15px;line-height:2}
 .strength-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
-.strength-item{position:relative;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:44px 26px 60px;text-align:center}
+.strength-item{position:relative;background:linear-gradient(180deg,#ffffff 0%,#f4faff 100%);border:1px solid var(--line);box-shadow:var(--shadow);padding:44px 26px 60px;text-align:center}
 .strength-no{font-family:var(--ff-en);font-size:46px;font-weight:800;color:var(--pink);line-height:1}
 .strength-item h3{color:var(--head);font-size:18px;font-weight:900;margin:10px 0 0}
 .str-line{display:block;width:40px;height:3px;background:var(--pink);margin:14px auto 16px}
@@ -315,7 +341,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 main > section{position:relative;z-index:1}
 .statement{z-index:0}
 .access{background:linear-gradient(180deg,#eef7fd 0%,var(--band-2) 100%)}
-.routes{background:linear-gradient(180deg,#ffffff 0%,#eaf4fc 100%)}
+.routes{background:linear-gradient(180deg,#f7fbfe 0%,#eaf4fc 100%)}
 .statement-bg{position:absolute;inset:0;background-size:cover;background-position:center}
 .statement::after{content:"";position:absolute;inset:0;background:rgba(8,36,64,.48)}
 .statement-inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut);text-align:center;color:#fff}
@@ -335,7 +361,7 @@ main > section{position:relative;z-index:1}
 .num-head-photo{position:relative;overflow:hidden;aspect-ratio:16/10;clip-path:polygon(10% 0,100% 0,100% 100%,0 100%)}
 .num-head-photo img{width:100%;height:100%;object-fit:cover}
 .num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.num-card{position:relative;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:24px 22px;text-align:center}
+.num-card{position:relative;background:linear-gradient(180deg,#ffffff 0%,#f4faff 100%);border:1px solid var(--line);box-shadow:var(--shadow);padding:24px 22px;text-align:center}
 .num-tag{position:absolute;top:8px;right:10px;font-size:9px;color:#9fb6cc;letter-spacing:.1em}
 .num-card-top{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px;min-height:32px}
 .num-ic{display:inline-flex;color:var(--blue)}
@@ -354,7 +380,7 @@ main > section{position:relative;z-index:1}
 /* ===== 07 staff ===== */
 .staff{padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#e3f1fb 0%,#f2f9fe 100%)}
 .staff-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.staff-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:0;box-shadow:var(--shadow)}
+.staff-card{background:linear-gradient(180deg,#ffffff 0%,#f6fbff 100%);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:0;box-shadow:var(--shadow)}
 .staff-card img{width:100%;height:220px;object-fit:cover}
 .staff-card figcaption{padding:20px}
 .staff-card blockquote{margin:0 0 10px;color:var(--ink);font-size:14px;line-height:1.9}
@@ -362,7 +388,7 @@ main > section{position:relative;z-index:1}
 @media (max-width:760px){.staff-grid{grid-template-columns:1fr}}
 
 /* ===== 08 recruit CTA（左テキスト／右写真・想いコピー） ===== */
-.recruit{padding:clamp(80px,12vw,160px) 0;background:#fff}
+.recruit{padding:clamp(80px,12vw,160px) 0;background:linear-gradient(180deg,#ffffff 0%,#f4fafe 100%)}
 .recruit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
 .recruit-title{font-size:clamp(28px,4.2vw,40px);font-weight:900;color:var(--head);line-height:1.5;margin:10px 0 0}
 .recruit-divider{width:90px;height:2px;background:var(--line);margin:22px 0}
@@ -379,7 +405,7 @@ main > section{position:relative;z-index:1}
 @media (max-width:860px){.recruit-grid{grid-template-columns:1fr;gap:30px}.recruit-photo{min-height:300px}.recruit-photo-img{clip-path:polygon(0 8%,100% 0,100% 100%,0 100%)}}
 
 /* ===== 09 voices（参考デザイン：番号付き2カード＋大きな引用符＋役割アイコン＋ハート区切り） ===== */
-.voices{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#ffffff 0%,#eef7fd 100%)}
+.voices{position:relative;overflow:hidden;padding:clamp(84px,12vw,150px) 0;background:linear-gradient(180deg,#f4fafe 0%,#eef7fd 100%)}
 .voices-blob{position:absolute;z-index:0;border-radius:50%;filter:blur(10px);pointer-events:none}
 .voices-blob--tl{top:-70px;left:-80px;width:360px;height:250px;background:radial-gradient(closest-side,rgba(120,182,230,.45),rgba(120,182,230,0));transform:rotate(-12deg)}
 .voices-blob--br{right:-60px;bottom:30px;width:300px;height:230px;background:radial-gradient(closest-side,rgba(255,141,178,.40),rgba(255,141,178,0))}
@@ -392,7 +418,7 @@ main > section{position:relative;z-index:1}
 .voice-lead{color:var(--sub);font-size:clamp(13px,2.4vw,16px)}
 
 .voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.6vw,28px)}
-.voice-card{position:relative;background:var(--card);border-radius:var(--radius);padding:clamp(28px,3.4vw,40px) clamp(24px,3vw,38px);margin:0;box-shadow:0 18px 40px rgba(16,58,92,.08)}
+.voice-card{position:relative;background:linear-gradient(180deg,#ffffff 0%,#f6fbff 100%);border-radius:var(--radius);padding:clamp(28px,3.4vw,40px) clamp(24px,3vw,38px);margin:0;box-shadow:0 18px 40px rgba(16,58,92,.08)}
 .voice-no{display:block;font-family:var(--ff-en);font-style:italic;font-weight:400;font-size:clamp(30px,4vw,44px);color:rgba(255,93,143,.6);line-height:1;margin-bottom:4px}
 .voice-mark{display:block;font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:clamp(42px,5.4vw,60px);color:var(--pink);line-height:.55;margin-bottom:10px}
 .voice-card blockquote{margin:0 0 clamp(20px,3vw,28px);color:var(--ink);line-height:2;font-size:clamp(14px,2.2vw,16px)}
@@ -458,7 +484,7 @@ main > section{position:relative;z-index:1}
 @media (max-width:760px){.access-grid{grid-template-columns:1fr}}
 
 /* ===== Footer（指定のブルーで締める） ===== */
-.footer{background:var(--band-2);padding:48px 0 60px;text-align:center;color:var(--ink);border-top:1px solid var(--line)}
+.footer{background:linear-gradient(180deg,var(--band-2) 0%,var(--band) 100%);padding:48px 0 60px;text-align:center;color:var(--ink);border-top:1px solid var(--line)}
 .footer img{height:38px;width:auto;margin-bottom:14px;opacity:.98}
 .footer p{font-size:13px;line-height:1.9}
 .footer a{color:var(--blue)}

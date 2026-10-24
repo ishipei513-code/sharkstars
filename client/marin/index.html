@@ -22,8 +22,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Yomogi&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/reset.css?v=261024p">
-<link rel="stylesheet" href="css/top.css?v=261024p">
+<link rel="stylesheet" href="css/reset.css?v=261024s">
+<link rel="stylesheet" href="css/top.css?v=261024s">
 <!-- オープニングの幕：2回目以降は出さない。描画前に決める必要があるためインライン -->
 <script>try{if(sessionStorage.getItem('marinOpened'))document.documentElement.classList.add('no-opening');}catch(e){}</script>
 <!-- streetAddress：Googleビジネスプロフィールで「飯倉」と確認済み（2026-06-20） -->
@@ -61,8 +61,23 @@
 </head>
 <body class="is-home">
 
-<!-- オープニングの幕（CSSアニメで自動的に消える／reduced-motion時は非表示） -->
-<div class="opening" aria-hidden="true"></div>
+<!-- オープニングの幕：波に浮かぶ船。CSSアニメだけで自動的に消える（JSが死んでも残らない）。
+     reduced-motion 時は非表示。2回目以降は head のインラインスクリプトで出さない -->
+<div class="opening" aria-hidden="true">
+  <svg class="op-sea" viewBox="0 0 260 170" role="img" aria-label="読み込み中">
+    <g class="op-ship">
+      <rect class="op-mast" x="126" y="26" width="3.5" height="66"/>
+      <path class="op-sail" d="M124,30 L124,88 L82,88 Z"/>
+      <path class="op-sail op-sail--2" d="M133,46 L133,88 L170,88 Z"/>
+      <path class="op-hull" d="M66,92 H186 L169,114 H83 Z"/>
+    </g>
+    <g class="op-waves">
+      <path class="op-wave op-wave--1" d="M-40,124 C-10,114 20,134 50,124 C80,114 110,134 140,124 C170,114 200,134 230,124 C260,116 290,130 320,124"/>
+      <path class="op-wave op-wave--2" d="M-40,140 C-10,130 20,150 50,140 C80,130 110,150 140,140 C170,130 200,150 230,140 C260,132 290,146 320,140"/>
+      <path class="op-wave op-wave--3" d="M-40,154 C-10,146 20,162 50,154 C80,146 110,162 140,154 C170,146 200,162 230,154 C260,148 290,160 320,154"/>
+    </g>
+  </svg>
+</div>
 
 <!-- ===== HEADER ===== -->
 <header class="header">
@@ -148,12 +163,16 @@
       <!-- PC用：波の稜線と文字を同一SVG・同一viewBoxで描く（幅が変わってもずれない） -->
       <svg class="hero-arc hero-arc--pc" viewBox="0 0 1440 310" aria-hidden="true">
         <defs>
+          <linearGradient id="bandGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e4f1fb"/>
+            <stop offset="100%" stop-color="#d6e9f7"/>
+          </linearGradient>
           <path id="arcJpPc" d="M0,240 C240,184 470,166 720,208 C960,248 1180,294 1440,256"/>
           <path id="arcEnPc" d="M0,182 C240,126 470,108 720,150 C960,190 1180,236 1440,198"/>
         </defs>
         <path class="arc-fill" d="M0,152 C240,96 470,78 720,120 C960,160 1180,206 1440,168 L1440,310 L0,310 Z"/>
-        <text class="arc-jp"><textPath href="#arcJpPc" startOffset="50%" data-from="150%" data-delay="640" data-dur="1350" text-anchor="middle" textLength="360" lengthAdjust="spacing">いのちの、そばに。</textPath></text>
-        <text class="arc-en"><textPath href="#arcEnPc" startOffset="50%" data-from="152%" data-delay="480" data-dur="1550" text-anchor="middle" textLength="1150" lengthAdjust="spacing">MARIN VISITING NURSE</textPath></text>
+        <text class="arc-jp"><textPath href="#arcJpPc" startOffset="50%" data-from="150%" data-delay="920" data-dur="1350" text-anchor="middle" textLength="360" lengthAdjust="spacing">いのちの、そばに。</textPath></text>
+        <text class="arc-en"><textPath href="#arcEnPc" startOffset="50%" data-from="152%" data-delay="760" data-dur="1550" text-anchor="middle" textLength="1150" lengthAdjust="spacing">MARIN VISITING NURSE</textPath></text>
       </svg>
       <!-- SP用：日本語を主役に入れ替える。英字1行は幅に収まらないので小さく下段へ。
            中身を viewBox(0〜390) の内側に収めてあるので、320pxでも比例縮小するだけで切れない -->
@@ -163,8 +182,8 @@
           <path id="arcEnSp" d="M0,166 C70,136 150,124 222,144 C292,164 342,190 390,178"/>
         </defs>
         <path class="arc-fill" d="M0,104 C70,74 150,62 222,82 C292,102 342,128 390,116 L390,200 L0,200 Z"/>
-        <text class="arc-jp"><textPath href="#arcJpSp" startOffset="50%" data-from="150%" data-delay="480" data-dur="1550" text-anchor="middle" textLength="330" lengthAdjust="spacing">いのちの、そばに。</textPath></text>
-        <text class="arc-en"><textPath href="#arcEnSp" startOffset="46%" data-from="150%" data-delay="640" data-dur="1350" text-anchor="middle" textLength="240" lengthAdjust="spacing">MARIN VISITING NURSE</textPath></text>
+        <text class="arc-jp"><textPath href="#arcJpSp" startOffset="50%" data-from="150%" data-delay="760" data-dur="1550" text-anchor="middle" textLength="330" lengthAdjust="spacing">いのちの、そばに。</textPath></text>
+        <text class="arc-en"><textPath href="#arcEnSp" startOffset="46%" data-from="150%" data-delay="920" data-dur="1350" text-anchor="middle" textLength="240" lengthAdjust="spacing">MARIN VISITING NURSE</textPath></text>
       </svg>
     </div>
     <div class="hero-band">
@@ -529,6 +548,6 @@
     </svg>
   </a>
 </div>
-<script src="js/top.js?v=261024p" defer></script>
+<script src="js/top.js?v=261024s" defer></script>
 </body>
 </html>
