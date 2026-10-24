@@ -312,7 +312,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(54px,8vw,106px) 0;background:linear-gradient(180deg,#dfeefa 0%,#cbe3f5 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024bl') center/cover;opacity:.3;pointer-events:none}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024bo') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
@@ -567,6 +567,9 @@ body.accent-orange{--pink:#ff8a3d}
   left:var(--l,auto);right:var(--r,auto);
   top:var(--t,auto);bottom:var(--b,auto);
   width:var(--w,110px);height:auto;
+  /* 端に寄せすぎないよう 3.2vw 内側へ入れたぶん、幅に上限をかけて本文に届かせない。
+     1440pxのガターは153pxしかないので、内側へ寄せる＝使える幅が減る。 */
+  max-width:clamp(80px,6.4vw,150px);
   filter:drop-shadow(0 16px 26px rgba(16,58,92,.15))}
 
 /* ガターが無い画面では本文に重なるので出さない */
