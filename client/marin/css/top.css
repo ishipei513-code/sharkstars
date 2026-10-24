@@ -312,7 +312,7 @@ body.menu-open .header .nav{opacity:0;pointer-events:none}
 
 /* ===== 05 strengths（ビーチ背景・円バッジ・番号・波） ===== */
 .strengths{position:relative;overflow:hidden;padding:clamp(54px,8vw,106px) 0;background:linear-gradient(180deg,#dfeefa 0%,#cbe3f5 100%)}
-.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024bo') center/cover;opacity:.3;pointer-events:none}
+.strengths-bg{position:absolute;inset:0;background:url('../images/strength-bg.jpg?v=261024bu') center/cover;opacity:.3;pointer-events:none}
 /* 砂と貝の写真が濃すぎてグラデーションの流れを分断していたので薄くし、
    上下は背景色に溶かして境目を消す */
 .strengths-bg{opacity:.10;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 82%,transparent 100%);
@@ -570,7 +570,9 @@ body.accent-orange{--pink:#ff8a3d}
   /* 端に寄せすぎないよう 3.2vw 内側へ入れたぶん、幅に上限をかけて本文に届かせない。
      1440pxのガターは153pxしかないので、内側へ寄せる＝使える幅が減る。 */
   max-width:clamp(80px,6.4vw,150px);
-  filter:drop-shadow(0 16px 26px rgba(16,58,92,.15))}
+  /* 影を付けると切り口を縁取ってしまい「ぶつ切り」に見える。
+     影は外し、わずかに透かして背景の面に溶かす。 */
+  opacity:.94}
 
 /* ガターが無い画面では本文に重なるので出さない */
 @media (max-width:1399px){
@@ -648,7 +650,7 @@ body.accent-orange{--pink:#ff8a3d}
 .mo--s2{right:3%;top:19%;width:clamp(17px,1.6vw,26px);aspect-ratio:1;animation-delay:1.1s;opacity:.18}
 .mo--s3{left:3.2%;top:52%;width:clamp(14px,1.3vw,20px);aspect-ratio:24/30;animation-delay:2.2s;opacity:.17}
 .mo--s4{right:2.5%;top:78%;width:clamp(20px,1.9vw,30px);aspect-ratio:30/28;animation-delay:3.1s;opacity:.19}
-.mo--i1{left:2.8%;top:12%;width:clamp(14px,1.3vw,20px);aspect-ratio:24/30;opacity:.18}
+.mo--i1{left:2.8%;top:62%;width:clamp(14px,1.3vw,20px);aspect-ratio:24/30;opacity:.18}
 .mo--i2{right:2.5%;top:58%;width:clamp(28px,2.5vw,44px);aspect-ratio:40/24;animation-delay:1.7s}
 
 
@@ -679,7 +681,7 @@ body.accent-orange{--pink:#ff8a3d}
    兄弟として置いて static position に任せると、親が grid だったり段落をまたいだときに
    想定外の場所へ飛ぶ（実際に本文へ重なった）。基準要素の下端からの px なら安定する。
    span なので <p> の中にも入れられる。高さ0・絶対配置なのでレイアウトには影響しない。 */
-.philosophy > .wrap,.phi-body,.route-grid,.biz-meta,.strength-grid,.staff-grid,
+.philosophy > .wrap,.phi-body,.route-grid,.biz-grid,.strength-grid,.staff-grid,
 .insta-head,.recruit-text,.voice-grid,.access .sec-head{position:relative}
 /* z-index:-1 ＝ カードや写真の「背面」。
    はみ出した分だけがチラッと見える＝参考サイトの見え方になるうえ、
@@ -723,8 +725,21 @@ body.accent-orange{--pink:#ff8a3d}
    margin は隣接マージンと相殺されるので、既に広い場所（Instagramの139pxなど）
    では何も起きない。 */
 @media (max-width:900px){
-  .phi-body,.biz-meta,.strength-grid,.staff-grid,
-  .insta-head,.recruit-text,.voice-grid{margin-bottom:96px}
+  /* アイコンの上下を揃えるため、**素の空きに応じて足す量を変える**。
+     一律に足すと、もともと空いている場所では下にだけ余白が偏る（石橋さん指摘）。
+     素の空き：理念15 / 事業内容51 / 選ばれる理由54 / はたらく人の声120 /
+               Instagram107 / 採用65 / 利用者の声0 → 目標は約102px */
+  .phi-body{margin-bottom:80px}
+  .biz-grid{margin-bottom:46px}
+  .strength-grid{margin-bottom:44px}
+  .recruit-text{margin-bottom:32px}
+  .voice-grid{margin-bottom:48px}
+  /* はたらく人の声とInstagramは素のままで空きが足りているので、
+     帯を足す代わりにアイコンを少し下げて上下を均す */
+  .staff .mo--sc{top:29px}
+  .staff .mo--sc.is-far{top:65px}
+  .insta .mo--sc{top:41px}
+  .insta .mo--sc.is-far{top:77px}
   .mo--sc{top:20px}
   .mo--sc.is-far{top:56px}
   /* 本数は間引かない。帯を確保したので全部置ける */
